@@ -1,0 +1,21 @@
+[Global]
+IconName=kalarm
+Comment=KDE FOSDEM Companion
+Name=KDE FOSDEM Companion
+
+[Context/uid]
+Name=Incidence uid
+Name[x-test]=xxIncidence uidxx
+Comment=The uid of the incidence of the alarm
+Comment[x-test]=xxThe uid of the incidence of the alarmxx
+
+[Event/alarm]
+Name=Alarm
+Name[x-test]=xxAlarmxx
+Contexts=uid
+Comment=Alarm Notification
+Comment[x-test]=xxAlarm Notificationxx
+Action=Popup
+Urgency=Critical
+
+

@@ -1,0 +1,68 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(kdefosdem)
+
+set(KF5_MIN_VERSION "5.63.0")
+set(QT_MIN_VERSION "5.7.0")
+
+################# Disallow in-source build #################
+
+if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
+   message(FATAL_ERROR "KDE FOSDEM Companion requires an out of source build. Please create a separate build directory.")
+endif()
+
+option(REMINDERS_ENABLED "Build with reminders support" OFF)
+
+include(FeatureSummary)
+
+################# set KDE specific information #################
+
+find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+
+# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMPoQmTools)
+
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Test Qml QuickControls2 Network)
+
+find_package(KF5Config)
+find_package(KF5Kirigami2)
+find_package(KF5I18n)
+find_package(KF5CalendarCore REQUIRED)
+
+if(REMINDERS_ENABLED)
+    find_package(KF5DBusAddons CONFIG REQUIRED)
+    find_package(KF5Notifications CONFIG REQUIRED)
+    find_package(KF5Service CONFIG REQUIRED)
+endif()
+
+################# Enable C++11 features for clang and gcc #################
+
+if(UNIX)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++0x")
+endif()
+
+################# now find all used packages #################
+
+find_package(PkgConfig)
+#########################################################################
+
+add_subdirectory(src)
+
+if(REMINDERS_ENABLED)
+    add_subdirectory(kdefosdemac)
+endif()
+
+if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+    ecm_install_po_files_as_qm(po)
+endif()
+
+install(FILES org.kde.phone.kdefosdem.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(PROGRAMS org.kde.phone.kdefosdem.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+

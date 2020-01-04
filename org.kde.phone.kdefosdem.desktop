@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KDE FOSDEM Companion
+Comment=KDE FOSDEM Companion
+Exec=kdefosdem
+MimeType=application/x-kdefosdem;
+Icon=kdefosdem
+Type=Application
+Terminal=false
+Categories=Qt;KDE;Office;

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=KDE FOSDEM Companion Reminder Client
+Exec=kdefosdemac
+Icon=kdefosdem
+Type=Application
+Categories=Qt;KDE;
+GenericName=KDE FOSDEM Companion Reminder Client
+GenericName[x-test]=xxKDE FOSDEM Companion Reminder Clienttxx
+Terminal=false
+X-KDE-autostart-phase=2
+X-KDE-autostart-condition=kdefosdemrc:General:Autostart:true
+X-DBUS-StartupType=Unique

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="Main.qml">contents/ui/Main.qml</file>
+        <file alias="EventsView.qml">contents/ui/EventsView.qml</file>
+        <file alias="MapView.qml">contents/ui/MapView.qml</file>
+        <file alias="campusmap.png">contents/data/campusmap.png</file>
+    </qresource>
+</RCC>
