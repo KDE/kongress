@@ -3,10 +3,10 @@
   <id>org.kde.phone.kdefosdem.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>KDE FOSDEM Companion</name>
-  <summary>KDE FOSDEM companion application</summary>
+  <name>KDE Conference Companion</name>
+  <summary>KDE Conference companion application</summary>
   <description>
-    <p>KDE FOSDEM is companion application for FOSDEM made by KDE</p>
+    <p>KDE Conference is companion application for conferences made by KDE</p>
   </description>
   <url type="bugtracker"></url>
   <project_group>KDE</project_group>

@@ -1,7 +1,7 @@
 [Global]
 IconName=kalarm
-Comment=KDE FOSDEM Companion
-Name=KDE FOSDEM Companion
+Comment=KDE Conference Companion
+Name=KDE Conference Companion
 
 [Context/uid]
 Name=Incidence uid

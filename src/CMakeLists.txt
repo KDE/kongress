@@ -47,6 +47,8 @@ if(ANDROID)
         view-categories
         internet-services
         favorite
+        group
+        object-select-symbolic
     )
 endif()
 

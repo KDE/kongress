@@ -33,8 +33,8 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    KAboutData aboutData(QStringLiteral("kdefosdemac"), i18n("KDE FOSDEM Alarm Check Daemon"),
-                         QString(), i18n("KDE FOSDEM Alarm Check Daemon"),
+    KAboutData aboutData(QStringLiteral("kdefosdemac"), i18n("KDE Conference Alarm Check Daemon"),
+                         QString(), i18n("KDE Conference Alarm Check Daemon"),
                          KAboutLicense::GPL,
                          i18n("(c) 2020 Dimitris Kardarakos"),
                          QString(), QString());

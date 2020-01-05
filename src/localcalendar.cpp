@@ -28,7 +28,7 @@
 using namespace KCalendarCore;
 
 LocalCalendar::LocalCalendar(QObject* parent)
-: QObject(parent)
+: QObject(parent), m_calendarInfo(QVariantMap())
 {
     connect(&m_DownloadManager, SIGNAL(finished(QNetworkReply*)),
         SLOT(downloadFinished(QNetworkReply*)));
@@ -49,29 +49,29 @@ FileStorage::Ptr LocalCalendar::calendarstorage() const
 
 QString LocalCalendar::name() const
 {
-    return m_name;
+    return m_calendarInfo.contains("name") ? m_calendarInfo["name"].toString() : QString();
 }
 
-void LocalCalendar::setName(QString calendarName)
+void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if (m_name != calendarName)
+    if (calendarInfoMap.contains("name") && calendarInfoMap.contains("url"))
     {
-        m_name = calendarName;
+        m_calendarInfo["name"] = calendarInfoMap["name"].toString();
+        m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
         KDEFosdemConfig* config = new KDEFosdemConfig();
+        m_fullpath = config->calendarFile(calendarInfoMap["name"].toString());
 
-        m_fullpath = config->calendarFile(calendarName);
-
-        if(calendarName == "fosdemonline")
-        {
-            QUrl url = QUrl::fromEncoded("https://fosdem.org/2020/schedule/ical");
-            QNetworkRequest request(url);
-            m_DownloadManager.get(request);
-        }
-        else
-        {
-            createLocalCalendar(calendarName);
-        }
+        QUrl url = QUrl::fromEncoded(calendarInfoMap["url"].toByteArray());
+        QNetworkRequest request(url);
+        m_DownloadManager.get(request);
+    }
+    else if (calendarInfoMap.contains("name"))
+    {
+        createLocalCalendar(calendarInfoMap["name"].toString());
+    }
+    else {
+        qDebug() << "No sufficient calendar information provided";
     }
 }
 
@@ -237,7 +237,7 @@ void LocalCalendar::downloadFinished(QNetworkReply *reply)
                 m_cal_storage = storage;
             }
 
-            emit nameChanged();
+            emit calendarInfoChanged();
             emit memorycalendarChanged();
         }
     }
@@ -247,6 +247,9 @@ void LocalCalendar::downloadFinished(QNetworkReply *reply)
 }
 void LocalCalendar::createLocalCalendar(const QString& calendarName)
 {
+    KDEFosdemConfig* config = new KDEFosdemConfig();
+    m_fullpath = config->calendarFile(calendarName);
+
     MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
     FileStorage::Ptr storage(new FileStorage(calendar));
     storage->setFileName(m_fullpath);
@@ -259,11 +262,17 @@ void LocalCalendar::createLocalCalendar(const QString& calendarName)
 
     if(storage->load())
     {
-        m_name = calendarName;
+        m_calendarInfo["name"] = calendarName;
+        m_calendarInfo["url"] = "";
         m_calendar = calendar;
         m_cal_storage = storage;
     }
 
-    emit nameChanged();
+    emit calendarInfoChanged();
     emit memorycalendarChanged();
+}
+
+QVariantMap LocalCalendar::calendarInfo() const
+{
+    return m_calendarInfo;
 }

@@ -31,7 +31,8 @@ using namespace KCalendarCore;
 class LocalCalendar : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
+    Q_PROPERTY(QString name READ name)
     Q_PROPERTY(QSharedPointer<MemoryCalendar> memorycalendar READ memorycalendar WRITE setMemorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QSharedPointer<FileStorage> calendarstorage READ calendarstorage WRITE setCalendarstorage NOTIFY calendarstorageChanged)
     Q_PROPERTY(QDateTime nulldate READ nulldate CONSTANT)
@@ -43,12 +44,13 @@ public:
     MemoryCalendar::Ptr memorycalendar() const;
     FileStorage::Ptr calendarstorage() const;
     QString name() const;
+    QVariantMap calendarInfo() const;
     QDateTime nulldate() const;
 
     void setMemorycalendar(MemoryCalendar::Ptr memoryCalendar);
     void setCalendarstorage(FileStorage::Ptr calendarStorage);
-    void setName(QString calendarName);
-    bool saveToDisk(const QString &filename, QIODevice *data);
+    bool saveToDisk(const QString& filename, QIODevice *data);
+    void setCalendarInfo(const QVariantMap& calendarInfoMap);
 
 public Q_SLOTS:
     int todosCount(const QDate &date) const;
@@ -60,7 +62,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void memorycalendarChanged();
     void calendarstorageChanged();
-    void nameChanged();
+    void calendarInfoChanged();
 
 private:
     static QVariantMap canCreateFile(const QString& calendarName);
@@ -68,9 +70,10 @@ private:
 
     MemoryCalendar::Ptr m_calendar;
     FileStorage::Ptr m_cal_storage;
-    QString m_name;
     QString m_fullpath;
     QNetworkAccessManager m_DownloadManager;
+    QVariantMap m_calendarInfo;
+
 
 };
 

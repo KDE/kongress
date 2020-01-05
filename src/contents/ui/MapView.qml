@@ -24,38 +24,43 @@ import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.Page {
     id: root
-    
+
+    property string imageUrl
+    property string latitude
+    property string longitude
+    property string geoUrl
+
     title: i18n("Map")
-    
+
     ColumnLayout {
         anchors.fill: parent
-        
+
         Image {
             Layout.fillWidth: true
-            source: "campusmap.png"
+            visible: imageUrl != ""
+            source: root.imageUrl
             fillMode: Image.PreserveAspectFit
             asynchronous: true
         }
 
         Controls2.Label {
-            id: latitude
-
             Layout.alignment : Qt.AlignHCenter
-            text: i18n("Latitude: N50.812375")
+            visible: root.latitude != ""
+            text: i18n("Latitude: %1", root.latitude)
         }
-            
-        Controls2.Label {
-            id: longitude
 
+        Controls2.Label {
             Layout.alignment : Qt.AlignHCenter
-            text: i18n("Longitude: E4.380734")
-        } 
-        
+            visible: root.longitude != ""
+            text: i18n("Longitude: %1", root.longitude)
+        }
+
         Controls2.Button {
             Layout.alignment : Qt.AlignHCenter
+            visible: root.geoUrl != ""
             text: i18n("OpenStreetMaps")
 
-            onClicked: Qt.openUrlExternally("http://www.openstreetmap.org/?mlat=50.812375&mlon=4.38073")
+            onClicked: Qt.openUrlExternally(root.geoUrl)
         }
     }
 }

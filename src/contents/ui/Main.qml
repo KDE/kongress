@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.0 as Kirigami
 import QtQuick.Controls 2.4 as Controls2
 import org.kde.phone.kdefosdem 0.1 as KDEFOSDEM
+import "ConferenceData.js" as ConferenceData
 
 Kirigami.ApplicationWindow {
     id: root
@@ -31,37 +32,63 @@ Kirigami.ApplicationWindow {
      */
     signal refreshNeeded;
 
-    property var categories: ["Ada","Backup and Recovery","BSD","Certification","Coding for Language Communities","Collaborative Information and Content Management Applications","Community and Ethics","Community devroom","Containers","Containers and Security","Continuous Integration and Continuous Deployment","Databases","Debugging Tools","Decentralized Internet and Privacy","Dependency Management","Distributions","DNS","Embedded, Mobile and Automotive","Erlang, Elixir and Friends","Freedom","Free Java","Free Software Radio","Free Tools and Editors","Game Development","Geospatial","Go","Graphics","Graph Systems and Algorithms","Hardware-aided Trusted Computing","Hardware Enablement","History","HPC, Big Data, and Data Science","Infra Management Devroom","Internet of Things","JavaScript","Keynotes","Kotlin","Legal and Policy Issues","Lightning Talks","LLVM","Microkernels and Component-based OS","Minimalistic, Experimental and Emerging Languages","Miscellaneous","Monitoring and Observability","Mozilla","MySQL, MariaDB and Friends","Open Document Editors","Open Media","Open Research Tools and Technologies","Open Source Computer Aided Modeling and Design","Open Source Design","Open Source Firmware, BMC and Bootloader","PostgreSQL","Python","Real Time Communications","Retrocomputing","RISC-V","Rust","Security","Software Defined Networking","Software Defined Storage","Testing and Automation","Virtualization and IaaS","Web Performance","Workshops"]
+    property int activeConference: 0
+    property string conference: activeConference >= 0 ? ConferenceData.conferences[activeConference].name : []
+    property var categories: activeConference >= 0 ? ConferenceData.conferences[activeConference].categories : []
+    property var conferenceDays: activeConference >= 0 ? ConferenceData.conferences[activeConference].days : []
+
+    function loadDynamicActions()
+    {
+        var categoryChildren = [];
+        for (var i=0; i < categories.length; ++i)
+        {
+            categoryChildren.push(categoryAction.createObject(categoryActions, {text: root.categories[i]}));
+        }
+        categoryActions.children = categoryChildren;
+
+        var dayChildren = [];
+        for (var i=0; i < conferenceDays.length; ++i)
+        {
+            dayChildren.push(dayAction.createObject(dayActions, { conferenceDay: new Date(root.conferenceDays[i]) }));
+        }
+        dayActions.children = dayChildren;
+
+        var conferenceNames = [];
+        for (var i=0; i < ConferenceData.conferences.length; ++i)
+        {
+            conferenceNames.push(conferenceAction.createObject(conferenceSelector, {idx: i}));
+        }
+        conferenceSelector.children = conferenceNames;
+    }
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
 
-        title: "KDE FOSDEM Companion"
+        title: "Conference Companion"
         actions: [
             Kirigami.Action {
-                text: i18n("Full Schedule", onlineCalendar.name)
+                id: conferenceSelector
+
+                text: i18n("Conferences")
+                iconName: "group"
+            },
+
+            Kirigami.Action {
+                text: i18n("Full Schedule")
                 iconName: "view-calendar-agenda"
                 onTriggered: {
                     pageStack.clear();
                     pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
                 }
             },
+
             Kirigami.Action {
-                text: i18n("Saturday", onlineCalendar.name)
+                id: dayActions
+
+                text: i18n("Days")
                 iconName: "view-calendar-day"
-                onTriggered: {
-                    pageStack.clear();
-                    pageStack.push(eventsView, {title: i18n("Saturday"), eventStartDt: new Date('2020-02-01')});
-                }
             },
-            Kirigami.Action {
-                text: i18n("Sunday")
-                iconName: "view-calendar-day"
-                onTriggered: {
-                    pageStack.clear();
-                    pageStack.push(eventsView, {title: i18n("Sunday"), eventStartDt: new Date('2020-02-02')});
-                }
-            },
+
             Kirigami.Action {
                 id: categoryActions
 
@@ -77,6 +104,7 @@ Kirigami.ApplicationWindow {
                     pageStack.push(favoritesView, {title: i18n("Favorites"), eventStartDt: ""});
                 }
             },
+
             Kirigami.Action {
                 text: i18n("Map")
                 iconName: "find-location"
@@ -87,14 +115,7 @@ Kirigami.ApplicationWindow {
             }
         ]
 
-        Component.onCompleted: {
-            var childrenActions = [];
-            for (var i=0; i < categories.length; ++i)
-            {
-                childrenActions.push(categoryAction.createObject(categoryActions, { text: categories[i] }));
-            }
-            categoryActions.children = childrenActions;
-        }
+        Component.onCompleted: loadDynamicActions()
     }
 
 //     contextDrawer: Kirigami.ContextDrawer {
@@ -102,33 +123,30 @@ Kirigami.ApplicationWindow {
 //     }
 
     pageStack {
-        initialPage: [eventsView]
+        initialPage: [conferencesView]
         separatorVisible: false
     }
-
-//     KDEFOSDEM.Config {
-//         id: kdefosdemConfig
-//     }
 
     KDEFOSDEM.LocalCalendar {
         id: onlineCalendar
 
-        name: "fosdemonline"
+        calendarInfo: {"name": ConferenceData.conferences[root.activeConference].name, "url": ConferenceData.conferences[root.activeConference].url}
 
-        onNameChanged: {
+        onCalendarInfoChanged: {
             root.refreshNeeded();
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
+            root.loadDynamicActions();
         }
     }
 
     KDEFOSDEM.LocalCalendar {
         id: favoritesCalendar
 
-        name: "favorites"
+        calendarInfo: {"name": "favorites"}
 
-        onNameChanged: {
+        onCalendarInfoChanged: {
             root.refreshNeeded();
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
@@ -143,6 +161,8 @@ Kirigami.ApplicationWindow {
             roCalendar: onlineCalendar
             rwCalendar: favoritesCalendar
             viewMode: "events"
+
+            title: i18n("Schedule")
 
             onEventsUpdated: root.refreshNeeded()
 
@@ -173,9 +193,29 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
+        id: conferencesView
+
+        Conferences {
+            conferencesList: ConferenceData.conferences
+
+            onSelected: {
+                pageStack.clear();
+                root.activeConference = conferenceId;
+                onlineCalendar.calendarInfo = {name: ConferenceData.conferences[conferenceId].name, url: ConferenceData.conferences[conferenceId].url};
+                pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
+            }
+        }
+    }
+
+    Component {
         id: mapView
 
-        MapView {}
+        MapView {
+            imageUrl: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("image") ?ConferenceData.conferences[activeConference].map.image : ""
+            latitude: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("latitude") ? ConferenceData.conferences[activeConference].map.latitude : "";
+            longitude: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("longitude") ?ConferenceData.conferences[activeConference].map.longitude : ""
+            geoUrl: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("url") ? ConferenceData.conferences[activeConference].map.url : ""
+        }
     }
 
     Component {
@@ -186,6 +226,37 @@ Kirigami.ApplicationWindow {
             onTriggered: {
                 pageStack.clear();
                 pageStack.push(eventsView, {title: text, eventStartDt: "", category: text});
+            }
+        }
+    }
+
+    Component {
+        id: dayAction
+
+        Kirigami.Action {
+            property date conferenceDay
+
+            text: conferenceDay.toLocaleDateString(Qt.locale(), "dddd")
+            onTriggered: {
+                pageStack.clear();
+                pageStack.push(eventsView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
+            }
+        }
+    }
+
+    Component {
+        id: conferenceAction
+
+        Kirigami.Action {
+            property string idx
+
+            text: ConferenceData.conferences[idx].name
+            iconName: idx == root.activeConference ? "object-select-symbolic" : ""
+            onTriggered: {
+                pageStack.clear();
+                root.activeConference = idx;
+                onlineCalendar.calendarInfo = {name: ConferenceData.conferences[idx].name, url: ConferenceData.conferences[idx].url};
+                pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
             }
         }
     }

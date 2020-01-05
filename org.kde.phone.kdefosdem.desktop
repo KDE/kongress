@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=KDE FOSDEM Companion
-Comment=KDE FOSDEM Companion
+Name=KDE Conference Companion
+Comment=KDE Conference Companion
 Exec=kdefosdem
 MimeType=application/x-kdefosdem;
 Icon=kdefosdem

@@ -1,6 +1,6 @@
-# KDE FOSDEM 2020 Companion
+# KDE Conference Companion
 
-Companion application for FOSDEM 2020
+Companion application for conferences
 
 ## Build
 
