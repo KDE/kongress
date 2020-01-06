@@ -1,5 +1,5 @@
 /*
- *   Copyright 2019 Dimitris Kardarakos <dimkard@posteo.net>
+ *   Copyright 2020 Dimitris Kardarakos <dimkard@posteo.net>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -31,9 +31,9 @@ Kirigami.Page {
     property var roCalendar
     property var rwCalendar
     property string category
+    property bool showCategories: true
 
     signal eventsUpdated
-    signal editcompleted
 
     function reload()
     {
@@ -53,6 +53,17 @@ Kirigami.Page {
         font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
     }
 
+    Component {
+        id: eventInfo
+
+        EventInfo {
+            rwCalendar: root.rwCalendar
+            viewMode: root.viewMode
+
+            onEventUpdated: root.eventsUpdated()
+        }
+    }
+
     Kirigami.CardsListView {
         id: cardsListview
 
@@ -68,13 +79,12 @@ Kirigami.Page {
 
             actions: [
                 Kirigami.Action {
-                    text: i18n("Web Page")
-                    icon.name: "internet-services"
+                    text: i18n("More Info")
+                    icon.name: "documentinfo"
 
-                    onTriggered: Qt.openUrlExternally(model.url)
+                    onTriggered: pageStack.push(eventInfo, {event: model})
                 },
 
-                //TODO: Offer reminders
                 Kirigami.Action {
                     text: viewMode == "favorites" ? i18n("Delete") : i18n("Add to Favorites")
                     icon.name: viewMode == "favorites" ? "delete" : "favorite"
@@ -99,7 +109,6 @@ Kirigami.Page {
                             {
                                 showPassiveNotification(i18n("Already in favorites"));
                             }
-                            editcompleted();
                         }
                     }
                 }
@@ -152,7 +161,7 @@ Kirigami.Page {
                 }
 
                 RowLayout {
-                    visible: model.eventCategories != ""
+                    visible: root.showCategories && (model.eventCategories != "")
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 
@@ -167,13 +176,6 @@ Kirigami.Page {
                         text: model.eventCategories
                         Layout.fillWidth: true
                     }
-                }
-
-                Controls2.Label {
-                    visible: model.description != ""
-                    width: cardDelegate.availableWidth
-                    wrapMode: Text.WordWrap
-                    text: model.description
                 }
             }
         }

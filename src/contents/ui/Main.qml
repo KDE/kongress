@@ -1,5 +1,5 @@
 /*
- *   Copyright 2019 Dimitris Kardarakos <dimkard@posteo.net>
+ *   Copyright 2020 Dimitris Kardarakos <dimkard@posteo.net>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -78,7 +78,7 @@ Kirigami.ApplicationWindow {
                 iconName: "view-calendar-agenda"
                 onTriggered: {
                     pageStack.clear();
-                    pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
+                    pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
                 }
             },
 
@@ -155,9 +155,9 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
-        id: eventsView
+        id: eventsCardView
 
-        EventsView {
+        EventsCardListView {
             roCalendar: onlineCalendar
             rwCalendar: favoritesCalendar
             viewMode: "events"
@@ -175,9 +175,27 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
+        id: eventsListView
+
+        EventsListView {
+            roCalendar: onlineCalendar
+            rwCalendar: favoritesCalendar
+            viewMode: "events"
+
+            onEventsUpdated: root.refreshNeeded()
+
+            Connections {
+                target: root
+
+                onRefreshNeeded: reload()
+            }
+        }
+    }
+
+    Component {
         id: favoritesView
 
-        EventsView {
+        EventsCardListView {
             roCalendar: favoritesCalendar
             rwCalendar: favoritesCalendar
             viewMode: "favorites"
@@ -202,7 +220,7 @@ Kirigami.ApplicationWindow {
                 pageStack.clear();
                 root.activeConference = conferenceId;
                 onlineCalendar.calendarInfo = {name: ConferenceData.conferences[conferenceId].name, url: ConferenceData.conferences[conferenceId].url};
-                pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
+                pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }
     }
@@ -225,7 +243,7 @@ Kirigami.ApplicationWindow {
             text: ""
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(eventsView, {title: text, eventStartDt: "", category: text});
+                pageStack.push(eventsCardView, {title: text, eventStartDt: "", category: text, showCategories: false});
             }
         }
     }
@@ -239,7 +257,7 @@ Kirigami.ApplicationWindow {
             text: conferenceDay.toLocaleDateString(Qt.locale(), "dddd")
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(eventsView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
+                pageStack.push(eventsListView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
             }
         }
     }
@@ -256,7 +274,7 @@ Kirigami.ApplicationWindow {
                 pageStack.clear();
                 root.activeConference = idx;
                 onlineCalendar.calendarInfo = {name: ConferenceData.conferences[idx].name, url: ConferenceData.conferences[idx].url};
-                pageStack.push(eventsView, {title: i18n("Schedule"),eventStartDt: ""});
+                pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }
     }
