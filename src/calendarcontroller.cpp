@@ -16,7 +16,7 @@
  *
  */
 
-#include "kdefosdemconfig.h"
+#include "calendarcontroller.h"
 
 #include <KLocalizedString>
 #include <KConfig>
@@ -24,8 +24,11 @@
 #include <QDebug>
 #include <QRegExp>
 #include <QDir>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
 
-class KDEFosdemConfig::Private
+class CalendarController::Private
 {
 public:
     Private()
@@ -34,43 +37,29 @@ public:
     KConfig config;
 };
 
-KDEFosdemConfig::KDEFosdemConfig(QObject* parent)
+CalendarController::CalendarController(QObject* parent)
     : QObject(parent)
     , d(new Private)
 {
     QString calendars = d->config.group("general").readEntry("calendars", QString());
     if(calendars.isEmpty()) {
-        qDebug() << "No calendar found, creating a default one";
-        addCalendar("personal");
-        setActiveCalendar("personal");
+        qDebug() << "No favorites calendar found. Creating...";
+        addCalendar("favorites");
         d->config.sync();
     }
 }
 
-KDEFosdemConfig::~KDEFosdemConfig()
+CalendarController::~CalendarController()
 {
     delete d;
 }
 
-QString KDEFosdemConfig::calendars() const
+QString CalendarController::calendars() const
 {
    return d->config.group("general").readEntry("calendars", QString());
 }
 
-QString KDEFosdemConfig::activeCalendar() const
-{
-    return d->config.group("general").readEntry("activeCalendar", QString());
-}
-
-
-void KDEFosdemConfig::setActiveCalendar(const QString & calendar)
-{
-    d->config.group("general").writeEntry("activeCalendar", calendar);
-    d->config.sync();
-    emit activeCalendarChanged();
-}
-
-QVariantMap KDEFosdemConfig::canAddCalendar(const QString& calendar)
+QVariantMap CalendarController::canAddCalendar(const QString& calendar)
 {
     QVariantMap result;
     result["success"] = QVariant(true);
@@ -101,7 +90,7 @@ QVariantMap KDEFosdemConfig::canAddCalendar(const QString& calendar)
     return result;
 }
 
-QVariantMap KDEFosdemConfig::addCalendar(const QString & calendar)
+QVariantMap CalendarController::addCalendar(const QString & calendar)
 {
     QVariantMap result;
     result["success"] = QVariant(true);
@@ -134,7 +123,7 @@ QVariantMap KDEFosdemConfig::addCalendar(const QString & calendar)
     return result;
 }
 
-void KDEFosdemConfig::removeCalendar(const QString& calendar)
+void CalendarController::removeCalendar(const QString& calendar)
 {
     d->config.reparseConfiguration();
     QStringList calendarsList = d->config.group("general").readEntry("calendars", QString()).split(";");
@@ -151,7 +140,7 @@ void KDEFosdemConfig::removeCalendar(const QString& calendar)
     }
 }
 
-QString KDEFosdemConfig::calendarFile(const QString& calendarName)
+QString CalendarController::calendarFile(const QString& calendarName)
 {
     if(d->config.hasGroup(calendarName) && d->config.group(calendarName).hasKey("file"))
     {
@@ -163,7 +152,7 @@ QString KDEFosdemConfig::calendarFile(const QString& calendarName)
     return filenameToPath(calendarName);
 }
 
-QString KDEFosdemConfig::filenameToPath(const QString& calendarName)
+QString CalendarController::filenameToPath(const QString& calendarName)
 {
     QString basePath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir baseFolder(basePath);

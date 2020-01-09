@@ -16,37 +16,33 @@
  *
  */
 
-#ifndef KDEFOSDEMCONFIG_H
-#define KDEFOSDEMCONFIG_H
+#ifndef CALENDAR_CONTROLLER_H
+#define CALENDAR_CONTROLLER_H
 
 #include <QObject>
 #include <QVariantMap>
 
-class KDEFosdemConfig : public QObject
+class CalendarController : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString calendars READ calendars NOTIFY calendarsChanged)
-    Q_PROPERTY(QString activeCalendar READ activeCalendar WRITE setActiveCalendar NOTIFY activeCalendarChanged)
 public:
 
-    explicit KDEFosdemConfig(QObject* parent = nullptr);
-    ~KDEFosdemConfig() override;
+    explicit CalendarController(QObject* parent = nullptr);
+    ~CalendarController() override;
 
     QString calendars() const;
     QString calendarFile(const QString & calendarName);
     Q_SIGNAL void calendarsChanged();
-
-    QString activeCalendar() const;
-    void setActiveCalendar(const QString& calendar);
-    Q_SIGNAL void activeCalendarChanged();
 
 public Q_SLOTS:
     QVariantMap canAddCalendar(const QString& calendar);
     QVariantMap addCalendar(const QString& calendar);
     void removeCalendar(const QString& calendar);
 
+
 private:
-    static QString filenameToPath(const QString & calendarName) ;
+    static QString filenameToPath(const QString & calendarName);
 
     class Private;
     Private* d;

@@ -18,7 +18,7 @@
  */
 
 #include "localcalendar.h"
-#include "kdefosdemconfig.h"
+#include "calendarcontroller.h"
 #include <QDebug>
 #include <KCalendarCore/Todo>
 #include <QFile>
@@ -47,11 +47,6 @@ FileStorage::Ptr LocalCalendar::calendarstorage() const
     return m_cal_storage;
 }
 
-QString LocalCalendar::name() const
-{
-    return m_calendarInfo.contains("name") ? m_calendarInfo["name"].toString() : QString();
-}
-
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
     if (calendarInfoMap.contains("name") && calendarInfoMap.contains("url"))
@@ -59,7 +54,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
         m_calendarInfo["name"] = calendarInfoMap["name"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
-        KDEFosdemConfig* config = new KDEFosdemConfig();
+        CalendarController* config = new CalendarController();
         m_fullpath = config->calendarFile(calendarInfoMap["name"].toString());
 
         QUrl url = QUrl::fromEncoded(calendarInfoMap["url"].toByteArray());
@@ -76,15 +71,6 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 }
 
 
-void LocalCalendar::setMemorycalendar(MemoryCalendar::Ptr memoryCalendar)
-{
-    if(m_calendar != memoryCalendar)
-    {
-        m_calendar = memoryCalendar;
-        qDebug() << "Calendar succesfully set";
-    }
-}
-
 void LocalCalendar::setCalendarstorage(FileStorage::Ptr calendarStorage)
 {
     if(m_cal_storage != calendarStorage)
@@ -92,16 +78,6 @@ void LocalCalendar::setCalendarstorage(FileStorage::Ptr calendarStorage)
         m_cal_storage = calendarStorage;
         qDebug() << "Storage succesfully set";
     }
-}
-
-int LocalCalendar::todosCount(const QDate &date) const {
-    if(m_calendar == nullptr)
-    {
-        return 0;
-    }
-    Todo::List todoList = m_calendar->rawTodos(date,date);
-
-    return todoList.size();
 }
 
 void LocalCalendar::deleteCalendar()
@@ -115,21 +91,6 @@ void LocalCalendar::deleteCalendar()
         }
 }
 
-
-QDateTime LocalCalendar::nulldate() const
-{
-    return QDateTime();
-}
-
-int LocalCalendar::eventsCount(const QDate& date) const {
-    if(m_calendar == nullptr)
-    {
-        return 0;
-    }
-    Event::List eventList = m_calendar->rawEventsForDate(date);
-
-    return eventList.count();
-}
 
 bool LocalCalendar::save()
 {
@@ -247,7 +208,7 @@ void LocalCalendar::downloadFinished(QNetworkReply *reply)
 }
 void LocalCalendar::createLocalCalendar(const QString& calendarName)
 {
-    KDEFosdemConfig* config = new KDEFosdemConfig();
+    CalendarController* config = new CalendarController();
     m_fullpath = config->calendarFile(calendarName);
 
     MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));

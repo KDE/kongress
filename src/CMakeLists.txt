@@ -5,7 +5,7 @@ endif()
 
 set(kdefosdem_SRCS
     main.cpp
-    kdefosdemconfig.cpp
+    calendarcontroller.cpp
     localcalendar.cpp
     eventmodel.cpp
     eventcontroller.cpp

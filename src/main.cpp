@@ -23,7 +23,7 @@
 #include <QUrl>
 #include <KLocalizedContext>
 
-#include "kdefosdemconfig.h"
+#include "calendarcontroller.h"
 #include "localcalendar.h"
 #include "eventmodel.h"
 #include "eventcontroller.h"
@@ -36,7 +36,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain("kde.org");
     QCoreApplication::setApplicationName("kdefosdem");
 
-    qmlRegisterType<KDEFosdemConfig>("org.kde.phone.kdefosdem", 0, 1, "Config");
     qmlRegisterType<LocalCalendar>("org.kde.phone.kdefosdem", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.phone.kdefosdem", 0, 1, "EventModel");
     qmlRegisterType<EventController>("org.kde.phone.kdefosdem",0,1,"EventController");
