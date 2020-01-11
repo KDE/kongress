@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.kde.phone.kdefosdem"
+          package="org.kde.kongress"
           android:versionName="0.0.1"
           android:versionCode="1"
           android:installLocation="auto">
-    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="KDEFOSDEM" android:icon="@drawable/kdefosdem">
+    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Kongress" android:icon="@drawable/kongress">
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation"
                   android:name="org.qtproject.qt5.android.bindings.QtActivity"
-                  android:label="KDEFOSDEM"
+                  android:label="Kongress"
                   android:windowSoftInputMode="adjustResize"
                   android:launchMode="singleTop">
 
@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <meta-data android:name="android.app.lib_name" android:value="kdefosdem"/>
+            <meta-data android:name="android.app.lib_name" android:value="kongress"/>
             <meta-data android:name="android.app.qt_sources_resource_id" android:resource="@array/qt_sources"/>
             <meta-data android:name="android.app.repository" android:value="default"/>
             <meta-data android:name="android.app.qt_libs_resource_id" android:resource="@array/qt_libs"/>

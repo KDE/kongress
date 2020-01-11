@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(kdefosdem)
+project(kongress)
 
 set(KF5_MIN_VERSION "5.63.0")
 set(QT_MIN_VERSION "5.7.0")
@@ -54,15 +54,15 @@ find_package(PkgConfig)
 add_subdirectory(src)
 
 if(REMINDERS_ENABLED)
-    add_subdirectory(kdefosdemac)
+    add_subdirectory(kongressac)
 endif()
 
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ecm_install_po_files_as_qm(po)
 endif()
 
-install(FILES org.kde.phone.kdefosdem.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-install(PROGRAMS org.kde.phone.kdefosdem.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.kongress.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(PROGRAMS org.kde.kongress.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

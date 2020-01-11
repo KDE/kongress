@@ -22,7 +22,7 @@ import QtQml 2.1
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.0 as Kirigami
 import QtQuick.Controls 2.4 as Controls2
-import org.kde.phone.kdefosdem 0.1 as KDEFOSDEM
+import org.kde.kongress 0.1 as Kongress
 
 Kirigami.ApplicationWindow {
     id: root
@@ -108,11 +108,11 @@ Kirigami.ApplicationWindow {
         separatorVisible: false
     }
 
-    KDEFOSDEM.ConferenceModel {
+    Kongress.ConferenceModel {
         id: conferenceModel
     }
 
-    KDEFOSDEM.LocalCalendar {
+    Kongress.LocalCalendar {
         id: onlineCalendar
 
         onCalendarInfoChanged: {
@@ -123,7 +123,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    KDEFOSDEM.LocalCalendar {
+    Kongress.LocalCalendar {
         id: favoritesCalendar
 
         calendarInfo: {"id": "favorites"}

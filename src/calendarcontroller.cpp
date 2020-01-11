@@ -32,7 +32,7 @@ class CalendarController::Private
 {
 public:
     Private()
-        : config("kdefosdemrc")
+        : config("kongressrc")
     {};
     KConfig config;
 };
@@ -158,5 +158,5 @@ QString CalendarController::filenameToPath(const QString& calendarName)
     QDir baseFolder(basePath);
     baseFolder.mkpath(QStringLiteral("."));
 
-    return basePath + "/kdefosdem_" + calendarName + ".ics";
+    return basePath + "/kongress_" + calendarName + ".ics";
 }

@@ -34,13 +34,13 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     QCoreApplication::setOrganizationDomain("kde.org");
-    QCoreApplication::setApplicationName("kdefosdem");
+    QCoreApplication::setApplicationName("kongress");
 
-    qmlRegisterType<LocalCalendar>("org.kde.phone.kdefosdem", 0, 1, "LocalCalendar");
-    qmlRegisterType<EventModel>("org.kde.phone.kdefosdem", 0, 1, "EventModel");
-    qmlRegisterType<EventController>("org.kde.phone.kdefosdem",0,1,"EventController");
-    qmlRegisterType<IncidenceAlarmsModel>("org.kde.phone.kdefosdem",0,1,"IncidenceAlarmsModel");
-    qmlRegisterType<ConferenceModel>("org.kde.phone.kdefosdem",0,1,"ConferenceModel");
+    qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
+    qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
+    qmlRegisterType<EventController>("org.kde.kongress",0,1,"EventController");
+    qmlRegisterType<IncidenceAlarmsModel>("org.kde.kongress",0,1,"IncidenceAlarmsModel");
+    qmlRegisterType<ConferenceModel>("org.kde.kongress",0,1,"ConferenceModel");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));

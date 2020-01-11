@@ -24,7 +24,7 @@
 #include "alarmnotification.h"
 #include "alarmsmodel.h"
 #include "notificationhandler.h"
-#include "kdefosdemacadaptor.h"
+#include "kongressacadaptor.h"
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <QDebug>
@@ -38,7 +38,7 @@ CalAlarmClient::CalAlarmClient(QObject* parent)
 {
     new KdefosdemacAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/kdefosdemac", this );
+    dbus.registerObject("/kongressac", this );
 
     KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
     mCheckInterval = generalGroup.readEntry("CheckInterval", 15);
@@ -61,14 +61,14 @@ CalAlarmClient::~CalAlarmClient() = default;
 QStringList CalAlarmClient::calendarFileList() const
 {
     QStringList filesList = QStringList();
-    KConfigGroup kdefosdemCfgGeneral(KSharedConfig::openConfig("kdefosdemrc"), "general");
-    QString calendars = kdefosdemCfgGeneral.readEntry("calendars",QString());
+    KConfigGroup kongressCfgGeneral(KSharedConfig::openConfig("kongressrc"), "general");
+    QString calendars = kongressCfgGeneral.readEntry("calendars",QString());
     QStringList calendarList = calendars.split(";");
 
     QStringList::const_iterator itr = calendarList.constBegin();
     while(itr != calendarList.constEnd())
     {
-        QString fileName = KSharedConfig::openConfig("kdefosdemrc")->group(*itr).readEntry("file");
+        QString fileName = KSharedConfig::openConfig("kongressrc")->group(*itr).readEntry("file");
 
         if(!(fileName.isNull()))
         {
@@ -77,7 +77,7 @@ QStringList CalAlarmClient::calendarFileList() const
         itr++;
     }
 
-    qDebug() << "\ncalendarFileList:\tKDEFOSDEM calendars:" << filesList.join(",");
+    qDebug() << "\ncalendarFileList:\tKongress calendars:" << filesList.join(",");
 
     return filesList;
 }

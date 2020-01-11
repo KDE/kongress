@@ -21,7 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls2
 import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.phone.kdefosdem 0.1 as KDEFOSDEM
+import org.kde.kongress 0.1 as Kongress
 
 Kirigami.Page {
     id: root
@@ -181,7 +181,7 @@ Kirigami.Page {
         }
     }
 
-    KDEFOSDEM.EventModel {
+    Kongress.EventModel {
         id: eventsModel
 
         filterdt: root.eventStartDt

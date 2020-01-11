@@ -104,7 +104,7 @@ QVariantMap LocalCalendar::canCreateFile(const QString& calendarName)
     result["success"] = QVariant(true);
     result["reason"] = QVariant(QString());
 
-    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/kdefosdem_" + calendarName + ".ics" ;
+    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/kongress_" + calendarName + ".ics" ;
     QFile calendarFile(targetPath);
 
     if(calendarFile.exists())

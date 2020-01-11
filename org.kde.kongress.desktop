@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=KDE Conference Companion
 Comment=KDE Conference Companion
-Exec=kdefosdem
-MimeType=application/x-kdefosdem;
-Icon=kdefosdem
+Exec=kongress
+MimeType=application/x-kongress;
+Icon=kongress
 Type=Application
 Terminal=false
 Categories=Qt;KDE;Office;
