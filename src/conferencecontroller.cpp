@@ -57,6 +57,11 @@ void ConferenceController::loadConferences()
     auto loadPredefined = config->group("general").readEntry("loadPredefined", QString());
     QFile preconfiguredFile("://ConferenceData.json");
 
+    if(!m_conferences.isEmpty())
+    {
+        m_conferences.clear();
+    }
+
     if(loadPredefined.isEmpty())
     {
         config->group("general").writeEntry("loadPredefined","yes");

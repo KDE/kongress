@@ -50,7 +50,10 @@ Kirigami.ApplicationWindow {
                 Kirigami.Action {
                     text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
 
-                    onTriggered: pageStack.push(conferencesView)
+                    onTriggered: {
+                        pageStack.clear();
+                        pageStack.push(conferencesView)
+                    }
                 }
             },
 
