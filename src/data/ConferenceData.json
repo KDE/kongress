@@ -1,0 +1,27 @@
+[
+    {
+
+        "id": "fosdem2020",
+        "name": "FOSDEM",
+        "description": "FOSDEM is a free event for software developers to meet, share ideas and collaborate. Every year, thousands of developers of free and open source software from all over the world gather at the event in Brussels.",
+        "days": ["2020-02-01", "2020-02-02"],
+        "icalUrl": "https://fosdem.org/2020/schedule/ical",
+        "venueImageUrl": "https://fosdem.org/2020/assets/campusmap-7048bbd8da9f1dc553378bda1b08c3bd831b1c923d522c6981708abe2fd2c7ce.png",
+        "venueLatitude": "N50.812375",
+        "venueLongitude": "E4.380734",
+        "venueOsmUrl": "http://www.openstreetmap.org/?mlat=50.812375&mlon=4.38073"
+    },
+    {
+        "id": "confKdeIn2020",
+        "name": "conf.kde.in",
+        "description": "conf.kde.in 2020 will be held in Maharaja Agrasen Institute of Technology, located in Rohini, Delhi, India. The aim of MAIT is to promote quality education in the field of Technology.",
+        "days":  ["2020-01-17", "2020-01-18", "2020-01-19"],
+        "icalUrl": "https://conf.kde.org/en/cki2020/public/schedule.ics",
+        "venueImageUrl": "",
+        "venueLatitude": "",
+        "venueLongitude": "",
+        "venueOsmUrl": ""
+    }
+]
+
+

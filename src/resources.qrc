@@ -6,7 +6,6 @@
         <file alias="MapView.qml">contents/ui/MapView.qml</file>
         <file alias="Conferences.qml">contents/ui/Conferences.qml</file>
         <file alias="EventInfo.qml">contents/ui/EventInfo.qml</file>
-        <file alias="fosdemCampusMap.png">contents/data/fosdemCampusMap.png</file>
-        <file alias="ConferenceData.js">contents/data/ConferenceData.js</file>
+        <file alias="ConferenceData.json">data/ConferenceData.json</file>
     </qresource>
 </RCC>

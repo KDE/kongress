@@ -18,11 +18,11 @@
  */
 
 import QtQuick 2.1
+import QtQml 2.1
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.0 as Kirigami
 import QtQuick.Controls 2.4 as Controls2
 import org.kde.phone.kdefosdem 0.1 as KDEFOSDEM
-import "ConferenceData.js" as ConferenceData
 
 Kirigami.ApplicationWindow {
     id: root
@@ -32,45 +32,34 @@ Kirigami.ApplicationWindow {
      */
     signal refreshNeeded;
 
-    property int activeConference: 0
-    property string conference: activeConference >= 0 ? ConferenceData.conferences[activeConference].name : []
-    property var categories: activeConference >= 0 ? ConferenceData.conferences[activeConference].categories : []
-    property var conferenceDays: activeConference >= 0 ? ConferenceData.conferences[activeConference].days : []
-
-    function loadDynamicActions()
-    {
-        var categoryChildren = [];
-        for (var i=0; i < categories.length; ++i)
-        {
-            categoryChildren.push(categoryAction.createObject(categoryActions, {text: root.categories[i]}));
-        }
-        categoryActions.children = categoryChildren;
-
-        var dayChildren = [];
-        for (var i=0; i < conferenceDays.length; ++i)
-        {
-            dayChildren.push(dayAction.createObject(dayActions, { conferenceDay: new Date(root.conferenceDays[i]) }));
-        }
-        dayActions.children = dayChildren;
-
-        var conferenceNames = [];
-        for (var i=0; i < ConferenceData.conferences.length; ++i)
-        {
-            conferenceNames.push(conferenceAction.createObject(conferenceSelector, {idx: i}));
-        }
-        conferenceSelector.children = conferenceNames;
-    }
+    property var activeConference
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
 
-        title: "Conference Companion"
+        title: "Kongress"
+
         actions: [
             Kirigami.Action {
                 id: conferenceSelector
 
-                text: i18n("Conferences")
+                text: root.activeConference && root.activeConference.name ? root.activeConference.name : i18n("Conference")
                 iconName: "group"
+                expandible: true
+
+                Kirigami.Action {
+                    text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
+
+                    onTriggered: pageStack.push(conferencesView)
+                }
+            },
+
+            Kirigami.Action {
+                id: dayActions
+
+                text: i18n("Daily Schedule")
+                iconName: "view-calendar-day"
+                expandible: true
             },
 
             Kirigami.Action {
@@ -80,13 +69,6 @@ Kirigami.ApplicationWindow {
                     pageStack.clear();
                     pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
                 }
-            },
-
-            Kirigami.Action {
-                id: dayActions
-
-                text: i18n("Days")
-                iconName: "view-calendar-day"
             },
 
             Kirigami.Action {
@@ -115,7 +97,6 @@ Kirigami.ApplicationWindow {
             }
         ]
 
-        Component.onCompleted: loadDynamicActions()
     }
 
 //     contextDrawer: Kirigami.ContextDrawer {
@@ -127,24 +108,25 @@ Kirigami.ApplicationWindow {
         separatorVisible: false
     }
 
+    KDEFOSDEM.ConferenceModel {
+        id: conferenceModel
+    }
+
     KDEFOSDEM.LocalCalendar {
         id: onlineCalendar
-
-        calendarInfo: {"name": ConferenceData.conferences[root.activeConference].name, "url": ConferenceData.conferences[root.activeConference].url}
 
         onCalendarInfoChanged: {
             root.refreshNeeded();
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
-            root.loadDynamicActions();
         }
     }
 
     KDEFOSDEM.LocalCalendar {
         id: favoritesCalendar
 
-        calendarInfo: {"name": "favorites"}
+        calendarInfo: {"id": "favorites"}
 
         onCalendarInfoChanged: {
             root.refreshNeeded();
@@ -214,12 +196,15 @@ Kirigami.ApplicationWindow {
         id: conferencesView
 
         Conferences {
-            conferencesList: ConferenceData.conferences
+            conferencesList: conferenceModel
 
+            /**
+             * Expects @selectedConference variable object to provide the information of the selected conference
+             */
             onSelected: {
                 pageStack.clear();
-                root.activeConference = conferenceId;
-                onlineCalendar.calendarInfo = {name: ConferenceData.conferences[conferenceId].name, url: ConferenceData.conferences[conferenceId].url};
+                root.activeConference = selectedConference;
+                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "url": root.activeConference.icalUrl};
                 pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }
@@ -229,52 +214,62 @@ Kirigami.ApplicationWindow {
         id: mapView
 
         MapView {
-            imageUrl: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("image") ?ConferenceData.conferences[activeConference].map.image : ""
-            latitude: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("latitude") ? ConferenceData.conferences[activeConference].map.latitude : "";
-            longitude: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("longitude") ?ConferenceData.conferences[activeConference].map.longitude : ""
-            geoUrl: activeConference >= 0 && ConferenceData.conferences[activeConference].map.hasOwnProperty("url") ? ConferenceData.conferences[activeConference].map.url : ""
+            imageUrl: root.activeConference.venueImageUrl
+            latitude: root.activeConference.venueLatitude
+            longitude: root.activeConference.venueLongitude
+            geoUrl: root.activeConference.venueOsmUrl
         }
     }
 
-    Component {
-        id: categoryAction
+    Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
+        id: daysInstantiator
 
-        Kirigami.Action {
-            text: ""
-            onTriggered: {
-                pageStack.clear();
-                pageStack.push(eventsCardView, {title: text, eventStartDt: "", category: text, showCategories: false});
-            }
-        }
-    }
+        model: (root.activeConference && root.activeConference.days) ? root.activeConference.days: []
 
-    Component {
-        id: dayAction
-
-        Kirigami.Action {
-            property date conferenceDay
+        delegate: Kirigami.Action {
+            property date conferenceDay: new Date(modelData)
 
             text: conferenceDay.toLocaleDateString(Qt.locale(), "dddd")
+
             onTriggered: {
                 pageStack.clear();
                 pageStack.push(eventsListView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
             }
         }
+
+        onObjectAdded: {
+            if(!isNaN(object.conferenceDay)) {
+                dayActions.children.push(object)
+            }
+        }
+        onObjectRemoved: {
+            if(dayActions.children) {
+                dayActions.children = [];
+            }
+        }
     }
 
-    Component {
-        id: conferenceAction
+    Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
+        model: (onlineCalendar && onlineCalendar.categories) ? onlineCalendar.categories : []
 
-        Kirigami.Action {
-            property string idx
+        delegate: Kirigami.Action {
+            text: modelData
 
-            text: ConferenceData.conferences[idx].name
-            iconName: idx == root.activeConference ? "object-select-symbolic" : ""
             onTriggered: {
                 pageStack.clear();
-                root.activeConference = idx;
-                onlineCalendar.calendarInfo = {name: ConferenceData.conferences[idx].name, url: ConferenceData.conferences[idx].url};
-                pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
+                pageStack.push(eventsCardView, {title: text, eventStartDt: "", category: text, showCategories: false});
+            }
+        }
+
+        onObjectAdded: {
+            if(object.text != "") {
+                categoryActions.children.push(object)
+            }
+        }
+
+        onObjectRemoved: {
+            if(categoryActions.children) {
+                categoryActions.children = [];
             }
         }
     }

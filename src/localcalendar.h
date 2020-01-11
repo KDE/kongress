@@ -34,6 +34,7 @@ class LocalCalendar : public QObject
     Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
     Q_PROPERTY(QSharedPointer<MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QSharedPointer<FileStorage> calendarstorage READ calendarstorage WRITE setCalendarstorage NOTIFY calendarstorageChanged) //TODO: Separate storage from LocalCalendar, move storage logic to CalendarController
+    Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged);
 
 public:
     explicit LocalCalendar(QObject* parent = nullptr);
@@ -42,6 +43,7 @@ public:
     MemoryCalendar::Ptr memorycalendar() const;
     FileStorage::Ptr calendarstorage() const; //TODO: Storage logic to CalendarController
     QVariantMap calendarInfo() const;
+    QStringList categories() const;
 
     void setCalendarstorage(FileStorage::Ptr calendarStorage); //TODO: Storage logic to CalendarController
     bool saveToDisk(const QString& filename, QIODevice *data); //TODO: Storage logic to CalendarController
@@ -56,6 +58,7 @@ Q_SIGNALS:
     void memorycalendarChanged();
     void calendarstorageChanged(); //TODO: Storage logic to CalendarController
     void calendarInfoChanged();
+    void categoriesChanged();
 
 private:
     static QVariantMap canCreateFile(const QString& calendarName); //TODO: Storage logic to CalendarController

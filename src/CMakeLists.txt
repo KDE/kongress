@@ -10,6 +10,9 @@ set(kdefosdem_SRCS
     eventmodel.cpp
     eventcontroller.cpp
     incidencealarmsmodel.cpp
+    conference.cpp
+    conferencecontroller.cpp
+    conferencemodel.cpp
     )
 
 qt5_add_resources(RESOURCES resources.qrc)

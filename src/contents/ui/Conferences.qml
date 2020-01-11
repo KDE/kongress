@@ -20,7 +20,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.phone.kdefosdem 0.1 as KDEFOSDEM
 
 Kirigami.Page {
     id: root
@@ -29,29 +28,35 @@ Kirigami.Page {
 
     property var conferencesList
 
-    signal selected(int conferenceId)
+    signal selected(var selectedConference)
 
     Kirigami.CardsGridView {
         id: view
+
         anchors.fill: parent
 
         model: conferencesList
 
-
         delegate: Kirigami.Card {
             id: card
+
             banner {
-                title: modelData.name
+                title: model.name
             }
+
             contentItem: Controls.Label {
                 wrapMode: Text.WordWrap
-                text: modelData.details
+                text: model.description
             }
+
             actions: [
                 Kirigami.Action {
-                    text: i18n("Select")
+                    text: i18n("Activate")
                     iconName: "object-select-symbolic"
-                    onTriggered: root.selected(model.index)
+
+                    onTriggered: selected(
+                        {"id": model.id, "name": model.name, "description": model.description, "icalUrl": model.icalUrl, "days": model.days, "venueImageUrl": model.venueImageUrl, "venueLatitude": model.venueLatitude, "venueLongitude": model.venueLongitude, "venueOsmUrl": model.venueOsmUrl}
+                    );
                 }
             ]
         }

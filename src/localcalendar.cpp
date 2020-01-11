@@ -49,21 +49,22 @@ FileStorage::Ptr LocalCalendar::calendarstorage() const
 
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if (calendarInfoMap.contains("name") && calendarInfoMap.contains("url"))
+    if (calendarInfoMap.contains("id") && calendarInfoMap.contains("url"))
     {
-        m_calendarInfo["name"] = calendarInfoMap["name"].toString();
+        m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
         CalendarController* config = new CalendarController();
-        m_fullpath = config->calendarFile(calendarInfoMap["name"].toString());
+        m_fullpath = config->calendarFile(calendarInfoMap["id"].toString());
 
         QUrl url = QUrl::fromEncoded(calendarInfoMap["url"].toByteArray());
+        qDebug() << "Downloading " << url;
         QNetworkRequest request(url);
         m_DownloadManager.get(request);
     }
-    else if (calendarInfoMap.contains("name"))
+    else if (calendarInfoMap.contains("id"))
     {
-        createLocalCalendar(calendarInfoMap["name"].toString());
+        createLocalCalendar(calendarInfoMap["id"].toString());
     }
     else {
         qDebug() << "No sufficient calendar information provided";
@@ -200,6 +201,7 @@ void LocalCalendar::downloadFinished(QNetworkReply *reply)
 
             emit calendarInfoChanged();
             emit memorycalendarChanged();
+            emit categoriesChanged();
         }
     }
 
@@ -223,7 +225,7 @@ void LocalCalendar::createLocalCalendar(const QString& calendarName)
 
     if(storage->load())
     {
-        m_calendarInfo["name"] = calendarName;
+        m_calendarInfo["id"] = calendarName;
         m_calendarInfo["url"] = "";
         m_calendar = calendar;
         m_cal_storage = storage;
@@ -231,9 +233,20 @@ void LocalCalendar::createLocalCalendar(const QString& calendarName)
 
     emit calendarInfoChanged();
     emit memorycalendarChanged();
+    emit categoriesChanged();
 }
 
 QVariantMap LocalCalendar::calendarInfo() const
 {
     return m_calendarInfo;
+}
+
+QStringList LocalCalendar::categories() const
+{
+    if(m_calendar)
+    {
+        return m_calendar->categories();
+    }
+
+    return QStringList();
 }

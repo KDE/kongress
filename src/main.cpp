@@ -22,12 +22,12 @@
 #include <QtQml>
 #include <QUrl>
 #include <KLocalizedContext>
-
 #include "calendarcontroller.h"
 #include "localcalendar.h"
 #include "eventmodel.h"
 #include "eventcontroller.h"
 #include "incidencealarmsmodel.h"
+#include "conferencemodel.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -40,6 +40,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<EventModel>("org.kde.phone.kdefosdem", 0, 1, "EventModel");
     qmlRegisterType<EventController>("org.kde.phone.kdefosdem",0,1,"EventController");
     qmlRegisterType<IncidenceAlarmsModel>("org.kde.phone.kdefosdem",0,1,"IncidenceAlarmsModel");
+    qmlRegisterType<ConferenceModel>("org.kde.phone.kdefosdem",0,1,"ConferenceModel");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
