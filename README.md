@@ -1,11 +1,40 @@
-# KDE Conference Companion
+# Kongress
 
-Companion application for conferences
+Companion application for conference attendees
 
-## Build
+## Features
 
-mkdir build  
-cd build  
-cmake -DKDE_INSTALL_USE_QT_SYS_PATHS=ON  ..  
-make  
-(sudo) make install  
+Kongress provides practical information about conferences. It supports conferences that offer their schedule in [iCalendar](https://tools.ietf.org/html/rfc5545) format. In Kongress, the data of the talks are shown in various ways, e.g. in daily views, by talk category, etc. The users can also create a list of favorite conference talks/events as well as they can navigate to the web page of each talk. A map of the conference venue, location information and link to OpenStreetMap can also be added.
+
+![](screenshots/list_view.png)
+
+A set of conferences have been preloaded and are available after installation. Users may add extra conferences, providing a link to their iCalendar schedule (under development).
+
+## Setup
+
+### Build
+
+```
+git clone https://invent.kde.org/dkardarakos/kongress.git
+cd kongress
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+```
+
+### Run
+
+```
+bin/kongress
+```
+
+*To simulate Plasma Mobile user experience:*
+
+```
+QT_QUICK_CONTROLS_MOBILE=true QT_QUICK_CONTROLS_STYLE=Plasma bin/kongress
+```
+
+### Install
+
+sudo make install
