@@ -56,7 +56,6 @@ QString Conference::venueLatitude() const
 QString Conference::venueLongitude() const
 {
     return m_venue_longitude;
-
 }
 
 QString Conference::venueOsmUrl() const
@@ -98,7 +97,7 @@ void Conference::setDays(const QStringList& days)
 
 void Conference::setIcalUrl(const QString& icalUrl)
 {
-    if(icalUrl != m_description)
+    if(icalUrl != m_ical_url)
     {
         m_ical_url = icalUrl;
     }
