@@ -8,7 +8,7 @@ set(QT_MIN_VERSION "5.7.0")
 ################# Disallow in-source build #################
 
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-   message(FATAL_ERROR "KDE Conference Companion requires an out of source build. Please create a separate build directory.")
+   message(FATAL_ERROR "Kongress requires an out of source build. Please create a separate build directory.")
 endif()
 
 option(REMINDERS_ENABLED "Build with reminders support" OFF)
