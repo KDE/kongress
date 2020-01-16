@@ -29,8 +29,6 @@ Kirigami.Page {
     property string viewMode
     property var rwCalendar
 
-    signal eventUpdated()
-
     title: root.event ? event.summary : ""
 
     Kirigami.Card {
@@ -65,7 +63,6 @@ Kirigami.Page {
                     if(root.event && root.viewMode == "favorites") {
                         var vevent = { uid: root.event.uid } ;
                         _eventController.remove(root.rwCalendar, vevent);
-                        eventUpdated();
                         pageStack.pop();
                     }
                     else if(root.event) {

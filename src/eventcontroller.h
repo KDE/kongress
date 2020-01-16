@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Dimitris Kardarakos
+ * Copyright (C) 2018-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -22,6 +22,7 @@
 #include <QObject>
 #include <QVariantMap>
 
+class CalendarController;
 class LocalCalendar;
 
 class EventController : public QObject
@@ -32,7 +33,13 @@ public:
     explicit EventController(QObject* parent = nullptr);
     ~EventController() override;
 
-    Q_INVOKABLE void remove(LocalCalendar *calendar, const QVariantMap &event);
-    Q_INVOKABLE int addEdit(LocalCalendar *calendar, const QVariantMap &event);
+    CalendarController* calendarController();
+    void setCalendarController(CalendarController* const controller);
+
+    Q_INVOKABLE void remove(LocalCalendar* calendar, const QVariantMap &event);
+    Q_INVOKABLE int addEdit(LocalCalendar* calendar, const QVariantMap &event);
+
+private:
+    CalendarController* m_cal_controller;
 };
 #endif

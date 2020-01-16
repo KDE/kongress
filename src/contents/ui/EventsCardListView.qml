@@ -33,13 +33,6 @@ Kirigami.Page {
     property string category
     property bool showCategories: true
 
-    signal eventsUpdated
-
-    function reload()
-    {
-        cardsListview.model.loadEvents();
-    }
-
     leftPadding: 0
     rightPadding: 0
 
@@ -59,8 +52,6 @@ Kirigami.Page {
         EventInfo {
             rwCalendar: root.rwCalendar
             viewMode: root.viewMode
-
-            onEventUpdated: root.eventsUpdated()
         }
     }
 
@@ -93,10 +84,8 @@ Kirigami.Page {
                         if(viewMode == "favorites") {
                             var vevent = { uid: model.uid } ;
                             _eventController.remove(root.rwCalendar, vevent);
-                            eventsUpdated();
                         }
                         else {
-                            console.log("Adding event to favorites");
                             var vevent = { "uid" : model.uid, "startDate": model.dtstart, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.dtend, "categories": model.eventCategories, "url": model.url/*"alarms": incidenceAlarmsModel.alarms()*/};
 
                             var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
@@ -185,7 +174,7 @@ Kirigami.Page {
         id: eventsModel
 
         filterdt: root.eventStartDt
-        memorycalendar: root.roCalendar.memorycalendar
+        calendar: root.roCalendar
         eventCategory: root.category
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Dimitris Kardarakos
+ * Copyright (C) 2019-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -21,28 +21,57 @@
 
 #include <QObject>
 #include <QVariantMap>
+#include <QMap>
+#include <QtNetwork>
+#include <KCalendarCore/FileStorage>
+#include <KCalendarCore/MemoryCalendar>
+
+using namespace KCalendarCore;
+
+struct DonwloadManager {
+    QString calendarId;
+    QNetworkAccessManager networkManager;
+};
 
 class CalendarController : public QObject
 {
     Q_OBJECT
+
     Q_PROPERTY(QString calendars READ calendars NOTIFY calendarsChanged)
+
 public:
 
     explicit CalendarController(QObject* parent = nullptr);
     ~CalendarController() override;
 
     QString calendars() const;
-    QString calendarFile(const QString & calendarName);
-    Q_SIGNAL void calendarsChanged();
+    QString calendarFile(const QString & calendarId);
+
+    MemoryCalendar::Ptr createLocalCalendar(const QString& calendarId);
+    MemoryCalendar::Ptr memoryCalendar(const QString& calendarId) const;
+    void createCalendarFromUrl(const QString& calendarId, const QUrl& url);
+    QVariantMap importCalendar(const QString& calendarId, const QString& sourcePath);
+    void deleteCalendar(const QString& calendarId);
+    bool save(const QString& calendarId);
+
+Q_SIGNALS:
+    void calendarsChanged();
+    void calendarDownloaded(const QString& calendarId);
 
 public Q_SLOTS:
     QVariantMap canAddCalendar(const QString& calendar);
     QVariantMap addCalendar(const QString& calendar);
-    void removeCalendar(const QString& calendar);
-
+    void downloadFinished(QNetworkReply *reply);
 
 private:
-    static QString filenameToPath(const QString & calendarName);
+    static QString filenameToPath(const QString & calendarId);
+    QVariantMap canCreateFile(const QString& calendarId);
+    void removeCalendarFromConfig(const QString& calendarId);
+    bool saveToDisk(const QString& filename, QIODevice *data);
+
+    QMap<QString, FileStorage::Ptr> m_storages;
+    QMap<QString, MemoryCalendar::Ptr> m_calendars;
+    DonwloadManager* m_downloadManager;
 
     class Private;
     Private* d;

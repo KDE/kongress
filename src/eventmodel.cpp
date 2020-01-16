@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Dimitris Kardarakos
+ * Copyright (C) 2018-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -17,8 +17,11 @@
  */
 
 #include "eventmodel.h"
+#include "localcalendar.h"
 #include <KCalendarCore/CalFilter>
+#include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
+
 using namespace KCalendarCore;
 
 EventModel::EventModel(QObject* parent) :
@@ -26,10 +29,10 @@ EventModel::EventModel(QObject* parent) :
     m_events(Event::List()),
     m_filterdt(QDate()),
     m_category(QString()),
-    m_calendar(nullptr)
+    m_local_calendar(nullptr)
 {
     connect(this, &EventModel::filterdtChanged, this, &EventModel::loadEvents);
-    connect(this, &EventModel::memorycalendarChanged, this, &EventModel::loadEvents);
+    connect(this, &EventModel::calendarChanged, this, &EventModel::loadEvents);
     connect(this, &EventModel::eventCategoryChanged, this, &EventModel::loadEvents);
 }
 
@@ -43,18 +46,22 @@ QDate EventModel::filterdt() const
 void EventModel::setFilterdt(const QDate& filterDate)
 {
     m_filterdt = filterDate;
-    emit filterdtChanged();
+
+    Q_EMIT filterdtChanged();
 }
 
-MemoryCalendar::Ptr EventModel::memorycalendar() const
+LocalCalendar* EventModel::calendar() const
 {
-    return m_calendar;
+    return m_local_calendar;
 }
 
-void EventModel::setMemorycalendar(const MemoryCalendar::Ptr calendarPtr)
+void EventModel::setCalendar(LocalCalendar* const calendarPtr)
 {
-    m_calendar = calendarPtr;
-    emit memorycalendarChanged();
+    m_local_calendar = calendarPtr;
+
+    connect(m_local_calendar, &LocalCalendar::eventsChanged, this, &EventModel::loadEvents);
+
+    Q_EMIT calendarChanged();
 }
 
 QHash<int, QByteArray> EventModel::roleNames() const
@@ -145,17 +152,17 @@ void EventModel::loadEvents()
     beginResetModel();
     m_events.clear();
 
-    if(m_calendar != nullptr && m_filterdt.isValid())
+    if(m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid())
     {
-        m_events = m_calendar->rawEventsForDate(m_filterdt, m_calendar->timeZone(), EventSortStartDate,SortDirectionAscending);
+        m_events = m_local_calendar->memorycalendar()->rawEventsForDate(m_filterdt, m_local_calendar->memorycalendar()->timeZone(), EventSortStartDate,SortDirectionAscending);
     }
 
-    if(m_calendar != nullptr && m_filterdt.isNull())
+    if(m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isNull())
     {
-        m_events = m_calendar->rawEvents(EventSortStartDate, SortDirectionAscending);
+        m_events =  m_local_calendar->memorycalendar()->rawEvents(EventSortStartDate, SortDirectionAscending);
     }
 
-    if(m_calendar != nullptr && !(m_category.isEmpty()))
+    if(m_local_calendar != nullptr && !(m_category.isEmpty()))
     {
         QStringList categories(m_category);
         CalFilter* filter = new CalFilter();
@@ -165,7 +172,8 @@ void EventModel::loadEvents()
     }
 
     endResetModel();
-    emit rowCountChanged();
+
+    Q_EMIT rowCountChanged();
 }
 
 int EventModel::repeatEvery(const int idx) const
@@ -195,7 +203,7 @@ void EventModel::setEventCategory(const QString& category)
     if(m_category != category)
     {
         m_category = category;
-        emit eventCategoryChanged();
+        Q_EMIT eventCategoryChanged();
     }
 }
 
@@ -203,4 +211,3 @@ QString EventModel::eventCategory() const
 {
     return m_category;
 }
-

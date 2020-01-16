@@ -1,5 +1,5 @@
 /*
- *   Copyright 2020 Dimitris Kardarakos <dimkard@gmail.com>
+ *   Copyright 2018-2020 Dimitris Kardarakos <dimkard@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -28,6 +28,7 @@
 #include "eventcontroller.h"
 #include "incidencealarmsmodel.h"
 #include "conferencemodel.h"
+#include "calendarcontroller.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -41,14 +42,20 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<EventController>("org.kde.kongress",0,1,"EventController");
     qmlRegisterType<IncidenceAlarmsModel>("org.kde.kongress",0,1,"IncidenceAlarmsModel");
     qmlRegisterType<ConferenceModel>("org.kde.kongress",0,1,"ConferenceModel");
+    qmlRegisterType<CalendarController>("org.kde.kongress",0,1,"CalendarController");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    engine.load(QUrl(QStringLiteral("qrc:///Main.qml")));
+    CalendarController* calendarController = new CalendarController();
+    engine.rootContext()->setContextProperty(QStringLiteral("_calendarController"), calendarController); //TODO: Make it singleton
 
     EventController eventController;
-    engine.rootContext()->setContextProperty(QStringLiteral("_eventController"), &eventController);
+    eventController.setCalendarController(calendarController);
+
+    engine.rootContext()->setContextProperty(QStringLiteral("_eventController"), &eventController);  //TODO: Make it singleton
+
+    engine.load(QUrl(QStringLiteral("qrc:///Main.qml")));
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

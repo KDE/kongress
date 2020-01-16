@@ -27,11 +27,6 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.ApplicationWindow {
     id: root
 
-    /**
-     * To be emitted when data displayed should be refreshed
-     */
-    signal refreshNeeded;
-
     property var activeConference
 
     globalDrawer: Kirigami.GlobalDrawer {
@@ -119,7 +114,6 @@ Kirigami.ApplicationWindow {
         id: onlineCalendar
 
         onCalendarInfoChanged: {
-            root.refreshNeeded();
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
@@ -129,10 +123,9 @@ Kirigami.ApplicationWindow {
     Kongress.LocalCalendar {
         id: favoritesCalendar
 
-        calendarInfo: {"id": "favorites"}
+        calendarInfo: {"id": "favorites",  "controller": _calendarController}
 
         onCalendarInfoChanged: {
-            root.refreshNeeded();
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
@@ -148,14 +141,6 @@ Kirigami.ApplicationWindow {
             viewMode: "events"
 
             title: i18n("Schedule")
-
-            onEventsUpdated: root.refreshNeeded()
-
-            Connections {
-                target: root
-
-                onRefreshNeeded: reload()
-            }
         }
     }
 
@@ -166,14 +151,6 @@ Kirigami.ApplicationWindow {
             roCalendar: onlineCalendar
             rwCalendar: favoritesCalendar
             viewMode: "events"
-
-            onEventsUpdated: root.refreshNeeded()
-
-            Connections {
-                target: root
-
-                onRefreshNeeded: reload()
-            }
         }
     }
 
@@ -184,14 +161,6 @@ Kirigami.ApplicationWindow {
             roCalendar: favoritesCalendar
             rwCalendar: favoritesCalendar
             viewMode: "favorites"
-
-            onEventsUpdated: root.refreshNeeded()
-
-            Connections {
-                target: root
-
-                onRefreshNeeded: reload()
-            }
         }
     }
 
@@ -207,7 +176,7 @@ Kirigami.ApplicationWindow {
             onSelected: {
                 pageStack.clear();
                 root.activeConference = selectedConference;
-                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "url": root.activeConference.icalUrl};
+                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl};
                 pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }

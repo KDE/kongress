@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Dimitris Kardarakos
+ * Copyright (C) 2019-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -38,8 +38,7 @@ public:
 };
 
 CalendarController::CalendarController(QObject* parent)
-    : QObject(parent)
-    , d(new Private)
+    : QObject(parent), m_storages(QMap<QString, FileStorage::Ptr>()), m_calendars(QMap<QString, MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
 {
     QString calendars = d->config.group("general").readEntry("calendars", QString());
     if(calendars.isEmpty()) {
@@ -47,6 +46,8 @@ CalendarController::CalendarController(QObject* parent)
         addCalendar("favorites");
         d->config.sync();
     }
+
+    connect(&(m_downloadManager->networkManager), SIGNAL(finished(QNetworkReply*)), SLOT(downloadFinished(QNetworkReply*)));
 }
 
 CalendarController::~CalendarController()
@@ -118,45 +119,234 @@ QVariantMap CalendarController::addCalendar(const QString & calendar)
     d->config.group("general").writeEntry("calendars", calendarsList.join(";"));
     d->config.sync();
 
-    emit calendarsChanged();
+    Q_EMIT calendarsChanged();
 
     return result;
 }
 
-void CalendarController::removeCalendar(const QString& calendar)
+void CalendarController::removeCalendarFromConfig(const QString& calendarId)
 {
     d->config.reparseConfiguration();
     QStringList calendarsList = d->config.group("general").readEntry("calendars", QString()).split(";");
-    if(calendarsList.contains(calendar))
+    if(calendarsList.contains(calendarId))
     {
-        qDebug() << "Removing calendar " << calendar;
-        calendarsList.removeAll(calendar);
+        qDebug() << "Removing calendar " << calendarId;
+        calendarsList.removeAll(calendarId);
 
-        d->config.deleteGroup(calendar);
+        d->config.deleteGroup(calendarId);
         d->config.group("general").writeEntry("calendars", calendarsList.join(";"));
         d->config.sync();
 
-        emit calendarsChanged();
+        Q_EMIT calendarsChanged();
     }
 }
 
-QString CalendarController::calendarFile(const QString& calendarName)
+QString CalendarController::calendarFile(const QString& calendarId)
 {
-    if(d->config.hasGroup(calendarName) && d->config.group(calendarName).hasKey("file"))
+    if(d->config.hasGroup(calendarId) && d->config.group(calendarId).hasKey("file"))
     {
-        return  d->config.group(calendarName).readEntry("file");
+        return  d->config.group(calendarId).readEntry("file");
     }
-    d->config.group(calendarName).writeEntry("file", filenameToPath(calendarName));
+    d->config.group(calendarId).writeEntry("file", filenameToPath(calendarId));
     d->config.sync();
 
-    return filenameToPath(calendarName);
+    return filenameToPath(calendarId);
 }
 
-QString CalendarController::filenameToPath(const QString& calendarName)
+QString CalendarController::filenameToPath(const QString& calendarId)
 {
     QString basePath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir baseFolder(basePath);
     baseFolder.mkpath(QStringLiteral("."));
 
-    return basePath + "/kongress_" + calendarName + ".ics";
+    return basePath + "/kongress_" + calendarId + ".ics";
+}
+
+MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calendarId)
+{
+    auto m_fullpath = calendarFile(calendarId);
+
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+    FileStorage::Ptr storage(new FileStorage(calendar));
+    storage->setFileName(m_fullpath);
+    QFile calendarFile(m_fullpath);
+
+    if(!calendarFile.exists())
+    {
+        qDebug() << "Creating file" << storage->save();
+    }
+
+    if(storage->load())
+    {
+        m_storages[calendarId] = storage;
+        m_calendars[calendarId] = calendar;
+    }
+
+    Q_EMIT calendarsChanged();
+
+    return calendar;
+}
+
+QVariantMap CalendarController::importCalendar(const QString& calendarId, const QString& sourcePath)
+{
+    QVariantMap result;
+    result["success"] = QVariant(false);
+
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+    FileStorage::Ptr storage(new FileStorage(calendar));
+
+    QVariantMap canCreateCheck = canCreateFile(calendarId);
+
+    if(!(canCreateCheck["success"].toBool()))
+    {
+        result["reason"] = QVariant(canCreateCheck["reason"].toString());
+
+        return result;
+    }
+
+    storage->setFileName(sourcePath);
+
+    if(!(storage->load()))
+    {
+        result["reason"] = QVariant(QString(i18n("The calendar file is not valid")));
+
+        return result;
+    }
+
+    storage->setFileName(canCreateCheck["targetPath"].toString());
+
+    if(!(storage->save()))
+    {
+        result["reason"] = QVariant(QString(i18n("The calendar file cannot be saved")));
+
+        return result;
+    }
+
+    m_storages[calendarId] = storage;
+    m_calendars[calendarId] = calendar;
+
+    result["success"] = QVariant(true);
+    result["reason"] = QVariant(QString());
+
+    return result;
+}
+
+void CalendarController::deleteCalendar(const QString& calendarId)
+{
+    qDebug() << "Deleting calendar " << calendarId;
+
+    auto fileName = m_storages[calendarId]->fileName();
+
+    QFile calendarFile(fileName);
+
+    if(calendarFile.exists())
+    {
+        calendarFile.remove();
+    }
+
+    m_storages.remove(calendarId);
+    m_calendars.remove(calendarId);
+
+    removeCalendarFromConfig(calendarId);
+
+    Q_EMIT calendarsChanged();
+}
+
+bool CalendarController::save(const QString& calendarId)
+{
+    if(m_storages[calendarId]->save())
+    {
+        Q_EMIT calendarsChanged();
+
+        return true;
+    }
+
+    return false;
+}
+
+QVariantMap CalendarController::canCreateFile(const QString& calendarId)
+{
+    QVariantMap result;
+    result["success"] = QVariant(true);
+    result["reason"] = QVariant(QString());
+
+    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/kongress_" + calendarId + ".ics" ;
+    QFile calendarFile(targetPath);
+
+    if(calendarFile.exists())
+    {
+        result["success"] = QVariant(false);
+        result["reason"] = QVariant(QString(i18n("A calendar with the same name already exists")));
+
+        return result;
+    }
+
+    result["targetPath"] = QVariant(QString(targetPath));
+
+    return result;
+}
+
+void CalendarController::createCalendarFromUrl(const QString& calendarId, const QUrl& url)
+{
+    QNetworkRequest request(url);
+    m_downloadManager->calendarId = calendarId;
+    (m_downloadManager->networkManager).get(request);
+}
+
+void CalendarController::downloadFinished(QNetworkReply *reply)
+{
+    auto url = reply->url();
+
+    if(reply->error())
+    {
+        qDebug() << "Download failed";
+    }
+    else
+    {
+        auto filePath = calendarFile(m_downloadManager->calendarId);
+
+        if(saveToDisk(filePath, reply))
+        {
+            qDebug() << QString("Download of %1 succeeded (saved to %2)").arg(url.toEncoded().constData()).arg(qPrintable(filePath));
+
+            MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+            FileStorage::Ptr storage(new FileStorage(calendar));
+            storage->setFileName(filePath);
+
+            if(storage->load())
+            {
+                m_storages[m_downloadManager->calendarId] = storage;
+                m_calendars[m_downloadManager->calendarId] = calendar;
+            }
+
+            Q_EMIT calendarsChanged();
+            Q_EMIT calendarDownloaded(m_downloadManager->calendarId);
+        }
+    }
+
+    reply->deleteLater();
+}
+
+bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
+{
+    QFile file(filename);
+    if(!file.open(QIODevice::WriteOnly)) {
+        qDebug() << QString("Could not open %1 for writing: %2").arg(qPrintable(filename)).arg(qPrintable(file.errorString()));
+        return false;
+    }
+
+    file.write(data->readAll());
+    file.close();
+
+    return true;
+}
+
+MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString& calendarId) const
+{
+    if(m_calendars.contains(calendarId))
+    {
+        return m_calendars[calendarId];
+    }
+
+    return nullptr;
 }

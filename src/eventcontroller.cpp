@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 Dimitris Kardarakos
+ * Copyright (C) 2018-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -17,31 +17,62 @@
  */
 
 #include "eventcontroller.h"
+#include "calendarcontroller.h"
 #include "localcalendar.h"
 #include <KCalendarCore/Event>
 #include <KCalendarCore/MemoryCalendar>
 #include <QDebug>
 
-EventController::EventController(QObject* parent) : QObject(parent) {}
+EventController::EventController(QObject* parent) : QObject(parent), m_cal_controller(nullptr) {}
 
 EventController::~EventController() = default;
 
+CalendarController * EventController::calendarController()
+{
+    return m_cal_controller;
+}
+
+void EventController::setCalendarController(CalendarController *const controller)
+{
+    m_cal_controller = controller;
+}
+
 void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventData)
 {
-    qDebug() << "Deleting event";
+    if(calendar == nullptr)
+    {
+        qDebug() << "There is no calendar to delete event from";
+
+        return;
+    }
+
+    qDebug() << "Deleting event from calendar " << calendar->calendarId();
 
     MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
     QString uid = eventData["uid"].toString();
     Event::Ptr event = memoryCalendar->event(uid);
     memoryCalendar->deleteEvent(event);
-    bool deleted = calendar->save();
+
+    bool deleted = false;
+    if(m_cal_controller != nullptr)
+    {
+        deleted = m_cal_controller->save(calendar->calendarId());
+        Q_EMIT calendar->eventsChanged();
+    }
 
     qDebug() << "Event deleted: " << deleted;
 }
 
 int EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventData)
 {
-    qDebug() << "\naddEdit:\tCreating event";
+    if(calendar == nullptr)
+    {
+        qDebug() << "There is no calendar to add event to";
+
+        return 500;
+    }
+
+    qDebug() << "\naddEdit:\tCreating event to calendar " << calendar->calendarId();
 
     MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
     QDateTime now = QDateTime::currentDateTime();
@@ -98,7 +129,13 @@ int EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventDa
 
     memoryCalendar->addEvent(event);
 
-    bool merged = calendar->save();
+    bool merged = false;
+
+    if(m_cal_controller != nullptr)
+    {
+        merged = m_cal_controller->save(calendar->calendarId());
+        Q_EMIT calendar->eventsChanged();
+    }
 
     qDebug() << "addEdit:\tEvent added/updated: " << merged;
 

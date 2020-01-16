@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Dimitris Kardarakos
+ * Copyright (C) 2018-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -21,57 +21,44 @@
 
 #include <QSharedPointer>
 #include <KCalendarCore/MemoryCalendar>
-#include <KCalendarCore/FileStorage>
-#include <KCalendarCore/Event>
 #include <QVariantMap>
-#include <QtNetwork>
 
 using namespace KCalendarCore;
+
+class CalendarController;
 
 class LocalCalendar : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
     Q_PROPERTY(QSharedPointer<MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
-    Q_PROPERTY(QSharedPointer<FileStorage> calendarstorage READ calendarstorage WRITE setCalendarstorage NOTIFY calendarstorageChanged) //TODO: Separate storage from LocalCalendar, move storage logic to CalendarController
-    Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged);
+    Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
 
 public:
     explicit LocalCalendar(QObject* parent = nullptr);
     ~LocalCalendar() override;
 
-    MemoryCalendar::Ptr memorycalendar() const;
-    FileStorage::Ptr calendarstorage() const; //TODO: Storage logic to CalendarController
     QVariantMap calendarInfo() const;
-    QStringList categories() const;
-
-    void setCalendarstorage(FileStorage::Ptr calendarStorage); //TODO: Storage logic to CalendarController
-    bool saveToDisk(const QString& filename, QIODevice *data); //TODO: Storage logic to CalendarController
     void setCalendarInfo(const QVariantMap& calendarInfoMap);
 
+    MemoryCalendar::Ptr memorycalendar() const;
+    QStringList categories() const;
+
+    QString calendarId() const;
+
 public Q_SLOTS:
-    void deleteCalendar(); //TODO: Storage logic to CalendarController
-    bool save(); //TODO: Storage logic to CalendarController
-    static QVariantMap importCalendar(const QString& calendarName, const QString& sourcePath); //TODO: Storage logic to CalendarController
-    void downloadFinished(QNetworkReply *reply); //TODO: Storage logic to CalendarController
+    void onlineCalendarReady(const QString& calendarId);
+
 Q_SIGNALS:
     void memorycalendarChanged();
-    void calendarstorageChanged(); //TODO: Storage logic to CalendarController
     void calendarInfoChanged();
     void categoriesChanged();
+    void eventsChanged();
 
 private:
-    static QVariantMap canCreateFile(const QString& calendarName); //TODO: Storage logic to CalendarController
-    void createLocalCalendar(const QString& calendarName); //TODO: Storage logic to CalendarController
-
-    MemoryCalendar::Ptr m_calendar;
-    FileStorage::Ptr m_cal_storage; //TODO: Storage logic to CalendarController
-    QString m_fullpath;  //TODO: Storage logic to CalendarController
-    QNetworkAccessManager m_DownloadManager; //TODO: Storage logic to CalendarController
     QVariantMap m_calendarInfo;
-
-
+    MemoryCalendar::Ptr m_calendar;
+    CalendarController* m_cal_controller;
 };
-
 #endif // LOCALCALENDAR_H
 

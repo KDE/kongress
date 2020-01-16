@@ -1,6 +1,6 @@
 
 /*
- * Copyright (C) 2020 Dimitris Kardarakos
+ * Copyright (C) 2018-2020 Dimitris Kardarakos
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -20,20 +20,14 @@
 #include "localcalendar.h"
 #include "calendarcontroller.h"
 #include <QDebug>
-#include <KCalendarCore/Todo>
-#include <QFile>
-#include <QStandardPaths>
 #include <KLocalizedString>
 
 using namespace KCalendarCore;
 
 LocalCalendar::LocalCalendar(QObject* parent)
-: QObject(parent), m_calendarInfo(QVariantMap())
+: QObject(parent), m_calendarInfo(QVariantMap()), m_cal_controller(nullptr)
 {
-    connect(&m_DownloadManager, SIGNAL(finished(QNetworkReply*)),
-        SLOT(downloadFinished(QNetworkReply*)));
 }
-
 
 LocalCalendar::~LocalCalendar() = default;
 
@@ -42,198 +36,42 @@ MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
     return m_calendar;
 }
 
-FileStorage::Ptr LocalCalendar::calendarstorage() const
-{
-    return m_cal_storage;
-}
-
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if (calendarInfoMap.contains("id") && calendarInfoMap.contains("url"))
+    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("controller"))
     {
+        qDebug() << "No sufficient calendar information provided";
+
+        return;
+    }
+
+    m_cal_controller = calendarInfoMap["controller"].value<CalendarController*>();
+
+    if(m_cal_controller != nullptr)
+    {
+        connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
+    }
+
+    if (calendarInfoMap.contains("url"))
+    {
+        qDebug() << "Creating online calendar: " << calendarInfoMap["id"].toString() ;
+
         m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
-        CalendarController* config = new CalendarController();
-        m_fullpath = config->calendarFile(calendarInfoMap["id"].toString());
-
-        QUrl url = QUrl::fromEncoded(calendarInfoMap["url"].toByteArray());
-        qDebug() << "Downloading " << url;
-        QNetworkRequest request(url);
-        m_DownloadManager.get(request);
-    }
-    else if (calendarInfoMap.contains("id"))
-    {
-        createLocalCalendar(calendarInfoMap["id"].toString());
-    }
-    else {
-        qDebug() << "No sufficient calendar information provided";
-    }
-}
-
-
-void LocalCalendar::setCalendarstorage(FileStorage::Ptr calendarStorage)
-{
-    if(m_cal_storage != calendarStorage)
-    {
-        m_cal_storage = calendarStorage;
-        qDebug() << "Storage succesfully set";
-    }
-}
-
-void LocalCalendar::deleteCalendar()
-{
-        qDebug() << "Deleting calendar at " << m_fullpath;
-        QFile calendarFile(m_fullpath);
-
-        if (calendarFile.exists())
-        {
-            calendarFile.remove();
-        }
-}
-
-
-bool LocalCalendar::save()
-{
-    return m_cal_storage->save();
-}
-
-QVariantMap LocalCalendar::canCreateFile(const QString& calendarName)
-{
-    QVariantMap result;
-    result["success"] = QVariant(true);
-    result["reason"] = QVariant(QString());
-
-    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/kongress_" + calendarName + ".ics" ;
-    QFile calendarFile(targetPath);
-
-    if(calendarFile.exists())
-    {
-        result["success"] = QVariant(false);
-        result["reason"] = QVariant(QString(i18n("A calendar with the same name already exists")));
-
-        return result;
-    }
-
-    result["targetPath"] = QVariant(QString(targetPath));
-
-    return result;
-}
-
-QVariantMap LocalCalendar::importCalendar(const QString& calendarName, const QString& sourcePath)
-{
-    QVariantMap result;
-    result["success"] = QVariant(false);
-
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
-    FileStorage::Ptr storage(new FileStorage(calendar));
-
-    QVariantMap canCreateCheck = canCreateFile(calendarName);
-    if(!(canCreateCheck["success"].toBool()))
-    {
-        result["reason"] = QVariant(canCreateCheck["reason"].toString());
-
-        return result;
-    }
-
-    storage->setFileName(sourcePath);
-
-    if(!(storage->load()))
-    {
-        result["reason"] = QVariant(QString(i18n("The calendar file is not valid")));
-
-        return result;
-    }
-
-    storage->setFileName(canCreateCheck["targetPath"].toString());
-
-    if(!(storage->save()))
-    {
-        result["reason"] = QVariant(QString(i18n("The calendar file cannot be saved")));
-
-        return result;
-    }
-
-    result["success"] = QVariant(true);
-    result["reason"] = QVariant(QString());
-
-    return result;
-}
-
-
-bool LocalCalendar::saveToDisk(const QString &filename, QIODevice *data)
-{
-    QFile file(filename);
-    if (!file.open(QIODevice::WriteOnly)) {
-        qDebug() << QString("Could not open %1 for writing: %2").arg(qPrintable(filename)).arg(qPrintable(file.errorString()));
-        return false;
-    }
-
-    file.write(data->readAll());
-    file.close();
-
-    return true;
-}
-
-void LocalCalendar::downloadFinished(QNetworkReply *reply)
-{
-    QUrl url = reply->url();
-
-    if (reply->error())
-    {
-        qDebug() << "Download failed";
+        m_cal_controller->createCalendarFromUrl(calendarInfoMap["id"].toString(), QUrl::fromEncoded(calendarInfoMap["url"].toByteArray()));
     }
     else
     {
-        if (saveToDisk(m_fullpath, reply))
-        {
-            qDebug() << QString("Download of %1 succeeded (saved to %2)").arg(url.toEncoded().constData()).arg(qPrintable(m_fullpath));
+        qDebug() << "Creating local calendar: " << calendarInfoMap["id"].toString() ;
 
-            MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
-            FileStorage::Ptr storage(new FileStorage(calendar));
-            storage->setFileName(m_fullpath);
+        m_calendarInfo["id"] = calendarInfoMap["id"].toString();
+        m_calendar = m_cal_controller->createLocalCalendar(calendarInfoMap["id"].toString());
 
-            if(storage->load())
-            {
-                m_calendar = calendar;
-                m_cal_storage = storage;
-            }
-
-            emit calendarInfoChanged();
-            emit memorycalendarChanged();
-            emit categoriesChanged();
-        }
+        Q_EMIT memorycalendarChanged();
+        Q_EMIT categoriesChanged();
+        Q_EMIT eventsChanged();
     }
-
-    reply->deleteLater();
-
-}
-void LocalCalendar::createLocalCalendar(const QString& calendarName)
-{
-    CalendarController* config = new CalendarController();
-    m_fullpath = config->calendarFile(calendarName);
-
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
-    FileStorage::Ptr storage(new FileStorage(calendar));
-    storage->setFileName(m_fullpath);
-    QFile calendarFile(m_fullpath);
-
-    if (!calendarFile.exists())
-    {
-        qDebug() << "Creating file" << storage->save();
-    }
-
-    if(storage->load())
-    {
-        m_calendarInfo["id"] = calendarName;
-        m_calendarInfo["url"] = "";
-        m_calendar = calendar;
-        m_cal_storage = storage;
-    }
-
-    emit calendarInfoChanged();
-    emit memorycalendarChanged();
-    emit categoriesChanged();
 }
 
 QVariantMap LocalCalendar::calendarInfo() const
@@ -249,4 +87,28 @@ QStringList LocalCalendar::categories() const
     }
 
     return QStringList();
+}
+
+void LocalCalendar::onlineCalendarReady(const QString& calendarId)
+{
+    qDebug() << "Calendar " << calendarId << " is ready";
+
+    if(calendarId == m_calendarInfo["id"].toString())
+    {
+        m_calendar = m_cal_controller->memoryCalendar(calendarId);
+
+        Q_EMIT memorycalendarChanged();
+        Q_EMIT categoriesChanged();
+        Q_EMIT eventsChanged();
+    }
+}
+
+QString LocalCalendar::calendarId() const
+{
+    if(m_calendarInfo.contains("id"))
+    {
+        return m_calendarInfo["id"].toString();
+    }
+
+    return QString();
 }

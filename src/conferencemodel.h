@@ -31,7 +31,7 @@ class ConferenceModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QVariantMap filter READ filter WRITE setFilter NOTIFY filterChanged);
+    Q_PROPERTY(QVariantMap filter READ filter WRITE setFilter NOTIFY filterChanged)
 
 public:
     enum Roles
