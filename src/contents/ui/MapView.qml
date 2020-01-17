@@ -33,7 +33,11 @@ Kirigami.Page {
     title: i18n("Map")
 
     ColumnLayout {
-        anchors.fill: parent
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
 
         Image {
             Layout.fillWidth: true
