@@ -18,9 +18,9 @@
         "days":  ["2020-01-17", "2020-01-18", "2020-01-19"],
         "icalUrl": "https://conf.kde.org/en/cki2020/public/schedule.ics",
         "venueImageUrl": "",
-        "venueLatitude": "",
-        "venueLongitude": "",
-        "venueOsmUrl": ""
+        "venueLatitude": "N28.71964",
+        "venueLongitude": "E77.06613",
+        "venueOsmUrl": "http://www.openstreetmap.org/?mlat=28.71964&mlon=77.06613"
     }
 ]
 
