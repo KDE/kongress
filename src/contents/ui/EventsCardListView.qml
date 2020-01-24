@@ -70,14 +70,14 @@ Kirigami.Page {
 
             actions: [
                 Kirigami.Action {
-                    text: i18n("More Info")
+                    text: i18n("Details")
                     icon.name: "documentinfo"
 
                     onTriggered: pageStack.push(eventInfo, {event: model})
                 },
 
                 Kirigami.Action {
-                    text: viewMode == "favorites" ? i18n("Delete") : i18n("Add to Favorites")
+                    text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
                     icon.name: viewMode == "favorites" ? "delete" : "favorite"
 
                     onTriggered: {

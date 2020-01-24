@@ -56,7 +56,7 @@ Kirigami.Page {
             },
 
             Kirigami.Action {
-                text: viewMode == "favorites" ? i18n("Delete") : i18n("Add to Favorites")
+                text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
                 icon.name: viewMode == "favorites" ? "delete" : "favorite"
 
                 onTriggered: {
