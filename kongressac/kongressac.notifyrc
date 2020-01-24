@@ -1,7 +1,7 @@
 [Global]
 IconName=kalarm
-Comment=KDE Conference Companion
-Name=KDE Conference Companion
+Comment=Kongress
+Name=Kongress
 
 [Context/uid]
 Name=Incidence uid

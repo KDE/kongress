@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=KDE Conference Companion Reminder Client
+Name=Kongress Reminder Client
 Exec=kongressac
 Icon=kongress
 Type=Application
 Categories=Qt;KDE;
-GenericName=KDE Conference Companion Reminder Client
-GenericName[x-test]=xxKDE Conference Companion Reminder Clienttxx
+GenericName=Kongress Reminder Client
+GenericName[x-test]=xxKongress Reminder Clienttxx
 Terminal=false
 X-KDE-autostart-phase=2
 X-KDE-autostart-condition=kongressrc:General:Autostart:true

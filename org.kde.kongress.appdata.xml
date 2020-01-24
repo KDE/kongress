@@ -3,7 +3,7 @@
   <id>org.kde.kongress.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>KDE Conference Companion</name>
+  <name>Kongress</name>
   <summary>KDE Conference companion application</summary>
   <description>
     <p>KDE Conference is companion application for conferences made by KDE</p>
