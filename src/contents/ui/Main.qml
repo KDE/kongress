@@ -50,6 +50,13 @@ Kirigami.ApplicationWindow {
                         pageStack.push(conferencesView)
                     }
                 }
+
+                Kirigami.Action {
+                    visible: onlineCalendar && onlineCalendar.loadDateStr != ""
+                    text: i18n("Refresh (last check %1)").arg(onlineCalendar.loadDateStr)
+
+                    onTriggered: onlineCalendar.loadOnlineCalendar()
+                }
             },
 
             Kirigami.Action {

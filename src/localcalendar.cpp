@@ -20,6 +20,7 @@
 #include "localcalendar.h"
 #include "calendarcontroller.h"
 #include <QDebug>
+#include <QMetaType>
 #include <KLocalizedString>
 
 using namespace KCalendarCore;
@@ -59,7 +60,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
         m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
-        m_cal_controller->createCalendarFromUrl(calendarInfoMap["id"].toString(), QUrl::fromEncoded(calendarInfoMap["url"].toByteArray()));
+        loadOnlineCalendar();
     }
     else
     {
@@ -96,10 +97,12 @@ void LocalCalendar::onlineCalendarReady(const QString& calendarId)
     if(calendarId == m_calendarInfo["id"].toString())
     {
         m_calendar = m_cal_controller->memoryCalendar(calendarId);
+        m_calendarInfo["lastUpdated"] = QDateTime::currentDateTime();
 
         Q_EMIT memorycalendarChanged();
         Q_EMIT categoriesChanged();
         Q_EMIT eventsChanged();
+        Q_EMIT loadDateStrChanged();
     }
 }
 
@@ -111,4 +114,37 @@ QString LocalCalendar::calendarId() const
     }
 
     return QString();
+}
+
+QString LocalCalendar::loadDateStr() const
+{
+    if(!(m_calendarInfo.contains("lastUpdated")) || !(m_calendarInfo["lastUpdated"].canConvert(QMetaType::QDateTime)) || !(m_calendarInfo["lastUpdated"].toDateTime().isValid()))
+    {
+        return QString();
+    }
+
+    auto todayDate = QDate::currentDate();
+    auto loadDate = m_calendarInfo["lastUpdated"].toDate();
+
+    if(loadDate == todayDate)
+    {
+        return i18n("today at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
+    }
+
+    if(loadDate.addDays(1) == todayDate)
+    {
+        return i18n("yesterday at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
+    }
+
+    return i18n("%1 at %2", loadDate.toString(Qt::SystemLocaleShortDate), m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
+}
+
+void LocalCalendar::loadOnlineCalendar()
+{
+    if(!(m_calendarInfo.contains("id") || !(m_calendarInfo.contains("url"))))
+    {
+        return;
+    }
+
+    m_cal_controller->createCalendarFromUrl(m_calendarInfo["id"].toString(), QUrl::fromEncoded(m_calendarInfo["url"].toByteArray()));
 }
