@@ -53,9 +53,12 @@ Kirigami.ApplicationWindow {
 
                 Kirigami.Action {
                     visible: onlineCalendar && onlineCalendar.loadDateStr != ""
-                    text: i18n("Refresh (last check %1)").arg(onlineCalendar.loadDateStr)
+                    text: i18n("Check for updates")
 
-                    onTriggered: onlineCalendar.loadOnlineCalendar()
+                    onTriggered: {
+                        showPassiveNotification(i18n("Loading conference data"));
+                        onlineCalendar.loadOnlineCalendar();
+                    }
                 }
             },
 
@@ -125,6 +128,8 @@ Kirigami.ApplicationWindow {
                 root.pageStack.pop(null);
             }
         }
+
+        onLoadDateStrChanged: showPassiveNotification(i18n("Conference data loaded"))
     }
 
     Kongress.LocalCalendar {
