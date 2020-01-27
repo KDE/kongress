@@ -23,35 +23,16 @@ target_link_libraries(kongress Qt5::Core Qt5::Qml Qt5::Quick Qt5::Test Qt5::Svg 
 if(ANDROID)
     kirigami_package_breeze_icons(ICONS
         delete
-        dialog-cancel
-        dialog-close
-        dialog-ok
-        document-import
         documentinfo
-        editor
-        emblem-ok-symbolic
-        go-down
-        go-next
-        go-parent-folder
-        go-previous
-        go-up
-        list-add
-        resource-calendar-insert
-        tag-events
-        text-x-plain
-        view-calendar
-        view-calendar-day
-        view-calendar-tasks
-        view-calendar-agenda
-        view-calendar-upcoming-events
-        view-choose
-        find-location
-        media-playlist-repeat
-        view-categories
-        internet-services
+        edit-select
+        exchange-positions
         favorite
+        find-location
         group
-        object-select-symbolic
+        internet-services
+        view-calendar-agenda
+        view-calendar-day
+        view-categories
     )
 endif()
 
