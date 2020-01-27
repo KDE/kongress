@@ -51,8 +51,8 @@ Kirigami.Page {
 
             actions: [
                 Kirigami.Action {
-                    text: i18n("Activate")
-                    iconName: "object-select-symbolic"
+                    text: i18n("Select")
+                    iconName: "edit-select"
 
                     onTriggered: selected(
                         {"id": model.id, "name": model.name, "description": model.description, "icalUrl": model.icalUrl, "days": model.days, "venueImageUrl": model.venueImageUrl, "venueLatitude": model.venueLatitude, "venueLongitude": model.venueLongitude, "venueOsmUrl": model.venueOsmUrl}

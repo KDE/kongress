@@ -43,15 +43,6 @@ Kirigami.ApplicationWindow {
                 expandible: true
 
                 Kirigami.Action {
-                    text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
-
-                    onTriggered: {
-                        pageStack.clear();
-                        pageStack.push(conferencesView)
-                    }
-                }
-
-                Kirigami.Action {
                     visible: onlineCalendar && onlineCalendar.loadDateStr != ""
                     text: i18n("Check for updates")
 
@@ -102,7 +93,22 @@ Kirigami.ApplicationWindow {
                     pageStack.clear();
                     pageStack.push(mapView);
                 }
+            },
+
+            Kirigami.Action {
+                separator: true
+            },
+
+            Kirigami.Action {
+                text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
+                iconName: root.activeConference ? 'exchange-positions' : 'edit-select'
+
+                onTriggered: {
+                    pageStack.clear();
+                    pageStack.push(conferencesView)
+                }
             }
+
         ]
 
     }
