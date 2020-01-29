@@ -1,11 +1,26 @@
 [Desktop Entry]
 Name=Kongress Reminder Client
+Name[ca]=Client de recordatori Kongress
+Name[et]=Kongressi meeldetuletuste klient
+Name[nl]=Kongress-client voor herinnering
+Name[pt]=Cliente de Chamadas de Atenção do Kongress
+Name[sv]=Kongress påminnelseklient
+Name[uk]=Клієнт нагадувань Kongress
+Name[x-test]=xxKongress Reminder Clientxx
+Name[zh_TW]=Kongress 提示用戶端
 Exec=kongressac
 Icon=kongress
 Type=Application
 Categories=Qt;KDE;
 GenericName=Kongress Reminder Client
-GenericName[x-test]=xxKongress Reminder Clienttxx
+GenericName[ca]=Client de recordatori Kongress
+GenericName[et]=Kongressi meeldetuletuste klient
+GenericName[nl]=Kongress-client voor herinnering
+GenericName[pt]=Cliente de Chamadas de Atenção do Kongress
+GenericName[sv]=Kongress påminnelseklient
+GenericName[uk]=Клієнт нагадувань Kongress
+GenericName[x-test]=xxKongress Reminder Clientxx
+GenericName[zh_TW]=Kongress 提示用戶端
 Terminal=false
 X-KDE-autostart-phase=2
 X-KDE-autostart-condition=kongressrc:General:Autostart:true

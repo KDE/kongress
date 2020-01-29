@@ -1,6 +1,21 @@
 [Desktop Entry]
 Name=Kongress
+Name[ca]=Kongress
+Name[et]=Kongress
+Name[nl]=Kongress
+Name[pt]=Kongress
+Name[sv]=Kongress
+Name[uk]=Kongress
+Name[x-test]=xxKongressxx
+Name[zh_TW]=Kongress
 Comment=KDE Conference Companion
+Comment[ca]=Companyia per als congressos del KDE
+Comment[et]=KDE konverentsiabiline
+Comment[nl]=Compagnon van KDE Conference
+Comment[pt]=Assistente do KDE Conference
+Comment[sv]=KDE konferenskompanjon
+Comment[uk]=KDE-компаньйон для конференцій
+Comment[x-test]=xxKDE Conference Companionxx
 Exec=kongress
 MimeType=application/x-kongress;
 Icon=kongress
