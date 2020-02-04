@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Kongress Reminder Client
 Name[ca]=Client de recordatori Kongress
+Name[ca@valencia]=Client de recordatori Kongress
 Name[es]=Cliente de recordatorios de Kongress
 Name[et]=Kongressi meeldetuletuste klient
 Name[nl]=Kongress-client voor herinnering
@@ -15,6 +16,7 @@ Type=Application
 Categories=Qt;KDE;
 GenericName=Kongress Reminder Client
 GenericName[ca]=Client de recordatori Kongress
+GenericName[ca@valencia]=Client de recordatori Kongress
 GenericName[es]=Cliente de recordatorios de Kongress
 GenericName[et]=Kongressi meeldetuletuste klient
 GenericName[nl]=Kongress-client voor herinnering
