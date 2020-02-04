@@ -5,6 +5,7 @@
   <project_license>GPL-3.0+</project_license>
   <name>Kongress</name>
   <name xml:lang="ca">Kongress</name>
+  <name xml:lang="ca-valencia">Kongress</name>
   <name xml:lang="es">Kongress</name>
   <name xml:lang="et">Kongress</name>
   <name xml:lang="nl">Kongress</name>
@@ -15,6 +16,7 @@
   <name xml:lang="zh-TW">Kongress</name>
   <summary>KDE Conference companion application</summary>
   <summary xml:lang="ca">Aplicació de companyia per als congressos del KDE</summary>
+  <summary xml:lang="ca-valencia">Aplicació de companyia per als congressos del KDE</summary>
   <summary xml:lang="es">Aplicación complementaria KDE Conference</summary>
   <summary xml:lang="et">KDE konverentsiabiline</summary>
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
@@ -24,6 +26,7 @@
   <description>
     <p>KDE Conference is companion application for conferences made by KDE</p>
     <p xml:lang="ca">Congressos del KDE és una aplicació de companyia per als congressos del KDE</p>
+    <p xml:lang="ca-valencia">Congressos del KDE és una aplicació de companyia per als congressos del KDE</p>
     <p xml:lang="es">KDE Conference es una aplicación complementaria para conferencias creada por KDE</p>
     <p xml:lang="et">KDE Conference on KDE valmistatud konverentsidel osalemist hõlbustav rakendus</p>
     <p xml:lang="nl">KDE Conference is de compagnon-toepassing voor conferenties georganiseerd door KDE</p>
