@@ -43,7 +43,7 @@ Kirigami.ApplicationWindow {
                 expandible: true
 
                 Kirigami.Action {
-                    visible: onlineCalendar && onlineCalendar.loadDateStr != ""
+                    visible: root.activeConference != null
                     text: i18n("Check for updates")
 
                     onTriggered: {

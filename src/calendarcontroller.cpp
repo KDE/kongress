@@ -40,13 +40,8 @@ public:
 CalendarController::CalendarController(QObject* parent)
     : QObject(parent), m_storages(QMap<QString, FileStorage::Ptr>()), m_calendars(QMap<QString, MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
 {
-    QString calendars = d->config.group("general").readEntry("calendars", QString());
-    if(calendars.isEmpty()) {
-        qDebug() << "No favorites calendar found. Creating...";
-        addCalendar("favorites");
-        d->config.sync();
-    }
-
+    initFavorites();
+    loadSavedConferences();
     connect(&(m_downloadManager->networkManager), SIGNAL(finished(QNetworkReply*)), SLOT(downloadFinished(QNetworkReply*)));
 }
 
@@ -319,6 +314,8 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
                 m_calendars[m_downloadManager->calendarId] = calendar;
             }
 
+            addConferenceToConfig(m_downloadManager->calendarId);
+
             Q_EMIT calendarsChanged();
             Q_EMIT calendarDownloaded(m_downloadManager->calendarId);
         }
@@ -349,4 +346,68 @@ MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString& calendarId
     }
 
     return nullptr;
+}
+
+void CalendarController::initFavorites()
+{
+    QString calendars = d->config.group("general").readEntry("calendars", QString());
+
+    if(calendars.isEmpty()) {
+        qDebug() << "No favorites calendar found. Creating...";
+        addCalendar("favorites");
+        d->config.sync();
+    }
+}
+
+void CalendarController::addConferenceToConfig(const QString& calendarId)
+{
+    if(d->config.group("general").readEntry("conferenceCalendars", QString()).isEmpty())
+    {
+        d->config.group("general").writeEntry("conferenceCalendars", calendarId);
+        d->config.sync();
+
+        return;
+    }
+
+    QStringList calendarsList = d->config.group("general").readEntry("conferenceCalendars", QString()).split(";");
+    if(!calendarsList.contains(calendarId))
+    {
+        calendarsList.append(calendarId);
+        d->config.group("general").writeEntry("conferenceCalendars", calendarsList.join(";"));
+        d->config.sync();
+    }
+}
+
+void CalendarController::loadSavedConferences()
+{
+    auto onlineCalendarIds = d->config.group("general").readEntry("conferenceCalendars", QString());
+    if(onlineCalendarIds.isEmpty())
+    {
+        return;
+    }
+
+    QStringList calendarsList = onlineCalendarIds.split(";");
+
+    for(const auto& calendarId : calendarsList)
+    {
+       auto filePath = d->config.group(calendarId).readEntry("file", QString());
+       QFile calendarFile(filePath);
+
+       if(!calendarFile.exists())
+       {
+           continue;
+       }
+
+       MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+       FileStorage::Ptr storage(new FileStorage(calendar));
+       storage->setFileName(filePath);
+
+       if(storage->load())
+       {
+           m_storages[calendarId] = storage;
+           m_calendars[calendarId] = calendar;
+
+           qDebug() << "Calendar " << calendarId << " loaded succesfully";
+       }
+    }
 }

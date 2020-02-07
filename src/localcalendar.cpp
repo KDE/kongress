@@ -26,7 +26,7 @@
 using namespace KCalendarCore;
 
 LocalCalendar::LocalCalendar(QObject* parent)
-: QObject(parent), m_calendarInfo(QVariantMap()), m_cal_controller(nullptr)
+: QObject(parent), m_calendarInfo(QVariantMap()), m_calendar(nullptr), m_cal_controller(nullptr)
 {
 }
 
@@ -60,6 +60,15 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
         m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
 
+        //Check if a local copy of the calendar already exists
+
+        m_calendar =  m_cal_controller->memoryCalendar(m_calendarInfo["id"].toString());
+
+        Q_EMIT memorycalendarChanged();
+        Q_EMIT categoriesChanged();
+        Q_EMIT eventsChanged();
+
+        //Even if a local copy exists, get a fresh copy of the calendar
         loadOnlineCalendar();
     }
     else
@@ -73,6 +82,8 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
         Q_EMIT categoriesChanged();
         Q_EMIT eventsChanged();
     }
+
+    Q_EMIT calendarInfoChanged();
 }
 
 QVariantMap LocalCalendar::calendarInfo() const

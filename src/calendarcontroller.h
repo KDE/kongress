@@ -68,6 +68,9 @@ private:
     QVariantMap canCreateFile(const QString& calendarId);
     void removeCalendarFromConfig(const QString& calendarId);
     bool saveToDisk(const QString& filename, QIODevice *data);
+    void initFavorites();
+    void loadSavedConferences();
+    void addConferenceToConfig(const QString& calendarId);
 
     QMap<QString, FileStorage::Ptr> m_storages;
     QMap<QString, MemoryCalendar::Ptr> m_calendars;
