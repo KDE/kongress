@@ -59,6 +59,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 
         m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
+        m_calendarInfo["timeZoneId"] = calendarInfoMap["timeZoneId"].toString();
 
         //Check if a local copy of the calendar already exists
 
@@ -157,5 +158,5 @@ void LocalCalendar::loadOnlineCalendar()
         return;
     }
 
-    m_cal_controller->createCalendarFromUrl(m_calendarInfo["id"].toString(), QUrl::fromEncoded(m_calendarInfo["url"].toByteArray()));
+    m_cal_controller->createCalendarFromUrl(m_calendarInfo["id"].toString(), QUrl::fromEncoded(m_calendarInfo["url"].toByteArray()), m_calendarInfo["timeZoneId"].toByteArray());
 }

@@ -67,7 +67,7 @@ Kirigami.Page {
                     }
                     else if(root.event) {
                         console.log("Adding event to favorites");
-                        var vevent = { "uid" : event.uid, "startDate": event.dtstart, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.dtend, "categories": event.eventCategories, "url": event.url/*"alarms": incidenceAlarmsModel.alarms()*/};
+                        var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
                         var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
 
@@ -101,15 +101,9 @@ Kirigami.Page {
                 }
 
                 Controls2.Label {
-                    property bool sameEndStart: root.event && event.dtstart && !isNaN(event.dtstart) && event.dtend && !isNaN(event.dtend) && event.dtstart.toLocaleString(Qt.locale(), "dd.MM.yyyy") == event.dtend.toLocaleString(Qt.locale(), "dd.MM.yyyy")
-                    property string timeFormat: root.event && event.allday ? "" : "hh:mm"
-                    property string dateFormat: root.event && event.allday ? "ddd d MMM yyyy" : "ddd d MMM yyyy hh:mm"
-                    property string separator: root.event && event.allday ? "" : " - "
 
                     wrapMode: Text.WordWrap
-                    text: ((root.event && event.dtstart && !isNaN(event.dtstart)) ? event.dtstart.toLocaleString(Qt.locale(), dateFormat ) : "") +
-                        (root.event && event.dtend && !isNaN(event.dtend) ? separator +
-                            event.dtend.toLocaleString(Qt.locale(), sameEndStart ? timeFormat : dateFormat ) : "")
+                    text: viewMode == "favorites" ? event.eventDisplayDt : event.scheduleDisplayDt
                     Layout.fillWidth: true
                 }
             }

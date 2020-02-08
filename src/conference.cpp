@@ -63,6 +63,11 @@ QString Conference::venueOsmUrl() const
     return m_venue_osm_url;
 }
 
+QString Conference::timeZoneId() const
+{
+    return m_tz_id;
+}
+
 void Conference::setId(const QString& id)
 {
     if(id != m_id)
@@ -132,5 +137,13 @@ void Conference::setVenueOsmUrl(const QString& url)
     if(url != m_venue_osm_url)
     {
         m_venue_osm_url = url;
+    }
+}
+
+void Conference::setTimeZoneId(const QString& id)
+{
+    if(id != m_tz_id)
+    {
+        m_tz_id = id;
     }
 }

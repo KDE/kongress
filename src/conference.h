@@ -35,6 +35,7 @@ public:
     QString venueLatitude() const;
     QString venueLongitude() const;
     QString venueOsmUrl() const;
+    QString timeZoneId() const;
 
     void setId(const QString& id);
     void setName(const QString& name);
@@ -45,6 +46,7 @@ public:
     void setVenueLatitude(const QString& latitude);
     void setVenueLongitude(const QString& longitude);
     void setVenueOsmUrl(const QString& url);
+    void setTimeZoneId(const QString& id);
 
 private:
     QString m_id;
@@ -56,5 +58,6 @@ private:
     QString m_venue_latitude;
     QString m_venue_longitude;
     QString m_venue_osm_url;
+    QString m_tz_id;
 };
 #endif

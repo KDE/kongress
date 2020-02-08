@@ -55,7 +55,7 @@ Kirigami.Page {
                     iconName: "edit-select"
 
                     onTriggered: selected(
-                        {"id": model.id, "name": model.name, "description": model.description, "icalUrl": model.icalUrl, "days": model.days, "venueImageUrl": model.venueImageUrl, "venueLatitude": model.venueLatitude, "venueLongitude": model.venueLongitude, "venueOsmUrl": model.venueOsmUrl}
+                        {"id": model.id, "name": model.name, "description": model.description, "icalUrl": model.icalUrl, "days": model.days, "venueImageUrl": model.venueImageUrl, "venueLatitude": model.venueLatitude, "venueLongitude": model.venueLongitude, "venueOsmUrl": model.venueOsmUrl, "timeZoneId": model.timeZoneId}
                     );
                 }
             ]

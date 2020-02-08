@@ -281,10 +281,11 @@ QVariantMap CalendarController::canCreateFile(const QString& calendarId)
     return result;
 }
 
-void CalendarController::createCalendarFromUrl(const QString& calendarId, const QUrl& url)
+void CalendarController::createCalendarFromUrl(const QString& calendarId, const QUrl& url, const QByteArray& timeZoneId)
 {
     QNetworkRequest request(url);
     m_downloadManager->calendarId = calendarId;
+    m_downloadManager->calendarTzId = timeZoneId;
     (m_downloadManager->networkManager).get(request);
 }
 
@@ -304,7 +305,11 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
         {
             qDebug() << QString("Download of %1 succeeded (saved to %2)").arg(url.toEncoded().constData()).arg(qPrintable(filePath));
 
-            MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+            auto availableTimezones = QTimeZone::availableTimeZoneIds();
+            auto tz = availableTimezones.contains(m_downloadManager->calendarTzId) ? m_downloadManager->calendarTzId : QTimeZone::systemTimeZoneId();
+            addTzIdToConfig(m_downloadManager->calendarId, tz);
+
+            MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
             FileStorage::Ptr storage(new FileStorage(calendar));
             storage->setFileName(filePath);
 
@@ -398,7 +403,8 @@ void CalendarController::loadSavedConferences()
            continue;
        }
 
-       MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+       auto tz = tzIdFromConfig(calendarId);
+       MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
        FileStorage::Ptr storage(new FileStorage(calendar));
        storage->setFileName(filePath);
 
@@ -410,4 +416,30 @@ void CalendarController::loadSavedConferences()
            qDebug() << "Calendar " << calendarId << " loaded succesfully";
        }
     }
+}
+
+void CalendarController::addTzIdToConfig(const QString& calendarId, const QByteArray& timeZoneId)
+{
+    if(!(d->config.hasGroup(calendarId)))
+    {
+        return;
+    }
+
+    d->config.group(calendarId).writeEntry("timeZoneId", timeZoneId);
+    d->config.sync();
+}
+
+QByteArray CalendarController::tzIdFromConfig(const QString& calendarId) const
+{
+    if(!(d->config.hasGroup(calendarId)))
+    {
+        return QByteArray();
+    }
+
+    if(d->config.hasGroup(calendarId) && !(d->config.group(calendarId).hasKey("timeZoneId")))
+    {
+        return QByteArray();
+    }
+
+    return d->config.group(calendarId).readEntry("timeZoneId").toUtf8();
 }

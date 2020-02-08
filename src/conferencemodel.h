@@ -44,7 +44,8 @@ public:
         ConferenceVenueImageUrl,
         ConferenceVenueLongitude,
         ConferenceVenueLatitude,
-        ConferenceVenueOsmUrl
+        ConferenceVenueOsmUrl,
+        ConferenceTimeZone
     };
 
     explicit ConferenceModel(QObject* parent = nullptr);

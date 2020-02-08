@@ -9,7 +9,8 @@
         "venueImageUrl": "https://fosdem.org/2020/assets/campusmap-7048bbd8da9f1dc553378bda1b08c3bd831b1c923d522c6981708abe2fd2c7ce.png",
         "venueLatitude": "N50.812375",
         "venueLongitude": "E4.380734",
-        "venueOsmUrl": "https://www.openstreetmap.org/?mlat=50.812375&mlon=4.38073"
+        "venueOsmUrl": "https://www.openstreetmap.org/?mlat=50.812375&mlon=4.38073",
+        "timeZoneId": "Europe/Brussels"
     },
     {
         "id": "confKdeIn2020",
@@ -20,7 +21,9 @@
         "venueImageUrl": "",
         "venueLatitude": "N28.71964",
         "venueLongitude": "E77.06613",
-        "venueOsmUrl": "https://www.openstreetmap.org/?mlat=28.71964&mlon=77.06613"
+        "venueOsmUrl": "https://www.openstreetmap.org/?mlat=28.71964&mlon=77.06613",
+        "timeZoneId": "Asia/Kolkata"
+
     }
 ]
 

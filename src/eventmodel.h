@@ -43,7 +43,8 @@ public:
     {
         Uid = Qt::UserRole+1,
         LastModified,
-        DtStart,
+        ScheduleStartDt,
+        EventStartDt,
         AllDay,
         Description,
         Summary,
@@ -52,7 +53,8 @@ public:
         Priority,
         Created,
         Secrecy,
-        EndDate,
+        ScheduleEndDt,
+        EventEndDt,
         Transparency,
         IsRepeating,
         RepeatPeriodType,
@@ -60,6 +62,9 @@ public:
         RepeatStopAfter,
         EventCategories,
         Url,
+        ScheduleDisplayDt,
+        ScheduleDisplayTime,
+        EventDisplayDt
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

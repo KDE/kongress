@@ -68,7 +68,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
     roles.insert(Uid, "uid");
-    roles.insert(DtStart, "dtstart");
+    roles.insert(EventStartDt, "eventStartDt");
+    roles.insert(ScheduleStartDt, "scheduleStartDt");
     roles.insert(AllDay, "allday");
     roles.insert(Description, "description");
     roles.insert(Summary, "summary");
@@ -78,7 +79,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
     roles.insert(Priority, "priority");
     roles.insert(Created, "created");
     roles.insert(Secrecy, "secrecy");
-    roles.insert(EndDate, "dtend");
+    roles.insert(EventEndDt, "eventEndDt");
+    roles.insert(ScheduleEndDt, "scheduleEndDt");
     roles.insert(Transparency, "transparency");
     roles.insert(RepeatPeriodType, "repeatType");
     roles.insert(RepeatEvery, "repeatEvery");
@@ -86,6 +88,10 @@ QHash<int, QByteArray> EventModel::roleNames() const
     roles.insert(IsRepeating, "isRepeating");
     roles.insert(EventCategories, "eventCategories");
     roles.insert(Url, "url");
+    roles.insert(ScheduleDisplayDt, "scheduleDisplayDt");
+    roles.insert(ScheduleDisplayTime, "scheduleDisplayTime");
+    roles.insert(EventDisplayDt, "eventDisplayDt");
+
     return roles;
 }
 
@@ -94,12 +100,20 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
     if(!index.isValid())
         return QVariant();
 
+    auto conferenceTz = QTimeZone(m_local_calendar->memorycalendar()->timeZoneId());
+
     switch(role)
     {
         case Uid :
             return m_events.at(index.row())->uid();
-        case DtStart:
+        case EventStartDt:
             return m_events.at(index.row())->dtStart();
+        case ScheduleStartDt:
+        {
+            auto startDtWConferenceTz = m_events.at(index.row())->dtStart();
+            startDtWConferenceTz.setTimeZone(conferenceTz);
+            return startDtWConferenceTz;
+        }
         case AllDay:
             return m_events.at(index.row())->allDay();
         case Description:
@@ -118,8 +132,14 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             return m_events.at(index.row())->created();
         case Secrecy:
             return m_events.at(index.row())->secrecy();
-        case EndDate:
+        case EventEndDt:
             return m_events.at(index.row())->dtEnd();
+        case ScheduleEndDt:
+        {
+            auto endDtWConferenceTz = m_events.at(index.row())->dtEnd();
+            endDtWConferenceTz.setTimeZone(conferenceTz);
+            return endDtWConferenceTz;
+        }
         case Transparency:
             return m_events.at(index.row())->transparency();
         case RepeatPeriodType:
@@ -134,6 +154,75 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             return m_events.at(index.row())->categoriesStr();
         case Url:
             return m_events.at(index.row())->url();
+        case ScheduleDisplayDt:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+
+            if(m_events.at(index.row())->allDay())
+            {
+                return startDtTime.date().toString("ddd d MMM yyyy");
+            }
+
+            startDtTime.setTimeZone(conferenceTz);
+            endDtTime.setTimeZone(conferenceTz);
+
+            if(startDtTime.date() == endDtTime.date())
+            {
+
+                auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
+                auto displayTime = QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
+
+                return QString("%1, %2 %3").arg(displayDt).arg(displayTime).arg(startDtTime.timeZoneAbbreviation());
+            }
+
+            auto displayStartDtTime = QString("%1, %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
+            auto displayEndDtTime = QString("%1, %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
+
+            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+        }
+        case ScheduleDisplayTime:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+
+            startDtTime.setTimeZone(conferenceTz);
+            endDtTime.setTimeZone(conferenceTz);
+
+            if(startDtTime.date() == endDtTime.date())
+            {
+                return QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
+            }
+
+            auto displayStartDtTime = QString("%1, %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
+            auto displayEndDtTime = QString("%1, %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
+
+            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+        }
+        case EventDisplayDt:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+
+            if(m_events.at(index.row())->allDay())
+            {
+                return startDtTime.date().toString("ddd d MMM yyyy");
+            }
+
+            if(startDtTime.date() == endDtTime.date())
+            {
+
+                auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
+                auto displayTime = QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
+
+                return QString("%1, %2 %3").arg(displayDt).arg(displayTime).arg(startDtTime.timeZoneAbbreviation());
+            }
+
+            auto displayStartDtTime = QString("%1, %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
+            auto displayEndDtTime = QString("%1, %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
+
+            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+        }
         default:
             return QVariant();
     }

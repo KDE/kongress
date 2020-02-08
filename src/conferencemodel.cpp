@@ -38,7 +38,8 @@ QHash<int, QByteArray> ConferenceModel::roleNames() const
         {ConferenceVenueImageUrl, "venueImageUrl"},
         {ConferenceVenueLatitude, "venueLatitude"},
         {ConferenceVenueLongitude, "venueLongitude"},
-        {ConferenceVenueOsmUrl, "venueOsmUrl"}
+        {ConferenceVenueOsmUrl, "venueOsmUrl"},
+        {ConferenceTimeZone, "timeZoneId"}
     };
 }
 
@@ -72,6 +73,8 @@ QVariant ConferenceModel::data(const QModelIndex& index, int role) const
             return m_conferences.at(row)->venueLongitude();
         case ConferenceVenueOsmUrl:
             return m_conferences.at(row)->venueOsmUrl();
+        case ConferenceTimeZone:
+            return m_conferences.at(row)->timeZoneId();
         default:
             return m_conferences.at(row)->id();
     }

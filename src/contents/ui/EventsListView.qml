@@ -78,7 +78,7 @@ Kirigami.Page {
                             _eventController.remove(root.rwCalendar, vevent);
                         }
                         else {
-                            var vevent = { "uid" : model.uid, "startDate": model.dtstart, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.dtend, "categories": model.eventCategories, "url": model.url/*"alarms": incidenceAlarmsModel.alarms()*/};
+                            var vevent = { "uid" : model.uid, "startDate": model.scheduleStartDt, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.scheduleEndDt, "categories": model.eventCategories, "url": model.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
                             var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
 
@@ -105,9 +105,7 @@ Kirigami.Page {
                     width: Kirigami.Units.gridUnit * 15
 
                     wrapMode: Text.WordWrap
-                    text: ((model.dtstart && !isNaN(model.dtstart)) ? model.dtstart.toLocaleString(Qt.locale(), timeFormat ) : "") +
-                        (model.dtend && !isNaN(model.dtend) ? "-" +
-                            model.dtend.toLocaleString(Qt.locale(), timeFormat ) : "")
+                    text: model.scheduleDisplayTime
                 }
 
                 Controls2.Label {

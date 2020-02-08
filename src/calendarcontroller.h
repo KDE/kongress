@@ -30,6 +30,7 @@ using namespace KCalendarCore;
 
 struct DonwloadManager {
     QString calendarId;
+    QByteArray calendarTzId;
     QNetworkAccessManager networkManager;
 };
 
@@ -49,7 +50,7 @@ public:
 
     MemoryCalendar::Ptr createLocalCalendar(const QString& calendarId);
     MemoryCalendar::Ptr memoryCalendar(const QString& calendarId) const;
-    void createCalendarFromUrl(const QString& calendarId, const QUrl& url);
+    void createCalendarFromUrl(const QString& calendarId, const QUrl& url, const QByteArray& timeZoneId);
     QVariantMap importCalendar(const QString& calendarId, const QString& sourcePath);
     void deleteCalendar(const QString& calendarId);
     bool save(const QString& calendarId);
@@ -71,6 +72,8 @@ private:
     void initFavorites();
     void loadSavedConferences();
     void addConferenceToConfig(const QString& calendarId);
+    void addTzIdToConfig(const QString& calendarId, const QByteArray& timeZoneId);
+    QByteArray tzIdFromConfig(const QString& calendarId) const;
 
     QMap<QString, FileStorage::Ptr> m_storages;
     QMap<QString, MemoryCalendar::Ptr> m_calendars;

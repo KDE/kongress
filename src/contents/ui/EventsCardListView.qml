@@ -86,7 +86,7 @@ Kirigami.Page {
                             _eventController.remove(root.rwCalendar, vevent);
                         }
                         else {
-                            var vevent = { "uid" : model.uid, "startDate": model.dtstart, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.dtend, "categories": model.eventCategories, "url": model.url/*"alarms": incidenceAlarmsModel.alarms()*/};
+                            var vevent = { "uid" : model.uid, "startDate": model.scheduleStartDt, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.scheduleEndDt, "categories": model.eventCategories, "url": model.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
                             var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
 
@@ -107,6 +107,7 @@ Kirigami.Page {
                 spacing: Kirigami.Units.largeSpacing
                 topPadding: 0
                 bottomPadding: 0
+
                 RowLayout {
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
@@ -118,15 +119,8 @@ Kirigami.Page {
                     }
 
                     Controls2.Label {
-                        property bool sameEndStart : model.dtstart && !isNaN(model.dtstart) && model.dtend && !isNaN(model.dtend) && model.dtstart.toLocaleString(Qt.locale(), "dd.MM.yyyy") == model.dtend.toLocaleString(Qt.locale(), "dd.MM.yyyy")
-                        property string timeFormat: model.allday ? "" : "hh:mm"
-                        property string dateFormat: model.allday ? "ddd d MMM yyyy" : "ddd d MMM yyyy hh:mm"
-                        property string separator: model.allday ? "" : " - "
-
                         wrapMode: Text.WordWrap
-                        text: ((model.dtstart && !isNaN(model.dtstart)) ? model.dtstart.toLocaleString(Qt.locale(), dateFormat ) : "") +
-                            (model.dtend && !isNaN(model.dtend) ? separator +
-                                model.dtend.toLocaleString(Qt.locale(), sameEndStart ? timeFormat : dateFormat ) : "")
+                        text: viewMode == "favorites" ? model.eventDisplayDt : model.scheduleDisplayDt
                         Layout.fillWidth: true
                     }
                 }

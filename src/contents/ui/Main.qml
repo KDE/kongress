@@ -194,7 +194,7 @@ Kirigami.ApplicationWindow {
             onSelected: {
                 pageStack.clear();
                 root.activeConference = selectedConference;
-                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl};
+                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId};
                 showPassiveNotification(i18n("Loading conference data"));
                 pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }

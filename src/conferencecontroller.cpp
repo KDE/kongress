@@ -127,6 +127,7 @@ void ConferenceController::loadConference(const QJsonObject& jsonObj)
     conference->setVenueLatitude(jsonObj["venueLatitude"].toString());
     conference->setVenueLongitude(jsonObj["venueLongitude"].toString());
     conference->setVenueOsmUrl(jsonObj["venueOsmUrl"].toString());
+    conference->setTimeZoneId(jsonObj["timeZoneId"].toString());
 
     m_conferences << conference;
 }
