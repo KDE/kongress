@@ -141,8 +141,6 @@ Kirigami.ApplicationWindow {
     Kongress.LocalCalendar {
         id: favoritesCalendar
 
-        calendarInfo: {"id": "favorites",  "controller": _calendarController}
-
         onCalendarInfoChanged: {
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
@@ -195,6 +193,7 @@ Kirigami.ApplicationWindow {
                 pageStack.clear();
                 root.activeConference = selectedConference;
                 onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId};
+                favoritesCalendar.calendarInfo = {"id": "favorites_" +  root.activeConference.id, "controller": _calendarController, "timeZoneId": root.activeConference.timeZoneId};
                 showPassiveNotification(i18n("Loading conference data"));
                 pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
             }

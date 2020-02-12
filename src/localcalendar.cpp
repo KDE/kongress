@@ -39,7 +39,7 @@ MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("controller"))
+    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("controller") || !calendarInfoMap.contains("timeZoneId"))
     {
         qDebug() << "No sufficient calendar information provided";
 
@@ -47,6 +47,8 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
     }
 
     m_cal_controller = calendarInfoMap["controller"].value<CalendarController*>();
+    m_calendarInfo["id"] = calendarInfoMap["id"].toString();
+    m_calendarInfo["timeZoneId"] = calendarInfoMap["timeZoneId"].toString();
 
     if(m_cal_controller != nullptr)
     {
@@ -57,12 +59,9 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
     {
         qDebug() << "Creating online calendar: " << calendarInfoMap["id"].toString() ;
 
-        m_calendarInfo["id"] = calendarInfoMap["id"].toString();
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
-        m_calendarInfo["timeZoneId"] = calendarInfoMap["timeZoneId"].toString();
 
         //Check if a local copy of the calendar already exists
-
         m_calendar =  m_cal_controller->memoryCalendar(m_calendarInfo["id"].toString());
 
         Q_EMIT memorycalendarChanged();
@@ -77,7 +76,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
         qDebug() << "Creating local calendar: " << calendarInfoMap["id"].toString() ;
 
         m_calendarInfo["id"] = calendarInfoMap["id"].toString();
-        m_calendar = m_cal_controller->createLocalCalendar(calendarInfoMap["id"].toString());
+        m_calendar = m_cal_controller->createLocalCalendar(calendarInfoMap["id"].toString(), m_calendarInfo["timeZoneId"].toByteArray());
 
         Q_EMIT memorycalendarChanged();
         Q_EMIT categoriesChanged();

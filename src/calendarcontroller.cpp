@@ -40,7 +40,6 @@ public:
 CalendarController::CalendarController(QObject* parent)
     : QObject(parent), m_storages(QMap<QString, FileStorage::Ptr>()), m_calendars(QMap<QString, MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
 {
-    initFavorites();
     loadSavedConferences();
     connect(&(m_downloadManager->networkManager), SIGNAL(finished(QNetworkReply*)), SLOT(downloadFinished(QNetworkReply*)));
 }
@@ -157,11 +156,12 @@ QString CalendarController::filenameToPath(const QString& calendarId)
     return basePath + "/kongress_" + calendarId + ".ics";
 }
 
-MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calendarId)
+MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calendarId, const QByteArray& timeZoneId)
 {
     auto m_fullpath = calendarFile(calendarId);
+    auto tzId = QTimeZone::availableTimeZoneIds().contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
 
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(tzId));
     FileStorage::Ptr storage(new FileStorage(calendar));
     storage->setFileName(m_fullpath);
     QFile calendarFile(m_fullpath);
@@ -351,17 +351,6 @@ MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString& calendarId
     }
 
     return nullptr;
-}
-
-void CalendarController::initFavorites()
-{
-    QString calendars = d->config.group("general").readEntry("calendars", QString());
-
-    if(calendars.isEmpty()) {
-        qDebug() << "No favorites calendar found. Creating...";
-        addCalendar("favorites");
-        d->config.sync();
-    }
 }
 
 void CalendarController::addConferenceToConfig(const QString& calendarId)

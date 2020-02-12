@@ -48,7 +48,7 @@ public:
     QString calendars() const;
     QString calendarFile(const QString & calendarId);
 
-    MemoryCalendar::Ptr createLocalCalendar(const QString& calendarId);
+    MemoryCalendar::Ptr createLocalCalendar(const QString& calendarId, const QByteArray& timeZoneId);
     MemoryCalendar::Ptr memoryCalendar(const QString& calendarId) const;
     void createCalendarFromUrl(const QString& calendarId, const QUrl& url, const QByteArray& timeZoneId);
     QVariantMap importCalendar(const QString& calendarId, const QString& sourcePath);
@@ -69,7 +69,6 @@ private:
     QVariantMap canCreateFile(const QString& calendarId);
     void removeCalendarFromConfig(const QString& calendarId);
     bool saveToDisk(const QString& filename, QIODevice *data);
-    void initFavorites();
     void loadSavedConferences();
     void addConferenceToConfig(const QString& calendarId);
     void addTzIdToConfig(const QString& calendarId, const QByteArray& timeZoneId);
