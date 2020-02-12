@@ -103,7 +103,7 @@ Kirigami.Page {
                 Controls2.Label {
 
                     wrapMode: Text.WordWrap
-                    text: viewMode == "favorites" ? event.eventDisplayDt : event.scheduleDisplayDt
+                    text: viewMode == "favorites" ? event.startEndDt : event.shiftedStartEndDt
                     Layout.fillWidth: true
                 }
             }

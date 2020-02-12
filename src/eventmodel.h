@@ -62,9 +62,9 @@ public:
         RepeatStopAfter,
         EventCategories,
         Url,
-        ScheduleDisplayDt,
-        ScheduleDisplayTime,
-        EventDisplayDt
+        ShiftedStartEndDt,
+        ShiftedStartEndTime,
+        StartEndDt
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

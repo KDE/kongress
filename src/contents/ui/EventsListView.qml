@@ -105,7 +105,7 @@ Kirigami.Page {
                     width: Kirigami.Units.gridUnit * 15
 
                     wrapMode: Text.WordWrap
-                    text: model.scheduleDisplayTime
+                    text: model.shiftedStartEndTime
                 }
 
                 Controls2.Label {

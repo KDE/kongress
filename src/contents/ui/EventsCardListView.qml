@@ -120,7 +120,7 @@ Kirigami.Page {
 
                     Controls2.Label {
                         wrapMode: Text.WordWrap
-                        text: viewMode == "favorites" ? model.eventDisplayDt : model.scheduleDisplayDt
+                        text: viewMode == "favorites" ? model.startEndDt : model.shiftedStartEndDt
                         Layout.fillWidth: true
                     }
                 }

@@ -88,9 +88,9 @@ QHash<int, QByteArray> EventModel::roleNames() const
     roles.insert(IsRepeating, "isRepeating");
     roles.insert(EventCategories, "eventCategories");
     roles.insert(Url, "url");
-    roles.insert(ScheduleDisplayDt, "scheduleDisplayDt");
-    roles.insert(ScheduleDisplayTime, "scheduleDisplayTime");
-    roles.insert(EventDisplayDt, "eventDisplayDt");
+    roles.insert(ShiftedStartEndDt, "shiftedStartEndDt");
+    roles.insert(ShiftedStartEndTime, "shiftedStartEndTime");
+    roles.insert(StartEndDt, "startEndDt");
 
     return roles;
 }
@@ -154,7 +154,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             return m_events.at(index.row())->categoriesStr();
         case Url:
             return m_events.at(index.row())->url();
-        case ScheduleDisplayDt:
+        case ShiftedStartEndDt:
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
@@ -182,7 +182,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
 
             return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
         }
-        case ScheduleDisplayTime:
+        case ShiftedStartEndTime:
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
@@ -201,7 +201,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
 
             return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
         }
-        case EventDisplayDt:
+        case StartEndDt:
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
