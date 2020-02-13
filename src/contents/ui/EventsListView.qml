@@ -102,15 +102,13 @@ Kirigami.Page {
                 Controls2.Label {
                     property string timeFormat: model.allday ? "" : "hh:mm"
 
-                    width: Kirigami.Units.gridUnit * 15
-
-                    wrapMode: Text.WordWrap
+                    width: Kirigami.Units.gridUnit * 20
                     text: model.shiftedStartEndTime
                 }
 
                 Controls2.Label {
                     visible: model.summary != ""
-                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
                     text: model.summary
                     Layout.fillWidth: true
                 }
