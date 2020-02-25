@@ -1,0 +1,14 @@
+include:
+  - https://invent.kde.org/sysadmin/ci-tooling/raw/master/invent/binary-flatpak.yml
+
+variables:
+  BUNDLE: org.kde.kongress.flatpak
+
+flatpak:
+  extends: .flatpak
+  variables:
+    MANIFEST_PATH: org.kde.kongress.json
+    APP_ID: org.kde.kongress
+    FLATPAK_MODULE: kongress
+    CMAKE_ARGS: -DENABLE_TESTING=OFF
+
