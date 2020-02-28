@@ -70,15 +70,8 @@ Kirigami.Page {
                         var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
                         var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
+                        showPassiveNotification(addEditResult["message"]);
 
-                        if(addEditResult == 201)
-                        {
-                            showPassiveNotification(i18n("Added to favorites"));
-                        }
-                        else if (addEditResult == 304)
-                        {
-                            showPassiveNotification(i18n("Already in favorites"));
-                        }
                     }
                 }
             }

@@ -21,6 +21,7 @@
 #include "localcalendar.h"
 #include <KCalendarCore/Event>
 #include <KCalendarCore/MemoryCalendar>
+#include <KLocalizedString>
 #include <QDebug>
 
 EventController::EventController(QObject* parent) : QObject(parent), m_cal_controller(nullptr) {}
@@ -63,13 +64,18 @@ void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventDa
     qDebug() << "Event deleted: " << deleted;
 }
 
-int EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventData)
+QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventData)
 {
     if(calendar == nullptr)
     {
-        qDebug() << "There is no calendar to add event to";
+        return { {"status", NoCalendarExists}, {"message", i18n("Error during event creation") } };
+    }
 
-        return 500;
+    auto eventCheckResult = eventCheck(calendar, eventData);
+
+    if(eventCheckResult["result"].toInt() == Exists)
+    {
+        return { {"status", NoCalendarExists}, {"message", i18n("Already in favorites") } };
     }
 
     qDebug() << "\naddEdit:\tCreating event to calendar " << calendar->calendarId();
@@ -77,30 +83,20 @@ int EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventDa
     MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
     QDateTime now = QDateTime::currentDateTime();
     QString uid = eventData["uid"].toString();
-    QString summary = eventData["summary"].toString();
-
     Event::Ptr event = memoryCalendar->event(uid);
 
     if (event == nullptr)
     {
         event = Event::Ptr(new Event());
     }
-    else
-    {
-        return 304;
-    }
 
-    QDateTime startDateTime = eventData["startDate"].toDateTime();
-    QDateTime endDateTime = eventData["endDate"].toDateTime();
-    bool allDayFlg= eventData["allDay"].toBool();
-
-    event->setUid(eventData["uid"].toString());
-    event->setDtStart(startDateTime);
-    event->setDtEnd(endDateTime);
+    event->setUid(uid);
+    event->setDtStart(eventData["startDate"].toDateTime());
+    event->setDtEnd(eventData["endDate"].toDateTime());
     event->setDescription(eventData["description"].toString());
     event->setCategories(eventData["categories"].toString());
-    event->setSummary(summary);
-    event->setAllDay(allDayFlg);
+    event->setSummary(eventData["summary"].toString());
+    event->setAllDay(eventData["allDay"].toBool());
     event->setLocation(eventData["location"].toString());
     event->setUrl(eventData["url"].toString());
 
@@ -139,5 +135,54 @@ int EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventDa
 
     qDebug() << "addEdit:\tEvent added/updated: " << merged;
 
-    return 201;
+    return {
+        { "status", eventCheckResult["result"] },
+        { "message", (eventCheckResult["result"] == NotExistsButOverlaps) ? i18n("Talk added to favorites, but it overlaps with existing ones:\n%1", eventCheckResult["events"].toString()) : i18n("Talk added to favorites") }
+    };
+
+}
+
+QVariantMap EventController::eventCheck(LocalCalendar* calendar, const QVariantMap &event)
+{
+    QVariantMap response = {
+        { "result", QVariant(NotExistsNotOverlapping) },
+        { "events", QString("") }
+    };
+
+    auto memoryCalendar = calendar->memorycalendar();
+    auto overlappingEvents = QStringList();
+
+    auto eventStart = event["startDate"].toDateTime();
+    auto eventEnd = event["endDate"].toDateTime();
+    auto eventUid = event["uid"].toString();
+
+    // If the event-to-check has no valid start or end date, assume that there is no overlap
+    if(!(eventStart.isValid()) || !(eventEnd.isValid()))
+    {
+        return response;
+    }
+
+    auto existingEvents = memoryCalendar->rawEventsForDate(eventStart.date(), memoryCalendar->timeZone());
+
+    for (const auto& e : existingEvents)
+    {
+        if( (eventStart < e->dtEnd()) && (eventEnd > e->dtStart()) )
+        {
+            overlappingEvents.append(e->summary());
+        }
+
+        if(!(eventUid.isEmpty()) && e->uid() == eventUid)
+        {
+            response["result"] = QVariant(Exists);
+            return response;
+        }
+    }
+
+    if(!(overlappingEvents.isEmpty()))
+    {
+        response["result"] = QVariant(NotExistsButOverlaps);
+        response["events"] = overlappingEvents.join("\n");
+    }
+
+    return response;
 }
