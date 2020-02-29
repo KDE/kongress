@@ -152,6 +152,25 @@ Kirigami.Page {
                         Layout.fillWidth: true
                     }
                 }
+
+                RowLayout {
+                    visible: viewMode == "favorites" && model.overlapping >0
+                    width: cardDelegate.availableWidth
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.Icon {
+                        source: "dialog-warning-symbolic"
+                        width: Kirigami.Units.iconSizes.small
+                        height: width
+                    }
+
+                    Controls2.Label {
+                        wrapMode: Text.WordWrap
+                        text: i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
+                        color: Kirigami.Theme.negativeTextColor
+                        Layout.fillWidth: true
+                    }
+                }
             }
         }
     }

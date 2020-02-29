@@ -25,6 +25,7 @@ if(ANDROID)
         delete
         documentinfo
         edit-select
+        dialog-warning-symbolic
         exchange-positions
         favorite
         find-location

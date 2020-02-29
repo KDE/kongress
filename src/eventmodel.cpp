@@ -66,33 +66,33 @@ void EventModel::setCalendar(LocalCalendar* const calendarPtr)
 
 QHash<int, QByteArray> EventModel::roleNames() const
 {
-    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(Uid, "uid");
-    roles.insert(EventStartDt, "eventStartDt");
-    roles.insert(ScheduleStartDt, "scheduleStartDt");
-    roles.insert(AllDay, "allday");
-    roles.insert(Description, "description");
-    roles.insert(Summary, "summary");
-    roles.insert(LastModified, "lastmodified");
-    roles.insert(Location, "location");
-    roles.insert(Categories, "categories");
-    roles.insert(Priority, "priority");
-    roles.insert(Created, "created");
-    roles.insert(Secrecy, "secrecy");
-    roles.insert(EventEndDt, "eventEndDt");
-    roles.insert(ScheduleEndDt, "scheduleEndDt");
-    roles.insert(Transparency, "transparency");
-    roles.insert(RepeatPeriodType, "repeatType");
-    roles.insert(RepeatEvery, "repeatEvery");
-    roles.insert(RepeatStopAfter, "repeatStopAfter");
-    roles.insert(IsRepeating, "isRepeating");
-    roles.insert(EventCategories, "eventCategories");
-    roles.insert(Url, "url");
-    roles.insert(ShiftedStartEndDt, "shiftedStartEndDt");
-    roles.insert(ShiftedStartEndTime, "shiftedStartEndTime");
-    roles.insert(StartEndDt, "startEndDt");
-
-    return roles;
+    return {
+        { Uid, "uid" },
+        { EventStartDt, "eventStartDt" },
+        { ScheduleStartDt, "scheduleStartDt" },
+        { AllDay, "allday" },
+        { Description, "description" },
+        { Summary, "summary" },
+        { LastModified, "lastmodified" },
+        { Location, "location" },
+        { Categories, "categories" },
+        { Priority, "priority" },
+        { Created, "created" },
+        { Secrecy, "secrecy" },
+        { EventEndDt, "eventEndDt" },
+        { ScheduleEndDt, "scheduleEndDt" },
+        { Transparency, "transparency" },
+        { RepeatPeriodType, "repeatType" },
+        { RepeatEvery, "repeatEvery" },
+        { RepeatStopAfter, "repeatStopAfter" },
+        { IsRepeating, "isRepeating" },
+        { EventCategories, "eventCategories" },
+        { Url, "url" },
+        { ShiftedStartEndDt, "shiftedStartEndDt" },
+        { ShiftedStartEndTime, "shiftedStartEndTime" },
+        { StartEndDt, "startEndDt" },
+        { Overlapping, "overlapping" }
+    };
 }
 
 QVariant EventModel::data(const QModelIndex& index, int role) const
@@ -228,6 +228,8 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
 
             return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
         }
+        case Overlapping:
+            return overlappingEvents(index.row());
         default:
             return QVariant();
     }
@@ -304,4 +306,19 @@ void EventModel::setEventCategory(const QString& category)
 QString EventModel::eventCategory() const
 {
     return m_category;
+}
+
+int EventModel::overlappingEvents(const int idx) const
+{
+    int cnt = 0;
+
+    for (const auto& e : m_events)
+    {
+        if( (m_events.at(idx)->dtStart() < e->dtEnd()) && (m_events.at(idx)->dtEnd() > e->dtStart()) && (m_events.at(idx)->uid() != e->uid()) )
+        {
+            ++cnt;
+        }
+    }
+
+    return cnt;
 }

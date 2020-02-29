@@ -64,7 +64,8 @@ public:
         Url,
         ShiftedStartEndDt,
         ShiftedStartEndTime,
-        StartEndDt
+        StartEndDt,
+        Overlapping
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -104,9 +105,14 @@ private:
     int repeatStopAfter(const int idx) const;
 
     /**
-     * return The FREQ rule part which identifies the type of recurrence rule
+     * @return The FREQ rule part which identifies the type of recurrence rule
      */
     ushort repeatPeriodType(const int idx) const;
+
+    /**
+     * @return The number of events that overlap with a specific event
+     */
+    int overlappingEvents(const int idx) const;
 
     Event::List m_events;
     QDate m_filterdt;
