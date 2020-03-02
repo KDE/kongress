@@ -45,6 +45,7 @@ public:
         LastModified,
         ScheduleStartDt,
         EventStartDt,
+        EventDt,
         AllDay,
         Description,
         Summary,

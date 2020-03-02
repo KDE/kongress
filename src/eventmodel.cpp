@@ -69,6 +69,7 @@ QHash<int, QByteArray> EventModel::roleNames() const
     return {
         { Uid, "uid" },
         { EventStartDt, "eventStartDt" },
+        { EventDt, "eventDt" },
         { ScheduleStartDt, "scheduleStartDt" },
         { AllDay, "allday" },
         { Description, "description" },
@@ -108,6 +109,8 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             return m_events.at(index.row())->uid();
         case EventStartDt:
             return m_events.at(index.row())->dtStart();
+        case EventDt:
+            return m_events.at(index.row())->dtStart().toString("dddd d MMMM");
         case ScheduleStartDt:
         {
             auto startDtWConferenceTz = m_events.at(index.row())->dtStart();

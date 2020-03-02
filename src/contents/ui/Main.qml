@@ -66,7 +66,7 @@ Kirigami.ApplicationWindow {
                 iconName: "view-calendar-agenda"
                 onTriggered: {
                     pageStack.clear();
-                    pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
+                    pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
                 }
             },
 
@@ -149,34 +149,34 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
-        id: eventsCardView
+        id: scheduleView
 
-        EventsCardListView {
+        ScheduleView {
             roCalendar: onlineCalendar
             rwCalendar: favoritesCalendar
-            viewMode: "events"
 
             title: i18n("Schedule")
         }
     }
 
     Component {
-        id: eventsListView
+        id: dailyView
 
-        EventsListView {
+        DailyView {
             roCalendar: onlineCalendar
             rwCalendar: favoritesCalendar
-            viewMode: "events"
         }
     }
 
     Component {
         id: favoritesView
 
-        EventsCardListView {
+        FavoritesView {
             roCalendar: favoritesCalendar
             rwCalendar: favoritesCalendar
-            viewMode: "favorites"
+
+            title: i18n("Favorites")
+
         }
     }
 
@@ -195,7 +195,7 @@ Kirigami.ApplicationWindow {
                 onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId};
                 favoritesCalendar.calendarInfo = {"id": "favorites_" +  root.activeConference.id, "controller": _calendarController, "timeZoneId": root.activeConference.timeZoneId};
                 showPassiveNotification(i18n("Loading conference data"));
-                pageStack.push(eventsCardView, {title: i18n("Schedule"), eventStartDt: ""});
+                pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }
     }
@@ -223,7 +223,7 @@ Kirigami.ApplicationWindow {
 
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(eventsListView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
+                pageStack.push(dailyView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
             }
         }
 
@@ -247,7 +247,7 @@ Kirigami.ApplicationWindow {
 
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(eventsCardView, {title: text, eventStartDt: "", category: text, showCategories: false});
+                pageStack.push(favoritesView, {title: text, eventStartDt: "", category: text, showCategories: false});
             }
         }
 

@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file alias="Main.qml">contents/ui/Main.qml</file>
-        <file alias="EventsCardListView.qml">contents/ui/EventsCardListView.qml</file>
-        <file alias="EventsListView.qml">contents/ui/EventsListView.qml</file>
+        <file alias="ScheduleView.qml">contents/ui/ScheduleView.qml</file>
+        <file alias="FavoritesView.qml">contents/ui/FavoritesView.qml</file>
+        <file alias="DailyView.qml">contents/ui/DailyView.qml</file>
         <file alias="MapView.qml">contents/ui/MapView.qml</file>
         <file alias="Conferences.qml">contents/ui/Conferences.qml</file>
         <file alias="EventInfo.qml">contents/ui/EventInfo.qml</file>

@@ -26,7 +26,6 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.Page {
     id: root
 
-    property string viewMode
     property date eventStartDt
     property var roCalendar
     property var rwCalendar
@@ -51,7 +50,7 @@ Kirigami.Page {
 
         EventInfo {
             rwCalendar: root.rwCalendar
-            viewMode: root.viewMode
+            viewMode: "favorites"
         }
     }
 
@@ -77,21 +76,10 @@ Kirigami.Page {
                 },
 
                 Kirigami.Action {
-                    text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
-                    icon.name: viewMode == "favorites" ? "delete" : "favorite"
+                    text: i18n("Delete")
+                    icon.name: "delete"
 
-                    onTriggered: {
-                        if(viewMode == "favorites") {
-                            var vevent = { uid: model.uid } ;
-                            _eventController.remove(root.rwCalendar, vevent);
-                        }
-                        else {
-                            var vevent = { "uid" : model.uid, "startDate": model.scheduleStartDt, "summary": model.summary, "description": model.description, "allDay": model.allDay, "location": model.location, "endDate": model.scheduleEndDt, "categories": model.eventCategories, "url": model.url /*"alarms": incidenceAlarmsModel.alarms()*/};
-
-                            var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
-                            showPassiveNotification(addEditResult["message"]);
-                        }
-                    }
+                    onTriggered:  _eventController.remove( root.rwCalendar,  { uid: model.uid } )
                 }
             ]
 
@@ -112,7 +100,7 @@ Kirigami.Page {
 
                     Controls2.Label {
                         wrapMode: Text.WordWrap
-                        text: viewMode == "favorites" ? model.startEndDt : model.shiftedStartEndDt
+                        text: model.startEndDt
                         Layout.fillWidth: true
                     }
                 }
@@ -154,7 +142,7 @@ Kirigami.Page {
                 }
 
                 RowLayout {
-                    visible: viewMode == "favorites" && model.overlapping >0
+                    visible: model.overlapping >0
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 
