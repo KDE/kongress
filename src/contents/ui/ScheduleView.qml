@@ -64,7 +64,6 @@ Kirigami.Page {
             criteria: ViewSection.FullString
             delegate: Kirigami.ListSectionHeader {
                 label: section
-                topPadding: Kirigami.Units.gridUnit * 2
             }
         }
 
