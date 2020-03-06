@@ -45,7 +45,8 @@ public:
         ConferenceVenueLongitude,
         ConferenceVenueLatitude,
         ConferenceVenueOsmUrl,
-        ConferenceTimeZone
+        ConferenceTimeZone,
+        PastUpcoming
     };
 
     explicit ConferenceModel(QObject* parent = nullptr);
@@ -62,6 +63,7 @@ Q_SIGNALS:
 
 private:
     void loadConferences();
+    QString pastOrUpcoming(const int index) const;
 
     ConferenceController* m_controller;
     QVector<Conference*> m_conferences;

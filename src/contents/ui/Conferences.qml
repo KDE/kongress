@@ -19,7 +19,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.10 as Kirigami
 
 Kirigami.Page {
     id: root
@@ -30,13 +30,19 @@ Kirigami.Page {
 
     signal selected(var selectedConference)
 
-    Kirigami.CardsGridView {
+    Kirigami.CardsListView {
         id: view
 
         anchors.fill: parent
 
         model: conferencesList
-
+        section {
+            property: "pastUpcoming"
+            criteria: ViewSection.FullString
+            delegate: Kirigami.ListSectionHeader {
+                label: section
+            }
+        }
         delegate: Kirigami.Card {
             id: card
 

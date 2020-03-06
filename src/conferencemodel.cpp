@@ -16,6 +16,8 @@
  *
  */
 
+#include <QDate>
+#include <KLocalizedString>
 #include "conferencemodel.h"
 #include "conferencecontroller.h"
 #include "conference.h"
@@ -39,7 +41,8 @@ QHash<int, QByteArray> ConferenceModel::roleNames() const
         {ConferenceVenueLatitude, "venueLatitude"},
         {ConferenceVenueLongitude, "venueLongitude"},
         {ConferenceVenueOsmUrl, "venueOsmUrl"},
-        {ConferenceTimeZone, "timeZoneId"}
+        {ConferenceTimeZone, "timeZoneId"},
+        {PastUpcoming, "pastUpcoming"}
     };
 }
 
@@ -75,6 +78,8 @@ QVariant ConferenceModel::data(const QModelIndex& index, int role) const
             return m_conferences.at(row)->venueOsmUrl();
         case ConferenceTimeZone:
             return m_conferences.at(row)->timeZoneId();
+        case PastUpcoming:
+            return pastOrUpcoming(row);
         default:
             return m_conferences.at(row)->id();
     }
@@ -106,3 +111,24 @@ void ConferenceModel::setFilter(const QVariantMap& filter)
     Q_EMIT filterChanged();
 }
 
+QString ConferenceModel::pastOrUpcoming(const int index) const
+{
+    auto days = m_conferences.at(index)->days();
+    auto pastLabel = i18n("Past");
+    auto upcoming = i18n("Upcoming");
+
+    if(days.isEmpty())
+    {
+        return pastLabel;
+    }
+
+    auto lastDayDt = QDate::fromString(days.last(), "yyyy-MM-dd");
+    auto currentDt = QDate::currentDate();
+
+    if(lastDayDt.isValid())
+    {
+        return lastDayDt < currentDt ? pastLabel : upcoming;
+    }
+
+    return pastLabel;
+}
