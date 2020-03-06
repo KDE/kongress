@@ -159,14 +159,6 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Component {
-        id: dailyView
-
-        DailyView {
-            roCalendar: onlineCalendar
-            rwCalendar: favoritesCalendar
-        }
-    }
 
     Component {
         id: favoritesView
@@ -223,7 +215,7 @@ Kirigami.ApplicationWindow {
 
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(dailyView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay});
+                pageStack.push(scheduleView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay });
             }
         }
 
