@@ -31,51 +31,48 @@ Kirigami.Page {
 
     title: root.event ? event.summary : ""
 
+    actions.left:
+        Kirigami.Action {
+            text: i18n("Web Page")
+            icon.name: "internet-services"
+
+            onTriggered: {
+                if(root.event && (root.event.url)) {
+                    Qt.openUrlExternally(event.url);
+                }
+            }
+        }
+
+    actions.main:
+        Kirigami.Action {
+            text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
+            icon.name: viewMode == "favorites" ? "delete" : "favorite"
+
+            onTriggered: {
+                if(root.event && root.viewMode == "favorites") {
+                    var vevent = { uid: root.event.uid } ;
+                    _eventController.remove(root.rwCalendar, vevent);
+                    pageStack.pop();
+                }
+                else if(root.event) {
+                    console.log("Adding event to favorites");
+                    var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
+
+                    var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
+                    showPassiveNotification(addEditResult["message"]);
+
+                }
+            }
+        }
+
     Kirigami.Card {
         id: cardDelegate
 
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
+        anchors.fill: parent
 
         visible: root.event
         banner.title: root.event ? event.summary : ""
         banner.titleLevel: 3
-
-        actions: [
-            Kirigami.Action {
-                text: i18n("Web Page")
-                icon.name: "internet-services"
-
-                onTriggered: {
-                    if(root.event && (root.event.url)) {
-                        Qt.openUrlExternally(event.url);
-                    }
-                }
-            },
-
-            Kirigami.Action {
-                text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
-                icon.name: viewMode == "favorites" ? "delete" : "favorite"
-
-                onTriggered: {
-                    if(root.event && root.viewMode == "favorites") {
-                        var vevent = { uid: root.event.uid } ;
-                        _eventController.remove(root.rwCalendar, vevent);
-                        pageStack.pop();
-                    }
-                    else if(root.event) {
-                        console.log("Adding event to favorites");
-                        var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
-
-                        var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
-                        showPassiveNotification(addEditResult["message"]);
-
-                    }
-                }
-            }
-        ]
 
         contentItem: Column {
             spacing: Kirigami.Units.largeSpacing
