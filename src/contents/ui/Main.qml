@@ -239,7 +239,7 @@ Kirigami.ApplicationWindow {
 
             onTriggered: {
                 pageStack.clear();
-                pageStack.push(favoritesView, {title: text, eventStartDt: "", category: text, showCategories: false});
+                pageStack.push(scheduleView, {title: text, eventStartDt: "", category: text, showCategories: false});
             }
         }
 
