@@ -57,6 +57,7 @@ Comment[x-test]=xxThe uid of the incidence of the alarmxx
 Name=Alarm
 Name[ca]=Alarma
 Name[ca@valencia]=Alarma
+Name[cs]=Alarm
 Name[es]=Alarma
 Name[et]=Häire
 Name[ia]=Alarma
