@@ -22,7 +22,7 @@ import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.4 as Controls2
 import org.kde.kirigami 2.4 as Kirigami
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: root
 
     property string imageUrl
@@ -33,11 +33,6 @@ Kirigami.Page {
     title: i18n("Map")
 
     ColumnLayout {
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-        }
 
         Image {
             Layout.fillWidth: true

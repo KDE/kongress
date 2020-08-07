@@ -22,7 +22,7 @@ import QtQuick.Controls 2.4 as Controls2
 import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.4 as Kirigami
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: root
 
     property var event
@@ -67,8 +67,6 @@ Kirigami.Page {
 
     Kirigami.Card {
         id: cardDelegate
-
-        anchors.fill: parent
 
         visible: root.event
         banner.title: root.event ? event.summary : ""

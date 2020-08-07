@@ -117,10 +117,6 @@ Kirigami.ApplicationWindow {
 
     }
 
-//     contextDrawer: Kirigami.ContextDrawer {
-//         id: contextDrawer
-//     }
-
     pageStack {
         initialPage: [conferencesView]
         separatorVisible: false

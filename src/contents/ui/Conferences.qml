@@ -21,7 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: root
 
     title: i18n("Conferences")
@@ -32,8 +32,6 @@ Kirigami.Page {
 
     Kirigami.CardsListView {
         id: view
-
-        anchors.fill: parent
 
         model: conferencesList
         section {

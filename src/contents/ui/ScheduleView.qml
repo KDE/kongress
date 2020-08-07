@@ -20,10 +20,10 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls2
 import QtQuick.Layouts 1.11
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kongress 0.1 as Kongress
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: root
 
     property date eventStartDt
@@ -34,14 +34,10 @@ Kirigami.Page {
     leftPadding: 0
     rightPadding: 0
 
-    Controls2.Label {
-        anchors.fill: parent
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
+    Kirigami.PlaceholderMessage {
         visible: eventsModel.count == 0
-        wrapMode: Text.WordWrap
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
         text: eventStartDt.toLocaleDateString() != "" ? i18n("No events found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No events found")
-        font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
     }
 
     Component {
