@@ -34,6 +34,7 @@ if(ANDROID)
         view-calendar-agenda
         view-calendar-day
         view-categories
+        settings-configure
     )
 endif()
 

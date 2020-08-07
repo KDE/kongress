@@ -1,6 +1,19 @@
 [
     {
 
+        "id": "akademy2020",
+        "name": "Akademy 2020",
+        "description": "Akademy is the annual world summit of KDE, one of the largest Free Software communities in the world. It is a free, non-commercial event organized by the KDE Community",
+        "days": ["2020-09-04", "2020-09-05", "2020-09-06", "2020-09-11"],
+        "icalUrl": "https://conf.kde.org/en/akademy2020/public/schedule.ics",
+        "venueImageUrl": "",
+        "venueLatitude": "",
+        "venueLongitude": "",
+        "venueOsmUrl": "",
+        "timeZoneId": "UTC"
+    },
+    {
+
         "id": "fosdem2020",
         "name": "FOSDEM",
         "description": "FOSDEM is a free event for software developers to meet, share ideas and collaborate. Every year, thousands of developers of free and open source software from all over the world gather at the event in Brussels.",

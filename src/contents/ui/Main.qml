@@ -75,6 +75,17 @@ Kirigami.ApplicationWindow {
 
                 text: i18n("Categories")
                 iconName: "view-categories"
+                enabled: root.activeConference && children.length > 0
+            },
+
+            Kirigami.Action {
+                text: i18n("Map")
+                iconName: "find-location"
+                enabled: root.activeConference && root.activeConference.venueOsmUrl
+                onTriggered: {
+                    pageStack.clear();
+                    pageStack.push(mapView);
+                }
             },
 
             Kirigami.Action {
@@ -87,25 +98,18 @@ Kirigami.ApplicationWindow {
             },
 
             Kirigami.Action {
-                text: i18n("Map")
-                iconName: "find-location"
-                onTriggered: {
-                    pageStack.clear();
-                    pageStack.push(mapView);
-                }
-            },
+                text: i18n("Configure")
+                iconName: "settings-configure"
+                expandible: true
 
-            Kirigami.Action {
-                separator: true
-            },
+                Kirigami.Action {
+                    text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
+                    iconName: root.activeConference ? 'exchange-positions' : 'edit-select'
 
-            Kirigami.Action {
-                text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
-                iconName: root.activeConference ? 'exchange-positions' : 'edit-select'
-
-                onTriggered: {
-                    pageStack.clear();
-                    pageStack.push(conferencesView)
+                    onTriggered: {
+                        pageStack.clear();
+                        pageStack.push(conferencesView)
+                    }
                 }
             }
 
