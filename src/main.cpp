@@ -22,6 +22,8 @@
 #include <QtQml>
 #include <QUrl>
 #include <KLocalizedContext>
+#include <KLocalizedString>
+#include <KAboutData>
 #include "calendarcontroller.h"
 #include "localcalendar.h"
 #include "eventmodel.h"
@@ -36,8 +38,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
-    QCoreApplication::setOrganizationDomain("kde.org");
-    QCoreApplication::setApplicationName("kongress");
+
+    KAboutData about(QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral("0.1"), i18n("KDE Conference Companion"), KAboutLicense::GPL, i18n("© 2020 KDE Community"));
+    about.addAuthor(i18n("Dimitris Kardarakos"), QString(), QStringLiteral("dimkard@posteo.net"));
+    KAboutData::setApplicationData(about);
 
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
