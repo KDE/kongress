@@ -37,6 +37,7 @@ Kirigami.ScrollablePage {
     Kirigami.PlaceholderMessage {
         visible: eventsModel.count == 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        anchors.centerIn: parent
         text: eventStartDt.toLocaleDateString() != "" ? i18n("No events found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No events found")
     }
 
