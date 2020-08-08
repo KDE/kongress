@@ -36,7 +36,7 @@ using namespace KCalendarCore;
 CalAlarmClient::CalAlarmClient(QObject* parent)
 : QObject(parent), mAlarmsModel(new AlarmsModel()), mNotificationHandler(new NotificationHandler())
 {
-    new KdefosdemacAdaptor(this);
+    new KongressacAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject("/kongressac", this );
 
