@@ -35,12 +35,6 @@ if(REMINDERS_ENABLED)
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
 endif()
 
-################# Enable C++11 features for clang and gcc #################
-
-if(UNIX)
-   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++0x")
-endif()
-
 ################# now find all used packages #################
 
 find_package(PkgConfig)
