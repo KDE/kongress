@@ -29,15 +29,10 @@ include(ECMPoQmTools)
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Test Qml QuickControls2 Network)
 
-find_package(KF5Config)
-find_package(KF5Kirigami2)
-find_package(KF5I18n)
-find_package(KF5CalendarCore REQUIRED)
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore)
 
 if(REMINDERS_ENABLED)
-    find_package(KF5DBusAddons CONFIG REQUIRED)
-    find_package(KF5Notifications CONFIG REQUIRED)
-    find_package(KF5Service CONFIG REQUIRED)
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
 endif()
 
 ################# Enable C++11 features for clang and gcc #################
