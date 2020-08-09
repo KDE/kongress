@@ -25,24 +25,24 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
-ConferenceController::ConferenceController(QObject* parent) : QObject(parent)
+class ConferenceController::Private
+{
+public:
+    Private()
+        : config("kongressrc")
+    {};
+    KConfig config;
+};
+
+ConferenceController::ConferenceController(QObject *parent) : QObject(parent), m_activeConferenceInfo(new Conference()), d(new Private())
 {
     loadConferences();
+    loadDefaultConference(defaultConferenceId());
 }
 
 QVector<Conference*> ConferenceController::conferences() const
 {
     return m_conferences;
-}
-
-Conference* ConferenceController::conference(const QString& conferenceId) const
-{
-    for(auto confr : m_conferences)
-    {
-        if(confr->id() == conferenceId) return confr;
-    }
-
-    return new Conference();
 }
 
 void ConferenceController::writeConference(const Conference *const conference)
@@ -53,19 +53,19 @@ void ConferenceController::writeConference(const Conference *const conference)
 
 void ConferenceController::loadConferences()
 {
-    auto config =  KSharedConfig::openConfig();
-    auto loadPredefined = config->group("general").readEntry("loadPredefined", QString());
+    auto loadPredefined = d->config.group("general").readEntry("loadPredefined", QString());
     QFile preconfiguredFile("://ConferenceData.json");
 
-    if(!m_conferences.isEmpty())
-    {
+    if(!m_conferences.isEmpty()) {
+        qDeleteAll(m_conferences.begin(), m_conferences.end());
         m_conferences.clear();
+
     }
 
     if(loadPredefined.isEmpty())
     {
-        config->group("general").writeEntry("loadPredefined","yes");
-        config->sync();
+        d->config.group("general").writeEntry("loadPredefined","yes");
+        d->config.sync();
         loadConferencesFromFile(preconfiguredFile);
     }
     else if(loadPredefined == "yes")
@@ -114,8 +114,6 @@ void ConferenceController::loadConferencesFromFile(QFile& jsonFile)
 
 void ConferenceController::loadConference(const QJsonObject& jsonObj)
 {
-    qDebug() << "Loading conference " << jsonObj["id"].toString();
-
     auto conference = new Conference();
     conference->setId(jsonObj["id"].toString());
     conference->setName(jsonObj["name"].toString());
@@ -130,4 +128,53 @@ void ConferenceController::loadConference(const QJsonObject& jsonObj)
     conference->setTimeZoneId(jsonObj["timeZoneId"].toString());
 
     m_conferences << conference;
+}
+
+QString ConferenceController::defaultConferenceId() const
+{
+    auto confId = d->config.group("general").readEntry("defaultConferenceId", QString());
+    d->config.sync();
+
+    return confId;
+}
+
+void ConferenceController::setDefaultConferenceId(const QString &confId)
+{
+    d->config.group("general").writeEntry("defaultConferenceId", confId);
+    d->config.sync();
+
+    Q_EMIT defaultConferenceIdChanged();
+
+    loadDefaultConference(confId);
+}
+
+Conference* ConferenceController::activeConferenceInfo() const
+{
+    return m_activeConferenceInfo;
+}
+
+void ConferenceController::loadDefaultConference(const QString &conferenceId)
+{
+    if(conferenceId.isEmpty()) {
+        return;
+    }
+
+    for(auto cf : m_conferences)
+    {
+        if(cf->id() == conferenceId) {
+            m_activeConferenceInfo->setId(cf->id());
+            m_activeConferenceInfo->setName(cf->name());
+            m_activeConferenceInfo->setDescription(cf->description());
+            m_activeConferenceInfo->setIcalUrl(cf->icalUrl());
+            m_activeConferenceInfo->setDays(cf->days());
+            m_activeConferenceInfo->setVenueImageUrl(cf->venueImageUrl());
+            m_activeConferenceInfo->setVenueLatitude(cf->venueLatitude());
+            m_activeConferenceInfo->setVenueLongitude(cf->venueLongitude());
+            m_activeConferenceInfo->setVenueOsmUrl(cf->venueOsmUrl());
+            m_activeConferenceInfo->setTimeZoneId(cf->timeZoneId());
+        }
+    }
+
+    Q_EMIT activeConferenceInfoChanged();
+
 }

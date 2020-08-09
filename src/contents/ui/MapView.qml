@@ -57,7 +57,7 @@ Kirigami.ScrollablePage {
         Controls2.Button {
             Layout.alignment : Qt.AlignHCenter
             visible: root.geoUrl != ""
-            text: i18n("OpenStreetMaps")
+            text: i18n("OpenStreetMap")
 
             onClicked: Qt.openUrlExternally(root.geoUrl)
         }

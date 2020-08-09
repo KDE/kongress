@@ -22,11 +22,9 @@
 #include "conferencecontroller.h"
 #include "conference.h"
 
-ConferenceModel::ConferenceModel(QObject* parent) : QAbstractListModel(parent), m_controller(new ConferenceController()), m_conferences(QVector<Conference*>()), m_filter(QVariantMap())
+ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel(parent), m_conferences(QVector<Conference*>()), m_filter(QVariantMap())
 {
-    loadConferences();
     connect(this, &ConferenceModel::filterChanged, this, &ConferenceModel::loadConferences);
-    connect(m_controller, &ConferenceController::conferencesChanged, this, &ConferenceModel::loadConferences);
 }
 
 QHash<int, QByteArray> ConferenceModel::roleNames() const
@@ -89,7 +87,9 @@ void ConferenceModel::loadConferences()
 {
     beginResetModel();
 
-    m_conferences = m_controller->conferences();
+    if(m_controller != nullptr) {
+        m_conferences = m_controller->conferences();
+    }
 
     if(!m_filter.isEmpty())
     {
@@ -131,4 +131,18 @@ QString ConferenceModel::pastOrUpcoming(const int index) const
     }
 
     return pastLabel;
+}
+
+void ConferenceModel::setController(ConferenceController *conferenceController)
+{
+    m_controller = conferenceController;
+    loadConferences();
+
+    connect(m_controller, &ConferenceController::conferencesChanged, this, &ConferenceModel::loadConferences);
+    Q_EMIT controllerChanged();
+}
+
+ConferenceController *ConferenceModel::controller() const
+{
+    return m_controller;
 }

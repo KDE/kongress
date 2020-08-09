@@ -25,6 +25,17 @@ class Conference : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QString description READ description WRITE setDescription NOTIFY descriptionChanged)
+    Q_PROPERTY(QString icalUrl READ icalUrl WRITE setIcalUrl NOTIFY icalUrlChanged)
+    Q_PROPERTY(QStringList days READ days WRITE setDays NOTIFY daysChanged)
+    Q_PROPERTY(QString venueImageUrl READ venueImageUrl WRITE setVenueImageUrl NOTIFY venueImageUrlChanged)
+    Q_PROPERTY(QString venueLatitude READ venueLatitude WRITE setVenueLatitude NOTIFY venueLatitudeChanged)
+    Q_PROPERTY(QString venueLongitude READ venueLongitude WRITE setVenueLongitude NOTIFY venueLongitudeChanged)
+    Q_PROPERTY(QString venueOsmUrl READ venueOsmUrl WRITE setVenueOsmUrl NOTIFY venueOsmUrlChanged)
+    Q_PROPERTY(QString timeZoneId READ timeZoneId WRITE setTimeZoneId NOTIFY timeZoneIdChanged)
+
 public:
     QString id() const;
     QString name() const;
@@ -48,6 +59,17 @@ public:
     void setVenueOsmUrl(const QString& url);
     void setTimeZoneId(const QString& id);
 
+Q_SIGNALS:
+    void idChanged();
+    void nameChanged();
+    void descriptionChanged();
+    void icalUrlChanged();
+    void daysChanged();
+    void venueImageUrlChanged();
+    void venueLatitudeChanged();
+    void venueLongitudeChanged();
+    void venueOsmUrlChanged();
+    void timeZoneIdChanged();
 private:
     QString m_id;
     QString m_name;

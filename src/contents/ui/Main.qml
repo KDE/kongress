@@ -27,7 +27,7 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.ApplicationWindow {
     id: root
 
-    property var activeConference
+    property Kongress.Conference activeConference: conferenceController.activeConferenceInfo
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
@@ -38,13 +38,13 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 id: conferenceSelector
 
-                text: root.activeConference && root.activeConference.name ? root.activeConference.name : i18n("Conference")
+                text: root.activeConference.name != "" ? root.activeConference.name : i18n("Conference")
                 iconName: "group"
                 expandible: true
 
                 Kirigami.Action {
-                    visible: root.activeConference != null
                     text: i18n("Check for updates")
+                    enabled: root.activeConference.id != ""
 
                     onTriggered: {
                         showPassiveNotification(i18n("Loading conference data"));
@@ -64,6 +64,7 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text: i18n("Full Schedule")
                 iconName: "view-calendar-agenda"
+                enabled: root.activeConference.id != ""
                 onTriggered: {
                     pageStack.clear();
                     pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
@@ -75,13 +76,13 @@ Kirigami.ApplicationWindow {
 
                 text: i18n("Categories")
                 iconName: "view-categories"
-                enabled: root.activeConference && children.length > 0
+                enabled: root.activeConference.id != "" && children.length > 0
             },
 
             Kirigami.Action {
                 text: i18n("Map")
                 iconName: "find-location"
-                enabled: root.activeConference && root.activeConference.venueOsmUrl
+                enabled: root.activeConference.venueOsmUrl != ""
                 onTriggered: {
                     pageStack.clear();
                     pageStack.push(mapView);
@@ -91,6 +92,8 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text: i18n("Favorites")
                 iconName: "favorite"
+                enabled: root.activeConference.id != ""
+
                 onTriggered: {
                     pageStack.clear();
                     pageStack.push(favoritesView, {title: i18n("Favorites"), eventStartDt: ""});
@@ -103,8 +106,8 @@ Kirigami.ApplicationWindow {
                 expandible: true
 
                 Kirigami.Action {
-                    text: root.activeConference ? i18n("Change conference") : i18n("Select conference")
-                    iconName: root.activeConference ? 'exchange-positions' : 'edit-select'
+                    text: root.activeConference.id != "" ? i18n("Change conference") : i18n("Select conference")
+                    iconName: root.activeConference.id != "" ? 'exchange-positions' : 'edit-select'
 
                     onTriggered: {
                         pageStack.clear();
@@ -114,20 +117,35 @@ Kirigami.ApplicationWindow {
             }
 
         ]
-
     }
 
     pageStack {
-        initialPage: [conferencesView]
-        separatorVisible: false
+        initialPage: activeConference.id != "" ? scheduleView : conferencesView
+        defaultColumnWidth: Kirigami.Units.gridUnit * 40
+    }
+
+    Kongress.ConferenceController {
+        id: conferenceController
+
+        onActiveConferenceInfoChanged: {
+            if (activeConferenceInfo.id != "") {
+                pageStack.clear();
+                pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
+            }
+        }
     }
 
     Kongress.ConferenceModel {
         id: conferenceModel
+
+        controller: conferenceController
     }
 
     Kongress.LocalCalendar {
         id: onlineCalendar
+
+        calendarController: _calendarController
+        calendarInfo: root.activeConference.id != "" ? {"id": root.activeConference.id, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId, } : {}
 
         onCalendarInfoChanged: {
             if (root.pageStack.depth > 1) {
@@ -140,6 +158,9 @@ Kirigami.ApplicationWindow {
 
     Kongress.LocalCalendar {
         id: favoritesCalendar
+
+        calendarController: _calendarController
+        calendarInfo: root.activeConference.id != "" ? {"id": "favorites_" +  root.activeConference.id, "timeZoneId": root.activeConference.timeZoneId } : {}
 
         onCalendarInfoChanged: {
             if (root.pageStack.depth > 1) {
@@ -179,15 +200,11 @@ Kirigami.ApplicationWindow {
             conferencesList: conferenceModel
 
             /**
-             * Expects @selectedConference variable object to provide the information of the selected conference
+             * Expects @selectedConferenceId variable object to provide the information of the selected conference
              */
             onSelected: {
-                pageStack.clear();
-                root.activeConference = selectedConference;
-                onlineCalendar.calendarInfo = {"id": root.activeConference.id, "controller": _calendarController, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId};
-                favoritesCalendar.calendarInfo = {"id": "favorites_" +  root.activeConference.id, "controller": _calendarController, "timeZoneId": root.activeConference.timeZoneId};
+                conferenceController.defaultConferenceId = selectedConferenceId;
                 showPassiveNotification(i18n("Loading conference data"));
-                pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         }
     }
@@ -206,7 +223,7 @@ Kirigami.ApplicationWindow {
     Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
         id: daysInstantiator
 
-        model: (root.activeConference && root.activeConference.days) ? root.activeConference.days: []
+        model: root.activeConference.days != "" ? root.activeConference.days: []
 
         delegate: Kirigami.Action {
             property date conferenceDay: new Date(modelData)

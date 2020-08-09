@@ -32,6 +32,7 @@ class ConferenceModel : public QAbstractListModel
     Q_OBJECT
 
     Q_PROPERTY(QVariantMap filter READ filter WRITE setFilter NOTIFY filterChanged)
+    Q_PROPERTY(ConferenceController *controller READ controller WRITE setController NOTIFY controllerChanged)
 
 public:
     enum Roles
@@ -49,23 +50,27 @@ public:
         PastUpcoming
     };
 
-    explicit ConferenceModel(QObject* parent = nullptr);
+    explicit ConferenceModel(QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
-    QVariant data(const QModelIndex & index, int role) const override;
-    int rowCount(const QModelIndex & parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    int rowCount(const QModelIndex &parent) const override;
 
     QVariantMap filter() const;
     void setFilter(const QVariantMap& filter);
 
+    ConferenceController *controller() const;
+    void setController(ConferenceController *conferenceController);
+
 Q_SIGNALS:
     void filterChanged();
+    void controllerChanged();
 
 private:
     void loadConferences();
     QString pastOrUpcoming(const int index) const;
 
-    ConferenceController* m_controller;
+    ConferenceController *m_controller;
     QVector<Conference*> m_conferences;
     QVariantMap m_filter;
 };

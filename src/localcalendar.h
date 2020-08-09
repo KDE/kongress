@@ -34,6 +34,7 @@ class LocalCalendar : public QObject
     Q_PROPERTY(QSharedPointer<MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
     Q_PROPERTY(QString loadDateStr READ loadDateStr NOTIFY loadDateStrChanged)
+    Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
     explicit LocalCalendar(QObject* parent = nullptr);
@@ -44,6 +45,9 @@ public:
 
     MemoryCalendar::Ptr memorycalendar() const;
     QStringList categories() const;
+
+    CalendarController *calendarController() const;
+    void setCalendarController(CalendarController *controller);
 
     QString calendarId() const;
     QString loadDateStr() const;
@@ -58,6 +62,7 @@ Q_SIGNALS:
     void categoriesChanged();
     void eventsChanged();
     void loadDateStrChanged();
+    void calendarControllerChanged();
 
 private:
     QVariantMap m_calendarInfo;

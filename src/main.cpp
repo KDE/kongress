@@ -28,7 +28,9 @@
 #include "eventcontroller.h"
 #include "incidencealarmsmodel.h"
 #include "conferencemodel.h"
+#include "conferencecontroller.h"
 #include "calendarcontroller.h"
+#include "conference.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -43,6 +45,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<IncidenceAlarmsModel>("org.kde.kongress",0,1,"IncidenceAlarmsModel");
     qmlRegisterType<ConferenceModel>("org.kde.kongress",0,1,"ConferenceModel");
     qmlRegisterType<CalendarController>("org.kde.kongress",0,1,"CalendarController");
+    qmlRegisterType<ConferenceController>("org.kde.kongress",0,1,"ConferenceController");
+    qmlRegisterType<Conference>("org.kde.kongress",0,1,"Conference");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));

@@ -30,17 +30,31 @@ class ConferenceController : public QObject
 {
     Q_OBJECT
 
-public:
-    explicit ConferenceController(QObject* parent = nullptr);
+    Q_PROPERTY(QString defaultConferenceId READ defaultConferenceId WRITE setDefaultConferenceId NOTIFY defaultConferenceIdChanged)
+    Q_PROPERTY(Conference *activeConferenceInfo READ activeConferenceInfo NOTIFY activeConferenceInfoChanged)
 
-    Conference* conference(const QString& conferenceId) const;
+public:
+    explicit ConferenceController(QObject *parent = nullptr);
+
+    QString defaultConferenceId() const;
+    void setDefaultConferenceId(const QString &confId);
+
+    Conference *activeConferenceInfo() const;
+
     QVector<Conference*> conferences() const;
     void writeConference(const Conference* const conference);
 Q_SIGNALS:
     void conferencesChanged();
-
+    void defaultConferenceIdChanged();
+    void activeConferenceInfoChanged();
 private:
     QVector<Conference*> m_conferences;
+    Conference *m_activeConferenceInfo;
+    void loadDefaultConference(const QString &conferenceId);
+
+    class Private;
+    Private *d;
+
     void loadConference(const QJsonObject& jsonObj);
     void loadConferences();
     void loadConferencesFromFile(QFile& jsonFile);

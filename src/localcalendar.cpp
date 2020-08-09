@@ -39,21 +39,15 @@ MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("controller") || !calendarInfoMap.contains("timeZoneId"))
+    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("timeZoneId"))
     {
         qDebug() << "No sufficient calendar information provided";
 
         return;
     }
 
-    m_cal_controller = calendarInfoMap["controller"].value<CalendarController*>();
     m_calendarInfo["id"] = calendarInfoMap["id"].toString();
     m_calendarInfo["timeZoneId"] = calendarInfoMap["timeZoneId"].toString();
-
-    if(m_cal_controller != nullptr)
-    {
-        connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
-    }
 
     if(calendarInfoMap.contains("url"))
     {
@@ -152,4 +146,17 @@ void LocalCalendar::loadOnlineCalendar()
     }
 
     m_cal_controller->createCalendarFromUrl(m_calendarInfo["id"].toString(), QUrl::fromEncoded(m_calendarInfo["url"].toByteArray()), m_calendarInfo["timeZoneId"].toByteArray());
+}
+
+CalendarController *LocalCalendar::calendarController() const
+{
+    return m_cal_controller;
+}
+
+void LocalCalendar::setCalendarController(CalendarController *controller)
+{
+    m_cal_controller = controller;
+    connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
+
+    Q_EMIT calendarControllerChanged();
 }
