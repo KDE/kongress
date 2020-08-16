@@ -145,7 +145,7 @@ Kirigami.ApplicationWindow {
         id: onlineCalendar
 
         calendarController: _calendarController
-        calendarInfo: root.activeConference.id != "" ? {"id": root.activeConference.id, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId, } : {}
+        calendarInfo: root.activeConference.id != "" ? {"id": root.activeConference.id, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId } : {}
 
         onCalendarInfoChanged: {
             if (root.pageStack.depth > 1) {
@@ -160,7 +160,7 @@ Kirigami.ApplicationWindow {
         id: favoritesCalendar
 
         calendarController: _calendarController
-        calendarInfo: root.activeConference.id != "" ? {"id": "favorites_" +  root.activeConference.id, "timeZoneId": root.activeConference.timeZoneId } : {}
+        calendarInfo: root.activeConference.id != "" ? {"id": "favorites_" +  root.activeConference.id} : {}
 
         onCalendarInfoChanged: {
             if (root.pageStack.depth > 1) {

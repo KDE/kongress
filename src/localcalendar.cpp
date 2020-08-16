@@ -39,7 +39,7 @@ MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 
 void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 {
-    if(!calendarInfoMap.contains("id") || !calendarInfoMap.contains("timeZoneId"))
+    if(!calendarInfoMap.contains("id") || calendarInfoMap["id"].toString().isEmpty())
     {
         qDebug() << "No sufficient calendar information provided";
 
@@ -47,7 +47,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
     }
 
     m_calendarInfo["id"] = calendarInfoMap["id"].toString();
-    m_calendarInfo["timeZoneId"] = calendarInfoMap["timeZoneId"].toString();
+    m_calendarInfo["timeZoneId"] = calendarInfoMap.contains("timeZoneId") && !(calendarInfoMap["timeZoneId"].toString().isEmpty()) ? calendarInfoMap["timeZoneId"].toString() : QTimeZone::systemTimeZoneId();
 
     if(calendarInfoMap.contains("url"))
     {

@@ -162,6 +162,7 @@ MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calen
     auto tzId = QTimeZone::availableTimeZoneIds().contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
 
     MemoryCalendar::Ptr calendar(new MemoryCalendar(tzId));
+    qDebug() << "Memory calendar " << calendarId << "(local) with timezone " << tzId << " has been created";
     FileStorage::Ptr storage(new FileStorage(calendar));
     storage->setFileName(m_fullpath);
     QFile calendarFile(m_fullpath);
@@ -310,6 +311,7 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
             addTzIdToConfig(m_downloadManager->calendarId, tz);
 
             MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
+            qDebug() << "Memory calendar " << m_downloadManager->calendarId <<" (online) with timezone " << tz << " has been created";
             FileStorage::Ptr storage(new FileStorage(calendar));
             storage->setFileName(filePath);
 
