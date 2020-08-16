@@ -35,6 +35,8 @@ if (ANDROID)
     # runtime dependencies are build-time dependencies on Android
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS AndroidExtras)
     find_package(OpenSSL REQUIRED)
+else()
+    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
 
 if(REMINDERS_ENABLED)
