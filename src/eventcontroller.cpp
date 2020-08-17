@@ -91,8 +91,8 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
     }
 
     event->setUid(uid);
-    event->setDtStart(eventData["startDate"].toDateTime());
-    event->setDtEnd(eventData["endDate"].toDateTime());
+    event->setDtStart(eventData["startDate"].toDateTime().toTimeZone(QTimeZone::utc()));
+    event->setDtEnd(eventData["endDate"].toDateTime().toTimeZone(QTimeZone::utc()));
     event->setDescription(eventData["description"].toString());
     event->setCategories(eventData["categories"].toString());
     event->setSummary(eventData["summary"].toString());

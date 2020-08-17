@@ -101,7 +101,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
     if(!index.isValid())
         return QVariant();
 
-    auto conferenceTz = QTimeZone(m_local_calendar->memorycalendar()->timeZoneId());
+    auto calendarTz = m_local_calendar->memorycalendar()->timeZone();
 
     switch(role)
     {
@@ -114,7 +114,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
         case ScheduleStartDt:
         {
             auto startDtWConferenceTz = m_events.at(index.row())->dtStart();
-            startDtWConferenceTz.setTimeZone(conferenceTz);
+            startDtWConferenceTz.setTimeZone(calendarTz);
             return startDtWConferenceTz;
         }
         case AllDay:
@@ -140,7 +140,7 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
         case ScheduleEndDt:
         {
             auto endDtWConferenceTz = m_events.at(index.row())->dtEnd();
-            endDtWConferenceTz.setTimeZone(conferenceTz);
+            endDtWConferenceTz.setTimeZone(calendarTz);
             return endDtWConferenceTz;
         }
         case Transparency:
@@ -168,8 +168,8 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             }
 
             //Remedy for ical files that TZ-ID of events cannot be read; it should be fixed in framework
-            startDtTime.setTimeZone(conferenceTz);
-            endDtTime.setTimeZone(conferenceTz);
+            startDtTime.setTimeZone(calendarTz);
+            endDtTime.setTimeZone(calendarTz);
 
             if(startDtTime.date() == endDtTime.date())
             {
@@ -191,8 +191,8 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             auto endDtTime = m_events.at(index.row())->dtEnd();
 
             //Convert time to the time zone of the conference
-            startDtTime.setTimeZone(conferenceTz);
-            endDtTime.setTimeZone(conferenceTz);
+            startDtTime.setTimeZone(calendarTz);
+            endDtTime.setTimeZone(calendarTz);
 
             if(startDtTime.date() == endDtTime.date())
             {
@@ -209,8 +209,8 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
 
-            startDtTime = startDtTime.toTimeZone(conferenceTz);
-            endDtTime = endDtTime.toTimeZone(conferenceTz);
+            startDtTime = startDtTime.toTimeZone(calendarTz);
+            endDtTime = endDtTime.toTimeZone(calendarTz);
 
             if(m_events.at(index.row())->allDay())
             {
