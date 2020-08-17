@@ -21,6 +21,7 @@
 #include <QQmlApplicationEngine>
 #include <QtQml>
 #include <QUrl>
+#include <QQuickStyle>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KAboutData>
@@ -51,6 +52,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<CalendarController>("org.kde.kongress",0,1,"CalendarController");
     qmlRegisterType<ConferenceController>("org.kde.kongress",0,1,"ConferenceController");
     qmlRegisterType<Conference>("org.kde.kongress",0,1,"Conference");
+
+    #ifdef Q_OS_ANDROID
+        QQuickStyle::setStyle(QStringLiteral("Material"));
+    #endif
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
