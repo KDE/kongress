@@ -35,6 +35,7 @@ Kirigami.ScrollablePage {
         Kirigami.Action {
             text: i18n("Web Page")
             icon.name: "internet-services"
+            enabled: root.event.url != ""
 
             onTriggered: {
                 if(root.event && (root.event.url)) {

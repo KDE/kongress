@@ -13,6 +13,18 @@
         "timeZoneId": "UTC"
     },
     {
+        "id": "debConf20",
+        "name": "DebConf20",
+        "description": "DebConf is the annual conference for Debian contributors and users interested in improving Debian. Previous Debian conferences have featured speakers and attendees from all around the world. DebConf19 took place in Curitiba, Brazil and was attended by 382 participants from 50 countries.",
+        "days": ["2020-08-23","2020-08-24","2020-08-25","2020-08-26","2020-08-27","2020-08-28","2020-08-29"],
+        "icalUrl": "https://debconf20.debconf.org/schedule/schedule.ics",
+        "venueImageUrl": "",
+        "venueLatitude": "",
+        "venueLongitude": "",
+        "venueOsmUrl": "",
+        "timeZoneId": "UTC"
+    },
+    {
 
         "id": "fosdem2020",
         "name": "FOSDEM",
