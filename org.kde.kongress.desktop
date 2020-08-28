@@ -35,7 +35,6 @@ Comment[sv]=KDE konferenskompanjon
 Comment[uk]=KDE-компаньйон для конференцій
 Comment[x-test]=xxKDE Conference Companionxx
 Exec=kongress
-MimeType=application/x-kongress;
 Icon=kongress
 Type=Application
 Terminal=false
