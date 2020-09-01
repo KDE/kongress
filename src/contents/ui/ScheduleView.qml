@@ -82,7 +82,7 @@ Kirigami.ScrollablePage {
                     property string timeFormat: model.allday ? "" : "hh:mm"
 
                     width: Kirigami.Units.gridUnit * 20
-                    text: model.shiftedStartEndTime
+                    text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 2
                 }
 

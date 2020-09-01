@@ -114,9 +114,19 @@ Kirigami.ApplicationWindow {
                         pageStack.push(conferencesView)
                     }
                 }
+
+                Kirigami.Action {
+                    text: i18n("Settings")
+                    iconName: "settings-configure"
+                    onTriggered: {
+                        pageStack.clear();
+                        pageStack.push(settingsView);
+                    }
+                }
             }
 
         ]
+
     }
 
     pageStack {
@@ -217,6 +227,13 @@ Kirigami.ApplicationWindow {
             latitude: root.activeConference.venueLatitude
             longitude: root.activeConference.venueLongitude
             geoUrl: root.activeConference.venueOsmUrl
+        }
+    }
+
+    Component {
+        id: settingsView
+
+        SettingsView {
         }
     }
 

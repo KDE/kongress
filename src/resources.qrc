@@ -7,5 +7,6 @@
         <file alias="Conferences.qml">contents/ui/Conferences.qml</file>
         <file alias="EventInfo.qml">contents/ui/EventInfo.qml</file>
         <file alias="ConferenceData.json">data/ConferenceData.json</file>
+        <file alias="SettingsView.qml">contents/ui/SettingsView.qml</file>
     </qresource>
 </RCC>

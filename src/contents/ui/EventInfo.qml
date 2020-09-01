@@ -21,6 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls2
 import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kongress 0.1 as Kongress
 
 Kirigami.ScrollablePage {
     id: root
@@ -92,7 +93,19 @@ Kirigami.ScrollablePage {
                 Controls2.Label {
 
                     wrapMode: Text.WordWrap
-                    text: viewMode == "favorites" ? event.startEndDt : event.shiftedStartEndDt
+                    text: {
+                        if (viewMode == "favorites") {
+                            return event.startEndDt;
+                        }
+                        else {
+                            if (Kongress.SettingsController.displayInLocalTimezone) {
+                                return event.shiftedStartEndDtLocal;
+                            }
+                            else {
+                                return event.shiftedStartEndDt;
+                            }
+                        }
+                    }
                     Layout.fillWidth: true
                 }
             }
