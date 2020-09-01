@@ -161,29 +161,13 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
-
-            if(m_events.at(index.row())->allDay())
-            {
-                return startDtTime.date().toString("ddd d MMM yyyy");
-            }
+            auto allDay = m_events.at(index.row())->allDay();
 
             //Remedy for ical files that TZ-ID of events cannot be read; it should be fixed in framework
             startDtTime.setTimeZone(calendarTz);
             endDtTime.setTimeZone(calendarTz);
 
-            if(startDtTime.date() == endDtTime.date())
-            {
-
-                auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
-                auto displayTime = QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
-
-                return QString("%1 %2 %3").arg(displayDt).arg(displayTime).arg(startDtTime.timeZoneAbbreviation());
-            }
-
-            auto displayStartDtTime = QString("%1 %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
-            auto displayEndDtTime = QString("%1 %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
-
-            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+            return formatStartEndDt(startDtTime, endDtTime, allDay);
         }
         case ShiftedStartEndTime:
         {
@@ -194,42 +178,18 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
             startDtTime.setTimeZone(calendarTz);
             endDtTime.setTimeZone(calendarTz);
 
-            if(startDtTime.date() == endDtTime.date())
-            {
-                return QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
-            }
-
-            auto displayStartDtTime = QString("%1 %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
-            auto displayEndDtTime = QString("%1 %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
-
-            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+            return formatStartEndTime(startDtTime, endDtTime);
         }
         case StartEndDt:
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
+            auto allDay = m_events.at(index.row())->allDay();
 
             startDtTime = startDtTime.toTimeZone(calendarTz);
             endDtTime = endDtTime.toTimeZone(calendarTz);
 
-            if(m_events.at(index.row())->allDay())
-            {
-                return startDtTime.date().toString("ddd d MMM yyyy");
-            }
-
-            if(startDtTime.date() == endDtTime.date())
-            {
-
-                auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
-                auto displayTime = QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
-
-                return QString("%1 %2 %3").arg(displayDt).arg(displayTime).arg(startDtTime.timeZoneAbbreviation());
-            }
-
-            auto displayStartDtTime = QString("%1 %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
-            auto displayEndDtTime = QString("%1 %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
-
-            return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+            return formatStartEndDt(startDtTime, endDtTime, allDay);
         }
         case Overlapping:
             return overlappingEvents(index.row());
@@ -324,4 +284,39 @@ int EventModel::overlappingEvents(const int idx) const
     }
 
     return cnt;
+}
+
+QString EventModel::formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const
+{
+    if(startDtTime.date() == endDtTime.date())
+    {
+        return QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
+    }
+
+    auto displayStartDtTime = QString("%1 %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
+    auto displayEndDtTime = QString("%1 %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
+
+    return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
+}
+
+QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const
+{
+    if(allDay)
+    {
+        return startDtTime.date().toString("ddd d MMM yyyy");
+    }
+
+    if(startDtTime.date() == endDtTime.date())
+    {
+
+        auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
+        auto displayTime = QString("%1 - %2").arg(startDtTime.time().toString("hh:mm")).arg(endDtTime.time().toString("hh:mm"));
+
+        return QString("%1 %2 %3").arg(displayDt).arg(displayTime).arg(startDtTime.timeZoneAbbreviation());
+    }
+
+    auto displayStartDtTime = QString("%1 %2").arg(startDtTime.date().toString("ddd d MMM yyyy")).arg(startDtTime.time().toString("hh:mm"));
+    auto displayEndDtTime = QString("%1 %2").arg(endDtTime.date().toString("ddd d MMM yyyy")).arg(endDtTime.time().toString("hh:mm"));
+
+    return QString("%1 - %2 %3").arg(displayStartDtTime).arg(displayEndDtTime).arg(startDtTime.timeZoneAbbreviation());
 }

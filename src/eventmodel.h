@@ -115,6 +115,9 @@ private:
      */
     int overlappingEvents(const int idx) const;
 
+    QString formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const;
+    QString formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const;
+
     Event::List m_events;
     QDate m_filterdt;
     QString m_category;
