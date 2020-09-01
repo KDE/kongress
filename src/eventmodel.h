@@ -64,8 +64,11 @@ public:
         EventCategories,
         Url,
         ShiftedStartEndDt,
+        ShiftedStartEndDtLocal,
         ShiftedStartEndTime,
+        ShiftedStartEndTimeLocal,
         StartEndDt,
+        StartEndDtLocal,
         Overlapping
     };
 

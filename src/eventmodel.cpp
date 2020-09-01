@@ -90,8 +90,11 @@ QHash<int, QByteArray> EventModel::roleNames() const
         { EventCategories, "eventCategories" },
         { Url, "url" },
         { ShiftedStartEndDt, "shiftedStartEndDt" },
+        { ShiftedStartEndDtLocal, "shiftedStartEndDtLocal" },
         { ShiftedStartEndTime, "shiftedStartEndTime" },
+        { ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal" },
         { StartEndDt, "startEndDt" },
+        { StartEndDtLocal, "startEndDtLocal" },
         { Overlapping, "overlapping" }
     };
 }
@@ -169,14 +172,41 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
 
             return formatStartEndDt(startDtTime, endDtTime, allDay);
         }
+        case ShiftedStartEndDtLocal:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+            auto allDay = m_events.at(index.row())->allDay();
+
+            // Shift and convert time to the system time zone
+            startDtTime.setTimeZone(calendarTz);
+            startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
+            endDtTime.setTimeZone(calendarTz);
+            endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
+
+            return formatStartEndDt(startDtTime, endDtTime, allDay);
+        }
         case ShiftedStartEndTime:
         {
             auto startDtTime = m_events.at(index.row())->dtStart();
             auto endDtTime = m_events.at(index.row())->dtEnd();
 
-            //Convert time to the time zone of the conference
+            // Convert time to the time zone of the conference
             startDtTime.setTimeZone(calendarTz);
             endDtTime.setTimeZone(calendarTz);
+
+            return formatStartEndTime(startDtTime, endDtTime);
+        }
+        case ShiftedStartEndTimeLocal:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+
+            // Shift and convert time to the system time zone
+            startDtTime.setTimeZone(calendarTz);
+            startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
+            endDtTime.setTimeZone(calendarTz);
+            endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
             return formatStartEndTime(startDtTime, endDtTime);
         }
@@ -188,6 +218,18 @@ QVariant EventModel::data(const QModelIndex& index, int role) const
 
             startDtTime = startDtTime.toTimeZone(calendarTz);
             endDtTime = endDtTime.toTimeZone(calendarTz);
+
+            return formatStartEndDt(startDtTime, endDtTime, allDay);
+        }
+        case StartEndDtLocal:
+        {
+            auto startDtTime = m_events.at(index.row())->dtStart();
+            auto endDtTime = m_events.at(index.row())->dtEnd();
+            auto allDay = m_events.at(index.row())->allDay();
+
+            //Convert time to the system time zone
+            startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
+            endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
             return formatStartEndDt(startDtTime, endDtTime, allDay);
         }
