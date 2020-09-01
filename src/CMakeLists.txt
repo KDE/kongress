@@ -5,6 +5,7 @@ endif()
 
 set(kongress_SRCS
     main.cpp
+    settingscontroller.cpp
     calendarcontroller.cpp
     localcalendar.cpp
     eventmodel.cpp
