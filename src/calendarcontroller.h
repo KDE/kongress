@@ -42,44 +42,44 @@ class CalendarController : public QObject
 
 public:
 
-    explicit CalendarController(QObject* parent = nullptr);
+    explicit CalendarController(QObject *parent = nullptr);
     ~CalendarController() override;
 
     QString calendars() const;
-    QString calendarFile(const QString & calendarId);
+    QString calendarFile(const QString &calendarId);
 
-    MemoryCalendar::Ptr createLocalCalendar(const QString& calendarId, const QByteArray& timeZoneId);
-    MemoryCalendar::Ptr memoryCalendar(const QString& calendarId) const;
-    void createCalendarFromUrl(const QString& calendarId, const QUrl& url, const QByteArray& timeZoneId);
-    QVariantMap importCalendar(const QString& calendarId, const QString& sourcePath);
-    void deleteCalendar(const QString& calendarId);
-    bool save(const QString& calendarId);
+    MemoryCalendar::Ptr createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId);
+    MemoryCalendar::Ptr memoryCalendar(const QString &calendarId) const;
+    void createCalendarFromUrl(const QString &calendarId, const QUrl &url, const QByteArray &timeZoneId);
+    QVariantMap importCalendar(const QString &calendarId, const QString &sourcePath);
+    void deleteCalendar(const QString &calendarId);
+    bool save(const QString &calendarId);
 
 Q_SIGNALS:
     void calendarsChanged();
-    void calendarDownloaded(const QString& calendarId);
+    void calendarDownloaded(const QString &calendarId);
 
 public Q_SLOTS:
-    QVariantMap canAddCalendar(const QString& calendar);
-    QVariantMap addCalendar(const QString& calendar);
+    QVariantMap canAddCalendar(const QString &calendar);
+    QVariantMap addCalendar(const QString &calendar);
     void downloadFinished(QNetworkReply *reply);
 
 private:
-    static QString filenameToPath(const QString & calendarId);
-    QVariantMap canCreateFile(const QString& calendarId);
-    void removeCalendarFromConfig(const QString& calendarId);
-    bool saveToDisk(const QString& filename, QIODevice *data);
+    static QString filenameToPath(const QString &calendarId);
+    QVariantMap canCreateFile(const QString &calendarId);
+    void removeCalendarFromConfig(const QString &calendarId);
+    bool saveToDisk(const QString &filename, QIODevice *data);
     void loadSavedConferences();
-    void addConferenceToConfig(const QString& calendarId);
-    void addTzIdToConfig(const QString& calendarId, const QByteArray& timeZoneId);
-    QByteArray tzIdFromConfig(const QString& calendarId) const;
+    void addConferenceToConfig(const QString &calendarId);
+    void addTzIdToConfig(const QString &calendarId, const QByteArray &timeZoneId);
+    QByteArray tzIdFromConfig(const QString &calendarId) const;
 
     QMap<QString, FileStorage::Ptr> m_storages;
     QMap<QString, MemoryCalendar::Ptr> m_calendars;
-    DonwloadManager* m_downloadManager;
+    DonwloadManager *m_downloadManager;
 
     class Private;
-    Private* d;
+    Private *d;
 };
 
 #endif

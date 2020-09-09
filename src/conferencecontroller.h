@@ -41,22 +41,22 @@ public:
 
     Conference *activeConferenceInfo() const;
 
-    QVector<Conference*> conferences() const;
-    void writeConference(const Conference* const conference);
+    QVector<Conference *> conferences() const;
+    void writeConference(const Conference *const conference);
 Q_SIGNALS:
     void conferencesChanged();
     void defaultConferenceIdChanged();
     void activeConferenceInfoChanged();
 private:
-    QVector<Conference*> m_conferences;
+    QVector<Conference *> m_conferences;
     Conference *m_activeConferenceInfo;
     void loadDefaultConference(const QString &conferenceId);
 
     class Private;
     Private *d;
 
-    void loadConference(const QJsonObject& jsonObj);
+    void loadConference(const QJsonObject &jsonObj);
     void loadConferences();
-    void loadConferencesFromFile(QFile& jsonFile);
+    void loadConferencesFromFile(QFile &jsonFile);
 };
 #endif

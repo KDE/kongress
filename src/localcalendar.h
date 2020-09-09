@@ -37,11 +37,11 @@ class LocalCalendar : public QObject
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
-    explicit LocalCalendar(QObject* parent = nullptr);
+    explicit LocalCalendar(QObject *parent = nullptr);
     ~LocalCalendar() override;
 
     QVariantMap calendarInfo() const;
-    void setCalendarInfo(const QVariantMap& calendarInfoMap);
+    void setCalendarInfo(const QVariantMap &calendarInfoMap);
 
     MemoryCalendar::Ptr memorycalendar() const;
     QStringList categories() const;
@@ -54,7 +54,7 @@ public:
     Q_INVOKABLE void loadOnlineCalendar();
 
 public Q_SLOTS:
-    void onlineCalendarReady(const QString& calendarId);
+    void onlineCalendarReady(const QString &calendarId);
 
 Q_SIGNALS:
     void memorycalendarChanged();
@@ -67,7 +67,7 @@ Q_SIGNALS:
 private:
     QVariantMap m_calendarInfo;
     MemoryCalendar::Ptr m_calendar;
-    CalendarController* m_cal_controller;
+    CalendarController *m_cal_controller;
 };
 #endif // LOCALCALENDAR_H
 

@@ -40,7 +40,7 @@ ConferenceController::ConferenceController(QObject *parent) : QObject(parent), m
     loadDefaultConference(defaultConferenceId());
 }
 
-QVector<Conference*> ConferenceController::conferences() const
+QVector<Conference *> ConferenceController::conferences() const
 {
     return m_conferences;
 }
@@ -56,20 +56,17 @@ void ConferenceController::loadConferences()
     auto loadPredefined = d->config.group("general").readEntry("loadPredefined", QString());
     QFile preconfiguredFile("://ConferenceData.json");
 
-    if(!m_conferences.isEmpty()) {
+    if (!m_conferences.isEmpty()) {
         qDeleteAll(m_conferences.begin(), m_conferences.end());
         m_conferences.clear();
 
     }
 
-    if(loadPredefined.isEmpty())
-    {
-        d->config.group("general").writeEntry("loadPredefined","yes");
+    if (loadPredefined.isEmpty()) {
+        d->config.group("general").writeEntry("loadPredefined", "yes");
         d->config.sync();
         loadConferencesFromFile(preconfiguredFile);
-    }
-    else if(loadPredefined == "yes")
-    {
+    } else if (loadPredefined == "yes") {
         loadConferencesFromFile(preconfiguredFile);
     }
 
@@ -82,17 +79,15 @@ void ConferenceController::loadConferences()
     conferencesChanged();
 }
 
-void ConferenceController::loadConferencesFromFile(QFile& jsonFile)
+void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
 {
-    if(!jsonFile.exists())
-    {
+    if (!jsonFile.exists()) {
         return;
     }
 
     QString data;
 
-    if(jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
+    if (jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         data = jsonFile.readAll();
         jsonFile.close();
     }
@@ -100,19 +95,17 @@ void ConferenceController::loadConferencesFromFile(QFile& jsonFile)
     auto jsonDoc = QJsonDocument::fromJson(data.toUtf8());
     QVariantList jsonVarList;
 
-    if(!jsonDoc.isEmpty() && jsonDoc.isArray())
-    {
+    if (!jsonDoc.isEmpty() && jsonDoc.isArray()) {
         auto jsonArray = jsonDoc.array();
         jsonVarList = jsonArray.toVariantList();
     }
 
-    for(auto jsonVar : jsonVarList)
-    {
+    for (auto jsonVar : jsonVarList) {
         loadConference(jsonVar.toJsonObject());
     }
 }
 
-void ConferenceController::loadConference(const QJsonObject& jsonObj)
+void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
     auto conference = new Conference();
     conference->setId(jsonObj["id"].toString());
@@ -148,20 +141,19 @@ void ConferenceController::setDefaultConferenceId(const QString &confId)
     loadDefaultConference(confId);
 }
 
-Conference* ConferenceController::activeConferenceInfo() const
+Conference *ConferenceController::activeConferenceInfo() const
 {
     return m_activeConferenceInfo;
 }
 
 void ConferenceController::loadDefaultConference(const QString &conferenceId)
 {
-    if(conferenceId.isEmpty()) {
+    if (conferenceId.isEmpty()) {
         return;
     }
 
-    for(auto cf : m_conferences)
-    {
-        if(cf->id() == conferenceId) {
+    for (auto cf : m_conferences) {
+        if (cf->id() == conferenceId) {
             m_activeConferenceInfo->setId(cf->id());
             m_activeConferenceInfo->setName(cf->name());
             m_activeConferenceInfo->setDescription(cf->description());

@@ -44,42 +44,41 @@ QHash<int, QByteArray> ConferenceModel::roleNames() const
     };
 }
 
-int ConferenceModel::rowCount(const QModelIndex& parent) const
+int ConferenceModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return m_conferences.count();
 }
 
-QVariant ConferenceModel::data(const QModelIndex& index, int role) const
+QVariant ConferenceModel::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
 
-    switch(role)
-    {
-        case ConferenceId:
-            return m_conferences.at(row)->id();
-        case ConferenceName:
-            return m_conferences.at(row)->name();
-        case ConferenceDescription:
-            return m_conferences.at(row)->description();
-        case ConferenceIcalUrl:
-            return m_conferences.at(row)->icalUrl();
-        case ConferenceDays:
-            return m_conferences.at(row)->days();
-        case ConferenceVenueImageUrl:
-            return m_conferences.at(row)->venueImageUrl();
-        case ConferenceVenueLatitude:
-            return m_conferences.at(row)->venueLatitude();
-        case ConferenceVenueLongitude:
-            return m_conferences.at(row)->venueLongitude();
-        case ConferenceVenueOsmUrl:
-            return m_conferences.at(row)->venueOsmUrl();
-        case ConferenceTimeZone:
-            return m_conferences.at(row)->timeZoneId();
-        case PastUpcoming:
-            return pastOrUpcoming(row);
-        default:
-            return m_conferences.at(row)->id();
+    switch (role) {
+    case ConferenceId:
+        return m_conferences.at(row)->id();
+    case ConferenceName:
+        return m_conferences.at(row)->name();
+    case ConferenceDescription:
+        return m_conferences.at(row)->description();
+    case ConferenceIcalUrl:
+        return m_conferences.at(row)->icalUrl();
+    case ConferenceDays:
+        return m_conferences.at(row)->days();
+    case ConferenceVenueImageUrl:
+        return m_conferences.at(row)->venueImageUrl();
+    case ConferenceVenueLatitude:
+        return m_conferences.at(row)->venueLatitude();
+    case ConferenceVenueLongitude:
+        return m_conferences.at(row)->venueLongitude();
+    case ConferenceVenueOsmUrl:
+        return m_conferences.at(row)->venueOsmUrl();
+    case ConferenceTimeZone:
+        return m_conferences.at(row)->timeZoneId();
+    case PastUpcoming:
+        return pastOrUpcoming(row);
+    default:
+        return m_conferences.at(row)->id();
     }
 }
 
@@ -87,12 +86,11 @@ void ConferenceModel::loadConferences()
 {
     beginResetModel();
 
-    if(m_controller != nullptr) {
+    if (m_controller != nullptr) {
         m_conferences = m_controller->conferences();
     }
 
-    if(!m_filter.isEmpty())
-    {
+    if (!m_filter.isEmpty()) {
         //TODO: Implement model filtering
     }
 
@@ -104,9 +102,11 @@ QVariantMap ConferenceModel::filter() const
     return m_filter;
 }
 
-void ConferenceModel::setFilter(const QVariantMap& filter)
+void ConferenceModel::setFilter(const QVariantMap &filter)
 {
-    if(m_filter != filter) m_filter = filter;
+    if (m_filter != filter) {
+        m_filter = filter;
+    }
 
     Q_EMIT filterChanged();
 }
@@ -117,16 +117,14 @@ QString ConferenceModel::pastOrUpcoming(const int index) const
     auto pastLabel = i18n("Past");
     auto upcoming = i18n("Upcoming");
 
-    if(days.isEmpty())
-    {
+    if (days.isEmpty()) {
         return pastLabel;
     }
 
     auto lastDayDt = QDate::fromString(days.last(), "yyyy-MM-dd");
     auto currentDt = QDate::currentDate();
 
-    if(lastDayDt.isValid())
-    {
+    if (lastDayDt.isValid()) {
         return lastDayDt < currentDt ? pastLabel : upcoming;
     }
 

@@ -29,7 +29,7 @@ class SettingsController : public QObject
     Q_PROPERTY(bool displayInLocalTimezone READ displayInLocalTimezone WRITE setDisplayInLocalTimezone NOTIFY displayInLocalTimezoneChanged)
 
 public:
-    explicit SettingsController(QObject* parent = nullptr);
+    explicit SettingsController(QObject *parent = nullptr);
     ~SettingsController() override;
 
     static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
@@ -42,7 +42,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private* d;
+    Private *d;
 };
 
 #endif

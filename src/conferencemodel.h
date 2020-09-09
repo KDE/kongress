@@ -35,9 +35,8 @@ class ConferenceModel : public QAbstractListModel
     Q_PROPERTY(ConferenceController *controller READ controller WRITE setController NOTIFY controllerChanged)
 
 public:
-    enum Roles
-    {
-        ConferenceId=Qt::UserRole+1,
+    enum Roles {
+        ConferenceId = Qt::UserRole + 1,
         ConferenceName,
         ConferenceDescription,
         ConferenceIcalUrl,
@@ -57,7 +56,7 @@ public:
     int rowCount(const QModelIndex &parent) const override;
 
     QVariantMap filter() const;
-    void setFilter(const QVariantMap& filter);
+    void setFilter(const QVariantMap &filter);
 
     ConferenceController *controller() const;
     void setController(ConferenceController *conferenceController);
@@ -71,7 +70,7 @@ private:
     QString pastOrUpcoming(const int index) const;
 
     ConferenceController *m_controller;
-    QVector<Conference*> m_conferences;
+    QVector<Conference *> m_conferences;
     QVariantMap m_filter;
 };
 #endif

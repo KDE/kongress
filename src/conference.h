@@ -48,16 +48,16 @@ public:
     QString venueOsmUrl() const;
     QString timeZoneId() const;
 
-    void setId(const QString& id);
-    void setName(const QString& name);
-    void setDescription(const QString& description);
-    void setIcalUrl(const QString& icalUrl);
-    void setDays(const QStringList& days);
-    void setVenueImageUrl(const QString& url);
-    void setVenueLatitude(const QString& latitude);
-    void setVenueLongitude(const QString& longitude);
-    void setVenueOsmUrl(const QString& url);
-    void setTimeZoneId(const QString& id);
+    void setId(const QString &id);
+    void setName(const QString &name);
+    void setDescription(const QString &description);
+    void setIcalUrl(const QString &icalUrl);
+    void setDays(const QStringList &days);
+    void setVenueImageUrl(const QString &url);
+    void setVenueLatitude(const QString &latitude);
+    void setVenueLongitude(const QString &longitude);
+    void setVenueOsmUrl(const QString &url);
+    void setTimeZoneId(const QString &id);
 
 Q_SIGNALS:
     void idChanged();

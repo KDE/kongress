@@ -36,10 +36,10 @@ class NotificationHandler;
 class CalAlarmClient : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO( "D-Bus Interface", "org.kde.kongressac" )
+    Q_CLASSINFO("D-Bus Interface", "org.kde.kongressac")
 
 public:
-    explicit CalAlarmClient(QObject* parent = nullptr);
+    explicit CalAlarmClient(QObject *parent = nullptr);
     ~CalAlarmClient() override;
 
 public Q_SLOTS:
@@ -67,7 +67,7 @@ public Q_SLOTS:
     QStringList dumpAlarms() const;
 
 private:
-    QString alarmText(const QString& uid) const;
+    QString alarmText(const QString &uid) const;
     void checkAlarms();
     void saveLastCheckTime();
     void saveCheckInterval();
@@ -76,10 +76,10 @@ private:
     void flushSuspendedToConfig();
     QStringList calendarFileList() const;
 
-    AlarmsModel* mAlarmsModel;
+    AlarmsModel *mAlarmsModel;
     QDateTime mLastChecked;
     QTimer mCheckTimer;
-    NotificationHandler* mNotificationHandler;
+    NotificationHandler *mNotificationHandler;
     int mCheckInterval;
     int mSuspendSeconds;
 };

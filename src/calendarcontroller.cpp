@@ -37,7 +37,7 @@ public:
     KConfig config;
 };
 
-CalendarController::CalendarController(QObject* parent)
+CalendarController::CalendarController(QObject *parent)
     : QObject(parent), m_storages(QMap<QString, FileStorage::Ptr>()), m_calendars(QMap<QString, MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
 {
     loadSavedConferences();
@@ -51,32 +51,29 @@ CalendarController::~CalendarController()
 
 QString CalendarController::calendars() const
 {
-   return d->config.group("general").readEntry("calendars", QString());
+    return d->config.group("general").readEntry("calendars", QString());
 }
 
-QVariantMap CalendarController::canAddCalendar(const QString& calendar)
+QVariantMap CalendarController::canAddCalendar(const QString &calendar)
 {
     QVariantMap result;
     result["success"] = QVariant(true);
     result["reason"] = QVariant(QString());
 
     QRegExp invalidChars("[\\;\\\\/<>:\\?\\*|\"\']");
-    if(calendar.contains(invalidChars))
-    {
+    if (calendar.contains(invalidChars)) {
         result["success"] = QVariant(false);
         result["reason"] = QVariant(i18n("Calendar name contains invalid characters"));
         return result;
     }
 
-    if(d->config.group("general").readEntry("calendars", QString()).isEmpty())
-    {
+    if (d->config.group("general").readEntry("calendars", QString()).isEmpty()) {
         return result;
     }
 
     QStringList calendarsList = d->config.group("general").readEntry("calendars", QString()).split(";");
 
-    if(calendarsList.contains(calendar))
-    {
+    if (calendarsList.contains(calendar)) {
         result["success"] = QVariant(false);
         result["reason"] = QVariant(i18n("Calendar already exists"));
         return result;
@@ -85,7 +82,7 @@ QVariantMap CalendarController::canAddCalendar(const QString& calendar)
     return result;
 }
 
-QVariantMap CalendarController::addCalendar(const QString & calendar)
+QVariantMap CalendarController::addCalendar(const QString &calendar)
 {
     QVariantMap result;
     result["success"] = QVariant(true);
@@ -93,15 +90,13 @@ QVariantMap CalendarController::addCalendar(const QString & calendar)
 
     QVariantMap canAddResult = canAddCalendar(calendar);
 
-    if(!(canAddResult["success"].toBool()))
-    {
+    if (!(canAddResult["success"].toBool())) {
         result["success"] = QVariant(false);
         result["reason"] = QVariant(canAddResult["reason"].toString());
         return result;
     }
 
-    if(d->config.group("general").readEntry("calendars", QString()).isEmpty())
-    {
+    if (d->config.group("general").readEntry("calendars", QString()).isEmpty()) {
         d->config.group("general").writeEntry("calendars", calendar);
         d->config.sync();
 
@@ -118,12 +113,11 @@ QVariantMap CalendarController::addCalendar(const QString & calendar)
     return result;
 }
 
-void CalendarController::removeCalendarFromConfig(const QString& calendarId)
+void CalendarController::removeCalendarFromConfig(const QString &calendarId)
 {
     d->config.reparseConfiguration();
     QStringList calendarsList = d->config.group("general").readEntry("calendars", QString()).split(";");
-    if(calendarsList.contains(calendarId))
-    {
+    if (calendarsList.contains(calendarId)) {
         qDebug() << "Removing calendar " << calendarId;
         calendarsList.removeAll(calendarId);
 
@@ -135,10 +129,9 @@ void CalendarController::removeCalendarFromConfig(const QString& calendarId)
     }
 }
 
-QString CalendarController::calendarFile(const QString& calendarId)
+QString CalendarController::calendarFile(const QString &calendarId)
 {
-    if(d->config.hasGroup(calendarId) && d->config.group(calendarId).hasKey("file"))
-    {
+    if (d->config.hasGroup(calendarId) && d->config.group(calendarId).hasKey("file")) {
         return  d->config.group(calendarId).readEntry("file");
     }
     d->config.group(calendarId).writeEntry("file", filenameToPath(calendarId));
@@ -147,7 +140,7 @@ QString CalendarController::calendarFile(const QString& calendarId)
     return filenameToPath(calendarId);
 }
 
-QString CalendarController::filenameToPath(const QString& calendarId)
+QString CalendarController::filenameToPath(const QString &calendarId)
 {
     QString basePath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir baseFolder(basePath);
@@ -156,7 +149,7 @@ QString CalendarController::filenameToPath(const QString& calendarId)
     return basePath + "/kongress_" + calendarId + ".ics";
 }
 
-MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calendarId, const QByteArray& timeZoneId)
+MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId)
 {
     auto m_fullpath = calendarFile(calendarId);
     auto tzId = QTimeZone::availableTimeZoneIds().contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
@@ -167,13 +160,11 @@ MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calen
     storage->setFileName(m_fullpath);
     QFile calendarFile(m_fullpath);
 
-    if(!calendarFile.exists())
-    {
+    if (!calendarFile.exists()) {
         qDebug() << "Creating file" << storage->save();
     }
 
-    if(storage->load())
-    {
+    if (storage->load()) {
         m_storages[calendarId] = storage;
         m_calendars[calendarId] = calendar;
     }
@@ -183,7 +174,7 @@ MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString& calen
     return calendar;
 }
 
-QVariantMap CalendarController::importCalendar(const QString& calendarId, const QString& sourcePath)
+QVariantMap CalendarController::importCalendar(const QString &calendarId, const QString &sourcePath)
 {
     QVariantMap result;
     result["success"] = QVariant(false);
@@ -193,8 +184,7 @@ QVariantMap CalendarController::importCalendar(const QString& calendarId, const 
 
     QVariantMap canCreateCheck = canCreateFile(calendarId);
 
-    if(!(canCreateCheck["success"].toBool()))
-    {
+    if (!(canCreateCheck["success"].toBool())) {
         result["reason"] = QVariant(canCreateCheck["reason"].toString());
 
         return result;
@@ -202,8 +192,7 @@ QVariantMap CalendarController::importCalendar(const QString& calendarId, const 
 
     storage->setFileName(sourcePath);
 
-    if(!(storage->load()))
-    {
+    if (!(storage->load())) {
         result["reason"] = QVariant(QString(i18n("The calendar file is not valid")));
 
         return result;
@@ -211,8 +200,7 @@ QVariantMap CalendarController::importCalendar(const QString& calendarId, const 
 
     storage->setFileName(canCreateCheck["targetPath"].toString());
 
-    if(!(storage->save()))
-    {
+    if (!(storage->save())) {
         result["reason"] = QVariant(QString(i18n("The calendar file cannot be saved")));
 
         return result;
@@ -227,7 +215,7 @@ QVariantMap CalendarController::importCalendar(const QString& calendarId, const 
     return result;
 }
 
-void CalendarController::deleteCalendar(const QString& calendarId)
+void CalendarController::deleteCalendar(const QString &calendarId)
 {
     qDebug() << "Deleting calendar " << calendarId;
 
@@ -235,8 +223,7 @@ void CalendarController::deleteCalendar(const QString& calendarId)
 
     QFile calendarFile(fileName);
 
-    if(calendarFile.exists())
-    {
+    if (calendarFile.exists()) {
         calendarFile.remove();
     }
 
@@ -248,10 +235,9 @@ void CalendarController::deleteCalendar(const QString& calendarId)
     Q_EMIT calendarsChanged();
 }
 
-bool CalendarController::save(const QString& calendarId)
+bool CalendarController::save(const QString &calendarId)
 {
-    if(m_storages[calendarId]->save())
-    {
+    if (m_storages[calendarId]->save()) {
         Q_EMIT calendarsChanged();
 
         return true;
@@ -260,7 +246,7 @@ bool CalendarController::save(const QString& calendarId)
     return false;
 }
 
-QVariantMap CalendarController::canCreateFile(const QString& calendarId)
+QVariantMap CalendarController::canCreateFile(const QString &calendarId)
 {
     QVariantMap result;
     result["success"] = QVariant(true);
@@ -269,8 +255,7 @@ QVariantMap CalendarController::canCreateFile(const QString& calendarId)
     QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/kongress_" + calendarId + ".ics" ;
     QFile calendarFile(targetPath);
 
-    if(calendarFile.exists())
-    {
+    if (calendarFile.exists()) {
         result["success"] = QVariant(false);
         result["reason"] = QVariant(QString(i18n("A calendar with the same name already exists")));
 
@@ -282,7 +267,7 @@ QVariantMap CalendarController::canCreateFile(const QString& calendarId)
     return result;
 }
 
-void CalendarController::createCalendarFromUrl(const QString& calendarId, const QUrl& url, const QByteArray& timeZoneId)
+void CalendarController::createCalendarFromUrl(const QString &calendarId, const QUrl &url, const QByteArray &timeZoneId)
 {
     QNetworkRequest request(url);
     m_downloadManager->calendarId = calendarId;
@@ -294,16 +279,12 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
 {
     auto url = reply->url();
 
-    if(reply->error())
-    {
+    if (reply->error()) {
         qDebug() << "Download failed";
-    }
-    else
-    {
+    } else {
         auto filePath = calendarFile(m_downloadManager->calendarId);
 
-        if(saveToDisk(filePath, reply))
-        {
+        if (saveToDisk(filePath, reply)) {
             qDebug() << QString("Download of %1 succeeded (saved to %2)").arg(url.toEncoded().constData()).arg(qPrintable(filePath));
 
             auto availableTimezones = QTimeZone::availableTimeZoneIds();
@@ -311,12 +292,11 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
             addTzIdToConfig(m_downloadManager->calendarId, tz);
 
             MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
-            qDebug() << "Memory calendar " << m_downloadManager->calendarId <<" (online) with timezone " << tz << " has been created";
+            qDebug() << "Memory calendar " << m_downloadManager->calendarId << " (online) with timezone " << tz << " has been created";
             FileStorage::Ptr storage(new FileStorage(calendar));
             storage->setFileName(filePath);
 
-            if(storage->load())
-            {
+            if (storage->load()) {
                 m_storages[m_downloadManager->calendarId] = storage;
                 m_calendars[m_downloadManager->calendarId] = calendar;
             }
@@ -334,7 +314,7 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
 bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
 {
     QFile file(filename);
-    if(!file.open(QIODevice::WriteOnly)) {
+    if (!file.open(QIODevice::WriteOnly)) {
         qDebug() << QString("Could not open %1 for writing: %2").arg(qPrintable(filename)).arg(qPrintable(file.errorString()));
         return false;
     }
@@ -345,20 +325,18 @@ bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
     return true;
 }
 
-MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString& calendarId) const
+MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString &calendarId) const
 {
-    if(m_calendars.contains(calendarId))
-    {
+    if (m_calendars.contains(calendarId)) {
         return m_calendars[calendarId];
     }
 
     return nullptr;
 }
 
-void CalendarController::addConferenceToConfig(const QString& calendarId)
+void CalendarController::addConferenceToConfig(const QString &calendarId)
 {
-    if(d->config.group("general").readEntry("conferenceCalendars", QString()).isEmpty())
-    {
+    if (d->config.group("general").readEntry("conferenceCalendars", QString()).isEmpty()) {
         d->config.group("general").writeEntry("conferenceCalendars", calendarId);
         d->config.sync();
 
@@ -366,8 +344,7 @@ void CalendarController::addConferenceToConfig(const QString& calendarId)
     }
 
     QStringList calendarsList = d->config.group("general").readEntry("conferenceCalendars", QString()).split(";");
-    if(!calendarsList.contains(calendarId))
-    {
+    if (!calendarsList.contains(calendarId)) {
         calendarsList.append(calendarId);
         d->config.group("general").writeEntry("conferenceCalendars", calendarsList.join(";"));
         d->config.sync();
@@ -377,42 +354,37 @@ void CalendarController::addConferenceToConfig(const QString& calendarId)
 void CalendarController::loadSavedConferences()
 {
     auto onlineCalendarIds = d->config.group("general").readEntry("conferenceCalendars", QString());
-    if(onlineCalendarIds.isEmpty())
-    {
+    if (onlineCalendarIds.isEmpty()) {
         return;
     }
 
     QStringList calendarsList = onlineCalendarIds.split(";");
 
-    for(const auto& calendarId : calendarsList)
-    {
-       auto filePath = d->config.group(calendarId).readEntry("file", QString());
-       QFile calendarFile(filePath);
+    for (const auto &calendarId : calendarsList) {
+        auto filePath = d->config.group(calendarId).readEntry("file", QString());
+        QFile calendarFile(filePath);
 
-       if(!calendarFile.exists())
-       {
-           continue;
-       }
+        if (!calendarFile.exists()) {
+            continue;
+        }
 
-       auto tz = tzIdFromConfig(calendarId);
-       MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
-       FileStorage::Ptr storage(new FileStorage(calendar));
-       storage->setFileName(filePath);
+        auto tz = tzIdFromConfig(calendarId);
+        MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
+        FileStorage::Ptr storage(new FileStorage(calendar));
+        storage->setFileName(filePath);
 
-       if(storage->load())
-       {
-           m_storages[calendarId] = storage;
-           m_calendars[calendarId] = calendar;
+        if (storage->load()) {
+            m_storages[calendarId] = storage;
+            m_calendars[calendarId] = calendar;
 
-           qDebug() << "Calendar " << calendarId << " loaded succesfully";
-       }
+            qDebug() << "Calendar " << calendarId << " loaded succesfully";
+        }
     }
 }
 
-void CalendarController::addTzIdToConfig(const QString& calendarId, const QByteArray& timeZoneId)
+void CalendarController::addTzIdToConfig(const QString &calendarId, const QByteArray &timeZoneId)
 {
-    if(!(d->config.hasGroup(calendarId)))
-    {
+    if (!(d->config.hasGroup(calendarId))) {
         return;
     }
 
@@ -420,15 +392,13 @@ void CalendarController::addTzIdToConfig(const QString& calendarId, const QByteA
     d->config.sync();
 }
 
-QByteArray CalendarController::tzIdFromConfig(const QString& calendarId) const
+QByteArray CalendarController::tzIdFromConfig(const QString &calendarId) const
 {
-    if(!(d->config.hasGroup(calendarId)))
-    {
+    if (!(d->config.hasGroup(calendarId))) {
         return QByteArray();
     }
 
-    if(d->config.hasGroup(calendarId) && !(d->config.group(calendarId).hasKey("timeZoneId")))
-    {
+    if (d->config.hasGroup(calendarId) && !(d->config.group(calendarId).hasKey("timeZoneId"))) {
         return QByteArray();
     }
 

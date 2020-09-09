@@ -25,8 +25,8 @@
 
 using namespace KCalendarCore;
 
-LocalCalendar::LocalCalendar(QObject* parent)
-: QObject(parent), m_calendarInfo(QVariantMap()), m_calendar(nullptr), m_cal_controller(nullptr)
+LocalCalendar::LocalCalendar(QObject *parent)
+    : QObject(parent), m_calendarInfo(QVariantMap()), m_calendar(nullptr), m_cal_controller(nullptr)
 {
 }
 
@@ -37,10 +37,9 @@ MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
     return m_calendar;
 }
 
-void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
+void LocalCalendar::setCalendarInfo(const QVariantMap &calendarInfoMap)
 {
-    if(!calendarInfoMap.contains("id") || calendarInfoMap["id"].toString().isEmpty())
-    {
+    if (!calendarInfoMap.contains("id") || calendarInfoMap["id"].toString().isEmpty()) {
         qDebug() << "No sufficient calendar information provided";
 
         return;
@@ -49,8 +48,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
     m_calendarInfo["id"] = calendarInfoMap["id"].toString();
     m_calendarInfo["timeZoneId"] = calendarInfoMap.contains("timeZoneId") && !(calendarInfoMap["timeZoneId"].toString().isEmpty()) ? calendarInfoMap["timeZoneId"].toString() : QTimeZone::systemTimeZoneId();
 
-    if(calendarInfoMap.contains("url"))
-    {
+    if (calendarInfoMap.contains("url")) {
         qDebug() << "Creating online calendar: " <<  m_calendarInfo["id"].toString() ;
 
         m_calendarInfo["url"] = calendarInfoMap["url"].toString();
@@ -60,9 +58,7 @@ void LocalCalendar::setCalendarInfo(const QVariantMap& calendarInfoMap)
 
         //Even if a local copy exists, get a fresh copy of the calendar
         loadOnlineCalendar();
-    }
-    else
-    {
+    } else {
         qDebug() << "Creating local calendar: " << m_calendarInfo["id"].toString() ;
 
         m_calendar = m_cal_controller->createLocalCalendar(m_calendarInfo["id"].toString(), m_calendarInfo["timeZoneId"].toByteArray());
@@ -81,20 +77,18 @@ QVariantMap LocalCalendar::calendarInfo() const
 
 QStringList LocalCalendar::categories() const
 {
-    if(m_calendar)
-    {
+    if (m_calendar) {
         return m_calendar->categories();
     }
 
     return QStringList();
 }
 
-void LocalCalendar::onlineCalendarReady(const QString& calendarId)
+void LocalCalendar::onlineCalendarReady(const QString &calendarId)
 {
     qDebug() << "Calendar " << calendarId << " is ready";
 
-    if(calendarId == m_calendarInfo["id"].toString())
-    {
+    if (calendarId == m_calendarInfo["id"].toString()) {
         m_calendar = m_cal_controller->memoryCalendar(calendarId);
         m_calendarInfo["lastUpdated"] = QDateTime::currentDateTime();
 
@@ -107,8 +101,7 @@ void LocalCalendar::onlineCalendarReady(const QString& calendarId)
 
 QString LocalCalendar::calendarId() const
 {
-    if(m_calendarInfo.contains("id"))
-    {
+    if (m_calendarInfo.contains("id")) {
         return m_calendarInfo["id"].toString();
     }
 
@@ -117,21 +110,18 @@ QString LocalCalendar::calendarId() const
 
 QString LocalCalendar::loadDateStr() const
 {
-    if(!(m_calendarInfo.contains("lastUpdated")) || !(m_calendarInfo["lastUpdated"].canConvert(QMetaType::QDateTime)) || !(m_calendarInfo["lastUpdated"].toDateTime().isValid()))
-    {
+    if (!(m_calendarInfo.contains("lastUpdated")) || !(m_calendarInfo["lastUpdated"].canConvert(QMetaType::QDateTime)) || !(m_calendarInfo["lastUpdated"].toDateTime().isValid())) {
         return QString();
     }
 
     auto todayDate = QDate::currentDate();
     auto loadDate = m_calendarInfo["lastUpdated"].toDate();
 
-    if(loadDate == todayDate)
-    {
+    if (loadDate == todayDate) {
         return i18n("today at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
     }
 
-    if(loadDate.addDays(1) == todayDate)
-    {
+    if (loadDate.addDays(1) == todayDate) {
         return i18n("yesterday at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
     }
 
@@ -140,8 +130,7 @@ QString LocalCalendar::loadDateStr() const
 
 void LocalCalendar::loadOnlineCalendar()
 {
-    if(!(m_calendarInfo.contains("id") || !(m_calendarInfo.contains("url"))))
-    {
+    if (!(m_calendarInfo.contains("id") || !(m_calendarInfo.contains("url")))) {
         return;
     }
 

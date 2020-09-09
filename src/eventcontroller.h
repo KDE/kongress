@@ -30,25 +30,24 @@ class EventController : public QObject
     Q_OBJECT
 
 public:
-    enum EventCheck
-    {
+    enum EventCheck {
         NotExistsNotOverlapping = -1,
         Exists,
         NotExistsButOverlaps,
         NoCalendarExists
     };
 
-    explicit EventController(QObject* parent = nullptr);
+    explicit EventController(QObject *parent = nullptr);
     ~EventController() override;
 
-    CalendarController* calendarController();
-    void setCalendarController(CalendarController* const controller);
+    CalendarController *calendarController();
+    void setCalendarController(CalendarController *const controller);
 
-    Q_INVOKABLE void remove(LocalCalendar* calendar, const QVariantMap &event);
-    Q_INVOKABLE QVariantMap addEdit(LocalCalendar* calendar, const QVariantMap &event);
+    Q_INVOKABLE void remove(LocalCalendar *calendar, const QVariantMap &event);
+    Q_INVOKABLE QVariantMap addEdit(LocalCalendar *calendar, const QVariantMap &event);
 
 private:
-    CalendarController* m_cal_controller;
+    CalendarController *m_cal_controller;
     /**|
      * @brief Check if an event is already registered or overlapping events exist
      *
@@ -66,7 +65,7 @@ private:
      *   If NotExistsButOverlaps, a comma separated list of their subjects
      *   If NoCalendarExists, let the user know that an error has occured
      */
-    QVariantMap eventCheck(LocalCalendar* calendar, const QVariantMap &event);
+    QVariantMap eventCheck(LocalCalendar *calendar, const QVariantMap &event);
 
 };
 #endif

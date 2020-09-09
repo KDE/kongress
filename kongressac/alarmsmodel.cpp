@@ -26,7 +26,7 @@
 #include <QFile>
 #include <QDebug>
 
-AlarmsModel::AlarmsModel(QObject* parent) : QAbstractListModel(parent), mMemoryCalendars(QVector<MemoryCalendar::Ptr>()), mFileStorages(QVector<FileStorage::Ptr>()), mAlarms(Alarm::List()), mCalendarFiles(QStringList()), mParams(QHash<QString, QVariant>())
+AlarmsModel::AlarmsModel(QObject *parent) : QAbstractListModel(parent), mMemoryCalendars(QVector<MemoryCalendar::Ptr>()), mFileStorages(QVector<FileStorage::Ptr>()), mAlarms(Alarm::List()), mCalendarFiles(QStringList()), mParams(QHash<QString, QVariant>())
 {
     connect(this, &AlarmsModel::paramsChanged, this, &AlarmsModel::loadAlarms);
 }
@@ -44,34 +44,31 @@ QHash<int, QByteArray> AlarmsModel::roleNames() const
     return roles;
 }
 
-QVariant AlarmsModel::data(const QModelIndex& index, int role) const
+QVariant AlarmsModel::data(const QModelIndex &index, int role) const
 {
-    if(!index.isValid())
-    {
+    if (!index.isValid()) {
         return QVariant();
     }
 
-    switch(role)
-    {
-        case Qt::DisplayRole:
-            return mAlarms.at(index.row())->parentUid();
-        case Uid:
-            return mAlarms.at(index.row())->parentUid();
-        case Time:
-            return mAlarms.at(index.row())->time();
-        case Text:
-            return mAlarms.at(index.row())->text();
-        case IncidenceStartDt:
-            return parentStartDt(index.row());
+    switch (role) {
+    case Qt::DisplayRole:
+        return mAlarms.at(index.row())->parentUid();
+    case Uid:
+        return mAlarms.at(index.row())->parentUid();
+    case Time:
+        return mAlarms.at(index.row())->time();
+    case Text:
+        return mAlarms.at(index.row())->text();
+    case IncidenceStartDt:
+        return parentStartDt(index.row());
     }
 
     return QVariant();
 }
 
-int AlarmsModel::rowCount(const QModelIndex& parent) const
+int AlarmsModel::rowCount(const QModelIndex &parent) const
 {
-    if(parent.isValid())
-    {
+    if (parent.isValid()) {
         return 0;
     }
 
@@ -88,26 +85,21 @@ void AlarmsModel::loadAlarms()
 
     int cnt = 0;
     QVector<MemoryCalendar::Ptr>::const_iterator itr = mMemoryCalendars.constBegin();
-    while(itr != mMemoryCalendars.constEnd())
-    {
+    while (itr != mMemoryCalendars.constEnd()) {
         QDateTime from = mPeriod["from"].toDateTime();
         QDateTime to = mPeriod["to"].toDateTime();
         qDebug() << "loadAlarms:\tLooking for alarms in calendar #" << cnt << ", from" << from.toString("dd.MM.yyyy hh:mm:ss") << "to" << to.toString("dd.MM.yyyy hh:mm:ss");
 
         Alarm::List calendarAlarms;
 
-        if(from.isValid() && to.isValid())
-        {
+        if (from.isValid() && to.isValid()) {
             calendarAlarms = (*itr)->alarms(from, to, true);
-        }
-        else if(!(from.isValid()) && to.isValid())
-        {
+        } else if (!(from.isValid()) && to.isValid()) {
             calendarAlarms = (*itr)->alarmsTo(to);
         }
 
         qDebug() << "loadAlarms:\t" << calendarAlarms.count() << "alarms found in calendar #" << cnt;
-        if(!(calendarAlarms.empty()))
-        {
+        if (!(calendarAlarms.empty())) {
             mAlarms.append(calendarAlarms);
         }
 
@@ -126,14 +118,12 @@ void AlarmsModel::setCalendars()
 
     qDebug() << "\nsetCalendars";
     QStringList::const_iterator itr = mCalendarFiles.constBegin();
-    while(itr != mCalendarFiles.constEnd())
-    {
+    while (itr != mCalendarFiles.constEnd()) {
         MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
         FileStorage::Ptr storage(new FileStorage(calendar));
         storage->setFileName(*itr);
-        if(!(storage->fileName().isNull()))
-        {
-            qDebug() << "setCalendars:\t"<< "Appending calendar" << *itr;
+        if (!(storage->fileName().isNull())) {
+            qDebug() << "setCalendars:\t" << "Appending calendar" << *itr;
             mFileStorages.append(storage);
             mMemoryCalendars.append(calendar);
         }
@@ -141,13 +131,12 @@ void AlarmsModel::setCalendars()
     }
 }
 
-
 QHash<QString, QVariant> AlarmsModel::params() const
 {
     return mParams;
 }
 
-void AlarmsModel::setParams(const QHash<QString, QVariant>& parameters)
+void AlarmsModel::setParams(const QHash<QString, QVariant> &parameters)
 {
     mParams = parameters;
 
@@ -164,15 +153,12 @@ void AlarmsModel::setParams(const QHash<QString, QVariant>& parameters)
 void AlarmsModel::openLoadStorages()
 {
     QVector<FileStorage::Ptr>::const_iterator itr = mFileStorages.constBegin();
-    while(itr != mFileStorages.constEnd())
-    {
-        if((*itr)->open())
-        {
+    while (itr != mFileStorages.constEnd()) {
+        if ((*itr)->open()) {
             qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "opened";
         }
 
-        if((*itr)->load())
-        {
+        if ((*itr)->load()) {
             qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "loaded";
         }
         ++itr;
@@ -182,32 +168,27 @@ void AlarmsModel::openLoadStorages()
 void AlarmsModel::closeStorages()
 {
     QVector<FileStorage::Ptr>::const_iterator itr = mFileStorages.constBegin();
-    while(itr != mFileStorages.constEnd())
-    {
-        if((*itr)->close())
-        {
+    while (itr != mFileStorages.constEnd()) {
+        if ((*itr)->close()) {
             qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "closed";
         }
         ++itr;
     }
 }
 
-
 QDateTime AlarmsModel::parentStartDt(const int idx) const
 {
     Alarm::Ptr alarm = mAlarms.at(idx);
     Duration offsetDuration;
     QDateTime alarmTime = mAlarms.at(idx)->time();
-    if(alarm->hasStartOffset())
-    {
-         offsetDuration = alarm->startOffset();
+    if (alarm->hasStartOffset()) {
+        offsetDuration = alarm->startOffset();
     }
 
-    if(!(offsetDuration.isNull()))
-    {
+    if (!(offsetDuration.isNull())) {
         int secondsFromStart = offsetDuration.asSeconds();
 
-        return alarmTime.addSecs(-1*secondsFromStart);
+        return alarmTime.addSecs(-1 * secondsFromStart);
     }
 
     return alarmTime;

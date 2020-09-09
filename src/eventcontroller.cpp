@@ -24,11 +24,11 @@
 #include <KLocalizedString>
 #include <QDebug>
 
-EventController::EventController(QObject* parent) : QObject(parent), m_cal_controller(nullptr) {}
+EventController::EventController(QObject *parent) : QObject(parent), m_cal_controller(nullptr) {}
 
 EventController::~EventController() = default;
 
-CalendarController * EventController::calendarController()
+CalendarController *EventController::calendarController()
 {
     return m_cal_controller;
 }
@@ -40,8 +40,7 @@ void EventController::setCalendarController(CalendarController *const controller
 
 void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventData)
 {
-    if(calendar == nullptr)
-    {
+    if (calendar == nullptr) {
         qDebug() << "There is no calendar to delete event from";
 
         return;
@@ -55,8 +54,7 @@ void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventDa
     memoryCalendar->deleteEvent(event);
 
     bool deleted = false;
-    if(m_cal_controller != nullptr)
-    {
+    if (m_cal_controller != nullptr) {
         deleted = m_cal_controller->save(calendar->calendarId());
         Q_EMIT calendar->eventsChanged();
     }
@@ -66,15 +64,13 @@ void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventDa
 
 QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventData)
 {
-    if(calendar == nullptr)
-    {
+    if (calendar == nullptr) {
         return { {"status", NoCalendarExists}, {"message", i18n("Error during event creation") } };
     }
 
     auto eventCheckResult = eventCheck(calendar, eventData);
 
-    if(eventCheckResult["result"].toInt() == Exists)
-    {
+    if (eventCheckResult["result"].toInt() == Exists) {
         return { {"status", NoCalendarExists}, {"message", i18n("Already in favorites") } };
     }
 
@@ -85,8 +81,7 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
     QString uid = eventData["uid"].toString();
     Event::Ptr event = memoryCalendar->event(uid);
 
-    if (event == nullptr)
-    {
+    if (event == nullptr) {
         event = Event::Ptr(new Event());
     }
 
@@ -127,8 +122,7 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
 
     bool merged = false;
 
-    if(m_cal_controller != nullptr)
-    {
+    if (m_cal_controller != nullptr) {
         merged = m_cal_controller->save(calendar->calendarId());
         Q_EMIT calendar->eventsChanged();
     }
@@ -142,7 +136,7 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
 
 }
 
-QVariantMap EventController::eventCheck(LocalCalendar* calendar, const QVariantMap &event)
+QVariantMap EventController::eventCheck(LocalCalendar *calendar, const QVariantMap &event)
 {
     QVariantMap response = {
         { "result", QVariant(NotExistsNotOverlapping) },
@@ -157,29 +151,24 @@ QVariantMap EventController::eventCheck(LocalCalendar* calendar, const QVariantM
     auto eventUid = event["uid"].toString();
 
     // If the event-to-check has no valid start or end date, assume that there is no overlap
-    if(!(eventStart.isValid()) || !(eventEnd.isValid()))
-    {
+    if (!(eventStart.isValid()) || !(eventEnd.isValid())) {
         return response;
     }
 
     auto existingEvents = memoryCalendar->rawEventsForDate(eventStart.date(), memoryCalendar->timeZone());
 
-    for (const auto& e : existingEvents)
-    {
-        if( (eventStart < e->dtEnd()) && (eventEnd > e->dtStart()) )
-        {
+    for (const auto &e : existingEvents) {
+        if ((eventStart < e->dtEnd()) && (eventEnd > e->dtStart())) {
             overlappingEvents.append(e->summary());
         }
 
-        if(!(eventUid.isEmpty()) && e->uid() == eventUid)
-        {
+        if (!(eventUid.isEmpty()) && e->uid() == eventUid) {
             response["result"] = QVariant(Exists);
             return response;
         }
     }
 
-    if(!(overlappingEvents.isEmpty()))
-    {
+    if (!(overlappingEvents.isEmpty())) {
         response["result"] = QVariant(NotExistsButOverlaps);
         response["events"] = overlappingEvents.join("\n");
     }

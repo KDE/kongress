@@ -68,91 +68,81 @@ QString Conference::timeZoneId() const
     return m_tz_id;
 }
 
-void Conference::setId(const QString& id)
+void Conference::setId(const QString &id)
 {
-    if(id != m_id)
-    {
+    if (id != m_id) {
         m_id = id;
         Q_EMIT idChanged();
     }
 }
 
-void Conference::setName(const QString& name)
+void Conference::setName(const QString &name)
 {
-    if(name != m_name)
-    {
+    if (name != m_name) {
         m_name = name;
         Q_EMIT nameChanged();
     }
 }
 
-void Conference::setDescription(const QString& description)
+void Conference::setDescription(const QString &description)
 {
-    if(description != m_description)
-    {
+    if (description != m_description) {
         m_description = description;
         Q_EMIT descriptionChanged();
     }
 }
 
-void Conference::setDays(const QStringList& days)
+void Conference::setDays(const QStringList &days)
 {
-    if(days != m_days)
-    {
+    if (days != m_days) {
         m_days = days;
         Q_EMIT daysChanged();
     }
 }
 
-void Conference::setIcalUrl(const QString& icalUrl)
+void Conference::setIcalUrl(const QString &icalUrl)
 {
-    if(icalUrl != m_ical_url)
-    {
+    if (icalUrl != m_ical_url) {
         m_ical_url = icalUrl;
         Q_EMIT icalUrlChanged();
     }
 }
 
-void Conference::setVenueImageUrl(const QString& url)
+void Conference::setVenueImageUrl(const QString &url)
 {
-    if(url != m_venue_image_url)
-    {
+    if (url != m_venue_image_url) {
         m_venue_image_url = url;
         Q_EMIT venueImageUrlChanged();
     }
 }
 
-void Conference::setVenueLongitude(const QString& longitude)
+void Conference::setVenueLongitude(const QString &longitude)
 {
-    if(longitude != m_venue_longitude)
-    {
+    if (longitude != m_venue_longitude) {
         m_venue_longitude = longitude;
         Q_EMIT venueLongitudeChanged();
     }
 }
 
-void Conference::setVenueLatitude(const QString& latitude)
+void Conference::setVenueLatitude(const QString &latitude)
 {
-    if(latitude != m_venue_latitude)
-    {
+    if (latitude != m_venue_latitude) {
         m_venue_latitude = latitude;
         Q_EMIT venueLatitudeChanged();
     }
 }
 
-void Conference::setVenueOsmUrl(const QString& url)
+void Conference::setVenueOsmUrl(const QString &url)
 {
-    if(url != m_venue_osm_url)
-    {
+    if (url != m_venue_osm_url) {
         m_venue_osm_url = url;
         Q_EMIT venueOsmUrlChanged();
     }
 }
 
-void Conference::setTimeZoneId(const QString& id)
+void Conference::setTimeZoneId(const QString &id)
 {
-    if(id != m_tz_id)
-    {
+    if (id != m_tz_id) {
         m_tz_id = id;
         Q_EMIT timeZoneIdChanged();
     }

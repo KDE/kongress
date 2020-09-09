@@ -31,17 +31,16 @@ class EventModel : public QAbstractListModel
     Q_OBJECT
 
     Q_PROPERTY(QDate filterdt READ filterdt WRITE setFilterdt NOTIFY filterdtChanged)
-    Q_PROPERTY(LocalCalendar* calendar READ calendar WRITE setCalendar NOTIFY calendarChanged)
+    Q_PROPERTY(LocalCalendar *calendar READ calendar WRITE setCalendar NOTIFY calendarChanged)
     Q_PROPERTY(QString eventCategory READ eventCategory WRITE setEventCategory NOTIFY eventCategoryChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
 
 public:
-    explicit EventModel(QObject* parent = nullptr);
+    explicit EventModel(QObject *parent = nullptr);
     ~EventModel() override;
 
-    enum Roles
-    {
-        Uid = Qt::UserRole+1,
+    enum Roles {
+        Uid = Qt::UserRole + 1,
         LastModified,
         ScheduleStartDt,
         EventStartDt,
@@ -77,13 +76,13 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     QDate filterdt() const;
-    void setFilterdt(const QDate & filterDate);
+    void setFilterdt(const QDate &filterDate);
 
-    LocalCalendar* calendar() const;
-    void setCalendar(LocalCalendar* const calendarPtr);
+    LocalCalendar *calendar() const;
+    void setCalendar(LocalCalendar *const calendarPtr);
 
     QString eventCategory() const;
-    void setEventCategory(const QString & category);
+    void setEventCategory(const QString &category);
 
 public Q_SLOTS:
     void loadEvents();
@@ -124,7 +123,7 @@ private:
     Event::List m_events;
     QDate m_filterdt;
     QString m_category;
-    LocalCalendar* m_local_calendar;
+    LocalCalendar *m_local_calendar;
 };
 
 #endif //EVENTMODEL_H

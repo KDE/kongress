@@ -30,7 +30,7 @@ public:
     KConfig config;
 };
 
-SettingsController::SettingsController(QObject* parent)
+SettingsController::SettingsController(QObject *parent)
     : QObject(parent), d(new Private)
 {
 }
