@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file alias="Main.qml">contents/ui/Main.qml</file>
+        <file alias="GlobalDrawer.qml">contents/ui/GlobalDrawer.qml</file>
         <file alias="ScheduleView.qml">contents/ui/ScheduleView.qml</file>
         <file alias="FavoritesView.qml">contents/ui/FavoritesView.qml</file>
         <file alias="MapView.qml">contents/ui/MapView.qml</file>
