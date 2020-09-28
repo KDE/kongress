@@ -2,6 +2,7 @@
 Name=Kongress Reminder Client
 Name[ca]=Client de recordatori Kongress
 Name[ca@valencia]=Client de recordatori Kongress
+Name[en_GB]=Kongress Reminder Client
 Name[es]=Cliente de recordatorios de Kongress
 Name[et]=Kongressi meeldetuletuste klient
 Name[fr]=Client de rappel Kongress
@@ -23,6 +24,7 @@ Categories=Qt;KDE;
 GenericName=Kongress Reminder Client
 GenericName[ca]=Client de recordatori Kongress
 GenericName[ca@valencia]=Client de recordatori Kongress
+GenericName[en_GB]=Kongress Reminder Client
 GenericName[es]=Cliente de recordatorios de Kongress
 GenericName[et]=Kongressi meeldetuletuste klient
 GenericName[fr]=Client de rappel Kongress
