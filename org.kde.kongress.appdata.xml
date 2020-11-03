@@ -25,8 +25,8 @@
   <name xml:lang="x-test">xxKongressxx</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>KDE Conference companion application</summary>
-  <summary xml:lang="ca">Aplicació de companyia per als congressos del KDE</summary>
-  <summary xml:lang="ca-valencia">Aplicació de companyia per als congressos del KDE</summary>
+  <summary xml:lang="ca">Aplicació auxiliar per als congressos del KDE</summary>
+  <summary xml:lang="ca-valencia">Aplicació auxiliar per als congressos del KDE</summary>
   <summary xml:lang="en-GB">KDE Conference companion application</summary>
   <summary xml:lang="es">Aplicación complementaria KDE Conference</summary>
   <summary xml:lang="et">KDE konverentsiabiline</summary>
@@ -43,8 +43,8 @@
   <summary xml:lang="x-test">xxKDE Conference companion applicationxx</summary>
   <description>
     <p>KDE Conference is companion application for conferences made by KDE</p>
-    <p xml:lang="ca">Congressos del KDE és una aplicació de companyia per als congressos del KDE</p>
-    <p xml:lang="ca-valencia">Congressos del KDE és una aplicació de companyia per als congressos del KDE</p>
+    <p xml:lang="ca">Congressos del KDE és una aplicació auxiliar per als congressos del KDE</p>
+    <p xml:lang="ca-valencia">Congressos del KDE és una aplicació auxiliar per als congressos del KDE</p>
     <p xml:lang="en-GB">KDE Conference is companion application for conferences made by KDE</p>
     <p xml:lang="es">KDE Conference es una aplicación complementaria para conferencias creada por KDE</p>
     <p xml:lang="et">KDE Conference on KDE valmistatud konverentsidel osalemist hõlbustav rakendus</p>
