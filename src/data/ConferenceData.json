@@ -1,5 +1,29 @@
 [
     {
+        "id": "las2020",
+        "name": "Linux App Summit (LAS)",
+        "description": "The Linux App Summit (LAS) is designed to accelerate the growth of the Linux application ecosystem by bringing together everyone involved in creating a great Linux application user experience.",
+        "days": ["2020-11-12", "2020-11-13", "2020-11-14"],
+        "icalUrl": "https://conf.linuxappsummit.org/event/1/event.ics?detail=contributions",
+        "venueImageUrl": "",
+        "venueLatitude": "",
+        "venueLongitude": "",
+        "venueOsmUrl": "",
+        "timeZoneId": "UTC"
+    },
+    {
+        "id": "sfscon2020",
+        "name": "SFSCON 2020",
+        "description": "The South Tyrol Free Software Conference (SFScon) is an event of international stature that attracts more and more visitors every year from Northern Italy, Austria and Switzerland.",
+        "days": ["2020-11-13", "2020-11-14"],
+        "icalUrl": "https://www.sfscon.it/?calendar=2020",
+        "venueImageUrl": "",
+        "venueLatitude": "",
+        "venueLongitude": "",
+        "venueOsmUrl": "",
+        "timeZoneId": "Europe/Rome"
+    },
+    {
 
         "id": "akademy2020",
         "name": "Akademy 2020",
