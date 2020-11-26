@@ -23,8 +23,6 @@
 #include <QMetaType>
 #include <KLocalizedString>
 
-using namespace KCalendarCore;
-
 LocalCalendar::LocalCalendar(QObject *parent)
     : QObject(parent), m_calendarInfo(QVariantMap()), m_calendar(nullptr), m_cal_controller(nullptr)
 {
@@ -32,7 +30,7 @@ LocalCalendar::LocalCalendar(QObject *parent)
 
 LocalCalendar::~LocalCalendar() = default;
 
-MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
+KCalendarCore::MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 {
     return m_calendar;
 }

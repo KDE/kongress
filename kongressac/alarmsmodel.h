@@ -24,12 +24,10 @@
 #define ALARMSMODEL_H
 
 #include <QAbstractListModel>
+#include <QVariantMap>
 #include <KCalendarCore/Alarm>
 #include <KCalendarCore/MemoryCalendar>
 #include <KCalendarCore/FileStorage>
-#include <QVariantMap>
-
-using namespace KCalendarCore;
 
 /**
  * @brief Model that serves the alarms found in a set of calendar files for a specific time period, as set in the model input parameters
@@ -80,9 +78,9 @@ private:
     QDateTime parentStartDt(const int idx) const;
 
     QVariantMap mPeriod;
-    QVector<MemoryCalendar::Ptr> mMemoryCalendars;
-    QVector<FileStorage::Ptr> mFileStorages;
-    Alarm::List mAlarms;
+    QVector<KCalendarCore::MemoryCalendar::Ptr> mMemoryCalendars;
+    QVector<KCalendarCore::FileStorage::Ptr> mFileStorages;
+    KCalendarCore::Alarm::List mAlarms;
     QStringList mCalendarFiles;
     QHash<QString, QVariant> mParams;
 

@@ -22,11 +22,9 @@
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
 
-using namespace KCalendarCore;
-
 EventModel::EventModel(QObject *parent) :
     QAbstractListModel(parent),
-    m_events(Event::List()),
+    m_events(KCalendarCore::Event::List()),
     m_filterdt(QDate()),
     m_category(QString()),
     m_local_calendar(nullptr)
@@ -247,18 +245,18 @@ void EventModel::loadEvents()
     m_events.clear();
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid()) {
-        m_events = m_local_calendar->memorycalendar()->rawEventsForDate(m_filterdt, m_local_calendar->memorycalendar()->timeZone(), EventSortStartDate, SortDirectionAscending);
+        m_events = m_local_calendar->memorycalendar()->rawEventsForDate(m_filterdt, m_local_calendar->memorycalendar()->timeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
     }
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isNull()) {
-        m_events =  m_local_calendar->memorycalendar()->rawEvents(EventSortStartDate, SortDirectionAscending);
+        m_events = m_local_calendar->memorycalendar()->rawEvents(KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
     }
 
     if (m_local_calendar != nullptr && !(m_category.isEmpty())) {
         QStringList categories(m_category);
-        CalFilter *filter = new CalFilter();
+        KCalendarCore::CalFilter *filter = new KCalendarCore::CalFilter();
         filter->setCategoryList(categories);
-        filter->setCriteria(CalFilter::ShowCategories);
+        filter->setCriteria(KCalendarCore::CalFilter::ShowCategories);
         filter->apply(&m_events);
     }
 
@@ -289,7 +287,7 @@ int EventModel::repeatStopAfter(const int idx) const
 ushort EventModel::repeatPeriodType(const int idx) const
 {
     if (!(m_events.at(idx)->recurs())) {
-        return Recurrence::rNone;
+        return KCalendarCore::Recurrence::rNone;
     }
 
     return m_events.at(idx)->recurrence()->recurrenceType();

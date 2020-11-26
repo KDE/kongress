@@ -20,8 +20,6 @@
 #define INCIDENCEALARMSMODEL_H
 
 #include <QAbstractListModel>
-#include <KCalendarCore/Alarm>
-#include <KCalendarCore/Duration>
 #include <QVariantList>
 #include <QVariantMap>
 #include <QHash>

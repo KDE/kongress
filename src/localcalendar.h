@@ -20,10 +20,8 @@
 #define LOCALCALENDAR_H
 
 #include <QSharedPointer>
-#include <KCalendarCore/MemoryCalendar>
 #include <QVariantMap>
-
-using namespace KCalendarCore;
+#include <KCalendarCore/MemoryCalendar>
 
 class CalendarController;
 
@@ -31,7 +29,7 @@ class LocalCalendar : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
-    Q_PROPERTY(QSharedPointer<MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
+    Q_PROPERTY(QSharedPointer<KCalendarCore::MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
     Q_PROPERTY(QString loadDateStr READ loadDateStr NOTIFY loadDateStrChanged)
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
@@ -43,7 +41,7 @@ public:
     QVariantMap calendarInfo() const;
     void setCalendarInfo(const QVariantMap &calendarInfoMap);
 
-    MemoryCalendar::Ptr memorycalendar() const;
+    KCalendarCore::MemoryCalendar::Ptr memorycalendar() const;
     QStringList categories() const;
 
     CalendarController *calendarController() const;
@@ -66,7 +64,7 @@ Q_SIGNALS:
 
 private:
     QVariantMap m_calendarInfo;
-    MemoryCalendar::Ptr m_calendar;
+    KCalendarCore::MemoryCalendar::Ptr m_calendar;
     CalendarController *m_cal_controller;
 };
 #endif // LOCALCALENDAR_H

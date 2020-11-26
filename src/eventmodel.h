@@ -22,8 +22,6 @@
 #include <QAbstractListModel>
 #include <KCalendarCore/Event>
 
-using namespace KCalendarCore;
-
 class LocalCalendar;
 
 class EventModel : public QAbstractListModel
@@ -120,7 +118,7 @@ private:
     QString formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const;
     QString formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const;
 
-    Event::List m_events;
+    KCalendarCore::Event::List m_events;
     QDate m_filterdt;
     QString m_category;
     LocalCalendar *m_local_calendar;

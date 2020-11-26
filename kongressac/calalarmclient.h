@@ -29,6 +29,7 @@
 
 class AlarmsModel;
 class NotificationHandler;
+
 /**
  * @brief Client that orchestrates the parsing of calendars and the display of notifications for event alarms. It exposes a D-Bus Interface containing a set of callable methods.
  *

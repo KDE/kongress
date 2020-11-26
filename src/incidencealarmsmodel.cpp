@@ -23,8 +23,12 @@
 #include "incidencealarmsmodel.h"
 #include "localcalendar.h"
 #include <QVector>
-#include <KLocalizedString>
 #include <QDebug>
+#include <KLocalizedString>
+#include <KCalendarCore/Alarm>
+#include <KCalendarCore/Duration>
+#include <KCalendarCore/MemoryCalendar>
+#include <KCalendarCore/Incidence>
 
 IncidenceAlarmsModel::IncidenceAlarmsModel(QObject *parent) : QAbstractListModel(parent), mAlarms(QVariantList())
 {
@@ -61,12 +65,12 @@ void IncidenceAlarmsModel::addAlarm(const int secondsFromStart)
     QHash<QString, QVariant> alarmMap;
     if (secondsFromStart % 86400 == 0) {
         alarmMap["startOffsetValue"] = -1 * secondsFromStart / 86400;
-        alarmMap["startOffsetType"] = Duration::Days;
+        alarmMap["startOffsetType"] = KCalendarCore::Duration::Days;
     } else {
         alarmMap["startOffsetValue"] = -1 * secondsFromStart;
-        alarmMap["startOffsetType"] = Duration::Seconds;
+        alarmMap["startOffsetType"] = KCalendarCore::Duration::Seconds;
     }
-    alarmMap["actionType"] = Alarm::Type::Display;
+    alarmMap["actionType"] = KCalendarCore::Alarm::Type::Display;
     mAlarms.append(alarmMap);
 
     endInsertRows();
@@ -120,9 +124,9 @@ void IncidenceAlarmsModel::loadPersistentAlarms()
 
     LocalCalendar *localCalendar = mAlarmProperties["calendar"].value<LocalCalendar *>();
     QString uid = mAlarmProperties["uid"].toString();
-    MemoryCalendar::Ptr memCalendar;
-    Incidence::Ptr alarmIncidence;
-    Alarm::List persistentAlarms = Alarm::List();
+    KCalendarCore::MemoryCalendar::Ptr memCalendar;
+    KCalendarCore::Incidence::Ptr alarmIncidence;
+    KCalendarCore::Alarm::List persistentAlarms = KCalendarCore::Alarm::List();
 
     qDebug() << "\nloadPersistentAlarms: uid" << uid;
 
@@ -135,7 +139,7 @@ void IncidenceAlarmsModel::loadPersistentAlarms()
         persistentAlarms = alarmIncidence->alarms();
     }
 
-    Alarm::List::const_iterator alarmItr = persistentAlarms.constBegin();
+    KCalendarCore::Alarm::List::const_iterator alarmItr = persistentAlarms.constBegin();
 
     while (alarmItr != persistentAlarms.constEnd()) {
         QHash<QString, QVariant> alarmMap;
@@ -163,10 +167,10 @@ QString IncidenceAlarmsModel::alarmStartOffsetType(const int idx) const
     int durationType = alarm["startOffsetType"].value<int>();
 
     switch (durationType) {
-    case Duration::Type::Days: {
+    case KCalendarCore::Duration::Type::Days: {
         return QString(i18n("days before start"));
     }
-    case Duration::Type::Seconds: {
+    case KCalendarCore::Duration::Type::Seconds: {
         return QString(i18n("seconds before start"));
     }
     default: {
@@ -211,7 +215,7 @@ QString IncidenceAlarmsModel::displayText(const int idx) const
     if (durationValue == 0) {
         return i18n("At start time");
     }
-    if (durationType == Duration::Type::Days) {
+    if (durationType == KCalendarCore::Duration::Type::Days) {
         return i18np("1 day before start", "%1 days before start", durationValue);
     }
 

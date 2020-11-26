@@ -17,16 +17,15 @@
  */
 
 #include "calendarcontroller.h"
-
-#include <KLocalizedString>
-#include <KConfig>
-#include <KConfigGroup>
 #include <QDebug>
 #include <QRegExp>
 #include <QDir>
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <KLocalizedString>
+#include <KConfig>
+#include <KConfigGroup>
 
 class CalendarController::Private
 {
@@ -38,7 +37,7 @@ public:
 };
 
 CalendarController::CalendarController(QObject *parent)
-    : QObject(parent), m_storages(QMap<QString, FileStorage::Ptr>()), m_calendars(QMap<QString, MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
+    : QObject(parent), m_storages(QMap<QString, KCalendarCore::FileStorage::Ptr>()), m_calendars(QMap<QString, KCalendarCore::MemoryCalendar::Ptr>()), m_downloadManager(new DonwloadManager), d(new Private)
 {
     loadSavedConferences();
     connect(&(m_downloadManager->networkManager), SIGNAL(finished(QNetworkReply*)), SLOT(downloadFinished(QNetworkReply*)));
@@ -149,14 +148,14 @@ QString CalendarController::filenameToPath(const QString &calendarId)
     return basePath + "/kongress_" + calendarId + ".ics";
 }
 
-MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId)
+KCalendarCore::MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId)
 {
     auto m_fullpath = calendarFile(calendarId);
     auto tzId = QTimeZone::availableTimeZoneIds().contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
 
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(tzId));
+    KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(tzId));
     qDebug() << "Memory calendar " << calendarId << "(local) with timezone " << tzId << " has been created";
-    FileStorage::Ptr storage(new FileStorage(calendar));
+    KCalendarCore::FileStorage::Ptr storage(new KCalendarCore::FileStorage(calendar));
     storage->setFileName(m_fullpath);
     QFile calendarFile(m_fullpath);
 
@@ -179,8 +178,8 @@ QVariantMap CalendarController::importCalendar(const QString &calendarId, const 
     QVariantMap result;
     result["success"] = QVariant(false);
 
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZoneId()));
-    FileStorage::Ptr storage(new FileStorage(calendar));
+    KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId()));
+    KCalendarCore::FileStorage::Ptr storage(new KCalendarCore::FileStorage(calendar));
 
     QVariantMap canCreateCheck = canCreateFile(calendarId);
 
@@ -291,9 +290,9 @@ void CalendarController::downloadFinished(QNetworkReply *reply)
             auto tz = availableTimezones.contains(m_downloadManager->calendarTzId) ? m_downloadManager->calendarTzId : QTimeZone::systemTimeZoneId();
             addTzIdToConfig(m_downloadManager->calendarId, tz);
 
-            MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
+            KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(tz));
             qDebug() << "Memory calendar " << m_downloadManager->calendarId << " (online) with timezone " << tz << " has been created";
-            FileStorage::Ptr storage(new FileStorage(calendar));
+            KCalendarCore::FileStorage::Ptr storage(new KCalendarCore::FileStorage(calendar));
             storage->setFileName(filePath);
 
             if (storage->load()) {
@@ -325,7 +324,7 @@ bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
     return true;
 }
 
-MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString &calendarId) const
+KCalendarCore::MemoryCalendar::Ptr CalendarController::memoryCalendar(const QString &calendarId) const
 {
     if (m_calendars.contains(calendarId)) {
         return m_calendars[calendarId];
@@ -369,8 +368,8 @@ void CalendarController::loadSavedConferences()
         }
 
         auto tz = tzIdFromConfig(calendarId);
-        MemoryCalendar::Ptr calendar(new MemoryCalendar(tz));
-        FileStorage::Ptr storage(new FileStorage(calendar));
+        KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(tz));
+        KCalendarCore::FileStorage::Ptr storage(new KCalendarCore::FileStorage(calendar));
         storage->setFileName(filePath);
 
         if (storage->load()) {

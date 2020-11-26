@@ -19,10 +19,10 @@
 #include "eventcontroller.h"
 #include "calendarcontroller.h"
 #include "localcalendar.h"
+#include <QDebug>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
-#include <QDebug>
 
 EventController::EventController(QObject *parent) : QObject(parent), m_cal_controller(nullptr) {}
 
@@ -48,9 +48,9 @@ void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventDa
 
     qDebug() << "Deleting event from calendar " << calendar->calendarId();
 
-    MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
+    KCalendarCore::MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
     QString uid = eventData["uid"].toString();
-    Event::Ptr event = memoryCalendar->event(uid);
+    KCalendarCore::Event::Ptr event = memoryCalendar->event(uid);
     memoryCalendar->deleteEvent(event);
 
     bool deleted = false;
@@ -76,13 +76,13 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
 
     qDebug() << "\naddEdit:\tCreating event to calendar " << calendar->calendarId();
 
-    MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
+    KCalendarCore::MemoryCalendar::Ptr memoryCalendar = calendar->memorycalendar();
     QDateTime now = QDateTime::currentDateTime();
     QString uid = eventData["uid"].toString();
-    Event::Ptr event = memoryCalendar->event(uid);
+    KCalendarCore::Event::Ptr event = memoryCalendar->event(uid);
 
     if (event == nullptr) {
-        event = Event::Ptr(new Event());
+        event = KCalendarCore::Event::Ptr(new KCalendarCore::Event());
     }
 
     event->setUid(uid);

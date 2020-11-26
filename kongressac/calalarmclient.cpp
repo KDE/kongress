@@ -25,13 +25,11 @@
 #include "alarmsmodel.h"
 #include "notificationhandler.h"
 #include "kongressacadaptor.h"
-#include <KSharedConfig>
-#include <KConfigGroup>
 #include <QDebug>
 #include <QVariantMap>
+#include <KSharedConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
-
-using namespace KCalendarCore;
 
 CalAlarmClient::CalAlarmClient(QObject *parent)
     : QObject(parent), mAlarmsModel(new AlarmsModel()), mNotificationHandler(new NotificationHandler())
