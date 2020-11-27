@@ -50,11 +50,12 @@ Q_SIGNALS:
 private:
     QVector<Conference *> m_conferences;
     Conference *m_activeConferenceInfo;
-    void loadDefaultConference(const QString &conferenceId);
+    QString *mPredefinedConferencesFile;
 
     class Private;
     Private *d;
 
+    void loadDefaultConference(const QString &conferenceId);
     void loadConference(const QJsonObject &jsonObj);
     void loadConferences();
     void loadConferencesFromFile(QFile &jsonFile);

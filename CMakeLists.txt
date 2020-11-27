@@ -29,7 +29,7 @@ include(ECMPoQmTools)
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Test Qml QuickControls2 Network)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons KIO)
 
 if (ANDROID)
     # runtime dependencies are build-time dependencies on Android

@@ -24,6 +24,7 @@
 #include <QJsonArray>
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <KIO/StoredTransferJob>
 
 class ConferenceController::Private
 {
@@ -34,7 +35,7 @@ public:
     KConfig config;
 };
 
-ConferenceController::ConferenceController(QObject *parent) : QObject(parent), m_activeConferenceInfo(new Conference()), d(new Private())
+ConferenceController::ConferenceController(QObject *parent) : QObject(parent), m_activeConferenceInfo { new Conference() }, mPredefinedConferencesFile { new QString() }, d { new Private() }
 {
     loadConferences();
     loadDefaultConference(defaultConferenceId());
@@ -53,30 +54,32 @@ void ConferenceController::writeConference(const Conference *const conference)
 
 void ConferenceController::loadConferences()
 {
-    auto loadPredefined = d->config.group("general").readEntry("loadPredefined", QString());
-    QFile preconfiguredFile("://ConferenceData.json");
-
     if (!m_conferences.isEmpty()) {
         qDeleteAll(m_conferences.begin(), m_conferences.end());
         m_conferences.clear();
-
     }
 
-    if (loadPredefined.isEmpty()) {
-        d->config.group("general").writeEntry("loadPredefined", "yes");
-        d->config.sync();
-        loadConferencesFromFile(preconfiguredFile);
-    } else if (loadPredefined == "yes") {
-        loadConferencesFromFile(preconfiguredFile);
-    }
+    const QString dir { QStandardPaths::writableLocation(QStandardPaths::CacheLocation) };
+    QDir().mkpath(dir);
 
-    QString basePath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir baseFolder(basePath);
-    baseFolder.mkpath(QStringLiteral("."));
-    QFile userDataFile(QString("%1%2%3").arg(basePath).arg(QString("/")).arg(QString("ConferenceUserData.json")));
+    auto fileName = QLatin1String("/conference-data.json");
+    *mPredefinedConferencesFile = dir + fileName;
 
-    loadConferencesFromFile(userDataFile);
-    conferencesChanged();
+    const QUrl conferencesUrl(QStringLiteral("https://autoconfig.kde.org/kongress") + fileName);
+    auto *fetchJob = KIO::storedGet(conferencesUrl, KIO::Reload, KIO::HideProgressInfo);
+
+    connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob]() {
+
+        if (fetchJob->error() == 0) {
+            QFile f { *mPredefinedConferencesFile };
+            if (!f.open(QIODevice::WriteOnly)) {
+                qDebug() << "Cannot open" << *mPredefinedConferencesFile << f.errorString();
+            }
+            f.write(fetchJob->data());
+            f.close();
+            loadConferencesFromFile(f);
+        }
+    });
 }
 
 void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
@@ -103,11 +106,14 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
     for (auto jsonVar : jsonVarList) {
         loadConference(jsonVar.toJsonObject());
     }
+
+    conferencesChanged();
 }
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
     auto conference = new Conference();
+
     conference->setId(jsonObj["id"].toString());
     conference->setName(jsonObj["name"].toString());
     conference->setDescription(jsonObj["description"].toString());
