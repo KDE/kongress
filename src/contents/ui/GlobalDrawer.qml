@@ -68,7 +68,7 @@ Kirigami.GlobalDrawer {
             id: categoryActions
 
             text: i18n("Categories")
-            iconName: "view-categories"
+            iconName: "category"
             enabled: root.activeConference.id != "" && children.length > 0
         },
 
