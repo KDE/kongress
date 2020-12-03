@@ -24,6 +24,7 @@
 #include <KCalendarCore/MemoryCalendar>
 
 class CalendarController;
+class AlarmChecker;
 
 class LocalCalendar : public QObject
 {
@@ -31,12 +32,10 @@ class LocalCalendar : public QObject
     Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
     Q_PROPERTY(QSharedPointer<KCalendarCore::MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
-    Q_PROPERTY(QString loadDateStr READ loadDateStr NOTIFY loadDateStrChanged)
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
     explicit LocalCalendar(QObject *parent = nullptr);
-    ~LocalCalendar() override;
 
     QVariantMap calendarInfo() const;
     void setCalendarInfo(const QVariantMap &calendarInfoMap);
@@ -45,10 +44,9 @@ public:
     QStringList categories() const;
 
     CalendarController *calendarController() const;
-    void setCalendarController(CalendarController *controller);
+    void setCalendarController(CalendarController *const controller);
 
     QString calendarId() const;
-    QString loadDateStr() const;
     Q_INVOKABLE void loadOnlineCalendar();
 
 public Q_SLOTS:
@@ -59,13 +57,13 @@ Q_SIGNALS:
     void calendarInfoChanged();
     void categoriesChanged();
     void eventsChanged();
-    void loadDateStrChanged();
     void calendarControllerChanged();
 
 private:
     QVariantMap m_calendarInfo;
     KCalendarCore::MemoryCalendar::Ptr m_calendar;
     CalendarController *m_cal_controller;
+    AlarmChecker *m_alarm_checker;
 };
 #endif // LOCALCALENDAR_H
 

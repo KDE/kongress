@@ -24,6 +24,7 @@
 
 class CalendarController;
 class LocalCalendar;
+class SettingsController;
 
 class EventController : public QObject
 {
@@ -38,7 +39,6 @@ public:
     };
 
     explicit EventController(QObject *parent = nullptr);
-    ~EventController() override;
 
     CalendarController *calendarController();
     void setCalendarController(CalendarController *const controller);
@@ -47,8 +47,7 @@ public:
     Q_INVOKABLE QVariantMap addEdit(LocalCalendar *calendar, const QVariantMap &event);
 
 private:
-    CalendarController *m_cal_controller;
-    /**|
+    /**
      * @brief Check if an event is already registered or overlapping events exist
      *
      * @param calendar p_calendar: The calendar of the favorites
@@ -66,6 +65,9 @@ private:
      *   If NoCalendarExists, let the user know that an error has occured
      */
     QVariantMap eventCheck(LocalCalendar *calendar, const QVariantMap &event);
+
+    CalendarController *m_cal_controller;
+    SettingsController *m_settings_controller;
 
 };
 #endif

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+#
+# SPDX-License-Identifier: BSD-2-Clause
+
 add_definitions(-DTRANSLATION_DOMAIN=\"kongressac\")
 
 set(kongressac_SRCS
@@ -6,9 +10,12 @@ set(kongressac_SRCS
     alarmsmodel.cpp
     alarmnotification.cpp
     notificationhandler.cpp
-    )
+    solidwakeupbackend.cpp
+    wakeupmanager.cpp
+)
 
 qt5_add_dbus_adaptor(kongressac_SRCS org.kde.kongressac.xml calalarmclient.h CalAlarmClient)
+qt5_add_dbus_adaptor(kongressac_SRCS org.kde.wakeupmanager.PowerManagement.xml wakeupmanager.h WakeupManager)
 
 add_executable(kongressac ${kongressac_SRCS} ${RESOURCES})
 
@@ -32,6 +39,7 @@ install(FILES
 
 install(FILES
     org.kde.kongressac.xml
+    org.kde.wakeupmanager.PowerManagement.xml
     DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
     )
 

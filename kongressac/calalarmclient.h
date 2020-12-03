@@ -1,7 +1,7 @@
 /*
   This program used korgac as a starting point. korgac can be found here: https://cgit.kde.org/korganizer.git/tree/korgac. It has been created by Cornelius Schumacher.
 
-  Copyright (c) 2019 Dimitris Kardarakos <dimkard@posteo.net>
+  Copyright (c) 2020 Dimitris Kardarakos <dimkard@posteo.net>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -29,6 +29,8 @@
 
 class AlarmsModel;
 class NotificationHandler;
+class WakeupBackend;
+class WakeupManager;
 
 /**
  * @brief Client that orchestrates the parsing of calendars and the display of notifications for event alarms. It exposes a D-Bus Interface containing a set of callable methods.
@@ -41,47 +43,53 @@ class CalAlarmClient : public QObject
 
 public:
     explicit CalAlarmClient(QObject *parent = nullptr);
-    ~CalAlarmClient() override;
 
-public Q_SLOTS:
+    /**
+     * @brief The Status of the checker that depends on the existence of a scheduling backend
+     *
+     */
+    enum CheckerStatus {
+        Inactive = 0,
+        Active = 1
+    };
+
+    /**
+     * @return The method that should be triggered by the wakeup backend
+     */
+    void wakeupCallback();
+
     // DBUS interface
     /**
-     * @brief Quits the application. It is included in the DBUS interface methods.
+     * @brief Quits the application
      *
      */
-    void quit();
+    Q_SCRIPTABLE void quit();
 
     /**
-     * @brief Checks the calendars for event alarms. It is included in the DBUS interface methods.
+     * @brief Checks the calendars for event alarms
      *
      */
-    void forceAlarmCheck();
+    Q_SCRIPTABLE void forceAlarmCheck();
 
     /**
-     * @return The date time of the last check done for event alarms. It is included in the DBUS interface methods.
+     * @return Schedule alarm check
      */
-    QString dumpLastCheck() const;
+    Q_SCRIPTABLE void scheduleAlarmCheck();
 
     /**
-     * @return The list of today's event alarms
+     * @return Check if kongressac can handle alarms
      */
-    QStringList dumpAlarms() const;
+    Q_SCRIPTABLE int active() const;
 
 private:
     QString alarmText(const QString &uid) const;
     void checkAlarms();
     void saveLastCheckTime();
-    void saveCheckInterval();
-    void saveSuspendSeconds();
-    void restoreSuspendedFromConfig();
-    void flushSuspendedToConfig();
     QStringList calendarFileList() const;
 
-    AlarmsModel *mAlarmsModel;
-    QDateTime mLastChecked;
-    QTimer mCheckTimer;
-    NotificationHandler *mNotificationHandler;
-    int mCheckInterval;
-    int mSuspendSeconds;
+    AlarmsModel *m_alarms_model;
+    QDateTime m_last_checked;
+    NotificationHandler *m_notification_handler;
+    WakeupManager *m_wakeup_manager;
 };
 #endif

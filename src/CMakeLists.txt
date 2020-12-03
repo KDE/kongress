@@ -10,10 +10,10 @@ set(kongress_SRCS
     localcalendar.cpp
     eventmodel.cpp
     eventcontroller.cpp
-    incidencealarmsmodel.cpp
     conference.cpp
     conferencecontroller.cpp
     conferencemodel.cpp
+    alarmchecker.cpp
     )
 
 qt5_add_resources(RESOURCES resources.qrc)
@@ -41,8 +41,8 @@ if (ANDROID)
         internet-services
         view-calendar-agenda
         view-calendar-day
-        view-categories
         settings-configure
+        category
     )
 else()
     target_link_libraries(kongress PRIVATE Qt5::Widgets)

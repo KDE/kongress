@@ -22,7 +22,7 @@
 #include "conferencecontroller.h"
 #include "conference.h"
 
-ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel(parent), m_conferences(QVector<Conference*>()), m_filter(QVariantMap())
+ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel {parent}, m_conferences {QVector<Conference*> {}}, m_filter {QVariantMap{}}
 {
     connect(this, &ConferenceModel::filterChanged, this, &ConferenceModel::loadConferences);
 }
@@ -52,7 +52,7 @@ int ConferenceModel::rowCount(const QModelIndex &parent) const
 
 QVariant ConferenceModel::data(const QModelIndex &index, int role) const
 {
-    int row = index.row();
+    auto row = index.row();
 
     switch (role) {
     case ConferenceId:

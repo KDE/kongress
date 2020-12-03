@@ -19,16 +19,16 @@
 
 #include "localcalendar.h"
 #include "calendarcontroller.h"
+#include "alarmchecker.h"
 #include <QDebug>
 #include <QMetaType>
 #include <KLocalizedString>
 
 LocalCalendar::LocalCalendar(QObject *parent)
-    : QObject(parent), m_calendarInfo(QVariantMap()), m_calendar(nullptr), m_cal_controller(nullptr)
+    : QObject {parent}, m_calendarInfo {QVariantMap {}}, m_calendar {nullptr}, m_cal_controller {nullptr},  m_alarm_checker {new AlarmChecker {this}}
 {
+    connect(this, &LocalCalendar::eventsChanged, m_alarm_checker, &AlarmChecker::scheduleAlarmCheck);
 }
-
-LocalCalendar::~LocalCalendar() = default;
 
 KCalendarCore::MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 {
@@ -79,7 +79,7 @@ QStringList LocalCalendar::categories() const
         return m_calendar->categories();
     }
 
-    return QStringList();
+    return QStringList {};
 }
 
 void LocalCalendar::onlineCalendarReady(const QString &calendarId)
@@ -93,7 +93,6 @@ void LocalCalendar::onlineCalendarReady(const QString &calendarId)
         Q_EMIT memorycalendarChanged();
         Q_EMIT categoriesChanged();
         Q_EMIT eventsChanged();
-        Q_EMIT loadDateStrChanged();
     }
 }
 
@@ -103,27 +102,7 @@ QString LocalCalendar::calendarId() const
         return m_calendarInfo["id"].toString();
     }
 
-    return QString();
-}
-
-QString LocalCalendar::loadDateStr() const
-{
-    if (!(m_calendarInfo.contains("lastUpdated")) || !(m_calendarInfo["lastUpdated"].canConvert(QMetaType::QDateTime)) || !(m_calendarInfo["lastUpdated"].toDateTime().isValid())) {
-        return QString();
-    }
-
-    auto todayDate = QDate::currentDate();
-    auto loadDate = m_calendarInfo["lastUpdated"].toDate();
-
-    if (loadDate == todayDate) {
-        return i18n("today at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
-    }
-
-    if (loadDate.addDays(1) == todayDate) {
-        return i18n("yesterday at %1", m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
-    }
-
-    return i18n("%1 at %2", loadDate.toString(Qt::SystemLocaleShortDate), m_calendarInfo["lastUpdated"].toDateTime().toString("HH:mm"));
+    return QString {};
 }
 
 void LocalCalendar::loadOnlineCalendar()
@@ -140,10 +119,13 @@ CalendarController *LocalCalendar::calendarController() const
     return m_cal_controller;
 }
 
-void LocalCalendar::setCalendarController(CalendarController *controller)
+void LocalCalendar::setCalendarController(CalendarController *const controller)
 {
     m_cal_controller = controller;
-    connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
+
+    if (m_cal_controller != nullptr) {
+        connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
+    }
 
     Q_EMIT calendarControllerChanged();
 }

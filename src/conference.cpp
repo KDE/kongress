@@ -17,6 +17,9 @@
  */
 
 #include "conference.h"
+#include <QDebug>
+
+Conference::Conference(QObject *parent) : QObject {parent} {};
 
 QString Conference::id() const
 {

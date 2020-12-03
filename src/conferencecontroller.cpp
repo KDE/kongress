@@ -29,13 +29,12 @@
 class ConferenceController::Private
 {
 public:
-    Private()
-        : config("kongressrc")
+    Private() : config {"kongressrc"}
     {};
     KConfig config;
 };
 
-ConferenceController::ConferenceController(QObject *parent) : QObject(parent), m_activeConferenceInfo { new Conference() }, mPredefinedConferencesFile { new QString() }, d { new Private() }
+ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, m_activeConferenceInfo {new Conference {this}}, mPredefinedConferencesFile {new QString {}}, d {new Private}
 {
     loadConferences();
     loadDefaultConference(defaultConferenceId());
@@ -46,12 +45,6 @@ QVector<Conference *> ConferenceController::conferences() const
     return m_conferences;
 }
 
-void ConferenceController::writeConference(const Conference *const conference)
-{
-    //TODO: Implement
-    qDebug() << "Saving conference" << conference->id() << " to configuration file";
-}
-
 void ConferenceController::loadConferences()
 {
     if (!m_conferences.isEmpty()) {
@@ -59,19 +52,19 @@ void ConferenceController::loadConferences()
         m_conferences.clear();
     }
 
-    const QString dir { QStandardPaths::writableLocation(QStandardPaths::CacheLocation) };
+    const auto dir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
     QDir().mkpath(dir);
 
-    auto fileName = QLatin1String("/conference-data.json");
+    QLatin1String fileName {"/conference-data.json"};
     *mPredefinedConferencesFile = dir + fileName;
 
-    const QUrl conferencesUrl(QStringLiteral("https://autoconfig.kde.org/kongress") + fileName);
+    const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
     auto *fetchJob = KIO::storedGet(conferencesUrl, KIO::Reload, KIO::HideProgressInfo);
 
     connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob]() {
 
         if (fetchJob->error() == 0) {
-            QFile f { *mPredefinedConferencesFile };
+            QFile f {*mPredefinedConferencesFile};
             if (!f.open(QIODevice::WriteOnly)) {
                 qDebug() << "Cannot open" << *mPredefinedConferencesFile << f.errorString();
             }
@@ -103,16 +96,16 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
         jsonVarList = jsonArray.toVariantList();
     }
 
-    for (auto jsonVar : jsonVarList) {
+    for (const QVariant &jsonVar : qAsConst(jsonVarList)) {
         loadConference(jsonVar.toJsonObject());
     }
 
-    conferencesChanged();
+    Q_EMIT conferencesChanged();
 }
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
-    auto conference = new Conference();
+    auto conference = new Conference {this};
 
     conference->setId(jsonObj["id"].toString());
     conference->setName(jsonObj["name"].toString());
@@ -131,7 +124,7 @@ void ConferenceController::loadConference(const QJsonObject &jsonObj)
 
 QString ConferenceController::defaultConferenceId() const
 {
-    auto confId = d->config.group("general").readEntry("defaultConferenceId", QString());
+    auto confId = d->config.group("general").readEntry("defaultConferenceId", QString {});
     d->config.sync();
 
     return confId;
@@ -158,7 +151,7 @@ void ConferenceController::loadDefaultConference(const QString &conferenceId)
         return;
     }
 
-    for (auto cf : m_conferences) {
+    for (const auto cf : qAsConst(m_conferences)) {
         if (cf->id() == conferenceId) {
             m_activeConferenceInfo->setId(cf->id());
             m_activeConferenceInfo->setName(cf->name());

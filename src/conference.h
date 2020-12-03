@@ -37,6 +37,8 @@ class Conference : public QObject
     Q_PROPERTY(QString timeZoneId READ timeZoneId WRITE setTimeZoneId NOTIFY timeZoneIdChanged)
 
 public:
+    explicit Conference(QObject *parent = nullptr);
+
     QString id() const;
     QString name() const;
     QString description() const;

@@ -134,7 +134,7 @@ Kirigami.ScrollablePage {
                 spacing: Kirigami.Units.smallSpacing
 
                 Kirigami.Icon {
-                    source: "view-categories"
+                    source: "category"
                     width: Kirigami.Units.iconSizes.small
                     height: width
                 }

@@ -5,13 +5,10 @@ project(kongress)
 set(KF5_MIN_VERSION "5.63.0")
 set(QT_MIN_VERSION "5.7.0")
 
-################# Disallow in-source build #################
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-   message(FATAL_ERROR "Kongress requires an out of source build. Please create a separate build directory.")
-endif()
-
-option(REMINDERS_ENABLED "Build with reminders support" OFF)
+option(REMINDERS_ENABLED "Build with reminders support" ON)
 
 include(FeatureSummary)
 
@@ -20,7 +17,7 @@ include(FeatureSummary)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -39,7 +36,7 @@ else()
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
 
-if(REMINDERS_ENABLED)
+if(NOT ANDROID AND REMINDERS_ENABLED)
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
 endif()
 

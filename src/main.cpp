@@ -29,7 +29,6 @@
 #include "localcalendar.h"
 #include "eventmodel.h"
 #include "eventcontroller.h"
-#include "incidencealarmsmodel.h"
 #include "conferencemodel.h"
 #include "conferencecontroller.h"
 #include "settingscontroller.h"
@@ -39,16 +38,15 @@
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication app(argc, argv);
+    QApplication app {argc, argv};
 
-    KAboutData about(QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral("0.1"), i18n("KDE Conference Companion"), KAboutLicense::GPL, i18n("© 2020 KDE Community"));
-    about.addAuthor(i18n("Dimitris Kardarakos"), QString(), QStringLiteral("dimkard@posteo.net"));
+    KAboutData about {QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral("0.1"), i18n("KDE Conference Companion"), KAboutLicense::GPL, i18n("© 2020 KDE Community")};
+    about.addAuthor(i18n("Dimitris Kardarakos"), QString {}, QStringLiteral("dimkard@posteo.net"));
     KAboutData::setApplicationData(about);
 
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
     qmlRegisterType<EventController>("org.kde.kongress", 0, 1, "EventController");
-    qmlRegisterType<IncidenceAlarmsModel>("org.kde.kongress", 0, 1, "IncidenceAlarmsModel");
     qmlRegisterType<ConferenceModel>("org.kde.kongress", 0, 1, "ConferenceModel");
     qmlRegisterType<CalendarController>("org.kde.kongress", 0, 1, "CalendarController");
     qmlRegisterType<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController");
@@ -61,17 +59,17 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #endif
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    engine.rootContext()->setContextObject(new KLocalizedContext {&engine});
 
-    CalendarController *calendarController = new CalendarController();
-    engine.rootContext()->setContextProperty(QStringLiteral("_calendarController"), calendarController); //TODO: Make it singleton
+    CalendarController calendarController;
+    engine.rootContext()->setContextProperty(QStringLiteral("_calendarController"), &calendarController); //TODO: Make it singleton
 
     EventController eventController;
-    eventController.setCalendarController(calendarController);
+    eventController.setCalendarController(&calendarController);
 
     engine.rootContext()->setContextProperty(QStringLiteral("_eventController"), &eventController);  //TODO: Make it singleton
 
-    engine.load(QUrl(QStringLiteral("qrc:///Main.qml")));
+    engine.load(QUrl {QStringLiteral("qrc:///Main.qml")});
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

@@ -1,20 +1,20 @@
 /*
- * Copyright (C) 2019-2020 Dimitris Kardarakos
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 3 of
- * the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+* Copyright (C) 2019-2020 Dimitris Kardarakos
+*
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation; either version 3 of
+* the License, or (at your option) any later version.
+*
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this library.  If not, see <http://www.gnu.org/licenses/>.
+*
+*/
 
 #ifndef CALENDAR_CONTROLLER_H
 #define CALENDAR_CONTROLLER_H
@@ -41,7 +41,6 @@ class CalendarController : public QObject
 public:
 
     explicit CalendarController(QObject *parent = nullptr);
-    ~CalendarController() override;
 
     QString calendars() const;
     QString calendarFile(const QString &calendarId);
@@ -49,7 +48,6 @@ public:
     KCalendarCore::MemoryCalendar::Ptr createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId);
     KCalendarCore::MemoryCalendar::Ptr memoryCalendar(const QString &calendarId) const;
     void createCalendarFromUrl(const QString &calendarId, const QUrl &url, const QByteArray &timeZoneId);
-    QVariantMap importCalendar(const QString &calendarId, const QString &sourcePath);
     void deleteCalendar(const QString &calendarId);
     bool save(const QString &calendarId);
 
@@ -58,13 +56,10 @@ Q_SIGNALS:
     void calendarDownloaded(const QString &calendarId);
 
 public Q_SLOTS:
-    QVariantMap canAddCalendar(const QString &calendar);
-    QVariantMap addCalendar(const QString &calendar);
     void downloadFinished(QNetworkReply *reply);
 
 private:
     static QString filenameToPath(const QString &calendarId);
-    QVariantMap canCreateFile(const QString &calendarId);
     void removeCalendarFromConfig(const QString &calendarId);
     bool saveToDisk(const QString &filename, QIODevice *data);
     void loadSavedConferences();

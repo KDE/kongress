@@ -28,11 +28,48 @@ Kirigami.ScrollablePage {
 
     title: i18n("Settings")
 
-    ColumnLayout {
+    Kirigami.FormLayout {
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Appearance")
+        }
+
         Controls2.CheckBox {
             checked: Kongress.SettingsController.displayInLocalTimezone
-            text: i18n("Use local timezone")
-            onCheckedChanged: Kongress.SettingsController.displayInLocalTimezone = checked
+            Kirigami.FormData.label: i18n("Use local timezone")
+
+            onToggled: Kongress.SettingsController.displayInLocalTimezone = checked
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Notifications")
+        }
+
+        Controls2.CheckBox {
+            Kirigami.FormData.label: i18n("Add reminder to favorite talks")
+
+            enabled: Kongress.SettingsController.canAddReminder
+            checked: Kongress.SettingsController.remindFavorites
+            onToggled: Kongress.SettingsController.remindFavorites = checked
+        }
+
+        Controls2.SpinBox {
+            Kirigami.FormData.label: i18n("Remind before talk start (minutes)")
+
+            enabled: Kongress.SettingsController.canAddReminder
+            from: 0
+            value: Kongress.SettingsController.remindBeforeStart
+            onValueModified: Kongress.SettingsController.remindBeforeStart = value
+        }
+
+        Kirigami.InlineMessage {
+            Kirigami.FormData.isSection: true
+            visible: !Kongress.SettingsController.canAddReminder
+            type: Kirigami.MessageType.Warning
+            text: i18n("Notifictions are not supported on your platform")
         }
     }
+
 }

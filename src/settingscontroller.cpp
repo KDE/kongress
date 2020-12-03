@@ -17,7 +17,7 @@
  */
 
 #include "settingscontroller.h"
-
+#include "alarmchecker.h"
 #include <KConfig>
 #include <KConfigGroup>
 
@@ -31,13 +31,9 @@ public:
 };
 
 SettingsController::SettingsController(QObject *parent)
-    : QObject(parent), d(new Private)
+    : QObject {parent}, d {new Private}, m_alarm_checker {new AlarmChecker {this}}
 {
-}
-
-SettingsController::~SettingsController()
-{
-    delete d;
+    connect(m_alarm_checker, &AlarmChecker::activeChanged, this, &SettingsController::canAddReminderChanged);
 }
 
 QObject *SettingsController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
@@ -53,10 +49,45 @@ bool SettingsController::displayInLocalTimezone() const
     return d->config.group("general").readEntry("displayInLocalTimezone", false);
 }
 
-void SettingsController::setDisplayInLocalTimezone(bool displayInLocalTimezone)
+void SettingsController::setDisplayInLocalTimezone(const bool displayInLocalTimezone)
 {
     d->config.group("general").writeEntry("displayInLocalTimezone", displayInLocalTimezone);
     d->config.sync();
 
     Q_EMIT displayInLocalTimezoneChanged();
+}
+
+bool SettingsController::remindFavorites() const
+{
+    return d->config.group("notifications").readEntry("remindFavorites", true);
+}
+
+void SettingsController::setRemindFavorites(const bool remind)
+{
+    d->config.group("notifications").writeEntry("remindFavorites", remind);
+    d->config.sync();
+
+    Q_EMIT remindFavoritesChanged();
+}
+
+int SettingsController::remindBeforeStart() const
+{
+    return d->config.group("notifications").readEntry("remindBeforeStart", 5);
+}
+
+void SettingsController::setRemindBeforeStart(const int remindBeforeStart)
+{
+    d->config.group("notifications").writeEntry("remindBeforeStart", remindBeforeStart);
+    d->config.sync();
+
+    Q_EMIT remindBeforeStartChanged();
+}
+
+bool SettingsController::canAddReminder() const
+{
+    if (m_alarm_checker != nullptr) {
+        return m_alarm_checker->active();
+    }
+
+    return false;
 }

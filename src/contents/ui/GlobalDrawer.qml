@@ -40,7 +40,7 @@ Kirigami.GlobalDrawer {
                 enabled: root.activeConference.id != ""
 
                 onTriggered: {
-                    showPassiveNotification(i18n("Loading conference data"));
+                    showPassiveNotification(i18n("Checking for schedule updates"));
                     onlineCalendar.loadOnlineCalendar();
                 }
             }

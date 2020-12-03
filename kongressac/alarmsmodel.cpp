@@ -1,193 +1,97 @@
 /*
- *  Copyright (c) 2019 Dimitris Kardarakos <dimkard@posteo.net>
+ * SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
  *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License along
- *  with this program; if not, write to the Free Software Foundation, Inc.,
- *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- *
- *  As a special exception, permission is given to link this program
- *  with any edition of Qt, and distribute the resulting executable,
- *  without including the source code for Qt in the source distribution.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #include "alarmsmodel.h"
+#include <KCalendarCore/Calendar>
+#include <KCalendarCore/MemoryCalendar>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <QFile>
 #include <QDebug>
-#include <KCalCore/FileStorage>
 
-AlarmsModel::AlarmsModel(QObject *parent) : QAbstractListModel(parent), mMemoryCalendars(QVector<KCalendarCore::MemoryCalendar::Ptr>()), mFileStorages(QVector<KCalendarCore::FileStorage::Ptr>()), mAlarms(KCalendarCore::Alarm::List()), mCalendarFiles(QStringList()), mParams(QHash<QString, QVariant>())
+AlarmsModel::AlarmsModel(QObject *parent) : QObject {parent}, m_calendars {QVector<KCalendarCore::Calendar::Ptr> {}}, m_file_storages {QVector<KCalendarCore::FileStorage::Ptr> {}}, m_alarms {KCalendarCore::Alarm::List {}}, m_calendar_files {QStringList()}
 {
-    connect(this, &AlarmsModel::paramsChanged, this, &AlarmsModel::loadAlarms);
-}
-
-AlarmsModel::~AlarmsModel() = default;
-
-QHash<int, QByteArray> AlarmsModel::roleNames() const
-{
-    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(Uid, "uid");
-    roles.insert(Text, "text");
-    roles.insert(Time, "time");
-    roles.insert(IncidenceStartDt, "incidenceStartDt");
-
-    return roles;
-}
-
-QVariant AlarmsModel::data(const QModelIndex &index, int role) const
-{
-    if (!index.isValid()) {
-        return QVariant();
-    }
-
-    switch (role) {
-    case Qt::DisplayRole:
-        return mAlarms.at(index.row())->parentUid();
-    case Uid:
-        return mAlarms.at(index.row())->parentUid();
-    case Time:
-        return mAlarms.at(index.row())->time();
-    case Text:
-        return mAlarms.at(index.row())->text();
-    case IncidenceStartDt:
-        return parentStartDt(index.row());
-    }
-
-    return QVariant();
-}
-
-int AlarmsModel::rowCount(const QModelIndex &parent) const
-{
-    if (parent.isValid()) {
-        return 0;
-    }
-
-    return mAlarms.count();
+    connect(this, &AlarmsModel::periodChanged, this, &AlarmsModel::loadAlarms);
+    connect(this, &AlarmsModel::calendarsChanged, this, &AlarmsModel::loadAlarms);
 }
 
 void AlarmsModel::loadAlarms()
 {
-    qDebug() << "\nloadAlarms";
+    m_alarms.clear();
 
-    beginResetModel();
-    mAlarms.clear();
+    if (!(m_period.from.isValid()) && !(m_period.to.isValid())) {
+        return;
+    }
+
     openLoadStorages();
 
-    int cnt = 0;
-    QVector<KCalendarCore::MemoryCalendar::Ptr>::const_iterator itr = mMemoryCalendars.constBegin();
-    while (itr != mMemoryCalendars.constEnd()) {
-        QDateTime from = mPeriod["from"].toDateTime();
-        QDateTime to = mPeriod["to"].toDateTime();
-        qDebug() << "loadAlarms:\tLooking for alarms in calendar #" << cnt << ", from" << from.toString("dd.MM.yyyy hh:mm:ss") << "to" << to.toString("dd.MM.yyyy hh:mm:ss");
+    for (const auto &m : qAsConst(m_calendars)) {
 
         KCalendarCore::Alarm::List calendarAlarms;
 
-        if (from.isValid() && to.isValid()) {
-            calendarAlarms = (*itr)->alarms(from, to, true);
-        } else if (!(from.isValid()) && to.isValid()) {
-            calendarAlarms = (*itr)->alarmsTo(to);
+        if (m_period.from.isValid() && m_period.to.isValid()) {
+            calendarAlarms = m->alarms(m_period.from, m_period.to, true);
+        } else if (!(m_period.from.isValid()) && m_period.to.isValid()) {
+            calendarAlarms = m->alarms(QDateTime {QDate {1900, 1, 1}, QTime {0, 0, 0}}, m_period.to);
         }
 
-        qDebug() << "loadAlarms:\t" << calendarAlarms.count() << "alarms found in calendar #" << cnt;
         if (!(calendarAlarms.empty())) {
-            mAlarms.append(calendarAlarms);
+            m_alarms.append(calendarAlarms);
         }
-
-        ++cnt;
-        ++itr;
     }
+    qDebug() << "loadAlarms:" << m_period.from.toString("dd.MM.yyyy hh:mm:ss") << "to" << m_period.to.toString("dd.MM.yyyy hh:mm:ss") << m_alarms.count() << "alarms found";
 
     closeStorages();
-    endResetModel();
 }
 
 void AlarmsModel::setCalendars()
 {
-    mFileStorages.clear();
-    mMemoryCalendars.clear();
+    m_file_storages.clear();
+    m_calendars.clear();
 
-    qDebug() << "\nsetCalendars";
-    QStringList::const_iterator itr = mCalendarFiles.constBegin();
-    while (itr != mCalendarFiles.constEnd()) {
-        KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId()));
-        KCalendarCore::FileStorage::Ptr storage(new KCalendarCore::FileStorage(calendar));
-        storage->setFileName(*itr);
+    for (const auto &cf : qAsConst(m_calendar_files)) {
+        KCalendarCore::Calendar::Ptr calendar {new KCalendarCore::MemoryCalendar {QTimeZone::systemTimeZoneId()}};
+        KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+        storage->setFileName(cf);
         if (!(storage->fileName().isNull())) {
-            qDebug() << "setCalendars:\t" << "Appending calendar" << *itr;
-            mFileStorages.append(storage);
-            mMemoryCalendars.append(calendar);
+            m_file_storages.append(storage);
+            m_calendars.append(calendar);
         }
-        ++itr;
     }
-}
 
-QHash<QString, QVariant> AlarmsModel::params() const
-{
-    return mParams;
-}
-
-void AlarmsModel::setParams(const QHash<QString, QVariant> &parameters)
-{
-    mParams = parameters;
-
-    QStringList calendarFiles = mParams["calendarFiles"].toStringList();
-    QVariantMap period = (mParams["period"].value<QVariant>()).value<QVariantMap>();
-
-    mCalendarFiles = calendarFiles;
-    setCalendars();
-    mPeriod = period;
-
-    emit paramsChanged();
+    Q_EMIT calendarsChanged();
 }
 
 void AlarmsModel::openLoadStorages()
 {
-    QVector<KCalendarCore::FileStorage::Ptr>::const_iterator itr = mFileStorages.constBegin();
-    while (itr != mFileStorages.constEnd()) {
-        if ((*itr)->open()) {
-            qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "opened";
-        }
-
-        if ((*itr)->load()) {
-            qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "loaded";
-        }
-        ++itr;
+    auto loaded {true};
+    for (const auto &fs : qAsConst(m_file_storages)) {
+        loaded = fs->open() && fs->load() && loaded;
     }
 }
 
 void AlarmsModel::closeStorages()
 {
-    QVector<KCalendarCore::FileStorage::Ptr>::const_iterator itr = mFileStorages.constBegin();
-    while (itr != mFileStorages.constEnd()) {
-        if ((*itr)->close()) {
-            qDebug() << "loadAlarms:\t" << (*itr)->fileName() << "closed";
-        }
-        ++itr;
+    auto closed {true};
+    for (const auto &fs : qAsConst(m_file_storages)) {
+        closed = fs->close() && closed;
     }
 }
 
 QDateTime AlarmsModel::parentStartDt(const int idx) const
 {
-    KCalendarCore::Alarm::Ptr alarm = mAlarms.at(idx);
+    auto alarm = m_alarms.at(idx);
     KCalendarCore::Duration offsetDuration;
-    QDateTime alarmTime = mAlarms.at(idx)->time();
+    auto alarmTime = m_alarms.at(idx)->time();
     if (alarm->hasStartOffset()) {
         offsetDuration = alarm->startOffset();
     }
 
     if (!(offsetDuration.isNull())) {
-        int secondsFromStart = offsetDuration.asSeconds();
+        auto secondsFromStart = offsetDuration.asSeconds();
 
         return alarmTime.addSecs(-1 * secondsFromStart);
     }
@@ -195,3 +99,45 @@ QDateTime AlarmsModel::parentStartDt(const int idx) const
     return alarmTime;
 }
 
+KCalendarCore::Alarm::List AlarmsModel::alarms() const
+{
+    return m_alarms;
+}
+
+FilterPeriod AlarmsModel::period() const
+{
+    return m_period;
+}
+
+void AlarmsModel::setPeriod(const FilterPeriod &filterPeriod)
+{
+    m_period = filterPeriod;
+
+    Q_EMIT periodChanged();
+}
+
+QStringList AlarmsModel::calendarFiles() const
+{
+    return m_calendar_files;
+}
+
+void AlarmsModel::setCalendarFiles(const QStringList &fileList)
+{
+    m_calendar_files = fileList;
+
+    setCalendars();
+}
+
+QDateTime AlarmsModel::firstAlarmTime() const
+{
+    auto firstAlarmTime = m_period.to;
+
+    for (const auto &alarm : m_alarms) {
+        auto alarmTime = alarm->time();
+        if (alarmTime < firstAlarmTime) {
+            firstAlarmTime = alarmTime;
+        }
+    }
+
+    return firstAlarmTime;
+}

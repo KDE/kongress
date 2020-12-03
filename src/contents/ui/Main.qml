@@ -63,8 +63,6 @@ Kirigami.ApplicationWindow {
                 root.pageStack.pop(null);
             }
         }
-
-        onLoadDateStrChanged: showPassiveNotification(i18n("Conference data loaded"))
     }
 
     Kongress.LocalCalendar {
@@ -114,7 +112,6 @@ Kirigami.ApplicationWindow {
              */
             onSelected: {
                 conferenceController.defaultConferenceId = selectedConferenceId;
-                showPassiveNotification(i18n("Loading conference data"));
             }
         }
     }

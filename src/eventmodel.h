@@ -35,7 +35,6 @@ class EventModel : public QAbstractListModel
 
 public:
     explicit EventModel(QObject *parent = nullptr);
-    ~EventModel() override;
 
     enum Roles {
         Uid = Qt::UserRole + 1,

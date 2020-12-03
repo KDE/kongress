@@ -5,11 +5,10 @@
     </method>
     <method name="forceAlarmCheck">
     </method>
-    <method name="dumpLastCheck">
-      <arg type="s" direction="out"/>
+    <method name="scheduleAlarmCheck">
     </method>
-    <method name="dumpAlarms">
-      <arg type="as" direction="out"/>
+    <method name="active">
+      <arg type="i" direction="out"/>
     </method>
   </interface>
 </node>
