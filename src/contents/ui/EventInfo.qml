@@ -95,7 +95,12 @@ Kirigami.ScrollablePage {
                     wrapMode: Text.WordWrap
                     text: {
                         if (viewMode == "favorites") {
-                            return event.startEndDt;
+                            if (Kongress.SettingsController.displayInLocalTimezone) {
+                                return event.startEndDtLocal;
+                            }
+                            else {
+                                return event.startEndDt;
+                            }
                         }
                         else {
                             if (Kongress.SettingsController.displayInLocalTimezone) {

@@ -91,7 +91,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
         { ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal" },
         { StartEndDt, "startEndDt" },
         { StartEndDtLocal, "startEndDtLocal" },
-        { Overlapping, "overlapping" }
+        { Overlapping, "overlapping" },
+        { ConferenceTzId, "conferenceTzId" }
     };
 }
 
@@ -223,6 +224,9 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     }
     case Overlapping:
         return overlappingEvents(index.row());
+    case ConferenceTzId: {
+        return calendarTz.id();
+    }
     default:
         return QVariant {};
     }

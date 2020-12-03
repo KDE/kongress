@@ -65,7 +65,8 @@ public:
         ShiftedStartEndTimeLocal,
         StartEndDt,
         StartEndDtLocal,
-        Overlapping
+        Overlapping,
+        ConferenceTzId
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
