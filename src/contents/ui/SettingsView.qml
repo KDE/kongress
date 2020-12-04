@@ -68,7 +68,7 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.isSection: true
             visible: !Kongress.SettingsController.canAddReminder
             type: Kirigami.MessageType.Warning
-            text: i18n("Notifictions are not supported on your platform")
+            text: i18n("Notifications are not supported on your platform")
         }
     }
 
