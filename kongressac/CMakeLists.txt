@@ -37,11 +37,5 @@ install(FILES
     DESTINATION ${KDE_INSTALL_AUTOSTARTDIR}
     )
 
-install(FILES
-    org.kde.kongressac.xml
-    org.kde.wakeupmanager.PowerManagement.xml
-    DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
-    )
-
 install(FILES kongressac.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
 
