@@ -29,16 +29,35 @@ class AlarmChecker;
 class LocalCalendar : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QVariantMap calendarInfo READ calendarInfo WRITE setCalendarInfo NOTIFY calendarInfoChanged)
+
+    Q_PROPERTY(QString calendarId READ calendarId WRITE setCalendarId NOTIFY calendarIdChanged)
+    Q_PROPERTY(QString calendarTzId READ calendarTzId WRITE setCalendarTzId NOTIFY calendarTzIdChanged)
+    Q_PROPERTY(QString calendarUrl READ calendarUrl WRITE setCalendarUrl NOTIFY calendarUrlChanged)
+    Q_PROPERTY(int calendarType READ calendarType WRITE setCalendarType NOTIFY calendarTypeChanged)
     Q_PROPERTY(QSharedPointer<KCalendarCore::MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
+    enum CalendarType {
+        None = 0,
+        Conference = 1,
+        Favorites = 2
+    };
+
     explicit LocalCalendar(QObject *parent = nullptr);
 
-    QVariantMap calendarInfo() const;
-    void setCalendarInfo(const QVariantMap &calendarInfoMap);
+    QString calendarId() const;
+    void setCalendarId(const QString &calendarId);
+
+    QString calendarTzId() const;
+    void setCalendarTzId(const QString &tzId);
+
+    QString calendarUrl() const;
+    void setCalendarUrl(const QString &url);
+
+    int calendarType() const;
+    void setCalendarType(const int type);
 
     KCalendarCore::MemoryCalendar::Ptr memorycalendar() const;
     QStringList categories() const;
@@ -46,7 +65,6 @@ public:
     CalendarController *calendarController() const;
     void setCalendarController(CalendarController *const controller);
 
-    QString calendarId() const;
     Q_INVOKABLE void loadOnlineCalendar();
 
 public Q_SLOTS:
@@ -54,16 +72,24 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void memorycalendarChanged();
-    void calendarInfoChanged();
+    void calendarIdChanged();
+    void calendarTzIdChanged();
+    void calendarUrlChanged();
+    void calendarTypeChanged();
     void categoriesChanged();
     void eventsChanged();
     void calendarControllerChanged();
 
+private Q_SLOTS:
+    void createCalendar();
+
 private:
-    QVariantMap m_calendarInfo;
+    QString m_calendar_id;
+    QString m_calendar_tz_id;
+    QString m_calendar_url;
+    int m_calendar_type;
     KCalendarCore::MemoryCalendar::Ptr m_calendar;
     CalendarController *m_cal_controller;
     AlarmChecker *m_alarm_checker;
 };
 #endif // LOCALCALENDAR_H
-

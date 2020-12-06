@@ -22,15 +22,8 @@
 #include <QObject>
 #include <QVariantMap>
 #include <QMap>
-#include <QtNetwork>
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/MemoryCalendar>
-
-struct DonwloadManager {
-    QString calendarId;
-    QByteArray calendarTzId;
-    QNetworkAccessManager networkManager;
-};
 
 class CalendarController : public QObject
 {
@@ -55,10 +48,8 @@ Q_SIGNALS:
     void calendarsChanged();
     void calendarDownloaded(const QString &calendarId);
 
-public Q_SLOTS:
-    void downloadFinished(QNetworkReply *reply);
-
 private:
+    void downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath);
     static QString filenameToPath(const QString &calendarId);
     void removeCalendarFromConfig(const QString &calendarId);
     bool saveToDisk(const QString &filename, QIODevice *data);
@@ -69,7 +60,6 @@ private:
 
     QMap<QString, KCalendarCore::FileStorage::Ptr> m_storages;
     QMap<QString, KCalendarCore::MemoryCalendar::Ptr> m_calendars;
-    DonwloadManager *m_downloadManager;
 
     class Private;
     Private *d;

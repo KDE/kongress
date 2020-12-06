@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KIO/StoredTransferJob>
 
 class CalendarController::Private
 {
@@ -35,10 +36,9 @@ public:
 };
 
 CalendarController::CalendarController(QObject *parent)
-    : QObject {parent}, m_storages {QMap<QString, KCalendarCore::FileStorage::Ptr> {}}, m_calendars {QMap<QString, KCalendarCore::MemoryCalendar::Ptr>{}}, m_downloadManager {new DonwloadManager}, d {new Private}
+    : QObject {parent}, m_storages {QMap<QString, KCalendarCore::FileStorage::Ptr> {}}, m_calendars {QMap<QString, KCalendarCore::MemoryCalendar::Ptr>{}}, d {new Private}
 {
     loadSavedConferences();
-    connect(&(m_downloadManager->networkManager), SIGNAL(finished(QNetworkReply*)), SLOT(downloadFinished(QNetworkReply*)));
 }
 
 QString CalendarController::calendars() const
@@ -140,48 +140,47 @@ bool CalendarController::save(const QString &calendarId)
 
 void CalendarController::createCalendarFromUrl(const QString &calendarId, const QUrl &url, const QByteArray &timeZoneId)
 {
-    QNetworkRequest request {url};
-    m_downloadManager->calendarId = calendarId;
-    m_downloadManager->calendarTzId = timeZoneId;
-    (m_downloadManager->networkManager).get(request);
+    if (calendarId.isEmpty() || url.isEmpty()) {
+        return;
+    }
+    qDebug() << "createCalendarFromUrl: calendarId " << calendarId << ", url" << url;
+    auto filePath = calendarFile(calendarId);
+    auto *fetchJob = KIO::storedGet(url, KIO::Reload, KIO::HideProgressInfo);
+
+    connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob, filePath, calendarId, timeZoneId]() {
+        if (fetchJob->error() == 0) {
+            QFile f {filePath};
+            if (!f.open(QIODevice::WriteOnly)) {
+                qDebug() << "Cannot open" << filePath << f.errorString();
+            }
+            f.write(fetchJob->data());
+            f.close();
+            downloadFinished(calendarId, timeZoneId, filePath);
+        }
+    });
 }
 
-void CalendarController::downloadFinished(QNetworkReply *reply)
+void CalendarController::downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath)
 {
-    auto url = reply->url();
+    auto availableTimezones = QTimeZone::availableTimeZoneIds();
+    auto tz = availableTimezones.contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
+    addTzIdToConfig(calendarId, tz);
 
-    if (reply->error()) {
-        qDebug() << "Download failed";
-    } else {
-        auto filePath = calendarFile(m_downloadManager->calendarId);
+    KCalendarCore::MemoryCalendar::Ptr calendar {new KCalendarCore::MemoryCalendar {tz}};
+    qDebug() << "Memory calendar " << calendarId << " (online) with timezone " << tz << " has been created";
+    KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+    storage->setFileName(filePath);
 
-        if (saveToDisk(filePath, reply)) {
-            qDebug() << (QString {"Download of %1 succeeded (saved to %2)"}).arg(url.toEncoded().constData(), qPrintable(filePath));
-
-            auto availableTimezones = QTimeZone::availableTimeZoneIds();
-            auto tz = availableTimezones.contains(m_downloadManager->calendarTzId) ? m_downloadManager->calendarTzId : QTimeZone::systemTimeZoneId();
-            addTzIdToConfig(m_downloadManager->calendarId, tz);
-
-            KCalendarCore::MemoryCalendar::Ptr calendar {new KCalendarCore::MemoryCalendar {tz}};
-            qDebug() << "Memory calendar " << m_downloadManager->calendarId << " (online) with timezone " << tz << " has been created";
-            KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
-            storage->setFileName(filePath);
-
-            if (storage->load()) {
-                m_storages[m_downloadManager->calendarId] = storage;
-                m_calendars[m_downloadManager->calendarId] = calendar;
-            }
-
-            addConferenceToConfig(m_downloadManager->calendarId);
-
-            Q_EMIT calendarsChanged();
-            Q_EMIT calendarDownloaded(m_downloadManager->calendarId);
-        }
+    if (storage->load()) {
+        m_storages[calendarId] = storage;
+        m_calendars[calendarId] = calendar;
     }
 
-    reply->deleteLater();
-}
+    addConferenceToConfig(calendarId);
 
+    Q_EMIT calendarsChanged();
+    Q_EMIT calendarDownloaded(calendarId);
+}
 bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
 {
     QFile file {filename};

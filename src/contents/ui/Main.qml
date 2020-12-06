@@ -56,9 +56,12 @@ Kirigami.ApplicationWindow {
         id: onlineCalendar
 
         calendarController: _calendarController
-        calendarInfo: root.activeConference.id != "" ? {"id": root.activeConference.id, "url": root.activeConference.icalUrl, "timeZoneId": root.activeConference.timeZoneId } : {}
+        calendarId: root.activeConference && root.activeConference.id
+        calendarUrl: root.activeConference && root.activeConference.icalUrl
+        calendarTzId: root.activeConference && root.activeConference.timeZoneId
+        calendarType: 1
 
-        onCalendarInfoChanged: {
+        onCalendarIdChanged: {
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
@@ -69,9 +72,13 @@ Kirigami.ApplicationWindow {
         id: favoritesCalendar
 
         calendarController: _calendarController
-        calendarInfo: root.activeConference.id != "" ? {"id": "favorites_" +  root.activeConference.id, "timeZoneId": root.activeConference.timeZoneId } : {}
 
-        onCalendarInfoChanged: {
+        calendarId: root.activeConference && ("favorites_" +  root.activeConference.id)
+        calendarUrl: ""
+        calendarTzId: root.activeConference && root.activeConference.timeZoneId
+        calendarType: 2
+
+        onCalendarIdChanged: {
             if (root.pageStack.depth > 1) {
                 root.pageStack.pop(null);
             }
