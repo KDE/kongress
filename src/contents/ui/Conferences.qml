@@ -19,21 +19,43 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kongress 0.1 as Kongress
 
 Kirigami.ScrollablePage {
     id: root
 
     title: i18n("Conferences")
 
-    property var conferencesList
-
     signal selected(var selectedConferenceId)
+
+    Kirigami.PlaceholderMessage {
+        anchors.centerIn: parent
+
+        visible: !conferenceModel.busyDownlading && view.count == 0
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        text: i18n("No conference found")
+
+        helpfulAction: Kirigami.Action {
+            text: i18n("Reload")
+            onTriggered: _conferenceController.loadConferences()
+        }
+    }
+
+    Controls.BusyIndicator {
+        anchors.centerIn: parent
+
+        running: conferenceModel.busyDownlading
+        implicitWidth: Kirigami.Units.iconSizes.enormous
+        implicitHeight: width
+
+    }
 
     Kirigami.CardsListView {
         id: view
 
-        model: conferencesList
+        enabled: !conferenceModel.busyDownlading && count > 0
+        model: conferenceModel
         section {
             property: "pastUpcoming"
             criteria: ViewSection.FullString
@@ -63,4 +85,11 @@ Kirigami.ScrollablePage {
             ]
         }
     }
+
+    Kongress.ConferenceModel {
+        id: conferenceModel
+
+        controller: _conferenceController
+    }
+
 }

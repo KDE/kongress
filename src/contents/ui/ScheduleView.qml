@@ -35,10 +35,10 @@ Kirigami.ScrollablePage {
     rightPadding: 0
 
     Kirigami.PlaceholderMessage {
-        visible: eventsModel.count == 0
+        visible: !roCalendar.busyDownlading && (listView.count == 0)
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         anchors.centerIn: parent
-        text: eventStartDt.toLocaleDateString() != "" ? i18n("No events found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No events found")
+        text: eventStartDt.toLocaleDateString() != "" ? i18n("No talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No talks found")
     }
 
     Component {
@@ -50,10 +50,19 @@ Kirigami.ScrollablePage {
         }
     }
 
+    Controls2.BusyIndicator {
+        anchors.centerIn: parent
+
+        running: roCalendar.busyDownlading
+        implicitWidth: Kirigami.Units.iconSizes.enormous
+        implicitHeight: width
+
+    }
+
     ListView {
         id: listView
 
-        anchors.fill: parent
+        enabled: !roCalendar.busyDownlading && count > 0
 
         model: eventsModel
         section {

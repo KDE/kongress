@@ -144,6 +144,8 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
         return;
     }
     qDebug() << "createCalendarFromUrl: calendarId " << calendarId << ", url" << url;
+    Q_EMIT downlading(calendarId, true);
+
     auto filePath = calendarFile(calendarId);
     auto *fetchJob = KIO::storedGet(url, KIO::Reload, KIO::HideProgressInfo);
 
@@ -157,6 +159,7 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
             f.close();
             downloadFinished(calendarId, timeZoneId, filePath);
         }
+        Q_EMIT downlading(calendarId, false);
     });
 }
 

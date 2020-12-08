@@ -22,9 +22,8 @@
 #include "conferencecontroller.h"
 #include "conference.h"
 
-ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel {parent}, m_conferences {QVector<Conference*> {}}, m_filter {QVariantMap{}}
+ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel {parent}, m_controller {nullptr}, m_conferences {QVector<Conference*> {}}, m_busy_downloading {false}
 {
-    connect(this, &ConferenceModel::filterChanged, this, &ConferenceModel::loadConferences);
 }
 
 QHash<int, QByteArray> ConferenceModel::roleNames() const
@@ -47,6 +46,7 @@ QHash<int, QByteArray> ConferenceModel::roleNames() const
 int ConferenceModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
+
     return m_conferences.count();
 }
 
@@ -90,25 +90,7 @@ void ConferenceModel::loadConferences()
         m_conferences = m_controller->conferences();
     }
 
-    if (!m_filter.isEmpty()) {
-        //TODO: Implement model filtering
-    }
-
     endResetModel();
-}
-
-QVariantMap ConferenceModel::filter() const
-{
-    return m_filter;
-}
-
-void ConferenceModel::setFilter(const QVariantMap &filter)
-{
-    if (m_filter != filter) {
-        m_filter = filter;
-    }
-
-    Q_EMIT filterChanged();
 }
 
 QString ConferenceModel::pastOrUpcoming(const int index) const
@@ -133,14 +115,35 @@ QString ConferenceModel::pastOrUpcoming(const int index) const
 
 void ConferenceModel::setController(ConferenceController *conferenceController)
 {
-    m_controller = conferenceController;
-    loadConferences();
+    if (m_controller == conferenceController) {
+        return;
+    }
 
-    connect(m_controller, &ConferenceController::conferencesChanged, this, &ConferenceModel::loadConferences);
+    m_controller = conferenceController;
+
+    if (m_controller != nullptr) {
+        m_controller->loadConferences();
+        connect(m_controller, &ConferenceController::conferencesLoaded, this, &ConferenceModel::loadConferences);
+        connect(m_controller, &ConferenceController::downlading, this, &ConferenceModel::setBusyStatus);
+    }
+
     Q_EMIT controllerChanged();
 }
 
 ConferenceController *ConferenceModel::controller() const
 {
     return m_controller;
+}
+
+void ConferenceModel::setBusyStatus(const bool downlading)
+{
+    if (m_busy_downloading != downlading) {
+        m_busy_downloading = downlading;
+        Q_EMIT busyDownladingChanged();
+    }
+}
+
+bool ConferenceModel::busyDownlading() const
+{
+    return m_busy_downloading;
 }

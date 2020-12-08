@@ -17,6 +17,7 @@
  */
 
 #include "conferencecontroller.h"
+#include "settingscontroller.h"
 #include "conference.h"
 #include <QDebug>
 #include <QDir>
@@ -34,10 +35,12 @@ public:
     KConfig config;
 };
 
-ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, m_activeConferenceInfo {new Conference {this}}, mPredefinedConferencesFile {new QString {}}, d {new Private}
+ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, m_active_conference {nullptr}, m_conferences_file {new QFile {}}, d {new Private}
 {
     loadConferences();
-    loadDefaultConference(defaultConferenceId());
+    connect(this, &ConferenceController::conferencesLoaded, [this]() {
+        activateDefaultConference();
+    });
 }
 
 QVector<Conference *> ConferenceController::conferences() const
@@ -52,11 +55,13 @@ void ConferenceController::loadConferences()
         m_conferences.clear();
     }
 
-    const auto dir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
+    Q_EMIT downlading(true);
+
+    const auto dir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir().mkpath(dir);
 
     QLatin1String fileName {"/conference-data.json"};
-    *mPredefinedConferencesFile = dir + fileName;
+    m_conferences_file = new QFile {dir + fileName};
 
     const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
     auto *fetchJob = KIO::storedGet(conferencesUrl, KIO::Reload, KIO::HideProgressInfo);
@@ -64,14 +69,14 @@ void ConferenceController::loadConferences()
     connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob]() {
 
         if (fetchJob->error() == 0) {
-            QFile f {*mPredefinedConferencesFile};
-            if (!f.open(QIODevice::WriteOnly)) {
-                qDebug() << "Cannot open" << *mPredefinedConferencesFile << f.errorString();
+            if (m_conferences_file == nullptr || !m_conferences_file->open(QIODevice::WriteOnly)) {
+                qDebug() << "Cannot open conferences file" << m_conferences_file->errorString();
             }
-            f.write(fetchJob->data());
-            f.close();
-            loadConferencesFromFile(f);
+            m_conferences_file->write(fetchJob->data());
+            m_conferences_file->close();
         }
+        Q_EMIT downlading(false);
+        loadConferencesFromFile(*m_conferences_file);
     });
 }
 
@@ -100,7 +105,7 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
         loadConference(jsonVar.toJsonObject());
     }
 
-    Q_EMIT conferencesChanged();
+    Q_EMIT conferencesLoaded();
 }
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
@@ -122,6 +127,37 @@ void ConferenceController::loadConference(const QJsonObject &jsonObj)
     m_conferences << conference;
 }
 
+Conference *ConferenceController::activeConference() const
+{
+    return m_active_conference;
+}
+
+void ConferenceController::activateConference(const QString &conferenceId)
+{
+    if (conferenceId.isEmpty()) {
+        return;
+    }
+
+    for (const auto cf : qAsConst(m_conferences)) {
+        if (cf->id() == conferenceId) {
+
+            m_active_conference = cf;
+            qDebug() << "activateConference: conference " << conferenceId << " activated";
+
+            setDefaultConferenceId(conferenceId);
+
+            Q_EMIT activeConferenceChanged();
+
+            return;
+        }
+    }
+}
+
+void ConferenceController::activateDefaultConference()
+{
+    activateConference(defaultConferenceId());
+}
+
 QString ConferenceController::defaultConferenceId() const
 {
     auto confId = d->config.group("general").readEntry("defaultConferenceId", QString {});
@@ -136,36 +172,11 @@ void ConferenceController::setDefaultConferenceId(const QString &confId)
     d->config.sync();
 
     Q_EMIT defaultConferenceIdChanged();
-
-    loadDefaultConference(confId);
 }
 
-Conference *ConferenceController::activeConferenceInfo() const
+void ConferenceController::clearActiveConference()
 {
-    return m_activeConferenceInfo;
-}
-
-void ConferenceController::loadDefaultConference(const QString &conferenceId)
-{
-    if (conferenceId.isEmpty()) {
-        return;
-    }
-
-    for (const auto cf : qAsConst(m_conferences)) {
-        if (cf->id() == conferenceId) {
-            m_activeConferenceInfo->setId(cf->id());
-            m_activeConferenceInfo->setName(cf->name());
-            m_activeConferenceInfo->setDescription(cf->description());
-            m_activeConferenceInfo->setIcalUrl(cf->icalUrl());
-            m_activeConferenceInfo->setDays(cf->days());
-            m_activeConferenceInfo->setVenueImageUrl(cf->venueImageUrl());
-            m_activeConferenceInfo->setVenueLatitude(cf->venueLatitude());
-            m_activeConferenceInfo->setVenueLongitude(cf->venueLongitude());
-            m_activeConferenceInfo->setVenueOsmUrl(cf->venueOsmUrl());
-            m_activeConferenceInfo->setTimeZoneId(cf->timeZoneId());
-        }
-    }
-
-    Q_EMIT activeConferenceInfoChanged();
-
+    m_active_conference = nullptr;
+    setDefaultConferenceId(QString {});
+    Q_EMIT activeConferenceChanged();
 }

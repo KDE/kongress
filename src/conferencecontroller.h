@@ -30,28 +30,35 @@ class ConferenceController : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(Conference *activeConference READ activeConference NOTIFY activeConferenceChanged)
     Q_PROPERTY(QString defaultConferenceId READ defaultConferenceId WRITE setDefaultConferenceId NOTIFY defaultConferenceIdChanged)
-    Q_PROPERTY(Conference *activeConferenceInfo READ activeConferenceInfo NOTIFY activeConferenceInfoChanged)
 
 public:
     explicit ConferenceController(QObject *parent = nullptr);
 
+    Conference *activeConference() const;
+
     QString defaultConferenceId() const;
     void setDefaultConferenceId(const QString &confId);
-    Conference *activeConferenceInfo() const;
+
     QVector<Conference *> conferences() const;
-Q_SIGNALS:
-    void conferencesChanged();
-    void defaultConferenceIdChanged();
-    void activeConferenceInfoChanged();
-private:
-    void loadDefaultConference(const QString &conferenceId);
-    void loadConference(const QJsonObject &jsonObj);
+    Q_INVOKABLE void activateConference(const QString &conferenceId);
+    Q_INVOKABLE void activateDefaultConference();
+    Q_INVOKABLE void clearActiveConference();
+public Q_SLOTS:
     void loadConferences();
+Q_SIGNALS:
+    void conferencesLoaded();
+    void activeConferenceChanged();
+    void defaultConferenceIdChanged();
+    void downlading(const bool downlading);
+
+private:
+    void loadConference(const QJsonObject &jsonObj);
     void loadConferencesFromFile(QFile &jsonFile);
     QVector<Conference *> m_conferences;
-    Conference *m_activeConferenceInfo;
-    QString *mPredefinedConferencesFile;
+    Conference *m_active_conference;
+    QFile *m_conferences_file;
 
     class Private;
     Private *d;

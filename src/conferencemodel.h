@@ -31,8 +31,8 @@ class ConferenceModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QVariantMap filter READ filter WRITE setFilter NOTIFY filterChanged)
     Q_PROPERTY(ConferenceController *controller READ controller WRITE setController NOTIFY controllerChanged)
+    Q_PROPERTY(bool busyDownlading READ busyDownlading NOTIFY busyDownladingChanged)
 
 public:
     enum Roles {
@@ -53,17 +53,19 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
-    int rowCount(const QModelIndex &parent) const override;
-
-    QVariantMap filter() const;
-    void setFilter(const QVariantMap &filter);
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     ConferenceController *controller() const;
     void setController(ConferenceController *conferenceController);
 
+    bool busyDownlading() const;
+
 Q_SIGNALS:
-    void filterChanged();
     void controllerChanged();
+    void busyDownladingChanged();
+
+private Q_SLOTS:
+    void setBusyStatus(const bool downlading);
 
 private:
     void loadConferences();
@@ -71,6 +73,7 @@ private:
 
     ConferenceController *m_controller;
     QVector<Conference *> m_conferences;
-    QVariantMap m_filter;
+    bool m_busy_downloading;
+
 };
 #endif

@@ -263,8 +263,6 @@ void EventModel::loadEvents()
     }
 
     endResetModel();
-
-    Q_EMIT rowCountChanged();
 }
 
 int EventModel::repeatEvery(const int idx) const

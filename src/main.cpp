@@ -61,6 +61,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext {&engine});
 
+    ConferenceController conferenceController;
+    engine.rootContext()->setContextProperty(QStringLiteral("_conferenceController"), &conferenceController); //TODO: Make it singleton
+
     CalendarController calendarController;
     engine.rootContext()->setContextProperty(QStringLiteral("_calendarController"), &calendarController); //TODO: Make it singleton
 

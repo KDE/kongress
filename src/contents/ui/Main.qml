@@ -26,30 +26,16 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.ApplicationWindow {
     id: root
 
-    property Kongress.Conference activeConference: conferenceController.activeConferenceInfo
+    property Kongress.Conference activeConference: _conferenceController.activeConference
 
-    globalDrawer: GlobalDrawer {}
+    globalDrawer: GlobalDrawer {
+        activeConference: root.activeConference
+        pageStack: root.pageStack
+    }
 
     pageStack {
-        initialPage: activeConference.id != "" ? scheduleView : conferencesView
+        initialPage: _conferenceController.defaultConferenceId ? scheduleView : conferencesView
         defaultColumnWidth: Kirigami.Units.gridUnit * 40
-    }
-
-    Kongress.ConferenceController {
-        id: conferenceController
-
-        onActiveConferenceInfoChanged: {
-            if (activeConferenceInfo.id != "") {
-                pageStack.clear();
-                pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
-            }
-        }
-    }
-
-    Kongress.ConferenceModel {
-        id: conferenceModel
-
-        controller: conferenceController
     }
 
     Kongress.LocalCalendar {
@@ -61,11 +47,6 @@ Kirigami.ApplicationWindow {
         calendarTzId: root.activeConference && root.activeConference.timeZoneId
         calendarType: 1
 
-        onCalendarIdChanged: {
-            if (root.pageStack.depth > 1) {
-                root.pageStack.pop(null);
-            }
-        }
     }
 
     Kongress.LocalCalendar {
@@ -77,12 +58,6 @@ Kirigami.ApplicationWindow {
         calendarUrl: ""
         calendarTzId: root.activeConference && root.activeConference.timeZoneId
         calendarType: 2
-
-        onCalendarIdChanged: {
-            if (root.pageStack.depth > 1) {
-                root.pageStack.pop(null);
-            }
-        }
     }
 
     Component {
@@ -112,13 +87,14 @@ Kirigami.ApplicationWindow {
         id: conferencesView
 
         Conferences {
-            conferencesList: conferenceModel
 
             /**
              * Expects @selectedConferenceId variable object to provide the information of the selected conference
              */
             onSelected: {
-                conferenceController.defaultConferenceId = selectedConferenceId;
+                _conferenceController.activateConference(selectedConferenceId)
+                pageStack.pop(root);
+                pageStack.push(scheduleView,  {eventStartDt: ""});
             }
         }
     }

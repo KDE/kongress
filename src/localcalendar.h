@@ -37,6 +37,7 @@ class LocalCalendar : public QObject
     Q_PROPERTY(QSharedPointer<KCalendarCore::MemoryCalendar> memorycalendar READ memorycalendar NOTIFY memorycalendarChanged)
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
+    Q_PROPERTY(bool busyDownlading READ busyDownlading NOTIFY busyDownladingChanged)
 
 public:
     enum CalendarType {
@@ -62,6 +63,8 @@ public:
     KCalendarCore::MemoryCalendar::Ptr memorycalendar() const;
     QStringList categories() const;
 
+    bool busyDownlading() const;
+
     CalendarController *calendarController() const;
     void setCalendarController(CalendarController *const controller);
 
@@ -69,6 +72,7 @@ public:
 
 public Q_SLOTS:
     void onlineCalendarReady(const QString &calendarId);
+    void setBusyStatus(const QString &calendarId, const bool downlading);
 
 Q_SIGNALS:
     void memorycalendarChanged();
@@ -79,6 +83,7 @@ Q_SIGNALS:
     void categoriesChanged();
     void eventsChanged();
     void calendarControllerChanged();
+    void busyDownladingChanged();
 
 private Q_SLOTS:
     void createCalendar();
@@ -91,5 +96,6 @@ private:
     KCalendarCore::MemoryCalendar::Ptr m_calendar;
     CalendarController *m_cal_controller;
     AlarmChecker *m_alarm_checker;
+    bool m_busy_downloading;
 };
 #endif // LOCALCALENDAR_H

@@ -25,7 +25,7 @@
 #include <KLocalizedString>
 
 LocalCalendar::LocalCalendar(QObject *parent)
-    : QObject {parent}, m_calendar_id {QString {}}, m_calendar_tz_id {QString {}}, m_calendar_url {QString {}}, m_calendar_type {LocalCalendar::CalendarType::None}, m_calendar {nullptr}, m_cal_controller {nullptr}, m_alarm_checker {new AlarmChecker {this}}
+    : QObject {parent}, m_calendar_id {QString {}}, m_calendar_tz_id {QString {}}, m_calendar_url {QString {}}, m_calendar_type {LocalCalendar::CalendarType::None}, m_calendar {nullptr}, m_cal_controller {nullptr}, m_alarm_checker {new AlarmChecker {this}}, m_busy_downloading {false}
 {
     connect(this, &LocalCalendar::calendarIdChanged, this, &LocalCalendar::createCalendar);
     connect(this, &LocalCalendar::calendarTzIdChanged, this, &LocalCalendar::createCalendar);
@@ -103,6 +103,7 @@ void LocalCalendar::setCalendarController(CalendarController *const controller)
 
     if (m_cal_controller != nullptr) {
         connect(m_cal_controller, &CalendarController::calendarDownloaded, this, &LocalCalendar::onlineCalendarReady);
+        connect(m_cal_controller, &CalendarController::downlading, this, &LocalCalendar::setBusyStatus);
     }
 
     Q_EMIT calendarControllerChanged();
@@ -160,3 +161,15 @@ void LocalCalendar::setCalendarTzId(const QString &tzId)
     }
 }
 
+bool LocalCalendar::busyDownlading() const
+{
+    return m_busy_downloading;
+}
+
+void LocalCalendar::setBusyStatus(const QString &calendarId, const bool downlading)
+{
+    if ((m_calendar_id == calendarId) && (m_busy_downloading != downlading)) {
+        m_busy_downloading = downlading;
+        Q_EMIT busyDownladingChanged();
+    }
+}

@@ -47,6 +47,7 @@ public:
 Q_SIGNALS:
     void calendarsChanged();
     void calendarDownloaded(const QString &calendarId);
+    void downlading(const QString &calendarId, const bool downlading);
 
 private:
     void downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath);

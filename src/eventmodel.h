@@ -31,7 +31,6 @@ class EventModel : public QAbstractListModel
     Q_PROPERTY(QDate filterdt READ filterdt WRITE setFilterdt NOTIFY filterdtChanged)
     Q_PROPERTY(LocalCalendar *calendar READ calendar WRITE setCalendar NOTIFY calendarChanged)
     Q_PROPERTY(QString eventCategory READ eventCategory WRITE setEventCategory NOTIFY eventCategoryChanged)
-    Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
 
 public:
     explicit EventModel(QObject *parent = nullptr);
@@ -89,7 +88,6 @@ Q_SIGNALS:
     void filterdtChanged();
     void calendarChanged();
     void eventCategoryChanged();
-    void rowCountChanged();
 
 private:
     /**

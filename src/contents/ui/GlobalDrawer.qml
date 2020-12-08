@@ -26,18 +26,30 @@ Kirigami.GlobalDrawer {
     id: drawer
 
     title: "Kongress"
+    property var activeConference
+    property var pageStack
+
+    /**
+     * Starting from the last page in the stack, remove every page of the stack
+     */
+    function popAll()
+    {
+        while (pageStack.depth > 0) {
+            pageStack.pop();
+        }
+    }
 
     actions: [
         Kirigami.Action {
             id: conferenceSelector
 
-            text: root.activeConference.name != "" ? root.activeConference.name : i18n("Conference")
+            text: activeConference ? activeConference.name : i18n("Conference")
             iconName: "group"
             expandible: true
 
             Kirigami.Action {
                 text: i18n("Check for updates")
-                enabled: root.activeConference.id != ""
+                visible: activeConference
 
                 onTriggered: {
                     showPassiveNotification(i18n("Checking for schedule updates"));
@@ -57,9 +69,10 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Full Schedule")
             iconName: "view-calendar-agenda"
-            enabled: root.activeConference.id != ""
+            visible: activeConference
+
             onTriggered: {
-                pageStack.clear();
+                popAll();
                 pageStack.push(scheduleView, {title: i18n("Schedule"), eventStartDt: ""});
             }
         },
@@ -69,15 +82,16 @@ Kirigami.GlobalDrawer {
 
             text: i18n("Categories")
             iconName: "category"
-            enabled: root.activeConference.id != "" && children.length > 0
+            visible: activeConference && children.length > 0
         },
 
         Kirigami.Action {
             text: i18n("Map")
             iconName: "find-location"
-            enabled: root.activeConference.venueOsmUrl != ""
+            visible: activeConference && (activeConference.venueOsmUrl != "")
+
             onTriggered: {
-                pageStack.clear();
+                popAll();
                 pageStack.push(mapView);
             }
         },
@@ -85,10 +99,10 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Favorites")
             iconName: "favorite"
-            enabled: root.activeConference.id != ""
+            visible: activeConference
 
             onTriggered: {
-                pageStack.clear();
+                popAll();
                 pageStack.push(favoritesView, {title: i18n("Favorites"), eventStartDt: ""});
             }
         },
@@ -99,11 +113,12 @@ Kirigami.GlobalDrawer {
             expandible: true
 
             Kirigami.Action {
-                text: root.activeConference.id != "" ? i18n("Change conference") : i18n("Select conference")
-                iconName: root.activeConference.id != "" ? 'exchange-positions' : 'edit-select'
+                text: activeConference ? i18n("Change conference") : i18n("Select conference")
+                iconName: activeConference ? 'exchange-positions' : 'edit-select'
 
                 onTriggered: {
-                    pageStack.clear();
+                    _conferenceController.clearActiveConference();
+                    popAll();
                     pageStack.push(conferencesView)
                 }
             }
@@ -112,7 +127,7 @@ Kirigami.GlobalDrawer {
                 text: i18n("Settings")
                 iconName: "settings-configure"
                 onTriggered: {
-                    pageStack.clear();
+                    popAll();
                     pageStack.push(settingsView);
                 }
             }
@@ -128,7 +143,7 @@ Kirigami.GlobalDrawer {
     Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
         id: daysInstantiator
 
-        model: root.activeConference.days != "" ? root.activeConference.days: []
+        model: activeConference && (activeConference.days != null) ? activeConference.days: []
 
         delegate: Kirigami.Action {
             property date conferenceDay: new Date(modelData)
@@ -136,7 +151,7 @@ Kirigami.GlobalDrawer {
             text: conferenceDay.toLocaleDateString(Qt.locale(), "dddd")
 
             onTriggered: {
-                pageStack.clear();
+                popAll();
                 pageStack.push(scheduleView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay });
             }
         }
@@ -160,7 +175,7 @@ Kirigami.GlobalDrawer {
             text: modelData
 
             onTriggered: {
-                pageStack.clear();
+                popAll();
                 pageStack.push(scheduleView, {title: text, eventStartDt: "", category: text, showCategories: false});
             }
         }
