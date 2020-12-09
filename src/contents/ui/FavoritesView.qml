@@ -139,24 +139,13 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                RowLayout {
-                    visible: model.overlapping >0
+                Kirigami.InlineMessage {
+                    visible: model.overlapping > 0
+                    type: Kirigami.MessageType.Information
+                    text: i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
                     width: cardDelegate.availableWidth
-                    spacing: Kirigami.Units.smallSpacing
-
-                    Kirigami.Icon {
-                        source: "dialog-warning-symbolic"
-                        width: Kirigami.Units.iconSizes.small
-                        height: width
-                    }
-
-                    Controls2.Label {
-                        wrapMode: Text.WordWrap
-                        text: i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
-                        color: Kirigami.Theme.negativeTextColor
-                        Layout.fillWidth: true
-                    }
                 }
+
             }
         }
     }
