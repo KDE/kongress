@@ -33,7 +33,6 @@ public:
 SettingsController::SettingsController(QObject *parent)
     : QObject {parent}, d {new Private}, m_alarm_checker {new AlarmChecker {this}}
 {
-    connect(m_alarm_checker, &AlarmChecker::activeChanged, this, &SettingsController::canAddReminderChanged);
 }
 
 QObject *SettingsController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)

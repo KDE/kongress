@@ -32,10 +32,9 @@ install(TARGETS
     kongressac ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-install(FILES
-    org.kde.kongressac.desktop
-    DESTINATION ${KDE_INSTALL_AUTOSTARTDIR}
-    )
-
 install(FILES kongressac.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
+install(FILES org.kde.kongressac.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+set(SERV_EXEC ${KDE_INSTALL_FULL_BINDIR}/kongressac)
+configure_file(org.kde.kongressac.service.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kongressac.service)
 
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kongressac.service DESTINATION ${KDE_INSTALL_FULL_DBUSSERVICEDIR})

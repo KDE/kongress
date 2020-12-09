@@ -11,34 +11,24 @@
 #include <QDBusReply>
 #include <QDebug>
 
-AlarmChecker::AlarmChecker(QObject *parent) : QObject {parent}, m_active {false}
+AlarmChecker::AlarmChecker(QObject *parent) : QObject {parent}
 {
     m_interface = new QDBusInterface {QStringLiteral("org.kde.kongressac"), QStringLiteral("/kongressac"), QStringLiteral("org.kde.kongressac"), QDBusConnection::sessionBus(), this};
-
-    if (m_interface->isValid()) {
-        QDBusReply<int> reply = m_interface->call(QStringLiteral("active"));
-        if (reply.isValid()) {
-            setActive(reply.value());
-        }
-    }
 }
 
 void AlarmChecker::scheduleAlarmCheck()
 {
-    if (m_interface->isValid()) {
-        m_interface->call(QStringLiteral("scheduleAlarmCheck"));
-    }
+    m_interface->call(QStringLiteral("scheduleAlarmCheck"));
 }
 
 int AlarmChecker::active()
 {
-    return m_active;
-}
+    auto kongressacActive {false};
 
-void AlarmChecker::setActive(const int activeReply)
-{
-    if (m_active != activeReply) {
-        m_active = activeReply;
-        Q_EMIT activeChanged();
+    QDBusReply<int> reply = m_interface->call(QStringLiteral("active"));
+    if (reply.isValid()) {
+        kongressacActive = reply.value();
     }
+
+    return kongressacActive;
 }

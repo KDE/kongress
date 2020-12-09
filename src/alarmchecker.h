@@ -29,16 +29,7 @@ public:
      */
     int active();
 
-    /**
-     * @brief Update the alarm service active flag
-     */
-    void setActive(const int activeReply);
-
-Q_SIGNALS:
-    void activeChanged();
-
 private:
     QDBusInterface *m_interface;
-    int m_active;
 };
 #endif //ALARM_CHECKER_H

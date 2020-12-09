@@ -40,6 +40,4 @@ GenericName[uk]=Клієнт нагадувань Kongress
 GenericName[x-test]=xxKongress Reminder Clientxx
 GenericName[zh_TW]=Kongress 提示用戶端
 Terminal=false
-X-KDE-autostart-phase=2
-X-KDE-autostart-condition=kongressrc:General:Autostart:true
 X-DBUS-StartupType=Unique

@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.kde.kongressac
+Exec=@SERV_EXEC@
+
