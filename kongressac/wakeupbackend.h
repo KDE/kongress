@@ -33,6 +33,12 @@ public:
      * @param scheduledWakeup The scheduled wake up, as returned by the scheduleWakeup method
      */
     virtual void clearWakeup(const QVariant &scheduledWakeup) = 0;
+
+    /**
+     * @return True if the backend offers wakeup features
+     */
+    virtual bool isWakeupBackend() const = 0;
+
 };
 
 #endif // WAKEUPBACKEND_H

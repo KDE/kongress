@@ -12,7 +12,7 @@
 #include <QDBusReply>
 #include <QDebug>
 
-WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1}, m_active {false}
+WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1}
 {
     m_callback_info = QVariantMap {
         {
@@ -26,8 +26,6 @@ WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1},
 
     auto dbus = QDBusConnection::sessionBus();
     dbus.registerObject(m_callback_info["dbus-path"].toString(), this);
-
-    checkBackend();
 }
 
 void WakeupManager::scheduleWakeup(const QDateTime wakeupAt)
@@ -72,29 +70,7 @@ void WakeupManager::removeWakeup(const int cookie)
     m_cookie = -1;
 }
 
-void WakeupManager::checkBackend()
-{
-    auto checkCookie = m_wakeup_backend->scheduleWakeup(m_callback_info, QDateTime::currentDateTime().addDays(1).toSecsSinceEpoch()).toInt();
-
-    if (checkCookie > 0) {
-        qDebug() << "WakeupManager: the backend is active";
-        m_wakeup_backend->clearWakeup(checkCookie);
-        setActive(true);
-    } else {
-        qDebug() << "WakeupManager: the backend does not offer wake up features";
-        setActive(false);
-    }
-}
-
 bool WakeupManager::active() const
 {
-    return m_active;
-}
-
-void WakeupManager::setActive(const bool activeBackend)
-{
-    if (activeBackend != m_active) {
-        m_active = activeBackend;
-        Q_EMIT activeChanged();
-    }
+    return m_wakeup_backend->isWakeupBackend();
 }

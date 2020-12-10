@@ -34,6 +34,11 @@ public:
      */
     virtual void clearWakeup(const QVariant &scheduledWakeup) override;
 
+    /**
+     * @return True if the backend offers wakeup features
+     */
+    virtual bool isWakeupBackend() const override;
+
 private:
     QDBusInterface *m_interface;
 };

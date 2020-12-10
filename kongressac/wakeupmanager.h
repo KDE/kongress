@@ -38,14 +38,7 @@ Q_SIGNALS:
      */
     void wakeupAlarmClient();
 
-    /**
-     * @brief To be emited when wake-up manager status (active/not active) is changed
-     *
-     */
-    void activeChanged();
-
 public Q_SLOTS:
-
     /**
      * @return Handles a wake-up
      */
@@ -57,12 +50,8 @@ public Q_SLOTS:
     void removeWakeup(const int cookie);
 
 private:
-    void checkBackend();
-    void setActive(const bool activeBackend);
-
     WakeupBackend *m_wakeup_backend;
     int m_cookie;
     QVariantMap m_callback_info;
-    int m_active;
 };
 #endif //WAKEUPMANAGER_H

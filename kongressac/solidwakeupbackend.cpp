@@ -34,3 +34,15 @@ QVariant SolidWakeupBackend::scheduleWakeup(const QVariantMap &callbackInfo, con
 
     return 0;
 }
+
+bool SolidWakeupBackend::isWakeupBackend() const
+{
+    auto callMessage = QDBusMessage::createMethodCall(m_interface->service(), m_interface->path(), QStringLiteral("org.freedesktop.DBus.Introspectable"), QStringLiteral("Introspect"));
+    QDBusReply<QString> result = QDBusConnection::sessionBus().call(callMessage);
+
+    if (result.isValid() && result.value().indexOf(QStringLiteral("scheduleWakeup")) >= 0) {
+        return true;
+    }
+
+    return false;
+}
