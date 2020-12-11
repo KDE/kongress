@@ -18,9 +18,9 @@
  */
 
 import QtQuick 2.1
-import QtQml 2.1
+import QtQml.Models 2.14
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.0 as Kirigami
+import org.kde.kirigami 2.6 as Kirigami
 import org.kde.kongress 0.1 as Kongress
 
 Kirigami.GlobalDrawer {
@@ -132,6 +132,18 @@ Kirigami.GlobalDrawer {
                     pageStack.push(settingsView);
                 }
             }
+        },
+
+        Kirigami.Action {
+            id: aboutAction
+
+            iconName: "help-about-symbolic"
+            text: i18n("About")
+
+            onTriggered: {
+                popAll();
+                pageStack.push(aboutInfoPage);
+            }
         }
     ]
 
@@ -169,7 +181,7 @@ Kirigami.GlobalDrawer {
         }
     }
 
-    Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
+    Instantiator {
         model: (onlineCalendar && onlineCalendar.categories) ? onlineCalendar.categories : []
 
         delegate: Kirigami.Action {
@@ -191,6 +203,14 @@ Kirigami.GlobalDrawer {
             if(categoryActions.children) {
                 categoryActions.children = [];
             }
+        }
+    }
+
+    Component {
+        id: aboutInfoPage
+
+        Kirigami.AboutPage {
+            aboutData: _about
         }
     }
 }

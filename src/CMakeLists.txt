@@ -43,6 +43,7 @@ if (ANDROID)
         view-calendar-day
         settings-configure
         category
+        help-about-symbolic
     )
 else()
     target_link_libraries(kongress PRIVATE Qt5::Widgets)
