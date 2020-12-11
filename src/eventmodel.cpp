@@ -102,75 +102,68 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return QVariant {};
     }
 
+    auto row = index.row();
     auto calendarTz = m_local_calendar->memorycalendar()->timeZone();
+    auto startDtTime = m_events.at(row)->dtStart();
+    auto endDtTime = m_events.at(row)->dtEnd();
+    auto allDay = m_events.at(row)->allDay();
 
     switch (role) {
     case Uid :
-        return m_events.at(index.row())->uid();
+        return m_events.at(row)->uid();
     case EventStartDt:
-        return m_events.at(index.row())->dtStart();
+        return startDtTime;
     case EventDt:
-        return m_events.at(index.row())->dtStart().toString("dddd d MMMM");
+        return startDtTime.toString("dddd d MMMM");
     case ScheduleStartDt: {
-        auto startDtWConferenceTz = m_events.at(index.row())->dtStart();
-        startDtWConferenceTz.setTimeZone(calendarTz);
-        return startDtWConferenceTz;
+        startDtTime.setTimeZone(calendarTz);
+        return startDtTime;
     }
     case AllDay:
-        return m_events.at(index.row())->allDay();
+        return allDay;
     case Description:
-        return m_events.at(index.row())->description();
+        return m_events.at(row)->description();
     case Summary:
-        return m_events.at(index.row())->summary();
+        return m_events.at(row)->summary();
     case LastModified:
-        return m_events.at(index.row())->lastModified();
+        return m_events.at(row)->lastModified();
     case Location:
-        return m_events.at(index.row())->location();
+        return m_events.at(row)->location();
     case Categories:
-        return m_events.at(index.row())->categories();
+        return m_events.at(row)->categories();
     case Priority:
-        return m_events.at(index.row())->priority();
+        return m_events.at(row)->priority();
     case Created:
-        return m_events.at(index.row())->created();
+        return m_events.at(row)->created();
     case Secrecy:
-        return m_events.at(index.row())->secrecy();
+        return m_events.at(row)->secrecy();
     case EventEndDt:
-        return m_events.at(index.row())->dtEnd();
+        return endDtTime;
     case ScheduleEndDt: {
-        auto endDtWConferenceTz = m_events.at(index.row())->dtEnd();
+        auto endDtWConferenceTz = endDtTime;
         endDtWConferenceTz.setTimeZone(calendarTz);
+
         return endDtWConferenceTz;
     }
     case Transparency:
-        return m_events.at(index.row())->transparency();
+        return m_events.at(row)->transparency();
     case RepeatPeriodType:
-        return repeatPeriodType(index.row());
+        return repeatPeriodType(row);
     case RepeatEvery:
-        return repeatEvery(index.row());
+        return repeatEvery(row);
     case RepeatStopAfter:
-        return repeatStopAfter(index.row());
+        return repeatStopAfter(row);
     case IsRepeating:
-        return m_events.at(index.row())->recurs();
+        return m_events.at(row)->recurs();
     case EventCategories:
-        return m_events.at(index.row())->categoriesStr();
+        return m_events.at(row)->categoriesStr();
     case Url:
-        return m_events.at(index.row())->url();
+        return m_events.at(row)->url();
     case ShiftedStartEndDt: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-        auto allDay = m_events.at(index.row())->allDay();
-
         //Remedy for ical files that TZ-ID of events cannot be read; it should be fixed in framework
-        startDtTime.setTimeZone(calendarTz);
-        endDtTime.setTimeZone(calendarTz);
-
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndDtLocal: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-        auto allDay = m_events.at(index.row())->allDay();
-
         // Shift and convert time to the system time zone
         startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
@@ -180,9 +173,6 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndTime: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-
         // Convert time to the time zone of the conference
         startDtTime.setTimeZone(calendarTz);
         endDtTime.setTimeZone(calendarTz);
@@ -190,9 +180,6 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case ShiftedStartEndTimeLocal: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-
         // Shift and convert time to the system time zone
         startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
@@ -202,20 +189,12 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case StartEndDt: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-        auto allDay = m_events.at(index.row())->allDay();
-
         startDtTime = startDtTime.toTimeZone(calendarTz);
         endDtTime = endDtTime.toTimeZone(calendarTz);
 
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case StartEndDtLocal: {
-        auto startDtTime = m_events.at(index.row())->dtStart();
-        auto endDtTime = m_events.at(index.row())->dtEnd();
-        auto allDay = m_events.at(index.row())->allDay();
-
         //Convert time to the system time zone
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
@@ -223,7 +202,7 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case Overlapping:
-        return overlappingEvents(index.row());
+        return overlappingEvents(row);
     case ConferenceTzId: {
         return calendarTz.id();
     }
