@@ -45,17 +45,19 @@ Kirigami.ScrollablePage {
     Controls.BusyIndicator {
         anchors.centerIn: parent
 
-        running: conferenceModel.busyDownlading
+        running: conferenceModel && conferenceModel.busyDownlading
         implicitWidth: Kirigami.Units.iconSizes.enormous
         implicitHeight: width
 
     }
 
+
     Kirigami.CardsListView {
         id: view
 
-        enabled: !conferenceModel.busyDownlading && count > 0
+        enabled: conferenceModel && !conferenceModel.busyDownlading && count > 0
         model: conferenceModel
+
         section {
             property: "pastUpcoming"
             criteria: ViewSection.FullString
@@ -63,16 +65,17 @@ Kirigami.ScrollablePage {
                 label: section
             }
         }
+
         delegate: Kirigami.Card {
             id: card
 
             banner {
-                title: model.name
+                title: model && model.name
             }
 
             contentItem: Controls.Label {
                 wrapMode: Text.WordWrap
-                text: model.description
+                text: model && model.description
             }
 
             actions: [
@@ -91,5 +94,4 @@ Kirigami.ScrollablePage {
 
         controller: Kongress.ConferenceController
     }
-
 }
