@@ -37,7 +37,10 @@ public:
 
 ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, m_active_conference {nullptr}, m_conferences_file {new QFile {}}, d {new Private}
 {
-    loadConferences();
+    if (!defaultConferenceId().isEmpty()) {
+        loadConferences();
+    }
+
     connect(this, &ConferenceController::conferencesLoaded, [this]() {
         activateDefaultConference();
     });
