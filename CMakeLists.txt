@@ -47,7 +47,7 @@ find_package(PkgConfig)
 
 add_subdirectory(src)
 
-if(REMINDERS_ENABLED)
+if(NOT ANDROID AND REMINDERS_ENABLED)
     add_subdirectory(kongressac)
 endif()
 
