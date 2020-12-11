@@ -21,6 +21,7 @@
 
 #include <QObject>
 #include <QVariantMap>
+#include <QQmlEngine>
 
 class CalendarController;
 class LocalCalendar;
@@ -29,6 +30,8 @@ class SettingsController;
 class EventController : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
     enum EventCheck {
@@ -40,11 +43,15 @@ public:
 
     explicit EventController(QObject *parent = nullptr);
 
+    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
+
     CalendarController *calendarController();
     void setCalendarController(CalendarController *const controller);
 
     Q_INVOKABLE void remove(LocalCalendar *calendar, const QVariantMap &event);
     Q_INVOKABLE QVariantMap addEdit(LocalCalendar *calendar, const QVariantMap &event);
+Q_SIGNALS:
+    void calendarControllerChanged();
 
 private:
     /**

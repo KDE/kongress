@@ -53,14 +53,14 @@ Kirigami.ScrollablePage {
             onTriggered: {
                 if(root.event && root.viewMode == "favorites") {
                     var vevent = { uid: root.event.uid } ;
-                    _eventController.remove(root.rwCalendar, vevent);
+                    Kongress.EventController.remove(root.rwCalendar, vevent);
                     pageStack.pop();
                 }
                 else if(root.event) {
                     console.log("Adding event to favorites");
                     var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
-                    var addEditResult = _eventController.addEdit(root.rwCalendar, vevent);
+                    var addEditResult = Kongress.EventController.addEdit(root.rwCalendar, vevent);
                     showPassiveNotification(addEditResult["message"]);
 
                 }

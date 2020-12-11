@@ -25,8 +25,16 @@
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
 
-EventController::EventController(QObject *parent) : QObject {parent}, m_cal_controller {nullptr}, m_settings_controller {new SettingsController {this}}
+EventController::EventController(QObject *parent) : QObject {parent}, m_cal_controller {new CalendarController}, m_settings_controller {new SettingsController {this}}
 {}
+
+QObject *EventController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    return new EventController;
+}
 
 CalendarController *EventController::calendarController()
 {
@@ -36,6 +44,7 @@ CalendarController *EventController::calendarController()
 void EventController::setCalendarController(CalendarController *const controller)
 {
     m_cal_controller = controller;
+    Q_EMIT calendarControllerChanged();
 }
 
 void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventData)

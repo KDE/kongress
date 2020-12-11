@@ -38,7 +38,7 @@ Kirigami.ScrollablePage {
 
         helpfulAction: Kirigami.Action {
             text: i18n("Reload")
-            onTriggered: _conferenceController.loadConferences()
+            onTriggered: Kongress.ConferenceController.loadConferences()
         }
     }
 
@@ -89,7 +89,7 @@ Kirigami.ScrollablePage {
     Kongress.ConferenceModel {
         id: conferenceModel
 
-        controller: _conferenceController
+        controller: Kongress.ConferenceController
     }
 
 }

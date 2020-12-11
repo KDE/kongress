@@ -77,7 +77,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Delete")
                     icon.name: "delete"
 
-                    onTriggered:  _eventController.remove( root.rwCalendar,  { uid: model.uid } )
+                    onTriggered: Kongress.EventController.remove(root.rwCalendar, {uid: model.uid})
                 }
             ]
 

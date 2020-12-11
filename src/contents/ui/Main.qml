@@ -26,7 +26,7 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.ApplicationWindow {
     id: root
 
-    property Kongress.Conference activeConference: _conferenceController.activeConference
+    property Kongress.Conference activeConference: Kongress.ConferenceController.activeConference
 
     globalDrawer: GlobalDrawer {
         activeConference: root.activeConference
@@ -34,14 +34,14 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack {
-        initialPage: _conferenceController.defaultConferenceId ? scheduleView : conferencesView
+        initialPage: Kongress.ConferenceController.defaultConferenceId ? scheduleView : conferencesView
         defaultColumnWidth: Kirigami.Units.gridUnit * 40
     }
 
     Kongress.LocalCalendar {
         id: onlineCalendar
 
-        calendarController: _calendarController
+        calendarController: Kongress.CalendarController
         calendarId: root.activeConference && root.activeConference.id
         calendarUrl: root.activeConference && root.activeConference.icalUrl
         calendarTzId: root.activeConference && root.activeConference.timeZoneId
@@ -52,7 +52,7 @@ Kirigami.ApplicationWindow {
     Kongress.LocalCalendar {
         id: favoritesCalendar
 
-        calendarController: _calendarController
+        calendarController: Kongress.CalendarController
 
         calendarId: root.activeConference && ("favorites_" +  root.activeConference.id)
         calendarUrl: ""
@@ -92,7 +92,7 @@ Kirigami.ApplicationWindow {
              * Expects @selectedConferenceId variable object to provide the information of the selected conference
              */
             onSelected: {
-                _conferenceController.activateConference(selectedConferenceId)
+                Kongress.ConferenceController.activateConference(selectedConferenceId)
                 pageStack.pop(root);
                 pageStack.push(scheduleView,  {eventStartDt: ""});
             }
@@ -109,4 +109,6 @@ Kirigami.ApplicationWindow {
             geoUrl: root.activeConference.venueOsmUrl
         }
     }
+
+    Component.onCompleted: Kongress.EventController.calendarController = Kongress.CalendarController
 }

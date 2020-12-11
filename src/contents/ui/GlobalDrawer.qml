@@ -21,6 +21,7 @@ import QtQuick 2.1
 import QtQml 2.1
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.0 as Kirigami
+import org.kde.kongress 0.1 as Kongress
 
 Kirigami.GlobalDrawer {
     id: drawer
@@ -117,7 +118,7 @@ Kirigami.GlobalDrawer {
                 iconName: activeConference ? 'exchange-positions' : 'edit-select'
 
                 onTriggered: {
-                    _conferenceController.clearActiveConference();
+                    Kongress.ConferenceController.clearActiveConference();
                     popAll();
                     pageStack.push(conferencesView)
                 }

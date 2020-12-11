@@ -43,6 +43,14 @@ ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, 
     });
 }
 
+QObject *ConferenceController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(scriptEngine);
+
+    return new ConferenceController;
+}
+
 QVector<Conference *> ConferenceController::conferences() const
 {
     return m_conferences;

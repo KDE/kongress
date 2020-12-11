@@ -22,6 +22,7 @@
 #include <QObject>
 #include <QVariantMap>
 #include <QMap>
+#include <QQmlEngine>
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/MemoryCalendar>
 
@@ -32,8 +33,9 @@ class CalendarController : public QObject
     Q_PROPERTY(QString calendars READ calendars NOTIFY calendarsChanged)
 
 public:
-
     explicit CalendarController(QObject *parent = nullptr);
+
+    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
 
     QString calendars() const;
     QString calendarFile(const QString &calendarId);

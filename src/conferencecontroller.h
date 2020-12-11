@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QVector>
 #include <QJsonObject>
+#include <QQmlEngine>
 
 class Conference;
 
@@ -35,6 +36,7 @@ class ConferenceController : public QObject
 
 public:
     explicit ConferenceController(QObject *parent = nullptr);
+    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
 
     Conference *activeConference() const;
 
