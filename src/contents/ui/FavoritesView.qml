@@ -104,7 +104,7 @@ Kirigami.ScrollablePage {
                 }
 
                 RowLayout {
-                    visible: model.location != ""
+                    visible: model && model.location != ""
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 
@@ -116,13 +116,13 @@ Kirigami.ScrollablePage {
 
                     Controls2.Label {
                         wrapMode: Text.WordWrap
-                        text: model.location
+                        text: model && model.location
                         Layout.fillWidth: true
                     }
                 }
 
                 RowLayout {
-                    visible: root.showCategories && (model.eventCategories != "")
+                    visible: root.showCategories && model && (model.eventCategories != "")
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 
@@ -134,7 +134,7 @@ Kirigami.ScrollablePage {
 
                     Controls2.Label {
                         wrapMode: Text.WordWrap
-                        text: model.eventCategories
+                        text: model && model.eventCategories
                         Layout.fillWidth: true
                     }
                 }
@@ -142,7 +142,7 @@ Kirigami.ScrollablePage {
                 Kirigami.InlineMessage {
                     visible: model.overlapping > 0
                     type: Kirigami.MessageType.Information
-                    text: i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
+                    text: model && i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
                     width: cardDelegate.availableWidth
                 }
 
