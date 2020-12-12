@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+#
+# SPDX-License-Identifier: BSD-2-Clause
+
 [D-BUS Service]
 Name=org.kde.kongressac
 Exec=@SERV_EXEC@

@@ -1,6 +1,9 @@
+# SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+#
+# SPDX-License-Identifier: BSD-2-Clause
 
 if (NOT STATIC_LIBRARY)
-    ecm_create_qm_loader(kongress_QM_LOADER kongress_qt)
+    ecm_create_qm_loader(kongress_QM_LOADER kongress)
 endif()
 
 set(kongress_SRCS
@@ -14,9 +17,8 @@ set(kongress_SRCS
     conferencecontroller.cpp
     conferencemodel.cpp
     alarmchecker.cpp
+    resources.qrc
     )
-
-qt5_add_resources(RESOURCES resources.qrc)
 
 add_executable(kongress ${kongress_SRCS} ${RESOURCES})
 target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Test Qt5::Svg Qt5::QuickControls2 Qt5::Network Qt5::DBus KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
@@ -50,5 +52,4 @@ else()
 endif()
 
 install(TARGETS kongress ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
-
 install(FILES contents/ui/kongress.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)

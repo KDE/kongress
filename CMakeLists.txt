@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+#
+# SPDX-License-Identifier: BSD-2-Clause
+
 cmake_minimum_required(VERSION 3.0)
 
 project(kongress)
@@ -11,8 +15,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(REMINDERS_ENABLED "Build with reminders support" ON)
 
 include(FeatureSummary)
-
-################# set KDE specific information #################
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -39,11 +41,6 @@ endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
 endif()
-
-################# now find all used packages #################
-
-find_package(PkgConfig)
-#########################################################################
 
 add_subdirectory(src)
 

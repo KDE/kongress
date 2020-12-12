@@ -1,0 +1,28 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Kongress
+Upstream-Contact: Dimitris Kardarakos <dimkard@posteo.net>
+Source: https://invent.kde.org/utilities/kongress
+
+Files: icons/*
+Copyright: 2020 Breeze Icon Theme Developers
+License: LGPL-3.0-or-later
+
+Files: res/*
+Copyright: 2020 Breeze Icon Theme Developers
+License: LGPL-3.0-or-later
+
+Files: ic_launcher-playstore.png
+Copyright: 2020 Breeze Icon Theme Developers
+License: LGPL-3.0-or-later
+
+Files: logo.png 
+Copyright: 2020 Breeze Icon Theme Developers
+License: LGPL-3.0-or-later
+
+Files: screenshots/*
+Copyright: Dimitris Kardarakos <dimkard@posteo.net>
+License: CC-BY-SA-4.0
+
+Files: src/contents/ui/kongress.svg
+Copyright: 2020 Breeze Icon Theme Developers
+License: LGPL-3.0-or-later
