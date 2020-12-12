@@ -57,7 +57,6 @@ Kirigami.ScrollablePage {
                     pageStack.pop();
                 }
                 else if(root.event) {
-                    console.log("Adding event to favorites");
                     var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
 
                     var addEditResult = Kongress.EventController.addEdit(root.rwCalendar, vevent);

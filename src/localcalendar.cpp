@@ -59,10 +59,10 @@ void LocalCalendar::createCalendar()
 
         m_calendar = m_cal_controller->createLocalCalendar(m_calendar_id, m_calendar_tz_id.toUtf8());
     }
-
     Q_EMIT memorycalendarChanged();
     Q_EMIT categoriesChanged();
     Q_EMIT eventsChanged();
+
 }
 
 QStringList LocalCalendar::categories() const

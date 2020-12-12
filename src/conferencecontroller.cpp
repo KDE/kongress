@@ -23,9 +23,10 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KIO/StoredTransferJob>
 
 class ConferenceController::Private
 {
@@ -75,17 +76,22 @@ void ConferenceController::loadConferences()
     m_conferences_file = new QFile {dir + fileName};
 
     const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
-    auto *fetchJob = KIO::storedGet(conferencesUrl, KIO::Reload, KIO::HideProgressInfo);
 
-    connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob]() {
+    QNetworkRequest request {conferencesUrl};
+    auto nm = new QNetworkAccessManager {this};
+    nm->get(request);
 
-        if (fetchJob->error() == 0) {
+    connect(nm, &QNetworkAccessManager::finished, [this, nm](QNetworkReply * reply) {
+        if (reply->error() == QNetworkReply::NoError) {
             if (m_conferences_file == nullptr || !m_conferences_file->open(QIODevice::WriteOnly)) {
                 qDebug() << "Cannot open conferences file" << m_conferences_file->errorString();
+            } else {
+                m_conferences_file->write(reply->readAll());
+                m_conferences_file->close();
             }
-            m_conferences_file->write(fetchJob->data());
-            m_conferences_file->close();
         }
+        reply->deleteLater();
+        nm->deleteLater();
         Q_EMIT downlading(false);
         loadConferencesFromFile(*m_conferences_file);
     });

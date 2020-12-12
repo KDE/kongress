@@ -23,10 +23,11 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 #include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KIO/StoredTransferJob>
 
 class CalendarController::Private
 {
@@ -155,20 +156,22 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
     Q_EMIT downlading(calendarId, true);
 
     auto filePath = calendarFile(calendarId);
-    auto *fetchJob = KIO::storedGet(url, KIO::Reload, KIO::HideProgressInfo);
 
-    connect(fetchJob, &KIO::StoredTransferJob::result, this, [this, fetchJob, filePath, calendarId, timeZoneId]() {
-        if (fetchJob->error() == 0) {
-            QFile f {filePath};
-            if (!f.open(QIODevice::WriteOnly)) {
-                qDebug() << "Cannot open" << filePath << f.errorString();
+    QNetworkRequest request {url};
+    auto nm = new QNetworkAccessManager {this};
+    nm->get(request);
+
+    connect(nm, &QNetworkAccessManager::finished, [this, nm, filePath, calendarId, timeZoneId](QNetworkReply * reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            if (saveToDisk(filePath, reply->readAll())) {
+                downloadFinished(calendarId, timeZoneId, filePath);
             }
-            f.write(fetchJob->data());
-            f.close();
-            downloadFinished(calendarId, timeZoneId, filePath);
         }
+        reply->deleteLater();
+        nm->deleteLater();
         Q_EMIT downlading(calendarId, false);
     });
+
 }
 
 void CalendarController::downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath)
@@ -192,15 +195,15 @@ void CalendarController::downloadFinished(const QString &calendarId, const QByte
     Q_EMIT calendarsChanged();
     Q_EMIT calendarDownloaded(calendarId);
 }
-bool CalendarController::saveToDisk(const QString &filename, QIODevice *data)
+
+bool CalendarController::saveToDisk(const QString &filename, const QByteArray &data)
 {
     QFile file {filename};
     if (!file.open(QIODevice::WriteOnly)) {
         qDebug() << (QString {"Could not open %1 for writing: %2"}).arg(qPrintable(filename), qPrintable(file.errorString()));
         return false;
     }
-
-    file.write(data->readAll());
+    file.write(data);
     file.close();
 
     return true;

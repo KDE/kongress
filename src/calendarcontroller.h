@@ -23,6 +23,7 @@
 #include <QVariantMap>
 #include <QMap>
 #include <QQmlEngine>
+#include <QNetworkAccessManager>
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/MemoryCalendar>
 
@@ -55,7 +56,7 @@ private:
     void downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath);
     static QString filenameToPath(const QString &calendarId);
     void removeCalendarFromConfig(const QString &calendarId);
-    bool saveToDisk(const QString &filename, QIODevice *data);
+    bool saveToDisk(const QString &filename, const QByteArray &data);
     void loadSavedConferences();
     void addConferenceToConfig(const QString &calendarId);
     void addTzIdToConfig(const QString &calendarId, const QByteArray &timeZoneId);

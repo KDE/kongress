@@ -62,7 +62,7 @@ Kirigami.ScrollablePage {
         delegate: Kirigami.Card {
             id: cardDelegate
 
-            banner.title: model.summary
+            banner.title: model && model.summary
             banner.titleLevel: 3
 
             actions: [
@@ -140,7 +140,7 @@ Kirigami.ScrollablePage {
                 }
 
                 Kirigami.InlineMessage {
-                    visible: model.overlapping > 0
+                    visible: model && model.overlapping > 0
                     type: Kirigami.MessageType.Information
                     text: model && i18np("Overlaps with another talk", "Overlaps with %1 other talks", model.overlapping)
                     width: cardDelegate.availableWidth
