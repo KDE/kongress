@@ -16,6 +16,7 @@
   <name xml:lang="it">Kongress</name>
   <name xml:lang="ko">Kongress</name>
   <name xml:lang="nl">Kongress</name>
+  <name xml:lang="nn">Kongress</name>
   <name xml:lang="pt">Kongress</name>
   <name xml:lang="ru">Kongress</name>
   <name xml:lang="sk">Kongress</name>
@@ -36,6 +37,7 @@
   <summary xml:lang="it">Applicazione di supporto per KDE Conference</summary>
   <summary xml:lang="ko">KDE 콘퍼런스 도우미 프로그램</summary>
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
+  <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
   <summary xml:lang="pt">Aplicação assistente do KDE Conference</summary>
   <summary xml:lang="sl">Program za spremljanje konference KDE</summary>
   <summary xml:lang="sv">KDE konferenskompanjonprogram</summary>
@@ -54,6 +56,7 @@
     <p xml:lang="it">KDE Conference è un'applicazione di supporto per le conferenze realizzate da KDE</p>
     <p xml:lang="ko">KDE Conference는 KDE에서 제작한 콘퍼런스 도우미 프로그램입니다</p>
     <p xml:lang="nl">KDE Conference is de compagnon-toepassing voor conferenties georganiseerd door KDE</p>
+    <p xml:lang="nn">Konferanse­assistent for konferansar</p>
     <p xml:lang="pt">O KDE Conference é uma aplicação assistente para conferências criada pelo KDE</p>
     <p xml:lang="sl">KDE Conference je spremljevalna aplikacija za konference, ki jo je izdelal KDE</p>
     <p xml:lang="sv">KDE Konferens är ett kompanjonprogram för konferenser gjort av KDE</p>
