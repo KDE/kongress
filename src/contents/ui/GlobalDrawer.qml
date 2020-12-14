@@ -14,7 +14,6 @@ import org.kde.kongress 0.1 as Kongress
 Kirigami.GlobalDrawer {
     id: drawer
 
-    title: "Kongress"
     property var activeConference
     property var pageStack
 
@@ -28,22 +27,28 @@ Kirigami.GlobalDrawer {
         }
     }
 
+    header: Kirigami.AbstractApplicationHeader {
+        topPadding: Kirigami.Units.smallSpacing
+        bottomPadding: Kirigami.Units.largeSpacing
+        leftPadding: Kirigami.Units.largeSpacing
+        rightPadding: Kirigami.Units.smallSpacing
+        implicitHeight: Kirigami.Units.gridUnit * 2
+        Kirigami.Heading {
+            level: 1
+            text: activeConference ? activeConference.name : i18n("Conference")
+            Layout.fillWidth: true
+        }
+    }
+
     actions: [
         Kirigami.Action {
-            id: conferenceSelector
+            text: i18n("Check for updates")
+            visible: activeConference
+            icon.name: "update-none"
 
-            text: activeConference ? activeConference.name : i18n("Conference")
-            iconName: "group"
-            expandible: true
-
-            Kirigami.Action {
-                text: i18n("Check for updates")
-                visible: activeConference
-
-                onTriggered: {
-                    showPassiveNotification(i18n("Checking for schedule updates"));
-                    onlineCalendar.loadOnlineCalendar();
-                }
+            onTriggered: {
+                showPassiveNotification(i18n("Checking for schedule updates"));
+                onlineCalendar.loadOnlineCalendar();
             }
         },
 
