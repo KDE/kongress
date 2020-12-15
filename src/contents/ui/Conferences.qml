@@ -19,7 +19,7 @@ Kirigami.ScrollablePage {
     Kirigami.PlaceholderMessage {
         anchors.centerIn: parent
 
-        visible: !conferenceModel.busyDownlading && view.count == 0
+        visible: !conferenceModel.busyDownlading && view.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         text: i18n("No conference found")
 

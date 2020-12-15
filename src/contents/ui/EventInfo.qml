@@ -34,11 +34,11 @@ Kirigami.ScrollablePage {
 
     actions.main:
         Kirigami.Action {
-            text: viewMode == "favorites" ? i18n("Delete") : i18n("Favorite")
-            icon.name: viewMode == "favorites" ? "delete" : "favorite"
+            text: viewMode === "favorites" ? i18n("Delete") : i18n("Favorite")
+            icon.name: viewMode === "favorites" ? "delete" : "favorite"
 
             onTriggered: {
-                if(root.event && root.viewMode == "favorites") {
+                if(root.event && root.viewMode === "favorites") {
                     var vevent = { uid: root.event.uid } ;
                     Kongress.EventController.remove(root.rwCalendar, vevent);
                     pageStack.pop();
@@ -80,7 +80,7 @@ Kirigami.ScrollablePage {
 
                     wrapMode: Text.WordWrap
                     text: {
-                        if (viewMode == "favorites") {
+                        if (viewMode === "favorites") {
                             if (Kongress.SettingsController.displayInLocalTimezone) {
                                 return event.startEndDtLocal;
                             }

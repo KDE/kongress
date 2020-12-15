@@ -23,7 +23,7 @@ Kirigami.ScrollablePage {
     rightPadding: 0
 
     Kirigami.PlaceholderMessage {
-        visible: cardsListview.count == 0
+        visible: cardsListview.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         text: eventStartDt.toLocaleDateString() != "" ? i18n("No favorite talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No favorite talks found")
 
