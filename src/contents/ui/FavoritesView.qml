@@ -25,7 +25,7 @@ Kirigami.ScrollablePage {
     Kirigami.PlaceholderMessage {
         visible: cardsListview.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        text: eventStartDt.toLocaleDateString() != "" ? i18n("No favorite talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No favorite talks found")
+        text: eventStartDt.toLocaleDateString() !== "" ? i18n("No favorite talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No favorite talks found")
 
         anchors.centerIn: parent
     }
@@ -91,7 +91,7 @@ Kirigami.ScrollablePage {
                 }
 
                 RowLayout {
-                    visible: model && model.location != ""
+                    visible: model && model.location !== ""
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 
@@ -109,7 +109,7 @@ Kirigami.ScrollablePage {
                 }
 
                 RowLayout {
-                    visible: root.showCategories && model && (model.eventCategories != "")
+                    visible: root.showCategories && model && (model.eventCategories !== "")
                     width: cardDelegate.availableWidth
                     spacing: Kirigami.Units.smallSpacing
 

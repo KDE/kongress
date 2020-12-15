@@ -23,7 +23,7 @@ Kirigami.ScrollablePage {
         Kirigami.Action {
             text: i18n("Web Page")
             icon.name: "internet-services"
-            enabled: root.event.url != ""
+            enabled: root.event.url !== ""
 
             onTriggered: {
                 if(root.event && (root.event.url)) {
@@ -102,7 +102,7 @@ Kirigami.ScrollablePage {
             }
 
             RowLayout {
-                visible: root.event && (event.location != "")
+                visible: root.event && (event.location !== "")
                 width: cardDelegate.availableWidth
                 spacing: Kirigami.Units.smallSpacing
 
@@ -120,7 +120,7 @@ Kirigami.ScrollablePage {
             }
 
             RowLayout {
-                visible: root.event && (event.eventCategories != "")
+                visible: root.event && (event.eventCategories !== "")
                 width: cardDelegate.availableWidth
                 spacing: Kirigami.Units.smallSpacing
 
@@ -138,7 +138,7 @@ Kirigami.ScrollablePage {
             }
 
             Controls2.Label {
-                visible: root.event && event.description != ""
+                visible: root.event && event.description !== ""
                 width: cardDelegate.availableWidth
                 wrapMode: Text.WordWrap
                 text: root.event ? event.description : ""

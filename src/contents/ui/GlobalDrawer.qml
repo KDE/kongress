@@ -82,7 +82,7 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Map")
             iconName: "find-location"
-            visible: activeConference && (activeConference.venueOsmUrl != "")
+            visible: activeConference && (activeConference.venueOsmUrl !== "")
 
             onTriggered: {
                 popAll();
@@ -149,7 +149,7 @@ Kirigami.GlobalDrawer {
     Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
         id: daysInstantiator
 
-        model: activeConference && (activeConference.days != null) ? activeConference.days: []
+        model: activeConference && (activeConference.days !== null) ? activeConference.days: []
 
         delegate: Kirigami.Action {
             property date conferenceDay: new Date(modelData)
@@ -187,7 +187,7 @@ Kirigami.GlobalDrawer {
         }
 
         onObjectAdded: {
-            if(object.text != "") {
+            if(object.text !== "") {
                 categoryActions.children.push(object)
             }
         }

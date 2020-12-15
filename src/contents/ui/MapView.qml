@@ -23,7 +23,7 @@ Kirigami.ScrollablePage {
 
         Image {
             Layout.fillWidth: true
-            visible: imageUrl != ""
+            visible: imageUrl !== ""
             source: root.imageUrl
             fillMode: Image.PreserveAspectFit
             asynchronous: true
@@ -31,19 +31,19 @@ Kirigami.ScrollablePage {
 
         Controls2.Label {
             Layout.alignment : Qt.AlignHCenter
-            visible: root.latitude != ""
+            visible: root.latitude !== ""
             text: i18n("Latitude: %1", root.latitude)
         }
 
         Controls2.Label {
             Layout.alignment : Qt.AlignHCenter
-            visible: root.longitude != ""
+            visible: root.longitude !== ""
             text: i18n("Longitude: %1", root.longitude)
         }
 
         Controls2.Button {
             Layout.alignment : Qt.AlignHCenter
-            visible: root.geoUrl != ""
+            visible: root.geoUrl !== ""
             text: i18n("OpenStreetMap")
 
             onClicked: Qt.openUrlExternally(root.geoUrl)
