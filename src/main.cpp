@@ -54,8 +54,26 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterSingletonType<SettingsController>("org.kde.kongress", 0, 1, "SettingsController", &SettingsController::qmlInstance);
     qmlRegisterSingletonType<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController", &ConferenceController::qmlInstance);;
-    qmlRegisterSingletonType<CalendarController>("org.kde.kongress", 0, 1, "CalendarController", &CalendarController::qmlInstance);
-    qmlRegisterSingletonType<EventController>("org.kde.kongress", 0, 1, "EventController", &EventController::qmlInstance);;
+
+    static CalendarController *s_calendar_controller {nullptr};
+    static EventController *s_event_controller {nullptr};
+
+    qmlRegisterSingletonType<EventController>("org.kde.kongress", 0, 1, "EventController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
+        engine->setObjectOwnership(s_event_controller, QQmlEngine::CppOwnership);
+        return s_event_controller;
+    });
+
+    qmlRegisterSingletonType<CalendarController>("org.kde.kongress", 0, 1, "CalendarController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
+        engine->setObjectOwnership(s_calendar_controller, QQmlEngine::CppOwnership);
+        return s_calendar_controller;
+    });
+
+    CalendarController calendarController;
+    s_calendar_controller = &calendarController;
+
+    EventController eventController;
+    eventController.setCalendarController(&calendarController);
+    s_event_controller = &eventController;
 
 #ifdef Q_OS_ANDROID
     QQuickStyle::setStyle(QStringLiteral("Material"));

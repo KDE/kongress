@@ -16,14 +16,6 @@
 EventController::EventController(QObject *parent) : QObject {parent}, m_cal_controller {new CalendarController}, m_settings_controller {new SettingsController {this}}
 {}
 
-QObject *EventController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine);
-    Q_UNUSED(scriptEngine);
-
-    return new EventController;
-}
-
 CalendarController *EventController::calendarController()
 {
     return m_cal_controller;

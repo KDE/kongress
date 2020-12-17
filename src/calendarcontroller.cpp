@@ -30,14 +30,6 @@ CalendarController::CalendarController(QObject *parent)
     loadSavedConferences();
 }
 
-QObject *CalendarController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine);
-    Q_UNUSED(scriptEngine);
-
-    return new CalendarController;
-}
-
 QString CalendarController::calendars() const
 {
     return d->config.group("general").readEntry("calendars", QString {});

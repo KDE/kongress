@@ -101,6 +101,4 @@ Kirigami.ApplicationWindow {
             geoUrl: root.activeConference.venueOsmUrl
         }
     }
-
-    Component.onCompleted: Kongress.EventController.calendarController = Kongress.CalendarController
 }
