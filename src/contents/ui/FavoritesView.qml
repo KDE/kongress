@@ -85,7 +85,7 @@ Kirigami.ScrollablePage {
 
                     Controls2.Label {
                         wrapMode: Text.WordWrap
-                        text: Kongress.SettingsController.displayInLocalTimezone ? model.startEndDtLocal : model.startEndDt
+                        text: Kongress.SettingsController.displayInLocalTimezone ? (model && model.startEndDtLocal) : (model && model.startEndDt)
                         Layout.fillWidth: true
                     }
                 }
