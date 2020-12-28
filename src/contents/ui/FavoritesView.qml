@@ -57,7 +57,10 @@ Kirigami.ScrollablePage {
                     text: i18n("Details")
                     icon.name: "documentinfo"
 
-                    onTriggered: pageStack.push(eventInfo, {event: model})
+                    onTriggered: {
+                        pageStack.pop(root);
+                        pageStack.push(eventInfo, {event: model});
+                    }
                 },
 
                 Kirigami.Action {
