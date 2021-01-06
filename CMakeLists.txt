@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.0)
 
-project(kongress)
+project(kongress VERSION "0.99")
 
 set(KF5_MIN_VERSION "5.63.0")
 set(QT_MIN_VERSION "5.7.0")

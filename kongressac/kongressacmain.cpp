@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+ * SPDX-FileCopyrightText: 2021 Dimitris Kardarakos <dimkard@posteo.net>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -17,10 +17,10 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    KAboutData aboutData {QStringLiteral("kongressac"), i18n("KDE Conference Alarm Check Daemon"),
-                          QString {}, i18n("KDE Conference Alarm Check Daemon"),
+    KAboutData aboutData {QStringLiteral("kongressac"), i18n("Kongress Alarm Check Daemon"),
+                          QString {}, i18n("Kongress Alarm Check Daemon"),
                           KAboutLicense::GPL,
-                          i18n("(c) 2020 Dimitris Kardarakos"),
+                          i18n("(c) 2021 Dimitris Kardarakos"),
                           QString {}, QString {}};
     aboutData.addAuthor(i18n("Dimitris Kardarakos"), i18n("Maintainer"),
                         QStringLiteral("dimkard@posteo.net"));

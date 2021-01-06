@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+ SPDX-FileCopyrightText: 2021 Dimitris Kardarakos <dimkard@posteo.net>
  SPDX-License-Identifier: CC0-1.0
 -->
 <component type="desktop">
@@ -50,7 +50,7 @@
   <summary xml:lang="uk">KDE-компаньйон для конференцій</summary>
   <summary xml:lang="x-test">xxKDE Conference companion applicationxx</summary>
   <description>
-    <p>KDE Conference is companion application for conferences made by KDE</p>
+    <p>Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="ca">Congressos del KDE és una aplicació auxiliar per als congressos del KDE</p>
     <p xml:lang="ca-valencia">Congressos del KDE és una aplicació auxiliar per als congressos del KDE</p>
     <p xml:lang="en-GB">KDE Conference is companion application for conferences made by KDE</p>
@@ -70,7 +70,30 @@
     <p xml:lang="uk">KDE Conference — програма-компаньйон для конференцій, які проводить KDE</p>
     <p xml:lang="x-test">xxKDE Conference is companion application for conferences made by KDExx</p>
   </description>
-  <url type="bugtracker"/>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Kongress on Mobile</caption>
+      <image>https://cdn.kde.org/screenshots/kongress/mobile.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Kongress on Desktop</caption>
+      <image>https://cdn.kde.org/screenshots/kongress/desktop.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://invent.kde.org/utilities/kongress</url>
+  <releases>
+    <release version="0.99" date="2021-01-06">
+      <description>
+        <p>Kongress first official release</p>
+        <ul>
+          <li>Display the schedule of a collection of conferences</li>
+          <li>Show the schedule of the talks by conference day</li>
+          <li>Manage a list of favorite talks</li>
+          <li>Notify the user before talk starts (only on KDE Plasma)</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
   <project_group>KDE</project_group>
   <provides>
     <binary>kongress</binary>
