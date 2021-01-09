@@ -23,6 +23,7 @@
   <name xml:lang="nl">Kongress</name>
   <name xml:lang="nn">Kongress</name>
   <name xml:lang="pt">Kongress</name>
+  <name xml:lang="pt-BR">Kongress</name>
   <name xml:lang="ru">Kongress</name>
   <name xml:lang="sk">Kongress</name>
   <name xml:lang="sl">Kongress</name>
@@ -45,6 +46,7 @@
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
   <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
   <summary xml:lang="pt">Aplicação assistente do KDE Conference</summary>
+  <summary xml:lang="pt-BR">Aplicação assistente de conferências da KDE</summary>
   <summary xml:lang="sl">Program za spremljanje konference KDE</summary>
   <summary xml:lang="sv">KDE konferenskompanjonprogram</summary>
   <summary xml:lang="uk">KDE-компаньйон для конференцій</summary>
@@ -52,9 +54,12 @@
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
+    <p xml:lang="ca-valencia">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
     <p xml:lang="es">Kongress es una aplicación complementaria para conferencias creada por KDE</p>
     <p xml:lang="nl">Kongress is de compagnon-toepassing voor conferenties, gemaakt door KDE</p>
+    <p xml:lang="nn">Kongress er ein konferanse­assistent frå KDE</p>
     <p xml:lang="pt">O Kongress é uma aplicação assistente para conferências criada pelo KDE</p>
+    <p xml:lang="pt-BR">Kongress é uma aplicação assistente para conferências produzido pela KDE</p>
     <p xml:lang="sl">Kongress je spremljevalna aplikacija za konference, ki jo je izdelal KDE</p>
     <p xml:lang="sv">Kongress är ett kompanjonprogram för konferenser gjort av KDE</p>
     <p xml:lang="uk">Kongress — програма-компаньйон для конференцій, які проводить KDE</p>
@@ -64,9 +69,12 @@
     <screenshot type="default">
       <caption>Kongress on Mobile</caption>
       <caption xml:lang="ca">Kongress al mòbil</caption>
+      <caption xml:lang="ca-valencia">Kongress al mòbil</caption>
       <caption xml:lang="es">Kongress para móviles</caption>
       <caption xml:lang="nl">Kongress op mobiel</caption>
+      <caption xml:lang="nn">Kongress på mobil</caption>
       <caption xml:lang="pt">O Kongress no Telemóvel</caption>
+      <caption xml:lang="pt-BR">Kongress em aparelhos móveis</caption>
       <caption xml:lang="sl">Kongress na mobilcu</caption>
       <caption xml:lang="sv">Kongress på mobil</caption>
       <caption xml:lang="uk">Kongress на мобільному</caption>
@@ -76,9 +84,13 @@
     <screenshot>
       <caption>Kongress on Desktop</caption>
       <caption xml:lang="ca">Kongress a l'escriptori</caption>
+      <caption xml:lang="ca-valencia">Kongress a l'escriptori</caption>
       <caption xml:lang="es">Kongress para el escritorio</caption>
       <caption xml:lang="nl">Kongress op bureaublad</caption>
+      <caption xml:lang="nn">Kongress på skrivebordet</caption>
       <caption xml:lang="pt">O Kongress no Computador</caption>
+      <caption xml:lang="pt-BR">Kongress no desktop</caption>
+      <caption xml:lang="sl">Kongress na Namizju</caption>
       <caption xml:lang="sv">Kongress på skrivbordet</caption>
       <caption xml:lang="uk">Kongress на робочій станції</caption>
       <caption xml:lang="x-test">xxKongress on Desktopxx</caption>
