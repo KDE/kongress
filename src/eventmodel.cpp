@@ -148,11 +148,16 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     case Url:
         return m_events.at(row)->url();
     case ShiftedStartEndDt: {
-        //Remedy for ical files that TZ-ID of events cannot be read; it should be fixed in framework
+        // Shift and convert time to the time zone of the conference
+        startDtTime.setTimeZone(calendarTz);
+        startDtTime = startDtTime.toTimeZone(calendarTz);
+        endDtTime.setTimeZone(calendarTz);
+        endDtTime = endDtTime.toTimeZone(calendarTz);
+
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndDtLocal: {
-        // Shift and convert time to the system time zone
+        // Shift time to the time zone of the conference and convert to the system time zone
         startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         endDtTime.setTimeZone(calendarTz);
@@ -161,14 +166,14 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndTime: {
-        // Convert time to the time zone of the conference
+        // Shift time to the time zone of the conference
         startDtTime.setTimeZone(calendarTz);
         endDtTime.setTimeZone(calendarTz);
 
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case ShiftedStartEndTimeLocal: {
-        // Shift and convert time to the system time zone
+        // Shift time to the conference time zone and convert time to the system time zone
         startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         endDtTime.setTimeZone(calendarTz);
@@ -177,6 +182,7 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case StartEndDt: {
+        // Convert time to the time zone of the conference
         startDtTime = startDtTime.toTimeZone(calendarTz);
         endDtTime = endDtTime.toTimeZone(calendarTz);
 
