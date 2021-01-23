@@ -52,4 +52,3 @@ else()
 endif()
 
 install(TARGETS kongress ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES contents/ui/kongress.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)

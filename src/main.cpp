@@ -9,6 +9,7 @@
 #include <QtQml>
 #include <QUrl>
 #include <QQuickStyle>
+#include <QIcon>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KAboutData>
@@ -45,6 +46,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QApplication::setApplicationDisplayName(about.displayName());
     QApplication::setOrganizationDomain(about.organizationDomain());
     QApplication::setApplicationVersion(about.version());
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kongress")));
 
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
