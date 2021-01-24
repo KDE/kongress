@@ -4,7 +4,6 @@
     "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "kongress",
-    "rename-icon": "kongress",
     "tags": ["nightly"],
     "finish-args": [
         "--share=ipc",

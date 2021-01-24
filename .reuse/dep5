@@ -23,6 +23,6 @@ Files: screenshots/*
 Copyright: Dimitris Kardarakos <dimkard@posteo.net>
 License: CC-BY-SA-4.0
 
-Files: kongress.svg
+Files: org.kde.kongress.svg
 Copyright: 2020 Breeze Icon Theme Developers
 License: LGPL-3.0-or-later
