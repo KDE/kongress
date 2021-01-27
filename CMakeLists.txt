@@ -26,7 +26,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Test Qml QuickControls2 Network)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Test Qml QuickControls2 Network)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 
@@ -35,7 +35,7 @@ if (ANDROID)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS AndroidExtras)
     find_package(OpenSSL REQUIRED)
 else()
-    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
+    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets DBus)
 endif()
 
 if(NOT ANDROID AND REMINDERS_ENABLED)

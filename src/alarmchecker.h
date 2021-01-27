@@ -30,6 +30,8 @@ public:
     int active();
 
 private:
+#ifndef Q_OS_ANDROID
     QDBusInterface *m_interface;
+#endif
 };
 #endif //ALARM_CHECKER_H
