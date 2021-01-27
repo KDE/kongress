@@ -4,7 +4,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include <QtGlobal>
+#ifdef Q_OS_ANDROID
+#include <QGuiApplication>
+#else
 #include <QApplication>
+#endif
 #include <QQmlApplicationEngine>
 #include <QtQml>
 #include <QUrl>
@@ -26,7 +31,11 @@
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#ifdef Q_OS_ANDROID
     QApplication app {argc, argv};
+#else
+    QApplication app {argc, argv};
+#endif
     KLocalizedString::setApplicationDomain("kongress");
 
     KAboutData about {QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral("1.0"), i18n("KDE Conference Companion"), KAboutLicense::GPL_V3, i18n("© 2021 KDE Community")};
@@ -42,11 +51,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     parser.process(app);
     about.processCommandLine(&parser);
 
-    QApplication::setApplicationName(about.componentName());
-    QApplication::setApplicationDisplayName(about.displayName());
-    QApplication::setOrganizationDomain(about.organizationDomain());
-    QApplication::setApplicationVersion(about.version());
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
+    QGuiApplication::setApplicationName(about.componentName());
+    QGuiApplication::setApplicationDisplayName(about.displayName());
+    QGuiApplication::setOrganizationDomain(about.organizationDomain());
+    QGuiApplication::setApplicationVersion(about.version());
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
 
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
