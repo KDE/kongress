@@ -14,6 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(REMINDERS_ENABLED "Build with reminders support" ON)
 
+include(CTest)
 include(FeatureSummary)
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -26,7 +27,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Test Qml QuickControls2 Network)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Qml QuickControls2 Network)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 
@@ -37,7 +38,9 @@ if (ANDROID)
 else()
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
-
+if (BUILD_TESTING)
+    find_pacakge(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
+endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
 endif()

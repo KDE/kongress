@@ -21,7 +21,10 @@ set(kongress_SRCS
     )
 
 add_executable(kongress ${kongress_SRCS} ${RESOURCES})
-target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Test Qt5::Svg Qt5::QuickControls2 Qt5::Network Qt5::DBus KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
+target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Network Qt5::DBus KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
+if (BUILD_TESTING)
+    target_link_libraries(kongress PRIVATE Qt5::Test)
+endif()
 
 if (ANDROID)
     target_link_libraries(kongress PRIVATE
