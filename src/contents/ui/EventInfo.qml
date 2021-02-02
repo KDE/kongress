@@ -57,8 +57,11 @@ Kirigami.ScrollablePage {
         id: cardDelegate
 
         visible: root.event
-        banner.title: root.event ? event.summary : ""
-        banner.titleLevel: 3
+        banner {
+            title: root.event ? event.summary : ""
+            titleLevel: 3
+            titleWrapMode: Text.WordWrap
+        }
 
         contentItem: Column {
             spacing: Kirigami.Units.largeSpacing
