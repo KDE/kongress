@@ -52,7 +52,7 @@ if(NOT ANDROID AND REMINDERS_ENABLED)
 endif()
 
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
-    ecm_install_po_files_as_qm(po)
+    ki18n_install(po)
 endif()
 
 install(FILES org.kde.kongress.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
