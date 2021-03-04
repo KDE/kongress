@@ -63,7 +63,7 @@ void ConferenceController::loadConferences()
     QLatin1String fileName {"/conference-data.json"};
     m_conferences_file = new QFile {dir + fileName};
 
-    const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
+    const QUrl conferencesUrl {QStringLiteral("https://diogenis.mooo.com") + fileName};
 
     QNetworkRequest request {conferencesUrl};
     auto nm = new QNetworkAccessManager {this};

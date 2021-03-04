@@ -9,6 +9,7 @@
 #include <KCalendarCore/CalFilter>
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
+#include <KCalendarCore/Sorting>
 
 EventModel::EventModel(QObject *parent) :
     QAbstractListModel {parent},
@@ -220,7 +221,8 @@ void EventModel::loadEvents()
     m_events.clear();
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid()) {
-        m_events = m_local_calendar->memorycalendar()->rawEventsForDate(m_filterdt, m_local_calendar->memorycalendar()->timeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
+        auto dayEvents = m_local_calendar->memorycalendar()->rawEvents(m_filterdt, m_filterdt, m_local_calendar->memorycalendar()->timeZone(), true);
+        m_events = KCalendarCore::Calendar::sortEvents(dayEvents, KCalendarCore::EventSortField::EventSortStartDate, KCalendarCore::SortDirection::SortDirectionAscending);
     }
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isNull()) {
