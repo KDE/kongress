@@ -22,27 +22,15 @@ void NotificationHandler::addActiveNotification(const QString &uid, const QStrin
     m_active_notifications[notification->uid()] = notification;
 }
 
-void NotificationHandler::sendActiveNotifications()
+
+void NotificationHandler::sendNotifications()
 {
     for (const auto &n : qAsConst(m_active_notifications)) {
         qDebug() << "sendNotifications:\tSending notification for alarm" <<  n->uid();
         n->send();
     }
-}
 
-void NotificationHandler::sendNotifications()
-{
-    sendActiveNotifications();
-}
-
-FilterPeriod NotificationHandler::period() const
-{
-    return m_period;
-}
-
-void NotificationHandler::setPeriod(const FilterPeriod &checkPeriod)
-{
-    m_period = checkPeriod;
+    m_active_notifications.clear();
 }
 
 QHash<QString, AlarmNotification *> NotificationHandler::activeNotifications() const

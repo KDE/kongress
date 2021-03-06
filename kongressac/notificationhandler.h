@@ -33,23 +33,11 @@ public:
     void addActiveNotification(const QString &uid, const QString &text);
 
     /**
-     * @return The time period to check for alarms
-     */
-    FilterPeriod period() const;
-
-    /**
-     * @brief Sets the time period to check for alarms
-     */
-    void setPeriod(const FilterPeriod &checkPeriod);
-
-    /**
      * @return The list of active notifications. It is the set of notification that should be sent at the next check
      */
     QHash<QString, AlarmNotification *> activeNotifications() const;
 
 private:
-    void sendActiveNotifications();
-
     QHash<QString, AlarmNotification *> m_active_notifications;
     FilterPeriod m_period;
 };
