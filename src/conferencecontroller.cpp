@@ -64,7 +64,6 @@ void ConferenceController::loadConferences()
     m_conferences_file = new QFile {dir + fileName};
 
     const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
-
     QNetworkRequest request {conferencesUrl};
     auto nm = new QNetworkAccessManager {this};
     nm->get(request);
@@ -115,9 +114,17 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
-    auto conference = new Conference {this};
+    auto conferenceId = jsonObj["id"].toString();
 
-    conference->setId(jsonObj["id"].toString());
+    for (const auto cf : qAsConst(m_conferences)) {
+        if (cf->id() == conferenceId) {
+            qDebug() << "Conference already loaded";
+            return;
+        }
+    }
+
+    auto conference = new Conference {this};
+    conference->setId(conferenceId);
     conference->setName(jsonObj["name"].toString());
     conference->setDescription(jsonObj["description"].toString());
     conference->setIcalUrl(jsonObj["icalUrl"].toString());
