@@ -10,13 +10,15 @@
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
 #include <KCalendarCore/Sorting>
+#include "settingscontroller.h"
 
 EventModel::EventModel(QObject *parent) :
     QAbstractListModel {parent},
     m_events {KCalendarCore::Event::List {}},
     m_filterdt {QDate {}},
     m_category {QString {}},
-    m_local_calendar {nullptr}
+    m_local_calendar {nullptr},
+    m_settings_controller {new SettingsController}
 {
     connect(this, &EventModel::filterdtChanged, this, &EventModel::loadEvents);
     connect(this, &EventModel::calendarChanged, this, &EventModel::loadEvents);
@@ -55,6 +57,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
         { Uid, "uid" },
         { EventStartDt, "eventStartDt" },
         { EventDt, "eventDt" },
+        { ShiftedEventDt, "shiftedEventDt" },
+        { ShiftedEventDtLocal, "shiftedEventDtLocal" },
         { ScheduleStartDt, "scheduleStartDt" },
         { AllDay, "allday" },
         { Description, "description" },
@@ -104,6 +108,15 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return startDtTime;
     case EventDt:
         return startDtTime.toString("dddd d MMMM");
+    case ShiftedEventDt: {
+        startDtTime.setTimeZone(calendarTz);
+        return startDtTime.toString("dddd d MMMM");
+    }
+    case ShiftedEventDtLocal: {
+        startDtTime.setTimeZone(calendarTz);
+        startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
+        return startDtTime.toString("dddd d MMMM");
+    }
     case ScheduleStartDt: {
         startDtTime.setTimeZone(calendarTz);
         return startDtTime;
@@ -221,7 +234,8 @@ void EventModel::loadEvents()
     m_events.clear();
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid()) {
-        auto dayEvents = m_local_calendar->memorycalendar()->rawEvents(m_filterdt, m_filterdt, m_local_calendar->memorycalendar()->timeZone(), true);
+        auto filterTz = m_settings_controller->displayInLocalTimezone() ? QTimeZone::systemTimeZone() : m_local_calendar->memorycalendar()->timeZone();
+        auto dayEvents = m_local_calendar->memorycalendar()->rawEvents(m_filterdt, m_filterdt, filterTz, true);
         m_events = KCalendarCore::Calendar::sortEvents(dayEvents, KCalendarCore::EventSortField::EventSortStartDate, KCalendarCore::SortDirection::SortDirectionAscending);
     }
 

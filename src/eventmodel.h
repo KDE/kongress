@@ -11,6 +11,7 @@
 #include <KCalendarCore/Event>
 
 class LocalCalendar;
+class SettingsController;
 
 class EventModel : public QAbstractListModel
 {
@@ -29,6 +30,8 @@ public:
         ScheduleStartDt,
         EventStartDt,
         EventDt,
+        ShiftedEventDt,
+        ShiftedEventDtLocal,
         AllDay,
         Description,
         Summary,
@@ -108,6 +111,7 @@ private:
     QDate m_filterdt;
     QString m_category;
     LocalCalendar *m_local_calendar;
+    SettingsController *m_settings_controller;
 };
 
 #endif //EVENTMODEL_H

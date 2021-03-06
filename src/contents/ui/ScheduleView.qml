@@ -53,7 +53,7 @@ Kirigami.ScrollablePage {
 
         model: eventsModel
         section {
-            property: "eventDt"
+            property: Kongress.SettingsController.displayInLocalTimezone ? "shiftedEventDtLocal" : "shiftedEventDt"
             criteria: ViewSection.FullString
             delegate: Kirigami.ListSectionHeader {
                 label: section
@@ -103,5 +103,4 @@ Kirigami.ScrollablePage {
         calendar: root.roCalendar
         eventCategory: root.category
     }
-
 }
