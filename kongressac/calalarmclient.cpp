@@ -18,7 +18,7 @@
 #include <KLocalizedString>
 
 CalAlarmClient::CalAlarmClient(QObject *parent)
-    : QObject {parent}, m_alarms_model {new AlarmsModel {this}}, m_notification_handler {new NotificationHandler {this}}, m_wakeup_manager {new WakeupManager {this}}
+    : QObject {parent},  m_notification_handler {new NotificationHandler {this}}, m_wakeup_manager {new WakeupManager {this}}
 {
     new KongressacAdaptor {this};
     auto dbus = QDBusConnection::sessionBus();
@@ -71,18 +71,18 @@ void CalAlarmClient::checkAlarms()
     qDebug() << "\ncheckAlarms:Check:" << checkFrom.toString() << " -" << m_last_checked.toString();
 
     FilterPeriod fPeriod {.from = checkFrom, .to = m_last_checked};
-    m_alarms_model->setCalendarFiles(calendarFileList());
-    m_alarms_model->setPeriod(fPeriod);
-    m_notification_handler->setPeriod(fPeriod);
+    AlarmsModel alarmsModel;
+    alarmsModel.setCalendarFiles(calendarFileList());
+    alarmsModel.setPeriod(fPeriod);
 
-    const auto alarms = m_alarms_model->alarms();
+    const auto alarms = alarmsModel.alarms();
     qDebug() << "checkAlarms:Alarms Found: " << alarms.count();
 
     KConfigGroup notificationsConfig {KSharedConfig::openConfig("kongressrc"), "notifications"};
 
     if (notificationsConfig.readEntry("remindFavorites", true)) {
         for (const auto &alarm : qAsConst(alarms)) {
-            m_notification_handler->addActiveNotification(alarm->parentUid(), QString {"%1\n%2"}.arg(alarm->time().toString("hh:mm"), alarm->text()));
+            m_notification_handler->addActiveNotification(alarm->parentUid(), QString {"%1\n%2"}.arg(alarm->time().toTimeZone( QTimeZone::systemTimeZone()).toString("hh:mm"), alarm->text()));
         }
         m_notification_handler->sendNotifications();
     }

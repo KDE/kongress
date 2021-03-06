@@ -10,7 +10,6 @@
 #include <QTimer>
 #include <QDateTime>
 
-class AlarmsModel;
 class NotificationHandler;
 class WakeupBackend;
 class WakeupManager;
@@ -70,7 +69,6 @@ private:
     void saveLastCheckTime();
     QStringList calendarFileList() const;
 
-    AlarmsModel *m_alarms_model;
     QDateTime m_last_checked;
     NotificationHandler *m_notification_handler;
     WakeupManager *m_wakeup_manager;
