@@ -88,7 +88,7 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
     event->clearAlarms();
 
     auto newAlarm = event->newAlarm();
-    newAlarm->setStartOffset(KCalendarCore::Duration(-60 & m_settings_controller->remindBeforeStart(), KCalendarCore::Duration::Type::Seconds));
+    newAlarm->setStartOffset(KCalendarCore::Duration(-60 * m_settings_controller->remindBeforeStart(), KCalendarCore::Duration::Type::Seconds));
     newAlarm->setType(KCalendarCore::Alarm::Type::Display);
     newAlarm->setEnabled(true);
     auto alarmText = (event->summary()).isEmpty() ? event->description() : event->summary();
