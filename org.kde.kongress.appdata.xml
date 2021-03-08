@@ -126,6 +126,20 @@
   </screenshots>
   <url type="homepage">https://invent.kde.org/utilities/kongress</url>
   <releases>
+    <release version="1.0.1" date="2021-03-08">
+      <description>
+        <p>Kongress bugfix release</p>
+        <ul>
+          <li>Fix display of talk time on notifications</li>
+          <li>Prevent kongressac from crashing</li>
+          <li>Fix grouping of talks into conference dayss</li>
+          <li>Fix alarm schedule times</li>
+          <li>Prevent duplicate conference entries from being displayeds</li>
+          <li>Do not display generic, multi-day calendar events on the daily schedules</li>
+          <li>Fix translation congigurations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0" date="2021-01-25">
       <description>
         <p>Kongress first official release</p>
