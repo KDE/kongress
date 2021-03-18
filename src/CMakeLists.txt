@@ -2,10 +2,6 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 
-if (NOT STATIC_LIBRARY)
-    ecm_create_qm_loader(kongress_QM_LOADER kongress)
-endif()
-
 set(kongress_SRCS
     main.cpp
     settingscontroller.cpp
