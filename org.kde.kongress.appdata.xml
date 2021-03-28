@@ -65,6 +65,7 @@
     <p xml:lang="el">Το Kongress είναι μια εφαρμογή συνοδείας για συνέδρια που κατασκευάστηκε από το KDE</p>
     <p xml:lang="en-GB">Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="es">Kongress es una aplicación complementaria para conferencias creada por KDE</p>
+    <p xml:lang="fi">Kongress on KDE:n tekemä konferenssiavustajasovellus</p>
     <p xml:lang="fr">Kongress est une application de compagnon pour les conférences, réalisée par KDE.</p>
     <p xml:lang="ia">Kongress es un application companion per conferentias facite per KDE</p>
     <p xml:lang="id">Kongress adalah aplikasi pendamping untuk konferensi yang dibuat oleh KDE</p>
@@ -87,6 +88,7 @@
       <caption xml:lang="el">Το Kongress στο κινητό</caption>
       <caption xml:lang="en-GB">Kongress on Mobile</caption>
       <caption xml:lang="es">Kongress para móviles</caption>
+      <caption xml:lang="fi">Kongress mobiilissa</caption>
       <caption xml:lang="fr">Kongress sur périphériques mobiles</caption>
       <caption xml:lang="ia">Kongress sur Mobile</caption>
       <caption xml:lang="id">Kongress di Ponsel</caption>
@@ -109,6 +111,7 @@
       <caption xml:lang="el">Το Kongress στον υπολογιστή</caption>
       <caption xml:lang="en-GB">Kongress on Desktop</caption>
       <caption xml:lang="es">Kongress para el escritorio</caption>
+      <caption xml:lang="fi">Kongress työpöydällä</caption>
       <caption xml:lang="fr">Kongress sur le bureau</caption>
       <caption xml:lang="ia">Kongress sur scriptorio</caption>
       <caption xml:lang="id">Kongress di Desktop</caption>
