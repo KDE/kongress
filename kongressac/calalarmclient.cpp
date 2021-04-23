@@ -82,7 +82,7 @@ void CalAlarmClient::checkAlarms()
 
     if (notificationsConfig.readEntry("remindFavorites", true)) {
         for (const auto &alarm : qAsConst(alarms)) {
-            m_notification_handler->addActiveNotification(alarm->parentUid(), QString {"%1\n%2"}.arg(alarm->time().toTimeZone( QTimeZone::systemTimeZone()).toString("hh:mm"), alarm->text()));
+            m_notification_handler->addActiveNotification(alarm->parentUid(), QString {"%1\n%2"}.arg(alarm->time().toTimeZone(QTimeZone::systemTimeZone()).toString("hh:mm"), alarm->text()));
         }
         m_notification_handler->sendNotifications();
     }

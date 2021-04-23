@@ -25,6 +25,8 @@ Kirigami.ApplicationWindow {
         pageStack: root.pageStack
     }
 
+    contextDrawer: Kirigami.ContextDrawer {}
+
     pageStack {
         initialPage: Kongress.ConferenceController.defaultConferenceId ? scheduleView : conferencesView
         defaultColumnWidth: Kirigami.Units.gridUnit * 40

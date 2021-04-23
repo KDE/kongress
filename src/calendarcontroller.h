@@ -15,6 +15,8 @@
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/MemoryCalendar>
 
+class LocalCalendar;
+
 class CalendarController : public QObject
 {
     Q_OBJECT
@@ -34,6 +36,7 @@ public:
     void createCalendarFromUrl(const QString &calendarId, const QUrl &url, const QByteArray &timeZoneId);
     void deleteCalendar(const QString &calendarId);
     bool save(const QString &calendarId);
+    Q_INVOKABLE QVariantMap exportData(const QString &calendarName, LocalCalendar *sourceCalendar);
 
 Q_SIGNALS:
     void calendarsChanged();

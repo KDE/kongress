@@ -22,7 +22,6 @@ void NotificationHandler::addActiveNotification(const QString &uid, const QStrin
     m_active_notifications[notification->uid()] = notification;
 }
 
-
 void NotificationHandler::sendNotifications()
 {
     for (const auto &n : qAsConst(m_active_notifications)) {

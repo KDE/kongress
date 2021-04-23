@@ -22,6 +22,50 @@ Kirigami.ScrollablePage {
     leftPadding: 0
     rightPadding: 0
 
+    contextualActions: [
+        Kirigami.Action {
+            text: i18n("Export")
+            iconName: "document-export"
+
+            onTriggered: {
+                var exportResult = Kongress.CalendarController.exportData(Kongress.ConferenceController.activeConference.id, root.rwCalendar);
+                footerMessage.text = exportResult.reason;
+
+                if (!(exportResult.success)) {
+                    footerMessage.type = Kirigami.MessageType.Warning;
+                }
+                else {
+                    footerMessage.targetFolder = exportResult.targetFolder;
+                    footerMessage.type = Kirigami.MessageType.Positive;
+                }
+                footerMessage.visible = true;
+            }
+        }
+    ]
+
+    footer: Kirigami.InlineMessage {
+            id: footerMessage
+
+            property string targetFolder
+
+            showCloseButton: true
+            visible: false
+            actions: [
+                Kirigami.Action {
+                    id: openFolderAction
+
+                    text: i18n("Open folder")
+                    icon.name: "folder-open"
+
+                    onTriggered: {
+                        Qt.openUrlExternally(footerMessage.targetFolder);
+                        footerMessage.visible = false;
+                    }
+                }
+            ]
+    }
+
+
     Kirigami.PlaceholderMessage {
         visible: cardsListview.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

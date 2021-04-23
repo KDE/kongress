@@ -45,6 +45,8 @@ if (ANDROID)
         settings-configure
         category
         help-about-symbolic
+        document-export
+        folder-open
     )
 else()
     target_link_libraries(kongress PRIVATE Qt5::Widgets)

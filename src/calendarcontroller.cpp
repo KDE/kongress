@@ -5,6 +5,7 @@
  */
 
 #include "calendarcontroller.h"
+#include "localcalendar.h"
 #include <QDebug>
 #include <QRegExp>
 #include <QDir>
@@ -274,4 +275,36 @@ QByteArray CalendarController::tzIdFromConfig(const QString &calendarId) const
     }
 
     return d->config.group(calendarId).readEntry("timeZoneId").toUtf8();
+}
+
+QVariantMap CalendarController::exportData(const QString &calendarName, LocalCalendar *sourceCalendar)
+{
+    auto sourceEvents = sourceCalendar->memorycalendar()->rawEvents();
+
+    auto dirPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
+    QFile targetFile {dirPath + "/kongress_favorites_" + calendarName + ".ics"};
+    auto fileSuffix {1};
+    while (targetFile.exists()) {
+        targetFile.setFileName(dirPath + "/kongress_favorites_" + calendarName + "(" + QString::number(fileSuffix++) + ").ics");
+    }
+    KCalendarCore::Calendar::Ptr targetCalendar {new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId())};
+    KCalendarCore::FileStorage::Ptr targetStorage {new KCalendarCore::FileStorage {targetCalendar}};
+    targetStorage->setFileName(targetFile.fileName());
+
+    for (const auto &event : qAsConst(sourceEvents)) {
+        targetCalendar->addEvent(event);
+    }
+
+    if (!(targetStorage->save())) {
+        return {
+            { "success", false },
+            { "reason", i18n("Cannot save calendar file. Export failed.") }
+        };
+    }
+
+    return {
+        { "success", true },
+        { "reason", i18n("Export completed successfully") },
+        { "targetFolder", QUrl {QStringLiteral("file://") + dirPath} }
+    };
 }
