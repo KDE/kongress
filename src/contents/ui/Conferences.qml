@@ -53,11 +53,13 @@ Kirigami.ScrollablePage {
             }
         }
 
-        delegate: Kirigami.Card {
+        delegate: Kirigami.AbstractCard {
             id: card
 
-            banner {
-                title: model && model.name
+            showClickFeedback: true
+
+            header: Kirigami.Heading {
+                text: model && model.name
             }
 
             contentItem: Controls.Label {
@@ -65,14 +67,7 @@ Kirigami.ScrollablePage {
                 text: model && model.description
             }
 
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Select")
-                    iconName: "edit-select"
-
-                    onTriggered: selected(model.id)
-                }
-            ]
+            onClicked: selected(model.id)
         }
     }
 
