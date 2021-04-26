@@ -47,6 +47,7 @@ if (ANDROID)
         help-about-symbolic
         document-export
         folder-open
+        draw-arrow-back
     )
 else()
     target_link_libraries(kongress PRIVATE Qt5::Widgets)

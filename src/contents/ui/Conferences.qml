@@ -60,6 +60,7 @@ Kirigami.ScrollablePage {
 
             header: Kirigami.Heading {
                 text: model && model.name
+                wrapMode: Text.WordWrap
             }
 
             contentItem: Controls.Label {

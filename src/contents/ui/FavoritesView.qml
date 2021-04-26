@@ -91,30 +91,17 @@ Kirigami.ScrollablePage {
 
         model: eventsModel
 
-        delegate: Kirigami.Card {
+        delegate: Kirigami.AbstractCard {
             id: cardDelegate
 
-            banner.title: model && model.summary
-            banner.titleLevel: 3
+            showClickFeedback: true
 
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Details")
-                    icon.name: "documentinfo"
+            header: Kirigami.Heading {
+                text: model && model.summary
+                wrapMode: Text.WordWrap
+            }
 
-                    onTriggered: {
-                        pageStack.pop(root);
-                        pageStack.push(eventInfo, {event: model});
-                    }
-                },
-
-                Kirigami.Action {
-                    text: i18n("Delete")
-                    icon.name: "delete"
-
-                    onTriggered: Kongress.EventController.remove(root.rwCalendar, {uid: model.uid})
-                }
-            ]
+            onClicked: pageStack.push(eventInfo, {event: model})
 
             contentItem: Column {
                 spacing: Kirigami.Units.largeSpacing

@@ -34,6 +34,14 @@ Kirigami.ScrollablePage {
 
     actions.main:
         Kirigami.Action {
+            text: i18n("Back")
+            icon.name: "draw-arrow-back"
+
+            onTriggered: pageStack.pop()
+        }
+
+    actions.right:
+        Kirigami.Action {
             text: viewMode === "favorites" ? i18n("Delete") : i18n("Favorite")
             icon.name: viewMode === "favorites" ? "delete" : "favorite"
 
@@ -53,14 +61,13 @@ Kirigami.ScrollablePage {
             }
         }
 
-    Kirigami.Card {
+    Kirigami.AbstractCard {
         id: cardDelegate
 
         visible: root.event
-        banner {
-            title: root.event ? event.summary : ""
-            titleLevel: 3
-            titleWrapMode: Text.WordWrap
+        header: Kirigami.Heading {
+            text: root.event ? event.summary : ""
+            wrapMode: Text.WordWrap
         }
 
         contentItem: Column {
