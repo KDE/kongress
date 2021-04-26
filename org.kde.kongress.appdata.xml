@@ -26,6 +26,7 @@
   <name xml:lang="ko">Kongress</name>
   <name xml:lang="nl">Kongress</name>
   <name xml:lang="nn">Kongress</name>
+  <name xml:lang="pl">Kongress</name>
   <name xml:lang="pt">Kongress</name>
   <name xml:lang="pt-BR">Kongress</name>
   <name xml:lang="ru">Kongress</name>
@@ -54,6 +55,7 @@
   <summary xml:lang="ko">KDE 콘퍼런스 도우미 프로그램</summary>
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
   <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
+  <summary xml:lang="pl">Program do spotkań od KDE</summary>
   <summary xml:lang="pt">Aplicação assistente do KDE Conference</summary>
   <summary xml:lang="pt-BR">Aplicação assistente de conferências da KDE</summary>
   <summary xml:lang="sl">Program za spremljanje konference KDE</summary>
@@ -76,6 +78,7 @@
     <p xml:lang="it">Kongress è un'applicazione di supporto per le conferenze realizzata da KDE</p>
     <p xml:lang="nl">Kongress is de compagnon-toepassing voor conferenties, gemaakt door KDE</p>
     <p xml:lang="nn">Kongress er ein konferanse­assistent frå KDE</p>
+    <p xml:lang="pl">Kongress jest programem do spotkań stworzony w ramach KDE</p>
     <p xml:lang="pt">O Kongress é uma aplicação assistente para conferências criada pelo KDE</p>
     <p xml:lang="pt-BR">Kongress é uma aplicação assistente para conferências produzido pela KDE</p>
     <p xml:lang="sl">Kongress je spremljevalna aplikacija za konference, ki jo je izdelal KDE</p>
@@ -100,6 +103,7 @@
       <caption xml:lang="it">Kongress su dispositivo mobile</caption>
       <caption xml:lang="nl">Kongress op mobiel</caption>
       <caption xml:lang="nn">Kongress på mobil</caption>
+      <caption xml:lang="pl">Kongress Przenośny</caption>
       <caption xml:lang="pt">O Kongress no Telemóvel</caption>
       <caption xml:lang="pt-BR">Kongress em aparelhos móveis</caption>
       <caption xml:lang="sl">Kongress na mobilcu</caption>
@@ -124,6 +128,7 @@
       <caption xml:lang="it">Kongress su desktop</caption>
       <caption xml:lang="nl">Kongress op bureaublad</caption>
       <caption xml:lang="nn">Kongress på skrivebordet</caption>
+      <caption xml:lang="pl">Kongres Biurkowy</caption>
       <caption xml:lang="pt">O Kongress no Computador</caption>
       <caption xml:lang="pt-BR">Kongress no desktop</caption>
       <caption xml:lang="sl">Kongress na Namizju</caption>
