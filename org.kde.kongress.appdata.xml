@@ -139,6 +139,7 @@
     </screenshot>
   </screenshots>
   <url type="homepage">https://invent.kde.org/utilities/kongress</url>
+  <url type="bugtracker">https://invent.kde.org/utilities/kongress/-/issues</url>
   <releases>
     <release version="1.0.1" date="2021-03-08">
       <description>
