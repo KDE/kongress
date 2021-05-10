@@ -22,6 +22,7 @@
 #include "settingscontroller.h"
 #include "calendarcontroller.h"
 #include "conference.h"
+#include "version.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -29,7 +30,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QApplication app {argc, argv};
     KLocalizedString::setApplicationDomain("kongress");
 
-    KAboutData about {QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral("1.0.1"), i18n("KDE Conference Companion"), KAboutLicense::GPL_V3, i18n("© 2021 KDE Community")};
+    KAboutData about {QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral(KONGRESS_VERSION_STRING), i18n("KDE Conference Companion"), KAboutLicense::GPL_V3, i18n("© 2021 KDE Community")};
     about.setOrganizationDomain(QByteArray {"kde.org"});
     about.setProductName(QByteArray {"kongress"});
     about.addAuthor(i18nc("@info:credit", "Dimitris Kardarakos"), i18nc("@info:credit", "Maintainer and Developer"), QStringLiteral("dimkard@posteo.net"));

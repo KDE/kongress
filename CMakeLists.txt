@@ -4,7 +4,9 @@
 
 cmake_minimum_required(VERSION 3.0)
 
-project(kongress VERSION "1.0.1")
+project(kongress VERSION)
+
+set(PROJECT_VERSION "21.05")
 
 set(KF5_MIN_VERSION "5.63.0")
 set(QT_MIN_VERSION "5.7.0")
@@ -26,6 +28,12 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
+include(ECMSetupVersion)
+
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX KONGRESS
+    VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
+)
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS DBus Core Quick Gui Svg Qml QuickControls2 Network)
 

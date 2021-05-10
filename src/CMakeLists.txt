@@ -22,6 +22,8 @@ if (BUILD_TESTING)
     target_link_libraries(kongress PRIVATE Qt5::Test)
 endif()
 
+target_include_directories(kongress PRIVATE ${CMAKE_BINARY_DIR})
+
 if (ANDROID)
     target_link_libraries(kongress PRIVATE
         KF5::Kirigami2
