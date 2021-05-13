@@ -146,6 +146,21 @@
   <url type="homepage">https://invent.kde.org/utilities/kongress</url>
   <url type="bugtracker">https://invent.kde.org/utilities/kongress/-/issues</url>
   <releases>
+    <release version="21.05" date="2021-05-10">
+      <description>
+        <p>Kongress 21.05 release</p>
+        <ul>
+          <li>Add bugtracking url</li>
+          <li>Simplify flatpak manifest</li>
+          <li>Streamline favorites view</li>
+          <li>Simplify conference selection</li>
+          <li>Add placeholder icon to the Favorites page</li>
+          <li>Offer favorites export</li>
+          <li>Add generic name</li>
+	  <li>Remove cmake functions not needed</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2021-03-08">
       <description>
         <p>Kongress bugfix release</p>
@@ -156,7 +171,7 @@
           <li>Fix alarm schedule times</li>
           <li>Prevent duplicate conference entries from being displayeds</li>
           <li>Do not display generic, multi-day calendar events on the daily schedules</li>
-          <li>Fix translation congigurations</li>
+          <li>Fix translation configurations</li>
         </ul>
       </description>
     </release>
