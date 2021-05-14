@@ -157,7 +157,7 @@
           <li>Add placeholder icon to the Favorites page</li>
           <li>Offer favorites export</li>
           <li>Add generic name</li>
-	  <li>Remove cmake functions not needed</li>
+          <li>Remove cmake functions not needed</li>
         </ul>
       </description>
     </release>
