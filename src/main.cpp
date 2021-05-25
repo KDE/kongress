@@ -4,7 +4,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include <QtGlobal>
+
+#ifdef Q_OS_ANDROID
+#include <QGuiApplication>
+#else
 #include <QApplication>
+#endif
+
 #include <QQmlApplicationEngine>
 #include <QtQml>
 #include <QUrl>
@@ -27,7 +34,11 @@
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#ifdef Q_OS_ANDROID
+    QGuiApplication app {argc, argv};
+#else
     QApplication app {argc, argv};
+#endif
     KLocalizedString::setApplicationDomain("kongress");
 
     KAboutData about {QStringLiteral("kongress"), i18n("Kongress"), QStringLiteral(KONGRESS_VERSION_STRING), i18n("KDE Conference Companion"), KAboutLicense::GPL_V3, i18n("© 2021 KDE Community")};
