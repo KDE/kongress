@@ -17,7 +17,7 @@ set(kongress_SRCS
     )
 
 add_executable(kongress ${kongress_SRCS} ${RESOURCES})
-target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Network Qt5::DBus KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
+target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Network KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
 if (BUILD_TESTING)
     target_link_libraries(kongress PRIVATE Qt5::Test)
 endif()
@@ -52,7 +52,7 @@ if (ANDROID)
         draw-arrow-back
     )
 else()
-    target_link_libraries(kongress PRIVATE Qt5::Widgets)
+    target_link_libraries(kongress PRIVATE Qt5::Widgets Qt5::DBus)
 endif()
 
 install(TARGETS kongress ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
