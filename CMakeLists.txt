@@ -50,7 +50,7 @@ if (BUILD_TESTING)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications Service)
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
 endif()
 
 add_subdirectory(src)
