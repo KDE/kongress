@@ -54,11 +54,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     parser.process(app);
     about.processCommandLine(&parser);
 
-    QApplication::setApplicationName(about.componentName());
-    QApplication::setApplicationDisplayName(about.displayName());
-    QApplication::setOrganizationDomain(about.organizationDomain());
-    QApplication::setApplicationVersion(about.version());
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
+    QGuiApplication::setApplicationName(about.componentName());
+    QGuiApplication::setApplicationDisplayName(about.displayName());
+    QGuiApplication::setOrganizationDomain(about.organizationDomain());
+    QGuiApplication::setApplicationVersion(about.version());
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
 
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
