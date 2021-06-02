@@ -40,8 +40,6 @@ find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 
 if (ANDROID)
-    # runtime dependencies are build-time dependencies on Android
-    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS AndroidExtras)
     find_package(OpenSSL REQUIRED)
 else()
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)

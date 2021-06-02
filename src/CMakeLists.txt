@@ -29,7 +29,6 @@ if (ANDROID)
         KF5::Kirigami2
         Qt5::Svg
         OpenSSL::SSL
-        Qt5::AndroidExtras
     )
 
     kirigami_package_breeze_icons(ICONS
