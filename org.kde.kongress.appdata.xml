@@ -36,6 +36,7 @@
   <name xml:lang="sv">Kongress</name>
   <name xml:lang="uk">Kongress</name>
   <name xml:lang="x-test">xxKongressxx</name>
+  <name xml:lang="zh-CN">Kongress</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>KDE Conference companion application</summary>
   <summary xml:lang="ca">Aplicació auxiliar per als congressos del KDE</summary>
@@ -64,6 +65,7 @@
   <summary xml:lang="sv">KDE konferenskompanjonprogram</summary>
   <summary xml:lang="uk">KDE-компаньйон для конференцій</summary>
   <summary xml:lang="x-test">xxKDE Conference companion applicationxx</summary>
+  <summary xml:lang="zh-CN">KDE 会议助理应用</summary>
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
@@ -89,6 +91,7 @@
     <p xml:lang="sv">Kongress är ett kompanjonprogram för konferenser gjort av KDE</p>
     <p xml:lang="uk">Kongress — програма-компаньйон для конференцій, які проводить KDE</p>
     <p xml:lang="x-test">xxKongress is a companion application for conferences made by KDExx</p>
+    <p xml:lang="zh-CN">Kongress 是一款 KDE 开发的会议助理应用</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -116,6 +119,7 @@
       <caption xml:lang="sv">Kongress på mobil</caption>
       <caption xml:lang="uk">Kongress на мобільному</caption>
       <caption xml:lang="x-test">xxKongress on Mobilexx</caption>
+      <caption xml:lang="zh-CN">Kongress 移动版</caption>
       <image>https://cdn.kde.org/screenshots/kongress/mobile.png</image>
     </screenshot>
     <screenshot>
@@ -143,6 +147,7 @@
       <caption xml:lang="sv">Kongress på skrivbordet</caption>
       <caption xml:lang="uk">Kongress на робочій станції</caption>
       <caption xml:lang="x-test">xxKongress on Desktopxx</caption>
+      <caption xml:lang="zh-CN">Kongress 桌面版</caption>
       <image>https://cdn.kde.org/screenshots/kongress/desktop.png</image>
     </screenshot>
   </screenshots>
