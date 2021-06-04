@@ -27,6 +27,7 @@ Comment[sl]=Kongress
 Comment[sv]=Kongress
 Comment[uk]=Kongress
 Comment[x-test]=xxKongressxx
+Comment[zh_CN]=Kongress
 Comment[zh_TW]=Kongress
 Name=Kongress
 Name[ca]=Kongress
@@ -56,6 +57,7 @@ Name[sl]=Kongress
 Name[sv]=Kongress
 Name[uk]=Kongress
 Name[x-test]=xxKongressxx
+Name[zh_CN]=Kongress
 Name[zh_TW]=Kongress
 
 [Context/uid]
@@ -83,6 +85,7 @@ Name[pt_BR]=uid da incidência
 Name[sv]=Förekomstens användaridentifikation
 Name[uk]=Ідентифікатор випадку
 Name[x-test]=xxIncidence uidxx
+Name[zh_CN]=事件 UID
 Comment=The uid of the incidence of the alarm
 Comment[ca]=L'UID de la incidència de l'alarma
 Comment[ca@valencia]=L'UID de la incidència de l'alarma
@@ -107,6 +110,7 @@ Comment[pt_BR]=O uid da incidência do alarme
 Comment[sv]=Användaridentifikation för alarmets förekomst
 Comment[uk]=Ідентифікатор випадку нагадування
 Comment[x-test]=xxThe uid of the incidence of the alarmxx
+Comment[zh_CN]=提醒事件的 UID
 
 [Event/alarm]
 Name=Alarm
@@ -136,6 +140,7 @@ Name[sl]=Alarm
 Name[sv]=Alarm
 Name[uk]=Нагадування
 Name[x-test]=xxAlarmxx
+Name[zh_CN]=提醒
 Name[zh_TW]=鬧鐘
 Contexts=uid
 Comment=Alarm Notification
@@ -164,6 +169,7 @@ Comment[sl]=Obvestilo o alarmu
 Comment[sv]=Alarmunderrättelse
 Comment[uk]=Сповіщення для нагадування
 Comment[x-test]=xxAlarm Notificationxx
+Comment[zh_CN]=提醒通知
 Comment[zh_TW]=鬧鐘通知
 Action=Popup
 Urgency=Critical
