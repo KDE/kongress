@@ -154,7 +154,15 @@
   <url type="homepage">https://invent.kde.org/utilities/kongress</url>
   <url type="bugtracker">https://invent.kde.org/utilities/kongress/-/issues</url>
   <releases>
-    <release version="21.06" date="2021-06-10"/>
+    <release version="21.06" date="2021-06-10">
+      <description>
+        <p>Improvements and translations</p>
+        <ul>
+          <li>Streamline Android build</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="21.05" date="2021-05-10">
       <description>
         <p>Kongress 21.05 release</p>
