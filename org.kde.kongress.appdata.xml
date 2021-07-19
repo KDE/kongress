@@ -154,6 +154,8 @@
   <url type="homepage">https://invent.kde.org/utilities/kongress</url>
   <url type="bugtracker">https://invent.kde.org/utilities/kongress/-/issues</url>
   <releases>
+    <release version="21.07" date="2021-07-20"/>
+    <release version="21.07" date="2021-07-20"/>
     <release version="21.06" date="2021-06-10">
       <description>
         <p>Improvements and translations</p>
@@ -176,31 +178,6 @@
           <li>Offer favorites export</li>
           <li>Add generic name</li>
           <li>Remove cmake functions not needed</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.0.1" date="2021-03-08">
-      <description>
-        <p>Kongress bugfix release</p>
-        <ul>
-          <li>Fix display of talk time on notifications</li>
-          <li>Prevent kongressac from crashing</li>
-          <li>Fix grouping of talks into conference dayss</li>
-          <li>Fix alarm schedule times</li>
-          <li>Prevent duplicate conference entries from being displayeds</li>
-          <li>Do not display generic, multi-day calendar events on the daily schedules</li>
-          <li>Fix translation configurations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.0" date="2021-01-25">
-      <description>
-        <p>Kongress first official release</p>
-        <ul>
-          <li>Display the schedule of a collection of conferences</li>
-          <li>Show the schedule of the talks by conference day</li>
-          <li>Manage a list of favorite talks</li>
-          <li>Notify the user before talk starts (only on KDE Plasma)</li>
         </ul>
       </description>
     </release>
