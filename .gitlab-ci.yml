@@ -1,17 +1,6 @@
-# SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
-#
-# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2020 Volker Krause <vkrause@kde.org>
+# SPDX-License-Identifier: CC0-1.0
+
 include:
-  - https://invent.kde.org/sysadmin/ci-tooling/raw/master/invent/binary-flatpak.yml
-
-variables:
-  BUNDLE: org.kde.kongress.flatpak
-
-flatpak:
-  extends: .flatpak
-  variables:
-    MANIFEST_PATH: org.kde.kongress.json
-    APP_ID: org.kde.kongress
-    FLATPAK_MODULE: kongress
-    CMAKE_ARGS: -DENABLE_TESTING=OFF
-
+  - https://invent.kde.org/sysadmin/ci-tooling/raw/master/invent/ci-reuse.yml
+  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/linux.yml
