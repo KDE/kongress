@@ -88,7 +88,7 @@ Kirigami.ScrollablePage {
         id: cardsListview
 
         anchors.fill: parent
-
+        clip: true
         model: eventsModel
 
         delegate: Kirigami.AbstractCard {
