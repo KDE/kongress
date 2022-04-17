@@ -1,0 +1,376 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kongress package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"PO-Revision-Date: 2020-10-07 21:08+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "qiilaq69@gmail.com"
+
+#: calendarcontroller.cpp:301
+#, fuzzy, kde-format
+#| msgid "The calendar file is not valid"
+msgid "Cannot save calendar file. Export failed."
+msgstr "Kalender ei ole korrektne"
+
+#: calendarcontroller.cpp:307
+#, kde-format
+msgid "Export completed successfully"
+msgstr ""
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "Möödas"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "Ees"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "Konverentsid"
+
+#: contents/ui/Conferences.qml:24
+#, fuzzy, kde-format
+#| msgid "No events found"
+msgid "No conference found"
+msgstr "Sündmusi ei leitud"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr ""
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "Veebilehekülg"
+
+#: contents/ui/EventInfo.qml:37
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Delete"
+msgstr "Kustuta"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Favorite"
+msgstr "Lemmik"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr ""
+
+#: contents/ui/FavoritesView.qml:72
+#, fuzzy, kde-format
+#| msgid "No events found for %1"
+msgid "No favorite talks found for %1"
+msgstr "%1 ei sisalda ühtegi sündmust"
+
+#: contents/ui/FavoritesView.qml:72
+#, fuzzy, kde-format
+#| msgid "No events found"
+msgid "No favorite talks found"
+msgstr "Sündmusi ei leitud"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "Kattumine teise ettekandega"
+msgstr[1] "Kattumine %1 teise ettekandega"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "Konverents"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "Kontrolli uuendusi"
+
+#: contents/ui/GlobalDrawer.qml:50
+#, fuzzy, kde-format
+#| msgid "Check for updates"
+msgid "Checking for schedule updates"
+msgstr "Kontrolli uuendusi"
+
+#: contents/ui/GlobalDrawer.qml:58
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Päevakava"
+
+#: contents/ui/GlobalDrawer.qml:64
+#, kde-format
+msgid "Full Schedule"
+msgstr "Kogu kava"
+
+#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "Ajakava"
+
+#: contents/ui/GlobalDrawer.qml:77
+#, kde-format
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "Kaart"
+
+#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "Lemmikud"
+
+#: contents/ui/GlobalDrawer.qml:105
+#, kde-format
+msgid "Configure"
+msgstr "Seadista"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Change conference"
+msgstr "Muuda konverentsi"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Select conference"
+msgstr "Vali konverents"
+
+#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "Seadistused"
+
+#: contents/ui/GlobalDrawer.qml:134
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "Laiuskraad: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "Pikkuskraad: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, fuzzy, kde-format
+#| msgid "No events found for %1"
+msgid "No talks found for %1"
+msgstr "%1 ei sisalda ühtegi sündmust"
+
+#: contents/ui/ScheduleView.qml:28
+#, fuzzy, kde-format
+#| msgid "No events found"
+msgid "No talks found"
+msgstr "Sündmusi ei leitud"
+
+#: contents/ui/ScheduleView.qml:67
+#, kde-format
+msgid "Details"
+msgstr "Üksikasjad"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "Kohaliku ajavööndi kasutamine"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr ""
+
+#: contents/ui/SettingsView.qml:39
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgid "Add reminder to favorite talks"
+msgstr "Ettekanne lisati lemmikutesse"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr ""
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr ""
+
+#: eventcontroller.cpp:57
+#, kde-format
+msgid "Error during event creation"
+msgstr "Tõrge sündmuse loomisel"
+
+#: eventcontroller.cpp:64
+#, kde-format
+msgid "Already in favorites"
+msgstr "Juba lemmikutes"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"Ettekanne lisati lemmikutesse, kuid see kattub olemasolevatega:\n"
+"%1"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "Ettekanne lisati lemmikutesse"
+
+#: main.cpp:44
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:44
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "KDE konverentsiabiline"
+
+#: main.cpp:44
+#, fuzzy, kde-format
+#| msgid "© 2020 KDE Community"
+msgid "© 2021 KDE Community"
+msgstr "© 2020: KDE kogukond"
+
+#: main.cpp:47
+#, fuzzy, kde-format
+#| msgid "Dimitris Kardarakos"
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr ""
+
+#~ msgid "Select"
+#~ msgstr "Vali"
+
+#~ msgid "No events found for %1"
+#~ msgstr "%1 ei sisalda ühtegi sündmust"
+
+#~ msgid "No events found"
+#~ msgstr "Sündmusi ei leitud"
+
+#~ msgid "Calendar name contains invalid characters"
+#~ msgstr "Kalendri nimi sisaldab vigaseid märke"
+
+#~ msgid "Calendar already exists"
+#~ msgstr "Kalender on juba olemas"
+
+#~ msgid "The calendar file cannot be saved"
+#~ msgstr "Kalendrifaili salvestamine nurjus"
+
+#~ msgid "A calendar with the same name already exists"
+#~ msgstr "Sama nimega kalender on juba olemas"
+
+#~ msgid "Loading conference data"
+#~ msgstr "Konverentsiandmete laadimine"
+
+#~ msgid "Conference data loaded"
+#~ msgstr "Konverentsiandmed on laaditud"
+
+#~ msgid "days before start"
+#~ msgstr "päeva enne algust"
+
+#~ msgid "seconds before start"
+#~ msgstr "sekundit enne algust"
+
+#~ msgid "At start time"
+#~ msgstr "Algusajal"
+
+#~ msgid "1 day before start"
+#~ msgid_plural "%1 days before start"
+#~ msgstr[0] "1 päev enne algust"
+#~ msgstr[1] "%1 päeva enne algust"
+
+#~ msgid "1 day"
+#~ msgid_plural "%1 days"
+#~ msgstr[0] "1 päev"
+#~ msgstr[1] "%1 päeva"
+
+#~ msgid "1 hour"
+#~ msgid_plural "%1 hours"
+#~ msgstr[0] "1 tund"
+#~ msgstr[1] "%1 tundi"
+
+#~ msgid "1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "1 minut"
+#~ msgstr[1] "%1 minutit"
+
+#~ msgid "1 second"
+#~ msgid_plural "%1 seconds"
+#~ msgstr[0] "1 sekund"
+#~ msgstr[1] "%1 sekundit"
+
+#~ msgid "before start"
+#~ msgstr "enne algust"
+
+#~ msgid "today at %1"
+#~ msgstr "täna %1"
+
+#~ msgid "yesterday at %1"
+#~ msgstr "eile %1"
+
+#~ msgid "%1 at %2"
+#~ msgstr "%1 %2"

@@ -1,0 +1,365 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kongress package.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"PO-Revision-Date: 2021-04-27 14:10+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.04.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vincenzo Reale"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "smart2128vr@gmail.com"
+
+#: calendarcontroller.cpp:301
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "Impossibile salvare il file di calendario. Esportazione non riuscita."
+
+#: calendarcontroller.cpp:307
+#, kde-format
+msgid "Export completed successfully"
+msgstr "Esportazione completata correttamente"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "Passate"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "Prossime"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "Conferenze"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "Nessuna conferenza trovata"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "Ricarica"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "Pagina web"
+
+#: contents/ui/EventInfo.qml:37
+#, kde-format
+msgid "Back"
+msgstr "Indietro"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Delete"
+msgstr "Elimina"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Favorite"
+msgstr "Preferito"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "Esporta"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "Apri cartella"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "Nessun intervento preferito trovato per %1"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr "Nessun intervento preferito trovato"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "Si sovrappone a un altro intervento"
+msgstr[1] "Si sovrappone a %1 altri interventi"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "Conferenza"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "Controlla aggiornamenti"
+
+#: contents/ui/GlobalDrawer.qml:50
+#, kde-format
+msgid "Checking for schedule updates"
+msgstr "Controllo degli aggiornamenti della pianificazioni"
+
+#: contents/ui/GlobalDrawer.qml:58
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Pianificazione giornaliera"
+
+#: contents/ui/GlobalDrawer.qml:64
+#, kde-format
+msgid "Full Schedule"
+msgstr "Pianificazione completa"
+
+#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "Pianifica"
+
+#: contents/ui/GlobalDrawer.qml:77
+#, kde-format
+msgid "Categories"
+msgstr "Categorie"
+
+#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "Mappa"
+
+#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "Preferiti"
+
+#: contents/ui/GlobalDrawer.qml:105
+#, kde-format
+msgid "Configure"
+msgstr "Configura"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Change conference"
+msgstr "Cambia conferenza"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Select conference"
+msgstr "Seleziona conferenza"
+
+#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: contents/ui/GlobalDrawer.qml:134
+#, kde-format
+msgid "About"
+msgstr "Informazioni"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "Latitudine: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "Longitudine: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "Nessun intervento trovato per %1"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "Nessun intervento trovato"
+
+#: contents/ui/ScheduleView.qml:67
+#, kde-format
+msgid "Details"
+msgstr "Dettagli"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "Utilizza il fuso orario locale"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "Aggiungi promemoria agli interventi preferiti"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "Ricordami prima che l'intervento inizi (minuti)"
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Le notifiche non sono supportate sulla tua piattaforma"
+
+#: eventcontroller.cpp:57
+#, kde-format
+msgid "Error during event creation"
+msgstr "Errore durante la creazione dell'evento"
+
+#: eventcontroller.cpp:64
+#, kde-format
+msgid "Already in favorites"
+msgstr "Già nei preferiti"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"Intervento aggiunto ai preferiti, ma si sovrappone a uno esistente:\n"
+"%1"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "Intervento aggiunto ai preferiti"
+
+#: main.cpp:44
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:44
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "Supporto per KDE Conference"
+
+#: main.cpp:44
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 Comunità KDE"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "Responsabile e sviluppatore"
+
+#~ msgid "Select"
+#~ msgstr "Seleziona"
+
+#~ msgid "No events found for %1"
+#~ msgstr "Nessun evento trovato per %1"
+
+#~ msgid "No events found"
+#~ msgstr "Nessun evento trovato"
+
+#~ msgid "Calendar name contains invalid characters"
+#~ msgstr "Il nome del calendario contiene caratteri non validi"
+
+#~ msgid "Calendar already exists"
+#~ msgstr "Il calendario esiste già"
+
+#~ msgid "The calendar file cannot be saved"
+#~ msgstr "Il file del calendario non può essere salvato"
+
+#~ msgid "A calendar with the same name already exists"
+#~ msgstr "Esiste già un calendario con lo stesso nome"
+
+#~ msgid "Loading conference data"
+#~ msgstr "Caricamento dei dati della conferenza"
+
+#~ msgid "Conference data loaded"
+#~ msgstr "Dati della conferenza caricati"
+
+#~ msgid "days before start"
+#~ msgstr "giorni prima dell'inizio"
+
+#~ msgid "seconds before start"
+#~ msgstr "secondi prima dell'inizio"
+
+#~ msgid "At start time"
+#~ msgstr "All'ora di inizio"
+
+#~ msgid "1 day before start"
+#~ msgid_plural "%1 days before start"
+#~ msgstr[0] "1 giorno prima dell'inizio"
+#~ msgstr[1] "%1 giorni prima dell'inizio"
+
+#~ msgid "1 day"
+#~ msgid_plural "%1 days"
+#~ msgstr[0] "1 giorno"
+#~ msgstr[1] "%1 giorni"
+
+#~ msgid "1 hour"
+#~ msgid_plural "%1 hours"
+#~ msgstr[0] "1 ora"
+#~ msgstr[1] "%1 ore"
+
+#~ msgid "1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "1 minuto"
+#~ msgstr[1] "%1 minuti"
+
+#~ msgid "1 second"
+#~ msgid_plural "%1 seconds"
+#~ msgstr[0] "1 secondo"
+#~ msgstr[1] "%1 secondi"
+
+#~ msgid "before start"
+#~ msgstr "prima dell'inizio"
+
+#~ msgid "today at %1"
+#~ msgstr "oggi alle %1"
+
+#~ msgid "yesterday at %1"
+#~ msgstr "ieri alle %1"
+
+#~ msgid "%1 at %2"
+#~ msgstr "%1 alle %2"

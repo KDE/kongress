@@ -1,0 +1,295 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kongress package.
+#
+# Stelios <sstavra@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"PO-Revision-Date: 2021-06-20 10:08+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stelios"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sstavra@gmail.com"
+
+#: calendarcontroller.cpp:301
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "Αδυναμία αποθήκευσης του αρχείου ημερολογίου. Αποτυχία εξαγωγής."
+
+#: calendarcontroller.cpp:307
+#, kde-format
+msgid "Export completed successfully"
+msgstr "Η εξαγωγή ολοκληρώθηκε με επιτυχία"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "Παρελθοντικές"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "Επερχόμενες"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "Διασκέψεις"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "Δεν βρέθηκε διάσκεψη"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "Επαναφόρτωση"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "Ιστοσελίδα"
+
+#: contents/ui/EventInfo.qml:37
+#, kde-format
+msgid "Back"
+msgstr "Πίσω"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Favorite"
+msgstr "Προτιμώμενη"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "Άνοιγμα φακέλου"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "Δεν βρέθηκαν προτιμώμενες ομιλίες για το %1"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr "Δεν βρέθηκαν προτιμώμενες ομιλίες"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "Επικαλύπτεται από άλλη ομιλία"
+msgstr[1] "Επικαλύπτεται από %1 άλλες ομιλίες"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "Διάσκεψη"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "Έλεγχος ενημερώσεων"
+
+#: contents/ui/GlobalDrawer.qml:50
+#, kde-format
+msgid "Checking for schedule updates"
+msgstr "Ελέγχει για προγραματισμένες ενημερώσεις"
+
+#: contents/ui/GlobalDrawer.qml:58
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Καθημερινό πρόγραμμα"
+
+#: contents/ui/GlobalDrawer.qml:64
+#, kde-format
+msgid "Full Schedule"
+msgstr "Πλήρες πρόγραμμα"
+
+#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "Πρόγραμμα"
+
+#: contents/ui/GlobalDrawer.qml:77
+#, kde-format
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "Χάρτης"
+
+#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "Προτιμώμενες"
+
+#: contents/ui/GlobalDrawer.qml:105
+#, kde-format
+msgid "Configure"
+msgstr "Διαμόρφωση"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Change conference"
+msgstr "Αλλαγή διάσκεψης"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Select conference"
+msgstr "Επιλογή διακεψης"
+
+#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: contents/ui/GlobalDrawer.qml:134
+#, kde-format
+msgid "About"
+msgstr "Σχετικά"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "Γεωγραφικό πλάτος: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "Γεωγραφικό μήκος: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "Δεν βρέθηκαν ομιλίες για το %1"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "Δεν βρέθηκαν ομιλίες"
+
+#: contents/ui/ScheduleView.qml:67
+#, kde-format
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "Χρήση τοπικής ώρας"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "Προσθήκη υπενθύμισης στις προτιμώμενες ομιλίες"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "Υπενθύμιση πριν ξεκινήσει η ομιλία (λεπτά)"
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Οι ειδοποιήσεις δεν υποστηρίζονται στην πλατφόρμα σας"
+
+#: eventcontroller.cpp:57
+#, kde-format
+msgid "Error during event creation"
+msgstr "Σφάλμα κατά τη δημιουργία γεγονότος"
+
+#: eventcontroller.cpp:64
+#, kde-format
+msgid "Already in favorites"
+msgstr "Ήδη στις προτιμώμενες"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"Η ομιλία προστέθηκε στις προτιμώμενες, αλλά επικαλύπτεται με άλλες:\n"
+"%1"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "Η ομιλία προστέθηκε στις προτιμώμενες"
+
+#: main.cpp:44
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:44
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "Συνοδοιπόρος του KDE για συνέδρια"
+
+#: main.cpp:44
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 KDE Community"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "Συντηρητής και προγραμματιστής"
+
+#~ msgid "Select"
+#~ msgstr "Επιλογή"

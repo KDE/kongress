@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"PO-Revision-Date: 2021-01-07 10:21+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: OpenStreetMaps OpenStreetMap Kongress Dimitris\n"
+"X-POFile-IgnoreConsistency: Schedule\n"
+"X-POFile-SpellExtra: Kardarakos\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "José Nuno Pires"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zepires@gmail.com"
+
+#: calendarcontroller.cpp:301
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "Não é possível gravar o ficheiro do calendário. A exportação falhou."
+
+#: calendarcontroller.cpp:307
+#, kde-format
+msgid "Export completed successfully"
+msgstr "A exportação terminou com sucesso"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "Anterior"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "Seguinte"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "Conferências"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "Não foi encontrada nenhuma conversa"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "Recarregar"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "Página Web"
+
+#: contents/ui/EventInfo.qml:37
+#, kde-format
+msgid "Back"
+msgstr "Recuar"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Delete"
+msgstr "Apagar"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Favorite"
+msgstr "Favorito"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "Exportar"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "Abrir a pasta"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "Não foram encontradas conversas favoritas para o %1"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr "Não foram encontradas conversas favoritas"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "Sobrepõe-se a outra conversa"
+msgstr[1] "Sobrepõe-se a %1 outras conversas"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "Conferência"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "Verificar as actualizações"
+
+#: contents/ui/GlobalDrawer.qml:50
+#, kde-format
+msgid "Checking for schedule updates"
+msgstr "A verificar as actualizações do calendário"
+
+#: contents/ui/GlobalDrawer.qml:58
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Agendamento Diário"
+
+#: contents/ui/GlobalDrawer.qml:64
+#, kde-format
+msgid "Full Schedule"
+msgstr "Agendamento Total"
+
+#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "Escalonar"
+
+#: contents/ui/GlobalDrawer.qml:77
+#, kde-format
+msgid "Categories"
+msgstr "Categorias"
+
+#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "Mapa"
+
+#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: contents/ui/GlobalDrawer.qml:105
+#, kde-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Change conference"
+msgstr "Mudar de conferência"
+
+#: contents/ui/GlobalDrawer.qml:110
+#, kde-format
+msgid "Select conference"
+msgstr "Seleccionar a conferência"
+
+#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "Configuração"
+
+#: contents/ui/GlobalDrawer.qml:134
+#, kde-format
+msgid "About"
+msgstr "Acerca"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "Latitude: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "Longitude: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "Não foram encontradas conversas para o %1"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "Não foram encontradas conversas"
+
+#: contents/ui/ScheduleView.qml:67
+#, kde-format
+msgid "Details"
+msgstr "Detalhes"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "Aparência"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "Usar o fuso-horário local"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "Notificações"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "Adicionar uma chamada de atenção às conversas favoritas"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "Chamada de atenção antes do início da conversa (minutos)"
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "As notificações não são suportadas na sua plataforma"
+
+#: eventcontroller.cpp:57
+#, kde-format
+msgid "Error during event creation"
+msgstr "Erro durante a criação do evento"
+
+#: eventcontroller.cpp:64
+#, kde-format
+msgid "Already in favorites"
+msgstr "Já nos favoritos"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"A conversa foi adicionada aos favoritos, mas sobrepõe-se às existentes:\n"
+"%1"
+
+#: eventcontroller.cpp:114
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "Conversa adicionada aos favoritos"
+
+#: main.cpp:44
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:44
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "Utilitário de Conferências do KDE"
+
+#: main.cpp:44
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 da Comunidade do KDE"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:47
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "Manutenção e Desenvolvimento"
+
+#~ msgid "Select"
+#~ msgstr "Seleccionar"

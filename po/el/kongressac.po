@@ -1,0 +1,48 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kongress package.
+#
+# Stelios <sstavra@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-01-07 02:52+0100\n"
+"PO-Revision-Date: 2021-01-11 13:05+0200\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stelios"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sstavra@gmail.com"
+
+#: kongressacmain.cpp:20 kongressacmain.cpp:21
+#, kde-format
+msgid "Kongress Alarm Check Daemon"
+msgstr "Δαίμων ελέγχου συναγερμών του Kongress"
+
+#: kongressacmain.cpp:23
+#, kde-format
+msgid "(c) 2021 Dimitris Kardarakos"
+msgstr "(c) 2021 Dimitris Kardarakos"
+
+#: kongressacmain.cpp:25
+#, kde-format
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: kongressacmain.cpp:25
+#, kde-format
+msgid "Maintainer"
+msgstr "Συντηρητής"
