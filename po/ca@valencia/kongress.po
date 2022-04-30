@@ -280,7 +280,7 @@ msgstr "Auxiliar de congressos de KDE"
 #: main.cpp:44
 #, kde-format
 msgid "© 2021 KDE Community"
-msgstr "© 2021 KDE Community"
+msgstr "© 2021 Comunitat KDE"
 
 #: main.cpp:47
 #, kde-format
