@@ -109,8 +109,8 @@ msgstr "No s'ha trobat cap xerrada preferida"
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
-msgstr[0] "Se sobreposa amb una altra xerrada"
-msgstr[1] "Se sobreposa amb %1 altres xerrades"
+msgstr[0] "Se sobreposa amb una atra xerrada"
+msgstr[1] "Se sobreposa amb %1 atres xerrades"
 
 #: contents/ui/GlobalDrawer.qml:38
 #, kde-format
