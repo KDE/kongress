@@ -78,7 +78,7 @@ msgstr "Enrere"
 #: contents/ui/EventInfo.qml:45
 #, kde-format
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr "Suprimix"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
@@ -221,7 +221,7 @@ msgstr "Aparença"
 #: contents/ui/SettingsView.qml:28
 #, kde-format
 msgid "Use local timezone"
-msgstr "Utilitza la zona horària local"
+msgstr "Utilisa la zona horària local"
 
 #: contents/ui/SettingsView.qml:35
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "S'ha produït un error en crear l'esdeveniment"
 #: eventcontroller.cpp:64
 #, kde-format
 msgid "Already in favorites"
-msgstr "Ja es troba als preferits"
+msgstr "Ya es troba als preferits"
 
 #: eventcontroller.cpp:114
 #, kde-format
@@ -259,7 +259,7 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"La xerrada s'ha afegit als preferits, però se sobreposa amb una d'existent:\n"
+"La xerrada s'ha afegit als preferits, pero se sobreposa amb una d'existent:\n"
 "%1"
 
 #: eventcontroller.cpp:114
