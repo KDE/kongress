@@ -11,4 +11,7 @@ Dependencies:
     'frameworks/ki18n': '@stable'
     'frameworks/kcalendarcore': '@stable'
     'frameworks/kcoreaddons': '@stable'
+
+- 'on': ['Linux', 'FreeBSD']
+  'require':
     'frameworks/kdbusaddons': '@stable'

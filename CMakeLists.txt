@@ -57,6 +57,10 @@ if(NOT ANDROID AND REMINDERS_ENABLED)
     add_subdirectory(kongressac)
 endif()
 
+if (ANDROID)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
+endif()
+
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ki18n_install(po)
 endif()
