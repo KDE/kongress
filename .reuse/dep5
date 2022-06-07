@@ -7,11 +7,11 @@ Files: icons/*
 Copyright: 2020 Breeze Icon Theme Developers
 License: LGPL-3.0-or-later
 
-Files: res/*
+Files: android/res/*
 Copyright: 2020 Breeze Icon Theme Developers
 License: LGPL-3.0-or-later
 
-Files: ic_launcher-playstore.png
+Files: android/ic_launcher-playstore.png
 Copyright: 2020 Breeze Icon Theme Developers
 License: LGPL-3.0-or-later
 
