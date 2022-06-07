@@ -33,7 +33,7 @@ msgstr "antonibella5@yahoo.com"
 #: calendarcontroller.cpp:301
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
-msgstr "No s'ha pogut guardar el fitxer de calendari. L'exportació ha fallat."
+msgstr "No s'ha pogut guardar el ficher de calendari. L'exportació ha fallat."
 
 #: calendarcontroller.cpp:307
 #, kde-format
@@ -246,7 +246,7 @@ msgstr "Les notificacions no estan admeses en la vostra plataforma"
 #: eventcontroller.cpp:57
 #, kde-format
 msgid "Error during event creation"
-msgstr "S'ha produït un error en crear l'esdeveniment"
+msgstr "S'ha produït un error en crear el succés"
 
 #: eventcontroller.cpp:64
 #, kde-format
