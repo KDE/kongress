@@ -109,8 +109,8 @@ msgstr "No s'ha trobat cap xerrada preferida"
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
-msgstr[0] "Se sobreposa amb una atra xerrada"
-msgstr[1] "Se sobreposa amb %1 atres xerrades"
+msgstr[0] "Se sobreposa amb una altra xerrada"
+msgstr[1] "Se sobreposa amb %1 altres xerrades"
 
 #: contents/ui/GlobalDrawer.qml:38
 #, kde-format
@@ -120,12 +120,12 @@ msgstr "Congrés"
 #: contents/ui/GlobalDrawer.qml:45
 #, kde-format
 msgid "Check for updates"
-msgstr "Comprova si hi ha actualisacions"
+msgstr "Comprova si hi ha actualitzacions"
 
 #: contents/ui/GlobalDrawer.qml:50
 #, kde-format
 msgid "Checking for schedule updates"
-msgstr "Comprova si hi ha actualisacions de la planificació"
+msgstr "Comprova si hi ha actualitzacions de la planificació"
 
 #: contents/ui/GlobalDrawer.qml:58
 #, kde-format
@@ -221,7 +221,7 @@ msgstr "Aparença"
 #: contents/ui/SettingsView.qml:28
 #, kde-format
 msgid "Use local timezone"
-msgstr "Utilisa la zona horària local"
+msgstr "Utilitza la zona horària local"
 
 #: contents/ui/SettingsView.qml:35
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "S'ha produït un error en crear el succés"
 #: eventcontroller.cpp:64
 #, kde-format
 msgid "Already in favorites"
-msgstr "Ya es troba als preferits"
+msgstr "Ja es troba als preferits"
 
 #: eventcontroller.cpp:114
 #, kde-format
@@ -259,7 +259,7 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"La xerrada s'ha afegit als preferits, pero se sobreposa amb una d'existent:\n"
+"La xerrada s'ha afegit als preferits, però se sobreposa amb una d'existent:\n"
 "%1"
 
 #: eventcontroller.cpp:114
