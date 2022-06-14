@@ -246,7 +246,7 @@ msgstr "Les notificacions no estan admeses en la vostra plataforma"
 #: eventcontroller.cpp:57
 #, kde-format
 msgid "Error during event creation"
-msgstr "S'ha produït un error en crear el succés"
+msgstr "S'ha produït un error en crear l'esdeveniment"
 
 #: eventcontroller.cpp:64
 #, kde-format
