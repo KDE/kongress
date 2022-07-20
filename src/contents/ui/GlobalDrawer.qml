@@ -111,8 +111,6 @@ Kirigami.GlobalDrawer {
 
                 onTriggered: {
                     Kongress.ConferenceController.clearActiveConference();
-                    popAll();
-                    pageStack.push(conferencesView)
                 }
             }
 
