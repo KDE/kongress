@@ -49,7 +49,7 @@ Kirigami.ScrollablePage {
     ListView {
         id: listView
 
-        enabled: !roCalendar.busyDownlading && count > 0
+        visible: !roCalendar.busyDownlading && (count > 0)
 
         model: eventsModel
         section {

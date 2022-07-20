@@ -47,7 +47,6 @@ Kirigami.GlobalDrawer {
             icon.name: "update-none"
 
             onTriggered: {
-                showPassiveNotification(i18n("Checking for schedule updates"));
                 onlineCalendar.loadOnlineCalendar();
             }
         },
