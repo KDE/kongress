@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"POT-Creation-Date: 2022-07-21 00:47+0000\n"
 "PO-Revision-Date: 2021-04-27 13:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -122,63 +122,58 @@ msgstr "Congrés"
 msgid "Check for updates"
 msgstr "Comprova si hi ha actualitzacions"
 
-#: contents/ui/GlobalDrawer.qml:50
-#, kde-format
-msgid "Checking for schedule updates"
-msgstr "Comprova si hi ha actualitzacions de la planificació"
-
-#: contents/ui/GlobalDrawer.qml:58
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Daily Schedule"
 msgstr "Planificació del dia"
 
-#: contents/ui/GlobalDrawer.qml:64
+#: contents/ui/GlobalDrawer.qml:63
 #, kde-format
 msgid "Full Schedule"
 msgstr "Planificació completa"
 
-#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
 #, kde-format
 msgid "Schedule"
 msgstr "Planificació"
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Categories"
 msgstr "Categories"
 
-#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
 #, kde-format
 msgid "Map"
 msgstr "Mapa"
 
-#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
 
-#: contents/ui/GlobalDrawer.qml:105
+#: contents/ui/GlobalDrawer.qml:104
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Change conference"
 msgstr "Canvia de congrés"
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Select conference"
 msgstr "Selecciona un congrés"
 
-#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Arranjament"
 
-#: contents/ui/GlobalDrawer.qml:134
+#: contents/ui/GlobalDrawer.qml:131
 #, kde-format
 msgid "About"
 msgstr "Quant a"
@@ -293,6 +288,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantenidor i desenvolupador"
+
+#~ msgid "Checking for schedule updates"
+#~ msgstr "Comprova si hi ha actualitzacions de la planificació"
 
 #~ msgid "Select"
 #~ msgstr "Selecciona"

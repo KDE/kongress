@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-03 00:20+0000\n"
+"POT-Creation-Date: 2022-07-21 00:47+0000\n"
 "PO-Revision-Date: 2020-01-29 02:07+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -125,64 +125,58 @@ msgstr ""
 msgid "Check for updates"
 msgstr "檢查更新"
 
-#: contents/ui/GlobalDrawer.qml:50
-#, fuzzy, kde-format
-#| msgid "Check for updates"
-msgid "Checking for schedule updates"
-msgstr "檢查更新"
-
-#: contents/ui/GlobalDrawer.qml:58
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Daily Schedule"
 msgstr "每日時間表"
 
-#: contents/ui/GlobalDrawer.qml:64
+#: contents/ui/GlobalDrawer.qml:63
 #, kde-format
 msgid "Full Schedule"
 msgstr "完整時間表"
 
-#: contents/ui/GlobalDrawer.qml:70 contents/ui/Main.qml:64
+#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
 #, kde-format
 msgid "Schedule"
 msgstr "時間表"
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Categories"
 msgstr "分類"
 
-#: contents/ui/GlobalDrawer.qml:83 contents/ui/MapView.qml:20
+#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
 #, kde-format
 msgid "Map"
 msgstr "地圖"
 
-#: contents/ui/GlobalDrawer.qml:94 contents/ui/GlobalDrawer.qml:100
+#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/GlobalDrawer.qml:105
+#: contents/ui/GlobalDrawer.qml:104
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Change conference"
 msgstr "變更會議"
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Select conference"
 msgstr "選擇會議"
 
-#: contents/ui/GlobalDrawer.qml:121 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:134
+#: contents/ui/GlobalDrawer.qml:131
 #, kde-format
 msgid "About"
 msgstr ""
@@ -300,6 +294,11 @@ msgstr ""
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Check for updates"
+#~ msgid "Checking for schedule updates"
+#~ msgstr "檢查更新"
 
 #~ msgid "Select"
 #~ msgstr "選擇"
