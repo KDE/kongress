@@ -73,7 +73,7 @@ msgstr "Pàgina web"
 #: contents/ui/EventInfo.qml:37
 #, kde-format
 msgid "Back"
-msgstr "Enrere"
+msgstr "Arrere"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
@@ -288,6 +288,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantenidor i desenvolupador"
-
-#~ msgid "Checking for schedule updates"
-#~ msgstr "Comprova si hi ha actualitzacions de la planificació"
