@@ -12,7 +12,6 @@
 #include <QAbstractListModel>
 #include <KCalendarCore/Event>
 
-class LocalCalendar;
 class SettingsController;
 
 class EventModel : public QAbstractListModel
