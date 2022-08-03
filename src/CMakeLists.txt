@@ -54,4 +54,4 @@ else()
     target_link_libraries(kongress PRIVATE Qt::Widgets Qt::DBus)
 endif()
 
-install(TARGETS kongress ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kongress ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
