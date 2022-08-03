@@ -235,7 +235,7 @@ void EventModel::loadEvents()
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid()) {
         auto filterTz = m_settings_controller->displayInLocalTimezone() ? QTimeZone::systemTimeZone() : m_local_calendar->memorycalendar()->timeZone();
         auto dayEvents = m_local_calendar->memorycalendar()->rawEvents(m_filterdt, m_filterdt, filterTz, true);
-        m_events = KCalendarCore::Calendar::sortEvents(dayEvents, KCalendarCore::EventSortField::EventSortStartDate, KCalendarCore::SortDirection::SortDirectionAscending);
+        m_events = KCalendarCore::Calendar::sortEvents(std::move(dayEvents), KCalendarCore::EventSortField::EventSortStartDate, KCalendarCore::SortDirection::SortDirectionAscending);
     }
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isNull()) {
