@@ -5,7 +5,6 @@
  */
 
 #include "eventmodel.h"
-#include "localcalendar.h"
 #include <KCalendarCore/CalFilter>
 #include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>

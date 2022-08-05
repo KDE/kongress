@@ -7,7 +7,6 @@
 #include "calendarcontroller.h"
 #include "localcalendar.h"
 #include <QDebug>
-#include <QRegExp>
 #include <QDir>
 #include <QFile>
 #include <QJsonDocument>

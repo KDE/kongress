@@ -7,6 +7,8 @@
 #ifndef EVENTMODEL_H
 #define EVENTMODEL_H
 
+#include "localcalendar.h"
+
 #include <QAbstractListModel>
 #include <KCalendarCore/Event>
 
