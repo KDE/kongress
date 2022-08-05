@@ -14,8 +14,8 @@ set(kongressac_SRCS
     wakeupmanager.cpp
 )
 
-qt5_add_dbus_adaptor(kongressac_SRCS org.kde.kongressac.xml calalarmclient.h CalAlarmClient)
-qt5_add_dbus_adaptor(kongressac_SRCS org.kde.wakeupmanager.PowerManagement.xml wakeupmanager.h WakeupManager)
+qt_add_dbus_adaptor(kongressac_SRCS org.kde.kongressac.xml calalarmclient.h CalAlarmClient)
+qt_add_dbus_adaptor(kongressac_SRCS org.kde.wakeupmanager.PowerManagement.xml wakeupmanager.h WakeupManager)
 
 add_executable(kongressac ${kongressac_SRCS} ${RESOURCES})
 
@@ -26,14 +26,14 @@ target_link_libraries(kongressac
     KF5::DBusAddons
     KF5::Notifications
     KF5::I18n
-    Qt5::DBus
+    Qt::DBus
     )
 
 install(TARGETS
     kongressac ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-install(FILES kongressac.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
+install(FILES kongressac.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 set(SERV_EXEC ${KDE_INSTALL_FULL_BINDIR}/kongressac)
 configure_file(org.kde.kongressac.service.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kongressac.service)
 

@@ -17,9 +17,9 @@ set(kongress_SRCS
     )
 
 add_executable(kongress ${kongress_SRCS} ${RESOURCES})
-target_link_libraries(kongress PRIVATE Qt5::Core Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Network KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
+target_link_libraries(kongress PRIVATE Qt::Core Qt::Qml Qt::Quick Qt::Svg Qt::QuickControls2 Qt::Network KF5::ConfigCore KF5::I18n KF5::CalendarCore KF5::CoreAddons)
 if (BUILD_TESTING)
-    target_link_libraries(kongress PRIVATE Qt5::Test)
+    target_link_libraries(kongress PRIVATE Qt::Test)
 endif()
 
 target_include_directories(kongress PRIVATE ${CMAKE_BINARY_DIR})
@@ -27,7 +27,7 @@ target_include_directories(kongress PRIVATE ${CMAKE_BINARY_DIR})
 if (ANDROID)
     target_link_libraries(kongress PRIVATE
         KF5::Kirigami2
-        Qt5::Svg
+        Qt::Svg
         OpenSSL::SSL
     )
 
@@ -51,7 +51,7 @@ if (ANDROID)
         draw-arrow-back
     )
 else()
-    target_link_libraries(kongress PRIVATE Qt5::Widgets Qt5::DBus)
+    target_link_libraries(kongress PRIVATE Qt::Widgets Qt::DBus)
 endif()
 
 install(TARGETS kongress ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
