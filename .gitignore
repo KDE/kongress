@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
 #
 # SPDX-License-Identifier: CC0-1.0
-build/
+/build*/
 *.kdev4
+CMakeLists.txt.user
