@@ -81,36 +81,17 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterSingletonType<SettingsController>("org.kde.kongress", 0, 1, "SettingsController", &SettingsController::qmlInstance);
 
-    static ConferenceController *s_conference_controller {nullptr};
-    static CalendarController *s_calendar_controller {nullptr};
-    static EventController *s_event_controller {nullptr};
-
-    qmlRegisterSingletonType<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
-        engine->setObjectOwnership(s_conference_controller, QQmlEngine::CppOwnership);
-        return s_conference_controller;
-    });
-
-    qmlRegisterSingletonType<EventController>("org.kde.kongress", 0, 1, "EventController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
-        engine->setObjectOwnership(s_event_controller, QQmlEngine::CppOwnership);
-        return s_event_controller;
-    });
-
-    qmlRegisterSingletonType<CalendarController>("org.kde.kongress", 0, 1, "CalendarController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
-        engine->setObjectOwnership(s_calendar_controller, QQmlEngine::CppOwnership);
-        return s_calendar_controller;
-    });
-
     ConferenceController conferenceController;
     conferenceController.setNetworkAccessManager(&nam);
-    s_conference_controller = &conferenceController;
+    qmlRegisterSingletonInstance<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController", &conferenceController);
 
     CalendarController calendarController;
     calendarController.setNetworkAccessManager(&nam);
-    s_calendar_controller = &calendarController;
+    qmlRegisterSingletonInstance<CalendarController>("org.kde.kongress", 0, 1, "CalendarController", &calendarController);
 
     EventController eventController;
     eventController.setCalendarController(&calendarController);
-    s_event_controller = &eventController;
+    qmlRegisterSingletonInstance<EventController>("org.kde.kongress", 0, 1, "EventController", &eventController);
 
 #ifdef Q_OS_ANDROID
     QQuickStyle::setStyle(QStringLiteral("Material"));
