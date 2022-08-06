@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-21 00:47+0000\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
 "PO-Revision-Date: 2022-04-14 12:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
-#: calendarcontroller.cpp:301
+#: calendarcontroller.cpp:300
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr "Takvim dosyası kaydedilemiyor. Dışa aktarma başarısız."
 
-#: calendarcontroller.cpp:307
+#: calendarcontroller.cpp:306
 #, kde-format
 msgid "Export completed successfully"
 msgstr "Dışa aktarma başarıyla tamamlandı"
@@ -259,28 +259,28 @@ msgstr ""
 msgid "Talk added to favorites"
 msgstr "Konuşma, favorilere eklendi"
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "Kongress"
 msgstr "Kongress"
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr "KDE Konferans Yardımcısı"
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr "© 2021 KDE Community"
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"

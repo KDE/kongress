@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-21 00:47+0000\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
 "PO-Revision-Date: 2020-02-02 20:34+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,12 +25,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: calendarcontroller.cpp:301
+#: calendarcontroller.cpp:300
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr ""
 
-#: calendarcontroller.cpp:307
+#: calendarcontroller.cpp:306
 #, kde-format
 msgid "Export completed successfully"
 msgstr ""
@@ -256,28 +256,28 @@ msgstr ""
 msgid "Talk added to favorites"
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "Kongress"
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:46
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-07 02:52+0100\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
 "PO-Revision-Date: 2020-01-28 19:31+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -27,24 +27,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "qiilaq69@gmail.com"
 
-#: kongressacmain.cpp:20 kongressacmain.cpp:21
+#: kongressacmain.cpp:22 kongressacmain.cpp:23
 #, fuzzy, kde-format
 #| msgid "KDE Conference Alarm Check Daemon"
 msgid "Kongress Alarm Check Daemon"
 msgstr "KDE konverentsihäirete kontrollimise deemon"
 
-#: kongressacmain.cpp:23
+#: kongressacmain.cpp:25
 #, fuzzy, kde-format
 #| msgid "(c) 2020 Dimitris Kardarakos"
 msgid "(c) 2021 Dimitris Kardarakos"
 msgstr "(c) 2020: Dimitris Kardarakos"
 
-#: kongressacmain.cpp:25
+#: kongressacmain.cpp:27
 #, kde-format
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: kongressacmain.cpp:25
+#: kongressacmain.cpp:27
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
