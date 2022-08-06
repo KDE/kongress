@@ -12,11 +12,14 @@
 #include <QApplication>
 #endif
 
+#include <QNetworkAccessManager>
+#include <QNetworkDiskCache>
 #include <QQmlApplicationEngine>
 #include <QtQml>
 #include <QUrl>
 #include <QQuickStyle>
 #include <QIcon>
+#include <QStandardPaths>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KAboutData>
@@ -62,6 +65,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QGuiApplication::setApplicationVersion(about.version());
     QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
 
+    QNetworkAccessManager nam;
+    nam.setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+    nam.enableStrictTransportSecurityStore(true, QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QLatin1String("/hsts/"));
+    nam.setStrictTransportSecurityEnabled(true);
+    QNetworkDiskCache namDiskCache;
+    namDiskCache.setCacheDirectory(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QLatin1String("/nam/"));
+    nam.setCache(&namDiskCache);
+
     qmlRegisterType<LocalCalendar>("org.kde.kongress", 0, 1, "LocalCalendar");
     qmlRegisterType<EventModel>("org.kde.kongress", 0, 1, "EventModel");
     qmlRegisterType<EventController>("org.kde.kongress", 0, 1, "EventController");
@@ -69,10 +80,15 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Conference>("org.kde.kongress", 0, 1, "Conference");
 
     qmlRegisterSingletonType<SettingsController>("org.kde.kongress", 0, 1, "SettingsController", &SettingsController::qmlInstance);
-    qmlRegisterSingletonType<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController", &ConferenceController::qmlInstance);;
 
+    static ConferenceController *s_conference_controller {nullptr};
     static CalendarController *s_calendar_controller {nullptr};
     static EventController *s_event_controller {nullptr};
+
+    qmlRegisterSingletonType<ConferenceController>("org.kde.kongress", 0, 1, "ConferenceController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
+        engine->setObjectOwnership(s_conference_controller, QQmlEngine::CppOwnership);
+        return s_conference_controller;
+    });
 
     qmlRegisterSingletonType<EventController>("org.kde.kongress", 0, 1, "EventController", [](QQmlEngine * engine, QJSEngine *) -> QObject * {
         engine->setObjectOwnership(s_event_controller, QQmlEngine::CppOwnership);
@@ -84,7 +100,12 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return s_calendar_controller;
     });
 
+    ConferenceController conferenceController;
+    conferenceController.setNetworkAccessManager(&nam);
+    s_conference_controller = &conferenceController;
+
     CalendarController calendarController;
+    calendarController.setNetworkAccessManager(&nam);
     s_calendar_controller = &calendarController;
 
     EventController eventController;

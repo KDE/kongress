@@ -22,25 +22,22 @@ public:
     Private() : config {"kongressrc"}
     {};
     KConfig config;
+    QNetworkAccessManager *nam = nullptr;
 };
 
 ConferenceController::ConferenceController(QObject *parent) : QObject {parent}, m_active_conference {nullptr}, m_conferences_file {new QFile {}}, d {new Private}
 {
-    if (!defaultConferenceId().isEmpty()) {
-        loadConferences();
-    }
-
     connect(this, &ConferenceController::conferencesLoaded, [this]() {
         activateDefaultConference();
     });
 }
 
-QObject *ConferenceController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
+void ConferenceController::setNetworkAccessManager(QNetworkAccessManager *nam)
 {
-    Q_UNUSED(engine);
-    Q_UNUSED(scriptEngine);
-
-    return new ConferenceController;
+    d->nam = nam;
+    if (!defaultConferenceId().isEmpty()) {
+        loadConferences();
+    }
 }
 
 QVector<Conference *> ConferenceController::conferences() const
@@ -65,10 +62,9 @@ void ConferenceController::loadConferences()
 
     const QUrl conferencesUrl {QStringLiteral("https://autoconfig.kde.org/kongress") + fileName};
     QNetworkRequest request {conferencesUrl};
-    auto nm = new QNetworkAccessManager {this};
-    nm->get(request);
+    auto reply = d->nam->get(request);
 
-    connect(nm, &QNetworkAccessManager::finished, [this, nm](QNetworkReply * reply) {
+    connect(reply, &QNetworkReply::finished, [this, reply]() {
         if (reply->error() == QNetworkReply::NoError) {
             if (m_conferences_file == nullptr || !m_conferences_file->open(QIODevice::WriteOnly)) {
                 qDebug() << "Cannot open conferences file" << m_conferences_file->errorString();
@@ -78,7 +74,6 @@ void ConferenceController::loadConferences()
             }
         }
         reply->deleteLater();
-        nm->deleteLater();
         Q_EMIT downlading(false);
         loadConferencesFromFile(*m_conferences_file);
     });

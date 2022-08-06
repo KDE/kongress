@@ -22,12 +22,18 @@ class CalendarController::Private
 public:
     Private() : config {"kongressrc"}  {};
     KConfig config;
+    QNetworkAccessManager *nam = nullptr;
 };
 
 CalendarController::CalendarController(QObject *parent)
     : QObject {parent}, m_storages {QMap<QString, KCalendarCore::FileStorage::Ptr> {}}, m_calendars {QMap<QString, KCalendarCore::MemoryCalendar::Ptr>{}}, d {new Private}
 {
     loadSavedConferences();
+}
+
+void CalendarController::setNetworkAccessManager(QNetworkAccessManager *nam)
+{
+    d->nam = nam;
 }
 
 QString CalendarController::calendars() const
@@ -138,17 +144,15 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
     auto filePath = calendarFile(calendarId);
 
     QNetworkRequest request {url};
-    auto nm = new QNetworkAccessManager {this};
-    nm->get(request);
+    auto reply = d->nam->get(request);
 
-    connect(nm, &QNetworkAccessManager::finished, [this, nm, filePath, calendarId, timeZoneId](QNetworkReply * reply) {
+    connect(reply, &QNetworkReply::finished, [this, reply, filePath, calendarId, timeZoneId]() {
         if (reply->error() == QNetworkReply::NoError) {
             if (saveToDisk(filePath, reply->readAll())) {
                 downloadFinished(calendarId, timeZoneId, filePath);
             }
         }
         reply->deleteLater();
-        nm->deleteLater();
         Q_EMIT downlading(calendarId, false);
     });
 

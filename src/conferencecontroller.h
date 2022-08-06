@@ -25,7 +25,7 @@ class ConferenceController : public QObject
 
 public:
     explicit ConferenceController(QObject *parent = nullptr);
-    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
+    void setNetworkAccessManager(QNetworkAccessManager *nam);
 
     Conference *activeConference() const;
 
