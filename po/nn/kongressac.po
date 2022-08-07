@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-07 02:52+0100\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
 "PO-Revision-Date: 2021-01-08 22:02+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -29,22 +29,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karl@huftis.org"
 
-#: kongressacmain.cpp:20 kongressacmain.cpp:21
+#: kongressacmain.cpp:22 kongressacmain.cpp:23
 #, kde-format
 msgid "Kongress Alarm Check Daemon"
 msgstr "Teneste for Kongress-varsling"
 
-#: kongressacmain.cpp:23
+#: kongressacmain.cpp:25
 #, kde-format
 msgid "(c) 2021 Dimitris Kardarakos"
 msgstr "© 2021 Dimitris Kardarakos"
 
-#: kongressacmain.cpp:25
+#: kongressacmain.cpp:27
 #, kde-format
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: kongressacmain.cpp:25
+#: kongressacmain.cpp:27
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedlikehaldar"
