@@ -100,7 +100,11 @@ Kirigami.ApplicationWindow {
             imageUrl: root.activeConference.venueImageUrl
             latitude: root.activeConference.venueLatitude
             longitude: root.activeConference.venueLongitude
-            geoUrl: root.activeConference.venueOsmUrl
+            geoUrl: {
+                if (root.activeConference.venueOsmUrl !== "")
+                    return root.activeConference.venueOsmUrl
+                return "geo:" + root.activeConference.venueLatitude + "," + root.activeConference.venueLongitude + "?z=19";
+            }
         }
     }
 }

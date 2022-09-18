@@ -81,7 +81,7 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Map")
             iconName: "find-location"
-            visible: activeConference && (activeConference.venueOsmUrl !== "")
+            visible: activeConference && (activeConference.venueOsmUrl !== "" || (activeConference.venueLatitude !== "" && activeConference.venueLongitude !== ""))
 
             onTriggered: {
                 popAll();
