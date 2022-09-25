@@ -8,7 +8,6 @@
 #define NOTIFICATIONHANDLER_H
 
 #include "alarmsmodel.h"
-#include <QVariantMap>
 
 class AlarmNotification;
 

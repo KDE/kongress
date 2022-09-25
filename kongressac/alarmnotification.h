@@ -8,7 +8,6 @@
 #define ALARMNOTIFICATION_H
 
 #include <KNotification>
-#include <QDateTime>
 
 class NotificationHandler;
 

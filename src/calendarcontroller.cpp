@@ -9,8 +9,6 @@
 #include <QDebug>
 #include <QDir>
 #include <QFile>
-#include <QJsonDocument>
-#include <QJsonObject>
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <KLocalizedString>

@@ -12,7 +12,6 @@
 #include <QDBusReply>
 #endif
 
-#include <QDebug>
 
 AlarmChecker::AlarmChecker(QObject *parent) : QObject {parent}
 {

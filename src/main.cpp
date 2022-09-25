@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include <QtGlobal>
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -15,9 +14,10 @@
 #include <QNetworkAccessManager>
 #include <QNetworkDiskCache>
 #include <QQmlApplicationEngine>
-#include <QtQml>
 #include <QUrl>
 #include <QQuickStyle>
+#include <QCommandLineParser>
+#include <QQmlContext>
 #include <QIcon>
 #include <QStandardPaths>
 #include <KLocalizedContext>

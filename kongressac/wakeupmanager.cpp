@@ -7,9 +7,7 @@
 #include "wakeupmanager.h"
 #include "solidwakeupbackend.h"
 #include "powermanagementadaptor.h"
-#include <QDBusInterface>
 #include <QDBusConnection>
-#include <QDBusReply>
 #include <QDebug>
 
 WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1}

@@ -7,8 +7,8 @@
 #ifndef CALALARMCLIENT_H
 #define CALALARMCLIENT_H
 
-#include <QTimer>
 #include <QDateTime>
+#include <QObject>
 
 class NotificationHandler;
 class WakeupBackend;

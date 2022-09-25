@@ -5,7 +5,6 @@
  */
 
 #include "conference.h"
-#include <QDebug>
 
 Conference::Conference(QObject *parent) : QObject {parent} {};
 

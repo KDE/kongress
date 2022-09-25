@@ -8,7 +8,6 @@
 #include "alarmnotification.h"
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KConfigGroup>
 #include <QDebug>
 
 NotificationHandler::NotificationHandler(QObject *parent) : QObject {parent}, m_active_notifications {QHash<QString, AlarmNotification*>()}

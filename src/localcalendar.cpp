@@ -8,7 +8,6 @@
 #include "calendarcontroller.h"
 #include "alarmchecker.h"
 #include <QDebug>
-#include <QMetaType>
 #include <KLocalizedString>
 
 LocalCalendar::LocalCalendar(QObject *parent)

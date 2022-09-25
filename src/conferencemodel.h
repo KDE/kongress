@@ -8,7 +8,6 @@
 #define CONFERENCEMODEL_H
 
 #include <QAbstractListModel>
-#include <QVariantMap>
 #include <QVector>
 #include <QHash>
 

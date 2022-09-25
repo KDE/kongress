@@ -7,7 +7,6 @@
 #ifndef ALARMSMODEL_H
 #define ALARMSMODEL_H
 
-#include <QAbstractListModel>
 #include <KCalendarCore/Alarm>
 #include <KCalendarCore/FileStorage>
 #include <QDateTime>

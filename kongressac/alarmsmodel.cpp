@@ -8,8 +8,6 @@
 #include <KCalendarCore/Calendar>
 #include <KCalendarCore/MemoryCalendar>
 #include <KSharedConfig>
-#include <KConfigGroup>
-#include <QFile>
 #include <QDebug>
 
 AlarmsModel::AlarmsModel(QObject *parent) : QObject {parent}, m_calendars {QVector<KCalendarCore::Calendar::Ptr> {}}, m_file_storages {QVector<KCalendarCore::FileStorage::Ptr> {}}, m_alarms {KCalendarCore::Alarm::List {}}, m_calendar_files {QStringList()}

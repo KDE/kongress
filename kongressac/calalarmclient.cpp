@@ -12,7 +12,6 @@
 #include "solidwakeupbackend.h"
 #include "wakeupmanager.h"
 #include <QDebug>
-#include <QVariantMap>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>

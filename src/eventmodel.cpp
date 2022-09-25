@@ -6,9 +6,7 @@
 
 #include "eventmodel.h"
 #include <KCalendarCore/CalFilter>
-#include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
-#include <KCalendarCore/Sorting>
 #include "settingscontroller.h"
 
 EventModel::EventModel(QObject *parent) :

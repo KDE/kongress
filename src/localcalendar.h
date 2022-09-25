@@ -8,7 +8,6 @@
 #define LOCALCALENDAR_H
 
 #include <QSharedPointer>
-#include <QVariantMap>
 #include <KCalendarCore/MemoryCalendar>
 
 class CalendarController;

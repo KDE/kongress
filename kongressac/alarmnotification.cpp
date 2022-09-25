@@ -6,7 +6,6 @@
 
 #include "alarmnotification.h"
 #include <KLocalizedString>
-#include <QDebug>
 #include "notificationhandler.h"
 
 AlarmNotification::AlarmNotification(NotificationHandler *handler, const QString &uid) : QObject {handler}, m_uid {uid}, m_notification_handler {handler}

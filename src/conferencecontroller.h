@@ -11,7 +11,6 @@
 #include <QFile>
 #include <QVector>
 #include <QJsonObject>
-#include <QQmlEngine>
 #include <QNetworkAccessManager>
 
 class Conference;

@@ -10,7 +10,6 @@
 #include "settingscontroller.h"
 #include <QDebug>
 #include <KCalendarCore/Event>
-#include <KCalendarCore/MemoryCalendar>
 #include <KLocalizedString>
 
 EventController::EventController(QObject *parent) : QObject {parent}, m_cal_controller {new CalendarController}, m_settings_controller {new SettingsController {this}}
