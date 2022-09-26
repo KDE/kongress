@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-07 00:50+0000\n"
+"POT-Creation-Date: 2022-09-26 00:49+0000\n"
 "PO-Revision-Date: 2022-09-20 01:56\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org, tysontan@tysontan.com, wordless@echo.moe"
 
-#: calendarcontroller.cpp:304
+#: calendarcontroller.cpp:302
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr "导出失败，无法保存日历文件。"
 
-#: calendarcontroller.cpp:310
+#: calendarcontroller.cpp:308
 #, kde-format
 msgid "Export completed successfully"
 msgstr "已成功导出"
@@ -234,17 +234,17 @@ msgstr "会谈开始前提醒时间 (分钟)"
 msgid "Notifications are not supported on your platform"
 msgstr "您的平台不支持弹出通知"
 
-#: eventcontroller.cpp:57
+#: eventcontroller.cpp:56
 #, kde-format
 msgid "Error during event creation"
 msgstr "创建日程时出错"
 
-#: eventcontroller.cpp:64
+#: eventcontroller.cpp:63
 #, kde-format
 msgid "Already in favorites"
 msgstr "已在收藏夹中"
 
-#: eventcontroller.cpp:114
+#: eventcontroller.cpp:113
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -253,7 +253,7 @@ msgstr ""
 "会谈已添加到收藏夹中，但和已有会谈重叠：\n"
 "%1"
 
-#: eventcontroller.cpp:114
+#: eventcontroller.cpp:113
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "会谈已添加到收藏夹中"

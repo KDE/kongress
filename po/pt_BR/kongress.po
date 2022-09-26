@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-07 00:50+0000\n"
+"POT-Creation-Date: 2022-09-26 00:49+0000\n"
 "PO-Revision-Date: 2021-05-06 13:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "frederico@teia.bio.br"
 
-#: calendarcontroller.cpp:304
+#: calendarcontroller.cpp:302
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr "Não foi possível salvar o calendário. Falha na exportação."
 
-#: calendarcontroller.cpp:310
+#: calendarcontroller.cpp:308
 #, kde-format
 msgid "Export completed successfully"
 msgstr "Exportação concluída com sucesso"
@@ -236,17 +236,17 @@ msgstr "Lembrar antes da apresentação começar (minutos)"
 msgid "Notifications are not supported on your platform"
 msgstr "Sua plataforma não suporta notificações"
 
-#: eventcontroller.cpp:57
+#: eventcontroller.cpp:56
 #, kde-format
 msgid "Error during event creation"
 msgstr "Erro durante a criação do evento"
 
-#: eventcontroller.cpp:64
+#: eventcontroller.cpp:63
 #, kde-format
 msgid "Already in favorites"
 msgstr "Já está nas favoritas"
 
-#: eventcontroller.cpp:114
+#: eventcontroller.cpp:113
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -255,7 +255,7 @@ msgstr ""
 "Apresentação adicionada às favoritas, mas ela se sobrepõe a:\n"
 "%1"
 
-#: eventcontroller.cpp:114
+#: eventcontroller.cpp:113
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Apresentação adicionada às favoritas"
