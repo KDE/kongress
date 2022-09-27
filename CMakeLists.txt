@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(kongress VERSION)
 
-set(PROJECT_VERSION "22.06")
+set(PROJECT_VERSION "22.09")
 
 set(KF5_MIN_VERSION "5.95.0")
 set(QT_MIN_VERSION "5.15.2")
