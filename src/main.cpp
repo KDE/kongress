@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include <QtGlobal>
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
