@@ -23,6 +23,7 @@
   <name xml:lang="ia">Kongress</name>
   <name xml:lang="id">Kongress</name>
   <name xml:lang="it">Kongress</name>
+  <name xml:lang="ka">Kongress</name>
   <name xml:lang="ko">Kongress</name>
   <name xml:lang="nl">Kongress</name>
   <name xml:lang="nn">Kongress</name>
@@ -55,6 +56,7 @@
   <summary xml:lang="ia">Application de companion de conferentia de KDE</summary>
   <summary xml:lang="id">Aplikasi pendamping Konferensi KDE</summary>
   <summary xml:lang="it">Applicazione di supporto per KDE Conference</summary>
+  <summary xml:lang="ka">KDE -ის კონფერენციის პარტნიორი</summary>
   <summary xml:lang="ko">KDE 콘퍼런스 도우미 프로그램</summary>
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
   <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
@@ -112,6 +114,7 @@
       <caption xml:lang="ia">Kongress sur Mobile</caption>
       <caption xml:lang="id">Kongress di Ponsel</caption>
       <caption xml:lang="it">Kongress su dispositivo mobile</caption>
+      <caption xml:lang="ka">Kongress მობილურზე</caption>
       <caption xml:lang="ko">모바일 환경에서의 Kongress</caption>
       <caption xml:lang="nl">Kongress op mobiel</caption>
       <caption xml:lang="nn">Kongress på mobil</caption>
@@ -142,6 +145,7 @@
       <caption xml:lang="ia">Kongress sur scriptorio</caption>
       <caption xml:lang="id">Kongress di Desktop</caption>
       <caption xml:lang="it">Kongress su desktop</caption>
+      <caption xml:lang="ka">Kongress კომპიუტერზე</caption>
       <caption xml:lang="ko">데스크톱 환경에서의 Kongress</caption>
       <caption xml:lang="nl">Kongress op bureaublad</caption>
       <caption xml:lang="nn">Kongress på skrivebordet</caption>
