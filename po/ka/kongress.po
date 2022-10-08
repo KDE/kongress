@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kongress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"PO-Revision-Date: 2022-10-07 11:32+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Temuri Doghonadze"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Temuri.doghonadze@gmail.com"
+
+#: calendarcontroller.cpp:302
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "კალენდრის ფაილის შენახვის შეცდომა. გატანა წარუმატებელია."
+
+#: calendarcontroller.cpp:308
+#, kde-format
+msgid "Export completed successfully"
+msgstr "გატანა წარმატებით დასრულდა"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "წარსული"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "მოახლოებული"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "კონფერენციები"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "კონფერენციების გარეშე"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "თავიდან ჩატვირთვა"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "ვებ გვერდი"
+
+#: contents/ui/EventInfo.qml:37
+#, kde-format
+msgid "Back"
+msgstr "უკან"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Delete"
+msgstr "წაშლა"
+
+#: contents/ui/EventInfo.qml:45
+#, kde-format
+msgid "Favorite"
+msgstr "რჩეული"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "გატანა"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "საქაღალდის გახსნა"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr ""
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr ""
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "კონფერენცია"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "განახლებების შემოწმება"
+
+#: contents/ui/GlobalDrawer.qml:57
+#, kde-format
+msgid "Daily Schedule"
+msgstr ""
+
+#: contents/ui/GlobalDrawer.qml:63
+#, kde-format
+msgid "Full Schedule"
+msgstr ""
+
+#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "განრიგი"
+
+#: contents/ui/GlobalDrawer.qml:76
+#, kde-format
+msgid "Categories"
+msgstr "კატეგორიები"
+
+#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "რუკა"
+
+#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "სანიშნები"
+
+#: contents/ui/GlobalDrawer.qml:104
+#, kde-format
+msgid "Configure"
+msgstr "მორგება"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Change conference"
+msgstr "კონფერენციის თემა"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Select conference"
+msgstr "აირჩიეთ კონფერენცია"
+
+#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "მორგება"
+
+#: contents/ui/GlobalDrawer.qml:131
+#, kde-format
+msgid "About"
+msgstr "შესახებ"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "განედი: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "გრძედი: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "საუბრები %1-სთვის ვერ ვიპოვე"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "საუბრები ვერ ვიპოვე"
+
+#: contents/ui/ScheduleView.qml:67
+#, kde-format
+msgid "Details"
+msgstr "დეტალები"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "გარემოს იერსახე"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "ლოკალური დროის სარტყლის გამოყენება"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "გაფრთხილებები"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "რჩეული საუბრებისთვის შემხსენებლის დამატება"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr ""
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr ""
+
+#: eventcontroller.cpp:56
+#, kde-format
+msgid "Error during event creation"
+msgstr ""
+
+#: eventcontroller.cpp:63
+#, kde-format
+msgid "Already in favorites"
+msgstr "უკვე სანიშნეებშია"
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "საუბარი სანიშნეებში ჩაემატა"
+
+#: main.cpp:50
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:50
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "KDE -ის კონფერენციის პარტნიორი"
+
+#: main.cpp:50
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 KDE -ის საზოგადოება"
+
+#: main.cpp:53
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:53
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "პროგრამისტი და წამყვანი"
