@@ -24,12 +24,13 @@ find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
-
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
 include(ECMSetupVersion)
+include(ECMDeprecationSettings)
+
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX KONGRESS
@@ -39,6 +40,10 @@ ecm_setup_version(${PROJECT_VERSION}
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+     KF 5.101.0
+    )
+
 
 if (ANDROID)
     find_package(OpenSSL REQUIRED)
