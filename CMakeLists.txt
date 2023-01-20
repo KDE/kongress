@@ -8,7 +8,7 @@ project(kongress VERSION)
 
 set(PROJECT_VERSION "22.11")
 
-set(KF5_MIN_VERSION "5.95.0")
+set(KF_MIN_VERSION "5.95.0")
 set(QT_MIN_VERSION "5.15.2")
 if (ANDROID)
     set(QT_MIN_VERSION "5.15.8")
@@ -23,7 +23,7 @@ option(REMINDERS_ENABLED "Build with reminders support" ON)
 include(CTest)
 include(FeatureSummary)
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -42,7 +42,7 @@ ecm_setup_version(${PROJECT_VERSION}
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
+find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0
     )
@@ -57,7 +57,7 @@ if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
+    find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
 endif()
 
 add_subdirectory(src)
