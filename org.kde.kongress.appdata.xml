@@ -43,7 +43,6 @@
   <summary>KDE Conference companion application</summary>
   <summary xml:lang="ca">Aplicació auxiliar de congressos del KDE</summary>
   <summary xml:lang="ca-valencia">Aplicació auxiliar de congressos de KDE</summary>
-  <summary xml:lang="cs">Pomocná aplikace pro konference KDE</summary>
   <summary xml:lang="da">Konferenceledsagerprogram fra KDE</summary>
   <summary xml:lang="de">KDE-Konferenzbegleitanwendung</summary>
   <summary xml:lang="el">Εφαρμογή συνοδείας του KDE για συνέδρια</summary>
@@ -104,7 +103,6 @@
       <caption>Kongress on Mobile</caption>
       <caption xml:lang="ca">Kongress al mòbil</caption>
       <caption xml:lang="ca-valencia">Kongress al mòbil</caption>
-      <caption xml:lang="cs">Kongress pro mobilní telefony</caption>
       <caption xml:lang="da">Kongress på mobil</caption>
       <caption xml:lang="de">Kongress auf einem Mobilgerät</caption>
       <caption xml:lang="el">Το Kongress στο κινητό</caption>
@@ -135,7 +133,6 @@
       <caption>Kongress on Desktop</caption>
       <caption xml:lang="ca">Kongress a l'escriptori</caption>
       <caption xml:lang="ca-valencia">Kongress en l'escriptori</caption>
-      <caption xml:lang="cs">Kongress pro Desktop</caption>
       <caption xml:lang="da">Kongress på desktop</caption>
       <caption xml:lang="de">Kongress auf einer Arbeitsfläche</caption>
       <caption xml:lang="el">Το Kongress στον υπολογιστή</caption>
