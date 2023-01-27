@@ -3,10 +3,9 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 cmake_minimum_required(VERSION 3.16)
+set(PROJECT_VERSION "23.01")
 
-project(kongress VERSION)
-
-set(PROJECT_VERSION "22.11")
+project(kongress VERSION ${PROJECT_VERSION})
 
 set(KF_MIN_VERSION "5.95.0")
 set(QT_MIN_VERSION "5.15.2")
