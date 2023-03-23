@@ -186,7 +186,7 @@ msgstr "Latitud: %1"
 #: contents/ui/MapView.qml:41
 #, kde-format
 msgid "Longitude: %1"
-msgstr "Llargària: %1"
+msgstr "Longitud: %1"
 
 #: contents/ui/MapView.qml:47
 #, kde-format
