@@ -9,3 +9,11 @@ include:
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/android.yml
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/freebsd-qt6.yml
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/android-qt6.yml
+
+include:
+  - project: sysadmin/ci-utilities
+    file:
+      - /gitlab-templates/craft-android-arm32.yml
+      - /gitlab-templates/craft-android-arm64.yml
+      - /gitlab-templates/craft-android-x86-64.yml
+      - /gitlab-templates/craft-android-appbundle.yml
