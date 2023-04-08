@@ -20,12 +20,12 @@ qt_add_dbus_adaptor(kongressac_SRCS org.kde.wakeupmanager.PowerManagement.xml wa
 add_executable(kongressac ${kongressac_SRCS} ${RESOURCES})
 
 target_link_libraries(kongressac
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::CalendarCore
-    KF5::DBusAddons
-    KF5::Notifications
-    KF5::I18n
+    KF${QT_MAJOR_VERSION}::CoreAddons
+    KF${QT_MAJOR_VERSION}::ConfigCore
+    KF${QT_MAJOR_VERSION}::CalendarCore
+    KF${QT_MAJOR_VERSION}::DBusAddons
+    KF${QT_MAJOR_VERSION}::Notifications
+    KF${QT_MAJOR_VERSION}::I18n
     Qt::DBus
     )
 

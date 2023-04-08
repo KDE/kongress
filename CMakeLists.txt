@@ -46,7 +46,7 @@ ecm_setup_version(${PROJECT_VERSION}
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
 
-find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
+find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0
     )
@@ -61,7 +61,7 @@ if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
-    find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
+    find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
 endif()
 
 add_subdirectory(src)
