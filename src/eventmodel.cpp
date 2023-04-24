@@ -86,6 +86,15 @@ QHash<int, QByteArray> EventModel::roleNames() const
     };
 }
 
+static void applyTimeZone(QDateTime &dt, const QTimeZone &tz)
+{
+    if (dt.timeSpec() == Qt::LocalTime) {
+        dt.setTimeZone(tz);
+    } else {
+        dt = dt.toTimeZone(tz);
+    }
+}
+
 QVariant EventModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
@@ -106,16 +115,15 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     case EventDt:
         return startDtTime.toString("dddd d MMMM");
     case ShiftedEventDt: {
-        startDtTime.setTimeZone(calendarTz);
+        applyTimeZone(startDtTime, calendarTz);
         return startDtTime.toString("dddd d MMMM");
     }
     case ShiftedEventDtLocal: {
-        startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         return startDtTime.toString("dddd d MMMM");
     }
     case ScheduleStartDt: {
-        startDtTime.setTimeZone(calendarTz);
+        applyTimeZone(startDtTime, calendarTz);
         return startDtTime;
     }
     case AllDay:
@@ -139,10 +147,8 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     case EventEndDt:
         return endDtTime;
     case ScheduleEndDt: {
-        auto endDtWConferenceTz = endDtTime;
-        endDtWConferenceTz.setTimeZone(calendarTz);
-
-        return endDtWConferenceTz;
+        applyTimeZone(endDtTime, calendarTz);
+        return endDtTime;
     }
     case Transparency:
         return m_events.at(row)->transparency();
@@ -160,42 +166,36 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return m_events.at(row)->url();
     case ShiftedStartEndDt: {
         // Shift and convert time to the time zone of the conference
-        startDtTime.setTimeZone(calendarTz);
-        startDtTime = startDtTime.toTimeZone(calendarTz);
-        endDtTime.setTimeZone(calendarTz);
-        endDtTime = endDtTime.toTimeZone(calendarTz);
+        applyTimeZone(startDtTime, calendarTz);
+        applyTimeZone(endDtTime, calendarTz);
 
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndDtLocal: {
         // Shift time to the time zone of the conference and convert to the system time zone
-        startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
-        endDtTime.setTimeZone(calendarTz);
         endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case ShiftedStartEndTime: {
         // Shift time to the time zone of the conference
-        startDtTime.setTimeZone(calendarTz);
-        endDtTime.setTimeZone(calendarTz);
+        applyTimeZone(startDtTime, calendarTz);
+        applyTimeZone(endDtTime, calendarTz);
 
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case ShiftedStartEndTimeLocal: {
         // Shift time to the conference time zone and convert time to the system time zone
-        startDtTime.setTimeZone(calendarTz);
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
-        endDtTime.setTimeZone(calendarTz);
         endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
         return formatStartEndTime(startDtTime, endDtTime);
     }
     case StartEndDt: {
         // Convert time to the time zone of the conference
-        startDtTime = startDtTime.toTimeZone(calendarTz);
-        endDtTime = endDtTime.toTimeZone(calendarTz);
+        applyTimeZone(startDtTime, calendarTz);
+        applyTimeZone(endDtTime, calendarTz);
 
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
