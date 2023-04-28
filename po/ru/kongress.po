@@ -2,250 +2,252 @@
 # This file is distributed under the same license as the kongress package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:50+0000\n"
-"PO-Revision-Date: 2020-05-08 09:48+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2023-04-26 16:13+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Олеся Герасименко"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "translation-team@basealt.ru"
 
 #: calendarcontroller.cpp:302
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
-msgstr ""
+msgstr "Не удалось сохранить календарь. Сбой экспорта."
 
 #: calendarcontroller.cpp:308
 #, kde-format
 msgid "Export completed successfully"
-msgstr ""
+msgstr "Экспорт успешно завершён"
 
 #: conferencemodel.cpp:87
 #, kde-format
 msgid "Past"
-msgstr ""
+msgstr "Прошедшие"
 
 #: conferencemodel.cpp:88
 #, kde-format
 msgid "Upcoming"
-msgstr ""
+msgstr "Предстоящие"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
-msgstr ""
+msgstr "Конференции"
 
 #: contents/ui/Conferences.qml:24
 #, kde-format
 msgid "No conference found"
-msgstr ""
+msgstr "Конференции не найдены"
 
 #: contents/ui/Conferences.qml:27
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Обновить"
 
 #: contents/ui/EventInfo.qml:24
 #, kde-format
 msgid "Web Page"
-msgstr ""
+msgstr "Веб-страница"
 
 #: contents/ui/EventInfo.qml:37
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
 msgid "Favorite"
-msgstr ""
+msgstr "Добавить в избранное"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Экспорт"
 
 #: contents/ui/FavoritesView.qml:57
 #, kde-format
 msgid "Open folder"
-msgstr ""
+msgstr "Открыть папку"
 
 #: contents/ui/FavoritesView.qml:72
 #, kde-format
 msgid "No favorite talks found for %1"
-msgstr ""
+msgstr "Избранные доклады, которые соответствуют %1, не найдены"
 
 #: contents/ui/FavoritesView.qml:72
 #, kde-format
 msgid "No favorite talks found"
-msgstr ""
+msgstr "Избранные доклады не найдены"
 
 #: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Пересекается с %1 другим докладом"
+msgstr[1] "Пересекается с %1 другими докладами"
+msgstr[2] "Пересекается с %1 другими докладами"
+msgstr[3] "Пересекается с другим докладом"
 
 #: contents/ui/GlobalDrawer.qml:38
 #, kde-format
 msgid "Conference"
-msgstr ""
+msgstr "Конференция"
 
 #: contents/ui/GlobalDrawer.qml:45
 #, kde-format
 msgid "Check for updates"
-msgstr ""
+msgstr "Проверить наличие обновлений"
 
 #: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Daily Schedule"
-msgstr ""
+msgstr "Расписание дня"
 
 #: contents/ui/GlobalDrawer.qml:63
 #, kde-format
 msgid "Full Schedule"
-msgstr ""
+msgstr "Полное расписание"
 
 #: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
 #, kde-format
 msgid "Schedule"
-msgstr ""
+msgstr "Расписание"
 
 #: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Categories"
-msgstr ""
+msgstr "Категории"
 
 #: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
 #, kde-format
 msgid "Map"
-msgstr ""
+msgstr "Карта"
 
 #: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Избранное"
 
 #: contents/ui/GlobalDrawer.qml:104
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Настройка"
 
 #: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Change conference"
-msgstr ""
+msgstr "Изменить конференцию"
 
 #: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Select conference"
-msgstr ""
+msgstr "Выбрать конференцию"
 
 #: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Параметры"
 
 #: contents/ui/GlobalDrawer.qml:131
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "О программе"
 
 #: contents/ui/MapView.qml:35
 #, kde-format
 msgid "Latitude: %1"
-msgstr ""
+msgstr "Широта: %1"
 
 #: contents/ui/MapView.qml:41
 #, kde-format
 msgid "Longitude: %1"
-msgstr ""
+msgstr "Долгота: %1"
 
 #: contents/ui/MapView.qml:47
 #, kde-format
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
 msgid "No talks found for %1"
-msgstr ""
+msgstr "Доклады, которые соответствуют %1, не найдены"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
 msgid "No talks found"
-msgstr ""
+msgstr "Доклады не найдены"
 
 #: contents/ui/ScheduleView.qml:67
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Подробности"
 
 #: contents/ui/SettingsView.qml:23
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Внешний вид"
 
 #: contents/ui/SettingsView.qml:28
 #, kde-format
 msgid "Use local timezone"
-msgstr ""
+msgstr "Использовать местный часовой пояс"
 
 #: contents/ui/SettingsView.qml:35
 #, kde-format
 msgid "Notifications"
-msgstr ""
+msgstr "Уведомления"
 
 #: contents/ui/SettingsView.qml:39
 #, kde-format
 msgid "Add reminder to favorite talks"
-msgstr ""
+msgstr "Добавить напоминание для избранных докладов"
 
 #: contents/ui/SettingsView.qml:47
 #, kde-format
 msgid "Remind before talk start (minutes)"
-msgstr ""
+msgstr "Напоминание перед началом доклада (в минутах)"
 
 #: contents/ui/SettingsView.qml:59
 #, kde-format
 msgid "Notifications are not supported on your platform"
-msgstr ""
+msgstr "На этой платформе не поддерживаются уведомления"
 
 #: eventcontroller.cpp:56
 #, kde-format
 msgid "Error during event creation"
-msgstr ""
+msgstr "При создании события произошла ошибка"
 
 #: eventcontroller.cpp:63
 #, kde-format
 msgid "Already in favorites"
-msgstr ""
+msgstr "Уже находится в избранном"
 
 #: eventcontroller.cpp:113
 #, kde-format
@@ -253,38 +255,40 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
+"Доклад добавлен в избранное, но пересекается с имеющимися:\n"
+"%1"
 
 #: eventcontroller.cpp:113
 #, kde-format
 msgid "Talk added to favorites"
-msgstr ""
+msgstr "Доклад добавлен в избранное"
 
 #: main.cpp:50
 #, kde-format
 msgid "Kongress"
-msgstr ""
+msgstr "Kongress"
 
 #: main.cpp:50
 #, kde-format
 msgid "KDE Conference Companion"
-msgstr ""
+msgstr "Приложение-помощник для конференций от KDE"
 
 #: main.cpp:50
 #, kde-format
 msgid "© 2021 KDE Community"
-msgstr ""
+msgstr "© Сообщество KDE, 2021"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
-msgstr ""
+msgstr "Dimitris Kardarakos"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
-msgstr ""
+msgstr "Сопровождающий и разработчик"
 
 #~ msgid "Calendar name contains invalid characters"
 #~ msgstr "Имя календаря содержит недопустимые символы"
