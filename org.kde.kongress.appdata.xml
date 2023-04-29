@@ -64,6 +64,7 @@
   <summary xml:lang="pl">Program do spotkań od KDE</summary>
   <summary xml:lang="pt">Aplicação assistente do KDE Conference</summary>
   <summary xml:lang="pt-BR">Aplicação assistente de conferências da KDE</summary>
+  <summary xml:lang="ru">Приложение-помощник для конференций от KDE</summary>
   <summary xml:lang="sl">Program za spremljanje konference KDE</summary>
   <summary xml:lang="sv">KDE konferenskompanjonprogram</summary>
   <summary xml:lang="tr">KDE Konferans yardımcı uygulaması</summary>
@@ -92,6 +93,7 @@
     <p xml:lang="pl">Kongress jest programem do spotkań stworzony w ramach KDE</p>
     <p xml:lang="pt">O Kongress é uma aplicação assistente para conferências criada pelo KDE</p>
     <p xml:lang="pt-BR">Kongress é uma aplicação assistente para conferências produzido pela KDE</p>
+    <p xml:lang="ru">Kongress — приложение-помощник для конференций, созданное KDE</p>
     <p xml:lang="sl">Kongress je spremljevalna aplikacija za konference, ki jo je izdelal KDE</p>
     <p xml:lang="sv">Kongress är ett kompanjonprogram för konferenser gjort av KDE</p>
     <p xml:lang="tr">Kongre, KDE tarafından yapılan konferanslara yardımcı olması için geliştirilmiş bir uygulamadır</p>
@@ -122,6 +124,7 @@
       <caption xml:lang="pl">Kongress Przenośny</caption>
       <caption xml:lang="pt">O Kongress no Telemóvel</caption>
       <caption xml:lang="pt-BR">Kongress em aparelhos móveis</caption>
+      <caption xml:lang="ru">Kongress на мобильном устройстве</caption>
       <caption xml:lang="sl">Kongress na mobilcu</caption>
       <caption xml:lang="sv">Kongress på mobil</caption>
       <caption xml:lang="tr">Taşınabilir aygıtlarda Kongre</caption>
@@ -153,6 +156,7 @@
       <caption xml:lang="pl">Kongres Biurkowy</caption>
       <caption xml:lang="pt">O Kongress no Computador</caption>
       <caption xml:lang="pt-BR">Kongress no desktop</caption>
+      <caption xml:lang="ru">Kongress на настольном компьютере</caption>
       <caption xml:lang="sl">Kongress na Namizju</caption>
       <caption xml:lang="sv">Kongress på skrivbordet</caption>
       <caption xml:lang="tr">Masaüstünde Kongre</caption>
