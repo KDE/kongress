@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-06 00:48+0000\n"
-"PO-Revision-Date: 2020-03-07 08:16+0100\n"
+"PO-Revision-Date: 2023-05-11 16:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,16 +28,14 @@ msgid "Your emails"
 msgstr "adrian@chaves.io"
 
 #: kongressacmain.cpp:22 kongressacmain.cpp:23
-#, fuzzy, kde-format
-#| msgid "KDE Conference Alarm Check Daemon"
+#, kde-format
 msgid "Kongress Alarm Check Daemon"
-msgstr "Servizo de comprobación de alarmas de KDE Conference"
+msgstr "Servizo de comprobación de alarmas de Kongress"
 
 #: kongressacmain.cpp:25
-#, fuzzy, kde-format
-#| msgid "(c) 2020 Dimitris Kardarakos"
+#, kde-format
 msgid "(c) 2021 Dimitris Kardarakos"
-msgstr "© 2020 Dimitris Kardarakos"
+msgstr "© 2021 Dimitris Kardarakos"
 
 #: kongressacmain.cpp:27
 #, kde-format

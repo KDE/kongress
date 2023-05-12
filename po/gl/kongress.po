@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:50+0000\n"
-"PO-Revision-Date: 2020-03-07 17:04+0100\n"
+"PO-Revision-Date: 2023-05-11 16:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,28 +15,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Adrian Chaves (Gallaecio)"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "adrian@chaves.io"
 
 #: calendarcontroller.cpp:302
-#, fuzzy, kde-format
-#| msgid "The calendar file is not valid"
+#, kde-format
 msgid "Cannot save calendar file. Export failed."
-msgstr "O ficheiro de calendario non é válido"
+msgstr "Non se pode gardar o ficheiro de calendario. A exportación fallou."
 
 #: calendarcontroller.cpp:308
 #, kde-format
 msgid "Export completed successfully"
-msgstr ""
+msgstr "Completouse a exportación"
 
 #: conferencemodel.cpp:87
 #, kde-format
@@ -54,15 +53,14 @@ msgid "Conferences"
 msgstr "Conferencias"
 
 #: contents/ui/Conferences.qml:24
-#, fuzzy, kde-format
-#| msgid "No events found"
+#, kde-format
 msgid "No conference found"
-msgstr "Non se atoparon eventos"
+msgstr "Non se atopou ningunha conferencia"
 
 #: contents/ui/Conferences.qml:27
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Cargar de novo"
 
 #: contents/ui/EventInfo.qml:24
 #, kde-format
@@ -72,7 +70,7 @@ msgstr "Páxina web"
 #: contents/ui/EventInfo.qml:37
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Volver"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
@@ -87,24 +85,22 @@ msgstr "Favorito"
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Exportar"
 
 #: contents/ui/FavoritesView.qml:57
 #, kde-format
 msgid "Open folder"
-msgstr ""
+msgstr "Abrir un cartafol"
 
 #: contents/ui/FavoritesView.qml:72
-#, fuzzy, kde-format
-#| msgid "No events found for %1"
+#, kde-format
 msgid "No favorite talks found for %1"
-msgstr "Non se atoparon eventos para %1"
+msgstr "Non se atoparon charlas favoritas para %1"
 
 #: contents/ui/FavoritesView.qml:72
-#, fuzzy, kde-format
-#| msgid "No events found"
+#, kde-format
 msgid "No favorite talks found"
-msgstr "Non se atoparon eventos"
+msgstr "Non se atoparon charlas favoritas"
 
 #: contents/ui/FavoritesView.qml:167
 #, kde-format
@@ -155,10 +151,9 @@ msgid "Favorites"
 msgstr "Favoritos"
 
 #: contents/ui/GlobalDrawer.qml:104
-#, fuzzy, kde-format
-#| msgid "Conference"
+#, kde-format
 msgid "Configure"
-msgstr "Conferencia"
+msgstr "Configurar"
 
 #: contents/ui/GlobalDrawer.qml:109
 #, kde-format
@@ -173,12 +168,12 @@ msgstr "Seleccionar unha conferencia"
 #: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: contents/ui/GlobalDrawer.qml:131
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #: contents/ui/MapView.qml:35
 #, kde-format
@@ -191,22 +186,19 @@ msgid "Longitude: %1"
 msgstr "Lonxitude: %1"
 
 #: contents/ui/MapView.qml:47
-#, fuzzy, kde-format
-#| msgid "OpenStreetMaps"
+#, kde-format
 msgid "OpenStreetMap"
-msgstr "OpenStreetMaps"
+msgstr "OpenStreetMap"
 
 #: contents/ui/ScheduleView.qml:28
-#, fuzzy, kde-format
-#| msgid "No events found for %1"
+#, kde-format
 msgid "No talks found for %1"
-msgstr "Non se atoparon eventos para %1"
+msgstr "Non se atoparon charlas para %1"
 
 #: contents/ui/ScheduleView.qml:28
-#, fuzzy, kde-format
-#| msgid "No events found"
+#, kde-format
 msgid "No talks found"
-msgstr "Non se atoparon eventos"
+msgstr "Non se atoparon charlas"
 
 #: contents/ui/ScheduleView.qml:67
 #, kde-format
@@ -216,33 +208,32 @@ msgstr "Detalles"
 #: contents/ui/SettingsView.qml:23
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Aparencia"
 
 #: contents/ui/SettingsView.qml:28
 #, kde-format
 msgid "Use local timezone"
-msgstr ""
+msgstr "Usar o fuso horario local"
 
 #: contents/ui/SettingsView.qml:35
 #, kde-format
 msgid "Notifications"
-msgstr ""
+msgstr "Notificacións"
 
 #: contents/ui/SettingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgid "Add reminder to favorite talks"
-msgstr "A charla engadiuse ás favoritas"
+msgstr "Engadir unha lembranza ás charlas favoritas"
 
 #: contents/ui/SettingsView.qml:47
 #, kde-format
 msgid "Remind before talk start (minutes)"
-msgstr ""
+msgstr "Lembrar antes do inicio da charla (minutos)"
 
 #: contents/ui/SettingsView.qml:59
 #, kde-format
 msgid "Notifications are not supported on your platform"
-msgstr ""
+msgstr "As notificacións non están dispoñíbeis para esta plataforma."
 
 #: eventcontroller.cpp:56
 #, kde-format
@@ -271,29 +262,29 @@ msgstr "A charla engadiuse ás favoritas"
 #: main.cpp:50
 #, kde-format
 msgid "Kongress"
-msgstr ""
+msgstr "Kongress"
 
 #: main.cpp:50
 #, kde-format
 msgid "KDE Conference Companion"
-msgstr ""
+msgstr "Acompañante para conferencias de KDE"
 
 #: main.cpp:50
 #, kde-format
 msgid "© 2021 KDE Community"
-msgstr ""
+msgstr "© 2021 Comunidade KDE"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
-msgstr ""
+msgstr "Dimitris Kardarakos"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
-msgstr ""
+msgstr "Mantemento e desenvolvemento"
 
 #, fuzzy
 #~| msgid "Check for updates"
