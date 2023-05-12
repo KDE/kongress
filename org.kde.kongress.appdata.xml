@@ -82,6 +82,7 @@
     <p xml:lang="es">Kongress es una aplicación complementaria para conferencias creada por KDE</p>
     <p xml:lang="fi">Kongress on KDE:n tekemä konferenssiavustajasovellus</p>
     <p xml:lang="fr">Kongress est une application de compagnon pour les conférences, réalisée par KDE.</p>
+    <p xml:lang="gl">Kongress é unha aplicación de acompañamento para conferencias organizadas por KDE.</p>
     <p xml:lang="ia">Kongress es un application companion per conferentias facite per KDE</p>
     <p xml:lang="id">Kongress adalah aplikasi pendamping untuk konferensi yang dibuat oleh KDE</p>
     <p xml:lang="it">Kongress è un'applicazione di supporto per le conferenze realizzata da KDE</p>
@@ -113,6 +114,7 @@
       <caption xml:lang="es">Kongress para móviles</caption>
       <caption xml:lang="fi">Kongress mobiilissa</caption>
       <caption xml:lang="fr">Kongress sur périphériques mobiles</caption>
+      <caption xml:lang="gl">Kongress de móbil</caption>
       <caption xml:lang="ia">Kongress sur Mobile</caption>
       <caption xml:lang="id">Kongress di Ponsel</caption>
       <caption xml:lang="it">Kongress su dispositivo mobile</caption>
@@ -145,6 +147,7 @@
       <caption xml:lang="es">Kongress para el escritorio</caption>
       <caption xml:lang="fi">Kongress työpöydällä</caption>
       <caption xml:lang="fr">Kongress sur le bureau</caption>
+      <caption xml:lang="gl">Kongress de escritorio</caption>
       <caption xml:lang="ia">Kongress sur scriptorio</caption>
       <caption xml:lang="id">Kongress di Desktop</caption>
       <caption xml:lang="it">Kongress su desktop</caption>
