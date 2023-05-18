@@ -55,13 +55,13 @@ Kirigami.GlobalDrawer {
             id: dayActions
 
             text: i18n("Daily Schedule")
-            iconName: "view-calendar-day"
+            icon.name: "view-calendar-day"
             expandible: true
         },
 
         Kirigami.Action {
             text: i18n("Full Schedule")
-            iconName: "view-calendar-agenda"
+            icon.name: "view-calendar-agenda"
             visible: activeConference
 
             onTriggered: {
@@ -74,13 +74,13 @@ Kirigami.GlobalDrawer {
             id: categoryActions
 
             text: i18n("Categories")
-            iconName: "category"
+            icon.name: "category"
             visible: activeConference && children.length > 0
         },
 
         Kirigami.Action {
             text: i18n("Map")
-            iconName: "find-location"
+            icon.name: "find-location"
             visible: activeConference && (activeConference.venueOsmUrl !== "" || (activeConference.venueLatitude !== "" && activeConference.venueLongitude !== ""))
 
             onTriggered: {
@@ -91,7 +91,7 @@ Kirigami.GlobalDrawer {
 
         Kirigami.Action {
             text: i18n("Favorites")
-            iconName: "favorite"
+            icon.name: "favorite"
             visible: activeConference
 
             onTriggered: {
@@ -102,12 +102,12 @@ Kirigami.GlobalDrawer {
 
         Kirigami.Action {
             text: i18n("Configure")
-            iconName: "settings-configure"
+            icon.name: "settings-configure"
             expandible: true
 
             Kirigami.Action {
                 text: activeConference ? i18n("Change conference") : i18n("Select conference")
-                iconName: activeConference ? 'exchange-positions' : 'edit-select'
+                icon.name: activeConference ? 'exchange-positions' : 'edit-select'
 
                 onTriggered: {
                     Kongress.ConferenceController.clearActiveConference();
@@ -116,7 +116,7 @@ Kirigami.GlobalDrawer {
 
             Kirigami.Action {
                 text: i18n("Settings")
-                iconName: "settings-configure"
+                icon.name: "settings-configure"
                 onTriggered: {
                     popAll();
                     pageStack.push(settingsView);
@@ -127,7 +127,7 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             id: aboutAction
 
-            iconName: "help-about-symbolic"
+            icon.name: "help-about-symbolic"
             text: i18n("About")
 
             onTriggered: {
