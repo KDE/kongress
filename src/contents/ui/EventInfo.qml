@@ -19,7 +19,7 @@ Kirigami.ScrollablePage {
 
     title: root.event ? event.summary : ""
 
-    actions.left:
+    actions: [
         Kirigami.Action {
             text: i18n("Web Page")
             icon.name: "internet-services"
@@ -30,17 +30,7 @@ Kirigami.ScrollablePage {
                     Qt.openUrlExternally(event.url);
                 }
             }
-        }
-
-    actions.main:
-        Kirigami.Action {
-            text: i18n("Back")
-            icon.name: "draw-arrow-back"
-
-            onTriggered: pageStack.pop()
-        }
-
-    actions.right:
+        },
         Kirigami.Action {
             text: viewMode === "favorites" ? i18n("Delete") : i18n("Favorite")
             icon.name: viewMode === "favorites" ? "delete" : "favorite"
@@ -60,6 +50,7 @@ Kirigami.ScrollablePage {
                 }
             }
         }
+    ]
 
     Kirigami.AbstractCard {
         id: cardDelegate

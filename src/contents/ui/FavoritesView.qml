@@ -22,10 +22,10 @@ Kirigami.ScrollablePage {
     leftPadding: 0
     rightPadding: 0
 
-    contextualActions: [
+    actions: [
         Kirigami.Action {
             text: i18n("Export")
-            iconName: "document-export"
+            icon.name: "document-export"
 
             onTriggered: {
                 var exportResult = Kongress.CalendarController.exportData(Kongress.ConferenceController.activeConference.id, root.rwCalendar);
