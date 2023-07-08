@@ -15,7 +15,7 @@ project(kongress VERSION ${RELEASE_SERVICE_VERSION})
 set(KF_MIN_VERSION "5.95.0")
 set(QT_MIN_VERSION "5.15.2")
 if (ANDROID)
-    set(QT_MIN_VERSION "5.15.8")
+    set(QT_MIN_VERSION "5.15.10")
 endif()
 set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
 
