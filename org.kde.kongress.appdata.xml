@@ -15,7 +15,6 @@
   <name xml:lang="de">Kongress</name>
   <name xml:lang="el">Kongress</name>
   <name xml:lang="en-GB">Kongress</name>
-  <name xml:lang="eo">Kongress</name>
   <name xml:lang="es">Kongress</name>
   <name xml:lang="et">Kongress</name>
   <name xml:lang="fi">Kongress</name>
@@ -49,7 +48,6 @@
   <summary xml:lang="de">KDE-Konferenzbegleitanwendung</summary>
   <summary xml:lang="el">Εφαρμογή συνοδείας του KDE για συνέδρια</summary>
   <summary xml:lang="en-GB">KDE Conference companion application</summary>
-  <summary xml:lang="eo">KDE-Konferencakompana aplikaĵo</summary>
   <summary xml:lang="es">Aplicación complementaria KDE Conference</summary>
   <summary xml:lang="et">KDE konverentsiabiline</summary>
   <summary xml:lang="fi">KDE:n konferenssikumppanisovellus</summary>
@@ -81,7 +79,6 @@
     <p xml:lang="de">Kongress ist eine Begleitanwendung für Konferenzen von KDE</p>
     <p xml:lang="el">Το Kongress είναι μια εφαρμογή συνοδείας για συνέδρια που κατασκευάστηκε από το KDE</p>
     <p xml:lang="en-GB">Kongress is a companion application for conferences made by KDE</p>
-    <p xml:lang="eo">Kongress estas akompana aplikaĵo por konferencoj fare de KDE</p>
     <p xml:lang="es">Kongress es una aplicación complementaria para conferencias creada por KDE</p>
     <p xml:lang="fi">Kongress on KDE:n tekemä konferenssiavustajasovellus</p>
     <p xml:lang="fr">Kongress est une application de compagnon pour les conférences, réalisée par KDE.</p>
@@ -114,7 +111,6 @@
       <caption xml:lang="de">Kongress auf einem Mobilgerät</caption>
       <caption xml:lang="el">Το Kongress στο κινητό</caption>
       <caption xml:lang="en-GB">Kongress on Mobile</caption>
-      <caption xml:lang="eo">Kongress sur Poŝtelefono</caption>
       <caption xml:lang="es">Kongress para móviles</caption>
       <caption xml:lang="fi">Kongress mobiilissa</caption>
       <caption xml:lang="fr">Kongress sur périphériques mobiles</caption>
@@ -148,7 +144,6 @@
       <caption xml:lang="de">Kongress auf einer Arbeitsfläche</caption>
       <caption xml:lang="el">Το Kongress στον υπολογιστή</caption>
       <caption xml:lang="en-GB">Kongress on Desktop</caption>
-      <caption xml:lang="eo">Kongress sur Labortablo</caption>
       <caption xml:lang="es">Kongress para el escritorio</caption>
       <caption xml:lang="fi">Kongress työpöydällä</caption>
       <caption xml:lang="fr">Kongress sur le bureau</caption>
