@@ -8,7 +8,7 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
-#include <QApplication>
+#include <QGuiApplication>
 #include <QCommandLineParser>
 
 int main(int argc, char **argv)
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 #endif
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
 
     KAboutData aboutData {QStringLiteral("kongressac"), i18n("Kongress Alarm Check Daemon"),
                           QString {}, i18n("Kongress Alarm Check Daemon"),
