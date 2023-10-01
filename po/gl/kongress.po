@@ -30,7 +30,7 @@ msgstr "adrian@chaves.io"
 #: calendarcontroller.cpp:302
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
-msgstr "Non se pode gardar o ficheiro de calendario. A exportación fallou."
+msgstr "Non é posíbel gardar o ficheiro de calendario. A exportación fallou."
 
 #: calendarcontroller.cpp:308
 #, kde-format
