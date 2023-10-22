@@ -12,11 +12,8 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 
 project(kongress VERSION ${RELEASE_SERVICE_VERSION})
 
-set(KF_MIN_VERSION "5.95.0")
-set(QT_MIN_VERSION "5.15.2")
-if (ANDROID)
-    set(QT_MIN_VERSION "5.15.10")
-endif()
+set(QT_MIN_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -44,24 +41,20 @@ ecm_setup_version(${PROJECT_VERSION}
     VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
 
-find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
-ecm_set_disabled_deprecation_versions(QT 5.15.2
-     KF 5.101.0
-    )
-
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
 
 if (ANDROID)
     find_package(OpenSSL REQUIRED)
 else()
-    find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
+    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
 if (BUILD_TESTING)
-    find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
+    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Test)
 endif()
 if(NOT ANDROID AND REMINDERS_ENABLED)
-    find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
+    find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS DBusAddons Notifications)
 endif()
 
 add_subdirectory(src)
