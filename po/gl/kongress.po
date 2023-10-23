@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"POT-Creation-Date: 2023-10-23 00:44+0000\n"
 "PO-Revision-Date: 2023-05-11 16:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -67,17 +67,12 @@ msgstr "Cargar de novo"
 msgid "Web Page"
 msgstr "Páxina web"
 
-#: contents/ui/EventInfo.qml:37
-#, kde-format
-msgid "Back"
-msgstr "Volver"
-
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Delete"
 msgstr "Eliminar"
 
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Favorite"
 msgstr "Favorito"
@@ -285,6 +280,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantemento e desenvolvemento"
+
+#~ msgid "Back"
+#~ msgstr "Volver"
 
 #, fuzzy
 #~| msgid "Check for updates"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"POT-Creation-Date: 2023-10-23 00:44+0000\n"
 "PO-Revision-Date: 2023-04-26 16:13+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -69,17 +69,12 @@ msgstr "Обновить"
 msgid "Web Page"
 msgstr "Веб-страница"
 
-#: contents/ui/EventInfo.qml:37
-#, kde-format
-msgid "Back"
-msgstr "Назад"
-
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Delete"
 msgstr "Удалить"
 
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Favorite"
 msgstr "Добавить в избранное"
@@ -289,6 +284,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Сопровождающий и разработчик"
+
+#~ msgid "Back"
+#~ msgstr "Назад"
 
 #~ msgid "Calendar name contains invalid characters"
 #~ msgstr "Имя календаря содержит недопустимые символы"

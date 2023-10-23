@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"POT-Creation-Date: 2023-10-23 00:44+0000\n"
 "PO-Revision-Date: 2023-10-21 13:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -67,17 +67,12 @@ msgstr "重新加载"
 msgid "Web Page"
 msgstr "网页"
 
-#: contents/ui/EventInfo.qml:37
-#, kde-format
-msgid "Back"
-msgstr "返回"
-
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Delete"
 msgstr "删除"
 
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Favorite"
 msgstr "收藏"
@@ -284,3 +279,6 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "维护者及开发者"
+
+#~ msgid "Back"
+#~ msgstr "返回"

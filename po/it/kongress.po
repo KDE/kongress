@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"POT-Creation-Date: 2023-10-23 00:44+0000\n"
 "PO-Revision-Date: 2021-04-27 14:10+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -67,17 +67,12 @@ msgstr "Ricarica"
 msgid "Web Page"
 msgstr "Pagina web"
 
-#: contents/ui/EventInfo.qml:37
-#, kde-format
-msgid "Back"
-msgstr "Indietro"
-
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Delete"
 msgstr "Elimina"
 
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Favorite"
 msgstr "Preferito"
@@ -285,6 +280,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Responsabile e sviluppatore"
+
+#~ msgid "Back"
+#~ msgstr "Indietro"
 
 #~ msgid "Checking for schedule updates"
 #~ msgstr "Controllo degli aggiornamenti della pianificazioni"

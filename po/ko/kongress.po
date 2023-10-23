@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:50+0000\n"
+"POT-Creation-Date: 2023-10-23 00:44+0000\n"
 "PO-Revision-Date: 2021-07-31 16:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -67,17 +67,12 @@ msgstr "새로 고침"
 msgid "Web Page"
 msgstr "홈페이지"
 
-#: contents/ui/EventInfo.qml:37
-#, kde-format
-msgid "Back"
-msgstr "뒤로"
-
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
 
-#: contents/ui/EventInfo.qml:45
+#: contents/ui/EventInfo.qml:35
 #, kde-format
 msgid "Favorite"
 msgstr "책갈피"
@@ -284,6 +279,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "관리자 및 개발자"
+
+#~ msgid "Back"
+#~ msgstr "뒤로"
 
 #~ msgid "Checking for schedule updates"
 #~ msgstr "일정 업데이트 확인"
