@@ -279,6 +279,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Správce a vývojář"
-
-#~ msgid "Back"
-#~ msgstr "Zpět"
