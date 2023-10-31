@@ -50,6 +50,8 @@ if (ANDROID)
         folder-open
         draw-arrow-back
     )
+
+    ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
 else()
     target_link_libraries(kongress PRIVATE Qt::Widgets Qt::DBus)
 endif()

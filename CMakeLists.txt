@@ -34,6 +34,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
+include(ECMAddAndroidApk)
 
 
 ecm_setup_version(${PROJECT_VERSION}
