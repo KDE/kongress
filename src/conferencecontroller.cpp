@@ -100,7 +100,7 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
         jsonVarList = jsonArray.toVariantList();
     }
 
-    for (const QVariant &jsonVar : qAsConst(jsonVarList)) {
+    for (const QVariant &jsonVar : std::as_const(jsonVarList)) {
         loadConference(jsonVar.toJsonObject());
     }
 
@@ -111,7 +111,7 @@ void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
     auto conferenceId = jsonObj["id"].toString();
 
-    for (const auto cf : qAsConst(m_conferences)) {
+    for (const auto cf : std::as_const(m_conferences)) {
         if (cf->id() == conferenceId) {
             qDebug() << "Conference already loaded";
             return;
@@ -145,7 +145,7 @@ void ConferenceController::activateConference(const QString &conferenceId)
         return;
     }
 
-    for (const auto cf : qAsConst(m_conferences)) {
+    for (const auto cf : std::as_const(m_conferences)) {
         if (cf->id() == conferenceId) {
 
             m_active_conference = cf;

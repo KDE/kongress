@@ -292,7 +292,7 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
     KCalendarCore::FileStorage::Ptr targetStorage {new KCalendarCore::FileStorage {targetCalendar}};
     targetStorage->setFileName(targetFile.fileName());
 
-    for (const auto &event : qAsConst(sourceEvents)) {
+    for (const auto &event : std::as_const(sourceEvents)) {
         targetCalendar->addEvent(event);
     }
 

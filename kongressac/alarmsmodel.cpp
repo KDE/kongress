@@ -26,7 +26,7 @@ void AlarmsModel::loadAlarms()
 
     openLoadStorages();
 
-    for (const auto &m : qAsConst(m_calendars)) {
+    for (const auto &m : std::as_const(m_calendars)) {
 
         KCalendarCore::Alarm::List calendarAlarms;
 
@@ -50,7 +50,7 @@ void AlarmsModel::setCalendars()
     m_file_storages.clear();
     m_calendars.clear();
 
-    for (const auto &cf : qAsConst(m_calendar_files)) {
+    for (const auto &cf : std::as_const(m_calendar_files)) {
         KCalendarCore::Calendar::Ptr calendar {new KCalendarCore::MemoryCalendar {QTimeZone::systemTimeZoneId()}};
         KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
         storage->setFileName(cf);
@@ -66,7 +66,7 @@ void AlarmsModel::setCalendars()
 void AlarmsModel::openLoadStorages()
 {
     auto loaded {true};
-    for (const auto &fs : qAsConst(m_file_storages)) {
+    for (const auto &fs : std::as_const(m_file_storages)) {
         loaded = fs->open() && fs->load() && loaded;
     }
 }
@@ -74,7 +74,7 @@ void AlarmsModel::openLoadStorages()
 void AlarmsModel::closeStorages()
 {
     auto closed {true};
-    for (const auto &fs : qAsConst(m_file_storages)) {
+    for (const auto &fs : std::as_const(m_file_storages)) {
         closed = fs->close() && closed;
     }
 }

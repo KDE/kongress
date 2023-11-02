@@ -23,7 +23,7 @@ void NotificationHandler::addActiveNotification(const QString &uid, const QStrin
 
 void NotificationHandler::sendNotifications()
 {
-    for (const auto &n : qAsConst(m_active_notifications)) {
+    for (const auto &n : std::as_const(m_active_notifications)) {
         qDebug() << "sendNotifications:\tSending notification for alarm" <<  n->uid();
         n->send();
     }

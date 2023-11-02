@@ -80,7 +80,7 @@ void CalAlarmClient::checkAlarms()
     KConfigGroup notificationsConfig {KSharedConfig::openConfig("kongressrc"), "notifications"};
 
     if (notificationsConfig.readEntry("remindFavorites", true)) {
-        for (const auto &alarm : qAsConst(alarms)) {
+        for (const auto &alarm : std::as_const(alarms)) {
             m_notification_handler->addActiveNotification(alarm->parentUid(), QString {"%1\n%2"}.arg(alarm->time().toTimeZone(QTimeZone::systemTimeZone()).toString("hh:mm"), alarm->text()));
         }
         m_notification_handler->sendNotifications();
@@ -116,7 +116,7 @@ QString CalAlarmClient::alarmText(const QString &uid) const
     model.setPeriod({.from = QDateTime {}, .to = QDateTime::currentDateTime()});
     const auto alarms = model.alarms();
 
-    for (const auto &alarm : qAsConst(alarms)) {
+    for (const auto &alarm : std::as_const(alarms)) {
         if (alarm->parentUid() == uid) {
             return alarm->text();
         }
