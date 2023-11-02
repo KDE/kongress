@@ -159,7 +159,7 @@ Kirigami.GlobalDrawer {
             }
         }
 
-        onObjectAdded: {
+        onObjectAdded: (index, object) => {
             if(!isNaN(object.conferenceDay)) {
                 dayActions.children.push(object)
             }
