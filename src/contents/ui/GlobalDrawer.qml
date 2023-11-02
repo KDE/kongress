@@ -143,7 +143,7 @@ Kirigami.GlobalDrawer {
         SettingsView {}
     }
 
-    Instantiator { //TODO: When swithcing to Qt >= 5.14, it will be found in QtQml.Models 2.14
+    Instantiator { 
         id: daysInstantiator
 
         model: activeConference && (activeConference.days !== null) ? activeConference.days: []
