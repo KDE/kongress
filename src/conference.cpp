@@ -137,3 +137,5 @@ void Conference::setTimeZoneId(const QString &id)
         Q_EMIT timeZoneIdChanged();
     }
 }
+
+#include "moc_conference.cpp"

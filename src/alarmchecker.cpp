@@ -42,3 +42,5 @@ int AlarmChecker::active()
     return false;
 #endif
 }
+
+#include "moc_alarmchecker.cpp"

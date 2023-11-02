@@ -135,3 +135,5 @@ bool ConferenceModel::busyDownlading() const
 {
     return m_busy_downloading;
 }
+
+#include "moc_conferencemodel.cpp"

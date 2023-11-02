@@ -336,3 +336,5 @@ QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTi
 
     return QString {"%1 - %2 %3"}.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
+
+#include "moc_eventmodel.cpp"

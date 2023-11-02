@@ -139,3 +139,5 @@ QDateTime AlarmsModel::firstAlarmTime() const
 
     return firstAlarmTime;
 }
+
+#include "moc_alarmsmodel.cpp"

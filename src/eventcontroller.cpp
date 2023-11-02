@@ -154,3 +154,5 @@ QVariantMap EventController::eventCheck(LocalCalendar *calendar, const QVariantM
 
     return response;
 }
+
+#include "moc_eventcontroller.cpp"

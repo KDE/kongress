@@ -35,3 +35,5 @@ QHash<QString, AlarmNotification *> NotificationHandler::activeNotifications() c
 {
     return m_active_notifications;
 }
+
+#include "moc_notificationhandler.cpp"

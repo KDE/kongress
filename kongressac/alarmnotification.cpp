@@ -32,3 +32,5 @@ void AlarmNotification::setText(const QString &alarmText)
 {
     m_notification->setText(alarmText);
 }
+
+#include "moc_alarmnotification.cpp"

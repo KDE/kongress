@@ -309,3 +309,5 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
         { "targetFolder", QUrl {QStringLiteral("file://") + dirPath} }
     };
 }
+
+#include "moc_calendarcontroller.cpp"

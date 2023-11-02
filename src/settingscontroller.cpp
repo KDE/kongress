@@ -78,3 +78,5 @@ bool SettingsController::canAddReminder() const
 
     return false;
 }
+
+#include "moc_settingscontroller.cpp"

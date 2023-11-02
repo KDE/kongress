@@ -187,3 +187,5 @@ void ConferenceController::clearActiveConference()
     setDefaultConferenceId(QString {});
     Q_EMIT activeConferenceChanged();
 }
+
+#include "moc_conferencecontroller.cpp"

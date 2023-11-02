@@ -159,3 +159,5 @@ void LocalCalendar::setBusyStatus(const QString &calendarId, const bool downladi
         Q_EMIT busyDownladingChanged();
     }
 }
+
+#include "moc_localcalendar.cpp"

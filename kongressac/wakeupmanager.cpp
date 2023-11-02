@@ -72,3 +72,5 @@ bool WakeupManager::active() const
 {
     return m_wakeup_backend->isWakeupBackend();
 }
+
+#include "moc_wakeupmanager.cpp"

@@ -154,3 +154,5 @@ int CalAlarmClient::active() const
 
     return CalAlarmClient::CheckerStatus::Inactive;
 }
+
+#include "moc_calalarmclient.cpp"
