@@ -1,6 +1,7 @@
 [Global]
 IconName=org.kde.kongress
 Comment=Kongress
+Comment[ast]=Kongress
 Comment[ca]=Kongress
 Comment[ca@valencia]=Kongress
 Comment[cs]=Kongress
@@ -35,6 +36,7 @@ Comment[x-test]=xxKongressxx
 Comment[zh_CN]=Kongress
 Comment[zh_TW]=Kongress
 Name=Kongress
+Name[ast]=Kongress
 Name[ca]=Kongress
 Name[ca@valencia]=Kongress
 Name[cs]=Kongress
