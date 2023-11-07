@@ -60,8 +60,10 @@ Kirigami.ScrollablePage {
             }
         }
 
-        delegate: Kirigami.AbstractListItem {
+        delegate: Controls2.ItemDelegate {
             id: itemDelegate
+
+            width: ListView.view.width
 
             action: Kirigami.Action {
                 text: i18n("Details")
