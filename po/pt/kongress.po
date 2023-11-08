@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 01:41+0000\n"
+"POT-Creation-Date: 2023-11-08 08:49+0000\n"
 "PO-Revision-Date: 2021-01-07 10:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -193,7 +193,7 @@ msgstr "Não foram encontradas conversas para o %1"
 msgid "No talks found"
 msgstr "Não foram encontradas conversas"
 
-#: contents/ui/ScheduleView.qml:67
+#: contents/ui/ScheduleView.qml:69
 #, kde-format
 msgid "Details"
 msgstr "Detalhes"

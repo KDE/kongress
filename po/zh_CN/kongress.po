@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 01:41+0000\n"
+"POT-Creation-Date: 2023-11-08 08:49+0000\n"
 "PO-Revision-Date: 2023-10-21 13:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -194,7 +194,7 @@ msgstr "未找到 %1 的会谈"
 msgid "No talks found"
 msgstr "未找到会谈"
 
-#: contents/ui/ScheduleView.qml:67
+#: contents/ui/ScheduleView.qml:69
 #, kde-format
 msgid "Details"
 msgstr "详情"

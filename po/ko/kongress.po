@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 01:41+0000\n"
+"POT-Creation-Date: 2023-11-08 08:49+0000\n"
 "PO-Revision-Date: 2021-07-31 16:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -194,7 +194,7 @@ msgstr "%1의 발표 없음"
 msgid "No talks found"
 msgstr "발표 없음"
 
-#: contents/ui/ScheduleView.qml:67
+#: contents/ui/ScheduleView.qml:69
 #, kde-format
 msgid "Details"
 msgstr "자세히"

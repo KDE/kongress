@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 01:41+0000\n"
+"POT-Creation-Date: 2023-11-08 08:49+0000\n"
 "PO-Revision-Date: 2021-04-27 08:30+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -196,7 +196,7 @@ msgstr "Keine Vorträge für %1 gefunden"
 msgid "No talks found"
 msgstr "Keine Vorträge gefunden"
 
-#: contents/ui/ScheduleView.qml:67
+#: contents/ui/ScheduleView.qml:69
 #, kde-format
 msgid "Details"
 msgstr "Details"
