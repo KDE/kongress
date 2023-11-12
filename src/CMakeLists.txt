@@ -49,6 +49,7 @@ if (ANDROID)
         document-export
         folder-open
         draw-arrow-back
+        update-none
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)

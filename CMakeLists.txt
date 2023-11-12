@@ -75,8 +75,9 @@ endif()
 if (NOT ANDROID)
     install(FILES org.kde.kongress.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
     install(PROGRAMS org.kde.kongress.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+    install(FILES org.kde.kongress.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
+else()
+    install(FILES org.kde.kongress.svg DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigami/breeze-internal/icons/)
 endif()
-install(FILES org.kde.kongress.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
-
