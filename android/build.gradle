@@ -84,6 +84,9 @@ android {
     }
 
     packagingOptions {
+        exclude 'lib/*/*_Controls_Fusion_*'
+        exclude 'lib/*/*_Controls_Imagine_*'
+        exclude 'lib/*/*_Controls_Universal_*'
         exclude 'lib/*/*RemoteObjects*'
         exclude 'lib/*/*StateMachine*'
         exclude 'lib/*/*_imageformats_qico_*'
