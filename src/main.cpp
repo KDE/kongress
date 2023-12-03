@@ -39,8 +39,13 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
 #ifdef Q_OS_ANDROID
     QGuiApplication app {argc, argv};
+    QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
 #else
     QApplication app {argc, argv};
+    // Default to org.kde.desktop style unless the user forces another style
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
 #endif
     KLocalizedString::setApplicationDomain("kongress");
 
@@ -90,10 +95,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     EventController eventController;
     eventController.setCalendarController(&calendarController);
     qmlRegisterSingletonInstance<EventController>("org.kde.kongress", 0, 1, "EventController", &eventController);
-
-#ifdef Q_OS_ANDROID
-    QQuickStyle::setStyle(QStringLiteral("Material"));
-#endif
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext {&engine});
