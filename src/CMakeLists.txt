@@ -50,6 +50,10 @@ if (ANDROID)
         folder-open
         draw-arrow-back
         update-none
+        emblem-warning
+        emblem-error
+        arrow-down
+        arrow-up
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
