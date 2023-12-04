@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:49+0000\n"
+"POT-Creation-Date: 2023-12-04 01:39+0000\n"
 "PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -253,28 +253,28 @@ msgstr ""
 msgid "Talk added to favorites"
 msgstr "会谈已添加到收藏夹中"
 
-#: main.cpp:47
+#: main.cpp:52
 #, kde-format
 msgid "Kongress"
 msgstr "Kongress"
 
-#: main.cpp:47
+#: main.cpp:52
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr "KDE 会议助理应用"
 
-#: main.cpp:47
+#: main.cpp:52
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr "© 2021 KDE Community"
 
-#: main.cpp:50
+#: main.cpp:55
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: main.cpp:50
+#: main.cpp:55
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
