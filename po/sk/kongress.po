@@ -1,29 +1,29 @@
 # translation of kongress.po to Slovak
-# Roman Paholík <wizzardsk@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2020, 2023 Roman Paholík <wizzardsk@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:50+0000\n"
-"PO-Revision-Date: 2020-02-02 20:34+0100\n"
+"PO-Revision-Date: 2023-12-11 19:19+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Roman Paholík"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "wizzardsk@gmail.com"
 
 #: calendarcontroller.cpp:302
 #, kde-format
@@ -38,12 +38,12 @@ msgstr ""
 #: conferencemodel.cpp:87
 #, kde-format
 msgid "Past"
-msgstr ""
+msgstr "Minulosť"
 
 #: conferencemodel.cpp:88
 #, kde-format
 msgid "Upcoming"
-msgstr ""
+msgstr "Nasledujúca"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -58,17 +58,17 @@ msgstr ""
 #: contents/ui/Conferences.qml:27
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "Znovu načítať"
 
 #: contents/ui/EventInfo.qml:24
 #, kde-format
 msgid "Web Page"
-msgstr ""
+msgstr "Webová stránka"
 
 #: contents/ui/EventInfo.qml:37
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Späť"
 
 #: contents/ui/EventInfo.qml:45
 #, kde-format
@@ -83,12 +83,12 @@ msgstr "Obľúbené"
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Exportovať"
 
 #: contents/ui/FavoritesView.qml:57
 #, kde-format
 msgid "Open folder"
-msgstr ""
+msgstr "Otvoriť priečinok"
 
 #: contents/ui/FavoritesView.qml:72
 #, kde-format
@@ -111,12 +111,12 @@ msgstr[2] ""
 #: contents/ui/GlobalDrawer.qml:38
 #, kde-format
 msgid "Conference"
-msgstr ""
+msgstr "Konferencia"
 
 #: contents/ui/GlobalDrawer.qml:45
 #, kde-format
 msgid "Check for updates"
-msgstr ""
+msgstr "Skontrolovať aktualizácie"
 
 #: contents/ui/GlobalDrawer.qml:57
 #, kde-format
@@ -131,12 +131,12 @@ msgstr ""
 #: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
 #, kde-format
 msgid "Schedule"
-msgstr ""
+msgstr "Rozvrh"
 
 #: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Categories"
-msgstr ""
+msgstr "Kategórie"
 
 #: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "Obľúbené"
 #: contents/ui/GlobalDrawer.qml:104
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Nastaviť"
 
 #: contents/ui/GlobalDrawer.qml:109
 #, kde-format
@@ -167,27 +167,27 @@ msgstr ""
 #: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: contents/ui/GlobalDrawer.qml:131
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "O aplikácii"
 
 #: contents/ui/MapView.qml:35
 #, kde-format
 msgid "Latitude: %1"
-msgstr ""
+msgstr "Zemepisná šírka: %1"
 
 #: contents/ui/MapView.qml:41
 #, kde-format
 msgid "Longitude: %1"
-msgstr ""
+msgstr "Zemepisná dĺžka: %1"
 
 #: contents/ui/MapView.qml:47
 #, kde-format
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
@@ -207,7 +207,7 @@ msgstr "Podrobnosti"
 #: contents/ui/SettingsView.qml:23
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Vzhľad"
 
 #: contents/ui/SettingsView.qml:28
 #, kde-format
@@ -217,7 +217,7 @@ msgstr ""
 #: contents/ui/SettingsView.qml:35
 #, kde-format
 msgid "Notifications"
-msgstr ""
+msgstr "Upozornenia"
 
 #: contents/ui/SettingsView.qml:39
 #, kde-format
@@ -259,7 +259,7 @@ msgstr ""
 #: main.cpp:50
 #, kde-format
 msgid "Kongress"
-msgstr ""
+msgstr "Kongress"
 
 #: main.cpp:50
 #, kde-format
@@ -269,16 +269,16 @@ msgstr ""
 #: main.cpp:50
 #, kde-format
 msgid "© 2021 KDE Community"
-msgstr ""
+msgstr "© 2021 KDE komunita"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
-msgstr ""
+msgstr "Dimitris Kardarakos"
 
 #: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
-msgstr ""
+msgstr "Správca a vývojár"
