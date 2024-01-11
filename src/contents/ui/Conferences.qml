@@ -49,6 +49,7 @@ Kirigami.ScrollablePage {
             property: "pastUpcoming"
             criteria: ViewSection.FullString
             delegate: Kirigami.ListSectionHeader {
+                width: ListView.view.width
                 label: section
             }
         }
