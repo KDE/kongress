@@ -56,6 +56,8 @@ Kirigami.ScrollablePage {
             property: Kongress.SettingsController.displayInLocalTimezone ? "shiftedEventDtLocal" : "shiftedEventDt"
             criteria: ViewSection.FullString
             delegate: Kirigami.ListSectionHeader {
+                width: ListView.view.width
+
                 label: section
             }
         }
