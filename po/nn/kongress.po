@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 01:39+0000\n"
+"POT-Creation-Date: 2024-01-14 03:09+0000\n"
 "PO-Revision-Date: 2021-12-15 13:03+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -198,7 +198,7 @@ msgstr "Fann ingen presentasjonar for %1"
 msgid "No talks found"
 msgstr "Fann ingen presentasjonar"
 
-#: contents/ui/ScheduleView.qml:69
+#: contents/ui/ScheduleView.qml:71
 #, kde-format
 msgid "Details"
 msgstr "Detaljar"

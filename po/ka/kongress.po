@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 01:39+0000\n"
+"POT-Creation-Date: 2024-01-14 03:09+0000\n"
 "PO-Revision-Date: 2022-11-27 22:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -196,7 +196,7 @@ msgstr "საუბრები %1-სთვის ვერ ვიპოვე
 msgid "No talks found"
 msgstr "საუბრები ვერ ვიპოვე"
 
-#: contents/ui/ScheduleView.qml:69
+#: contents/ui/ScheduleView.qml:71
 #, kde-format
 msgid "Details"
 msgstr "დეტალები"

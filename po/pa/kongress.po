@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 01:39+0000\n"
+"POT-Creation-Date: 2024-01-14 03:09+0000\n"
 "PO-Revision-Date: 2021-05-03 20:22-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -195,7 +195,7 @@ msgstr "%1 ਲਈ ਕੋਈ ਗੱਲਬਾਤ ਨਹੀਂ ਲੱਭੀ"
 msgid "No talks found"
 msgstr "ਕੋਈ ਗੱਲਬਾਤ ਨਹੀਂ ਲੱਭੀ"
 
-#: contents/ui/ScheduleView.qml:69
+#: contents/ui/ScheduleView.qml:71
 #, kde-format
 msgid "Details"
 msgstr "ਵੇਰਵੇ"

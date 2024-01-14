@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 01:39+0000\n"
+"POT-Creation-Date: 2024-01-14 03:09+0000\n"
 "PO-Revision-Date: 2022-02-12 19:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -195,7 +195,7 @@ msgstr "%1 – esitelmiä ei löytynyt"
 msgid "No talks found"
 msgstr "Esitelmiä ei löytynyt"
 
-#: contents/ui/ScheduleView.qml:69
+#: contents/ui/ScheduleView.qml:71
 #, kde-format
 msgid "Details"
 msgstr "Tiedot"

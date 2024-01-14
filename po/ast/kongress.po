@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 01:39+0000\n"
+"POT-Creation-Date: 2024-01-14 03:09+0000\n"
 "PO-Revision-Date: 2023-11-05 01:43+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -195,7 +195,7 @@ msgstr ""
 msgid "No talks found"
 msgstr ""
 
-#: contents/ui/ScheduleView.qml:69
+#: contents/ui/ScheduleView.qml:71
 #, kde-format
 msgid "Details"
 msgstr ""
