@@ -48,6 +48,7 @@ Kirigami.ScrollablePage {
 
             property string targetFolder
 
+            position: Kirigami.InlineMessage.Footer
             showCloseButton: true
             visible: false
             actions: [
