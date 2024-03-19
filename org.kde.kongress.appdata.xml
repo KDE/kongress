@@ -3,10 +3,13 @@
  SPDX-FileCopyrightText: 2021 Dimitris Kardarakos <dimkard@posteo.net>
  SPDX-License-Identifier: CC0-1.0
 -->
-<component type="desktop">
+<component type="desktop-application">
   <id>org.kde.kongress.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
   <name>Kongress</name>
   <name xml:lang="ast">Kongress</name>
   <name xml:lang="ca">Kongress</name>
@@ -291,5 +294,6 @@
   <provides>
     <binary>kongress</binary>
   </provides>
+  <launchable type="desktop-id">org.kde.kongress.desktop</launchable>
   <content_rating type="oars-1.1"/>
 </component>
