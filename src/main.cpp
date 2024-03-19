@@ -62,10 +62,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     parser.process(app);
     about.processCommandLine(&parser);
 
-    QGuiApplication::setApplicationName(about.componentName());
-    QGuiApplication::setApplicationDisplayName(about.displayName());
-    QGuiApplication::setOrganizationDomain(about.organizationDomain());
-    QGuiApplication::setApplicationVersion(about.version());
     QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.kongress")));
 
     QNetworkAccessManager nam;
