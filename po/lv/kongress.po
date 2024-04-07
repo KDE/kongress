@@ -1,0 +1,284 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kongress package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-13 00:40+0000\n"
+"PO-Revision-Date: 2024-04-05 16:46+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toms Trasūns"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toms.trasuns@posteo.net"
+
+#: calendarcontroller.cpp:302
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "Nevar saglabāt kalendāra datni. Eksports neizdevās."
+
+#: calendarcontroller.cpp:308
+#, kde-format
+msgid "Export completed successfully"
+msgstr "Eksports veiksmīgs"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "Bijušās"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "Nākotnes"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "Konferences"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "Konferences nav atrastas"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "Pārlādēt"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "Tīmekļa vietne"
+
+#: contents/ui/EventInfo.qml:35
+#, kde-format
+msgid "Delete"
+msgstr "Dzēst"
+
+#: contents/ui/EventInfo.qml:35
+#, kde-format
+msgid "Favorite"
+msgstr "Atzīmēt"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "Eksportēt"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "Atvērt mapi"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "„%1“ nav atrastas atzīmētas runas"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr "Nav atrastas atzīmētas runas"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "Pārklājas ar %1 citu runu"
+msgstr[1] "Pārklājas ar %1 citām runām"
+msgstr[2] "Pārklājas ar %1 citām runām"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "Konference"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "Pārbaudīt atjauninājumus"
+
+#: contents/ui/GlobalDrawer.qml:57
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Dienas grafiks"
+
+#: contents/ui/GlobalDrawer.qml:63
+#, kde-format
+msgid "Full Schedule"
+msgstr "Pilns grafiks"
+
+#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "Grafiks"
+
+#: contents/ui/GlobalDrawer.qml:76
+#, kde-format
+msgid "Categories"
+msgstr "Kategorijas"
+
+#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "Karte"
+
+#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "Atzīmētās"
+
+#: contents/ui/GlobalDrawer.qml:104
+#, kde-format
+msgid "Configure"
+msgstr "Konfigurēt"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Change conference"
+msgstr "Mainīt konferenci"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Select conference"
+msgstr "Atlasīt konferenci"
+
+#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: contents/ui/GlobalDrawer.qml:131
+#, kde-format
+msgid "About"
+msgstr "Par"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "Platums: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "Garums: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "„%1“ nav atrastas runas"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "Nav atrastas runas"
+
+#: contents/ui/ScheduleView.qml:71
+#, kde-format
+msgid "Details"
+msgstr "Informācija"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "Izskats"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "Lietot ierīces laika joslu"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "Paziņojumi"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "Pievienot atgādinājumus atzīmētajām runām"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "Atgādināt pirms runas sākuma (minūtes)"
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Jūsu platforma paziņojumus neatbalsta"
+
+#: eventcontroller.cpp:56
+#, kde-format
+msgid "Error during event creation"
+msgstr "Kļūda, veidojot notikumu"
+
+#: eventcontroller.cpp:63
+#, kde-format
+msgid "Already in favorites"
+msgstr "Jau atzīmēta"
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"Runa ir atzīmēta, bet tā pārklājas ar jau pievienotu:\n"
+"%1"
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "Runa ir atzīmēta"
+
+#: main.cpp:52
+#, kde-format
+msgid "Kongress"
+msgstr "Kongress"
+
+#: main.cpp:52
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "KDE konferenču kompanjons"
+
+#: main.cpp:52
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 KDE kopiena"
+
+#: main.cpp:55
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:55
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "Uzturētājs un izstrādātājs"
