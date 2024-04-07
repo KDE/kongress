@@ -31,6 +31,7 @@
   <name xml:lang="it">Kongress</name>
   <name xml:lang="ka">Kongress</name>
   <name xml:lang="ko">Kongress</name>
+  <name xml:lang="lv">Kongress</name>
   <name xml:lang="nl">Kongress</name>
   <name xml:lang="nn">Kongress</name>
   <name xml:lang="pa">ਕੌਂਗਰਸ</name>
@@ -66,6 +67,7 @@
   <summary xml:lang="it">Applicazione di supporto per KDE Conference</summary>
   <summary xml:lang="ka">KDE -ის კონფერენციის პარტნიორი</summary>
   <summary xml:lang="ko">KDE 콘퍼런스 도우미 앱</summary>
+  <summary xml:lang="lv">KDe konferenču kompanjons</summary>
   <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
   <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
   <summary xml:lang="pa">ਕੇਡੀਈ ਕਨਫਰੰਸ ਸਹਾਇਕ ਐਪਲੀਕੇਸ਼ਨ</summary>
@@ -99,6 +101,7 @@
     <p xml:lang="it">Kongress è un'applicazione di supporto per le conferenze realizzata da KDE</p>
     <p xml:lang="ka">Kongress პარტნიორი აპლიკაცია კონფერენციებისთვის, KDE-სგან</p>
     <p xml:lang="ko">Kongress는 KDE에서 제작한 콘퍼런스 도우미 앱입니다</p>
+    <p xml:lang="lv">„Kongress“ ir KDE izstrādāts konferenču kompanjons</p>
     <p xml:lang="nl">Kongress is de compagnon-toepassing voor conferenties, gemaakt door KDE</p>
     <p xml:lang="nn">Kongress er ein konferanse­assistent frå KDE</p>
     <p xml:lang="pa">ਕੌਂਗਰਸ ਕੇਡੀਈ ਵਲੋਂ ਕਨਫਰੰਸਾਂ ਲਈ ਬਣਾਈ ਗਈ ਸਹਾਇਕ ਐਪਲੀਕੇਸ਼ਨ</p>
@@ -134,6 +137,7 @@
       <caption xml:lang="it">Kongress su dispositivo mobile</caption>
       <caption xml:lang="ka">Kongress მობილურზე</caption>
       <caption xml:lang="ko">모바일 환경에서의 Kongress</caption>
+      <caption xml:lang="lv">„Kongress“ viedierīcē</caption>
       <caption xml:lang="nl">Kongress op mobiel</caption>
       <caption xml:lang="nn">Kongress på mobil</caption>
       <caption xml:lang="pa">ਮੋਬਾਈਲ ਉੱਤੇ ਕੌਂਗਰਸ</caption>
@@ -170,6 +174,7 @@
       <caption xml:lang="it">Kongress su desktop</caption>
       <caption xml:lang="ka">Kongress კომპიუტერზე</caption>
       <caption xml:lang="ko">데스크톱 환경에서의 Kongress</caption>
+      <caption xml:lang="lv">„Kongress“ datorā</caption>
       <caption xml:lang="nl">Kongress op bureaublad</caption>
       <caption xml:lang="nn">Kongress på skrivebordet</caption>
       <caption xml:lang="pa">ਡੈਸਕਟਾਪ ਉੱਤੇ ਕੌਂਗਰਸ</caption>
