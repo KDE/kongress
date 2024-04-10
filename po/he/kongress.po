@@ -1,0 +1,285 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kongress package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-01-13 00:40+0000\n"
+"PO-Revision-Date: 2024-04-09 08:04+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
+
+#: calendarcontroller.cpp:302
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "אי אפשר לשמור את קובץ לוח השנה. הייצוא נכשל."
+
+#: calendarcontroller.cpp:308
+#, kde-format
+msgid "Export completed successfully"
+msgstr "הייצוא הושלם בהצלחה"
+
+#: conferencemodel.cpp:87
+#, kde-format
+msgid "Past"
+msgstr "עבר"
+
+#: conferencemodel.cpp:88
+#, kde-format
+msgid "Upcoming"
+msgstr "בקרוב"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "כנסים"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "לא נמצאו כנסים"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "רענון"
+
+#: contents/ui/EventInfo.qml:24
+#, kde-format
+msgid "Web Page"
+msgstr "עמוד אתר"
+
+#: contents/ui/EventInfo.qml:35
+#, kde-format
+msgid "Delete"
+msgstr "מחיקה"
+
+#: contents/ui/EventInfo.qml:35
+#, kde-format
+msgid "Favorite"
+msgstr "הוספה למועדפים"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "ייצוא"
+
+#: contents/ui/FavoritesView.qml:57
+#, kde-format
+msgid "Open folder"
+msgstr "פתיחת תיקייה"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "לא נמצאו הרצאות מועדפות עבור %1"
+
+#: contents/ui/FavoritesView.qml:72
+#, kde-format
+msgid "No favorite talks found"
+msgstr "לא נמצאו הרצאות מועדפות"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "חופף להרצאה אחרת"
+msgstr[1] "חופף לשתי הרצאות אחרות"
+msgstr[2] "חופף ל־%1 הרצאות אחרות"
+msgstr[3] "חופף ל־%1 הרצאות אחרות"
+
+#: contents/ui/GlobalDrawer.qml:38
+#, kde-format
+msgid "Conference"
+msgstr "כנס"
+
+#: contents/ui/GlobalDrawer.qml:45
+#, kde-format
+msgid "Check for updates"
+msgstr "איתור עדכונים"
+
+#: contents/ui/GlobalDrawer.qml:57
+#, kde-format
+msgid "Daily Schedule"
+msgstr "תוכנית ליום מסוים"
+
+#: contents/ui/GlobalDrawer.qml:63
+#, kde-format
+msgid "Full Schedule"
+msgstr "תוכנית מלאה"
+
+#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
+#, kde-format
+msgid "Schedule"
+msgstr "תוכנית"
+
+#: contents/ui/GlobalDrawer.qml:76
+#, kde-format
+msgid "Categories"
+msgstr "קטגוריות"
+
+#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#, kde-format
+msgid "Map"
+msgstr "מפה"
+
+#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/Main.qml:75
+#, kde-format
+msgid "Favorites"
+msgstr "מועדפים"
+
+#: contents/ui/GlobalDrawer.qml:104
+#, kde-format
+msgid "Configure"
+msgstr "הגדרה"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Change conference"
+msgstr "החלפת כנס"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Select conference"
+msgstr "בחירת כנס"
+
+#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "הגדרות"
+
+#: contents/ui/GlobalDrawer.qml:131
+#, kde-format
+msgid "About"
+msgstr "על אודות"
+
+#: contents/ui/MapView.qml:35
+#, kde-format
+msgid "Latitude: %1"
+msgstr "קו רוחב: %1"
+
+#: contents/ui/MapView.qml:41
+#, kde-format
+msgid "Longitude: %1"
+msgstr "קו אורך: %1"
+
+#: contents/ui/MapView.qml:47
+#, kde-format
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found for %1"
+msgstr "לא נמצאו הרצאות של %1"
+
+#: contents/ui/ScheduleView.qml:28
+#, kde-format
+msgid "No talks found"
+msgstr "לא נמצאו הרצאות"
+
+#: contents/ui/ScheduleView.qml:71
+#, kde-format
+msgid "Details"
+msgstr "פרטים"
+
+#: contents/ui/SettingsView.qml:23
+#, kde-format
+msgid "Appearance"
+msgstr "מראה"
+
+#: contents/ui/SettingsView.qml:28
+#, kde-format
+msgid "Use local timezone"
+msgstr "להשתמש באזור הזמן המקומי"
+
+#: contents/ui/SettingsView.qml:35
+#, kde-format
+msgid "Notifications"
+msgstr "הודעות"
+
+#: contents/ui/SettingsView.qml:39
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "הוספת תזכורת להרצאות מועדפות"
+
+#: contents/ui/SettingsView.qml:47
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "תזכורת לפני הרצאה (דקות)"
+
+#: contents/ui/SettingsView.qml:59
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "אין תמיכה בהתראות במערכת שלך"
+
+#: eventcontroller.cpp:56
+#, kde-format
+msgid "Error during event creation"
+msgstr "שגיאה ביצירת אירוע"
+
+#: eventcontroller.cpp:63
+#, kde-format
+msgid "Already in favorites"
+msgstr "כבר במועדפים"
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"ההרצאה נוספה למועדפים אבל היא חופפת אחת אחרת:\n"
+"%1"
+
+#: eventcontroller.cpp:113
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "ההרצאה נוספה למועדפים"
+
+#: main.cpp:52
+#, kde-format
+msgid "Kongress"
+msgstr "קונגרס"
+
+#: main.cpp:52
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "מלווה לכנסים של KDE"
+
+#: main.cpp:52
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 קהילת KDE"
+
+#: main.cpp:55
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "דימיטריס קרדרקוס"
+
+#: main.cpp:55
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "מתחזק ומפתח"
