@@ -9,11 +9,13 @@
 #include <KConfig>
 #include <KConfigGroup>
 
+using namespace Qt::Literals::StringLiterals;
+
 class SettingsController::Private
 {
 public:
     Private()
-        : config("kongressrc")
+        : config(u"kongressrc"_s)
     {};
     KConfig config;
 };
@@ -33,12 +35,12 @@ QObject *SettingsController::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEn
 
 bool SettingsController::displayInLocalTimezone() const
 {
-    return d->config.group("general").readEntry("displayInLocalTimezone", false);
+    return d->config.group(u"general"_s).readEntry("displayInLocalTimezone", false);
 }
 
 void SettingsController::setDisplayInLocalTimezone(const bool displayInLocalTimezone)
 {
-    d->config.group("general").writeEntry("displayInLocalTimezone", displayInLocalTimezone);
+    d->config.group(u"general"_s).writeEntry("displayInLocalTimezone", displayInLocalTimezone);
     d->config.sync();
 
     Q_EMIT displayInLocalTimezoneChanged();
@@ -46,12 +48,12 @@ void SettingsController::setDisplayInLocalTimezone(const bool displayInLocalTime
 
 bool SettingsController::remindFavorites() const
 {
-    return d->config.group("notifications").readEntry("remindFavorites", true);
+    return d->config.group(u"notifications"_s).readEntry("remindFavorites", true);
 }
 
 void SettingsController::setRemindFavorites(const bool remind)
 {
-    d->config.group("notifications").writeEntry("remindFavorites", remind);
+    d->config.group(u"notifications"_s).writeEntry("remindFavorites", remind);
     d->config.sync();
 
     Q_EMIT remindFavoritesChanged();
@@ -59,12 +61,12 @@ void SettingsController::setRemindFavorites(const bool remind)
 
 int SettingsController::remindBeforeStart() const
 {
-    return d->config.group("notifications").readEntry("remindBeforeStart", 5);
+    return d->config.group(u"notifications"_s).readEntry("remindBeforeStart", 5);
 }
 
 void SettingsController::setRemindBeforeStart(const int remindBeforeStart)
 {
-    d->config.group("notifications").writeEntry("remindBeforeStart", remindBeforeStart);
+    d->config.group(u"notifications"_s).writeEntry("remindBeforeStart", remindBeforeStart);
     d->config.sync();
 
     Q_EMIT remindBeforeStartChanged();

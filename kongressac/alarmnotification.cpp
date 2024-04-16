@@ -8,9 +8,11 @@
 #include <KLocalizedString>
 #include "notificationhandler.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 AlarmNotification::AlarmNotification(NotificationHandler *handler, const QString &uid) : QObject {handler}, m_uid {uid}, m_notification_handler {handler}
 {
-    m_notification = new KNotification {"alarm"};
+    m_notification = new KNotification {u"alarm"_s};
 }
 
 void AlarmNotification::send() const

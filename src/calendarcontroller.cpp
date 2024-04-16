@@ -15,10 +15,12 @@
 #include <KConfig>
 #include <KConfigGroup>
 
+using namespace Qt::Literals::StringLiterals;
+
 class CalendarController::Private
 {
 public:
-    Private() : config {"kongressrc"}  {};
+    Private() : config {u"kongressrc"_s}  {};
     KConfig config;
     QNetworkAccessManager *nam = nullptr;
 };
@@ -36,19 +38,19 @@ void CalendarController::setNetworkAccessManager(QNetworkAccessManager *nam)
 
 QString CalendarController::calendars() const
 {
-    return d->config.group("general").readEntry("calendars", QString {});
+    return d->config.group(u"general"_s).readEntry("calendars", QString {});
 }
 
 void CalendarController::removeCalendarFromConfig(const QString &calendarId)
 {
     d->config.reparseConfiguration();
-    auto calendarsList = d->config.group("general").readEntry("calendars", QString {}).split(";");
+    auto calendarsList = d->config.group(u"general"_s).readEntry("calendars", QString {}).split(';'_L1);
     if (calendarsList.contains(calendarId)) {
         qDebug() << "Removing calendar " << calendarId;
         calendarsList.removeAll(calendarId);
 
         d->config.deleteGroup(calendarId);
-        d->config.group("general").writeEntry("calendars", calendarsList.join(";"));
+        d->config.group(u"general"_s).writeEntry("calendars", calendarsList.join(';'_L1));
         d->config.sync();
 
         Q_EMIT calendarsChanged();
@@ -72,7 +74,7 @@ QString CalendarController::filenameToPath(const QString &calendarId)
     QDir baseFolder {basePath};
     baseFolder.mkpath(QStringLiteral("."));
 
-    return basePath + "/kongress_" + calendarId + ".ics";
+    return basePath + "/kongress_"_L1 + calendarId + ".ics"_L1;
 }
 
 KCalendarCore::MemoryCalendar::Ptr CalendarController::createLocalCalendar(const QString &calendarId, const QByteArray &timeZoneId)
@@ -182,7 +184,7 @@ bool CalendarController::saveToDisk(const QString &filename, const QByteArray &d
 {
     QFile file {filename};
     if (!file.open(QIODevice::WriteOnly)) {
-        qDebug() << (QString {"Could not open %1 for writing: %2"}).arg(qPrintable(filename), qPrintable(file.errorString()));
+        qDebug() << "Could not open %1 for writing: %2"_L1.arg(filename, file.errorString());
         return false;
     }
     file.write(data);
@@ -203,22 +205,22 @@ KCalendarCore::MemoryCalendar::Ptr CalendarController::memoryCalendar(const QStr
 void CalendarController::addConferenceToConfig(const QString &calendarId)
 {
 
-    const QStringList calendarLists {"conferenceCalendars", "favoritesCalendars"};
+    const QStringList calendarLists {u"conferenceCalendars"_s, u"favoritesCalendars"_s};
 
     for (const auto &calendarList : calendarLists) {
-        const auto calendarName = (calendarList == "conferenceCalendars") ? calendarId : (QString {"%1_%2"}).arg("favorites", calendarId);
+        const auto calendarName = (calendarList == "conferenceCalendars"_L1) ? calendarId : "%1_%2"_L1.arg("favorites"_L1, calendarId);
 
-        if (d->config.group("general").readEntry(calendarList, QString {}).isEmpty()) {
-            d->config.group("general").writeEntry(calendarList, calendarName);
+        if (d->config.group(u"general"_s).readEntry(calendarList, QString {}).isEmpty()) {
+            d->config.group(u"general"_s).writeEntry(calendarList, calendarName);
             d->config.sync();
 
             return;
         }
 
-        auto calendarsList = d->config.group("general").readEntry(calendarList, QString {}).split(";");
+        auto calendarsList = d->config.group(u"general"_s).readEntry(calendarList, QString {}).split(';'_L1);
         if (!calendarsList.contains(calendarName)) {
             calendarsList.append(calendarName);
-            d->config.group("general").writeEntry(calendarList, calendarsList.join(";"));
+            d->config.group(u"general"_s).writeEntry(calendarList, calendarsList.join(';'_L1));
             d->config.sync();
         }
     }
@@ -226,12 +228,12 @@ void CalendarController::addConferenceToConfig(const QString &calendarId)
 
 void CalendarController::loadSavedConferences()
 {
-    auto onlineCalendarIds = d->config.group("general").readEntry("conferenceCalendars", QString {});
+    auto onlineCalendarIds = d->config.group(u"general"_s).readEntry("conferenceCalendars", QString {});
     if (onlineCalendarIds.isEmpty()) {
         return;
     }
 
-    auto calendarsList = onlineCalendarIds.split(";");
+    auto calendarsList = onlineCalendarIds.split(';'_L1);
 
     for (const auto &calendarId : calendarsList) {
         auto filePath = d->config.group(calendarId).readEntry("file", QString {});
@@ -283,10 +285,10 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
     auto sourceEvents = sourceCalendar->memorycalendar()->rawEvents();
 
     auto dirPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
-    QFile targetFile {dirPath + "/kongress_favorites_" + calendarName + ".ics"};
+    QFile targetFile {dirPath + "/kongress_favorites_"_L1 + calendarName + ".ics"_L1};
     auto fileSuffix {1};
     while (targetFile.exists()) {
-        targetFile.setFileName(dirPath + "/kongress_favorites_" + calendarName + "(" + QString::number(fileSuffix++) + ").ics");
+        targetFile.setFileName(dirPath + "/kongress_favorites_"_L1 + calendarName + '('_L1 + QString::number(fileSuffix++) + ").ics"_L1);
     }
     KCalendarCore::Calendar::Ptr targetCalendar {new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId())};
     KCalendarCore::FileStorage::Ptr targetStorage {new KCalendarCore::FileStorage {targetCalendar}};
@@ -298,15 +300,15 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
 
     if (!(targetStorage->save())) {
         return {
-            { "success", false },
-            { "reason", i18n("Cannot save calendar file. Export failed.") }
+            { u"success"_s, false },
+            { u"reason"_s, i18n("Cannot save calendar file. Export failed.") }
         };
     }
 
     return {
-        { "success", true },
-        { "reason", i18n("Export completed successfully") },
-        { "targetFolder", QUrl {QStringLiteral("file://") + dirPath} }
+        { u"success"_s, true },
+        { u"reason"_s, i18n("Export completed successfully") },
+        { u"targetFolder"_s, QUrl {QStringLiteral("file://") + dirPath} }
     };
 }
 

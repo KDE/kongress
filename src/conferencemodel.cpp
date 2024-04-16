@@ -91,7 +91,7 @@ QString ConferenceModel::pastOrUpcoming(const int index) const
         return pastLabel;
     }
 
-    auto lastDayDt = QDate::fromString(days.last(), "yyyy-MM-dd");
+    auto lastDayDt = QDate::fromString(days.last(), u"yyyy-MM-dd");
     auto currentDt = QDate::currentDate();
 
     if (lastDayDt.isValid()) {

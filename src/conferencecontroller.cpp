@@ -16,10 +16,12 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
+using namespace Qt::Literals::StringLiterals;
+
 class ConferenceController::Private
 {
 public:
-    Private() : config {"kongressrc"}
+    Private() : config {u"kongressrc"_s}
     {};
     KConfig config;
     QNetworkAccessManager *nam = nullptr;
@@ -85,14 +87,14 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
         return;
     }
 
-    QString data;
+    QByteArray data;
 
     if (jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         data = jsonFile.readAll();
         jsonFile.close();
     }
 
-    auto jsonDoc = QJsonDocument::fromJson(data.toUtf8());
+    auto jsonDoc = QJsonDocument::fromJson(data);
     QVariantList jsonVarList;
 
     if (!jsonDoc.isEmpty() && jsonDoc.isArray()) {
@@ -109,7 +111,7 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
-    auto conferenceId = jsonObj["id"].toString();
+    auto conferenceId = jsonObj["id"_L1].toString();
 
     for (const auto cf : std::as_const(m_conferences)) {
         if (cf->id() == conferenceId) {
@@ -120,16 +122,16 @@ void ConferenceController::loadConference(const QJsonObject &jsonObj)
 
     auto conference = new Conference {this};
     conference->setId(conferenceId);
-    conference->setName(jsonObj["name"].toString());
-    conference->setDescription(jsonObj["description"].toString());
-    conference->setIcalUrl(jsonObj["icalUrl"].toString());
-    auto jsonDays = jsonObj["days"].toVariant();
+    conference->setName(jsonObj["name"_L1].toString());
+    conference->setDescription(jsonObj["description"_L1].toString());
+    conference->setIcalUrl(jsonObj["icalUrl"_L1].toString());
+    auto jsonDays = jsonObj["days"_L1].toVariant();
     conference->setDays(jsonDays.toStringList());
-    conference->setVenueImageUrl(jsonObj["venueImageUrl"].toString());
-    conference->setVenueLatitude(jsonObj["venueLatitude"].toString());
-    conference->setVenueLongitude(jsonObj["venueLongitude"].toString());
-    conference->setVenueOsmUrl(jsonObj["venueOsmUrl"].toString());
-    conference->setTimeZoneId(jsonObj["timeZoneId"].toString());
+    conference->setVenueImageUrl(jsonObj["venueImageUrl"_L1].toString());
+    conference->setVenueLatitude(jsonObj["venueLatitude"_L1].toString());
+    conference->setVenueLongitude(jsonObj["venueLongitude"_L1].toString());
+    conference->setVenueOsmUrl(jsonObj["venueOsmUrl"_L1].toString());
+    conference->setTimeZoneId(jsonObj["timeZoneId"_L1].toString());
 
     m_conferences << conference;
 }
@@ -167,7 +169,7 @@ void ConferenceController::activateDefaultConference()
 
 QString ConferenceController::defaultConferenceId() const
 {
-    auto confId = d->config.group("general").readEntry("defaultConferenceId", QString {});
+    auto confId = d->config.group(u"general"_s).readEntry("defaultConferenceId", QString {});
     d->config.sync();
 
     return confId;
@@ -175,7 +177,7 @@ QString ConferenceController::defaultConferenceId() const
 
 void ConferenceController::setDefaultConferenceId(const QString &confId)
 {
-    d->config.group("general").writeEntry("defaultConferenceId", confId);
+    d->config.group(u"general"_s).writeEntry("defaultConferenceId", confId);
     d->config.sync();
 
     Q_EMIT defaultConferenceIdChanged();

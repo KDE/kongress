@@ -40,7 +40,7 @@ void AlarmsModel::loadAlarms()
             m_alarms.append(calendarAlarms);
         }
     }
-    qDebug() << "loadAlarms:" << m_period.from.toString("dd.MM.yyyy hh:mm:ss") << "to" << m_period.to.toString("dd.MM.yyyy hh:mm:ss") << m_alarms.count() << "alarms found";
+    qDebug() << "loadAlarms:" << m_period.from.toString(u"dd.MM.yyyy hh:mm:ss") << "to" << m_period.to.toString(u"dd.MM.yyyy hh:mm:ss") << m_alarms.count() << "alarms found";
 
     closeStorages();
 }

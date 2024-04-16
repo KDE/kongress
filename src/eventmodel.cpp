@@ -9,6 +9,8 @@
 #include <KLocalizedString>
 #include "settingscontroller.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 EventModel::EventModel(QObject *parent) :
     QAbstractListModel {parent},
     m_events {KCalendarCore::Event::List {}},
@@ -113,14 +115,14 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     case EventStartDt:
         return startDtTime;
     case EventDt:
-        return startDtTime.toString("dddd d MMMM");
+        return startDtTime.toString(u"dddd d MMMM");
     case ShiftedEventDt: {
         applyTimeZone(startDtTime, calendarTz);
-        return startDtTime.toString("dddd d MMMM");
+        return startDtTime.toString(u"dddd d MMMM");
     }
     case ShiftedEventDtLocal: {
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
-        return startDtTime.toString("dddd d MMMM");
+        return startDtTime.toString(u"dddd d MMMM");
     }
     case ScheduleStartDt: {
         applyTimeZone(startDtTime, calendarTz);
@@ -308,33 +310,33 @@ int EventModel::overlappingEvents(const int idx) const
 QString EventModel::formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const
 {
     if (startDtTime.date() == endDtTime.date()) {
-        return QString {"%1 - %2"}.arg(startDtTime.time().toString("hh:mm"), endDtTime.time().toString("hh:mm"));
+        return "%1 - %2"_L1.arg(startDtTime.time().toString(u"hh:mm"), endDtTime.time().toString(u"hh:mm"));
     }
 
-    auto displayStartDtTime = QString {"%1 %2"}.arg(startDtTime.date().toString("ddd d MMM yyyy"), startDtTime.time().toString("hh:mm"));
-    auto displayEndDtTime = QString {"%1 %2"}.arg(endDtTime.date().toString("ddd d MMM yyyy"), endDtTime.time().toString("hh:mm"));
+    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), startDtTime.time().toString(u"hh:mm"));
+    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), endDtTime.time().toString(u"hh:mm"));
 
-    return QString {"%1 - %2 %3"}.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
+    return "%1 - %2 %3"_L1.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
 
 QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const
 {
     if (allDay) {
-        return startDtTime.date().toString("ddd d MMM yyyy");
+        return startDtTime.date().toString(u"ddd d MMM yyyy");
     }
 
     if (startDtTime.date() == endDtTime.date()) {
 
-        auto displayDt = startDtTime.date().toString("ddd d MMM yyyy");
-        auto displayTime = QString {"%1 - %2"}.arg(startDtTime.time().toString("hh:mm"), endDtTime.time().toString("hh:mm"));
+        auto displayDt = startDtTime.date().toString(u"ddd d MMM yyyy");
+        auto displayTime = "%1 - %2"_L1.arg(startDtTime.time().toString(u"hh:mm"), endDtTime.time().toString(u"hh:mm"));
 
-        return QString {"%1 %2 %3"}.arg(displayDt, displayTime, startDtTime.timeZoneAbbreviation());
+        return "%1 %2 %3"_L1.arg(displayDt, displayTime, startDtTime.timeZoneAbbreviation());
     }
 
-    auto displayStartDtTime = QString {"%1 %2"}.arg(startDtTime.date().toString("ddd d MMM yyyy"), startDtTime.time().toString("hh:mm"));
-    auto displayEndDtTime = QString {"%1 %2"}.arg(endDtTime.date().toString("ddd d MMM yyyy"), endDtTime.time().toString("hh:mm"));
+    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), startDtTime.time().toString(u"hh:mm"));
+    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), endDtTime.time().toString(u"hh:mm"));
 
-    return QString {"%1 - %2 %3"}.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
+    return "%1 - %2 %3"_L1.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
 
 #include "moc_eventmodel.cpp"
