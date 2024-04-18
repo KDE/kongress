@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:40+0000\n"
+"POT-Creation-Date: 2024-04-18 00:40+0000\n"
 "PO-Revision-Date: 2020-10-07 21:08+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -28,13 +28,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "qiilaq69@gmail.com"
 
-#: calendarcontroller.cpp:302
+#: calendarcontroller.cpp:304
 #, fuzzy, kde-format
 #| msgid "The calendar file is not valid"
 msgid "Cannot save calendar file. Export failed."
 msgstr "Kalender ei ole korrektne"
 
-#: calendarcontroller.cpp:308
+#: calendarcontroller.cpp:310
 #, kde-format
 msgid "Export completed successfully"
 msgstr ""
@@ -238,17 +238,17 @@ msgstr ""
 msgid "Notifications are not supported on your platform"
 msgstr ""
 
-#: eventcontroller.cpp:56
+#: eventcontroller.cpp:58
 #, kde-format
 msgid "Error during event creation"
 msgstr "Tõrge sündmuse loomisel"
 
-#: eventcontroller.cpp:63
+#: eventcontroller.cpp:65
 #, kde-format
 msgid "Already in favorites"
 msgstr "Juba lemmikutes"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -257,7 +257,7 @@ msgstr ""
 "Ettekanne lisati lemmikutesse, kuid see kattub olemasolevatega:\n"
 "%1"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Ettekanne lisati lemmikutesse"

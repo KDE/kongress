@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:40+0000\n"
+"POT-Creation-Date: 2024-04-18 00:40+0000\n"
 "PO-Revision-Date: 2022-11-27 22:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: calendarcontroller.cpp:302
+#: calendarcontroller.cpp:304
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr "კალენდრის ფაილის შენახვის შეცდომა. გატანა წარუმატებელია."
 
-#: calendarcontroller.cpp:308
+#: calendarcontroller.cpp:310
 #, kde-format
 msgid "Export completed successfully"
 msgstr "გატანა წარმატებით დასრულდა"
@@ -231,17 +231,17 @@ msgstr "შეხსენება საუბრის დაწყება�
 msgid "Notifications are not supported on your platform"
 msgstr "თქვენს პლატფორმაზე შეტყობინებები მხარდაჭერილი არაა"
 
-#: eventcontroller.cpp:56
+#: eventcontroller.cpp:58
 #, kde-format
 msgid "Error during event creation"
 msgstr "შეცდომა მოვლენის შექმნისას"
 
-#: eventcontroller.cpp:63
+#: eventcontroller.cpp:65
 #, kde-format
 msgid "Already in favorites"
 msgstr "უკვე სანიშნეებშია"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -250,7 +250,7 @@ msgstr ""
 "საუბარი დამატებულია რჩეულებში, მაგრამ ეფარება არსებულებს:\n"
 "%1"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "საუბარი სანიშნეებში ჩაემატა"

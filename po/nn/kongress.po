@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:40+0000\n"
+"POT-Creation-Date: 2024-04-18 00:40+0000\n"
 "PO-Revision-Date: 2021-12-15 13:03+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -30,12 +30,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karl@huftis.org"
 
-#: calendarcontroller.cpp:302
+#: calendarcontroller.cpp:304
 #, kde-format
 msgid "Cannot save calendar file. Export failed."
 msgstr "Klarte ikkje lagra kalender. Eksporten var mislukka."
 
-#: calendarcontroller.cpp:308
+#: calendarcontroller.cpp:310
 #, kde-format
 msgid "Export completed successfully"
 msgstr "Eksporteringa er no fullført"
@@ -233,17 +233,17 @@ msgstr "Påminning før presentasjonen startar (minutt)"
 msgid "Notifications are not supported on your platform"
 msgstr "Påminningar er ikkje støtta på plattforma di"
 
-#: eventcontroller.cpp:56
+#: eventcontroller.cpp:58
 #, kde-format
 msgid "Error during event creation"
 msgstr "Feil ved oppretting av arrangement"
 
-#: eventcontroller.cpp:63
+#: eventcontroller.cpp:65
 #, kde-format
 msgid "Already in favorites"
 msgstr "Er allereie merkt som favoritt"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -253,7 +253,7 @@ msgstr ""
 "presentasjonar:\n"
 "%1"
 
-#: eventcontroller.cpp:113
+#: eventcontroller.cpp:115
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Presentasjonen er lagd til som favoritt"
