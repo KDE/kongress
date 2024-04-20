@@ -34,6 +34,7 @@ include(ECMPoQmTools)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
 include(ECMAddAndroidApk)
+include(ECMQmlModule)
 
 
 ecm_setup_version(${PROJECT_VERSION}
