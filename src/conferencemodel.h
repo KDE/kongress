@@ -8,8 +8,8 @@
 #define CONFERENCEMODEL_H
 
 #include <QAbstractListModel>
-#include <QVector>
 #include <QHash>
+#include <QVector>
 
 class Conference;
 class ConferenceController;
@@ -61,6 +61,5 @@ private:
     ConferenceController *m_controller;
     QVector<Conference *> m_conferences;
     bool m_busy_downloading;
-
 };
 #endif

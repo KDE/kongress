@@ -9,8 +9,8 @@
 
 #include "localcalendar.h"
 
-#include <QAbstractListModel>
 #include <KCalendarCore/Event>
+#include <QAbstractListModel>
 
 class SettingsController;
 
@@ -115,4 +115,4 @@ private:
     SettingsController *m_settings_controller;
 };
 
-#endif //EVENTMODEL_H
+#endif // EVENTMODEL_H

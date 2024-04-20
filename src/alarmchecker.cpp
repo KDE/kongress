@@ -7,16 +7,20 @@
 #include "alarmchecker.h"
 
 #ifndef Q_OS_ANDROID
-#include <QDBusInterface>
 #include <QDBusConnection>
+#include <QDBusInterface>
 #include <QDBusReply>
 #endif
 
-
-AlarmChecker::AlarmChecker(QObject *parent) : QObject {parent}
+AlarmChecker::AlarmChecker(QObject *parent)
+    : QObject{parent}
 {
 #ifndef Q_OS_ANDROID
-    m_interface = new QDBusInterface {QStringLiteral("org.kde.kongressac"), QStringLiteral("/kongressac"), QStringLiteral("org.kde.kongressac"), QDBusConnection::sessionBus(), this};
+    m_interface = new QDBusInterface{QStringLiteral("org.kde.kongressac"),
+                                     QStringLiteral("/kongressac"),
+                                     QStringLiteral("org.kde.kongressac"),
+                                     QDBusConnection::sessionBus(),
+                                     this};
 #endif
 }
 
@@ -30,7 +34,7 @@ void AlarmChecker::scheduleAlarmCheck()
 int AlarmChecker::active()
 {
 #ifndef Q_OS_ANDROID
-    auto kongressacActive {false};
+    auto kongressacActive{false};
 
     QDBusReply<int> reply = m_interface->call(QStringLiteral("active"));
     if (reply.isValid()) {

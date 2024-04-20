@@ -8,20 +8,22 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
-#include <QGuiApplication>
 #include <QCommandLineParser>
+#include <QGuiApplication>
 
 int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
 
-    KAboutData aboutData {QStringLiteral("kongressac"), i18n("Kongress Alarm Check Daemon"),
-                          QString {}, i18n("Kongress Alarm Check Daemon"),
-                          KAboutLicense::GPL,
-                          i18n("(c) 2021 Dimitris Kardarakos"),
-                          QString {}, QString {}};
-    aboutData.addAuthor(i18n("Dimitris Kardarakos"), i18n("Maintainer"),
-                        QStringLiteral("dimkard@posteo.net"));
+    KAboutData aboutData{QStringLiteral("kongressac"),
+                         i18n("Kongress Alarm Check Daemon"),
+                         QString{},
+                         i18n("Kongress Alarm Check Daemon"),
+                         KAboutLicense::GPL,
+                         i18n("(c) 2021 Dimitris Kardarakos"),
+                         QString{},
+                         QString{}};
+    aboutData.addAuthor(i18n("Dimitris Kardarakos"), i18n("Maintainer"), QStringLiteral("dimkard@posteo.net"));
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
@@ -29,7 +31,7 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    KDBusService service {KDBusService::Unique};
+    KDBusService service{KDBusService::Unique};
     CalAlarmClient client;
 
     return app.exec();

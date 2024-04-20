@@ -10,7 +10,12 @@
 #include <KSharedConfig>
 #include <QDebug>
 
-AlarmsModel::AlarmsModel(QObject *parent) : QObject {parent}, m_calendars {QVector<KCalendarCore::Calendar::Ptr> {}}, m_file_storages {QVector<KCalendarCore::FileStorage::Ptr> {}}, m_alarms {KCalendarCore::Alarm::List {}}, m_calendar_files {QStringList()}
+AlarmsModel::AlarmsModel(QObject *parent)
+    : QObject{parent}
+    , m_calendars{QVector<KCalendarCore::Calendar::Ptr>{}}
+    , m_file_storages{QVector<KCalendarCore::FileStorage::Ptr>{}}
+    , m_alarms{KCalendarCore::Alarm::List{}}
+    , m_calendar_files{QStringList()}
 {
     connect(this, &AlarmsModel::periodChanged, this, &AlarmsModel::loadAlarms);
     connect(this, &AlarmsModel::calendarsChanged, this, &AlarmsModel::loadAlarms);
@@ -27,20 +32,20 @@ void AlarmsModel::loadAlarms()
     openLoadStorages();
 
     for (const auto &m : std::as_const(m_calendars)) {
-
         KCalendarCore::Alarm::List calendarAlarms;
 
         if (m_period.from.isValid() && m_period.to.isValid()) {
             calendarAlarms = m->alarms(m_period.from, m_period.to, true);
         } else if (!(m_period.from.isValid()) && m_period.to.isValid()) {
-            calendarAlarms = m->alarms(QDateTime {QDate {1900, 1, 1}, QTime {0, 0, 0}}, m_period.to);
+            calendarAlarms = m->alarms(QDateTime{QDate{1900, 1, 1}, QTime{0, 0, 0}}, m_period.to);
         }
 
         if (!(calendarAlarms.empty())) {
             m_alarms.append(calendarAlarms);
         }
     }
-    qDebug() << "loadAlarms:" << m_period.from.toString(u"dd.MM.yyyy hh:mm:ss") << "to" << m_period.to.toString(u"dd.MM.yyyy hh:mm:ss") << m_alarms.count() << "alarms found";
+    qDebug() << "loadAlarms:" << m_period.from.toString(u"dd.MM.yyyy hh:mm:ss") << "to" << m_period.to.toString(u"dd.MM.yyyy hh:mm:ss") << m_alarms.count()
+             << "alarms found";
 
     closeStorages();
 }
@@ -51,8 +56,8 @@ void AlarmsModel::setCalendars()
     m_calendars.clear();
 
     for (const auto &cf : std::as_const(m_calendar_files)) {
-        KCalendarCore::Calendar::Ptr calendar {new KCalendarCore::MemoryCalendar {QTimeZone::systemTimeZoneId()}};
-        KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+        KCalendarCore::Calendar::Ptr calendar{new KCalendarCore::MemoryCalendar{QTimeZone::systemTimeZoneId()}};
+        KCalendarCore::FileStorage::Ptr storage{new KCalendarCore::FileStorage{calendar}};
         storage->setFileName(cf);
         if (!(storage->fileName().isNull())) {
             m_file_storages.append(storage);
@@ -65,7 +70,7 @@ void AlarmsModel::setCalendars()
 
 void AlarmsModel::openLoadStorages()
 {
-    auto loaded {true};
+    auto loaded{true};
     for (const auto &fs : std::as_const(m_file_storages)) {
         loaded = fs->open() && fs->load() && loaded;
     }
@@ -73,7 +78,7 @@ void AlarmsModel::openLoadStorages()
 
 void AlarmsModel::closeStorages()
 {
-    auto closed {true};
+    auto closed{true};
     for (const auto &fs : std::as_const(m_file_storages)) {
         closed = fs->close() && closed;
     }

@@ -7,11 +7,11 @@
 #ifndef CONFERENCE_CONTROLLER_H
 #define CONFERENCE_CONTROLLER_H
 
-#include <QObject>
 #include <QFile>
-#include <QVector>
 #include <QJsonObject>
 #include <QNetworkAccessManager>
+#include <QObject>
+#include <QVector>
 
 class Conference;
 
@@ -52,6 +52,5 @@ private:
 
     class Private;
     Private *d;
-
 };
 #endif

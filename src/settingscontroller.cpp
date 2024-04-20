@@ -15,13 +15,14 @@ class SettingsController::Private
 {
 public:
     Private()
-        : config(u"kongressrc"_s)
-    {};
+        : config(u"kongressrc"_s){};
     KConfig config;
 };
 
 SettingsController::SettingsController(QObject *parent)
-    : QObject {parent}, d {new Private}, m_alarm_checker {new AlarmChecker {this}}
+    : QObject{parent}
+    , d{new Private}
+    , m_alarm_checker{new AlarmChecker{this}}
 {
 }
 

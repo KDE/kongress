@@ -15,7 +15,8 @@ class WakeupBackend;
 class WakeupManager;
 
 /**
- * @brief Client that orchestrates the parsing of calendars and the display of notifications for event alarms. It exposes a D-Bus Interface containing a set of callable methods.
+ * @brief Client that orchestrates the parsing of calendars and the display of notifications for event alarms. It exposes a D-Bus Interface containing a set of
+ * callable methods.
  *
  */
 class CalAlarmClient : public QObject
@@ -32,7 +33,7 @@ public:
      */
     enum CheckerStatus {
         Inactive = 0,
-        Active = 1
+        Active = 1,
     };
 
     /**

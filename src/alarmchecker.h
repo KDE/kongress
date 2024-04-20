@@ -32,4 +32,4 @@ public:
 private:
     QDBusInterface *m_interface;
 };
-#endif //ALARM_CHECKER_H
+#endif // ALARM_CHECKER_H

@@ -5,17 +5,22 @@
  */
 
 #include "solidwakeupbackend.h"
-#include <QDBusInterface>
 #include <QDBusConnection>
+#include <QDBusInterface>
 #include <QDBusReply>
-#include <QDebug>
 #include <QDateTime>
+#include <QDebug>
 
 using namespace Qt::Literals::StringLiterals;
 
-SolidWakeupBackend::SolidWakeupBackend(QObject *parent) : WakeupBackend {parent}
+SolidWakeupBackend::SolidWakeupBackend(QObject *parent)
+    : WakeupBackend{parent}
 {
-    m_interface = new QDBusInterface {QStringLiteral("org.kde.Solid.PowerManagement"), QStringLiteral("/org/kde/Solid/PowerManagement"), QStringLiteral("org.kde.Solid.PowerManagement"), QDBusConnection::sessionBus(), this};
+    m_interface = new QDBusInterface{QStringLiteral("org.kde.Solid.PowerManagement"),
+                                     QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                     QStringLiteral("org.kde.Solid.PowerManagement"),
+                                     QDBusConnection::sessionBus(),
+                                     this};
 }
 
 void SolidWakeupBackend::clearWakeup(const QVariant &scheduledWakeup)
@@ -27,10 +32,14 @@ QVariant SolidWakeupBackend::scheduleWakeup(const QVariantMap &callbackInfo, con
 {
     auto scheduledAt = QDateTime::fromSecsSinceEpoch(wakeupAt);
 
-    qDebug() << "SolidWakeupBackend::scheduleWakeup at" << scheduledAt.toString(u"dd.MM.yyyy hh:mm:ss") << "tz " << scheduledAt.timeZoneAbbreviation() << " epoch" << wakeupAt;
+    qDebug() << "SolidWakeupBackend::scheduleWakeup at" << scheduledAt.toString(u"dd.MM.yyyy hh:mm:ss") << "tz " << scheduledAt.timeZoneAbbreviation()
+             << " epoch" << wakeupAt;
 
     if (m_interface->isValid()) {
-        QDBusReply<uint> reply = m_interface->call(QStringLiteral("scheduleWakeup"), callbackInfo["dbus-service"_L1].toString(), QDBusObjectPath {callbackInfo["dbus-path"_L1].toString()}, wakeupAt);
+        QDBusReply<uint> reply = m_interface->call(QStringLiteral("scheduleWakeup"),
+                                                   callbackInfo["dbus-service"_L1].toString(),
+                                                   QDBusObjectPath{callbackInfo["dbus-path"_L1].toString()},
+                                                   wakeupAt);
         return reply.value();
     }
 
@@ -39,7 +48,10 @@ QVariant SolidWakeupBackend::scheduleWakeup(const QVariantMap &callbackInfo, con
 
 bool SolidWakeupBackend::isWakeupBackend() const
 {
-    auto callMessage = QDBusMessage::createMethodCall(m_interface->service(), m_interface->path(), QStringLiteral("org.freedesktop.DBus.Introspectable"), QStringLiteral("Introspect"));
+    auto callMessage = QDBusMessage::createMethodCall(m_interface->service(),
+                                                      m_interface->path(),
+                                                      QStringLiteral("org.freedesktop.DBus.Introspectable"),
+                                                      QStringLiteral("Introspect"));
     QDBusReply<QString> result = QDBusConnection::sessionBus().call(callMessage);
 
     if (result.isValid() && result.value().indexOf(QStringLiteral("scheduleWakeup")) >= 0) {

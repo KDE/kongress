@@ -8,8 +8,8 @@
 #define EVENTCONTROLLER_H
 
 #include <QObject>
-#include <QVariantMap>
 #include <QQmlEngine>
+#include <QVariantMap>
 
 class CalendarController;
 class LocalCalendar;
@@ -22,12 +22,7 @@ class EventController : public QObject
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
-    enum EventCheck {
-        NotExistsNotOverlapping = -1,
-        Exists,
-        NotExistsButOverlaps,
-        NoCalendarExists
-    };
+    enum EventCheck { NotExistsNotOverlapping = -1, Exists, NotExistsButOverlaps, NoCalendarExists };
 
     explicit EventController(QObject *parent = nullptr);
 
@@ -63,6 +58,5 @@ private:
 
     CalendarController *m_cal_controller;
     SettingsController *m_settings_controller;
-
 };
 #endif

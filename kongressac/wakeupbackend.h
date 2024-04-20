@@ -17,7 +17,10 @@
 class WakeupBackend : public QObject
 {
 public:
-    explicit WakeupBackend(QObject *parent = nullptr) : QObject {parent} {}
+    explicit WakeupBackend(QObject *parent = nullptr)
+        : QObject{parent}
+    {
+    }
 
     /**
      * @brief Schedule a wake-up at the time provided
@@ -38,7 +41,6 @@ public:
      * @return True if the backend offers wakeup features
      */
     virtual bool isWakeupBackend() const = 0;
-
 };
 
 #endif // WAKEUPBACKEND_H

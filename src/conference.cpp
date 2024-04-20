@@ -6,7 +6,8 @@
 
 #include "conference.h"
 
-Conference::Conference(QObject *parent) : QObject {parent} {};
+Conference::Conference(QObject *parent)
+    : QObject{parent} {};
 
 QString Conference::id() const
 {

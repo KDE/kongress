@@ -10,13 +10,15 @@
 #include <KSharedConfig>
 #include <QDebug>
 
-NotificationHandler::NotificationHandler(QObject *parent) : QObject {parent}, m_active_notifications {QHash<QString, AlarmNotification*>()}
+NotificationHandler::NotificationHandler(QObject *parent)
+    : QObject{parent}
+    , m_active_notifications{QHash<QString, AlarmNotification *>()}
 {
 }
 
 void NotificationHandler::addActiveNotification(const QString &uid, const QString &text)
 {
-    auto *notification = new AlarmNotification {this, uid};
+    auto *notification = new AlarmNotification{this, uid};
     notification->setText(text);
     m_active_notifications[notification->uid()] = notification;
 }
@@ -24,7 +26,7 @@ void NotificationHandler::addActiveNotification(const QString &uid, const QStrin
 void NotificationHandler::sendNotifications()
 {
     for (const auto &n : std::as_const(m_active_notifications)) {
-        qDebug() << "sendNotifications:\tSending notification for alarm" <<  n->uid();
+        qDebug() << "sendNotifications:\tSending notification for alarm" << n->uid();
         n->send();
     }
 

@@ -7,8 +7,8 @@
 #ifndef LOCALCALENDAR_H
 #define LOCALCALENDAR_H
 
-#include <QSharedPointer>
 #include <KCalendarCore/MemoryCalendar>
+#include <QSharedPointer>
 
 class CalendarController;
 class AlarmChecker;
@@ -30,7 +30,7 @@ public:
     enum CalendarType {
         None = 0,
         Conference = 1,
-        Favorites = 2
+        Favorites = 2,
     };
 
     explicit LocalCalendar(QObject *parent = nullptr);

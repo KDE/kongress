@@ -7,13 +7,13 @@
 #ifndef CALENDAR_CONTROLLER_H
 #define CALENDAR_CONTROLLER_H
 
-#include <QObject>
-#include <QVariantMap>
-#include <QMap>
-#include <QQmlEngine>
-#include <QNetworkAccessManager>
 #include <KCalendarCore/FileStorage>
 #include <KCalendarCore/MemoryCalendar>
+#include <QMap>
+#include <QNetworkAccessManager>
+#include <QObject>
+#include <QQmlEngine>
+#include <QVariantMap>
 
 class LocalCalendar;
 

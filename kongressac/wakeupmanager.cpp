@@ -5,24 +5,21 @@
  */
 
 #include "wakeupmanager.h"
-#include "solidwakeupbackend.h"
 #include "powermanagementadaptor.h"
+#include "solidwakeupbackend.h"
 #include <QDBusConnection>
 #include <QDebug>
 
 using namespace Qt::Literals::StringLiterals;
 
-WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1}
+WakeupManager::WakeupManager(QObject *parent)
+    : QObject{parent}
+    , m_cookie{-1}
 {
-    m_callback_info = QVariantMap {
-        {
-            {u"dbus-service"_s, u"org.kde.kongressac"_s },
-            {u"dbus-path"_s, u"/wakeupmanager"_s }
-        }
-    };
+    m_callback_info = QVariantMap{{{u"dbus-service"_s, u"org.kde.kongressac"_s}, {u"dbus-path"_s, u"/wakeupmanager"_s}}};
 
-    new PowerManagementAdaptor {this};
-    m_wakeup_backend = new SolidWakeupBackend {this};
+    new PowerManagementAdaptor{this};
+    m_wakeup_backend = new SolidWakeupBackend{this};
 
     auto dbus = QDBusConnection::sessionBus();
     dbus.registerObject(m_callback_info["dbus-path"_L1].toString(), this);
@@ -31,14 +28,16 @@ WakeupManager::WakeupManager(QObject *parent) : QObject {parent}, m_cookie {-1}
 void WakeupManager::scheduleWakeup(const QDateTime wakeupAt)
 {
     if (wakeupAt <= QDateTime::currentDateTime()) {
-        qDebug() << "WakeupManager:" << "Requested to schedule wake up at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Can't chedule a wakeup in the past";
+        qDebug() << "WakeupManager:"
+                 << "Requested to schedule wake up at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Can't chedule a wakeup in the past";
         return;
     }
 
     auto scheduledCookie = m_wakeup_backend->scheduleWakeup(m_callback_info, wakeupAt.toSecsSinceEpoch()).toInt();
 
     if (scheduledCookie > 0) {
-        qDebug() << "WakeupManager: wake up has been scheduled, wakeup time:" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Received cookie" << scheduledCookie;
+        qDebug() << "WakeupManager: wake up has been scheduled, wakeup time:" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Received cookie"
+                 << scheduledCookie;
 
         if (m_cookie > 0) {
             removeWakeup(m_cookie);
@@ -46,7 +45,6 @@ void WakeupManager::scheduleWakeup(const QDateTime wakeupAt)
 
         m_cookie = scheduledCookie;
     }
-
 }
 
 void WakeupManager::wakeupCallback(const int cookie)

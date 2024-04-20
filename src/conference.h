@@ -60,6 +60,7 @@ Q_SIGNALS:
     void venueLongitudeChanged();
     void venueOsmUrlChanged();
     void timeZoneIdChanged();
+
 private:
     QString m_id;
     QString m_name;

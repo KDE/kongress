@@ -5,14 +5,17 @@
  */
 
 #include "alarmnotification.h"
-#include <KLocalizedString>
 #include "notificationhandler.h"
+#include <KLocalizedString>
 
 using namespace Qt::Literals::StringLiterals;
 
-AlarmNotification::AlarmNotification(NotificationHandler *handler, const QString &uid) : QObject {handler}, m_uid {uid}, m_notification_handler {handler}
+AlarmNotification::AlarmNotification(NotificationHandler *handler, const QString &uid)
+    : QObject{handler}
+    , m_uid{uid}
+    , m_notification_handler{handler}
 {
-    m_notification = new KNotification {u"alarm"_s};
+    m_notification = new KNotification{u"alarm"_s};
 }
 
 void AlarmNotification::send() const

@@ -18,7 +18,7 @@ class SettingsController : public QObject
 
     Q_PROPERTY(bool displayInLocalTimezone READ displayInLocalTimezone WRITE setDisplayInLocalTimezone NOTIFY displayInLocalTimezoneChanged)
     Q_PROPERTY(bool remindFavorites READ remindFavorites WRITE setRemindFavorites NOTIFY remindFavoritesChanged)
-    Q_PROPERTY(int remindBeforeStart READ remindBeforeStart WRITE setRemindBeforeStart  NOTIFY remindBeforeStartChanged)
+    Q_PROPERTY(int remindBeforeStart READ remindBeforeStart WRITE setRemindBeforeStart NOTIFY remindBeforeStartChanged)
     Q_PROPERTY(bool canAddReminder READ canAddReminder NOTIFY canAddReminderChanged)
 
 public:

@@ -6,27 +6,31 @@
 
 #include "calendarcontroller.h"
 #include "localcalendar.h"
+#include <KConfig>
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
-#include <QNetworkRequest>
 #include <QNetworkReply>
-#include <KLocalizedString>
-#include <KConfig>
-#include <KConfigGroup>
+#include <QNetworkRequest>
 
 using namespace Qt::Literals::StringLiterals;
 
 class CalendarController::Private
 {
 public:
-    Private() : config {u"kongressrc"_s}  {};
+    Private()
+        : config{u"kongressrc"_s} {};
     KConfig config;
     QNetworkAccessManager *nam = nullptr;
 };
 
 CalendarController::CalendarController(QObject *parent)
-    : QObject {parent}, m_storages {QMap<QString, KCalendarCore::FileStorage::Ptr> {}}, m_calendars {QMap<QString, KCalendarCore::MemoryCalendar::Ptr>{}}, d {new Private}
+    : QObject{parent}
+    , m_storages{QMap<QString, KCalendarCore::FileStorage::Ptr>{}}
+    , m_calendars{QMap<QString, KCalendarCore::MemoryCalendar::Ptr>{}}
+    , d{new Private}
 {
     loadSavedConferences();
 }
@@ -38,13 +42,13 @@ void CalendarController::setNetworkAccessManager(QNetworkAccessManager *nam)
 
 QString CalendarController::calendars() const
 {
-    return d->config.group(u"general"_s).readEntry("calendars", QString {});
+    return d->config.group(u"general"_s).readEntry("calendars", QString{});
 }
 
 void CalendarController::removeCalendarFromConfig(const QString &calendarId)
 {
     d->config.reparseConfiguration();
-    auto calendarsList = d->config.group(u"general"_s).readEntry("calendars", QString {}).split(';'_L1);
+    auto calendarsList = d->config.group(u"general"_s).readEntry("calendars", QString{}).split(';'_L1);
     if (calendarsList.contains(calendarId)) {
         qDebug() << "Removing calendar " << calendarId;
         calendarsList.removeAll(calendarId);
@@ -60,7 +64,7 @@ void CalendarController::removeCalendarFromConfig(const QString &calendarId)
 QString CalendarController::calendarFile(const QString &calendarId)
 {
     if (d->config.hasGroup(calendarId) && d->config.group(calendarId).hasKey("file")) {
-        return  d->config.group(calendarId).readEntry("file");
+        return d->config.group(calendarId).readEntry("file");
     }
     d->config.group(calendarId).writeEntry("file", filenameToPath(calendarId));
     d->config.sync();
@@ -71,7 +75,7 @@ QString CalendarController::calendarFile(const QString &calendarId)
 QString CalendarController::filenameToPath(const QString &calendarId)
 {
     auto basePath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir baseFolder {basePath};
+    QDir baseFolder{basePath};
     baseFolder.mkpath(QStringLiteral("."));
 
     return basePath + "/kongress_"_L1 + calendarId + ".ics"_L1;
@@ -82,11 +86,11 @@ KCalendarCore::MemoryCalendar::Ptr CalendarController::createLocalCalendar(const
     auto m_fullpath = calendarFile(calendarId);
     auto tzId = QTimeZone::availableTimeZoneIds().contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
 
-    KCalendarCore::MemoryCalendar::Ptr calendar {new KCalendarCore::MemoryCalendar {tzId}};
+    KCalendarCore::MemoryCalendar::Ptr calendar{new KCalendarCore::MemoryCalendar{tzId}};
     qDebug() << "Memory calendar " << calendarId << "(local) with timezone " << tzId << " has been created";
-    KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+    KCalendarCore::FileStorage::Ptr storage{new KCalendarCore::FileStorage{calendar}};
     storage->setFileName(m_fullpath);
-    QFile calendarFile {m_fullpath};
+    QFile calendarFile{m_fullpath};
 
     if (!calendarFile.exists()) {
         qDebug() << "Creating file" << storage->save();
@@ -108,7 +112,7 @@ void CalendarController::deleteCalendar(const QString &calendarId)
 
     auto fileName = m_storages[calendarId]->fileName();
 
-    QFile calendarFile {fileName};
+    QFile calendarFile{fileName};
 
     if (calendarFile.exists()) {
         calendarFile.remove();
@@ -143,7 +147,7 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
 
     auto filePath = calendarFile(calendarId);
 
-    QNetworkRequest request {url};
+    QNetworkRequest request{url};
     auto reply = d->nam->get(request);
 
     connect(reply, &QNetworkReply::finished, [this, reply, filePath, calendarId, timeZoneId]() {
@@ -155,7 +159,6 @@ void CalendarController::createCalendarFromUrl(const QString &calendarId, const 
         reply->deleteLater();
         Q_EMIT downlading(calendarId, false);
     });
-
 }
 
 void CalendarController::downloadFinished(const QString &calendarId, const QByteArray &timeZoneId, const QString &filePath)
@@ -164,9 +167,9 @@ void CalendarController::downloadFinished(const QString &calendarId, const QByte
     auto tz = availableTimezones.contains(timeZoneId) ? timeZoneId : QTimeZone::systemTimeZoneId();
     addTzIdToConfig(calendarId, tz);
 
-    KCalendarCore::MemoryCalendar::Ptr calendar {new KCalendarCore::MemoryCalendar {tz}};
+    KCalendarCore::MemoryCalendar::Ptr calendar{new KCalendarCore::MemoryCalendar{tz}};
     qDebug() << "Memory calendar " << calendarId << " (online) with timezone " << tz << " has been created";
-    KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+    KCalendarCore::FileStorage::Ptr storage{new KCalendarCore::FileStorage{calendar}};
     storage->setFileName(filePath);
 
     if (storage->load()) {
@@ -182,7 +185,7 @@ void CalendarController::downloadFinished(const QString &calendarId, const QByte
 
 bool CalendarController::saveToDisk(const QString &filename, const QByteArray &data)
 {
-    QFile file {filename};
+    QFile file{filename};
     if (!file.open(QIODevice::WriteOnly)) {
         qDebug() << "Could not open %1 for writing: %2"_L1.arg(filename, file.errorString());
         return false;
@@ -204,20 +207,19 @@ KCalendarCore::MemoryCalendar::Ptr CalendarController::memoryCalendar(const QStr
 
 void CalendarController::addConferenceToConfig(const QString &calendarId)
 {
-
-    const QStringList calendarLists {u"conferenceCalendars"_s, u"favoritesCalendars"_s};
+    const QStringList calendarLists{u"conferenceCalendars"_s, u"favoritesCalendars"_s};
 
     for (const auto &calendarList : calendarLists) {
         const auto calendarName = (calendarList == "conferenceCalendars"_L1) ? calendarId : "%1_%2"_L1.arg("favorites"_L1, calendarId);
 
-        if (d->config.group(u"general"_s).readEntry(calendarList, QString {}).isEmpty()) {
+        if (d->config.group(u"general"_s).readEntry(calendarList, QString{}).isEmpty()) {
             d->config.group(u"general"_s).writeEntry(calendarList, calendarName);
             d->config.sync();
 
             return;
         }
 
-        auto calendarsList = d->config.group(u"general"_s).readEntry(calendarList, QString {}).split(';'_L1);
+        auto calendarsList = d->config.group(u"general"_s).readEntry(calendarList, QString{}).split(';'_L1);
         if (!calendarsList.contains(calendarName)) {
             calendarsList.append(calendarName);
             d->config.group(u"general"_s).writeEntry(calendarList, calendarsList.join(';'_L1));
@@ -228,7 +230,7 @@ void CalendarController::addConferenceToConfig(const QString &calendarId)
 
 void CalendarController::loadSavedConferences()
 {
-    auto onlineCalendarIds = d->config.group(u"general"_s).readEntry("conferenceCalendars", QString {});
+    auto onlineCalendarIds = d->config.group(u"general"_s).readEntry("conferenceCalendars", QString{});
     if (onlineCalendarIds.isEmpty()) {
         return;
     }
@@ -236,16 +238,16 @@ void CalendarController::loadSavedConferences()
     auto calendarsList = onlineCalendarIds.split(';'_L1);
 
     for (const auto &calendarId : calendarsList) {
-        auto filePath = d->config.group(calendarId).readEntry("file", QString {});
-        QFile calendarFile {filePath};
+        auto filePath = d->config.group(calendarId).readEntry("file", QString{});
+        QFile calendarFile{filePath};
 
         if (!calendarFile.exists()) {
             continue;
         }
 
         auto tz = tzIdFromConfig(calendarId);
-        KCalendarCore::MemoryCalendar::Ptr calendar {new KCalendarCore::MemoryCalendar {tz}};
-        KCalendarCore::FileStorage::Ptr storage {new KCalendarCore::FileStorage {calendar}};
+        KCalendarCore::MemoryCalendar::Ptr calendar{new KCalendarCore::MemoryCalendar{tz}};
+        KCalendarCore::FileStorage::Ptr storage{new KCalendarCore::FileStorage{calendar}};
         storage->setFileName(filePath);
 
         if (storage->load()) {
@@ -270,11 +272,11 @@ void CalendarController::addTzIdToConfig(const QString &calendarId, const QByteA
 QByteArray CalendarController::tzIdFromConfig(const QString &calendarId) const
 {
     if (!(d->config.hasGroup(calendarId))) {
-        return QByteArray {};
+        return QByteArray{};
     }
 
     if (d->config.hasGroup(calendarId) && !(d->config.group(calendarId).hasKey("timeZoneId"))) {
-        return QByteArray {};
+        return QByteArray{};
     }
 
     return d->config.group(calendarId).readEntry("timeZoneId").toUtf8();
@@ -285,13 +287,13 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
     auto sourceEvents = sourceCalendar->memorycalendar()->rawEvents();
 
     auto dirPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
-    QFile targetFile {dirPath + "/kongress_favorites_"_L1 + calendarName + ".ics"_L1};
-    auto fileSuffix {1};
+    QFile targetFile{dirPath + "/kongress_favorites_"_L1 + calendarName + ".ics"_L1};
+    auto fileSuffix{1};
     while (targetFile.exists()) {
         targetFile.setFileName(dirPath + "/kongress_favorites_"_L1 + calendarName + '('_L1 + QString::number(fileSuffix++) + ").ics"_L1);
     }
-    KCalendarCore::Calendar::Ptr targetCalendar {new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId())};
-    KCalendarCore::FileStorage::Ptr targetStorage {new KCalendarCore::FileStorage {targetCalendar}};
+    KCalendarCore::Calendar::Ptr targetCalendar{new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZoneId())};
+    KCalendarCore::FileStorage::Ptr targetStorage{new KCalendarCore::FileStorage{targetCalendar}};
     targetStorage->setFileName(targetFile.fileName());
 
     for (const auto &event : std::as_const(sourceEvents)) {
@@ -299,17 +301,10 @@ QVariantMap CalendarController::exportData(const QString &calendarName, LocalCal
     }
 
     if (!(targetStorage->save())) {
-        return {
-            { u"success"_s, false },
-            { u"reason"_s, i18n("Cannot save calendar file. Export failed.") }
-        };
+        return {{u"success"_s, false}, {u"reason"_s, i18n("Cannot save calendar file. Export failed.")}};
     }
 
-    return {
-        { u"success"_s, true },
-        { u"reason"_s, i18n("Export completed successfully") },
-        { u"targetFolder"_s, QUrl {QStringLiteral("file://") + dirPath} }
-    };
+    return {{u"success"_s, true}, {u"reason"_s, i18n("Export completed successfully")}, {u"targetFolder"_s, QUrl{QStringLiteral("file://") + dirPath}}};
 }
 
 #include "moc_calendarcontroller.cpp"

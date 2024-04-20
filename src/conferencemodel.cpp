@@ -4,31 +4,33 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include <QDate>
-#include <KLocalizedString>
 #include "conferencemodel.h"
-#include "conferencecontroller.h"
 #include "conference.h"
+#include "conferencecontroller.h"
+#include <KLocalizedString>
+#include <QDate>
 
-ConferenceModel::ConferenceModel(QObject *parent) : QAbstractListModel {parent}, m_controller {nullptr}, m_conferences {QVector<Conference*> {}}, m_busy_downloading {false}
+ConferenceModel::ConferenceModel(QObject *parent)
+    : QAbstractListModel{parent}
+    , m_controller{nullptr}
+    , m_conferences{QVector<Conference *>{}}
+    , m_busy_downloading{false}
 {
 }
 
 QHash<int, QByteArray> ConferenceModel::roleNames() const
 {
-    return {
-        {ConferenceId, "id"},
-        {ConferenceName, "name"},
-        {ConferenceDescription, "description"},
-        {ConferenceIcalUrl, "icalUrl"},
-        {ConferenceDays, "days"},
-        {ConferenceVenueImageUrl, "venueImageUrl"},
-        {ConferenceVenueLatitude, "venueLatitude"},
-        {ConferenceVenueLongitude, "venueLongitude"},
-        {ConferenceVenueOsmUrl, "venueOsmUrl"},
-        {ConferenceTimeZone, "timeZoneId"},
-        {PastUpcoming, "pastUpcoming"}
-    };
+    return {{ConferenceId, "id"},
+            {ConferenceName, "name"},
+            {ConferenceDescription, "description"},
+            {ConferenceIcalUrl, "icalUrl"},
+            {ConferenceDays, "days"},
+            {ConferenceVenueImageUrl, "venueImageUrl"},
+            {ConferenceVenueLatitude, "venueLatitude"},
+            {ConferenceVenueLongitude, "venueLongitude"},
+            {ConferenceVenueOsmUrl, "venueOsmUrl"},
+            {ConferenceTimeZone, "timeZoneId"},
+            {PastUpcoming, "pastUpcoming"}};
 }
 
 int ConferenceModel::rowCount(const QModelIndex &parent) const

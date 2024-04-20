@@ -5,13 +5,21 @@
  */
 
 #include "localcalendar.h"
-#include "calendarcontroller.h"
 #include "alarmchecker.h"
-#include <QDebug>
+#include "calendarcontroller.h"
 #include <KLocalizedString>
+#include <QDebug>
 
 LocalCalendar::LocalCalendar(QObject *parent)
-    : QObject {parent}, m_calendar_id {QString {}}, m_calendar_tz_id {QString {}}, m_calendar_url {QString {}}, m_calendar_type {LocalCalendar::CalendarType::None}, m_calendar {nullptr}, m_cal_controller {nullptr}, m_alarm_checker {new AlarmChecker {this}}, m_busy_downloading {false}
+    : QObject{parent}
+    , m_calendar_id{QString{}}
+    , m_calendar_tz_id{QString{}}
+    , m_calendar_url{QString{}}
+    , m_calendar_type{LocalCalendar::CalendarType::None}
+    , m_calendar{nullptr}
+    , m_cal_controller{nullptr}
+    , m_alarm_checker{new AlarmChecker{this}}
+    , m_busy_downloading{false}
 {
     connect(this, &LocalCalendar::calendarIdChanged, this, &LocalCalendar::createCalendar);
     connect(this, &LocalCalendar::calendarTzIdChanged, this, &LocalCalendar::createCalendar);
@@ -27,18 +35,19 @@ KCalendarCore::MemoryCalendar::Ptr LocalCalendar::memorycalendar() const
 
 void LocalCalendar::createCalendar()
 {
-    if (m_calendar_id.isEmpty() || m_calendar_tz_id.isEmpty() || (m_calendar_type == LocalCalendar::CalendarType::None) || ((m_calendar_type == LocalCalendar::CalendarType::Conference) && m_calendar_url.isEmpty())) {
+    if (m_calendar_id.isEmpty() || m_calendar_tz_id.isEmpty() || (m_calendar_type == LocalCalendar::CalendarType::None)
+        || ((m_calendar_type == LocalCalendar::CalendarType::Conference) && m_calendar_url.isEmpty())) {
         qDebug() << "No sufficient calendar information provided";
         return;
     }
 
     if (m_calendar_type == LocalCalendar::CalendarType::Conference) {
-        qDebug() << "Creating online calendar: " <<  m_calendar_id;
+        qDebug() << "Creating online calendar: " << m_calendar_id;
 
-        //Check if a local copy of the calendar already exists and set it accordingly to the member property
-        m_calendar =  m_cal_controller->memoryCalendar(m_calendar_id);
+        // Check if a local copy of the calendar already exists and set it accordingly to the member property
+        m_calendar = m_cal_controller->memoryCalendar(m_calendar_id);
 
-        //Even if a local copy exists, get a fresh copy of the calendar
+        // Even if a local copy exists, get a fresh copy of the calendar
         loadOnlineCalendar();
     } else {
         qDebug() << "Creating local calendar: " << m_calendar_id;
@@ -48,7 +57,6 @@ void LocalCalendar::createCalendar()
     Q_EMIT memorycalendarChanged();
     Q_EMIT categoriesChanged();
     Q_EMIT eventsChanged();
-
 }
 
 QStringList LocalCalendar::categories() const
@@ -57,7 +65,7 @@ QStringList LocalCalendar::categories() const
         return m_calendar->categories();
     }
 
-    return QStringList {};
+    return QStringList{};
 }
 
 void LocalCalendar::onlineCalendarReady(const QString &calendarId)
@@ -75,7 +83,7 @@ void LocalCalendar::onlineCalendarReady(const QString &calendarId)
 
 void LocalCalendar::loadOnlineCalendar()
 {
-    m_cal_controller->createCalendarFromUrl(m_calendar_id, QUrl {m_calendar_url}, m_calendar_tz_id.toUtf8());
+    m_cal_controller->createCalendarFromUrl(m_calendar_id, QUrl{m_calendar_url}, m_calendar_tz_id.toUtf8());
 }
 
 CalendarController *LocalCalendar::calendarController() const

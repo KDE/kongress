@@ -7,26 +7,28 @@
 #include "calalarmclient.h"
 #include "alarmnotification.h"
 #include "alarmsmodel.h"
-#include "notificationhandler.h"
 #include "kongressacadaptor.h"
+#include "notificationhandler.h"
 #include "solidwakeupbackend.h"
 #include "wakeupmanager.h"
-#include <QDebug>
-#include <KSharedConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <QDebug>
 
 using namespace Qt::Literals::StringLiterals;
 
 CalAlarmClient::CalAlarmClient(QObject *parent)
-    : QObject {parent},  m_notification_handler {new NotificationHandler {this}}, m_wakeup_manager {new WakeupManager {this}}
+    : QObject{parent}
+    , m_notification_handler{new NotificationHandler{this}}
+    , m_wakeup_manager{new WakeupManager{this}}
 {
-    new KongressacAdaptor {this};
+    new KongressacAdaptor{this};
     auto dbus = QDBusConnection::sessionBus();
     dbus.registerObject(u"/kongressac"_s, this);
 
-    KConfigGroup generalGroup {KSharedConfig::openConfig(), u"General"_s};
-    m_last_checked = generalGroup.readEntry("CalendarsLastChecked", QDateTime {});
+    KConfigGroup generalGroup{KSharedConfig::openConfig(), u"General"_s};
+    m_last_checked = generalGroup.readEntry("CalendarsLastChecked", QDateTime{});
 
     qDebug() << "CalAlarmClient:\tLastChecked:" << m_last_checked.toString(u"dd.MM.yyyy hh:mm:ss");
 
@@ -41,9 +43,9 @@ CalAlarmClient::CalAlarmClient(QObject *parent)
 
 QStringList CalAlarmClient::calendarFileList() const
 {
-    QStringList filesList {};
-    KConfigGroup kongressCfgGeneral {KSharedConfig::openConfig(u"kongressrc"_s), u"general"_s};
-    auto calendars = kongressCfgGeneral.readEntry("favoritesCalendars", QString {});
+    QStringList filesList{};
+    KConfigGroup kongressCfgGeneral{KSharedConfig::openConfig(u"kongressrc"_s), u"general"_s};
+    auto calendars = kongressCfgGeneral.readEntry("favoritesCalendars", QString{});
     auto calendarList = calendars.split(';'_L1);
 
     for (const auto &c : calendarList) {
@@ -61,7 +63,7 @@ QStringList CalAlarmClient::calendarFileList() const
 
 void CalAlarmClient::checkAlarms()
 {
-    KConfigGroup cfg {KSharedConfig::openConfig(), u"General"_s};
+    KConfigGroup cfg{KSharedConfig::openConfig(), u"General"_s};
 
     if (!cfg.readEntry("Enabled", true)) {
         return;
@@ -71,7 +73,7 @@ void CalAlarmClient::checkAlarms()
 
     qDebug() << "\ncheckAlarms:Check:" << checkFrom.toString() << " -" << m_last_checked.toString();
 
-    FilterPeriod fPeriod {.from = checkFrom, .to = m_last_checked};
+    FilterPeriod fPeriod{.from = checkFrom, .to = m_last_checked};
     AlarmsModel alarmsModel;
     alarmsModel.setCalendarFiles(calendarFileList());
     alarmsModel.setPeriod(fPeriod);
@@ -79,11 +81,13 @@ void CalAlarmClient::checkAlarms()
     const auto alarms = alarmsModel.alarms();
     qDebug() << "checkAlarms:Alarms Found: " << alarms.count();
 
-    KConfigGroup notificationsConfig {KSharedConfig::openConfig(u"kongressrc"_s), u"notifications"_s};
+    KConfigGroup notificationsConfig{KSharedConfig::openConfig(u"kongressrc"_s), u"notifications"_s};
 
     if (notificationsConfig.readEntry("remindFavorites", true)) {
         for (const auto &alarm : std::as_const(alarms)) {
-            m_notification_handler->addActiveNotification(alarm->parentUid(), "%1\n%2"_L1.arg(alarm->time().toTimeZone(QTimeZone::systemTimeZone()).toString(u"hh:mm"), alarm->text()));
+            m_notification_handler->addActiveNotification(
+                alarm->parentUid(),
+                "%1\n%2"_L1.arg(alarm->time().toTimeZone(QTimeZone::systemTimeZone()).toString(u"hh:mm"), alarm->text()));
         }
         m_notification_handler->sendNotifications();
     }
@@ -93,7 +97,7 @@ void CalAlarmClient::checkAlarms()
 
 void CalAlarmClient::saveLastCheckTime()
 {
-    KConfigGroup generalGroup {KSharedConfig::openConfig(), u"General"_s};
+    KConfigGroup generalGroup{KSharedConfig::openConfig(), u"General"_s};
     generalGroup.writeEntry("CalendarsLastChecked", m_last_checked);
     KSharedConfig::openConfig()->sync();
 }
@@ -113,9 +117,9 @@ void CalAlarmClient::forceAlarmCheck()
 
 QString CalAlarmClient::alarmText(const QString &uid) const
 {
-    AlarmsModel model {};
+    AlarmsModel model{};
     model.setCalendarFiles(calendarFileList());
-    model.setPeriod({.from = QDateTime {}, .to = QDateTime::currentDateTime()});
+    model.setPeriod({.from = QDateTime{}, .to = QDateTime::currentDateTime()});
     const auto alarms = model.alarms();
 
     for (const auto &alarm : std::as_const(alarms)) {
@@ -124,7 +128,7 @@ QString CalAlarmClient::alarmText(const QString &uid) const
         }
     }
 
-    return QString {};
+    return QString{};
 }
 
 void CalAlarmClient::scheduleAlarmCheck()
@@ -133,12 +137,13 @@ void CalAlarmClient::scheduleAlarmCheck()
         return;
     }
 
-    AlarmsModel model {};
+    AlarmsModel model{};
     model.setCalendarFiles(calendarFileList());
-    model.setPeriod({.from =  m_last_checked.addSecs(1), .to = m_last_checked.addDays(1)});
+    model.setPeriod({.from = m_last_checked.addSecs(1), .to = m_last_checked.addDays(1)});
 
     auto wakeupAt = model.firstAlarmTime();
-    qDebug() << "scheduleAlarmCheck:" << "Shecdule next alarm check at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss");
+    qDebug() << "scheduleAlarmCheck:"
+             << "Shecdule next alarm check at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss");
     m_wakeup_manager->scheduleWakeup(wakeupAt.addSecs(1));
 }
 

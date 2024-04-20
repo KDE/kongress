@@ -5,19 +5,19 @@
  */
 
 #include "eventmodel.h"
+#include "settingscontroller.h"
 #include <KCalendarCore/CalFilter>
 #include <KLocalizedString>
-#include "settingscontroller.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-EventModel::EventModel(QObject *parent) :
-    QAbstractListModel {parent},
-    m_events {KCalendarCore::Event::List {}},
-    m_filterdt {QDate {}},
-    m_category {QString {}},
-    m_local_calendar {nullptr},
-    m_settings_controller {new SettingsController}
+EventModel::EventModel(QObject *parent)
+    : QAbstractListModel{parent}
+    , m_events{KCalendarCore::Event::List{}}
+    , m_filterdt{QDate{}}
+    , m_category{QString{}}
+    , m_local_calendar{nullptr}
+    , m_settings_controller{new SettingsController}
 {
     connect(this, &EventModel::filterdtChanged, this, &EventModel::loadEvents);
     connect(this, &EventModel::calendarChanged, this, &EventModel::loadEvents);
@@ -52,40 +52,38 @@ void EventModel::setCalendar(LocalCalendar *const calendarPtr)
 
 QHash<int, QByteArray> EventModel::roleNames() const
 {
-    return {
-        { Uid, "uid" },
-        { EventStartDt, "eventStartDt" },
-        { EventDt, "eventDt" },
-        { ShiftedEventDt, "shiftedEventDt" },
-        { ShiftedEventDtLocal, "shiftedEventDtLocal" },
-        { ScheduleStartDt, "scheduleStartDt" },
-        { AllDay, "allday" },
-        { Description, "description" },
-        { Summary, "summary" },
-        { LastModified, "lastmodified" },
-        { Location, "location" },
-        { Categories, "categories" },
-        { Priority, "priority" },
-        { Created, "created" },
-        { Secrecy, "secrecy" },
-        { EventEndDt, "eventEndDt" },
-        { ScheduleEndDt, "scheduleEndDt" },
-        { Transparency, "transparency" },
-        { RepeatPeriodType, "repeatType" },
-        { RepeatEvery, "repeatEvery" },
-        { RepeatStopAfter, "repeatStopAfter" },
-        { IsRepeating, "isRepeating" },
-        { EventCategories, "eventCategories" },
-        { Url, "url" },
-        { ShiftedStartEndDt, "shiftedStartEndDt" },
-        { ShiftedStartEndDtLocal, "shiftedStartEndDtLocal" },
-        { ShiftedStartEndTime, "shiftedStartEndTime" },
-        { ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal" },
-        { StartEndDt, "startEndDt" },
-        { StartEndDtLocal, "startEndDtLocal" },
-        { Overlapping, "overlapping" },
-        { ConferenceTzId, "conferenceTzId" }
-    };
+    return {{Uid, "uid"},
+            {EventStartDt, "eventStartDt"},
+            {EventDt, "eventDt"},
+            {ShiftedEventDt, "shiftedEventDt"},
+            {ShiftedEventDtLocal, "shiftedEventDtLocal"},
+            {ScheduleStartDt, "scheduleStartDt"},
+            {AllDay, "allday"},
+            {Description, "description"},
+            {Summary, "summary"},
+            {LastModified, "lastmodified"},
+            {Location, "location"},
+            {Categories, "categories"},
+            {Priority, "priority"},
+            {Created, "created"},
+            {Secrecy, "secrecy"},
+            {EventEndDt, "eventEndDt"},
+            {ScheduleEndDt, "scheduleEndDt"},
+            {Transparency, "transparency"},
+            {RepeatPeriodType, "repeatType"},
+            {RepeatEvery, "repeatEvery"},
+            {RepeatStopAfter, "repeatStopAfter"},
+            {IsRepeating, "isRepeating"},
+            {EventCategories, "eventCategories"},
+            {Url, "url"},
+            {ShiftedStartEndDt, "shiftedStartEndDt"},
+            {ShiftedStartEndDtLocal, "shiftedStartEndDtLocal"},
+            {ShiftedStartEndTime, "shiftedStartEndTime"},
+            {ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal"},
+            {StartEndDt, "startEndDt"},
+            {StartEndDtLocal, "startEndDtLocal"},
+            {Overlapping, "overlapping"},
+            {ConferenceTzId, "conferenceTzId"}};
 }
 
 static void applyTimeZone(QDateTime &dt, const QTimeZone &tz)
@@ -100,7 +98,7 @@ static void applyTimeZone(QDateTime &dt, const QTimeZone &tz)
 QVariant EventModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant {};
+        return QVariant{};
     }
 
     auto row = index.row();
@@ -110,7 +108,7 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
     auto allDay = m_events.at(row)->allDay();
 
     switch (role) {
-    case Uid :
+    case Uid:
         return m_events.at(row)->uid();
     case EventStartDt:
         return startDtTime;
@@ -202,7 +200,7 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return formatStartEndDt(startDtTime, endDtTime, allDay);
     }
     case StartEndDtLocal: {
-        //Convert time to the system time zone
+        // Convert time to the system time zone
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
@@ -214,7 +212,7 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return calendarTz.id();
     }
     default:
-        return QVariant {};
+        return QVariant{};
     }
 }
 
@@ -235,7 +233,9 @@ void EventModel::loadEvents()
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isValid()) {
         auto filterTz = m_settings_controller->displayInLocalTimezone() ? QTimeZone::systemTimeZone() : m_local_calendar->memorycalendar()->timeZone();
         auto dayEvents = m_local_calendar->memorycalendar()->rawEvents(m_filterdt, m_filterdt, filterTz, true);
-        m_events = KCalendarCore::Calendar::sortEvents(std::move(dayEvents), KCalendarCore::EventSortField::EventSortStartDate, KCalendarCore::SortDirection::SortDirectionAscending);
+        m_events = KCalendarCore::Calendar::sortEvents(std::move(dayEvents),
+                                                       KCalendarCore::EventSortField::EventSortStartDate,
+                                                       KCalendarCore::SortDirection::SortDirectionAscending);
     }
 
     if (m_local_calendar != nullptr && m_local_calendar->memorycalendar() != nullptr && m_filterdt.isNull()) {
@@ -243,8 +243,8 @@ void EventModel::loadEvents()
     }
 
     if (m_local_calendar != nullptr && !(m_category.isEmpty())) {
-        QStringList categories {m_category};
-        KCalendarCore::CalFilter filter {};
+        QStringList categories{m_category};
+        KCalendarCore::CalFilter filter{};
         filter.setCategoryList(categories);
         filter.setCriteria(KCalendarCore::CalFilter::ShowCategories);
         filter.apply(&m_events);
@@ -264,7 +264,6 @@ int EventModel::repeatEvery(const int idx) const
 
 int EventModel::repeatStopAfter(const int idx) const
 {
-
     if (!(m_events.at(idx)->recurs())) {
         return -1;
     }
@@ -326,7 +325,6 @@ QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTi
     }
 
     if (startDtTime.date() == endDtTime.date()) {
-
         auto displayDt = startDtTime.date().toString(u"ddd d MMM yyyy");
         auto displayTime = "%1 - %2"_L1.arg(startDtTime.time().toString(u"hh:mm"), endDtTime.time().toString(u"hh:mm"));
 

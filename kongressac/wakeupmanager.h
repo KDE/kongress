@@ -7,8 +7,8 @@
 #ifndef WAKEUPMANAGER_H
 #define WAKEUPMANAGER_H
 
-#include <QObject>
 #include <QDateTime>
+#include <QObject>
 #include <QVariantMap>
 
 class WakeupBackend;
@@ -54,4 +54,4 @@ private:
     int m_cookie;
     QVariantMap m_callback_info;
 };
-#endif //WAKEUPMANAGER_H
+#endif // WAKEUPMANAGER_H

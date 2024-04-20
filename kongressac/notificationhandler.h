@@ -27,7 +27,8 @@ public:
     void sendNotifications();
 
     /**
-     * @brief Creates an alarm notification object for the Incidence with \p uid. It sets the text to be displayed according to \p text. It adds this alarm notification to the internal list of active notifications (the list of notifications that should be sent at the next check).
+     * @brief Creates an alarm notification object for the Incidence with \p uid. It sets the text to be displayed according to \p text. It adds this alarm
+     * notification to the internal list of active notifications (the list of notifications that should be sent at the next check).
      */
     void addActiveNotification(const QString &uid, const QString &text);
 
