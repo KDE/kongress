@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-21 00:40+0000\n"
 "PO-Revision-Date: 2021-01-07 10:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -30,17 +30,17 @@ msgstr "zepires@gmail.com"
 msgid "Cannot save calendar file. Export failed."
 msgstr "Não é possível gravar o ficheiro do calendário. A exportação falhou."
 
-#: calendarcontroller.cpp:310
+#: calendarcontroller.cpp:307
 #, kde-format
 msgid "Export completed successfully"
 msgstr "A exportação terminou com sucesso"
 
-#: conferencemodel.cpp:87
+#: conferencemodel.cpp:89
 #, kde-format
 msgid "Past"
 msgstr "Anterior"
 
-#: conferencemodel.cpp:88
+#: conferencemodel.cpp:90
 #, kde-format
 msgid "Upcoming"
 msgstr "Seguinte"
@@ -228,17 +228,17 @@ msgstr "Chamada de atenção antes do início da conversa (minutos)"
 msgid "Notifications are not supported on your platform"
 msgstr "As notificações não são suportadas na sua plataforma"
 
-#: eventcontroller.cpp:58
+#: eventcontroller.cpp:62
 #, kde-format
 msgid "Error during event creation"
 msgstr "Erro durante a criação do evento"
 
-#: eventcontroller.cpp:65
+#: eventcontroller.cpp:68
 #, kde-format
 msgid "Already in favorites"
 msgstr "Já nos favoritos"
 
-#: eventcontroller.cpp:115
+#: eventcontroller.cpp:118
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -247,7 +247,7 @@ msgstr ""
 "A conversa foi adicionada aos favoritos, mas sobrepõe-se às existentes:\n"
 "%1"
 
-#: eventcontroller.cpp:115
+#: eventcontroller.cpp:119
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Conversa adicionada aos favoritos"
@@ -257,23 +257,23 @@ msgstr "Conversa adicionada aos favoritos"
 msgid "Kongress"
 msgstr "Kongress"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr "Utilitário de Conferências do KDE"
 
-#: main.cpp:52
+#: main.cpp:56
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr "© 2021 da Comunidade do KDE"
 
-#: main.cpp:55
+#: main.cpp:59
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: main.cpp:55
+#: main.cpp:59
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"

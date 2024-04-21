@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-03 01:41+0000\n"
+"POT-Creation-Date: 2024-04-21 00:40+0000\n"
 "PO-Revision-Date: 2024-01-02 19:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -31,22 +31,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pan93412@gmail.com"
 
-#: kongressacmain.cpp:18 kongressacmain.cpp:19
+#: kongressacmain.cpp:19 kongressacmain.cpp:21
 #, kde-format
 msgid "Kongress Alarm Check Daemon"
 msgstr "Kongress 鬧鐘檢查伺服程式"
 
-#: kongressacmain.cpp:21
+#: kongressacmain.cpp:23
 #, kde-format
 msgid "(c) 2021 Dimitris Kardarakos"
 msgstr "(c) 2021 Dimitris Kardarakos"
 
-#: kongressacmain.cpp:23
+#: kongressacmain.cpp:26
 #, kde-format
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: kongressacmain.cpp:23
+#: kongressacmain.cpp:26
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"

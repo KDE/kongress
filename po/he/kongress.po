@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-18 00:40+0000\n"
+"POT-Creation-Date: 2024-04-21 00:40+0000\n"
 "PO-Revision-Date: 2024-04-09 08:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -33,17 +33,17 @@ msgstr "kde-l10n-he@kde.org"
 msgid "Cannot save calendar file. Export failed."
 msgstr "אי אפשר לשמור את קובץ לוח השנה. הייצוא נכשל."
 
-#: calendarcontroller.cpp:310
+#: calendarcontroller.cpp:307
 #, kde-format
 msgid "Export completed successfully"
 msgstr "הייצוא הושלם בהצלחה"
 
-#: conferencemodel.cpp:87
+#: conferencemodel.cpp:89
 #, kde-format
 msgid "Past"
 msgstr "עבר"
 
-#: conferencemodel.cpp:88
+#: conferencemodel.cpp:90
 #, kde-format
 msgid "Upcoming"
 msgstr "בקרוב"
@@ -233,17 +233,17 @@ msgstr "תזכורת לפני הרצאה (דקות)"
 msgid "Notifications are not supported on your platform"
 msgstr "אין תמיכה בהתראות במערכת שלך"
 
-#: eventcontroller.cpp:58
+#: eventcontroller.cpp:62
 #, kde-format
 msgid "Error during event creation"
 msgstr "שגיאה ביצירת אירוע"
 
-#: eventcontroller.cpp:65
+#: eventcontroller.cpp:68
 #, kde-format
 msgid "Already in favorites"
 msgstr "כבר במועדפים"
 
-#: eventcontroller.cpp:115
+#: eventcontroller.cpp:118
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -252,7 +252,7 @@ msgstr ""
 "ההרצאה נוספה למועדפים אבל היא חופפת אחת אחרת:\n"
 "%1"
 
-#: eventcontroller.cpp:115
+#: eventcontroller.cpp:119
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "ההרצאה נוספה למועדפים"
@@ -262,23 +262,23 @@ msgstr "ההרצאה נוספה למועדפים"
 msgid "Kongress"
 msgstr "קונגרס"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr "מלווה לכנסים של KDE"
 
-#: main.cpp:52
+#: main.cpp:56
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr "© 2021 קהילת KDE"
 
-#: main.cpp:55
+#: main.cpp:59
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr "דימיטריס קרדרקוס"
 
-#: main.cpp:55
+#: main.cpp:59
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
