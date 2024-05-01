@@ -32,8 +32,7 @@ QVariant SolidWakeupBackend::scheduleWakeup(const QVariantMap &callbackInfo, con
 {
     auto scheduledAt = QDateTime::fromSecsSinceEpoch(wakeupAt);
 
-    qDebug() << "SolidWakeupBackend::scheduleWakeup at" << scheduledAt.toString(u"dd.MM.yyyy hh:mm:ss") << "tz " << scheduledAt.timeZoneAbbreviation()
-             << " epoch" << wakeupAt;
+    qDebug() << "SolidWakeupBackend::scheduleWakeup at" << scheduledAt << " epoch" << wakeupAt;
 
     if (m_interface->isValid()) {
         QDBusReply<uint> reply = m_interface->call(QStringLiteral("scheduleWakeup"),

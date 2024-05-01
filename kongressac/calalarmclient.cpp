@@ -30,7 +30,7 @@ CalAlarmClient::CalAlarmClient(QObject *parent)
     KConfigGroup generalGroup{KSharedConfig::openConfig(), u"General"_s};
     m_last_checked = generalGroup.readEntry("CalendarsLastChecked", QDateTime{});
 
-    qDebug() << "CalAlarmClient:\tLastChecked:" << m_last_checked.toString(u"dd.MM.yyyy hh:mm:ss");
+    qDebug() << "CalAlarmClient:\tLastChecked:" << m_last_checked;
 
     checkAlarms();
 
@@ -71,7 +71,7 @@ void CalAlarmClient::checkAlarms()
     auto checkFrom = m_last_checked.addSecs(1);
     m_last_checked = QDateTime::currentDateTime();
 
-    qDebug() << "\ncheckAlarms:Check:" << checkFrom.toString() << " -" << m_last_checked.toString();
+    qDebug() << "\ncheckAlarms:Check:" << checkFrom << " -" << m_last_checked;
 
     FilterPeriod fPeriod{.from = checkFrom, .to = m_last_checked};
     AlarmsModel alarmsModel;
@@ -143,7 +143,7 @@ void CalAlarmClient::scheduleAlarmCheck()
 
     auto wakeupAt = model.firstAlarmTime();
     qDebug() << "scheduleAlarmCheck:"
-             << "Shecdule next alarm check at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss");
+             << "Shecdule next alarm check at" << wakeupAt;
     m_wakeup_manager->scheduleWakeup(wakeupAt.addSecs(1));
 }
 

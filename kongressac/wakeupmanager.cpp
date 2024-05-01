@@ -29,15 +29,14 @@ void WakeupManager::scheduleWakeup(const QDateTime wakeupAt)
 {
     if (wakeupAt <= QDateTime::currentDateTime()) {
         qDebug() << "WakeupManager:"
-                 << "Requested to schedule wake up at" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Can't chedule a wakeup in the past";
+                 << "Requested to schedule wake up at" << wakeupAt << "Can't chedule a wakeup in the past";
         return;
     }
 
     auto scheduledCookie = m_wakeup_backend->scheduleWakeup(m_callback_info, wakeupAt.toSecsSinceEpoch()).toInt();
 
     if (scheduledCookie > 0) {
-        qDebug() << "WakeupManager: wake up has been scheduled, wakeup time:" << wakeupAt.toString(u"dd.MM.yyyy hh:mm:ss") << "Received cookie"
-                 << scheduledCookie;
+        qDebug() << "WakeupManager: wake up has been scheduled, wakeup time:" << wakeupAt << "Received cookie" << scheduledCookie;
 
         if (m_cookie > 0) {
             removeWakeup(m_cookie);
