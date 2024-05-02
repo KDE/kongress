@@ -87,7 +87,7 @@ void CalAlarmClient::checkAlarms()
         for (const auto &alarm : std::as_const(alarms)) {
             m_notification_handler->addActiveNotification(
                 alarm->parentUid(),
-                "%1\n%2"_L1.arg(alarm->time().toTimeZone(QTimeZone::systemTimeZone()).toString(u"hh:mm"), alarm->text()));
+                "%1\n%2"_L1.arg(QLocale().toString(alarm->time().toTimeZone(QTimeZone::systemTimeZone()), QLocale::ShortFormat), alarm->text()));
         }
         m_notification_handler->sendNotifications();
     }

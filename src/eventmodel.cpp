@@ -309,11 +309,11 @@ int EventModel::overlappingEvents(const int idx) const
 QString EventModel::formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const
 {
     if (startDtTime.date() == endDtTime.date()) {
-        return "%1 - %2"_L1.arg(startDtTime.time().toString(u"hh:mm"), endDtTime.time().toString(u"hh:mm"));
+        return "%1 - %2"_L1.arg(QLocale().toString(startDtTime.time(), QLocale::ShortFormat), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
     }
 
-    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), startDtTime.time().toString(u"hh:mm"));
-    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), endDtTime.time().toString(u"hh:mm"));
+    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(startDtTime.time(), QLocale::ShortFormat));
+    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
 
     return "%1 - %2 %3"_L1.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
@@ -326,13 +326,14 @@ QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTi
 
     if (startDtTime.date() == endDtTime.date()) {
         auto displayDt = startDtTime.date().toString(u"ddd d MMM yyyy");
-        auto displayTime = "%1 - %2"_L1.arg(startDtTime.time().toString(u"hh:mm"), endDtTime.time().toString(u"hh:mm"));
+        auto displayTime =
+            "%1 - %2"_L1.arg(QLocale().toString(startDtTime.time(), QLocale::ShortFormat), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
 
         return "%1 %2 %3"_L1.arg(displayDt, displayTime, startDtTime.timeZoneAbbreviation());
     }
 
-    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), startDtTime.time().toString(u"hh:mm"));
-    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), endDtTime.time().toString(u"hh:mm"));
+    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(startDtTime.time(), QLocale::ShortFormat));
+    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
 
     return "%1 - %2 %3"_L1.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
