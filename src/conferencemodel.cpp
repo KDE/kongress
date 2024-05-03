@@ -13,7 +13,6 @@
 ConferenceModel::ConferenceModel(QObject *parent)
     : QAbstractListModel{parent}
     , m_controller{nullptr}
-    , m_conferences{QVector<Conference *>{}}
     , m_busy_downloading{false}
 {
 }
@@ -46,29 +45,29 @@ QVariant ConferenceModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case ConferenceId:
-        return m_conferences.at(row)->id();
+        return m_conferences.at(row).id();
     case ConferenceName:
-        return m_conferences.at(row)->name();
+        return m_conferences.at(row).name();
     case ConferenceDescription:
-        return m_conferences.at(row)->description();
+        return m_conferences.at(row).description();
     case ConferenceIcalUrl:
-        return m_conferences.at(row)->icalUrl();
+        return m_conferences.at(row).icalUrl();
     case ConferenceDays:
-        return m_conferences.at(row)->days();
+        return m_conferences.at(row).days();
     case ConferenceVenueImageUrl:
-        return m_conferences.at(row)->venueImageUrl();
+        return m_conferences.at(row).venueImageUrl();
     case ConferenceVenueLatitude:
-        return m_conferences.at(row)->venueLatitude();
+        return m_conferences.at(row).venueLatitude();
     case ConferenceVenueLongitude:
-        return m_conferences.at(row)->venueLongitude();
+        return m_conferences.at(row).venueLongitude();
     case ConferenceVenueOsmUrl:
-        return m_conferences.at(row)->venueOsmUrl();
+        return m_conferences.at(row).venueOsmUrl();
     case ConferenceTimeZone:
-        return m_conferences.at(row)->timeZoneId();
+        return m_conferences.at(row).timeZoneId();
     case PastUpcoming:
         return pastOrUpcoming(row);
     default:
-        return m_conferences.at(row)->id();
+        return m_conferences.at(row).id();
     }
 }
 
@@ -85,7 +84,7 @@ void ConferenceModel::loadConferences()
 
 QString ConferenceModel::pastOrUpcoming(const int index) const
 {
-    auto days = m_conferences.at(index)->days();
+    auto days = m_conferences.at(index).days();
     auto pastLabel = i18n("Past");
     auto upcoming = i18n("Upcoming");
 

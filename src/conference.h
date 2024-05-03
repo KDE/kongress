@@ -9,24 +9,24 @@
 
 #include <QObject>
 
-class Conference : public QObject
-{
-    Q_OBJECT
+class QJsonObject;
 
-    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
-    Q_PROPERTY(QString description READ description WRITE setDescription NOTIFY descriptionChanged)
-    Q_PROPERTY(QString icalUrl READ icalUrl WRITE setIcalUrl NOTIFY icalUrlChanged)
-    Q_PROPERTY(QStringList days READ days WRITE setDays NOTIFY daysChanged)
-    Q_PROPERTY(QString venueImageUrl READ venueImageUrl WRITE setVenueImageUrl NOTIFY venueImageUrlChanged)
-    Q_PROPERTY(QString venueLatitude READ venueLatitude WRITE setVenueLatitude NOTIFY venueLatitudeChanged)
-    Q_PROPERTY(QString venueLongitude READ venueLongitude WRITE setVenueLongitude NOTIFY venueLongitudeChanged)
-    Q_PROPERTY(QString venueOsmUrl READ venueOsmUrl WRITE setVenueOsmUrl NOTIFY venueOsmUrlChanged)
-    Q_PROPERTY(QString timeZoneId READ timeZoneId WRITE setTimeZoneId NOTIFY timeZoneIdChanged)
+class Conference
+{
+    Q_GADGET
+
+    Q_PROPERTY(QString id READ id)
+    Q_PROPERTY(QString name READ name)
+    Q_PROPERTY(QString description READ description)
+    Q_PROPERTY(QString icalUrl READ icalUrl)
+    Q_PROPERTY(QStringList days READ days)
+    Q_PROPERTY(QString venueImageUrl READ venueImageUrl)
+    Q_PROPERTY(QString venueLatitude READ venueLatitude)
+    Q_PROPERTY(QString venueLongitude READ venueLongitude)
+    Q_PROPERTY(QString venueOsmUrl READ venueOsmUrl)
+    Q_PROPERTY(QString timeZoneId READ timeZoneId)
 
 public:
-    explicit Conference(QObject *parent = nullptr);
-
     QString id() const;
     QString name() const;
     QString description() const;
@@ -38,28 +38,7 @@ public:
     QString venueOsmUrl() const;
     QString timeZoneId() const;
 
-    void setId(const QString &id);
-    void setName(const QString &name);
-    void setDescription(const QString &description);
-    void setIcalUrl(const QString &icalUrl);
-    void setDays(const QStringList &days);
-    void setVenueImageUrl(const QString &url);
-    void setVenueLatitude(const QString &latitude);
-    void setVenueLongitude(const QString &longitude);
-    void setVenueOsmUrl(const QString &url);
-    void setTimeZoneId(const QString &id);
-
-Q_SIGNALS:
-    void idChanged();
-    void nameChanged();
-    void descriptionChanged();
-    void icalUrlChanged();
-    void daysChanged();
-    void venueImageUrlChanged();
-    void venueLatitudeChanged();
-    void venueLongitudeChanged();
-    void venueOsmUrlChanged();
-    void timeZoneIdChanged();
+    [[nodiscard]] static Conference fromJson(const QJsonObject &obj);
 
 private:
     QString m_id;

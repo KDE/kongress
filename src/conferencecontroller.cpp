@@ -29,7 +29,6 @@ public:
 
 ConferenceController::ConferenceController(QObject *parent)
     : QObject{parent}
-    , m_active_conference{nullptr}
     , m_conferences_file{new QFile{}}
     , d{new Private}
 {
@@ -46,17 +45,14 @@ void ConferenceController::setNetworkAccessManager(QNetworkAccessManager *nam)
     }
 }
 
-QVector<Conference *> ConferenceController::conferences() const
+QList<Conference> ConferenceController::conferences() const
 {
     return m_conferences;
 }
 
 void ConferenceController::loadConferences()
 {
-    if (!m_conferences.isEmpty()) {
-        qDeleteAll(m_conferences.begin(), m_conferences.end());
-        m_conferences.clear();
-    }
+    m_conferences.clear();
 
     Q_EMIT downlading(true);
 
@@ -115,32 +111,18 @@ void ConferenceController::loadConferencesFromFile(QFile &jsonFile)
 
 void ConferenceController::loadConference(const QJsonObject &jsonObj)
 {
-    auto conferenceId = jsonObj["id"_L1].toString();
-
-    for (const auto cf : std::as_const(m_conferences)) {
-        if (cf->id() == conferenceId) {
+    auto conference = Conference::fromJson(jsonObj);
+    for (const auto &cf : std::as_const(m_conferences)) {
+        if (cf.id() == conference.id()) {
             qDebug() << "Conference already loaded";
             return;
         }
     }
 
-    auto conference = new Conference{this};
-    conference->setId(conferenceId);
-    conference->setName(jsonObj["name"_L1].toString());
-    conference->setDescription(jsonObj["description"_L1].toString());
-    conference->setIcalUrl(jsonObj["icalUrl"_L1].toString());
-    auto jsonDays = jsonObj["days"_L1].toVariant();
-    conference->setDays(jsonDays.toStringList());
-    conference->setVenueImageUrl(jsonObj["venueImageUrl"_L1].toString());
-    conference->setVenueLatitude(jsonObj["venueLatitude"_L1].toString());
-    conference->setVenueLongitude(jsonObj["venueLongitude"_L1].toString());
-    conference->setVenueOsmUrl(jsonObj["venueOsmUrl"_L1].toString());
-    conference->setTimeZoneId(jsonObj["timeZoneId"_L1].toString());
-
     m_conferences << conference;
 }
 
-Conference *ConferenceController::activeConference() const
+Conference ConferenceController::activeConference() const
 {
     return m_active_conference;
 }
@@ -151,8 +133,8 @@ void ConferenceController::activateConference(const QString &conferenceId)
         return;
     }
 
-    for (const auto cf : std::as_const(m_conferences)) {
-        if (cf->id() == conferenceId) {
+    for (const auto &cf : std::as_const(m_conferences)) {
+        if (cf.id() == conferenceId) {
             m_active_conference = cf;
             qDebug() << "activateConference: conference " << conferenceId << " activated";
 
@@ -188,7 +170,7 @@ void ConferenceController::setDefaultConferenceId(const QString &confId)
 
 void ConferenceController::clearActiveConference()
 {
-    m_active_conference = nullptr;
+    m_active_conference = {};
     setDefaultConferenceId(QString{});
     Q_EMIT activeConferenceChanged();
 }

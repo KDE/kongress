@@ -59,7 +59,7 @@ private:
     QString pastOrUpcoming(const int index) const;
 
     ConferenceController *m_controller;
-    QVector<Conference *> m_conferences;
+    QList<Conference> m_conferences;
     bool m_busy_downloading;
 };
 #endif
