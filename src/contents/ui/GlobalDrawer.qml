@@ -5,11 +5,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.1
-import QtQml.Models 2.14
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.6 as Kirigami
-import org.kde.kongress 0.1 as Kongress
+import QtQuick
+import QtQml.Models
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kongress as Kongress
 
 Kirigami.GlobalDrawer {
     id: drawer
@@ -203,7 +204,7 @@ Kirigami.GlobalDrawer {
     Component {
         id: aboutInfoPage
 
-        Kirigami.AboutPage {
+        FormCard.AboutPage {
             aboutData: _about
         }
     }

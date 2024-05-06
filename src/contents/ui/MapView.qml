@@ -4,11 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick.Controls 2.4 as Controls2
-
-
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls as Controls
 import QtPositioning
 import QtLocation as QtLocation
 import org.kde.kirigami as Kirigami

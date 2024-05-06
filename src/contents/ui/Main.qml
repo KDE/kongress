@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.1
-import QtQml 2.1
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.0 as Kirigami
-import org.kde.kongress 0.1 as Kongress
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.kongress as Kongress
 
 Kirigami.ApplicationWindow {
     id: root

@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import QtQuick 2.7
-import QtQuick.Controls 2.4 as Controls2
-import QtQuick.Layouts 1.11
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kongress 0.1 as Kongress
+import QtQuick
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.kongress as Kongress
 
 Kirigami.ScrollablePage {
     id: root
@@ -37,7 +37,7 @@ Kirigami.ScrollablePage {
         }
     }
 
-    Controls2.BusyIndicator {
+    Controls.BusyIndicator {
         anchors.centerIn: parent
 
         running: roCalendar.busyDownlading
@@ -62,7 +62,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        delegate: Controls2.ItemDelegate {
+        delegate: Controls.ItemDelegate {
             id: itemDelegate
 
             width: ListView.view.width
@@ -81,13 +81,13 @@ Kirigami.ScrollablePage {
                 spacing: Kirigami.Units.largeSpacing * 2
                 width: parent.width
 
-                Controls2.Label {
+                Controls.Label {
                     width: Kirigami.Units.gridUnit * 20
                     text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 2
                 }
 
-                Controls2.Label {
+                Controls.Label {
                     visible: model.summary !== ""
                     elide: Text.ElideRight
                     text: model.summary
