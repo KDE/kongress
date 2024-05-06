@@ -27,8 +27,6 @@ public:
     explicit CalendarController(QObject *parent = nullptr);
     void setNetworkAccessManager(QNetworkAccessManager *nam);
 
-    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
-
     QString calendars() const;
     QString calendarFile(const QString &calendarId);
 

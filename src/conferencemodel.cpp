@@ -19,17 +19,7 @@ ConferenceModel::ConferenceModel(QObject *parent)
 
 QHash<int, QByteArray> ConferenceModel::roleNames() const
 {
-    return {{ConferenceId, "id"},
-            {ConferenceName, "name"},
-            {ConferenceDescription, "description"},
-            {ConferenceIcalUrl, "icalUrl"},
-            {ConferenceDays, "days"},
-            {ConferenceVenueImageUrl, "venueImageUrl"},
-            {ConferenceVenueLatitude, "venueLatitude"},
-            {ConferenceVenueLongitude, "venueLongitude"},
-            {ConferenceVenueOsmUrl, "venueOsmUrl"},
-            {ConferenceTimeZone, "timeZoneId"},
-            {PastUpcoming, "pastUpcoming"}};
+    return {{ConferenceId, "id"}, {ConferenceName, "name"}, {ConferenceDescription, "description"}, {PastUpcoming, "pastUpcoming"}};
 }
 
 int ConferenceModel::rowCount(const QModelIndex &parent) const
@@ -50,20 +40,6 @@ QVariant ConferenceModel::data(const QModelIndex &index, int role) const
         return m_conferences.at(row).name();
     case ConferenceDescription:
         return m_conferences.at(row).description();
-    case ConferenceIcalUrl:
-        return m_conferences.at(row).icalUrl();
-    case ConferenceDays:
-        return m_conferences.at(row).days();
-    case ConferenceVenueImageUrl:
-        return m_conferences.at(row).venueImageUrl();
-    case ConferenceVenueLatitude:
-        return m_conferences.at(row).venueLatitude();
-    case ConferenceVenueLongitude:
-        return m_conferences.at(row).venueLongitude();
-    case ConferenceVenueOsmUrl:
-        return m_conferences.at(row).venueOsmUrl();
-    case ConferenceTimeZone:
-        return m_conferences.at(row).timeZoneId();
     case PastUpcoming:
         return pastOrUpcoming(row);
     default:

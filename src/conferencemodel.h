@@ -22,19 +22,7 @@ class ConferenceModel : public QAbstractListModel
     Q_PROPERTY(bool busyDownlading READ busyDownlading NOTIFY busyDownladingChanged)
 
 public:
-    enum Roles {
-        ConferenceId = Qt::UserRole + 1,
-        ConferenceName,
-        ConferenceDescription,
-        ConferenceIcalUrl,
-        ConferenceDays,
-        ConferenceVenueImageUrl,
-        ConferenceVenueLongitude,
-        ConferenceVenueLatitude,
-        ConferenceVenueOsmUrl,
-        ConferenceTimeZone,
-        PastUpcoming
-    };
+    enum Roles { ConferenceId = Qt::UserRole + 1, ConferenceName, ConferenceDescription, PastUpcoming };
 
     explicit ConferenceModel(QObject *parent = nullptr);
 

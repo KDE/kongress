@@ -26,8 +26,6 @@ public:
 
     explicit EventController(QObject *parent = nullptr);
 
-    static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
-
     CalendarController *calendarController();
     void setCalendarController(CalendarController *const controller);
 

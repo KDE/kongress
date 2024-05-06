@@ -58,22 +58,12 @@ QHash<int, QByteArray> EventModel::roleNames() const
             {ShiftedEventDt, "shiftedEventDt"},
             {ShiftedEventDtLocal, "shiftedEventDtLocal"},
             {ScheduleStartDt, "scheduleStartDt"},
-            {AllDay, "allday"},
             {Description, "description"},
             {Summary, "summary"},
-            {LastModified, "lastmodified"},
             {Location, "location"},
             {Categories, "categories"},
-            {Priority, "priority"},
-            {Created, "created"},
-            {Secrecy, "secrecy"},
             {EventEndDt, "eventEndDt"},
             {ScheduleEndDt, "scheduleEndDt"},
-            {Transparency, "transparency"},
-            {RepeatPeriodType, "repeatType"},
-            {RepeatEvery, "repeatEvery"},
-            {RepeatStopAfter, "repeatStopAfter"},
-            {IsRepeating, "isRepeating"},
             {EventCategories, "eventCategories"},
             {Url, "url"},
             {ShiftedStartEndDt, "shiftedStartEndDt"},
@@ -126,40 +116,20 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         applyTimeZone(startDtTime, calendarTz);
         return startDtTime;
     }
-    case AllDay:
-        return allDay;
     case Description:
         return m_events.at(row)->description();
     case Summary:
         return m_events.at(row)->summary();
-    case LastModified:
-        return m_events.at(row)->lastModified();
     case Location:
         return m_events.at(row)->location();
     case Categories:
         return m_events.at(row)->categories();
-    case Priority:
-        return m_events.at(row)->priority();
-    case Created:
-        return m_events.at(row)->created();
-    case Secrecy:
-        return m_events.at(row)->secrecy();
     case EventEndDt:
         return endDtTime;
     case ScheduleEndDt: {
         applyTimeZone(endDtTime, calendarTz);
         return endDtTime;
     }
-    case Transparency:
-        return m_events.at(row)->transparency();
-    case RepeatPeriodType:
-        return repeatPeriodType(row);
-    case RepeatEvery:
-        return repeatEvery(row);
-    case RepeatStopAfter:
-        return repeatStopAfter(row);
-    case IsRepeating:
-        return m_events.at(row)->recurs();
     case EventCategories:
         return m_events.at(row)->categoriesStr();
     case Url:
@@ -251,33 +221,6 @@ void EventModel::loadEvents()
     }
 
     endResetModel();
-}
-
-int EventModel::repeatEvery(const int idx) const
-{
-    if (!(m_events.at(idx)->recurs())) {
-        return 0;
-    }
-
-    return m_events.at(idx)->recurrence()->frequency();
-}
-
-int EventModel::repeatStopAfter(const int idx) const
-{
-    if (!(m_events.at(idx)->recurs())) {
-        return -1;
-    }
-
-    return m_events.at(idx)->recurrence()->duration();
-}
-
-ushort EventModel::repeatPeriodType(const int idx) const
-{
-    if (!(m_events.at(idx)->recurs())) {
-        return KCalendarCore::Recurrence::rNone;
-    }
-
-    return m_events.at(idx)->recurrence()->recurrenceType();
 }
 
 void EventModel::setEventCategory(const QString &category)

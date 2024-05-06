@@ -33,21 +33,12 @@ public:
         EventDt,
         ShiftedEventDt,
         ShiftedEventDtLocal,
-        AllDay,
         Description,
         Summary,
         Location,
         Categories,
-        Priority,
-        Created,
-        Secrecy,
         ScheduleEndDt,
         EventEndDt,
-        Transparency,
-        IsRepeating,
-        RepeatPeriodType,
-        RepeatEvery,
-        RepeatStopAfter,
         EventCategories,
         Url,
         ShiftedStartEndDt,
@@ -82,24 +73,6 @@ Q_SIGNALS:
     void eventCategoryChanged();
 
 private:
-    /**
-     * @return The INTERVAL of RFC 5545. It contains a positive integer representing at
-      which intervals the recurrence rule repeats.
-     */
-    int repeatEvery(const int idx) const;
-
-    /**
-     * @return The COUNT of RFC 5545. It defines the number of occurrences at which to
-      range-bound the recurrence.  The "DTSTART" property value always
-      counts as the first occurrence.
-     */
-    int repeatStopAfter(const int idx) const;
-
-    /**
-     * @return The FREQ rule part which identifies the type of recurrence rule
-     */
-    ushort repeatPeriodType(const int idx) const;
-
     /**
      * @return The number of events that overlap with a specific event
      */
