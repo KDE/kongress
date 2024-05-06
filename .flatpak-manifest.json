@@ -1,7 +1,7 @@
 {
     "id": "org.kde.kongress",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.6",
+    "runtime-version": "6.7",
     "sdk": "org.kde.Sdk",
     "command": "kongress",
     "tags": ["nightly"],
@@ -18,6 +18,15 @@
     ],
     "separate-locales": false,
     "modules": [
+    	{
+	    "name": "kirigami-addons",
+	    "buildsystem": "cmake-ninja",
+	    "config-opts": [
+		"-DBUILD_TESTING=OFF",
+		"-DCMAKE_BUILD_TYPE=Release"
+	    ],
+	    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ]
+	},
         {
             "name": "kongress",
             "buildsystem": "cmake-ninja",
