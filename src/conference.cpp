@@ -40,12 +40,12 @@ QString Conference::venueImageUrl() const
     return m_venue_image_url;
 }
 
-QString Conference::venueLatitude() const
+double Conference::venueLatitude() const
 {
     return m_venue_latitude;
 }
 
-QString Conference::venueLongitude() const
+double Conference::venueLongitude() const
 {
     return m_venue_longitude;
 }
@@ -60,6 +60,24 @@ QString Conference::timeZoneId() const
     return m_tz_id;
 }
 
+bool Conference::hasVenueCoordinate() const
+{
+    return m_venue_longitude >= -180.0 && m_venue_longitude <= 180.0 && m_venue_latitude >= -90.0 && m_venue_latitude <= 90.0;
+}
+
+[[nodiscard]] static double readDoubleValue(const QJsonValue &v)
+{
+    if (v.isDouble()) {
+        return v.toDouble();
+    }
+    if (v.isString()) {
+        bool ok = false;
+        const auto n = v.toString().toDouble(&ok);
+        return ok ? n : NAN;
+    }
+    return NAN;
+}
+
 Conference Conference::fromJson(const QJsonObject &obj)
 {
     Conference c;
@@ -70,8 +88,8 @@ Conference Conference::fromJson(const QJsonObject &obj)
     auto jsonDays = obj["days"_L1].toVariant();
     c.m_days = jsonDays.toStringList();
     c.m_venue_image_url = obj["venueImageUrl"_L1].toString();
-    c.m_venue_latitude = obj["venueLatitude"_L1].toString();
-    c.m_venue_longitude = obj["venueLongitude"_L1].toString();
+    c.m_venue_latitude = readDoubleValue(obj["venueLatitude"_L1]);
+    c.m_venue_longitude = readDoubleValue(obj["venueLongitude"_L1]);
     c.m_venue_osm_url = obj["venueOsmUrl"_L1].toString();
     c.m_tz_id = obj["timeZoneId"_L1].toString();
     return c;

@@ -67,6 +67,8 @@ if (ANDROID)
         emblem-error
         arrow-down
         arrow-up
+        map-globe
+        map-symbolic
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)

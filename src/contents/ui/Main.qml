@@ -97,14 +97,7 @@ Kirigami.ApplicationWindow {
         id: mapView
 
         MapView {
-            imageUrl: root.activeConference.venueImageUrl
-            latitude: root.activeConference.venueLatitude
-            longitude: root.activeConference.venueLongitude
-            geoUrl: {
-                if (root.activeConference.venueOsmUrl !== "")
-                    return root.activeConference.venueOsmUrl
-                return "geo:" + root.activeConference.venueLatitude + "," + root.activeConference.venueLongitude + "?z=19";
-            }
+            conference: root.activeConference
         }
     }
 }

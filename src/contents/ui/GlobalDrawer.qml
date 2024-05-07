@@ -81,11 +81,15 @@ Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Map")
             icon.name: "find-location"
-            visible: activeConference && (activeConference.venueOsmUrl !== "" || (activeConference.venueLatitude !== "" && activeConference.venueLongitude !== ""))
+            visible: activeConference && (activeConference.venueOsmUrl !== "" || activeConference.hasVenueCoordinate)
 
             onTriggered: {
-                popAll();
-                pageStack.push(mapView);
+                if (drawer.activeConference.hasVenueCoordinate) {
+                    popAll();
+                    pageStack.push(mapView);
+                } else {
+                    Qt.openUrlExternally(drawer.activeConference.venueOsmUrl);
+                }
             }
         },
 

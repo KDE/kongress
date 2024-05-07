@@ -21,10 +21,12 @@ class Conference
     Q_PROPERTY(QString icalUrl READ icalUrl)
     Q_PROPERTY(QStringList days READ days)
     Q_PROPERTY(QString venueImageUrl READ venueImageUrl)
-    Q_PROPERTY(QString venueLatitude READ venueLatitude)
-    Q_PROPERTY(QString venueLongitude READ venueLongitude)
+    Q_PROPERTY(double venueLatitude READ venueLatitude)
+    Q_PROPERTY(double venueLongitude READ venueLongitude)
     Q_PROPERTY(QString venueOsmUrl READ venueOsmUrl)
     Q_PROPERTY(QString timeZoneId READ timeZoneId)
+
+    Q_PROPERTY(bool hasVenueCoordinate READ hasVenueCoordinate)
 
 public:
     QString id() const;
@@ -33,10 +35,12 @@ public:
     QString icalUrl() const;
     QStringList days() const;
     QString venueImageUrl() const;
-    QString venueLatitude() const;
-    QString venueLongitude() const;
+    [[nodiscard]] double venueLatitude() const;
+    [[nodiscard]] double venueLongitude() const;
     QString venueOsmUrl() const;
     QString timeZoneId() const;
+
+    [[nodiscard]] bool hasVenueCoordinate() const;
 
     [[nodiscard]] static Conference fromJson(const QJsonObject &obj);
 
@@ -47,8 +51,8 @@ private:
     QString m_ical_url;
     QStringList m_days;
     QString m_venue_image_url;
-    QString m_venue_latitude;
-    QString m_venue_longitude;
+    double m_venue_latitude = NAN;
+    double m_venue_longitude = NAN;
     QString m_venue_osm_url;
     QString m_tz_id;
 };
