@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-07 00:41+0000\n"
 "PO-Revision-Date: 2021-04-27 13:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Kan agendabestand niet opslaan. Exporteren is mislukt."
 msgid "Export completed successfully"
 msgstr "Exporteren met succes beëindigd"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:88
 #, kde-format
 msgid "Past"
 msgstr "Voorbij"
 
-#: conferencemodel.cpp:90
+#: conferencemodel.cpp:89
 #, kde-format
 msgid "Upcoming"
 msgstr "Aankomend"

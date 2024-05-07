@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-07 00:41+0000\n"
 "PO-Revision-Date: 2024-04-05 16:46+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "Nevar saglabāt kalendāra datni. Eksports neizdevās."
 msgid "Export completed successfully"
 msgstr "Eksports veiksmīgs"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:88
 #, kde-format
 msgid "Past"
 msgstr "Bijušās"
 
-#: conferencemodel.cpp:90
+#: conferencemodel.cpp:89
 #, kde-format
 msgid "Upcoming"
 msgstr "Nākotnes"

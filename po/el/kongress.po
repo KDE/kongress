@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-07 00:41+0000\n"
 "PO-Revision-Date: 2021-06-20 10:08+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Αδυναμία αποθήκευσης του αρχείου ημερο
 msgid "Export completed successfully"
 msgstr "Η εξαγωγή ολοκληρώθηκε με επιτυχία"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:88
 #, kde-format
 msgid "Past"
 msgstr "Παρελθοντικές"
 
-#: conferencemodel.cpp:90
+#: conferencemodel.cpp:89
 #, kde-format
 msgid "Upcoming"
 msgstr "Επερχόμενες"
