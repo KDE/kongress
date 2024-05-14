@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2024-01-02 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -41,12 +41,12 @@ msgstr "無法儲存行事曆檔案。匯出失敗。"
 msgid "Export completed successfully"
 msgstr "匯出已成功完成"
 
-#: conferencemodel.cpp:88
+#: conferencemodel.cpp:64
 #, kde-format
 msgid "Past"
 msgstr "過去"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:65
 #, kde-format
 msgid "Upcoming"
 msgstr "即將到來"
@@ -137,55 +137,53 @@ msgstr "時間表"
 msgid "Categories"
 msgstr "分類"
 
-#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#: contents/ui/GlobalDrawer.qml:82
 #, kde-format
 msgid "Map"
 msgstr "地圖"
 
-#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/GlobalDrawer.qml:104
+#: contents/ui/GlobalDrawer.qml:108
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "變更會議"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Select conference"
 msgstr "選擇會議"
 
-#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "設定"
 
-#: contents/ui/GlobalDrawer.qml:131
+#: contents/ui/GlobalDrawer.qml:135
 #, kde-format
 msgid "About"
 msgstr "關於"
 
-#: contents/ui/MapView.qml:35
-#, kde-format
-msgid "Latitude: %1"
-msgstr "緯度：%1"
+#: contents/ui/MapView.qml:20
+#, fuzzy, kde-format
+#| msgid "Map"
+msgctxt "@title"
+msgid "Map"
+msgstr "地圖"
 
-#: contents/ui/MapView.qml:41
-#, kde-format
-msgid "Longitude: %1"
-msgstr "經度：%1"
-
-#: contents/ui/MapView.qml:47
-#, kde-format
-msgid "OpenStreetMap"
+#: contents/ui/MapView.qml:32
+#, fuzzy, kde-format
+#| msgid "OpenStreetMap"
+msgid "Open Map"
 msgstr "OpenStreetMap 開放街圖"
 
 #: contents/ui/ScheduleView.qml:28
@@ -283,6 +281,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "維護者和開發者"
+
+#~ msgid "Latitude: %1"
+#~ msgstr "緯度：%1"
+
+#~ msgid "Longitude: %1"
+#~ msgstr "經度：%1"
 
 #, fuzzy
 #~| msgid "Check for updates"

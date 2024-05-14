@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2022-11-27 22:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "კალენდრის ფაილის შენახვის 
 msgid "Export completed successfully"
 msgstr "გატანა წარმატებით დასრულდა"
 
-#: conferencemodel.cpp:88
+#: conferencemodel.cpp:64
 #, kde-format
 msgid "Past"
 msgstr "წარსული"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:65
 #, kde-format
 msgid "Upcoming"
 msgstr "მოახლოებული"
@@ -135,55 +135,53 @@ msgstr "განრიგი"
 msgid "Categories"
 msgstr "კატეგორიები"
 
-#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#: contents/ui/GlobalDrawer.qml:82
 #, kde-format
 msgid "Map"
 msgstr "რუკა"
 
-#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
 msgstr "სანიშნები"
 
-#: contents/ui/GlobalDrawer.qml:104
+#: contents/ui/GlobalDrawer.qml:108
 #, kde-format
 msgid "Configure"
 msgstr "მორგება"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "კონფერენციის თემა"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Select conference"
 msgstr "აირჩიეთ კონფერენცია"
 
-#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "მორგება"
 
-#: contents/ui/GlobalDrawer.qml:131
+#: contents/ui/GlobalDrawer.qml:135
 #, kde-format
 msgid "About"
 msgstr "შესახებ"
 
-#: contents/ui/MapView.qml:35
-#, kde-format
-msgid "Latitude: %1"
-msgstr "განედი: %1"
+#: contents/ui/MapView.qml:20
+#, fuzzy, kde-format
+#| msgid "Map"
+msgctxt "@title"
+msgid "Map"
+msgstr "რუკა"
 
-#: contents/ui/MapView.qml:41
-#, kde-format
-msgid "Longitude: %1"
-msgstr "გრძედი: %1"
-
-#: contents/ui/MapView.qml:47
-#, kde-format
-msgid "OpenStreetMap"
+#: contents/ui/MapView.qml:32
+#, fuzzy, kde-format
+#| msgid "OpenStreetMap"
+msgid "Open Map"
 msgstr "OpenStreetMap"
 
 #: contents/ui/ScheduleView.qml:28
@@ -281,6 +279,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "პროგრამისტი და წამყვანი"
+
+#~ msgid "Latitude: %1"
+#~ msgstr "განედი: %1"
+
+#~ msgid "Longitude: %1"
+#~ msgstr "გრძედი: %1"
 
 #~ msgid "Back"
 #~ msgstr "უკან"

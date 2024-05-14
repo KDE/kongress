@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:41+0000\n"
+"POT-Creation-Date: 2024-05-14 00:41+0000\n"
 "PO-Revision-Date: 2021-01-07 10:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "Não é possível gravar o ficheiro do calendário. A exportação falho
 msgid "Export completed successfully"
 msgstr "A exportação terminou com sucesso"
 
-#: conferencemodel.cpp:88
+#: conferencemodel.cpp:64
 #, kde-format
 msgid "Past"
 msgstr "Anterior"
 
-#: conferencemodel.cpp:89
+#: conferencemodel.cpp:65
 #, kde-format
 msgid "Upcoming"
 msgstr "Seguinte"
@@ -132,55 +132,53 @@ msgstr "Escalonar"
 msgid "Categories"
 msgstr "Categorias"
 
-#: contents/ui/GlobalDrawer.qml:82 contents/ui/MapView.qml:20
+#: contents/ui/GlobalDrawer.qml:82
 #, kde-format
 msgid "Map"
 msgstr "Mapa"
 
-#: contents/ui/GlobalDrawer.qml:93 contents/ui/GlobalDrawer.qml:99
+#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
 #: contents/ui/Main.qml:75
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/GlobalDrawer.qml:104
+#: contents/ui/GlobalDrawer.qml:108
 #, kde-format
 msgid "Configure"
 msgstr "Configurar"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "Mudar de conferência"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Select conference"
 msgstr "Seleccionar a conferência"
 
-#: contents/ui/GlobalDrawer.qml:118 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Configuração"
 
-#: contents/ui/GlobalDrawer.qml:131
+#: contents/ui/GlobalDrawer.qml:135
 #, kde-format
 msgid "About"
 msgstr "Acerca"
 
-#: contents/ui/MapView.qml:35
-#, kde-format
-msgid "Latitude: %1"
-msgstr "Latitude: %1"
+#: contents/ui/MapView.qml:20
+#, fuzzy, kde-format
+#| msgid "Map"
+msgctxt "@title"
+msgid "Map"
+msgstr "Mapa"
 
-#: contents/ui/MapView.qml:41
-#, kde-format
-msgid "Longitude: %1"
-msgstr "Longitude: %1"
-
-#: contents/ui/MapView.qml:47
-#, kde-format
-msgid "OpenStreetMap"
+#: contents/ui/MapView.qml:32
+#, fuzzy, kde-format
+#| msgid "OpenStreetMap"
+msgid "Open Map"
 msgstr "OpenStreetMap"
 
 #: contents/ui/ScheduleView.qml:28
@@ -278,6 +276,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Manutenção e Desenvolvimento"
+
+#~ msgid "Latitude: %1"
+#~ msgstr "Latitude: %1"
+
+#~ msgid "Longitude: %1"
+#~ msgstr "Longitude: %1"
 
 #~ msgid "Back"
 #~ msgstr "Recuar"
