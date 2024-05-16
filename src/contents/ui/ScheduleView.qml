@@ -8,6 +8,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kongress as Kongress
 
 Kirigami.ScrollablePage {
@@ -62,37 +63,30 @@ Kirigami.ScrollablePage {
             }
         }
 
-        delegate: Controls.ItemDelegate {
+        delegate: Delegates.RoundedItemDelegate {
             id: itemDelegate
 
             width: ListView.view.width
 
-            action: Kirigami.Action {
-                text: i18n("Details")
-                icon.name: "documentinfo"
-
-                onTriggered: {
-                    pageStack.pop(root);
-                    pageStack.push(eventInfo, {event: model});
-                }
+            onClicked: {
+                pageStack.pop(root);
+                pageStack.push(eventInfo, {event: model});
             }
 
             contentItem: RowLayout {
                 spacing: Kirigami.Units.largeSpacing * 2
-                width: parent.width
 
                 Controls.Label {
-                    width: Kirigami.Units.gridUnit * 20
                     text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
-                    Layout.minimumHeight: Kirigami.Units.gridUnit * 2
+                    Layout.alignment: Qt.AlignTop
                 }
 
                 Controls.Label {
                     visible: model.summary !== ""
-                    elide: Text.ElideRight
                     text: model.summary
+                    wrapMode: Text.WordWrap
                     Layout.fillWidth: true
-                    Layout.minimumHeight: Kirigami.Units.gridUnit * 2
+                    Layout.alignment: Qt.AlignTop
                 }
             }
         }
