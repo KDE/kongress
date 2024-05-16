@@ -8,34 +8,96 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kongress as Kongress
 
-Kirigami.ScrollablePage {
+FormCard.FormCardPage {
     id: root
 
     property var event
     property string viewMode
     property var rwCalendar
 
-    title: root.event ? event.summary : ""
+    title: root.event && !Kirigami.Settings.isMobile ? event.summary : i18nc("@title", "Event Details")
 
-    actions: [
-        Kirigami.Action {
+    FormCard.FormHeader {
+        visible: root.event
+        title: root.event ? event.summary : ""
+    }
+
+    FormCard.FormCard {
+        visible: root.event
+
+        FormCard.FormTextDelegate {
+            icon.name: "view-calendar-day"
+            text: if (viewMode === "favorites") {
+                if (Kongress.SettingsController.displayInLocalTimezone) {
+                    return event.startEndDtLocal;
+                } else {
+                    return event.startEndDt;
+                }
+            } else if (Kongress.SettingsController.displayInLocalTimezone) {
+                return event.shiftedStartEndDtLocal;
+            } else {
+                return event.shiftedStartEndDt;
+            }
+        }
+
+        FormCard.FormDelegateSeparator {
+            visible: root.event && event.location.length > 0
+        }
+
+        FormCard.FormTextDelegate {
+            visible: root.event && event.location.length > 0
+            icon.name: "find-location"
+
+            text: root.event ? event.location : ""
+        }
+
+        FormCard.FormDelegateSeparator {
+            visible: root.event && event.eventCategories.length > 0
+        }
+
+        FormCard.FormTextDelegate {
+            visible: root.event && event.eventCategories.length > 0
+            icon.name: "category"
+
+            text: root.event ? event.eventCategories : ""
+        }
+
+        FormCard.FormDelegateSeparator {
+            visible: root.event && event.description.length > 0
+        }
+
+        FormCard.FormTextDelegate {
+            visible: root.event && event.description.length > 0
+            text: root.event ? event.description : ""
+            textItem.wrapMode: Text.WordWrap
+        }
+    }
+
+    FormCard.FormCard {
+        Layout.topMargin: Kirigami.Units.gridUnit
+
+        FormCard.FormButtonDelegate {
             text: i18n("Web Page")
             icon.name: "internet-services"
             enabled: root.event.url !== ""
 
-            onTriggered: {
+            onClicked: {
                 if(root.event && (root.event.url)) {
                     Qt.openUrlExternally(event.url);
                 }
             }
-        },
-        Kirigami.Action {
+        }
+
+        FormCard.FormDelegateSeparator {}
+
+        FormCard.FormButtonDelegate {
             text: viewMode === "favorites" ? i18n("Delete") : i18n("Favorite")
             icon.name: viewMode === "favorites" ? "delete" : "favorite"
 
-            onTriggered: {
+            onClicked: {
                 if(root.event && root.viewMode === "favorites") {
                     var vevent = { uid: root.event.uid } ;
                     Kongress.EventController.remove(root.rwCalendar, vevent);
@@ -48,101 +110,6 @@ Kirigami.ScrollablePage {
                     showPassiveNotification(addEditResult["message"]);
 
                 }
-            }
-        }
-    ]
-
-    Kirigami.AbstractCard {
-        id: cardDelegate
-
-        visible: root.event
-        header: Kirigami.Heading {
-            text: root.event ? event.summary : ""
-            wrapMode: Text.WordWrap
-        }
-
-        contentItem: Column {
-            spacing: Kirigami.Units.largeSpacing
-            topPadding: 0
-            bottomPadding: 0
-            visible: root.event
-
-            RowLayout {
-                width: cardDelegate.availableWidth
-                spacing: Kirigami.Units.smallSpacing
-
-                Kirigami.Icon {
-                    source: "view-calendar-day"
-                    width: Kirigami.Units.iconSizes.small
-                    height: width
-                }
-
-                Controls.Label {
-
-                    wrapMode: Text.WordWrap
-                    text: {
-                        if (viewMode === "favorites") {
-                            if (Kongress.SettingsController.displayInLocalTimezone) {
-                                return event.startEndDtLocal;
-                            }
-                            else {
-                                return event.startEndDt;
-                            }
-                        }
-                        else {
-                            if (Kongress.SettingsController.displayInLocalTimezone) {
-                                return event.shiftedStartEndDtLocal;
-                            }
-                            else {
-                                return event.shiftedStartEndDt;
-                            }
-                        }
-                    }
-                    Layout.fillWidth: true
-                }
-            }
-
-            RowLayout {
-                visible: root.event && (event.location !== "")
-                width: cardDelegate.availableWidth
-                spacing: Kirigami.Units.smallSpacing
-
-                Kirigami.Icon {
-                    source: "find-location"
-                    width: Kirigami.Units.iconSizes.small
-                    height: width
-                }
-
-                Controls.Label {
-                    wrapMode: Text.WordWrap
-                    text:  root.event ? event.location : ""
-                    Layout.fillWidth: true
-                }
-            }
-
-            RowLayout {
-                visible: root.event && (event.eventCategories !== "")
-                width: cardDelegate.availableWidth
-                spacing: Kirigami.Units.smallSpacing
-
-                Kirigami.Icon {
-                    source: "category"
-                    width: Kirigami.Units.iconSizes.small
-                    height: width
-                }
-
-                Controls.Label {
-                    wrapMode: Text.WordWrap
-                    text: root.event ? event.eventCategories : ""
-                    Layout.fillWidth: true
-                }
-            }
-
-            Controls.Label {
-                visible: root.event && event.description !== ""
-                width: cardDelegate.availableWidth
-                wrapMode: Text.WordWrap
-                text: root.event ? event.description : ""
             }
         }
     }
