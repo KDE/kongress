@@ -282,9 +282,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Vedlikehaldar og utviklar"
-
-#~ msgid "Latitude: %1"
-#~ msgstr "Breiddegrad: %1"
-
-#~ msgid "Longitude: %1"
-#~ msgstr "Lengdegrad: %1"

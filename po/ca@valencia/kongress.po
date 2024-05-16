@@ -1,16 +1,16 @@
 # Translation of kongress.po to Catalan (Valencian)
-# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# Copyright (C) 2020-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2021-04-27 13:06+0200\n"
+"PO-Revision-Date: 2024-05-14 16:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -174,17 +174,15 @@ msgid "About"
 msgstr "Quant a"
 
 #: contents/ui/MapView.qml:20
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Mapa"
 
 #: contents/ui/MapView.qml:32
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Obri un mapa"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
@@ -281,12 +279,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantenidor i desenvolupador"
-
-#~ msgid "Latitude: %1"
-#~ msgstr "Latitud: %1"
-
-#~ msgid "Longitude: %1"
-#~ msgstr "Longitud: %1"
-
-#~ msgid "Back"
-#~ msgstr "Arrere"

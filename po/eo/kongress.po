@@ -1,15 +1,15 @@
 # translation of kongress.pot to esperanto
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kongress package.
-# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:41+0000\n"
-"PO-Revision-Date: 2023-11-04 19:37+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #: calendarcontroller.cpp:304
 #, kde-format
@@ -172,17 +172,15 @@ msgid "About"
 msgstr "Pri"
 
 #: contents/ui/MapView.qml:20
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Mapo"
 
 #: contents/ui/MapView.qml:32
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Open Map"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
@@ -279,9 +277,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Prizorganto kaj Programisto"
-
-#~ msgid "Latitude: %1"
-#~ msgstr "Latitudo: %1"
-
-#~ msgid "Longitude: %1"
-#~ msgstr "Longitudo: %1"

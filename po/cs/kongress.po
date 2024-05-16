@@ -172,17 +172,15 @@ msgid "About"
 msgstr "O aplikaci"
 
 #: contents/ui/MapView.qml:20
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
-msgstr "Mapa"
+msgstr ""
 
 #: contents/ui/MapView.qml:32
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Otevřít mapu"
 
 #: contents/ui/ScheduleView.qml:28
 #, kde-format
@@ -277,9 +275,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Správce a vývojář"
-
-#~ msgid "Latitude: %1"
-#~ msgstr "Zem. šířka: %1"
-
-#~ msgid "Longitude: %1"
-#~ msgstr "Zem. délka: %1"
