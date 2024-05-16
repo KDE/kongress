@@ -98,7 +98,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext{&engine});
-    engine.rootContext()->setContextProperty(QStringLiteral("_about"), QVariant::fromValue(about));
     engine.loadFromModule("org.kde.kongress", "Main");
 
     if (engine.rootObjects().isEmpty()) {

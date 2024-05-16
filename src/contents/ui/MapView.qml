@@ -10,6 +10,7 @@ import QtQuick.Controls as Controls
 import QtPositioning
 import QtLocation as QtLocation
 import org.kde.kirigami as Kirigami
+import org.kde.coreaddons as Core
 
 Kirigami.Page {
     id: root
@@ -45,7 +46,7 @@ Kirigami.Page {
             name: "osm"
             QtLocation.PluginParameter {
                 name: "osm.useragent"
-                value: "org.kde.kongress/" + _about.version
+                value: "org.kde.kongress/" + Core.AboutData.version
             }
             QtLocation.PluginParameter {
                 name: "osm.mapping.providersrepository.address"
