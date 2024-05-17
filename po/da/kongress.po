@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-17 00:41+0000\n"
 "PO-Revision-Date: 2021-01-11 20:52+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -62,17 +62,24 @@ msgstr "Ingen konference fundet"
 msgid "Reload"
 msgstr "Genindlæs"
 
-#: contents/ui/EventInfo.qml:24
+#: contents/ui/EventInfo.qml:21
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@title"
+msgid "Event Details"
+msgstr "Detaljer"
+
+#: contents/ui/EventInfo.qml:83
 #, kde-format
 msgid "Web Page"
 msgstr "Webside"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Delete"
 msgstr "Slet"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Favorite"
 msgstr "Favorit"
@@ -82,151 +89,141 @@ msgstr "Favorit"
 msgid "Export"
 msgstr ""
 
-#: contents/ui/FavoritesView.qml:57
+#: contents/ui/FavoritesView.qml:58
 #, kde-format
 msgid "Open folder"
 msgstr ""
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Ingen favoritforedrag fundet for %1"
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Ingen favoritforedrag fundet"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:168
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
 msgstr[0] "Overlapper med et andet foredrag"
 msgstr[1] "Overlapper med %1 andre foredrag"
 
-#: contents/ui/GlobalDrawer.qml:38
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Conference"
 msgstr "Konference"
 
-#: contents/ui/GlobalDrawer.qml:45
-#, kde-format
-msgid "Check for updates"
-msgstr "Tjek efter opdateringer"
-
-#: contents/ui/GlobalDrawer.qml:57
-#, kde-format
-msgid "Daily Schedule"
-msgstr "Dagsplan"
-
-#: contents/ui/GlobalDrawer.qml:63
-#, kde-format
-msgid "Full Schedule"
-msgstr "Fuld plan"
-
-#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
-#, kde-format
-msgid "Schedule"
-msgstr "Plan"
-
 #: contents/ui/GlobalDrawer.qml:76
-#, kde-format
-msgid "Categories"
-msgstr "Kategorier"
-
-#: contents/ui/GlobalDrawer.qml:82
-#, kde-format
-msgid "Map"
-msgstr "Kort"
-
-#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
-#: contents/ui/Main.qml:75
-#, kde-format
-msgid "Favorites"
-msgstr "Favoritter"
-
-#: contents/ui/GlobalDrawer.qml:108
-#, kde-format
-msgid "Configure"
-msgstr "Indstil"
-
-#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "Skift konference"
 
-#: contents/ui/GlobalDrawer.qml:113
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
 msgstr "Vælg konference"
 
-#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:95
+#, kde-format
+msgid "Check for updates"
+msgstr "Tjek efter opdateringer"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Map"
+msgstr "Kort"
+
+#: contents/ui/GlobalDrawer.qml:128 contents/ui/GlobalDrawer.qml:134
+#: contents/ui/Main.qml:74
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritter"
+
+#: contents/ui/GlobalDrawer.qml:142
+#, kde-format
+msgid "Full Schedule"
+msgstr "Fuld plan"
+
+#: contents/ui/GlobalDrawer.qml:148 contents/ui/Main.qml:63
+#, kde-format
+msgid "Schedule"
+msgstr "Plan"
+
+#: contents/ui/GlobalDrawer.qml:158
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Dagsplan"
+
+#: contents/ui/GlobalDrawer.qml:197
+#, kde-format
+msgid "Categories"
+msgstr "Kategorier"
+
+#: contents/ui/GlobalDrawer.qml:241 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Indstillinger"
 
-#: contents/ui/GlobalDrawer.qml:135
+#: contents/ui/GlobalDrawer.qml:256
 #, kde-format
 msgid "About"
 msgstr "Om"
 
-#: contents/ui/MapView.qml:20
+#: contents/ui/MapView.qml:19
 #, fuzzy, kde-format
 #| msgid "Map"
 msgctxt "@title"
 msgid "Map"
 msgstr "Kort"
 
-#: contents/ui/MapView.qml:32
+#: contents/ui/MapView.qml:31
 #, fuzzy, kde-format
 #| msgid "OpenStreetMap"
 msgid "Open Map"
 msgstr "OpenStreetMap"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Ingen foredrag fundet for %1"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found"
 msgstr "Ingen foredrag fundet"
 
-#: contents/ui/ScheduleView.qml:71
-#, kde-format
-msgid "Details"
-msgstr "Detaljer"
-
-#: contents/ui/SettingsView.qml:23
+#: contents/ui/SettingsView.qml:20
 #, kde-format
 msgid "Appearance"
 msgstr "Udseende"
 
-#: contents/ui/SettingsView.qml:28
+#: contents/ui/SettingsView.qml:26
 #, kde-format
 msgid "Use local timezone"
 msgstr "Brug lokal tidszone"
 
-#: contents/ui/SettingsView.qml:35
+#: contents/ui/SettingsView.qml:33
 #, kde-format
 msgid "Notifications"
 msgstr "Bekendtgørelser"
 
-#: contents/ui/SettingsView.qml:39
+#: contents/ui/SettingsView.qml:41
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Bekendtgørelser er ikke understøttet på din platform"
+
+#: contents/ui/SettingsView.qml:48
 #, kde-format
 msgid "Add reminder to favorite talks"
 msgstr "Føj påmindelse til favoritforedrag"
 
-#: contents/ui/SettingsView.qml:47
+#: contents/ui/SettingsView.qml:55
 #, kde-format
 msgid "Remind before talk start (minutes)"
 msgstr "Påmind før foredrag begynder (minutter)"
-
-#: contents/ui/SettingsView.qml:59
-#, kde-format
-msgid "Notifications are not supported on your platform"
-msgstr "Bekendtgørelser er ikke understøttet på din platform"
 
 #: eventcontroller.cpp:62
 #, kde-format
@@ -278,6 +275,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Vedligeholder og udvikler"
+
+#~ msgid "Configure"
+#~ msgstr "Indstil"
 
 #~ msgid "Latitude: %1"
 #~ msgstr "Breddegrad: %1"

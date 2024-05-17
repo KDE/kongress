@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-17 00:41+0000\n"
 "PO-Revision-Date: 2024-04-05 16:46+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -63,17 +63,24 @@ msgstr "Konferences nav atrastas"
 msgid "Reload"
 msgstr "Pārlādēt"
 
-#: contents/ui/EventInfo.qml:24
+#: contents/ui/EventInfo.qml:21
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@title"
+msgid "Event Details"
+msgstr "Informācija"
+
+#: contents/ui/EventInfo.qml:83
 #, kde-format
 msgid "Web Page"
 msgstr "Tīmekļa vietne"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Delete"
 msgstr "Dzēst"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Favorite"
 msgstr "Atzīmēt"
@@ -83,22 +90,22 @@ msgstr "Atzīmēt"
 msgid "Export"
 msgstr "Eksportēt"
 
-#: contents/ui/FavoritesView.qml:57
+#: contents/ui/FavoritesView.qml:58
 #, kde-format
 msgid "Open folder"
 msgstr "Atvērt mapi"
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "„%1“ nav atrastas atzīmētas runas"
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Nav atrastas atzīmētas runas"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:168
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -106,129 +113,119 @@ msgstr[0] "Pārklājas ar %1 citu runu"
 msgstr[1] "Pārklājas ar %1 citām runām"
 msgstr[2] "Pārklājas ar %1 citām runām"
 
-#: contents/ui/GlobalDrawer.qml:38
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Conference"
 msgstr "Konference"
 
-#: contents/ui/GlobalDrawer.qml:45
-#, kde-format
-msgid "Check for updates"
-msgstr "Pārbaudīt atjauninājumus"
-
-#: contents/ui/GlobalDrawer.qml:57
-#, kde-format
-msgid "Daily Schedule"
-msgstr "Dienas grafiks"
-
-#: contents/ui/GlobalDrawer.qml:63
-#, kde-format
-msgid "Full Schedule"
-msgstr "Pilns grafiks"
-
-#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
-#, kde-format
-msgid "Schedule"
-msgstr "Grafiks"
-
 #: contents/ui/GlobalDrawer.qml:76
-#, kde-format
-msgid "Categories"
-msgstr "Kategorijas"
-
-#: contents/ui/GlobalDrawer.qml:82
-#, kde-format
-msgid "Map"
-msgstr "Karte"
-
-#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
-#: contents/ui/Main.qml:75
-#, kde-format
-msgid "Favorites"
-msgstr "Atzīmētās"
-
-#: contents/ui/GlobalDrawer.qml:108
-#, kde-format
-msgid "Configure"
-msgstr "Konfigurēt"
-
-#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "Mainīt konferenci"
 
-#: contents/ui/GlobalDrawer.qml:113
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
 msgstr "Atlasīt konferenci"
 
-#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:95
+#, kde-format
+msgid "Check for updates"
+msgstr "Pārbaudīt atjauninājumus"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Map"
+msgstr "Karte"
+
+#: contents/ui/GlobalDrawer.qml:128 contents/ui/GlobalDrawer.qml:134
+#: contents/ui/Main.qml:74
+#, kde-format
+msgid "Favorites"
+msgstr "Atzīmētās"
+
+#: contents/ui/GlobalDrawer.qml:142
+#, kde-format
+msgid "Full Schedule"
+msgstr "Pilns grafiks"
+
+#: contents/ui/GlobalDrawer.qml:148 contents/ui/Main.qml:63
+#, kde-format
+msgid "Schedule"
+msgstr "Grafiks"
+
+#: contents/ui/GlobalDrawer.qml:158
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Dienas grafiks"
+
+#: contents/ui/GlobalDrawer.qml:197
+#, kde-format
+msgid "Categories"
+msgstr "Kategorijas"
+
+#: contents/ui/GlobalDrawer.qml:241 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: contents/ui/GlobalDrawer.qml:135
+#: contents/ui/GlobalDrawer.qml:256
 #, kde-format
 msgid "About"
 msgstr "Par"
 
-#: contents/ui/MapView.qml:20
+#: contents/ui/MapView.qml:19
 #, fuzzy, kde-format
 #| msgid "Map"
 msgctxt "@title"
 msgid "Map"
 msgstr "Karte"
 
-#: contents/ui/MapView.qml:32
+#: contents/ui/MapView.qml:31
 #, fuzzy, kde-format
 #| msgid "OpenStreetMap"
 msgid "Open Map"
 msgstr "OpenStreetMap"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found for %1"
 msgstr "„%1“ nav atrastas runas"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found"
 msgstr "Nav atrastas runas"
 
-#: contents/ui/ScheduleView.qml:71
-#, kde-format
-msgid "Details"
-msgstr "Informācija"
-
-#: contents/ui/SettingsView.qml:23
+#: contents/ui/SettingsView.qml:20
 #, kde-format
 msgid "Appearance"
 msgstr "Izskats"
 
-#: contents/ui/SettingsView.qml:28
+#: contents/ui/SettingsView.qml:26
 #, kde-format
 msgid "Use local timezone"
 msgstr "Lietot ierīces laika joslu"
 
-#: contents/ui/SettingsView.qml:35
+#: contents/ui/SettingsView.qml:33
 #, kde-format
 msgid "Notifications"
 msgstr "Paziņojumi"
 
-#: contents/ui/SettingsView.qml:39
+#: contents/ui/SettingsView.qml:41
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Jūsu platforma paziņojumus neatbalsta"
+
+#: contents/ui/SettingsView.qml:48
 #, kde-format
 msgid "Add reminder to favorite talks"
 msgstr "Pievienot atgādinājumus atzīmētajām runām"
 
-#: contents/ui/SettingsView.qml:47
+#: contents/ui/SettingsView.qml:55
 #, kde-format
 msgid "Remind before talk start (minutes)"
 msgstr "Atgādināt pirms runas sākuma (minūtes)"
-
-#: contents/ui/SettingsView.qml:59
-#, kde-format
-msgid "Notifications are not supported on your platform"
-msgstr "Jūsu platforma paziņojumus neatbalsta"
 
 #: eventcontroller.cpp:62
 #, kde-format
@@ -280,6 +277,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Uzturētājs un izstrādātājs"
+
+#~ msgid "Configure"
+#~ msgstr "Konfigurēt"
 
 #~ msgid "Latitude: %1"
 #~ msgstr "Platums: %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:41+0000\n"
+"POT-Creation-Date: 2024-05-17 00:41+0000\n"
 "PO-Revision-Date: 2022-02-12 19:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -62,17 +62,24 @@ msgstr "Konferensseja ei löytynyt"
 msgid "Reload"
 msgstr "Lataa uudelleen"
 
-#: contents/ui/EventInfo.qml:24
+#: contents/ui/EventInfo.qml:21
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@title"
+msgid "Event Details"
+msgstr "Tiedot"
+
+#: contents/ui/EventInfo.qml:83
 #, kde-format
 msgid "Web Page"
 msgstr "Verkkosivu"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Delete"
 msgstr "Poista"
 
-#: contents/ui/EventInfo.qml:35
+#: contents/ui/EventInfo.qml:97
 #, kde-format
 msgid "Favorite"
 msgstr "Suosikki"
@@ -82,151 +89,141 @@ msgstr "Suosikki"
 msgid "Export"
 msgstr "Vie"
 
-#: contents/ui/FavoritesView.qml:57
+#: contents/ui/FavoritesView.qml:58
 #, kde-format
 msgid "Open folder"
 msgstr "Avaa kansio"
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "%1 – suosikkiesitelmiä ei löytynyt"
 
-#: contents/ui/FavoritesView.qml:72
+#: contents/ui/FavoritesView.qml:73
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Suosikkiesitelmiä ei löytynyt"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:168
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
 msgstr[0] "Limittyy toisen esitelmän kanssa"
 msgstr[1] "Limittyy %1 muun esitelmän kanssa"
 
-#: contents/ui/GlobalDrawer.qml:38
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Conference"
 msgstr "Konferenssi"
 
-#: contents/ui/GlobalDrawer.qml:45
-#, kde-format
-msgid "Check for updates"
-msgstr "Tarkista päivitykset"
-
-#: contents/ui/GlobalDrawer.qml:57
-#, kde-format
-msgid "Daily Schedule"
-msgstr "Päivän aikataulu"
-
-#: contents/ui/GlobalDrawer.qml:63
-#, kde-format
-msgid "Full Schedule"
-msgstr "Koko aikataulu"
-
-#: contents/ui/GlobalDrawer.qml:69 contents/ui/Main.qml:64
-#, kde-format
-msgid "Schedule"
-msgstr "Aikataulu"
-
 #: contents/ui/GlobalDrawer.qml:76
-#, kde-format
-msgid "Categories"
-msgstr "Luokat"
-
-#: contents/ui/GlobalDrawer.qml:82
-#, kde-format
-msgid "Map"
-msgstr "Kartta"
-
-#: contents/ui/GlobalDrawer.qml:97 contents/ui/GlobalDrawer.qml:103
-#: contents/ui/Main.qml:75
-#, kde-format
-msgid "Favorites"
-msgstr "Suosikit"
-
-#: contents/ui/GlobalDrawer.qml:108
-#, kde-format
-msgid "Configure"
-msgstr "Asetukset"
-
-#: contents/ui/GlobalDrawer.qml:113
 #, kde-format
 msgid "Change conference"
 msgstr "Vaihda konferenssia"
 
-#: contents/ui/GlobalDrawer.qml:113
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
 msgstr "Valitse konferenssi"
 
-#: contents/ui/GlobalDrawer.qml:122 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:95
+#, kde-format
+msgid "Check for updates"
+msgstr "Tarkista päivitykset"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Map"
+msgstr "Kartta"
+
+#: contents/ui/GlobalDrawer.qml:128 contents/ui/GlobalDrawer.qml:134
+#: contents/ui/Main.qml:74
+#, kde-format
+msgid "Favorites"
+msgstr "Suosikit"
+
+#: contents/ui/GlobalDrawer.qml:142
+#, kde-format
+msgid "Full Schedule"
+msgstr "Koko aikataulu"
+
+#: contents/ui/GlobalDrawer.qml:148 contents/ui/Main.qml:63
+#, kde-format
+msgid "Schedule"
+msgstr "Aikataulu"
+
+#: contents/ui/GlobalDrawer.qml:158
+#, kde-format
+msgid "Daily Schedule"
+msgstr "Päivän aikataulu"
+
+#: contents/ui/GlobalDrawer.qml:197
+#, kde-format
+msgid "Categories"
+msgstr "Luokat"
+
+#: contents/ui/GlobalDrawer.qml:241 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Asetukset"
 
-#: contents/ui/GlobalDrawer.qml:135
+#: contents/ui/GlobalDrawer.qml:256
 #, kde-format
 msgid "About"
 msgstr "Tietoa"
 
-#: contents/ui/MapView.qml:20
+#: contents/ui/MapView.qml:19
 #, fuzzy, kde-format
 #| msgid "Map"
 msgctxt "@title"
 msgid "Map"
 msgstr "Kartta"
 
-#: contents/ui/MapView.qml:32
+#: contents/ui/MapView.qml:31
 #, fuzzy, kde-format
 #| msgid "OpenStreetMap"
 msgid "Open Map"
 msgstr "OpenStreetMap"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found for %1"
 msgstr "%1 – esitelmiä ei löytynyt"
 
-#: contents/ui/ScheduleView.qml:28
+#: contents/ui/ScheduleView.qml:29
 #, kde-format
 msgid "No talks found"
 msgstr "Esitelmiä ei löytynyt"
 
-#: contents/ui/ScheduleView.qml:71
-#, kde-format
-msgid "Details"
-msgstr "Tiedot"
-
-#: contents/ui/SettingsView.qml:23
+#: contents/ui/SettingsView.qml:20
 #, kde-format
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: contents/ui/SettingsView.qml:28
+#: contents/ui/SettingsView.qml:26
 #, kde-format
 msgid "Use local timezone"
 msgstr "Käytä paikallista aikavyöhykettä"
 
-#: contents/ui/SettingsView.qml:35
+#: contents/ui/SettingsView.qml:33
 #, kde-format
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
-#: contents/ui/SettingsView.qml:39
+#: contents/ui/SettingsView.qml:41
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "Alusta ei vielä tue ilmoituksia"
+
+#: contents/ui/SettingsView.qml:48
 #, kde-format
 msgid "Add reminder to favorite talks"
 msgstr "Lisää muistutus suosikkiesitelmiin"
 
-#: contents/ui/SettingsView.qml:47
+#: contents/ui/SettingsView.qml:55
 #, kde-format
 msgid "Remind before talk start (minutes)"
 msgstr "Muistuta ennen esitelmän alkua (minuutteina)"
-
-#: contents/ui/SettingsView.qml:59
-#, kde-format
-msgid "Notifications are not supported on your platform"
-msgstr "Alusta ei vielä tue ilmoituksia"
 
 #: eventcontroller.cpp:62
 #, kde-format
@@ -278,6 +275,9 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Ylläpitäjä ja kehittäjä"
+
+#~ msgid "Configure"
+#~ msgstr "Asetukset"
 
 #~ msgid "Latitude: %1"
 #~ msgstr "Leveysaste: %1"
