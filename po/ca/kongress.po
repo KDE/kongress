@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-14 16:02+0200\n"
+"PO-Revision-Date: 2024-05-17 09:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -66,11 +66,10 @@ msgid "Reload"
 msgstr "Torna a carregar"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Detalls"
+msgstr "Detalls de l'esdeveniment"
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format

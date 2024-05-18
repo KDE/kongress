@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-14 07:15+0200\n"
+"PO-Revision-Date: 2024-05-17 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -64,11 +64,10 @@ msgid "Reload"
 msgstr "Ponovno naloži"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Podrobnosti"
+msgstr "Podrobnosti dogodka"
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format
