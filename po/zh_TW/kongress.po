@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 00:40+0000\n"
-"PO-Revision-Date: 2024-01-02 20:11+0900\n"
+"PO-Revision-Date: 2024-05-18 17:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -236,7 +236,7 @@ msgstr "在您的平台上不支援通知"
 #: eventcontroller.cpp:62
 #, kde-format
 msgid "Error during event creation"
-msgstr "事件建立時發生錯誤"
+msgstr "活動建立時發生錯誤"
 
 #: eventcontroller.cpp:68
 #, kde-format
