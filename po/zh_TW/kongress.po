@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-02 20:11+0900\n"
+"PO-Revision-Date: 2024-05-18 17:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -67,11 +67,10 @@ msgid "Reload"
 msgstr "重新載入"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "詳細資訊"
+msgstr "活動詳細資訊"
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format
@@ -176,17 +175,15 @@ msgid "About"
 msgstr "關於"
 
 #: contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "地圖"
 
 #: contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap 開放街圖"
+msgstr "開啟地圖"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format
@@ -231,7 +228,7 @@ msgstr "在演講開始前幾分鐘提醒"
 #: eventcontroller.cpp:62
 #, kde-format
 msgid "Error during event creation"
-msgstr "事件建立時發生錯誤"
+msgstr "活動建立時發生錯誤"
 
 #: eventcontroller.cpp:68
 #, kde-format
