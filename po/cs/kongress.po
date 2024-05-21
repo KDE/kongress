@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:41+0000\n"
-"PO-Revision-Date: 2023-06-15 14:04+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-17 14:10+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,11 +63,10 @@ msgid "Reload"
 msgstr "Obnovit"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Podrobnosti"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format
@@ -177,7 +176,7 @@ msgstr "O aplikaci"
 #, kde-format
 msgctxt "@title"
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: contents/ui/MapView.qml:31
 #, kde-format
@@ -272,6 +271,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Správce a vývojář"
-
-#~ msgid "Configure"
-#~ msgstr "Nastavit"
