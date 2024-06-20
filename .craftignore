@@ -6,8 +6,9 @@ qml/QtQuick/Controls/Material/.*
 lib/qml/org/kde/kirigami/styles/Material/.*
 
 # data files for ki18n that we don't need
-share/iso-codes/.*
-share/locale/.*/LC_MESSAGES/iso_.*\.mo
+share/iso-codes/json/schema-.*
+share/iso-codes/json/iso_(15924|3166-3|4217|639-\d)\.json
+share/locale/.*/LC_MESSAGES/iso_(15924|3166-3|4217|639-\d)\.mo
 
 # other KF6 data files we don't need
 share/mime/packages/kde6\.xml
@@ -16,7 +17,8 @@ share/mime/packages/kde6\.xml
 share/locale/.*/LC_MESSAGES/kongressac\.mo
 
 # translation catalogs of dependencies not needed here
-share/locale/.*/LC_MESSAGES/kconfig6_qt\.qm
+share/locale/.*/LC_MESSAGES/(kcodecs6|kconfig6)_qt\.qm
+share/locale/.*/LC_MESSAGES/kcontacts6\.mo
 
 # newer Kirigami Addon versions depend on Qt.labs.platform for ColorDialog, which as a QtWidgets dependency
 # remove that the hard way, we don't need a color dialog

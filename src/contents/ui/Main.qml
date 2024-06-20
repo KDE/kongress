@@ -99,4 +99,10 @@ Kirigami.ApplicationWindow {
             conference: root.activeConference
         }
     }
+    Component {
+        id: indoorMapView
+        IndoorMapView {
+            conference: root.activeConference
+        }
+    }
 }

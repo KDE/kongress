@@ -65,6 +65,11 @@ bool Conference::hasVenueCoordinate() const
     return m_venue_longitude >= -180.0 && m_venue_longitude <= 180.0 && m_venue_latitude >= -90.0 && m_venue_latitude <= 90.0;
 }
 
+bool Conference::hasVenueIndoorMap() const
+{
+    return m_indoorMapBbox.isValid() && !m_indoorMapBbox.isEmpty();
+}
+
 [[nodiscard]] static double readDoubleValue(const QJsonValue &v)
 {
     if (v.isDouble()) {
@@ -92,6 +97,13 @@ Conference Conference::fromJson(const QJsonObject &obj)
     c.m_venue_longitude = readDoubleValue(obj["venueLongitude"_L1]);
     c.m_venue_osm_url = obj["venueOsmUrl"_L1].toString();
     c.m_tz_id = obj["timeZoneId"_L1].toString();
+
+    const auto indoorMap = obj["indoorMap"_L1].toObject();
+    if (indoorMap.size() >= 4) {
+        c.m_indoorMapBbox = {QPointF(indoorMap["minLongitude"_L1].toDouble(), indoorMap["minLatitude"_L1].toDouble()),
+                             QPointF(indoorMap["maxLongitude"_L1].toDouble(), indoorMap["maxLatitude"_L1].toDouble())};
+    }
+
     return c;
 }
 

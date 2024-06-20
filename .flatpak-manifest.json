@@ -25,8 +25,53 @@
 		"-DBUILD_TESTING=OFF",
 		"-DCMAKE_BUILD_TYPE=Release"
 	    ],
-	    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ]
-	},
+	    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ],
+            "cleanup": [
+                "/lib/cmake"
+            ]
+        },
+        {
+            "name": "kopeninghours",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DBUILD_WITH_QT6=ON"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kopeninghours",
+                    "branch": "master"
+                }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/cmake",
+                "/share/qlogging-categories6"
+            ]
+        },
+        {
+            "name": "kosmindoormap",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-USE_KPUBLICTRANSPORT=OFF"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kosmindoormap",
+                    "branch": "master"
+                }
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/cmake",
+                "/share/qlogging-categories6"
+            ]
+        },
         {
             "name": "kongress",
             "buildsystem": "cmake-ninja",

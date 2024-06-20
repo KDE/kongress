@@ -24,6 +24,7 @@ ecm_target_qml_sources(kongress SOURCES
     contents/ui/GlobalDrawer.qml
     contents/ui/ScheduleView.qml
     contents/ui/FavoritesView.qml
+    contents/ui/IndoorMapView.qml
     contents/ui/MapView.qml
     contents/ui/Conferences.qml
     contents/ui/EventInfo.qml
@@ -69,6 +70,7 @@ if (ANDROID)
         arrow-up
         map-globe
         map-symbolic
+        search
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)

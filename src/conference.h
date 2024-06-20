@@ -8,6 +8,7 @@
 #define CONFERENCE_H
 
 #include <QObject>
+#include <QRectF>
 
 class QJsonObject;
 
@@ -25,8 +26,10 @@ class Conference
     Q_PROPERTY(double venueLongitude READ venueLongitude)
     Q_PROPERTY(QString venueOsmUrl READ venueOsmUrl)
     Q_PROPERTY(QString timeZoneId READ timeZoneId)
+    Q_PROPERTY(QRectF indoorMapBoundingBox MEMBER m_indoorMapBbox)
 
     Q_PROPERTY(bool hasVenueCoordinate READ hasVenueCoordinate)
+    Q_PROPERTY(bool hasVenueIndoorMap READ hasVenueIndoorMap)
 
 public:
     QString id() const;
@@ -41,6 +44,7 @@ public:
     QString timeZoneId() const;
 
     [[nodiscard]] bool hasVenueCoordinate() const;
+    [[nodiscard]] bool hasVenueIndoorMap() const;
 
     [[nodiscard]] static Conference fromJson(const QJsonObject &obj);
 
@@ -55,5 +59,6 @@ private:
     double m_venue_longitude = NAN;
     QString m_venue_osm_url;
     QString m_tz_id;
+    QRectF m_indoorMapBbox;
 };
 #endif

@@ -111,7 +111,10 @@ Kirigami.OverlayDrawer {
                     visible: activeConference && (activeConference.venueOsmUrl !== "" || activeConference.hasVenueCoordinate)
 
                     onClicked: {
-                        if (root.activeConference.hasVenueCoordinate) {
+                        if (root.activeConference.hasVenueIndoorMap) {
+                            popAll();
+                            pageStack.push(indoorMapView);
+                        } else if (root.activeConference.hasVenueCoordinate) {
                             popAll();
                             pageStack.push(mapView);
                         } else {
