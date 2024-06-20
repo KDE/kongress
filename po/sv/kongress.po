@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:41+0000\n"
-"PO-Revision-Date: 2021-04-27 08:10+0200\n"
+"PO-Revision-Date: 2024-06-19 19:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,11 +63,10 @@ msgid "Reload"
 msgstr "Uppdatera"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Detaljinformation"
+msgstr "Händelseinformation"
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format
@@ -173,17 +172,15 @@ msgid "About"
 msgstr "Om"
 
 #: contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Karta"
 
 #: contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Öppna karta"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format
