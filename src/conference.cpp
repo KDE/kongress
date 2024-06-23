@@ -6,7 +6,9 @@
 
 #include "conference.h"
 
+#include <QGuiApplication>
 #include <QJsonObject>
+#include <QPalette>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -102,6 +104,13 @@ Conference Conference::fromJson(const QJsonObject &obj)
     if (indoorMap.size() >= 4) {
         c.m_indoorMapBbox = {QPointF(indoorMap["minLongitude"_L1].toDouble(), indoorMap["minLatitude"_L1].toDouble()),
                              QPointF(indoorMap["maxLongitude"_L1].toDouble(), indoorMap["maxLatitude"_L1].toDouble())};
+
+        if (QGuiApplication::palette().base().color().value() < 128) {
+            c.m_indoorMapStyle = indoorMap["styleDark"_L1].toString();
+        }
+        if (c.m_indoorMapStyle.isEmpty()) {
+            c.m_indoorMapStyle = indoorMap["style"_L1].toString();
+        }
     }
 
     return c;

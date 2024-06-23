@@ -105,6 +105,7 @@ Kirigami.Page {
     IndoorMap {
         id: map
         anchors.fill: parent
+        styleSheet: root.conference.indoorMapStyle
 
         IndoorMapScale {
             map: map
