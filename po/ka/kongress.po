@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:41+0000\n"
+"POT-Creation-Date: 2024-06-24 00:40+0000\n"
 "PO-Revision-Date: 2024-05-17 04:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -136,52 +136,84 @@ msgstr "განახლებების შემოწმება"
 msgid "Map"
 msgstr "რუკა"
 
-#: contents/ui/GlobalDrawer.qml:128 contents/ui/GlobalDrawer.qml:134
+#: contents/ui/GlobalDrawer.qml:131 contents/ui/GlobalDrawer.qml:137
 #: contents/ui/Main.qml:74
 #, kde-format
 msgid "Favorites"
 msgstr "სანიშნები"
 
-#: contents/ui/GlobalDrawer.qml:142
+#: contents/ui/GlobalDrawer.qml:145
 #, kde-format
 msgid "Full Schedule"
 msgstr "სრული განრიგი"
 
-#: contents/ui/GlobalDrawer.qml:148 contents/ui/Main.qml:63
+#: contents/ui/GlobalDrawer.qml:151 contents/ui/Main.qml:63
 #, kde-format
 msgid "Schedule"
 msgstr "განრიგი"
 
-#: contents/ui/GlobalDrawer.qml:158
+#: contents/ui/GlobalDrawer.qml:161
 #, kde-format
 msgid "Daily Schedule"
 msgstr "დღიური განრიგი"
 
-#: contents/ui/GlobalDrawer.qml:197
+#: contents/ui/GlobalDrawer.qml:200
 #, kde-format
 msgid "Categories"
 msgstr "კატეგორიები"
 
-#: contents/ui/GlobalDrawer.qml:241 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:244 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "მორგება"
 
-#: contents/ui/GlobalDrawer.qml:256
+#: contents/ui/GlobalDrawer.qml:259
 #, kde-format
 msgid "About"
 msgstr "შესახებ"
 
-#: contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:19 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "რუკა"
 
-#: contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:22
+#, kde-format
+msgid "Floor %1"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:35
+#, kde-format
+msgid "Find Room"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:41
+#, kde-format
+msgid "Find Amenity"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "რუკის გახსნა"
+
+#: contents/ui/IndoorMapView.qml:124
+#, kde-format
+msgid "Switched to floor %1"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:173
+#, kde-format
+msgctxt "@action:intoolbar Go down one floor"
+msgid "Floor down"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:182
+#, kde-format
+msgctxt "@action:intoolbar Go up one floor"
+msgid "Floor up"
+msgstr ""
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format
