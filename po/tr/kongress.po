@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 13:33+0300\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"PO-Revision-Date: 2024-06-24 14:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -180,39 +180,39 @@ msgstr "Harita"
 #: contents/ui/IndoorMapView.qml:22
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1. Kat"
 
 #: contents/ui/IndoorMapView.qml:35
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Oda Bul"
 
 #: contents/ui/IndoorMapView.qml:41
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Hizmet Bul"
 
 #: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Haritayı Aç"
 
-#: contents/ui/IndoorMapView.qml:124
+#: contents/ui/IndoorMapView.qml:125
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "%1. kata geçildi"
 
-#: contents/ui/IndoorMapView.qml:173
+#: contents/ui/IndoorMapView.qml:174
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Bir Kat Aşağı"
 
-#: contents/ui/IndoorMapView.qml:182
+#: contents/ui/IndoorMapView.qml:183
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Bir Kat Yukarı"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format

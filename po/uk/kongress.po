@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 16:46+0300\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"PO-Revision-Date: 2024-06-24 09:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -185,39 +185,39 @@ msgstr "Карта"
 #: contents/ui/IndoorMapView.qml:22
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "Поверх %1"
 
 #: contents/ui/IndoorMapView.qml:35
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Знайти кімнату"
 
 #: contents/ui/IndoorMapView.qml:41
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Знайти зручності"
 
 #: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Відкрити карту"
 
-#: contents/ui/IndoorMapView.qml:124
+#: contents/ui/IndoorMapView.qml:125
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Перемкнуто на поверх %1"
 
-#: contents/ui/IndoorMapView.qml:173
+#: contents/ui/IndoorMapView.qml:174
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Поверхом нижче"
 
-#: contents/ui/IndoorMapView.qml:182
+#: contents/ui/IndoorMapView.qml:183
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Поверхом вище"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format

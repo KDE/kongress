@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 07:33+0200\n"
+"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"PO-Revision-Date: 2024-06-24 08:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -183,39 +183,39 @@ msgstr "Zemljevid"
 #: contents/ui/IndoorMapView.qml:22
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "Nadstropje %1"
 
 #: contents/ui/IndoorMapView.qml:35
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Najdi sobo"
 
 #: contents/ui/IndoorMapView.qml:41
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Poišči ugodnost"
 
 #: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Odpri zemljevid"
 
-#: contents/ui/IndoorMapView.qml:124
+#: contents/ui/IndoorMapView.qml:125
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Preklopljeno na nadstropje %1"
 
-#: contents/ui/IndoorMapView.qml:173
+#: contents/ui/IndoorMapView.qml:174
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Nadstropje dol"
 
-#: contents/ui/IndoorMapView.qml:182
+#: contents/ui/IndoorMapView.qml:183
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Nadstropje gor"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format
