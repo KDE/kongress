@@ -186,6 +186,7 @@ Contexts=uid
 Comment=Alarm Notification
 Comment[ca]=Notificació de l'alarma
 Comment[ca@valencia]=Notificació de l'alarma
+Comment[cs]=Upozornění na upomínku
 Comment[da]=Bekendtgørelse af alarm
 Comment[de]=Erinnerungs-Benachrichtigung
 Comment[el]=Ειδοποίηση συναγερμού
