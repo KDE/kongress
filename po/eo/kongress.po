@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -181,39 +181,39 @@ msgstr "Mapo"
 #: contents/ui/IndoorMapView.qml:22
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "Etaĝo %1"
 
 #: contents/ui/IndoorMapView.qml:35
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Trovi Ĉambron"
 
 #: contents/ui/IndoorMapView.qml:41
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Trovi Agrablaĵon"
 
 #: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
-msgstr "Open Map"
+msgstr "Malfermi Mapon"
 
 #: contents/ui/IndoorMapView.qml:125
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Ŝanĝis al etaĝo %1"
 
 #: contents/ui/IndoorMapView.qml:174
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Etaĝo malsupren"
 
 #: contents/ui/IndoorMapView.qml:183
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Etaĝo supren"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format
