@@ -111,6 +111,8 @@ Conference Conference::fromJson(const QJsonObject &obj)
         if (c.m_indoorMapStyle.isEmpty()) {
             c.m_indoorMapStyle = indoorMap["style"_L1].toString();
         }
+
+        c.m_indoorExtraContent = indoorMap["extraContent"_L1].toString();
     }
 
     return c;

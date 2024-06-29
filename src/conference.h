@@ -28,6 +28,7 @@ class Conference
     Q_PROPERTY(QString timeZoneId READ timeZoneId)
     Q_PROPERTY(QRectF indoorMapBoundingBox MEMBER m_indoorMapBbox)
     Q_PROPERTY(QString indoorMapStyle MEMBER m_indoorMapStyle)
+    Q_PROPERTY(QString indoorMapExtraContent MEMBER m_indoorExtraContent)
 
     Q_PROPERTY(bool hasVenueCoordinate READ hasVenueCoordinate)
     Q_PROPERTY(bool hasVenueIndoorMap READ hasVenueIndoorMap)
@@ -62,5 +63,6 @@ private:
     QString m_tz_id;
     QRectF m_indoorMapBbox;
     QString m_indoorMapStyle;
+    QString m_indoorExtraContent;
 };
 #endif

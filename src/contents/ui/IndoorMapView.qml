@@ -146,7 +146,10 @@ Kirigami.Page {
 
     onConferenceChanged: {
         map.mapLoader.loadForBoundingBox(root.conference.indoorMapBoundingBox.top, root.conference.indoorMapBoundingBox.left,
-                                         root.conference.indoorMapBoundingBox.bottom, root.conference.indoorMapBoundingBox.right)
+                                         root.conference.indoorMapBoundingBox.bottom, root.conference.indoorMapBoundingBox.right);
+        if (root.conference.indoorMapExtraContent !== "") {
+            map.mapLoader.addChangeSet(root.conference.indoorMapExtraContent);
+        }
     }
 
     Connections {
