@@ -46,31 +46,32 @@ if (ANDROID)
     )
 
     kirigami_package_breeze_icons(ICONS
+        arrow-down
+        arrow-up
+        category
         delete
-        documentinfo
-        edit-select
         dialog-warning-symbolic
+        documentinfo
+        document-export
+        draw-arrow-back
+        edit-select
+        emblem-error
+        emblem-warning
         exchange-positions
         favorite
         find-location
-        group
-        internet-services
-        view-calendar-agenda
-        view-calendar-day
-        settings-configure
-        category
-        help-about-symbolic
-        document-export
         folder-open
-        draw-arrow-back
-        update-none
-        emblem-warning
-        emblem-error
-        arrow-down
-        arrow-up
+        go-next
+        group
+        help-about-symbolic
+        internet-services
         map-globe
         map-symbolic
         search
+        settings-configure
+        update-none
+        view-calendar-agenda
+        view-calendar-day
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)

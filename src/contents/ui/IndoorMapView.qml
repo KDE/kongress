@@ -9,6 +9,7 @@ import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import org.kde.kosmindoormap
+import org.kde.kosmindoorrouting
 
 Kirigami.Page {
     id: root
@@ -102,10 +103,16 @@ Kirigami.Page {
         }
     }
 
+    RoutingController {
+        id: routingController
+        mapData: map.mapData
+    }
+
     IndoorMap {
         id: map
         anchors.fill: parent
         styleSheet: root.conference.indoorMapStyle
+        overlaySources: [ routingController.routeOverlay ]
 
         IndoorMapScale {
             map: map
@@ -119,28 +126,77 @@ Kirigami.Page {
             anchors.bottom: map.bottom
         }
 
-       onElementPicked: (element) => {
-            floorLevelChangeModel.element = element;
-            if (floorLevelChangeModel.hasSingleLevelChange) {
-                showPassiveNotification(i18n("Switched to floor %1", floorLevelChangeModel.destinationLevelName), "short");
-                map.view.floorLevel = floorLevelChangeModel.destinationLevel;
-                return;
-            } else if (floorLevelChangeModel.hasMultipleLevelChanges) {
-                floorLevelSelector.open();
-                return;
-            }
+        Controls.BusyIndicator {
+            anchors.top: map.top
+            anchors.right: map.right
+            running: routingController.inProgress
+        }
 
-            infoModel.element = element;
-            if (infoModel.name != "" || infoModel.debug) {
-                infoDialog.open();
+        Controls.Menu {
+            id: contextMenu
+            property mapPointerEvent ev
+            Controls.MenuItem {
+                text: i18n("Navigate from here")
+                icon.name: "go-next"
+                visible: routingController.isAvailable && root.conference.indoorRoutingEnabled
+                onTriggered: {
+                    routingController.setStartPosition(contextMenu.ev.geoPosition.y, contextMenu.ev.geoPosition.x, map.view.floorLevel);
+                    routingController.searchRoute();
+                }
+            }
+            Controls.MenuItem {
+                text: i18n("Navigate to here")
+                icon.name: "map-symbolic"
+                visible: routingController.isAvailable && root.conference.indoorRoutingEnabled
+                onTriggered: {
+                    routingController.setEndPosition(contextMenu.ev.geoPosition.y, contextMenu.ev.geoPosition.x, map.view.floorLevel);
+                    routingController.searchRoute();
+                }
+            }
+            Controls.MenuItem {
+                id: contextMenuInfoAction
+                enabled: !ev.element.isNull && (infoModel.name !== "" || infoModel.debug)
+                text: i18n("Show information")
+                icon.name: "documentinfo"
+                onTriggered: infoDialog.open()
             }
         }
-        onElementLongPressed: (element) => {
-            // this provides info model access for elements with other interactions
-            infoModel.element = element;
-            if (infoModel.name != "" || infoModel.debug) {
-                elementDetailsSheet.open();
+
+        function showContextMenu(ev) {
+            infoModel.element = ev.element;
+            contextMenuInfoAction.enabled = !ev.element.isNull && (infoModel.name !== "" || infoModel.debug);
+            contextMenu.ev = ev;
+            contextMenu.popup(map, ev.screenPosition);
+        }
+
+        onTapped: (ev) => {
+            // left click on element: floor level change if applicable, otherwise info dialog
+            // (button === 0 is finger on touch screen)
+            if (!ev.element.isNull && (ev.button === Qt.LeftButton || ev.button === 0)) {
+                floorLevelChangeModel.element = ev.element;
+                if (floorLevelChangeModel.hasSingleLevelChange) {
+                    showPassiveNotification(i18n("Switched to floor %1", floorLevelChangeModel.destinationLevelName), "short");
+                    map.view.floorLevel = floorLevelChangeModel.destinationLevel;
+                    return;
+                } else if (floorLevelChangeModel.hasMultipleLevelChanges) {
+                    floorLevelSelector.open();
+                    return;
+                }
+
+                infoModel.element = ev.element;
+                if (infoModel.name != "" || infoModel.debug) {
+                    infoDialog.open();
+                }
             }
+
+            // right click: context menu, with info action if clicked on an element
+            if (ev.button === Qt.RightButton) {
+                showContextMenu(ev);
+            }
+        }
+
+        onLongPressed: (ev) => {
+            showContextMenu(ev);
         }
     }
 

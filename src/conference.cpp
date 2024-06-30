@@ -113,6 +113,7 @@ Conference Conference::fromJson(const QJsonObject &obj)
         }
 
         c.m_indoorExtraContent = indoorMap["extraContent"_L1].toString();
+        c.m_indoorRoutingEnabled = indoorMap["routingEnabled"_L1].toBool(false);
     }
 
     return c;
