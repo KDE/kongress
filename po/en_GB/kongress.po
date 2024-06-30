@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
-"PO-Revision-Date: 2024-05-20 19:24+0100\n"
+"POT-Creation-Date: 2024-06-30 00:41+0000\n"
+"PO-Revision-Date: 2024-06-29 11:25+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -180,17 +180,17 @@ msgstr "Map"
 #: contents/ui/IndoorMapView.qml:22
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "Floor %1"
 
 #: contents/ui/IndoorMapView.qml:35
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Find Room"
 
 #: contents/ui/IndoorMapView.qml:41
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Find Amenity"
 
 #: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
 #, kde-format
@@ -200,19 +200,19 @@ msgstr "Open Map"
 #: contents/ui/IndoorMapView.qml:125
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Switched to floor %1"
 
-#: contents/ui/IndoorMapView.qml:174
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Floor down"
 
-#: contents/ui/IndoorMapView.qml:183
+#: contents/ui/IndoorMapView.qml:186
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Floor up"
 
 #: contents/ui/ScheduleView.qml:29
 #, kde-format

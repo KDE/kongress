@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-06-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-24 09:32+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -205,13 +205,13 @@ msgstr "פתיחת המפה"
 msgid "Switched to floor %1"
 msgstr "עבר לקומה %1"
 
-#: contents/ui/IndoorMapView.qml:174
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "קומה למטה"
 
-#: contents/ui/IndoorMapView.qml:183
+#: contents/ui/IndoorMapView.qml:186
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-06-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -203,13 +203,13 @@ msgstr "Malfermi Mapon"
 msgid "Switched to floor %1"
 msgstr "Ŝanĝis al etaĝo %1"
 
-#: contents/ui/IndoorMapView.qml:174
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "Etaĝo malsupren"
 
-#: contents/ui/IndoorMapView.qml:183
+#: contents/ui/IndoorMapView.qml:186
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"

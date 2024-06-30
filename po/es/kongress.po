@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:41+0000\n"
+"POT-Creation-Date: 2024-06-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-25 17:54+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -205,13 +205,13 @@ msgstr "Abrir mapa"
 msgid "Switched to floor %1"
 msgstr "Ha cambiado al piso %1"
 
-#: contents/ui/IndoorMapView.qml:174
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "Bajar un piso"
 
-#: contents/ui/IndoorMapView.qml:183
+#: contents/ui/IndoorMapView.qml:186
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
