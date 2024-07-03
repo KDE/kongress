@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-03 00:42+0000\n"
 "PO-Revision-Date: 2024-06-24 05:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -172,44 +172,59 @@ msgstr "მორგება"
 msgid "About"
 msgstr "შესახებ"
 
-#: contents/ui/IndoorMapView.qml:19 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:20 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "რუკა"
 
-#: contents/ui/IndoorMapView.qml:22
+#: contents/ui/IndoorMapView.qml:23
 #, kde-format
 msgid "Floor %1"
 msgstr "სართული %1"
 
-#: contents/ui/IndoorMapView.qml:35
+#: contents/ui/IndoorMapView.qml:36
 #, kde-format
 msgid "Find Room"
 msgstr "ოთახის პოვნა"
 
-#: contents/ui/IndoorMapView.qml:41
+#: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Amenity"
 msgstr "იპოვეთ კომფორტი"
 
-#: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:48 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "რუკის გახსნა"
 
-#: contents/ui/IndoorMapView.qml:125
+#: contents/ui/IndoorMapView.qml:139
+#, kde-format
+msgid "Navigate from here"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:148
+#, kde-format
+msgid "Navigate to here"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:159
+#, kde-format
+msgid "Show information"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:178
 #, kde-format
 msgid "Switched to floor %1"
 msgstr "გადავერთე სართულზე %1"
 
-#: contents/ui/IndoorMapView.qml:177
+#: contents/ui/IndoorMapView.qml:233
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "სართულით დაბლა"
 
-#: contents/ui/IndoorMapView.qml:186
+#: contents/ui/IndoorMapView.qml:242
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"

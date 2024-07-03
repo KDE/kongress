@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-30 00:41+0000\n"
+"POT-Creation-Date: 2024-07-03 00:42+0000\n"
 "PO-Revision-Date: 2024-04-05 16:46+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -174,46 +174,61 @@ msgstr "Iestatījumi"
 msgid "About"
 msgstr "Par"
 
-#: contents/ui/IndoorMapView.qml:19 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:20 contents/ui/MapView.qml:19
 #, fuzzy, kde-format
 #| msgid "Map"
 msgctxt "@title"
 msgid "Map"
 msgstr "Karte"
 
-#: contents/ui/IndoorMapView.qml:22
+#: contents/ui/IndoorMapView.qml:23
 #, kde-format
 msgid "Floor %1"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:35
+#: contents/ui/IndoorMapView.qml:36
 #, kde-format
 msgid "Find Room"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:41
+#: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Amenity"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:47 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:48 contents/ui/MapView.qml:31
 #, fuzzy, kde-format
 #| msgid "OpenStreetMap"
 msgid "Open Map"
 msgstr "OpenStreetMap"
 
-#: contents/ui/IndoorMapView.qml:125
+#: contents/ui/IndoorMapView.qml:139
+#, kde-format
+msgid "Navigate from here"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:148
+#, kde-format
+msgid "Navigate to here"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:159
+#, kde-format
+msgid "Show information"
+msgstr ""
+
+#: contents/ui/IndoorMapView.qml:178
 #, kde-format
 msgid "Switched to floor %1"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:177
+#: contents/ui/IndoorMapView.qml:233
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:186
+#: contents/ui/IndoorMapView.qml:242
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
