@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-03 00:42+0000\n"
-"PO-Revision-Date: 2024-06-24 09:44+0300\n"
+"PO-Revision-Date: 2024-07-03 19:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -205,17 +205,17 @@ msgstr "Відкрити карту"
 #: contents/ui/IndoorMapView.qml:139
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Навігація звідси"
 
 #: contents/ui/IndoorMapView.qml:148
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Навігація сюди"
 
 #: contents/ui/IndoorMapView.qml:159
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Показати відомості"
 
 #: contents/ui/IndoorMapView.qml:178
 #, kde-format

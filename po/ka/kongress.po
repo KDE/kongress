@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-03 00:42+0000\n"
-"PO-Revision-Date: 2024-06-24 05:43+0200\n"
+"PO-Revision-Date: 2024-07-03 05:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -201,17 +201,17 @@ msgstr "რუკის გახსნა"
 #: contents/ui/IndoorMapView.qml:139
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "ნავიგაცია აქედან"
 
 #: contents/ui/IndoorMapView.qml:148
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "ნავიგაცია აქამდე"
 
 #: contents/ui/IndoorMapView.qml:159
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "ინფორმაციის ჩვენება"
 
 #: contents/ui/IndoorMapView.qml:178
 #, kde-format
