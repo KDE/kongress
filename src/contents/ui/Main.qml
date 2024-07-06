@@ -14,12 +14,15 @@ Kirigami.ApplicationWindow {
 
     property Kongress.Conference activeConference: Kongress.ConferenceController.activeConference
 
+    readonly property bool hasConference: Kongress.ConferenceController.defaultConferenceId !== ""
+
     width: Kirigami.Units.gridUnit * 65
 
     globalDrawer: GlobalDrawer {
         modal: !root.wideScreen
         onModalChanged: drawerOpen = !modal
         activeConference: root.activeConference
+        hasConference: root.hasConference
         handleVisible: modal
         pageStack: root.pageStack
     }

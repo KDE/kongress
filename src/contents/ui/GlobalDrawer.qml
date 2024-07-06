@@ -18,6 +18,7 @@ Kirigami.OverlayDrawer {
     id: root
 
     property var activeConference
+    property bool hasConference
     property var pageStack
 
     /**
@@ -54,7 +55,7 @@ Kirigami.OverlayDrawer {
             rightPadding: Kirigami.Units.smallSpacing
 
             contentItem: Kirigami.Heading {
-                text: activeConference && activeConference.name.length > 0 ? activeConference.name : i18n("Kongress")
+                text: hasConference && activeConference.name.length > 0 ? activeConference.name : i18n("Kongress")
                 Layout.fillWidth: true
                 elide: Text.ElideRight
             }
@@ -73,8 +74,8 @@ Kirigami.OverlayDrawer {
 
                 spacing: 0
                 Delegates.RoundedItemDelegate {
-                    text: activeConference ? i18n("Change conference") : i18n("Select conference")
-                    icon.name: activeConference ? 'exchange-positions' : 'edit-select'
+                    text: hasConference ? i18n("Change conference") : i18n("Select conference")
+                    icon.name: hasConference ? 'exchange-positions' : 'edit-select'
 
                     Layout.topMargin: Kirigami.Units.smallSpacing / 2
 
@@ -93,7 +94,7 @@ Kirigami.OverlayDrawer {
 
                 Delegates.RoundedItemDelegate {
                     text: i18n("Check for updates")
-                    visible: activeConference
+                    visible: hasConference
                     icon.name: "update-none"
 
                     onClicked: {
@@ -108,7 +109,7 @@ Kirigami.OverlayDrawer {
                     id: mapAction
                     text: i18n("Map")
                     icon.name: "find-location"
-                    visible: activeConference && (activeConference.venueOsmUrl !== "" || activeConference.hasVenueCoordinate)
+                    visible: hasConference && (activeConference.venueOsmUrl !== "" || activeConference.hasVenueCoordinate)
 
                     onClicked: {
                         if (root.activeConference.hasVenueIndoorMap) {
@@ -130,7 +131,7 @@ Kirigami.OverlayDrawer {
                     id: favoriteAction
                     text: i18n("Favorites")
                     icon.name: "favorite"
-                    visible: activeConference
+                    visible: hasConference
 
                     onClicked: {
                         popAll();
@@ -144,7 +145,7 @@ Kirigami.OverlayDrawer {
                 Delegates.RoundedItemDelegate {
                     text: i18n("Full Schedule")
                     icon.name: "view-calendar-agenda"
-                    visible: activeConference
+                    visible: hasConference
 
                     onClicked: {
                         popAll();
@@ -162,7 +163,7 @@ Kirigami.OverlayDrawer {
 
                     checkable: true
                     checked: true
-                    visible: activeConference && activeConference.days.length > 0
+                    visible: hasConference && activeConference.days.length > 0
 
                     Layout.fillWidth: true
 
@@ -199,7 +200,7 @@ Kirigami.OverlayDrawer {
 
                     text: i18n("Categories")
                     icon.name: "category"
-                    visible: activeConference && onlineCalendar && onlineCalendar.categories.length > 0
+                    visible: hasConference && onlineCalendar && onlineCalendar.categories.length > 0
 
                     checkable: true
                     checked: true
