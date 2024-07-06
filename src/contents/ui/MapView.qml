@@ -53,7 +53,7 @@ Kirigami.Page {
                 value: "https://autoconfig.kde.org/qtlocation/"
             }
         }
-        onCopyrightLinkActivated: Qt.openUrlExternally(link)
+        onCopyrightLinkActivated: link => Qt.openUrlExternally(link)
 
         center: QtPositioning.coordinate(root.conference.venueLatitude, root.conference.venueLongitude)
         zoomLevel: 18

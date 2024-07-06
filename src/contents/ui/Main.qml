@@ -84,7 +84,7 @@ Kirigami.ApplicationWindow {
             /**
              * Expects @selectedConferenceId variable object to provide the information of the selected conference
              */
-            onSelected: {
+            onSelected: selectedConferenceId => {
                 Kongress.ConferenceController.activateConference(selectedConferenceId)
                 pageStack.pop(root);
                 pageStack.push(scheduleView,  {eventStartDt: ""});
