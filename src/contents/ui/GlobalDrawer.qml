@@ -54,7 +54,7 @@ Kirigami.OverlayDrawer {
             rightPadding: Kirigami.Units.smallSpacing
 
             contentItem: Kirigami.Heading {
-                text: activeConference && activeConference.name.length > 0 ? activeConference.name : i18n("Conference")
+                text: activeConference && activeConference.name.length > 0 ? activeConference.name : i18n("Kongress")
                 Layout.fillWidth: true
                 elide: Text.ElideRight
             }
