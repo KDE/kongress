@@ -170,7 +170,6 @@ void ConferenceController::setDefaultConferenceId(const QString &confId)
 
 void ConferenceController::clearActiveConference()
 {
-    m_active_conference = {};
     setDefaultConferenceId(QString{});
     Q_EMIT activeConferenceChanged();
 }
