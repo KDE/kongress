@@ -10,7 +10,7 @@ Companion application for conference attendees
 
 Kongress provides practical information about conferences. It supports conferences that offer their schedule in [iCalendar](https://tools.ietf.org/html/rfc5545) format. In Kongress, the data of the talks are shown in various ways, e.g. in daily views, by talk category, etc. The users can also create a list of favorite conference talks/events as well as they can navigate to the web page of each talk. A map of the conference venue, location information and link to OpenStreetMap can also be added.
 
-![](screenshots/combined.png)
+![Desktop screenshot](https://cdn.kde.org/screenshots/kongress/desktop.png)
 
 A set of conferences have been preloaded and are available after installation. Users may add extra conferences, providing a link to their iCalendar schedule (under development).
 
