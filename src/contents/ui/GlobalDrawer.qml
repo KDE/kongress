@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+import QtQml
 import QtQuick
 import QtQuick.Controls 2 as Controls
 import QtQml.Models
@@ -179,14 +180,15 @@ Kirigami.OverlayDrawer {
                     Delegates.RoundedItemDelegate {
                         required property var modelData
 
-                        property date conferenceDay: new Date(modelData)
+                        readonly property date conferenceDay: new Date(modelData)
+                        readonly property string dayName: Qt.locale().dayName(conferenceDay.getDay() + 1)
 
-                        text: conferenceDay.toLocaleDateString(Qt.locale(), "dddd")
+                        text: dayName
                         icon.name: "view-calendar-day-symbolic"
 
                         onClicked: {
                             popAll();
-                            pageStack.push(scheduleView, {title: conferenceDay.toLocaleDateString(Qt.locale(), "dddd"), eventStartDt: conferenceDay });
+                            pageStack.push(scheduleView, {title: dayName, eventStartDt: conferenceDay });
                         }
 
                         Layout.fillWidth: true
