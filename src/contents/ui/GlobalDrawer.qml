@@ -81,7 +81,7 @@ Kirigami.OverlayDrawer {
 
                     onClicked: {
                         popAll();
-                        Kongress.ConferenceController.clearActiveConference();
+                        pageStack.push(conferencesView);
                     }
 
                     Layout.fillWidth: true

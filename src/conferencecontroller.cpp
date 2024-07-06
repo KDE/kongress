@@ -32,9 +32,14 @@ ConferenceController::ConferenceController(QObject *parent)
     , m_conferences_file{new QFile{}}
     , d{new Private}
 {
-    connect(this, &ConferenceController::conferencesLoaded, [this]() {
-        activateDefaultConference();
-    });
+    connect(
+        this,
+        &ConferenceController::conferencesLoaded,
+        this,
+        [this]() {
+            activateDefaultConference();
+        },
+        Qt::SingleShotConnection);
 }
 
 void ConferenceController::setNetworkAccessManager(QNetworkAccessManager *nam)
