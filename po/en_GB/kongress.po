@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-03 00:42+0000\n"
-"PO-Revision-Date: 2024-06-29 11:25+0100\n"
+"PO-Revision-Date: 2024-07-05 13:47+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -200,17 +200,17 @@ msgstr "Open Map"
 #: contents/ui/IndoorMapView.qml:139
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Navigate from here"
 
 #: contents/ui/IndoorMapView.qml:148
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Navigate to here"
 
 #: contents/ui/IndoorMapView.qml:159
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Show information"
 
 #: contents/ui/IndoorMapView.qml:178
 #, kde-format
