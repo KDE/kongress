@@ -22,13 +22,6 @@ Kirigami.ScrollablePage {
     leftPadding: 0
     rightPadding: 0
 
-    Kirigami.PlaceholderMessage {
-        visible: !roCalendar.busyDownlading && (listView.count === 0)
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        anchors.centerIn: parent
-        text: eventStartDt.toLocaleDateString() !== "" ? i18n("No talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No talks found")
-    }
-
     Component {
         id: eventInfo
 
@@ -50,7 +43,12 @@ Kirigami.ScrollablePage {
     ListView {
         id: listView
 
-        visible: !roCalendar.busyDownlading && (count > 0)
+        Kirigami.PlaceholderMessage {
+            visible: !roCalendar.busyDownlading && (listView.count === 0)
+            width: parent.width - (Kirigami.Units.largeSpacing * 4)
+            anchors.centerIn: parent
+            text: eventStartDt.toLocaleDateString() !== "" ? i18n("No talks found for %1", eventStartDt.toLocaleDateString(Qt.locale(), Locale.ShortFormat)) : i18n("No talks found")
+        }
 
         model: eventsModel
         section {
