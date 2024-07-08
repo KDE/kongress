@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:42+0000\n"
+"POT-Creation-Date: 2024-07-08 00:41+0000\n"
 "PO-Revision-Date: 2024-07-03 05:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -94,17 +94,17 @@ msgstr "გატანა"
 msgid "Open folder"
 msgstr "საქაღალდის გახსნა"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "%1-ის რჩეული საუბრები ვერ ვიპოვე"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
 msgstr "რჩეული საუბრები ვერ ვიპოვე"
 
-#: contents/ui/FavoritesView.qml:168
+#: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -230,12 +230,12 @@ msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
 msgstr "სართულით მაღლა"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
 msgstr "საუბრები %1-სთვის ვერ ვიპოვე"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
 msgstr "საუბრები ვერ ვიპოვე"

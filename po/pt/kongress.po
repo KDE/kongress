@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:42+0000\n"
+"POT-Creation-Date: 2024-07-08 00:41+0000\n"
 "PO-Revision-Date: 2021-01-07 10:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -92,17 +92,17 @@ msgstr "Exportar"
 msgid "Open folder"
 msgstr "Abrir a pasta"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Não foram encontradas conversas favoritas para o %1"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Não foram encontradas conversas favoritas"
 
-#: contents/ui/FavoritesView.qml:168
+#: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -230,12 +230,12 @@ msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
 msgstr ""
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Não foram encontradas conversas para o %1"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
 msgstr "Não foram encontradas conversas"

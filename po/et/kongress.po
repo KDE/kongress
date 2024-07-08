@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:42+0000\n"
+"POT-Creation-Date: 2024-07-08 00:41+0000\n"
 "PO-Revision-Date: 2020-10-07 21:08+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -97,19 +97,19 @@ msgstr ""
 msgid "Open folder"
 msgstr ""
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, fuzzy, kde-format
 #| msgid "No events found for %1"
 msgid "No favorite talks found for %1"
 msgstr "%1 ei sisalda ühtegi sündmust"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, fuzzy, kde-format
 #| msgid "No events found"
 msgid "No favorite talks found"
 msgstr "Sündmusi ei leitud"
 
-#: contents/ui/FavoritesView.qml:168
+#: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -237,13 +237,13 @@ msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
 msgstr ""
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, fuzzy, kde-format
 #| msgid "No events found for %1"
 msgid "No talks found for %1"
 msgstr "%1 ei sisalda ühtegi sündmust"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, fuzzy, kde-format
 #| msgid "No events found"
 msgid "No talks found"

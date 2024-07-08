@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:42+0000\n"
+"POT-Creation-Date: 2024-07-08 00:41+0000\n"
 "PO-Revision-Date: 2023-04-26 16:13+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -96,17 +96,17 @@ msgstr "Экспорт"
 msgid "Open folder"
 msgstr "Открыть папку"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Избранные доклады, которые соответствуют %1, не найдены"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Избранные доклады не найдены"
 
-#: contents/ui/FavoritesView.qml:168
+#: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -236,12 +236,12 @@ msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
 msgstr ""
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Доклады, которые соответствуют %1, не найдены"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
 msgstr "Доклады не найдены"

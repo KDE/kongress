@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:42+0000\n"
+"POT-Creation-Date: 2024-07-08 00:41+0000\n"
 "PO-Revision-Date: 2024-07-03 21:54+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -94,17 +94,17 @@ msgstr "Eksporti"
 msgid "Open folder"
 msgstr "Malfermi dosierujon"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Neniuj ŝatataj prelegoj trovitaj por %1"
 
-#: contents/ui/FavoritesView.qml:73
+#: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Neniuj plej ŝatataj prelegoj trovitaj"
 
-#: contents/ui/FavoritesView.qml:168
+#: contents/ui/FavoritesView.qml:167
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -230,12 +230,12 @@ msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
 msgstr "Etaĝo supren"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Neniuj prelegoj trovitaj por %1"
 
-#: contents/ui/ScheduleView.qml:29
+#: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
 msgstr "Neniuj prelegoj trovitaj"
