@@ -1,16 +1,16 @@
 # Translation for kongress.po to Euskara/Basque (eu).
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 # KDE euskaratzeko proiektuko arduraduna <xaba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:41+0000\n"
-"PO-Revision-Date: 2023-08-09 20:18+0200\n"
+"PO-Revision-Date: 2024-07-10 00:12+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -66,11 +66,10 @@ msgid "Reload"
 msgstr "Birzamatu"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Xehetasunak"
+msgstr "Ekitaldiaren xehetasunak"
 
 #: contents/ui/EventInfo.qml:83
 #, kde-format
@@ -176,8 +175,7 @@ msgid "About"
 msgstr "Honi buruz"
 
 #: contents/ui/IndoorMapView.qml:20 contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Mapa"
@@ -185,55 +183,54 @@ msgstr "Mapa"
 #: contents/ui/IndoorMapView.qml:23
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1 solairua"
 
 #: contents/ui/IndoorMapView.qml:36
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Aurkitu gela"
 
 #: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Bilatu zerbitzua"
 
 #: contents/ui/IndoorMapView.qml:48 contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Ireki mapa"
 
 #: contents/ui/IndoorMapView.qml:139
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Nabigatu hemendik"
 
 #: contents/ui/IndoorMapView.qml:148
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Nabigato hona"
 
 #: contents/ui/IndoorMapView.qml:159
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Erakutsi informazioa"
 
 #: contents/ui/IndoorMapView.qml:178
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "%1 solairura aldatu da"
 
 #: contents/ui/IndoorMapView.qml:233
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Solairuan behera"
 
 #: contents/ui/IndoorMapView.qml:242
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Solairuan gora"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
