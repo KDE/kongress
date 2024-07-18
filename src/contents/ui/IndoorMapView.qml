@@ -138,7 +138,7 @@ Kirigami.Page {
             Controls.MenuItem {
                 text: i18n("Navigate from here")
                 icon.name: "go-next"
-                visible: routingController.isAvailable && root.conference.indoorRoutingEnabled
+                visible: routingController.available && root.conference.indoorRoutingEnabled
                 onTriggered: {
                     routingController.setStartPosition(contextMenu.ev.geoPosition.y, contextMenu.ev.geoPosition.x, map.view.floorLevel);
                     routingController.searchRoute();
@@ -147,7 +147,7 @@ Kirigami.Page {
             Controls.MenuItem {
                 text: i18n("Navigate to here")
                 icon.name: "map-symbolic"
-                visible: routingController.isAvailable && root.conference.indoorRoutingEnabled
+                visible: routingController.available && root.conference.indoorRoutingEnabled
                 onTriggered: {
                     routingController.setEndPosition(contextMenu.ev.geoPosition.y, contextMenu.ev.geoPosition.x, map.view.floorLevel);
                     routingController.searchRoute();
@@ -155,7 +155,7 @@ Kirigami.Page {
             }
             Controls.MenuItem {
                 id: contextMenuInfoAction
-                enabled: !ev.element.isNull && (infoModel.name !== "" || infoModel.debug)
+                enabled: !contextMenu.ev.element.isNull && (infoModel.name !== "" || infoModel.debug)
                 text: i18n("Show information")
                 icon.name: "documentinfo"
                 onTriggered: infoDialog.open()
