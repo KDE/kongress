@@ -48,10 +48,19 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormTextDelegate {
-            visible: root.event && event.location.length > 0
+            visible: root.event && event.location.length > 0 && !Kongress.ConferenceController.activeConference.hasVenueIndoorMap
             icon.name: "find-location"
 
             text: root.event ? event.location : ""
+        }
+        FormCard.FormButtonDelegate {
+            visible: root.event && event.location.length > 0 && Kongress.ConferenceController.activeConference.hasVenueIndoorMap
+            icon.name: "find-location"
+            text: root.event ? event.location : ""
+            onClicked: {
+                pageStack.pop();
+                pageStack.push(indoorMapView, {roomName: event.location});
+            }
         }
 
         FormCard.FormDelegateSeparator {

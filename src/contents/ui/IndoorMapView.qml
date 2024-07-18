@@ -15,6 +15,9 @@ Kirigami.Page {
     id: root
     required property variant conference
 
+    /** The room to show/select initially. */
+    property string roomName
+
     title: {
         if (map.mapLoader.isLoading || map.hasError || map.floorLevels.rowCount() == 0)
             return i18nc("@title", "Map");
@@ -82,6 +85,16 @@ Kirigami.Page {
         roomModel: RoomModel {
             id: roomModel
             mapData: map.mapData
+
+            onMapDataChanged: {
+                const row = roomModel.findRoom(root.roomName);
+                if (row >= 0) {
+                    const idx = roomModel.index(row, 0);
+                    map.view.floorLevel = roomModel.data(idx, RoomModel.LevelRole)
+                    map.view.setZoomLevel(21, Qt.point(map.width / 2.0, map.height / 2.0));
+                    map.view.centerOnGeoCoordinate(roomModel.data(idx, RoomModel.CoordinateRole));
+                }
+            }
         }
         onRoomSelected: (room) => {
             map.view.floorLevel = room.level;
