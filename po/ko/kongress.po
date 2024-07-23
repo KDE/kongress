@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:41+0000\n"
+"POT-Creation-Date: 2024-07-23 00:42+0000\n"
 "PO-Revision-Date: 2021-07-31 16:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -69,17 +69,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "자세히"
 
-#: contents/ui/EventInfo.qml:83
+#: contents/ui/EventInfo.qml:92
 #, kde-format
 msgid "Web Page"
 msgstr "홈페이지"
 
-#: contents/ui/EventInfo.qml:97
+#: contents/ui/EventInfo.qml:106
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
 
-#: contents/ui/EventInfo.qml:97
+#: contents/ui/EventInfo.qml:106
 #, kde-format
 msgid "Favorite"
 msgstr "책갈피"
@@ -171,61 +171,61 @@ msgstr "설정"
 msgid "About"
 msgstr "정보"
 
-#: contents/ui/IndoorMapView.qml:20 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:23 contents/ui/MapView.qml:19
 #, fuzzy, kde-format
 #| msgid "Map"
 msgctxt "@title"
 msgid "Map"
 msgstr "지도"
 
-#: contents/ui/IndoorMapView.qml:23
+#: contents/ui/IndoorMapView.qml:26
 #, kde-format
 msgid "Floor %1"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:36
+#: contents/ui/IndoorMapView.qml:39
 #, kde-format
 msgid "Find Room"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:42
+#: contents/ui/IndoorMapView.qml:45
 #, kde-format
 msgid "Find Amenity"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:48 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:51 contents/ui/MapView.qml:31
 #, fuzzy, kde-format
 #| msgid "OpenStreetMap"
 msgid "Open Map"
 msgstr "OpenStreetMap"
 
-#: contents/ui/IndoorMapView.qml:139
+#: contents/ui/IndoorMapView.qml:152
 #, kde-format
 msgid "Navigate from here"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:148
+#: contents/ui/IndoorMapView.qml:161
 #, kde-format
 msgid "Navigate to here"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:159
+#: contents/ui/IndoorMapView.qml:172
 #, kde-format
 msgid "Show information"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:178
+#: contents/ui/IndoorMapView.qml:191
 #, kde-format
 msgid "Switched to floor %1"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:233
+#: contents/ui/IndoorMapView.qml:246
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr ""
 
-#: contents/ui/IndoorMapView.qml:242
+#: contents/ui/IndoorMapView.qml:255
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"

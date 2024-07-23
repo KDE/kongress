@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:41+0000\n"
-"PO-Revision-Date: 2024-06-24 22:40+0200\n"
+"POT-Creation-Date: 2024-07-23 00:42+0000\n"
+"PO-Revision-Date: 2024-07-05 09:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -68,17 +68,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Dettagli evento"
 
-#: contents/ui/EventInfo.qml:83
+#: contents/ui/EventInfo.qml:92
 #, kde-format
 msgid "Web Page"
 msgstr "Pagina web"
 
-#: contents/ui/EventInfo.qml:97
+#: contents/ui/EventInfo.qml:106
 #, kde-format
 msgid "Delete"
 msgstr "Elimina"
 
-#: contents/ui/EventInfo.qml:97
+#: contents/ui/EventInfo.qml:106
 #, kde-format
 msgid "Favorite"
 msgstr "Preferito"
@@ -171,59 +171,59 @@ msgstr "Impostazioni"
 msgid "About"
 msgstr "Informazioni"
 
-#: contents/ui/IndoorMapView.qml:20 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:23 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Mappa"
 
-#: contents/ui/IndoorMapView.qml:23
+#: contents/ui/IndoorMapView.qml:26
 #, kde-format
 msgid "Floor %1"
 msgstr "Piano %1"
 
-#: contents/ui/IndoorMapView.qml:36
+#: contents/ui/IndoorMapView.qml:39
 #, kde-format
 msgid "Find Room"
 msgstr "Trova stanza"
 
-#: contents/ui/IndoorMapView.qml:42
+#: contents/ui/IndoorMapView.qml:45
 #, kde-format
 msgid "Find Amenity"
 msgstr "Trova attrazioni"
 
-#: contents/ui/IndoorMapView.qml:48 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:51 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Apri la mappa"
 
-#: contents/ui/IndoorMapView.qml:139
+#: contents/ui/IndoorMapView.qml:152
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Naviga da qui"
 
-#: contents/ui/IndoorMapView.qml:148
+#: contents/ui/IndoorMapView.qml:161
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Naviga qui"
 
-#: contents/ui/IndoorMapView.qml:159
+#: contents/ui/IndoorMapView.qml:172
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Mostra informazioni"
 
-#: contents/ui/IndoorMapView.qml:178
+#: contents/ui/IndoorMapView.qml:191
 #, kde-format
 msgid "Switched to floor %1"
 msgstr "Passato al piano %1"
 
-#: contents/ui/IndoorMapView.qml:233
+#: contents/ui/IndoorMapView.qml:246
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "Scendi di un piano"
 
-#: contents/ui/IndoorMapView.qml:242
+#: contents/ui/IndoorMapView.qml:255
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
