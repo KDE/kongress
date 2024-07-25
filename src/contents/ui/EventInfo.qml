@@ -59,7 +59,11 @@ FormCard.FormCardPage {
             text: root.event ? event.location : ""
             onClicked: {
                 pageStack.pop();
-                pageStack.push(indoorMapView, {roomName: event.location});
+                pageStack.push(indoorMapView, {
+                    roomName: event.location,
+                    beginTime: event.scheduleStartDt,
+                    endTime: event.scheduleEndDt
+                });
             }
         }
 

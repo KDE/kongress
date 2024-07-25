@@ -17,6 +17,9 @@ Kirigami.Page {
 
     /** The room to show/select initially. */
     property string roomName
+    /** The time range for which to show the map. */
+    property date beginTime
+    property date endTime
 
     title: {
         if (map.mapLoader.isLoading || map.hasError || map.floorLevels.rowCount() == 0)
@@ -85,6 +88,8 @@ Kirigami.Page {
         roomModel: RoomModel {
             id: roomModel
             mapData: map.mapData
+            beginTime: map.view.beginTime
+            endTime: map.view.endTime
 
             onMapDataChanged: {
                 const row = roomModel.findRoom(root.roomName);
@@ -225,11 +230,16 @@ Kirigami.Page {
         target: map.mapLoader
         function onDone() {
             map.timeZone = root.conference.timeZoneId;
-            // TODO this is only approximately correct due to how JS deals with date-only values and timezones, but good enough for now
-            map.view.beginTime = new Date(root.conference.days[0]);
-            let end = new Date(root.conference.days[root.conference.days.length - 1]);
-            end.setDate(end.getDate() + 1);
-            map.view.endTime = end;
+            if (isNaN(root.beginTime.getTime()) && isNaN(root.endTime.getTime())) {
+                // TODO this is only approximately correct due to how JS deals with date-only values and timezones, but good enough for now
+                map.view.beginTime = new Date(root.conference.days[0]);
+                let end = new Date(root.conference.days[root.conference.days.length - 1]);
+                end.setDate(end.getDate() + 1);
+                map.view.endTime = end;
+            } else {
+                map.view.beginTime = root.beginTime;
+                map.view.endTime = root.endTime;
+            }
         }
     }
 
