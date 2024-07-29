@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:42+0000\n"
+"POT-Creation-Date: 2024-07-29 00:42+0000\n"
 "PO-Revision-Date: 2024-07-03 07:47+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -69,17 +69,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Podrobnosti dogodka"
 
-#: contents/ui/EventInfo.qml:92
+#: contents/ui/EventInfo.qml:96
 #, kde-format
 msgid "Web Page"
 msgstr "Spletna stran"
 
-#: contents/ui/EventInfo.qml:106
+#: contents/ui/EventInfo.qml:110
 #, kde-format
 msgid "Delete"
 msgstr "Zbriši"
 
-#: contents/ui/EventInfo.qml:106
+#: contents/ui/EventInfo.qml:110
 #, kde-format
 msgid "Favorite"
 msgstr "Priljubljena"
@@ -174,59 +174,59 @@ msgstr "Nastavitve"
 msgid "About"
 msgstr "O programu"
 
-#: contents/ui/IndoorMapView.qml:23 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Zemljevid"
 
-#: contents/ui/IndoorMapView.qml:26
+#: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
 msgstr "Nadstropje %1"
 
-#: contents/ui/IndoorMapView.qml:39
+#: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
 msgstr "Najdi sobo"
 
-#: contents/ui/IndoorMapView.qml:45
+#: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
 msgstr "Poišči ugodnost"
 
-#: contents/ui/IndoorMapView.qml:51 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Odpri zemljevid"
 
-#: contents/ui/IndoorMapView.qml:152
+#: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
 msgstr "Krmari od tu"
 
-#: contents/ui/IndoorMapView.qml:161
+#: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
 msgstr "Krmari sem"
 
-#: contents/ui/IndoorMapView.qml:172
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
 msgstr "Prikaži informacije"
 
-#: contents/ui/IndoorMapView.qml:191
+#: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
 msgstr "Preklopljeno na nadstropje %1"
 
-#: contents/ui/IndoorMapView.qml:246
+#: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "Nadstropje dol"
 
-#: contents/ui/IndoorMapView.qml:255
+#: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
