@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 02:35+0000\n"
+"POT-Creation-Date: 2024-07-29 02:35+0000\n"
 "PO-Revision-Date: 2024-07-05 15:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -68,17 +68,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Detalios de evento"
 
-#: contents/ui/EventInfo.qml:92
+#: contents/ui/EventInfo.qml:96
 #, kde-format
 msgid "Web Page"
 msgstr "Pagina Web"
 
-#: contents/ui/EventInfo.qml:106
+#: contents/ui/EventInfo.qml:110
 #, kde-format
 msgid "Delete"
 msgstr "Dele"
 
-#: contents/ui/EventInfo.qml:106
+#: contents/ui/EventInfo.qml:110
 #, kde-format
 msgid "Favorite"
 msgstr "Favorito"
@@ -171,59 +171,59 @@ msgstr "Preferentias"
 msgid "About"
 msgstr "A proposito"
 
-#: contents/ui/IndoorMapView.qml:23 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Mappa"
 
-#: contents/ui/IndoorMapView.qml:26
+#: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
 msgstr "Etage %1"
 
-#: contents/ui/IndoorMapView.qml:39
+#: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
 msgstr "Trova sala "
 
-#: contents/ui/IndoorMapView.qml:45
+#: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
 msgstr "Trova Amenitate"
 
-#: contents/ui/IndoorMapView.qml:51 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Aperi mappa"
 
-#: contents/ui/IndoorMapView.qml:152
+#: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
 msgstr "Naviga ex hic"
 
-#: contents/ui/IndoorMapView.qml:161
+#: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
 msgstr "Naviga a hic"
 
-#: contents/ui/IndoorMapView.qml:172
+#: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
 msgstr "Monstra information "
 
-#: contents/ui/IndoorMapView.qml:191
+#: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
 msgstr "Commutate a etage %1"
 
-#: contents/ui/IndoorMapView.qml:246
+#: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
 msgstr "Etage  a basso"
 
-#: contents/ui/IndoorMapView.qml:255
+#: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
