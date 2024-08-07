@@ -76,7 +76,7 @@ if (ANDROID)
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
 else()
-    target_link_libraries(kongress PRIVATE Qt::Widgets Qt::DBus)
+    target_link_libraries(kongress PRIVATE Qt::Widgets Qt::DBus KF6::Crash)
 endif()
 
 install(TARGETS kongress ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

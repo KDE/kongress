@@ -26,6 +26,7 @@ target_link_libraries(kongressac
     KF6::DBusAddons
     KF6::Notifications
     KF6::I18n
+    KF6::Crash
     Qt::DBus
     )
 

@@ -10,6 +10,8 @@
 #include <QGuiApplication>
 #else
 #include <QApplication>
+
+#include <KCrash>
 #endif
 
 #include "calendarcontroller.h"
@@ -21,9 +23,11 @@
 #include "localcalendar.h"
 #include "settingscontroller.h"
 #include "version.h"
+
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QNetworkAccessManager>
@@ -60,6 +64,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setHomepage(QStringLiteral("https://invent.kde.org/utilities/kongress"));
 
     KAboutData::setApplicationData(about);
+
+#ifndef Q_OS_ANDROID
+    KCrash::initialize();
+#endif
 
     QCommandLineParser parser;
     about.setupCommandLine(&parser);

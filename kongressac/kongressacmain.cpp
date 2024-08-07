@@ -6,7 +6,9 @@
 
 #include "calalarmclient.h"
 #include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
+
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QGuiApplication>
@@ -24,6 +26,8 @@ int main(int argc, char **argv)
                          QString{},
                          QString{}};
     aboutData.addAuthor(i18n("Dimitris Kardarakos"), i18n("Maintainer"), QStringLiteral("dimkard@posteo.net"));
+
+    KCrash::initialize();
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
