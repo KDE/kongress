@@ -21,8 +21,8 @@ share/locale/.*/LC_MESSAGES/(kcodecs6|kconfig6)_qt\.qm
 share/locale/.*/LC_MESSAGES/(kcontacts6|kpublictransport)\.mo
 
 # QML leftovers of dependencies we don't need
-lib/qml/org/kde/kpublictransport
-lib/qml/org/kde/kosmindoormap/kpublictransport
+lib/qml/org/kde/kpublictransport/.*
+lib/qml/org/kde/kosmindoormap/kpublictransport/.*
 
 # newer Kirigami Addon versions depend on Qt.labs.platform for ColorDialog, which as a QtWidgets dependency
 # remove that the hard way, we don't need a color dialog
