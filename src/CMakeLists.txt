@@ -61,7 +61,9 @@ if (ANDROID)
         favorite
         find-location
         folder-open
+        go-down-symbolic
         go-next
+        go-up-symbolic
         group
         help-about-symbolic
         internet-services
