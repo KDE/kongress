@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:42+0000\n"
+"POT-Creation-Date: 2024-08-10 00:45+0000\n"
 "PO-Revision-Date: 2020-02-02 20:34+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -292,28 +292,28 @@ msgstr ""
 msgid "Talk added to favorites"
 msgstr ""
 
-#: main.cpp:52
+#: main.cpp:56
 #, kde-format
 msgid "Kongress"
 msgstr ""
 
-#: main.cpp:54
+#: main.cpp:58
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr ""
 
-#: main.cpp:56
+#: main.cpp:60
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr ""
 
-#: main.cpp:59
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr ""
 
-#: main.cpp:59
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
