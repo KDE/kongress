@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:45+0000\n"
-"PO-Revision-Date: 2021-07-31 16:21+0200\n"
+"PO-Revision-Date: 2024-08-19 23:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,11 +63,10 @@ msgid "Reload"
 msgstr "새로 고침"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "자세히"
+msgstr "이벤트 정보"
 
 #: contents/ui/EventInfo.qml:96
 #, kde-format
@@ -172,8 +171,7 @@ msgid "About"
 msgstr "정보"
 
 #: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "지도"
@@ -181,55 +179,54 @@ msgstr "지도"
 #: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1층"
 
 #: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "방 찾기"
 
 #: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "어메니티 찾기"
 
 #: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "지도 열기"
 
 #: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "여기에서 길 찾기"
 
 #: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "여기로 길 찾기"
 
 #: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "정보 보기"
 
 #: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "%1층으로 전환됨"
 
 #: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "한 층 아래"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "한 층 위"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
