@@ -7,6 +7,7 @@
 #include <QtGlobal>
 
 #ifdef Q_OS_ANDROID
+#include <KColorSchemeManager>
 #include <QGuiApplication>
 #else
 #include <QApplication>
@@ -39,6 +40,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #ifdef Q_OS_ANDROID
     QGuiApplication app{argc, argv};
     QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
+    KColorSchemeManager colorMgr; // enables automatic dark mode handling
 #else
     QApplication app{argc, argv};
     // Default to org.kde.desktop style unless the user forces another style

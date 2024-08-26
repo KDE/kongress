@@ -51,6 +51,7 @@ find_package(KOSMIndoorMap REQUIRED)
 
 if (ANDROID)
     find_package(OpenSSL REQUIRED)
+    find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS ColorScheme)
 else()
     find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
