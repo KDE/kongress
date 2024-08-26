@@ -13,6 +13,7 @@ Dependencies:
     'frameworks/ki18n': '@latest-kf6'
     'frameworks/kcalendarcore': '@latest-kf6'
     'frameworks/kcoreaddons': '@latest-kf6'
+    'frameworks/kcolorscheme': '@latest-kf6'
 
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6']
   'require':
