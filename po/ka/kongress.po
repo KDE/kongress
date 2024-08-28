@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 02:35+0000\n"
+"POT-Creation-Date: 2024-08-28 02:48+0000\n"
 "PO-Revision-Date: 2024-07-03 05:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -294,28 +294,28 @@ msgstr ""
 msgid "Talk added to favorites"
 msgstr "საუბარი სანიშნეებში ჩაემატა"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "Kongress"
 msgstr "Kongress"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgid "KDE Conference Companion"
 msgstr "KDE -ის კონფერენციის პარტნიორი"
 
-#: main.cpp:56
+#: main.cpp:58
 #, kde-format
 msgid "© 2021 KDE Community"
 msgstr "© 2021 KDE -ის საზოგადოება"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
 msgstr "Dimitris Kardarakos"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
