@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:42+0000\n"
-"PO-Revision-Date: 2024-07-03 09:46+0200\n"
+"PO-Revision-Date: 2024-08-30 10:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,12 +43,12 @@ msgstr "L'exportació s'ha completat correctament"
 #: conferencemodel.cpp:64
 #, kde-format
 msgid "Past"
-msgstr "Darrers"
+msgstr "Passats"
 
 #: conferencemodel.cpp:65
 #, kde-format
 msgid "Upcoming"
-msgstr "Propers"
+msgstr "Pròxims"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
