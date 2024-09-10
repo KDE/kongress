@@ -19,7 +19,7 @@ A set of conferences have been preloaded and are available after installation. U
 ### Build
 
 ```
-git clone https://invent.kde.org/dkardarakos/kongress.git
+git clone https://invent.kde.org/utilities/kongress
 cd kongress
 mkdir build
 cd build
