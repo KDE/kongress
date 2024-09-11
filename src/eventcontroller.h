@@ -54,7 +54,7 @@ private:
      */
     QVariantMap eventCheck(LocalCalendar *calendar, const QVariantMap &event);
 
-    CalendarController *m_cal_controller;
-    SettingsController *m_settings_controller;
+    CalendarController *m_cal_controller = nullptr;
+    SettingsController *const m_settings_controller;
 };
 #endif

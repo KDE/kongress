@@ -48,9 +48,9 @@ private:
     void loadConferencesFromFile(QFile &jsonFile);
     QList<Conference> m_conferences;
     Conference m_active_conference;
-    QFile *m_conferences_file;
+    QFile *m_conferences_file = nullptr;
 
     class Private;
-    Private *d;
+    Private *const d;
 };
 #endif

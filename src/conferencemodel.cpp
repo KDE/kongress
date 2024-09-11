@@ -12,8 +12,6 @@
 
 ConferenceModel::ConferenceModel(QObject *parent)
     : QAbstractListModel{parent}
-    , m_controller{nullptr}
-    , m_busy_downloading{false}
 {
 }
 

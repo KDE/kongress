@@ -45,9 +45,9 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private *d;
+    Private *const d;
 
-    AlarmChecker *m_alarm_checker;
+    AlarmChecker *const m_alarm_checker;
 };
 
 #endif

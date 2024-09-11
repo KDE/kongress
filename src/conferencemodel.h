@@ -46,8 +46,8 @@ private:
     void loadConferences();
     QString pastOrUpcoming(const int index) const;
 
-    ConferenceController *m_controller;
+    ConferenceController *m_controller = nullptr;
     QList<Conference> m_conferences;
-    bool m_busy_downloading;
+    bool m_busy_downloading = false;
 };
 #endif

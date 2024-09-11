@@ -84,8 +84,8 @@ private:
     KCalendarCore::Event::List m_events;
     QDate m_filterdt;
     QString m_category;
-    LocalCalendar *m_local_calendar;
-    SettingsController *m_settings_controller;
+    LocalCalendar *m_local_calendar = nullptr;
+    SettingsController *const m_settings_controller;
 };
 
 #endif // EVENTMODEL_H

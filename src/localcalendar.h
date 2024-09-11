@@ -81,8 +81,8 @@ private:
     QString m_calendar_url;
     int m_calendar_type;
     KCalendarCore::MemoryCalendar::Ptr m_calendar;
-    CalendarController *m_cal_controller;
-    AlarmChecker *m_alarm_checker;
+    CalendarController *m_cal_controller = nullptr;
+    AlarmChecker *const m_alarm_checker;
     bool m_busy_downloading;
 };
 #endif // LOCALCALENDAR_H

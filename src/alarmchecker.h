@@ -30,6 +30,6 @@ public:
     int active();
 
 private:
-    QDBusInterface *m_interface;
+    QDBusInterface *m_interface = nullptr;
 };
 #endif // ALARM_CHECKER_H

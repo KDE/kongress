@@ -56,7 +56,7 @@ private:
     QMap<QString, KCalendarCore::MemoryCalendar::Ptr> m_calendars;
 
     class Private;
-    Private *d;
+    Private *const d;
 };
 
 #endif
