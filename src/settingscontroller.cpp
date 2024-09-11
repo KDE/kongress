@@ -15,7 +15,7 @@ class SettingsController::Private
 {
 public:
     Private()
-        : config(u"kongressrc"_s){};
+        : config(u"kongressrc"_s) {};
     KConfig config;
 };
 
