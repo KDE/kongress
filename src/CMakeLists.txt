@@ -13,6 +13,16 @@ set(kongress_SRCS
     conferencecontroller.cpp
     conferencemodel.cpp
     alarmchecker.cpp
+
+    settingscontroller.h
+    calendarcontroller.h
+    localcalendar.h
+    eventmodel.h
+    eventcontroller.h
+    conference.h
+    conferencecontroller.h
+    conferencemodel.h
+    alarmchecker.h
     )
 
 add_executable(kongress ${kongress_SRCS} ${RESOURCES})
