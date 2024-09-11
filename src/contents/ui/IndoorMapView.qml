@@ -22,7 +22,7 @@ Kirigami.Page {
     property date endTime
 
     title: {
-        if (map.mapLoader.isLoading || map.hasError || map.floorLevels.rowCount() == 0)
+        if (map.mapLoader.isLoading || map.hasError || map.floorLevels.rowCount() === 0)
             return i18nc("@title", "Map");
         if (map.floorLevels.hasName(map.view.floorLevel))
             return map.floorLevels.name(map.view.floorLevel);
