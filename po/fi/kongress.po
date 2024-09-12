@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:42+0000\n"
+"POT-Creation-Date: 2024-09-12 00:42+0000\n"
 "PO-Revision-Date: 2022-02-12 19:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Kalenteritiedostoa ei voi tallentaa. Vienti epäonnistui."
 msgid "Export completed successfully"
 msgstr "Vienti onnistui"
 
-#: conferencemodel.cpp:64
+#: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
 msgstr "Menneet"
 
-#: conferencemodel.cpp:65
+#: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
 msgstr "Tulossa"

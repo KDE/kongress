@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:42+0000\n"
+"POT-Creation-Date: 2024-09-12 00:42+0000\n"
 "PO-Revision-Date: 2024-07-03 17:29+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -40,12 +40,12 @@ msgstr ""
 msgid "Export completed successfully"
 msgstr "La exportación se ha completado con éxito"
 
-#: conferencemodel.cpp:64
+#: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
 msgstr "Pasadas"
 
-#: conferencemodel.cpp:65
+#: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
 msgstr "Próximas"

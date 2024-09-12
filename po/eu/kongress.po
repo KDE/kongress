@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:42+0000\n"
+"POT-Creation-Date: 2024-09-12 00:42+0000\n"
 "PO-Revision-Date: 2024-07-10 00:12+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -40,12 +40,12 @@ msgstr "Egutegi fitxategia ezin da gorde. Esportatzea huts egin du."
 msgid "Export completed successfully"
 msgstr "Esportatzea ondo burutu da"
 
-#: conferencemodel.cpp:64
+#: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
 msgstr "Iragana"
 
-#: conferencemodel.cpp:65
+#: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
 msgstr "Datorrena"

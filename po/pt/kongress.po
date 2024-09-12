@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:42+0000\n"
+"POT-Creation-Date: 2024-09-12 00:42+0000\n"
 "PO-Revision-Date: 2021-01-07 10:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr "Não é possível gravar o ficheiro do calendário. A exportação falho
 msgid "Export completed successfully"
 msgstr "A exportação terminou com sucesso"
 
-#: conferencemodel.cpp:64
+#: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
 msgstr "Anterior"
 
-#: conferencemodel.cpp:65
+#: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
 msgstr "Seguinte"

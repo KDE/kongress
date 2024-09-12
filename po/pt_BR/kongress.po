@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:42+0000\n"
+"POT-Creation-Date: 2024-09-12 00:42+0000\n"
 "PO-Revision-Date: 2021-05-06 13:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "Não foi possível salvar o calendário. Falha na exportação."
 msgid "Export completed successfully"
 msgstr "Exportação concluída com sucesso"
 
-#: conferencemodel.cpp:64
+#: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
 msgstr "Passado"
 
-#: conferencemodel.cpp:65
+#: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
 msgstr "Próximo"
