@@ -19,17 +19,14 @@
     "separate-locales": false,
     "modules": [
     	{
-	    "name": "kirigami-addons",
-	    "buildsystem": "cmake-ninja",
-	    "config-opts": [
-		"-DBUILD_TESTING=OFF",
-		"-DCMAKE_BUILD_TYPE=Release"
-	    ],
-	    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ],
-            "cleanup": [
-                "/lib/cmake"
-            ]
-        },
+            "name": "kirigami-addons",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ]
+	    },
         {
             "name": "kopeninghours",
             "config-opts": [
@@ -38,13 +35,7 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/libraries/kopeninghours",
-                    "branch": "master"
-                }
-            ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "master" } ],
             "cleanup": [
                 "/include",
                 "/lib/cmake",
@@ -54,22 +45,15 @@
         {
             "name": "kosmindoormap",
             "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-USE_KPUBLICTRANSPORT=OFF"
+                "-DBUILD_TESTING=OFF"
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/libraries/kosmindoormap",
-                    "branch": "master"
-                }
-            ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "master" } ],
             "cleanup": [
                 "/include",
                 "/lib/cmake",
-                "/share/qlogging-categories6"
+                "/mkspecs"
             ]
         },
         {
