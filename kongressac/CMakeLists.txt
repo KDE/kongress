@@ -12,6 +12,12 @@ set(kongressac_SRCS
     notificationhandler.cpp
     solidwakeupbackend.cpp
     wakeupmanager.cpp
+    calalarmclient.h
+    alarmsmodel.h
+    alarmnotification.h
+    notificationhandler.h
+    solidwakeupbackend.h
+    wakeupmanager.h
 )
 
 qt_add_dbus_adaptor(kongressac_SRCS org.kde.kongressac.xml calalarmclient.h CalAlarmClient)
