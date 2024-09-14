@@ -42,8 +42,8 @@ public:
     void setText(const QString &alarmText);
 
 private:
-    KNotification *m_notification;
+    KNotification *const m_notification;
     QString m_uid;
-    NotificationHandler *m_notification_handler;
+    NotificationHandler *const m_notification_handler;
 };
 #endif

@@ -12,10 +12,10 @@ using namespace Qt::Literals::StringLiterals;
 
 AlarmNotification::AlarmNotification(NotificationHandler *handler, const QString &uid)
     : QObject{handler}
+    , m_notification(new KNotification{u"alarm"_s})
     , m_uid{uid}
     , m_notification_handler{handler}
 {
-    m_notification = new KNotification{u"alarm"_s};
 }
 
 void AlarmNotification::send() const
