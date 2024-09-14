@@ -11,7 +11,6 @@
 #include <QObject>
 
 class NotificationHandler;
-class WakeupBackend;
 class WakeupManager;
 
 /**
