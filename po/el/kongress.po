@@ -173,8 +173,7 @@ msgid "About"
 msgstr "Σχετικά"
 
 #: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Χάρτης"
