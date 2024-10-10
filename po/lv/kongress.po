@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:42+0000\n"
-"PO-Revision-Date: 2024-04-05 16:46+0300\n"
+"PO-Revision-Date: 2024-10-08 17:14+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -64,11 +64,10 @@ msgid "Reload"
 msgstr "Pārlādēt"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Informācija"
+msgstr "Informācija par notikumu"
 
 #: contents/ui/EventInfo.qml:96
 #, kde-format
@@ -175,8 +174,7 @@ msgid "About"
 msgstr "Par"
 
 #: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Karte"
@@ -184,55 +182,54 @@ msgstr "Karte"
 #: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1. stāvs"
 
 #: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Atrast telpu"
 
 #: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Atrast ērtības"
 
 #: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Atvērt karti"
 
 #: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Navigācija no šīs vietas"
 
 #: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Navigācija uz šo vietu"
 
 #: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Rādīt informāciju"
 
 #: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Pārslēdzās uz %1. stāvu"
 
 #: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Stāvu zemāk"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Stāvu augstāk"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
