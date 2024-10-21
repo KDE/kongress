@@ -28,6 +28,9 @@
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#if KI18N_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+#include <KLocalizedQmlContext>
+#endif
 
 #include <QCommandLineParser>
 #include <QIcon>
@@ -107,7 +110,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonInstance<EventController>("org.kde.kongress", 0, 1, "EventController", &eventController);
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextObject(new KLocalizedContext{&engine});
+#if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+#else
+    engine.rootContext()->setContextObject(new KLocalizedQmlContext(&engine));
+#endif
     engine.loadFromModule("org.kde.kongress", "Main");
 
     if (engine.rootObjects().isEmpty()) {
