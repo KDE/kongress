@@ -22,7 +22,12 @@ class EventController : public QObject
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
 
 public:
-    enum EventCheck { NotExistsNotOverlapping = -1, Exists, NotExistsButOverlaps, NoCalendarExists };
+    enum EventCheck {
+        NotExistsNotOverlapping = -1,
+        Exists,
+        NotExistsButOverlaps,
+        NoCalendarExists
+    };
 
     explicit EventController(QObject *parent = nullptr);
 
