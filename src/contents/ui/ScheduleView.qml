@@ -74,11 +74,28 @@ Kirigami.ScrollablePage {
             contentItem: RowLayout {
                 spacing: Kirigami.Units.largeSpacing * 2
 
-                Controls.Label {
-                    text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
+                ColumnLayout {
                     Layout.alignment: Qt.AlignTop
-                }
+                    Controls.Label {
+                        text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
+                    }
+                    RowLayout {
+                        Kirigami.Icon {
+                            Layout.maximumHeight: location.implicitHeight
+                            Layout.maximumWidth:  location.implicitHeight
+                            visible: model.favorite
+                            source: "starred-symbolic"
+                            opacity: 0.7
+                        }
 
+                        Controls.Label {
+                            id: location
+                            text: model.location
+                            font: Kirigami.Theme.smallFont
+                            opacity: 0.7
+                        }
+                    }
+                }
                 Controls.Label {
                     visible: model.summary !== ""
                     text: model.summary
@@ -96,5 +113,6 @@ Kirigami.ScrollablePage {
         filterdt: root.eventStartDt
         calendar: root.roCalendar
         eventCategory: root.category
+        favoritesCalendar: root.rwCalendar
     }
 }

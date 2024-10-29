@@ -18,10 +18,12 @@ EventModel::EventModel(QObject *parent)
     , m_category{QString{}}
     , m_local_calendar{nullptr}
     , m_settings_controller{new SettingsController}
+    , m_favorites_calendar{nullptr}
 {
     connect(this, &EventModel::filterdtChanged, this, &EventModel::loadEvents);
     connect(this, &EventModel::calendarChanged, this, &EventModel::loadEvents);
     connect(this, &EventModel::eventCategoryChanged, this, &EventModel::loadEvents);
+    connect(this, &EventModel::favoritesCalendarChanged, this, &EventModel::loadEvents);
 }
 
 QDate EventModel::filterdt() const
@@ -50,6 +52,20 @@ void EventModel::setCalendar(LocalCalendar *const calendarPtr)
     Q_EMIT calendarChanged();
 }
 
+LocalCalendar *EventModel::favoritesCalendar() const
+{
+    return m_favorites_calendar;
+}
+
+void EventModel::setFavoritesCalendar(LocalCalendar *const calendarPtr)
+{
+    m_favorites_calendar = calendarPtr;
+
+    connect(m_favorites_calendar, &LocalCalendar::eventsChanged, this, &EventModel::loadEvents);
+
+    Q_EMIT favoritesCalendarChanged();
+}
+
 QHash<int, QByteArray> EventModel::roleNames() const
 {
     return {{Uid, "uid"},
@@ -73,7 +89,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
             {StartEndDt, "startEndDt"},
             {StartEndDtLocal, "startEndDtLocal"},
             {Overlapping, "overlapping"},
-            {ConferenceTzId, "conferenceTzId"}};
+            {ConferenceTzId, "conferenceTzId"},
+            {Favorite, "favorite"}};
 }
 
 static void applyTimeZone(QDateTime &dt, const QTimeZone &tz)
@@ -180,6 +197,18 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return overlappingEvents(row);
     case ConferenceTzId: {
         return calendarTz.id();
+    }
+    case Favorite: {
+        auto favorites_memorycalendar = m_favorites_calendar->memorycalendar();
+        auto uid = m_events.at(row)->uid();
+
+        auto favorite_event = favorites_memorycalendar->event(uid);
+
+        if (favorite_event == nullptr) {
+            return false;
+        } else {
+            return true;
+        }
     }
     default:
         return QVariant{};

@@ -21,6 +21,7 @@ class EventModel : public QAbstractListModel
     Q_PROPERTY(QDate filterdt READ filterdt WRITE setFilterdt NOTIFY filterdtChanged)
     Q_PROPERTY(LocalCalendar *calendar READ calendar WRITE setCalendar NOTIFY calendarChanged)
     Q_PROPERTY(QString eventCategory READ eventCategory WRITE setEventCategory NOTIFY eventCategoryChanged)
+    Q_PROPERTY(LocalCalendar *favoritesCalendar READ favoritesCalendar WRITE setFavoritesCalendar NOTIFY favoritesCalendarChanged)
 
 public:
     explicit EventModel(QObject *parent = nullptr);
@@ -48,7 +49,8 @@ public:
         StartEndDt,
         StartEndDtLocal,
         Overlapping,
-        ConferenceTzId
+        ConferenceTzId,
+        Favorite
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -64,12 +66,16 @@ public:
     QString eventCategory() const;
     void setEventCategory(const QString &category);
 
+    LocalCalendar *favoritesCalendar() const;
+    void setFavoritesCalendar(LocalCalendar *const calendarPtr);
+
 public Q_SLOTS:
     void loadEvents();
 
 Q_SIGNALS:
     void filterdtChanged();
     void calendarChanged();
+    void favoritesCalendarChanged();
     void eventCategoryChanged();
 
 private:
@@ -86,6 +92,7 @@ private:
     QString m_category;
     LocalCalendar *m_local_calendar = nullptr;
     SettingsController *const m_settings_controller;
+    LocalCalendar *m_favorites_calendar = nullptr;
 };
 
 #endif // EVENTMODEL_H
