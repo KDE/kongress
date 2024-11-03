@@ -49,41 +49,6 @@
   <name xml:lang="zh-CN">Kongress</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>Conference companion</summary>
-  <summary xml:lang="ca">Aplicació auxiliar de congressos del KDE</summary>
-  <summary xml:lang="ca-valencia">Aplicació auxiliar de congressos de KDE</summary>
-  <summary xml:lang="cs">Pomocná aplikace pro konference KDE</summary>
-  <summary xml:lang="da">Konferenceledsagerprogram fra KDE</summary>
-  <summary xml:lang="de">KDE-Konferenzbegleitanwendung</summary>
-  <summary xml:lang="el">Εφαρμογή συνοδείας του KDE για συνέδρια</summary>
-  <summary xml:lang="en-GB">KDE Conference companion application</summary>
-  <summary xml:lang="eo">KDE-Konferencakompana aplikaĵo</summary>
-  <summary xml:lang="es">Aplicación complementaria KDE Conference</summary>
-  <summary xml:lang="et">KDE konverentsiabiline</summary>
-  <summary xml:lang="eu">KDE konferentzietarako aplikazio laguntzailea</summary>
-  <summary xml:lang="fi">KDE:n konferenssikumppanisovellus</summary>
-  <summary xml:lang="fr">Application Companion pour les conférences sous KDE</summary>
-  <summary xml:lang="gl">Aplicación de acompañamento para conferencias de KDE</summary>
-  <summary xml:lang="he">יישום מלווה לכנסים של KDE</summary>
-  <summary xml:lang="ia">Application de companion de conferentia de KDE</summary>
-  <summary xml:lang="id">Aplikasi pendamping Konferensi KDE</summary>
-  <summary xml:lang="it">Applicazione di supporto per KDE Conference</summary>
-  <summary xml:lang="ka">KDE -ის კონფერენციის პარტნიორი</summary>
-  <summary xml:lang="ko">KDE 콘퍼런스 도우미 앱</summary>
-  <summary xml:lang="lv">KDe konferenču kompanjons</summary>
-  <summary xml:lang="nl">Toepassing Compagnon van KDE Conference</summary>
-  <summary xml:lang="nn">Konferanse­assistent frå KDE</summary>
-  <summary xml:lang="pa">ਕੇਡੀਈ ਕਨਫਰੰਸ ਸਹਾਇਕ ਐਪਲੀਕੇਸ਼ਨ</summary>
-  <summary xml:lang="pl">Program do spotkań od KDE</summary>
-  <summary xml:lang="pt">Aplicação assistente do KDE Conference</summary>
-  <summary xml:lang="pt-BR">Aplicação assistente de conferências da KDE</summary>
-  <summary xml:lang="ru">Приложение-помощник для конференций от KDE</summary>
-  <summary xml:lang="sl">Program za spremljanje konference KDE</summary>
-  <summary xml:lang="sv">KDE konferenskompanjonprogram</summary>
-  <summary xml:lang="tr">KDE Konferans yardımcı uygulaması</summary>
-  <summary xml:lang="uk">KDE-компаньйон для конференцій</summary>
-  <summary xml:lang="x-test">xxKDE Conference companion applicationxx</summary>
-  <summary xml:lang="zh-CN">KDE 会议助理应用</summary>
-  <summary xml:lang="zh-TW">KDE 研討會小幫手應用程式</summary>
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
