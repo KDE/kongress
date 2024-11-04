@@ -49,6 +49,13 @@
   <name xml:lang="zh-CN">Kongress</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>Conference companion</summary>
+  <summary xml:lang="ca">Auxiliar de congressos</summary>
+  <summary xml:lang="es">Complemento de conferencias</summary>
+  <summary xml:lang="he">יישום מלווה לכנסים</summary>
+  <summary xml:lang="nl">Compagnon van conferentie</summary>
+  <summary xml:lang="sl">Spremljevalec konference</summary>
+  <summary xml:lang="uk">Компаньйон для конференцій</summary>
+  <summary xml:lang="x-test">xxConference companionxx</summary>
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
