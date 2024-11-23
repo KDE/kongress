@@ -25,7 +25,19 @@
                 "-DBUILD_TESTING=OFF",
                 "-DCMAKE_BUILD_TYPE=Release"
             ],
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kirigami-addons.git", "branch": "master" } ]
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.5.0.tar.xz",
+                    "sha256": "f9dfd191022b633ea3348f84730d7158a159dfe49668dba0a9e9bd678ac44e54",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 242933,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz"
+                    }
+                }
+            ]
 	    },
         {
             "name": "kopeninghours",
@@ -35,7 +47,7 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "master" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "release/24.12" } ],
             "cleanup": [
                 "/include",
                 "/lib/cmake",
@@ -49,7 +61,7 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "master" } ],
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "release/24.12" } ],
             "cleanup": [
                 "/include",
                 "/lib/cmake",
