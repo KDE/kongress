@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 [Desktop Entry]
 Name=Kongress
+Name[ar]=كونغرس
 Name[ast]=Kongress
 Name[ca]=Kongress
 Name[ca@valencia]=Kongress
@@ -40,6 +41,7 @@ Name[x-test]=xxKongressxx
 Name[zh_CN]=Kongress
 Name[zh_TW]=Kongress
 GenericName=Conference Companion
+GenericName[ar]=رفيق المؤتمر
 GenericName[ca]=Auxiliar de congressos
 GenericName[ca@valencia]=Auxiliar de congressos
 GenericName[cs]=Pomocník pro konference
@@ -73,6 +75,7 @@ GenericName[x-test]=xxConference Companionxx
 GenericName[zh_CN]=会议助理应用
 GenericName[zh_TW]=研討會小幫手
 Comment=Companion application for conferences made by KDE
+Comment[ar]=تطبيق مرافق للمؤتمرات أنشئ بواسطة كيدي
 Comment[ca]=Aplicació auxiliar per als congressos fets per KDE
 Comment[ca@valencia]=Aplicació auxiliar per als congressos fets per KDE
 Comment[de]=Begleitanwendung für Konferenzen von KDE

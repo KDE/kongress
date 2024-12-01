@@ -1,6 +1,7 @@
 [Global]
 IconName=org.kde.kongress
 Comment=Kongress
+Comment[ar]=كونغرس
 Comment[ast]=Kongress
 Comment[ca]=Kongress
 Comment[ca@valencia]=Kongress
@@ -38,6 +39,7 @@ Comment[x-test]=xxKongressxx
 Comment[zh_CN]=Kongress
 Comment[zh_TW]=Kongress
 Name=Kongress
+Name[ar]=كونغرس
 Name[ast]=Kongress
 Name[ca]=Kongress
 Name[ca@valencia]=Kongress
@@ -77,6 +79,7 @@ Name[zh_TW]=Kongress
 
 [Context/uid]
 Name=Incidence uid
+Name[ar]=معرّف الحدث
 Name[ca]=UID de la incidència
 Name[ca@valencia]=UID de la incidència
 Name[da]=Uid for incidens
@@ -111,6 +114,7 @@ Name[x-test]=xxIncidence uidxx
 Name[zh_CN]=事件 UID
 Name[zh_TW]=事件 UID
 Comment=The uid of the incidence of the alarm
+Comment[ar]=رقم التعريف الخاص بحدث التنبيه
 Comment[ca]=L'UID de la incidència de l'alarma
 Comment[ca@valencia]=L'UID de la incidència de l'alarma
 Comment[da]=Uid for alarmens incidens
@@ -147,6 +151,7 @@ Comment[zh_TW]=鬧鐘的事件的獨有 ID
 
 [Event/alarm]
 Name=Alarm
+Name[ar]=منبّه
 Name[ca]=Alarma
 Name[ca@valencia]=Alarma
 Name[cs]=Alarm
@@ -184,6 +189,7 @@ Name[zh_CN]=提醒
 Name[zh_TW]=鬧鐘
 Contexts=uid
 Comment=Alarm Notification
+Comment[ar]=إخطار المنبه
 Comment[ca]=Notificació de l'alarma
 Comment[ca@valencia]=Notificació de l'alarma
 Comment[cs]=Upozornění na upomínku
