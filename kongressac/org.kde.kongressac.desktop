@@ -4,6 +4,7 @@
 
 [Desktop Entry]
 Name=Kongress Reminder Client
+Name[ar]=عميل التذكير كونغرس
 Name[ca]=Client de recordatori Kongress
 Name[ca@valencia]=Client de recordatori Kongress
 Name[da]=Påmindelsesklient til Kongress
@@ -42,6 +43,7 @@ Icon=org.kde.kongress
 Type=Application
 Categories=Qt;KDE;
 GenericName=Kongress Reminder Client
+GenericName[ar]=عميل التذكير كونغرس
 GenericName[ca]=Client de recordatori Kongress
 GenericName[ca@valencia]=Client de recordatori Kongress
 GenericName[da]=Påmindelsesklient til Kongress
