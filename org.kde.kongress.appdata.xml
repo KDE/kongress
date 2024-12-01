@@ -11,6 +11,7 @@
     <name translate="no">KDE</name>
   </developer>
   <name>Kongress</name>
+  <name xml:lang="ar">كونغرس</name>
   <name xml:lang="ast">Kongress</name>
   <name xml:lang="ca">Kongress</name>
   <name xml:lang="ca-valencia">Kongress</name>
@@ -49,6 +50,7 @@
   <name xml:lang="zh-CN">Kongress</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>Conference companion</summary>
+  <summary xml:lang="ar">مرافق المؤتمرات</summary>
   <summary xml:lang="ca">Auxiliar de congressos</summary>
   <summary xml:lang="ca-valencia">Auxiliar de congressos</summary>
   <summary xml:lang="en-GB">Conference companion</summary>
@@ -69,6 +71,7 @@
   <summary xml:lang="x-test">xxConference companionxx</summary>
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
+    <p xml:lang="ar">كونغرس هو تطبيق مرافق للمؤتمرات أُنشئ بواسطة كيدي</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
     <p xml:lang="ca-valencia">Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
     <p xml:lang="da">Kongress er et ledsagerprogram til konferencer fra KDE</p>
@@ -106,6 +109,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Kongress on Mobile</caption>
+      <caption xml:lang="ar">كونغرس على المحمول</caption>
       <caption xml:lang="ca">Kongress al mòbil</caption>
       <caption xml:lang="ca-valencia">Kongress en el mòbil</caption>
       <caption xml:lang="da">Kongress på mobil</caption>
@@ -143,6 +147,7 @@
     </screenshot>
     <screenshot>
       <caption>Kongress on Desktop</caption>
+      <caption xml:lang="ar">كونغرس على سطح المكتب</caption>
       <caption xml:lang="ca">Kongress a l'escriptori</caption>
       <caption xml:lang="ca-valencia">Kongress en l'escriptori</caption>
       <caption xml:lang="cs">Kongress na pracovní ploše</caption>
