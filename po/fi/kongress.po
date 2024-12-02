@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-22 00:42+0000\n"
-"PO-Revision-Date: 2022-02-12 19:13+0200\n"
+"PO-Revision-Date: 2024-10-28 21:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,11 +63,10 @@ msgid "Reload"
 msgstr "Lataa uudelleen"
 
 #: contents/ui/EventInfo.qml:21
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr "Tiedot"
+msgstr "Tapahtuman tiedot"
 
 #: contents/ui/EventInfo.qml:96
 #, kde-format
@@ -173,8 +172,7 @@ msgid "About"
 msgstr "Tietoa"
 
 #: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
-#, fuzzy, kde-format
-#| msgid "Map"
+#, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Kartta"
@@ -182,55 +180,54 @@ msgstr "Kartta"
 #: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1. kerros"
 
 #: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "Etsi huonetta"
 
 #: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "Etsi palvelu"
 
 #: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
-#, fuzzy, kde-format
-#| msgid "OpenStreetMap"
+#, kde-format
 msgid "Open Map"
-msgstr "OpenStreetMap"
+msgstr "Avaa kartta"
 
 #: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "Suunnista täältä"
 
 #: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "Suunnista tänne"
 
 #: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "Näytä tietoa"
 
 #: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "Vaihdettiin %1. kerrokseen"
 
 #: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "Kerros alaspäin"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "Kerros ylöspäin"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
