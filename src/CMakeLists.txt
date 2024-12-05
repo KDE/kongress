@@ -89,6 +89,7 @@ if (ANDROID)
         search
         settings-configure
         update-none
+        user-symbolic
         view-calendar-agenda
         view-calendar-day
     )

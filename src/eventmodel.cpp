@@ -77,6 +77,7 @@ QHash<int, QByteArray> EventModel::roleNames() const
             {Description, "description"},
             {Summary, "summary"},
             {Location, "location"},
+            {Speaker, "speaker"},
             {Categories, "categories"},
             {EventEndDt, "eventEndDt"},
             {ScheduleEndDt, "scheduleEndDt"},
@@ -139,6 +140,14 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         return m_events.at(row)->summary();
     case Location:
         return m_events.at(row)->location();
+    case Speaker: {
+        QStringList l;
+        l.reserve(m_events.at(row)->attendees().size());
+        for (const auto &attendee : m_events.at(row)->attendees()) {
+            l.push_back(attendee.name());
+        }
+        return QLocale().createSeparatedList(l);
+    }
     case Categories:
         return m_events.at(row)->categories();
     case EventEndDt:
