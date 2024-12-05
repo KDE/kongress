@@ -68,6 +68,15 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormDelegateSeparator {
+            visible: root.event && root.event.speaker !== ""
+        }
+        FormCard.FormTextDelegate {
+            visible: root.event && root.event.speaker !== ""
+            text: root.event?.speaker ?? ""
+            icon.name: "user-symbolic"
+        }
+
+        FormCard.FormDelegateSeparator {
             visible: root.event && event.eventCategories.length > 0
         }
 
