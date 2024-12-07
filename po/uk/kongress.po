@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:42+0000\n"
+"POT-Creation-Date: 2024-12-07 00:43+0000\n"
 "PO-Revision-Date: 2024-07-03 19:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -71,17 +71,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Подробиці події"
 
-#: contents/ui/EventInfo.qml:96
+#: contents/ui/EventInfo.qml:105
 #, kde-format
 msgid "Web Page"
 msgstr "Вебсторінку"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Delete"
 msgstr "Вилучити"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Favorite"
 msgstr "Улюблена"

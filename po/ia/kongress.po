@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:42+0000\n"
+"POT-Creation-Date: 2024-12-07 00:43+0000\n"
 "PO-Revision-Date: 2024-07-05 15:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -68,17 +68,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Detalios de evento"
 
-#: contents/ui/EventInfo.qml:96
+#: contents/ui/EventInfo.qml:105
 #, kde-format
 msgid "Web Page"
 msgstr "Pagina Web"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Delete"
 msgstr "Dele"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Favorite"
 msgstr "Favorito"

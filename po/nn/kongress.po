@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:42+0000\n"
+"POT-Creation-Date: 2024-12-07 00:43+0000\n"
 "PO-Revision-Date: 2024-07-26 14:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -70,17 +70,17 @@ msgctxt "@title"
 msgid "Event Details"
 msgstr "Arragengements­detaljar"
 
-#: contents/ui/EventInfo.qml:96
+#: contents/ui/EventInfo.qml:105
 #, kde-format
 msgid "Web Page"
 msgstr "Heimeside"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Delete"
 msgstr "Slett"
 
-#: contents/ui/EventInfo.qml:110
+#: contents/ui/EventInfo.qml:119
 #, kde-format
 msgid "Favorite"
 msgstr "Merk som favoritt"
