@@ -1,0 +1,144 @@
+# Sanskrit translations for kopeninghours package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kopeninghours package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kopeninghours\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-05 12:28+0000\n"
+"PO-Revision-Date: 2024-12-13 20:34+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: lib/display.cpp:28
+#, kde-format
+msgid "Open"
+msgstr "उद्घाटित"
+
+#: lib/display.cpp:28
+#, kde-format
+msgid "Open (%1)"
+msgstr "उद्घाटितम् (%1)"
+
+#: lib/display.cpp:30
+#, kde-format
+msgid "Closed"
+msgstr "निमीलितम्"
+
+#: lib/display.cpp:30
+#, kde-format
+msgid "Closed (%1)"
+msgstr "बन्द (%1) २."
+
+#: lib/display.cpp:50
+#, kde-format
+msgid "Open for one more minute"
+msgid_plural "Open for %1 more minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:51
+#, kde-format
+msgid "Open for one more minute (%2)"
+msgid_plural "Open for %1 more minutes (%2)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:54
+#, kde-format
+msgid "Currently closed, opens in one minute"
+msgid_plural "Currently closed, opens in %1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:55
+#, kde-format
+msgid "Currently closed (%2), opens in one minute"
+msgid_plural "Currently closed (%2), opens in %1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:68
+#, kde-format
+msgid "Open for one more hour"
+msgid_plural "Open for %1 more hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:69
+#, kde-format
+msgid "Open for one more hour (%2)"
+msgid_plural "Open for %1 more hours (%2)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:72
+#, kde-format
+msgid "Currently closed, opens in one hour"
+msgid_plural "Currently closed, opens in %1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:73
+#, kde-format
+msgid "Currently closed (%2), opens in one hour"
+msgid_plural "Currently closed (%2), opens in %1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:86
+#, kde-format
+msgid "Open for one more day"
+msgid_plural "Open for %1 more days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:87
+#, kde-format
+msgid "Open for one more day (%2)"
+msgid_plural "Open for %1 more days (%2)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:90
+#, kde-format
+msgid "Currently closed, opens in one day"
+msgid_plural "Currently closed, opens in %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:91
+#, kde-format
+msgid "Currently closed (%2), opens in one day"
+msgid_plural "Currently closed (%2), opens in %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/display.cpp:102
+#, kde-format
+msgid "Currently open"
+msgstr "सम्प्रति उद्घाटितम्"
+
+#: lib/display.cpp:102
+#, kde-format
+msgid "Currently open (%1)"
+msgstr "सम्प्रति उद्घाटितम् (%1) ."
+
+#: lib/display.cpp:104
+#, kde-format
+msgid "Currently closed"
+msgstr "सम्प्रति बन्द"
+
+#: lib/display.cpp:104
+#, kde-format
+msgid "Currently closed (%1)"
+msgstr "सम्प्रति बन्द (%1) ."
