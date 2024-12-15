@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the konqueror package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
@@ -13,19 +13,9 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
 
 #: app/archivedialog.cpp:82
 #, kde-format
@@ -81,126 +71,18 @@ msgstr "विकल्पाः"
 #, kde-format
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " क्षण"
+msgstr[1] " सेकण्ड्"
 
 #: app/archivedialog.cpp:132
 #, kde-format
 msgid "None"
 msgstr "न कश्चित्"
 
-#: app/archivedialog.cpp:210
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The web archive download cannot use the current proxy settings. No proxy "
-"will be used."
-msgstr ""
-
-#: app/archivedialog.cpp:349
-#, kde-format
-msgctxt "@info"
-msgid "The save location is not valid."
-msgstr ""
-
-#: app/archivedialog.cpp:369
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot find the wget(1) command,<nl/>see <link>%1</link>."
-msgstr ""
-
-#: app/archivedialog.cpp:391
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot verify destination<nl/><filename>%1</filename><nl/>%2"
-msgstr ""
-
-#: app/archivedialog.cpp:408
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The archive directory<nl/><filename>%1</filename><nl/>already exists as a "
-"file."
-msgstr ""
-
-#: app/archivedialog.cpp:409
-#, kde-kuit-format
-msgctxt "@info"
-msgid "The archive directory<nl/><filename>%1</filename><nl/>already exists."
-msgstr ""
-
-#: app/archivedialog.cpp:413
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The archive file<nl/><filename>%1</filename><nl/>already exists as a "
-"directory."
-msgstr ""
-
-#: app/archivedialog.cpp:414
-#, kde-kuit-format
-msgctxt "@info"
-msgid "The archive file <nl/><filename>%1</filename><nl/>already exists."
-msgstr ""
-
 #: app/archivedialog.cpp:418
 #, kde-format
 msgid "Archive Already Exists"
 msgstr "अभिलेखागारः पूर्वमेव अस्ति"
-
-#: app/archivedialog.cpp:448
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot delete original archive<nl/><filename>%1</filename><nl/>%2"
-msgstr ""
-
-#: app/archivedialog.cpp:465
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot create a temporary directory<nl/><filename>%1</filename><nl/>"
-msgstr ""
-
-#: app/archivedialog.cpp:537
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot start the archiver process <filename>%1</filename>"
-msgstr ""
-
-#: app/archivedialog.cpp:553
-#, kde-kuit-format
-msgctxt "@info"
-msgid "The download process was interrupted."
-msgstr ""
-
-#: app/archivedialog.cpp:554
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The download process <filename>%1</filename> failed with signal "
-"%2.</para>"
-msgstr ""
-
-#: app/archivedialog.cpp:559
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The download process <filename>%1</filename> failed with status "
-"%2.</para>"
-msgstr ""
-
-#: app/archivedialog.cpp:563
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>This may simply indicate a 404 error for some of the page "
-"elements.</para>"
-msgstr ""
-
-#: app/archivedialog.cpp:569
-#, kde-kuit-format
-msgctxt "@info"
-msgid "<para>Retain the partial web archive?</para>"
-msgstr ""
 
 #: app/archivedialog.cpp:570
 #, kde-format
@@ -211,30 +93,6 @@ msgstr "अभिलेखागारं धारयन्तु?"
 #, kde-format
 msgid "Retain"
 msgstr "हृ"
-
-#: app/archivedialog.cpp:575
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Creating the web archive failed."
-msgstr ""
-
-#: app/archivedialog.cpp:718
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot copy archive to<nl/><filename>%1</filename><nl/>%2"
-msgstr ""
-
-#: app/archivedialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Cannot set permissions on<nl/><filename>%1</filename><nl/>%2"
-msgstr ""
-
-#: app/archivedialog.cpp:756
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Web archive saved as<nl/><filename><link>%1</link></filename>"
-msgstr ""
 
 #: app/main.cpp:26
 #, kde-format
@@ -271,101 +129,123 @@ msgstr "संग्रहणार्थं जालपुटस्य URL"
 msgid "url"
 msgstr "url"
 
-#. i18n: ectx: label, entry (WaitTime), group (Options)
 #: app/settings.kcfg:10
+#. i18n: ectx: label, entry (WaitTime), group (Options)
 #, kde-format
 msgid "Wait time:"
 msgstr "प्रतीक्षासमयः : १."
 
-#. i18n: ectx: tooltip, entry (WaitTime), group (Options)
 #: app/settings.kcfg:11
+#. i18n: ectx: tooltip, entry (WaitTime), group (Options)
 #, kde-format
 msgid "The wait time between item requests, to reduce web server load"
 msgstr "मदनुरोधयोः मध्ये प्रतीक्षासमयः, जालसर्वरभारं न्यूनीकर्तुं"
 
-#. i18n: ectx: label, entry (NoProxy), group (Options)
 #: app/settings.kcfg:18
+#. i18n: ectx: label, entry (NoProxy), group (Options)
 #, kde-format
 msgid "Do not use proxy"
 msgstr "प्रॉक्सी इत्यस्य उपयोगं न कुर्वन्तु"
 
-#. i18n: ectx: tooltip, entry (NoProxy), group (Options)
 #: app/settings.kcfg:19
+#. i18n: ectx: tooltip, entry (NoProxy), group (Options)
 #, kde-format
 msgid "Do not use the system proxy settings to fetch the web page"
 msgstr "जालपुटं आनेतुं सिस्टम् प्रॉक्सी सेटिङ्ग्स् न उपयुज्यताम्"
 
-#. i18n: ectx: label, entry (RandomWait), group (Options)
 #: app/settings.kcfg:24
+#. i18n: ectx: label, entry (RandomWait), group (Options)
 #, kde-format
 msgid "Randomise wait time"
 msgstr "प्रतीक्षासमयं यादृच्छिकं कुर्वन्तु"
 
-#. i18n: ectx: tooltip, entry (RandomWait), group (Options)
 #: app/settings.kcfg:25
+#. i18n: ectx: tooltip, entry (RandomWait), group (Options)
 #, kde-format
 msgid "Vary the wait time between requests, to confuse server log analysis"
-msgstr ""
-"अनुरोधानाम् मध्ये प्रतीक्षासमयं परिवर्तयन्तु, सर्वर-लॉग-विश्लेषणं भ्रमितुं"
+msgstr "अनुरोधानाम् मध्ये प्रतीक्षासमयं परिवर्तयन्तु, सर्वर-लॉग-विश्लेषणं भ्रमितुं"
 
-#. i18n: ectx: label, entry (FixExtensions), group (Options)
 #: app/settings.kcfg:30
+#. i18n: ectx: label, entry (FixExtensions), group (Options)
 #, kde-format
 msgid "Save in standard web archive format"
 msgstr "मानकजालसंग्रहस्वरूपेण रक्षन्तु"
 
-#. i18n: ectx: tooltip, entry (FixExtensions), group (Options)
 #: app/settings.kcfg:37
+#. i18n: ectx: tooltip, entry (FixExtensions), group (Options)
 #, kde-format
 msgid ""
-"<p>Save downloaded files all in a single directory, with file name extensions suitable for local browsing.\n"
-"                        For example, the main HTML page will always be called \"index.html\" and a remote .php page will be saved with the standard .html extension.</p>\n"
-"               <p>Leave this option turned on to produce a standard web archive (.war) file.</p>\n"
-"               <p>If this option is turned off, then the files will be saved exactly as downloaded.\n"
-"                        This means that they may be in subdirectories reflecting the structure of the original web site, and extensions will not be adjusted.\n"
-"                        Note that the download may not work correctly if the original URL refers to a directory but does not end with a slash.</p>\n"
+"<p>Save downloaded files all in a single directory, with file name "
+"extensions suitable for local browsing.\n"
+"                        For example, the main HTML page will always be "
+"called \"index.html\" and a remote .php page will be saved with the "
+"standard .html extension.</p>\n"
+"               <p>Leave this option turned on to produce a standard web "
+"archive (.war) file.</p>\n"
+"               <p>If this option is turned off, then the files will be "
+"saved exactly as downloaded.\n"
+"                        This means that they may be in subdirectories "
+"reflecting the structure of the original web site, and extensions will not "
+"be adjusted.\n"
+"                        Note that the download may not work correctly if "
+"the original URL refers to a directory but does not end with a slash.</p>\n"
 "      "
 msgstr ""
-"<p>डाउनलोड् कृतानि सञ्चिकाः सर्वाणि एकस्मिन् निर्देशिकायां रक्षन्तु, स्थानीयब्राउजिंग् कृते उपयुक्तानि सञ्चिकानामविस्ताराणि सन्ति । यथा, मुख्यं HTML पृष्ठं सर्वदा &quot;index.html&quot; इति उच्यते तथा च दूरस्थं .php पृष्ठं मानक .html विस्तारेण सह रक्षितं भविष्यति ।</p><p> मानकजालसंग्रहालय (.war) सञ्चिकां उत्पादयितुं एतत् विकल्पं चालू कृत्वा त्यजन्तु ।</p><p> यदि एषः विकल्पः निष्क्रियः भवति तर्हि सञ्चिकाः यथा अवतरणं कृतम् तथा एव रक्षिताः भविष्यन्ति । अस्य अर्थः अस्ति यत् ते मूलजालस्थलस्य संरचनां प्रतिबिम्बयन्तः उपनिर्देशिकासु भवितुम् अर्हन्ति, विस्ताराः च समायोजिताः न भविष्यन्ति । ध्यानं कुर्वन्तु यत् यदि मूल URL निर्देशिकां निर्दिशति परन्तु स्लैश इत्यनेन न समाप्तं भवति तर्हि डाउनलोड् सम्यक् कार्यं न कर्तुं शक्नोति ।</p>\n"
+"<p>डाउनलोड् कृतानि सञ्चिकाः सर्वाणि एकस्मिन् निर्देशिकायां रक्षन्तु, "
+"स्थानीयब्राउजिंग् कृते उपयुक्तानि सञ्चिकानामविस्ताराणि सन्ति । यथा, मुख्यं "
+"HTML पृष्ठं सर्वदा &quot;index.html&quot; इति उच्यते तथा च दूरस्थं .php "
+"पृष्ठं मानक .html विस्तारेण सह रक्षितं भविष्यति ।</p><p> मानकजालसंग्रहालय "
+"(.war) सञ्चिकां उत्पादयितुं एतत् विकल्पं चालू कृत्वा त्यजन्तु ।</p><p> यदि "
+"एषः विकल्पः निष्क्रियः भवति तर्हि सञ्चिकाः यथा अवतरणं कृतम् तथा एव रक्षिताः "
+"भविष्यन्ति । अस्य अर्थः अस्ति यत् ते मूलजालस्थलस्य संरचनां प्रतिबिम्बयन्तः "
+"उपनिर्देशिकासु भवितुम् अर्हन्ति, विस्ताराः च समायोजिताः न भविष्यन्ति । "
+"ध्यानं कुर्वन्तु यत् यदि मूल URL निर्देशिकां निर्दिशति परन्तु स्लैश इत्यनेन "
+"न समाप्तं भवति तर्हि डाउनलोड् सम्यक् कार्यं न कर्तुं शक्नोति ।</p>\n"
 "      "
 
-#. i18n: ectx: label, entry (RunInTerminal), group (Options)
 #: app/settings.kcfg:42
+#. i18n: ectx: label, entry (RunInTerminal), group (Options)
 #, kde-format
 msgid "Run in terminal"
 msgstr "टर्मिनल् मध्ये चालयन्तु"
 
-#. i18n: ectx: tooltip, entry (RunInTerminal), group (Options)
 #: app/settings.kcfg:45
+#. i18n: ectx: tooltip, entry (RunInTerminal), group (Options)
 #, kde-format
 msgid ""
-"<p>Run the download process in a terminal window. Close the terminal window when the download has finished.</p>\n"
-"               <p>If this option is turned off then the download will run in the background. Its progress output should appear in the session log file.</p>\n"
+"<p>Run the download process in a terminal window. Close the terminal window "
+"when the download has finished.</p>\n"
+"               <p>If this option is turned off then the download will run "
+"in the background. Its progress output should appear in the session log "
+"file.</p>\n"
 "      "
 msgstr ""
-"<p>टर्मिनल् विण्डो मध्ये डाउनलोड् प्रक्रियां चालयन्तु । यदा डाउनलोड् समाप्तं भवति तदा टर्मिनल् विण्डो पिधायताम् ।</p><p> यदि एषः विकल्पः निष्क्रियः अस्ति तर्हि पृष्ठभूमितः डाउनलोड् चालयिष्यति । तस्य प्रगतिनिर्गमः सत्रवृत्तसञ्चिकायां दृश्यते ।</p>\n"
+"<p>टर्मिनल् विण्डो मध्ये डाउनलोड् प्रक्रियां चालयन्तु । यदा डाउनलोड् "
+"समाप्तं भवति तदा टर्मिनल् विण्डो पिधायताम् ।</p><p> यदि एषः विकल्पः "
+"निष्क्रियः अस्ति तर्हि पृष्ठभूमितः डाउनलोड् चालयिष्यति । तस्य प्रगतिनिर्गमः "
+"सत्रवृत्तसञ्चिकायां दृश्यते ।</p>\n"
 "      "
 
-#. i18n: ectx: label, entry (CloseWhenFinished), group (Options)
 #: app/settings.kcfg:50
+#. i18n: ectx: label, entry (CloseWhenFinished), group (Options)
 #, kde-format
 msgid "Close when finished"
 msgstr "समाप्ते सति पिधाय"
 
-#. i18n: ectx: tooltip, entry (CloseWhenFinished), group (Options)
 #: app/settings.kcfg:51
+#. i18n: ectx: tooltip, entry (CloseWhenFinished), group (Options)
 #, kde-format
 msgid "Close this window when the download has finished successfully"
 msgstr "यदा डाउनलोड् सफलतया समाप्तं भवति तदा एतत् विण्डो पिधायताम्"
 
-#. i18n: ectx: label, entry (ArchiveType), group (Options)
 #: app/settings.kcfg:56
+#. i18n: ectx: label, entry (ArchiveType), group (Options)
 #, kde-format
 msgid "Archive &type:"
 msgstr "संग्रहः &प्रकारः : १."
 
-#. i18n: ectx: tooltip, entry (ArchiveType), group (Options)
 #: app/settings.kcfg:57
+#. i18n: ectx: tooltip, entry (ArchiveType), group (Options)
 #, kde-format
 msgid "The type of web archive to save"
 msgstr "रक्षितुं जालसंग्रहस्य प्रकारः"
@@ -375,6 +255,177 @@ msgstr "रक्षितुं जालसंग्रहस्य प्र�
 msgid "Archive Web Page..."
 msgstr "संग्रह जाल पृष्ठ..."
 
+#: plugin_webarchiver.cpp:51
+#, kde-format
+msgid "Cannot Create Web Archive"
+msgstr "जालसंग्रहालयं निर्मातुं न शक्यते"
+
+#: webarchiverplugin.rc:4
+#. i18n: ectx: Menu (tools)
+#, kde-format
+msgid "&Tools"
+msgstr "&उपकरणाः"
+
+#: webarchiverplugin.rc:8
+#. i18n: ectx: ToolBar (extraToolBar)
+#, kde-format
+msgid "Extra Toolbar"
+msgstr "अतिरिक्त टूलबार"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: app/archivedialog.cpp:210
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The web archive download cannot use the current proxy settings. No proxy "
+"will be used."
+msgstr ""
+"जालसंग्रहस्य डाउनलोड् वर्तमानप्रॉक्सीसेटिंग्स् उपयोक्तुं न शक्नोति । न "
+"प्रॉक्सी उपयुज्यते।"
+
+#: app/archivedialog.cpp:349
+#, kde-format
+msgctxt "@info"
+msgid "The save location is not valid."
+msgstr "रक्षणस्थानं वैधं नास्ति ।"
+
+#: app/archivedialog.cpp:369
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot find the wget(1) command,<nl/>see <link>%1</link>."
+msgstr "wget(1) आदेशं न लभ्यते, .<nl/> पश्यतु<link> %1</link> ."
+
+#: app/archivedialog.cpp:391
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot verify destination<nl/><filename>%1</filename><nl/>%2"
+msgstr "गन्तव्यस्थान<nl/><filename>%1</filename><nl/>%2 सत्यापयितुं न शक्यते"
+
+#: app/archivedialog.cpp:408
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The archive directory<nl/><filename>%1</filename><nl/>already exists as a "
+"file."
+msgstr ""
+"संग्रहनिर्देशिका<nl/><filename>%1</filename><nl/>पूर्वमेव सञ्चिकारूपेण "
+"विद्यते ।"
+
+#: app/archivedialog.cpp:409
+#, kde-kuit-format
+msgctxt "@info"
+msgid "The archive directory<nl/><filename>%1</filename><nl/>already exists."
+msgstr "संग्रहनिर्देशिका<nl/><filename>%1</filename><nl/>पूर्वमेव अस्ति ।"
+
+#: app/archivedialog.cpp:413
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The archive file<nl/><filename>%1</filename><nl/>already exists as a "
+"directory."
+msgstr ""
+"संग्रहसञ्चिका<nl/><filename>%1</filename><nl/>पूर्वमेव निर्देशिकारूपेण "
+"विद्यते ।"
+
+#: app/archivedialog.cpp:414
+#, kde-kuit-format
+msgctxt "@info"
+msgid "The archive file <nl/><filename>%1</filename><nl/>already exists."
+msgstr "<nl/><filename>%1</filename><nl/>सङ्ग्रहसञ्चिका पूर्वमेव अस्ति ।"
+
+#: app/archivedialog.cpp:448
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot delete original archive<nl/><filename>%1</filename><nl/>%2"
+msgstr "मूलसंग्रह<nl/><filename>%1</filename><nl/>%2 विलोपयितुं न शक्यते"
+
+#: app/archivedialog.cpp:465
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot create a temporary directory<nl/><filename>%1</filename><nl/>"
+msgstr "अस्थायी निर्देशिका<nl/><filename>%1</filename><nl/> निर्मातुं न शक्यते"
+
+#: app/archivedialog.cpp:537
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot start the archiver process <filename>%1</filename>"
+msgstr "संग्रहकप्रक्रिया <filename>%1</filename> आरभ्यतुं न शक्यते"
+
+#: app/archivedialog.cpp:553
+#, kde-kuit-format
+msgctxt "@info"
+msgid "The download process was interrupted."
+msgstr "डाउनलोड् प्रक्रिया बाधिता आसीत् ।"
+
+#: app/archivedialog.cpp:554
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The download process <filename>%1</filename> failed with signal "
+"%2.</para>"
+msgstr "<para>अवलोकनप्रक्रिया <filename>%1</filename> %2 संकेतेन सह विफलम्।</para>"
+
+#: app/archivedialog.cpp:559
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The download process <filename>%1</filename> failed with status "
+"%2.</para>"
+msgstr ""
+"<para>अवलोकनप्रक्रिया <filename>%1</filename> %2 इति स्थितिना सह "
+"विफलम्।</para>"
+
+#: app/archivedialog.cpp:563
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>This may simply indicate a 404 error for some of the page "
+"elements.</para>"
+msgstr ""
+"<para>एतत् केवलं केषाञ्चन पृष्ठतत्त्वानां कृते ४०४ दोषं सूचयितुं शक्नोति "
+"।</para>"
+
+#: app/archivedialog.cpp:569
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Retain the partial web archive?</para>"
+msgstr "<para>आंशिकं जालसंग्रहं धारयतु?</para>"
+
+#: app/archivedialog.cpp:575
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Creating the web archive failed."
+msgstr "जालसंग्रहस्य निर्माणं विफलम् अभवत् ।"
+
+#: app/archivedialog.cpp:718
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot copy archive to<nl/><filename>%1</filename><nl/>%2"
+msgstr ""
+"संग्रहणं प्रति<nl/><filename>%1</filename><nl/>%2 इत्यत्र प्रतिलिपिं कर्तुं "
+"न शक्यते"
+
+#: app/archivedialog.cpp:748
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot set permissions on<nl/><filename>%1</filename><nl/>%2"
+msgstr "<nl/><filename>%1</filename><nl/>%2 इत्यत्र अनुमतिः सेट् कर्तुं न शक्यते"
+
+#: app/archivedialog.cpp:756
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Web archive saved as<nl/><filename><link>%1</link></filename>"
+msgstr "जालसंग्रहः यथा रक्षितः<nl/><filename><link> %1</link></filename>"
+
 #: plugin_webarchiver.cpp:50
 #, kde-kuit-format
 msgctxt "@info"
@@ -382,20 +433,5 @@ msgid ""
 "Cannot find the <command>kcreatewebarchive</command> executable,<nl/>check "
 "the plugin and helper installation."
 msgstr ""
-
-#: plugin_webarchiver.cpp:51
-#, kde-format
-msgid "Cannot Create Web Archive"
-msgstr "जालसंग्रहालयं निर्मातुं न शक्यते"
-
-#. i18n: ectx: Menu (tools)
-#: webarchiverplugin.rc:4
-#, kde-format
-msgid "&Tools"
-msgstr "&उपकरणाः"
-
-#. i18n: ectx: ToolBar (extraToolBar)
-#: webarchiverplugin.rc:8
-#, kde-format
-msgid "Extra Toolbar"
-msgstr "अतिरिक्त टूलबार"
+"<command>kcreatewebarchive</command> कार्यान्वयनीयं न "
+"प्राप्नुयात्,<nl/>प्लगिन् तथा सहायकसंस्थापनं परीक्ष्यताम् ।"

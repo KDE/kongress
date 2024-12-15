@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kontrast package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: kontrast\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: kontrast.cpp:349
@@ -30,126 +30,6 @@ msgstr "%1px फ़ॉन्ट् आकारः वर्तमानवि�
 #, kde-format
 msgid "Font size %1px is perfect with the current contrast"
 msgstr "%1px फ़ॉन्ट् आकारः वर्तमानविपरीततायाः सह परिपूर्णः अस्ति"
-
-#: main.cpp:42
-#, kde-format
-msgctxt "@title"
-msgid "Kontrast"
-msgstr "विप्रकर्ष"
-
-#: main.cpp:44
-#, kde-format
-msgctxt "@title"
-msgid "A contrast checker application"
-msgstr ""
-
-#: main.cpp:47
-#, kde-format
-msgctxt "@info:credit"
-msgid "Carl Schwan"
-msgstr ""
-
-#: main.cpp:48
-#, kde-format
-msgctxt "@info:credit"
-msgid "Maintainer and creator"
-msgstr ""
-
-#: main.cpp:52
-#, kde-format
-msgctxt "@info:credit"
-msgid "Wikipedia"
-msgstr ""
-
-#: main.cpp:52
-#, kde-format
-msgctxt "@info:credit"
-msgid "Text on the main page CC-BY-SA-4.0"
-msgstr ""
-
-#: main.cpp:53
-#, kde-format
-msgctxt "@info:credit"
-msgid "Carson Black"
-msgstr ""
-
-#: main.cpp:53
-#, kde-format
-msgctxt "@info:credit"
-msgid "SQLite backend for favorite colors"
-msgstr ""
-
-#: main.cpp:54
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#: main.cpp:54
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-
-#: qml/FavoritePage.qml:16 qml/Main.qml:39
-#, kde-format
-msgctxt "@title:menu"
-msgid "Favorite Colors"
-msgstr ""
-
-#: qml/FavoritePage.qml:44
-#, kde-format
-msgctxt "@action:tooltip"
-msgid "Remove"
-msgstr ""
-
-#: qml/FavoritePage.qml:62
-#, kde-format
-msgctxt "@action:button"
-msgid "Text: %1"
-msgstr ""
-
-#: qml/FavoritePage.qml:67
-#, kde-format
-msgctxt "@action:button"
-msgid "Background: %1"
-msgstr ""
-
-#: qml/FavoritePage.qml:74
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply"
-msgstr ""
-
-#: qml/FavoritePage.qml:104
-#, kde-format
-msgctxt "@info:inline"
-msgid "Background color copied to clipboard"
-msgstr ""
-
-#: qml/FavoritePage.qml:108
-#, kde-format
-msgctxt "@info:inline"
-msgid "Text color copied to clipboard"
-msgstr ""
-
-#: qml/FavoritePage.qml:115
-#, kde-format
-msgctxt "@info:inline"
-msgid "Color copied to clipboard"
-msgstr ""
-
-#: qml/HelpPage.qml:13 qml/Main.qml:45
-#, kde-format
-msgctxt "@title:menu"
-msgid "Help"
-msgstr ""
-
-#: qml/HelpPage.qml:19
-#, kde-format
-msgctxt "@title:heading"
-msgid "Contrast"
-msgstr ""
 
 #: qml/HelpPage.qml:24
 #, kde-format
@@ -186,9 +66,9 @@ msgstr ""
 #: qml/HelpPage.qml:39
 #, kde-format
 msgid ""
-"For large text, the contrast ratio should be at least of 3 to conform to the"
-" WCAG AA standard and a contrast ratio of 4.5 or more is required to conform"
-" with the WCAG AAA standard."
+"For large text, the contrast ratio should be at least of 3 to conform to "
+"the WCAG AA standard and a contrast ratio of 4.5 or more is required to "
+"conform with the WCAG AAA standard."
 msgstr ""
 "बृहत् पाठस्य कृते WCAG AA मानकस्य अनुरूपं विपरीतता अनुपातः न्यूनातिन्यूनं 3 "
 "भवितुमर्हति तथा च WCAG AAA मानकस्य अनुरूपं 4.5 वा अधिकं विपरीतानुपातः "
@@ -198,24 +78,6 @@ msgstr ""
 #, kde-format
 msgid "Kontrast"
 msgstr "विप्रकर्ष"
-
-#: qml/Main.qml:33 qml/MainPage.qml:20
-#, kde-format
-msgctxt "@title:menu"
-msgid "Contrast Checker"
-msgstr ""
-
-#: qml/Main.qml:51
-#, kde-format
-msgctxt "@title:menu"
-msgid "About"
-msgstr ""
-
-#: qml/MainPage.qml:42
-#, kde-format
-msgctxt "@label"
-msgid "Contrast ratio: %1"
-msgstr ""
 
 #: qml/MainPage.qml:50
 #, kde-format
@@ -256,56 +118,194 @@ msgstr ""
 "समानदृष्टिक्षेत्रान्तर्गतस्य विषयादिवस्तूनाम् वर्णकान्तिभेदेन विपरीतता "
 "निर्धारिता भवति ।"
 
-#: qml/MainPage.qml:84
+#: main.cpp:42
 #, kde-format
-msgctxt "@label"
-msgid "Text"
-msgstr ""
+msgctxt "@title"
+msgid "Kontrast"
+msgstr "विप्रकर्ष"
 
-#: qml/MainPage.qml:113 qml/MainPage.qml:193
+#: main.cpp:44
 #, kde-format
-msgctxt "@label"
-msgid "Hue: %1°"
-msgstr ""
+msgctxt "@title"
+msgid "A contrast checker application"
+msgstr "एकः विपरीततापरीक्षकः अनुप्रयोगः"
 
-#: qml/MainPage.qml:127 qml/MainPage.qml:207
+#: main.cpp:47
 #, kde-format
-msgctxt "@label"
-msgid "Saturation: %1"
-msgstr ""
+msgctxt "@info:credit"
+msgid "Carl Schwan"
+msgstr "कार्ल स्वान्"
 
-#: qml/MainPage.qml:141 qml/MainPage.qml:221
+#: main.cpp:48
 #, kde-format
-msgctxt "@label"
-msgid "Lightness: %1"
-msgstr ""
+msgctxt "@info:credit"
+msgid "Maintainer and creator"
+msgstr "परिपालकः सृष्टिकर्ता च"
 
-#: qml/MainPage.qml:165
+#: main.cpp:52
 #, kde-format
-msgctxt "@label"
-msgid "Background"
-msgstr ""
+msgctxt "@info:credit"
+msgid "Wikipedia"
+msgstr "विकिपीडिया"
 
-#: qml/MainPage.qml:238
+#: main.cpp:52
 #, kde-format
-msgctxt "@label"
-msgid "Font size: %1px"
-msgstr ""
+msgctxt "@info:credit"
+msgid "Text on the main page CC-BY-SA-4.0"
+msgstr "मुख्यपृष्ठे पाठः CC-BY-SA-4.0"
+
+#: main.cpp:53
+#, kde-format
+msgctxt "@info:credit"
+msgid "Carson Black"
+msgstr "कार्सन ब्ल्याक्"
+
+#: main.cpp:53
+#, kde-format
+msgctxt "@info:credit"
+msgid "SQLite backend for favorite colors"
+msgstr "प्रियवर्णानां कृते SQLite पृष्ठभागः"
+
+#: main.cpp:54
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#: main.cpp:54
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: qml/FavoritePage.qml:16 qml/Main.qml:39
+#, kde-format
+msgctxt "@title:menu"
+msgid "Favorite Colors"
+msgstr "प्रिय रङ्ग"
+
+#: qml/HelpPage.qml:13 qml/Main.qml:45
+#, kde-format
+msgctxt "@title:menu"
+msgid "Help"
+msgstr "साहाय्यम्‌"
+
+#: qml/Main.qml:33 qml/MainPage.qml:20
+#, kde-format
+msgctxt "@title:menu"
+msgid "Contrast Checker"
+msgstr "विपरीतता परीक्षक"
+
+#: qml/Main.qml:51
+#, kde-format
+msgctxt "@title:menu"
+msgid "About"
+msgstr "विषये"
+
+#: qml/FavoritePage.qml:44
+#, kde-format
+msgctxt "@action:tooltip"
+msgid "Remove"
+msgstr "अपाकरोति"
+
+#: qml/FavoritePage.qml:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Text: %1"
+msgstr "पाठः %1"
+
+#: qml/FavoritePage.qml:67
+#, kde-format
+msgctxt "@action:button"
+msgid "Background: %1"
+msgstr "पृष्ठभूमिः %1"
+
+#: qml/FavoritePage.qml:74
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "आचरतु"
 
 #: qml/MainPage.qml:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Invert"
-msgstr ""
+msgstr "विपर्ययम्"
 
 #: qml/MainPage.qml:261
 #, kde-format
 msgctxt "@action:button"
 msgid "Randomize"
-msgstr ""
+msgstr "यादृच्छिकं कुरुत"
 
 #: qml/MainPage.qml:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark as Favorite"
-msgstr ""
+msgstr "प्रियं इति चिह्नं कुर्वन्तु"
+
+#: qml/FavoritePage.qml:104
+#, kde-format
+msgctxt "@info:inline"
+msgid "Background color copied to clipboard"
+msgstr "पृष्ठभूमिवर्णः क्लिपबोर्ड् प्रति प्रतिलिखितः"
+
+#: qml/FavoritePage.qml:108
+#, kde-format
+msgctxt "@info:inline"
+msgid "Text color copied to clipboard"
+msgstr "पाठवर्णः क्लिप्बोर्ड् प्रति प्रतिलिखितः"
+
+#: qml/FavoritePage.qml:115
+#, kde-format
+msgctxt "@info:inline"
+msgid "Color copied to clipboard"
+msgstr "क्लिप्बोर्ड् मध्ये प्रतिलिपितः वर्णः"
+
+#: qml/HelpPage.qml:19
+#, kde-format
+msgctxt "@title:heading"
+msgid "Contrast"
+msgstr "विप्रकर्ष"
+
+#: qml/MainPage.qml:42
+#, kde-format
+msgctxt "@label"
+msgid "Contrast ratio: %1"
+msgstr "विपरीतता अनुपातः %1"
+
+#: qml/MainPage.qml:84
+#, kde-format
+msgctxt "@label"
+msgid "Text"
+msgstr "पाठ"
+
+#: qml/MainPage.qml:113 qml/MainPage.qml:193
+#, kde-format
+msgctxt "@label"
+msgid "Hue: %1°"
+msgstr "ह्यू: %1°"
+
+#: qml/MainPage.qml:127 qml/MainPage.qml:207
+#, kde-format
+msgctxt "@label"
+msgid "Saturation: %1"
+msgstr "संतृप्ति: %1"
+
+#: qml/MainPage.qml:141 qml/MainPage.qml:221
+#, kde-format
+msgctxt "@label"
+msgid "Lightness: %1"
+msgstr "लघुता : %1"
+
+#: qml/MainPage.qml:165
+#, kde-format
+msgctxt "@label"
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+#: qml/MainPage.qml:238
+#, kde-format
+msgctxt "@label"
+msgid "Font size: %1px"
+msgstr "फ़ॉन्ट् आकारः %1px"

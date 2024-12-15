@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the konqueror package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
@@ -13,27 +13,17 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-
-#. i18n: ectx: Menu (tools)
 #: babelfishplugin.rc:4
+#. i18n: ectx: Menu (tools)
 #, kde-format
 msgid "&Tools"
 msgstr "&उपकरणाः"
 
-#. i18n: ectx: ToolBar (extraToolBar)
 #: babelfishplugin.rc:8
+#. i18n: ectx: ToolBar (extraToolBar)
 #, kde-format
 msgid "Extra Toolbar"
 msgstr "अतिरिक्त टूलबार"
@@ -181,18 +171,34 @@ msgstr "&जापानीतः आङ्ग्लभाषायाः या
 msgid "&Korean to English"
 msgstr "&कोरियाईतः आङ्ग्लभाषायाः यावत्"
 
-#: plugin_babelfish.cpp:258
-#, kde-format
-msgctxt "@title:window"
-msgid "Malformed URL"
-msgstr ""
-
 #: plugin_babelfish.cpp:259
 #, kde-format
 msgid "The URL you entered is not valid, please correct it and try again."
 msgstr ""
 "भवता प्रविष्टः URL वैधः नास्ति, कृपया तत् सम्यक् कृत्वा पुनः प्रयासं "
 "कुर्वन्तु ।"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: plugin_babelfish.cpp:258
+#, kde-format
+msgctxt "@title:window"
+msgid "Malformed URL"
+msgstr "विकृतं URL"
+
+#: plugin_babelfish.cpp:273
+#, kde-format
+msgctxt "@title:window"
+msgid "Security Warning"
+msgstr "सुरक्षा चेतावनी"
 
 #: plugin_babelfish.cpp:269
 #, kde-kuit-format
@@ -202,9 +208,6 @@ msgid ""
 "page will sent to the online translation service,<nl/>which may fetch the "
 "insecure version of the page."
 msgstr ""
-
-#: plugin_babelfish.cpp:273
-#, kde-format
-msgctxt "@title:window"
-msgid "Security Warning"
-msgstr ""
+"भवान् सुरक्षितसंयोजनेन एतत् पृष्ठं पश्यति।<nl/><nl/>पृष्ठस्य URL ऑनलाइन "
+"अनुवादसेवायाः कृते प्रेषितः भविष्यति,<nl/>यत् पृष्ठस्य असुरक्षितं संस्करणं "
+"आनेतुं शक्नोति।"

@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kontact package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: kontact\n"
@@ -13,18 +13,8 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
 
 #: src/about/introduction_kontact.html:18
 #, kde-format
@@ -32,10 +22,8 @@ msgid "Welcome to Kontact %1"
 msgstr "Kontact %1 इत्यत्र स्वागतम्"
 
 #: src/about/introduction_kontact.html:19
-msgid ""
-"Kontact handles your e-mail, address book, calendar, to-do list and more."
-msgstr ""
-"Kontact भवतः ई-मेल, पतापुस्तकं, पञ्चाङ्गं, कार्यसूचीं इत्यादीनि सम्पादयति ।"
+msgid "Kontact handles your e-mail, address book, calendar, to-do list and more."
+msgstr "Kontact भवतः ई-मेल, पतापुस्तकं, पञ्चाङ्गं, कार्यसूचीं इत्यादीनि सम्पादयति ।"
 
 #: src/about/introduction_kontact.html:36
 msgid "Skip this introduction"
@@ -45,172 +33,27 @@ msgstr "एतत् परिचयं त्यजन्तु"
 msgid "Loading Kontact ..."
 msgstr "Loading Contact ..."
 
-#: src/iconsidepane.cpp:264
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Show Icons Only"
-msgstr ""
-
-#: src/iconsidepane.cpp:268
-#, kde-format
-msgctxt "@info:status"
-msgid "Show sidebar items with icons and without text"
-msgstr ""
-
-#: src/iconsidepane.cpp:269
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Choose this option if you want the sidebar items to have icons without text."
-msgstr ""
-
-#: src/iconsidepane.cpp:271
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Show Text Only"
-msgstr ""
-
-#: src/iconsidepane.cpp:275
-#, kde-format
-msgctxt "@info:status"
-msgid "Show sidebar items with text and without icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:276
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Choose this option if you want the sidebar items to have text without icons."
-msgstr ""
-
-#: src/iconsidepane.cpp:278
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Show Icons && Text"
-msgstr ""
-
-#: src/iconsidepane.cpp:282
-#, kde-format
-msgctxt "@info:status"
-msgid "Show sidebar items with icons and text"
-msgstr ""
-
-#: src/iconsidepane.cpp:283
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Choose this option if you want the sidebar items to have icons and text."
-msgstr ""
-
-#: src/iconsidepane.cpp:288
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Big Icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:292
-#, kde-format
-msgctxt "@info:status"
-msgid "Show large size sidebar icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:293
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Choose this option if you want the sidebar icons to be extra big."
-msgstr ""
-
-#: src/iconsidepane.cpp:295
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Normal Icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:299
-#, kde-format
-msgctxt "@info:status"
-msgid "Show normal size sidebar icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:300
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Choose this option if you want the sidebar icons to be normal size."
-msgstr ""
-
-#: src/iconsidepane.cpp:302
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Small Icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:306
-#, kde-format
-msgctxt "@info:status"
-msgid "Show small size sidebar icons"
-msgstr ""
-
-#: src/iconsidepane.cpp:307
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Choose this option if you want the sidebar icons to be extra small."
-msgstr ""
-
-#: src/iconsidepane.cpp:309
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Hide Sidebar"
-msgstr ""
-
-#: src/iconsidepane.cpp:312
-#, kde-format
-msgctxt "@info:status"
-msgid "Hide the icon sidebar"
-msgstr ""
-
-#: src/iconsidepane.cpp:313
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Choose this option if you want to hide the icon sidebar. Press F9 to unhide."
-msgstr ""
-
-#: src/kcmkontact.cpp:37
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Select the initial plugin to use on each start"
-msgstr ""
-
-#: src/kcmkontact.cpp:39
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Select the plugin from this drop down list to be used as the initial plugin "
-"each time Kontact is started. Otherwise, Kontact will restore the last "
-"active plugin from the previous usage."
-msgstr ""
-
+#: src/kontact.kcfg:11 src/kontact.kcfg:12
 #. i18n: ectx: tooltip, entry (ActivePlugin), group (View)
 #. i18n: ectx: whatsthis, entry (ActivePlugin), group (View)
-#: src/kontact.kcfg:11 src/kontact.kcfg:12
 #, kde-format
 msgid "The currently active plugin"
 msgstr "वर्तमानकाले सक्रियः प्लगिन्"
 
-#. i18n: ectx: label, entry (ForceStartupPlugin), group (View)
 #: src/kontact.kcfg:16
+#. i18n: ectx: label, entry (ForceStartupPlugin), group (View)
 #, kde-format
 msgid "Always start with plugin:"
 msgstr "सर्वदा प्लगिन् इत्यनेन आरभत:"
 
-#. i18n: ectx: tooltip, entry (ForceStartupPlugin), group (View)
 #: src/kontact.kcfg:17
+#. i18n: ectx: tooltip, entry (ForceStartupPlugin), group (View)
 #, kde-format
 msgid "Set the initial plugin on each start"
 msgstr "प्रत्येकं आरम्भे प्रारम्भिकं प्लगिन् सेट् कुर्वन्तु"
 
-#. i18n: ectx: whatsthis, entry (ForceStartupPlugin), group (View)
 #: src/kontact.kcfg:18
+#. i18n: ectx: whatsthis, entry (ForceStartupPlugin), group (View)
 #, kde-format
 msgid ""
 "Usually Kontact will come up with the plugin used before shutdown. Check "
@@ -220,83 +63,66 @@ msgstr ""
 "आगमिष्यति । यदि भवान् इच्छति यत् निर्दिष्टं प्लगिन् तस्य स्थाने आरम्भे "
 "आगन्तुं इच्छति तर्हि एतत् पेटीम् चिनोतु ।"
 
-#. i18n: ectx: label, entry (SideBarOpen), group (View)
 #: src/kontact.kcfg:25
+#. i18n: ectx: label, entry (SideBarOpen), group (View)
 #, kde-format
 msgid "Show the component sidebar"
 msgstr "घटकस्य पार्श्वपट्टिकां दर्शयतु"
 
-#. i18n: ectx: tooltip, entry (SideBarOpen), group (View)
 #: src/kontact.kcfg:26
+#. i18n: ectx: tooltip, entry (SideBarOpen), group (View)
 #, kde-format
 msgid "Show/Hide the icon sidebar"
 msgstr "चिह्नपार्श्वपट्टिकां दर्शयतु/गोपयतु"
 
-#. i18n: ectx: whatsthis, entry (SideBarOpen), group (View)
 #: src/kontact.kcfg:27
+#. i18n: ectx: whatsthis, entry (SideBarOpen), group (View)
 #, kde-format
 msgid ""
 "To save screen real estate you might choose to hide the icon sidebar. "
 "Uncheck this box to hide the component sidebar. Note that the F9 key will "
 "hide/show the icon sidebar."
 msgstr ""
-"स्क्रीन-अचल-सम्पत्त्याः रक्षणार्थं भवान् चिह्न-पार्श्वपट्टिकां गोपयितुं चयनं"
-" कर्तुं शक्नोति । घटकपार्श्वपट्टिकां गोपयितुं एतत् पेटीम् अनचेक् कुर्वन्तु ।"
-" ध्यानं कुर्वन्तु यत् F9 कीलः चिह्नपार्श्वपट्टिकां गोपयिष्यति/दर्शयिष्यति ।"
+"स्क्रीन-अचल-सम्पत्त्याः रक्षणार्थं भवान् चिह्न-पार्श्वपट्टिकां गोपयितुं "
+"चयनं कर्तुं शक्नोति । घटकपार्श्वपट्टिकां गोपयितुं एतत् पेटीम् अनचेक् "
+"कुर्वन्तु । ध्यानं कुर्वन्तु यत् F9 कीलः चिह्नपार्श्वपट्टिकां "
+"गोपयिष्यति/दर्शयिष्यति ।"
 
-#. i18n: ectx: Menu (file)
 #: src/kontactui.rc:6
+#. i18n: ectx: Menu (file)
 #, kde-format
 msgid "&File"
 msgstr "&संचिका"
 
-#. i18n: ectx: Menu (view)
 #: src/kontactui.rc:14
+#. i18n: ectx: Menu (view)
 #, kde-format
 msgid "&View"
 msgstr "&दृश्यं"
 
-#. i18n: ectx: Menu (settings)
 #: src/kontactui.rc:20
+#. i18n: ectx: Menu (settings)
 #, kde-format
 msgid "&Settings"
 msgstr "&सेटिंग्स"
 
-#. i18n: ectx: Menu (help)
 #: src/kontactui.rc:33
+#. i18n: ectx: Menu (help)
 #, kde-format
 msgid "&Help"
 msgstr "&साहाय्यम्‌"
 
-#. i18n: ectx: ToolBar (mainToolBar)
 #: src/kontactui.rc:40
+#. i18n: ectx: ToolBar (mainToolBar)
 #, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य साधनपट्टी"
 
-#. i18n: ectx: ToolBar (navigatorToolBar)
 #: src/kontactui.rc:46
+#. i18n: ectx: ToolBar (navigatorToolBar)
 #, kde-format
 msgid "Navigator"
 msgstr "नाविक"
-
-#: src/main.cpp:97
-#, kde-format
-msgctxt "@info:shell"
-msgid "Start with a specific Kontact module"
-msgstr ""
-
-#: src/main.cpp:98
-#, kde-format
-msgctxt "@info:shell"
-msgid "Start in iconified (minimized) mode"
-msgstr ""
-
-#: src/main.cpp:99
-#, kde-format
-msgctxt "@info:shell"
-msgid "List all possible modules and exit"
-msgstr ""
 
 #: src/main.cpp:155 src/mainwindow.cpp:991
 #, kde-format
@@ -313,72 +139,6 @@ msgstr "KDE व्यक्तिगतसूचनाप्रबन्धक�
 msgid "Copyright © 2001–%1 Kontact authors"
 msgstr "प्रतिलिपि अधिकार © 2001–%1 लेखकानां सम्पर्कं कुर्वन्तु"
 
-#: src/main.cpp:163
-#, kde-format
-msgctxt "@info:credit"
-msgid "Allen Winter"
-msgstr ""
-
-#: src/main.cpp:164
-#, kde-format
-msgctxt "@info:credit"
-msgid "Rafael Fernández López"
-msgstr ""
-
-#: src/main.cpp:165
-#, kde-format
-msgctxt "@info:credit"
-msgid "Daniel Molkentin"
-msgstr ""
-
-#: src/main.cpp:166
-#, kde-format
-msgctxt "@info:credit"
-msgid "Don Sanders"
-msgstr ""
-
-#: src/main.cpp:167
-#, kde-format
-msgctxt "@info:credit"
-msgid "Cornelius Schumacher"
-msgstr ""
-
-#: src/main.cpp:168
-#, kde-format
-msgctxt "@info:credit"
-msgid "Tobias König"
-msgstr ""
-
-#: src/main.cpp:169
-#, kde-format
-msgctxt "@info:credit"
-msgid "David Faure"
-msgstr ""
-
-#: src/main.cpp:170
-#, kde-format
-msgctxt "@info:credit"
-msgid "Ingo Klöcker"
-msgstr ""
-
-#: src/main.cpp:171
-#, kde-format
-msgctxt "@info:credit"
-msgid "Sven Lüppken"
-msgstr ""
-
-#: src/main.cpp:172
-#, kde-format
-msgctxt "@info:credit"
-msgid "Zack Rusin"
-msgstr ""
-
-#: src/main.cpp:173
-#, kde-format
-msgctxt "@info:credit"
-msgid "Matthias Hoelzer-Kluepfel"
-msgstr ""
-
 #: src/main.cpp:173
 #, kde-format
 msgid "Original Author"
@@ -386,80 +146,8 @@ msgstr "मूल लेखक"
 
 #: src/main.cpp:174
 #, kde-format
-msgctxt "@info:credit"
-msgid "Torgny Nyblom"
-msgstr ""
-
-#: src/main.cpp:174
-#, kde-format
 msgid "Git Migration"
 msgstr "गिट् प्रवासनम्"
-
-#: src/mainwindow.cpp:288
-#, kde-format
-msgctxt "@info:status"
-msgid " Initializing..."
-msgstr ""
-
-#: src/mainwindow.cpp:325
-#, kde-format
-msgctxt "@title:menu create new pim items (message,calendar,to-do,etc.)"
-msgid "New"
-msgstr ""
-
-#: src/mainwindow.cpp:330
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Configure Kontact..."
-msgstr ""
-
-#: src/mainwindow.cpp:331
-#, kde-format
-msgctxt "@info:status"
-msgid "Configure Kontact"
-msgstr ""
-
-#: src/mainwindow.cpp:332
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "You will be presented with a dialog where you can configure Kontact."
-msgstr ""
-
-#: src/mainwindow.cpp:336
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Kontact Introduction"
-msgstr ""
-
-#: src/mainwindow.cpp:337
-#, kde-format
-msgctxt "@info:status"
-msgid "Show the Kontact Introduction page"
-msgstr ""
-
-#: src/mainwindow.cpp:338
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Choose this option to see the Kontact Introduction page."
-msgstr ""
-
-#: src/mainwindow.cpp:342
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Show Sidebar"
-msgstr ""
-
-#: src/mainwindow.cpp:343
-#, kde-format
-msgctxt "@info:status"
-msgid "Hide/Show the component sidebar"
-msgstr ""
-
-#: src/mainwindow.cpp:346
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Allows you to show or hide the component sidebar as desired."
-msgstr ""
 
 #: src/mainwindow.cpp:381
 #, kde-format
@@ -469,37 +157,6 @@ msgid ""
 msgstr ""
 "<qt>एतेन मेनू-पट्टिका पूर्णतया गोप्यते । %1.</qt> इति टङ्कयित्वा पुनः "
 "दर्शयितुं शक्नुवन्ति"
-
-#: src/mainwindow.cpp:384
-#, kde-format
-msgctxt "@title:window"
-msgid "Hide menu bar"
-msgstr ""
-
-#. i18nc( "@info:status", "Plugin %1", plugin->title() ) );
-#: src/mainwindow.cpp:575
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Switch to plugin %1"
-msgstr ""
-
-#: src/mainwindow.cpp:645
-#, kde-format
-msgctxt "@info:status"
-msgid "Application is running standalone. Foregrounding..."
-msgstr ""
-
-#: src/mainwindow.cpp:661
-#, kde-format
-msgctxt "@info"
-msgid "Cannot load part for %1."
-msgstr ""
-
-#: src/mainwindow.cpp:729
-#, kde-format
-msgctxt "@title:window Plugin dependent window title"
-msgid "%1 - Kontact"
-msgstr ""
 
 #: src/mainwindow.cpp:992
 #, kde-format
@@ -536,8 +193,367 @@ msgstr "स्वस्य खातानि सेटअप कुर्वन
 msgid "Prepare Kontact for use"
 msgstr "उपयोगाय Kontact सज्जीकरोतु"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: src/iconsidepane.cpp:264
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Icons Only"
+msgstr "केवलं चिह्नानि दर्शयतु"
+
+#: src/iconsidepane.cpp:271
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Text Only"
+msgstr "केवलं पाठं दर्शयतु"
+
+#: src/iconsidepane.cpp:278
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Icons && Text"
+msgstr "चिह्नानि && पाठं दर्शयतु"
+
+#: src/iconsidepane.cpp:288
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Big Icons"
+msgstr "बृहत् चिह्न"
+
+#: src/iconsidepane.cpp:295
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Normal Icons"
+msgstr "सामान्य चिह्न"
+
+#: src/iconsidepane.cpp:302
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Small Icons"
+msgstr "लघु चिह्न"
+
+#: src/iconsidepane.cpp:309
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Sidebar"
+msgstr "पार्श्वपट्टिका गोपयतु"
+
+#: src/mainwindow.cpp:330
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Configure Kontact..."
+msgstr "सम्पर्क विन्यस्तं..."
+
+#: src/mainwindow.cpp:336
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Kontact Introduction"
+msgstr "&संपर्क परिचय"
+
+#: src/mainwindow.cpp:342
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Sidebar"
+msgstr "पार्श्वपट्टिकां दर्शयतु"
+
+#: src/iconsidepane.cpp:268
+#, kde-format
+msgctxt "@info:status"
+msgid "Show sidebar items with icons and without text"
+msgstr "चिह्नयुक्तानि पाठरहितं च पार्श्वपट्टिकावस्तूनि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:275
+#, kde-format
+msgctxt "@info:status"
+msgid "Show sidebar items with text and without icons"
+msgstr "पाठयुक्तानि चिह्नानि विना च पार्श्वपट्टिकावस्तूनि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:282
+#, kde-format
+msgctxt "@info:status"
+msgid "Show sidebar items with icons and text"
+msgstr "चिह्नैः पाठैः च सह पार्श्वपट्टिकावस्तूनि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:292
+#, kde-format
+msgctxt "@info:status"
+msgid "Show large size sidebar icons"
+msgstr "बृहत् आकारस्य पार्श्वपट्टिकाचिह्नानि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:299
+#, kde-format
+msgctxt "@info:status"
+msgid "Show normal size sidebar icons"
+msgstr "सामान्य आकारस्य पार्श्वपट्टिकाचिह्नानि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:306
+#, kde-format
+msgctxt "@info:status"
+msgid "Show small size sidebar icons"
+msgstr "लघु आकारस्य पार्श्वपट्टिकाचिह्नानि दर्शयन्तु"
+
+#: src/iconsidepane.cpp:312
+#, kde-format
+msgctxt "@info:status"
+msgid "Hide the icon sidebar"
+msgstr "चिह्नस्य पार्श्वपट्टिकां गोपयन्तु"
+
+#: src/mainwindow.cpp:288
+#, kde-format
+msgctxt "@info:status"
+msgid " Initializing..."
+msgstr " आरम्भं कुर्वन्..."
+
+#: src/mainwindow.cpp:331
+#, kde-format
+msgctxt "@info:status"
+msgid "Configure Kontact"
+msgstr "सम्पर्क विन्यस्तं कुर्वन्तु"
+
+#: src/mainwindow.cpp:337
+#, kde-format
+msgctxt "@info:status"
+msgid "Show the Kontact Introduction page"
+msgstr "Kontact Introduction पृष्ठं दर्शयतु"
+
+#: src/mainwindow.cpp:343
+#, kde-format
+msgctxt "@info:status"
+msgid "Hide/Show the component sidebar"
+msgstr "घटकस्य पार्श्वपट्टिकां गोपयन्तु/दर्शयन्तु"
+
+#: src/mainwindow.cpp:645
+#, kde-format
+msgctxt "@info:status"
+msgid "Application is running standalone. Foregrounding..."
+msgstr "अनुप्रयोगः स्वतन्त्रः चालितः अस्ति । अग्रभूमिः..."
+
 #: src/mainwindow.cpp:1032
 #, kde-format
 msgctxt "@info:status"
 msgid "Sidebar is hidden. Show the sidebar again using the %1 key."
 msgstr ""
+"पार्श्वपट्टिका निगूढा अस्ति। %1 कीलस्य उपयोगेन पुनः पार्श्वपट्टिकां दर्शयतु "
+"।"
+
+#: src/iconsidepane.cpp:269
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar items to have icons without text."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकावस्तूनाम् पाठं विना चिह्नानि स्युः तर्हि "
+"एतत् विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:276
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar items to have text without icons."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकावस्तूनाम् चिह्नं विना पाठः भवतु तर्हि "
+"एतत् विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:283
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar items to have icons and text."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकावस्तूनाम् चिह्नानि पाठश्च भवतु इति एतत् "
+"विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:293
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar icons to be extra big."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकाचिह्नानि अतिरिक्तं विशालानि भवेयुः तर्हि "
+"एतत् विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:300
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar icons to be normal size."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकाचिह्नानि सामान्याकाराः भवेयुः तर्हि एतत् "
+"विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:307
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want the sidebar icons to be extra small."
+msgstr ""
+"यदि भवान् इच्छति यत् पार्श्वपट्टिकाचिह्नानि अतिरिक्तं लघु भवेयुः तर्हि एतत् "
+"विकल्पं चिनोतु ।"
+
+#: src/iconsidepane.cpp:313
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option if you want to hide the icon sidebar. Press F9 to unhide."
+msgstr ""
+"यदि भवान् चिह्नपार्श्वपट्टिकां गोपयितुम् इच्छति तर्हि एतत् विकल्पं चिनोतु । "
+"अगोपयितुं F9 नुदन्तु।"
+
+#: src/kcmkontact.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the plugin from this drop down list to be used as the initial plugin "
+"each time Kontact is started. Otherwise, Kontact will restore the last "
+"active plugin from the previous usage."
+msgstr ""
+"प्रत्येकं Kontact आरम्भे प्रारम्भिकप्लगिन्रूपेण उपयोक्तुं अस्याः ड्रॉप् "
+"डाउन सूचीतः प्लगिन् चिनोतु । अन्यथा Kontact पूर्वप्रयोगात् अन्तिमं सक्रियं "
+"प्लगिन् पुनः स्थापयिष्यति ।"
+
+#: src/mainwindow.cpp:332
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "You will be presented with a dialog where you can configure Kontact."
+msgstr ""
+"भवन्तः एकं संवादं प्रस्तुतं भविष्यन्ति यत्र भवन्तः Kontact विन्यस्तुं "
+"शक्नुवन्ति ।"
+
+#: src/mainwindow.cpp:338
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose this option to see the Kontact Introduction page."
+msgstr "Kontact Introduction पृष्ठं द्रष्टुं एतत् विकल्पं चिनोतु ।"
+
+#: src/mainwindow.cpp:346
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Allows you to show or hide the component sidebar as desired."
+msgstr "घटकपार्श्वपट्टिकां यथा इष्टं दर्शयितुं गोपनं वा कर्तुं शक्नोति ।"
+
+#: src/mainwindow.cpp:575
+#. i18nc( "@info:status", "Plugin %1", plugin->title() ) );
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Switch to plugin %1"
+msgstr "प्लगिन् %1 प्रति स्विच् कुर्वन्तु"
+
+#: src/kcmkontact.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the initial plugin to use on each start"
+msgstr "प्रत्येकं आरम्भे उपयोक्तुं प्रारम्भिकं प्लगिन् चिनोतु"
+
+#: src/main.cpp:97
+#, kde-format
+msgctxt "@info:shell"
+msgid "Start with a specific Kontact module"
+msgstr "विशिष्टेन Kontact मॉड्यूलेन आरभत"
+
+#: src/main.cpp:98
+#, kde-format
+msgctxt "@info:shell"
+msgid "Start in iconified (minimized) mode"
+msgstr "प्रतिष्ठित (न्यूनतम) मोड् मध्ये आरभत"
+
+#: src/main.cpp:99
+#, kde-format
+msgctxt "@info:shell"
+msgid "List all possible modules and exit"
+msgstr "सर्वाणि सम्भाव्यमॉड्यूलानि सूचीकृत्य निर्गच्छन्तु"
+
+#: src/main.cpp:163
+#, kde-format
+msgctxt "@info:credit"
+msgid "Allen Winter"
+msgstr "सर्वं शिशिरं"
+
+#: src/main.cpp:164
+#, kde-format
+msgctxt "@info:credit"
+msgid "Rafael Fernández López"
+msgstr "राफेल फर्नाण्डिज लोपेज"
+
+#: src/main.cpp:165
+#, kde-format
+msgctxt "@info:credit"
+msgid "Daniel Molkentin"
+msgstr "डैनियल मोल्केन्टिन्"
+
+#: src/main.cpp:166
+#, kde-format
+msgctxt "@info:credit"
+msgid "Don Sanders"
+msgstr "डॉन सैण्डर्स्"
+
+#: src/main.cpp:167
+#, kde-format
+msgctxt "@info:credit"
+msgid "Cornelius Schumacher"
+msgstr "कॉर्नेलियस शुमाकर"
+
+#: src/main.cpp:168
+#, kde-format
+msgctxt "@info:credit"
+msgid "Tobias König"
+msgstr "टोबियास राजा"
+
+#: src/main.cpp:169
+#, kde-format
+msgctxt "@info:credit"
+msgid "David Faure"
+msgstr "डेविड फौरे"
+
+#: src/main.cpp:170
+#, kde-format
+msgctxt "@info:credit"
+msgid "Ingo Klöcker"
+msgstr "इङ्गो क्लोकर"
+
+#: src/main.cpp:171
+#, kde-format
+msgctxt "@info:credit"
+msgid "Sven Lüppken"
+msgstr "स्वेन् लुप्पकेन्"
+
+#: src/main.cpp:172
+#, kde-format
+msgctxt "@info:credit"
+msgid "Zack Rusin"
+msgstr "जैक रुसिन्"
+
+#: src/main.cpp:173
+#, kde-format
+msgctxt "@info:credit"
+msgid "Matthias Hoelzer-Kluepfel"
+msgstr "मथियस होएलजर-क्लुएपफेल"
+
+#: src/main.cpp:174
+#, kde-format
+msgctxt "@info:credit"
+msgid "Torgny Nyblom"
+msgstr "टोर्ग्नी न्यब्लोम"
+
+#: src/mainwindow.cpp:325
+#, kde-format
+msgctxt "@title:menu create new pim items (message,calendar,to-do,etc.)"
+msgid "New"
+msgstr "नूतनम्‌"
+
+#: src/mainwindow.cpp:384
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "मेनू-पट्टिकां गोपयन्तु"
+
+#: src/mainwindow.cpp:661
+#, kde-format
+msgctxt "@info"
+msgid "Cannot load part for %1."
+msgstr "%1 कृते भागं लोड् कर्तुं न शक्यते ।"
+
+#: src/mainwindow.cpp:729
+#, kde-format
+msgctxt "@title:window Plugin dependent window title"
+msgid "%1 - Kontact"
+msgstr "%1 - सम्पर्कं कुर्वन्तु"

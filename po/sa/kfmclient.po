@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the konqueror package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
@@ -13,18 +13,8 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
 
 #: kfmclient.cpp:57
 #, kde-format
@@ -52,14 +42,8 @@ msgid ""
 "The mimetype of the URL. Allows Konqueror to determine in advance which "
 "component to use, making it start faster."
 msgstr ""
-"URL इत्यस्य अनुकरणप्रकारः । Konqueror इत्यस्मै कस्य घटकस्य उपयोगः करणीयः इति"
-" पूर्वमेव निर्धारयितुं शक्नोति, येन सः शीघ्रं आरभ्यते ।"
-
-#: kfmclient.cpp:78
-#, kde-format
-msgctxt "the name for a the value of an option on the command line help"
-msgid "type"
-msgstr ""
+"URL इत्यस्य अनुकरणप्रकारः । Konqueror इत्यस्मै कस्य घटकस्य उपयोगः करणीयः "
+"इति पूर्वमेव निर्धारयितुं शक्नोति, येन सः शीघ्रं आरभ्यते ।"
 
 #: kfmclient.cpp:80
 #, kde-format
@@ -74,8 +58,7 @@ msgstr "आज्ञार्थं तर्काः"
 #: kfmclient.cpp:84
 #, kde-format
 msgid "The files/URLs opened by the application will be deleted after use"
-msgstr ""
-"अनुप्रयोगेन उद्घाटिताः सञ्चिकाः/URLs उपयोगानन्तरं विलोपिताः भविष्यन्ति"
+msgstr "अनुप्रयोगेन उद्घाटिताः सञ्चिकाः/URLs उपयोगानन्तरं विलोपिताः भविष्यन्ति"
 
 #: kfmclient.cpp:93
 #, kde-format
@@ -107,14 +90,17 @@ msgstr ""
 #, kde-format
 msgid ""
 "            # If 'mimetype' is specified, it will be used to determine the\n"
-"            #   component that Konqueror should use. For instance, set it to\n"
+"            #   component that Konqueror should use. For instance, set it "
+"to\n"
 "            #   text/html for a web page, to make it appear faster\n"
 "            # Note: this way of specifying mimetype is deprecated.\n"
 "            #   Please use the --mimetype option\n"
 "\n"
 msgstr ""
-"            # यदि 'mimetype' निर्दिष्टं भवति तर्हि तस्य उपयोगः निर्धारितः भविष्यति\n"
-"            # घटकः यस्य उपयोगः Konqueror इत्यनेन कर्तव्यः । यथा - इति सेट् कुर्वन्तु\n"
+"            # यदि 'mimetype' निर्दिष्टं भवति तर्हि तस्य उपयोगः निर्धारितः "
+"भविष्यति\n"
+"            # घटकः यस्य उपयोगः Konqueror इत्यनेन कर्तव्यः । यथा - इति सेट् "
+"कुर्वन्तु\n"
 "            जालपुटस्य कृते # text/html, तत् शीघ्रं दृश्यते इति\n"
 "            # टिप्पणी: mimetype निर्दिष्टस्य एषः मार्गः अप्रचलितः अस्ति ।\n"
 "            # कृपया --mimetype विकल्पस्य उपयोगं कुर्वन्तु\n"
@@ -124,12 +110,14 @@ msgstr ""
 #, kde-format
 msgid ""
 "  kfmclient newTab 'url' ['mimetype']\n"
-"            # Same as above but opens a new tab with 'url' in an existing Konqueror\n"
+"            # Same as above but opens a new tab with 'url' in an existing "
+"Konqueror\n"
 "            #   window on the current active desktop if possible.\n"
 "\n"
 msgstr ""
 "  kfmclient newTab 'url' ['मिमप्रकार']।\n"
-"            # उपरिष्टाद् इव किन्तु विद्यमानस्य Konqueror मध्ये 'url' इत्यनेन सह नूतनं ट्याब् उद्घाटयति\n"
+"            # उपरिष्टाद् इव किन्तु विद्यमानस्य Konqueror मध्ये 'url' "
+"इत्यनेन सह नूतनं ट्याब् उद्घाटयति\n"
 "            # वर्तमानसक्रियडेस्कटॉप् मध्ये विण्डो यदि सम्भवति।\n"
 "\n"
 
@@ -147,3 +135,19 @@ msgstr "वाक्यविन्यासदोषः, अत्यधिक�
 #, kde-format
 msgid "Syntax error, unknown command '%1'\n"
 msgstr "वाक्यविन्यासदोषः, अज्ञातः आदेशः '%1' ।\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: kfmclient.cpp:78
+#, kde-format
+msgctxt "the name for a the value of an option on the command line help"
+msgid "type"
+msgstr "प्रकारः"

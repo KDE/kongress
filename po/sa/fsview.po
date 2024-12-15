@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the konqueror package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
@@ -13,19 +13,9 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
 
 #: fsview.cpp:35 fsview.cpp:413
 #, kde-format
@@ -131,22 +121,22 @@ msgstr "गहनता"
 #, kde-format
 msgid "Read 1 folder, in %2"
 msgid_plural "Read %1 folders, in %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 पुटं पठन्तु, %2 मध्ये"
+msgstr[1] "%1 पुटं पठन्तु, %2 मध्ये"
 
 #: fsview_part.cpp:74
 #, kde-format
 msgid "1 folder"
 msgid_plural "%1 folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ पुटे"
+msgstr[1] "%1 पुटम्"
 
 #: fsview_part.cpp:87
 #, kde-format
 msgid ""
 "<p>This is the FSView plugin, a graphical browsing mode showing filesystem "
-"utilization by using a tree map visualization.</p><p>Note that in this mode,"
-" automatic updating when filesystem changes are made is intentionally "
+"utilization by using a tree map visualization.</p><p>Note that in this "
+"mode, automatic updating when filesystem changes are made is intentionally "
 "<b>not</b> done.</p><p>For details on usage and options available, see the "
 "online help under menu 'Help/FSView Manual'.</p>"
 msgstr ""
@@ -172,53 +162,32 @@ msgstr "FSView मैनुअल् दर्शयतु"
 msgid "Opens the help browser with the FSView documentation"
 msgstr "FSView दस्तावेजीकरणेन सह सहायता ब्राउजर् उद्घाटयति"
 
-#: fsview_part.cpp:154
-#, kde-format
-msgctxt "@action:inmenu File"
-msgid "Move to Trash"
-msgstr ""
-
-#: fsview_part.cpp:161
-#, kde-format
-msgctxt "@action:inmenu File"
-msgid "Delete"
-msgstr ""
-
-#: fsview_part.cpp:166
-#, kde-format
-msgctxt "@action:inmenu Edit"
-msgid "&Edit File Type..."
-msgstr ""
-
-#: fsview_part.cpp:170
-#, kde-format
-msgctxt "@action:inmenu File"
-msgid "Properties"
-msgstr ""
-
 #: fsview_part.cpp:203
 #, kde-format
 msgid ""
-"FSView intentionally does not support automatic updates when changes are made to files or directories, currently visible in FSView, from the outside.\n"
+"FSView intentionally does not support automatic updates when changes are "
+"made to files or directories, currently visible in FSView, from the "
+"outside.\n"
 "For details, see the 'Help/FSView Manual'."
 msgstr ""
-"FSView इच्छया स्वचालित-अद्यतन-समर्थनं न करोति यदा सञ्चिकासु अथवा निर्देशिकासु परिवर्तनं भवति, वर्तमानं FSView मध्ये दृश्यमानं, बहिः ।\n"
+"FSView इच्छया स्वचालित-अद्यतन-समर्थनं न करोति यदा सञ्चिकासु अथवा "
+"निर्देशिकासु परिवर्तनं भवति, वर्तमानं FSView मध्ये दृश्यमानं, बहिः ।\n"
 "विस्तरेण 'Help/FSView Manual' पश्यन्तु ।"
 
-#. i18n: ectx: Menu (edit)
 #: fsview_part.rc:4
+#. i18n: ectx: Menu (edit)
 #, kde-format
 msgid "&Edit"
 msgstr "&सम्पादन"
 
-#. i18n: ectx: Menu (view)
 #: fsview_part.rc:13
+#. i18n: ectx: Menu (view)
 #, kde-format
 msgid "&View"
 msgstr "&दृश्यं"
 
-#. i18n: ectx: Menu (help)
 #: fsview_part.rc:20
+#. i18n: ectx: Menu (help)
 #, kde-format
 msgid "&Help"
 msgstr "&साहाय्यम्‌"
@@ -382,8 +351,8 @@ msgstr "'%1' (%2) इत्यस्य क्षेत्रफलम् ।"
 #, kde-format
 msgid "1 Pixel"
 msgid_plural "%1 Pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ पिक्सेल"
+msgstr[1] "%1 पिक्सेल"
 
 #: treemap.cpp:3442
 #, kde-format
@@ -419,3 +388,37 @@ msgstr "न्यूनता (%1 यावत्) २."
 #, kde-format
 msgid "Increment (to %1)"
 msgstr "वृद्धिः (%1 यावत्) २."
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: fsview_part.cpp:154
+#, kde-format
+msgctxt "@action:inmenu File"
+msgid "Move to Trash"
+msgstr "Trash इत्यत्र गच्छन्तु"
+
+#: fsview_part.cpp:161
+#, kde-format
+msgctxt "@action:inmenu File"
+msgid "Delete"
+msgstr "लुप्"
+
+#: fsview_part.cpp:170
+#, kde-format
+msgctxt "@action:inmenu File"
+msgid "Properties"
+msgstr "गुणाः"
+
+#: fsview_part.cpp:166
+#, kde-format
+msgctxt "@action:inmenu Edit"
+msgid "&Edit File Type..."
+msgstr "&सञ्चिकाप्रकार सम्पादयतु..."

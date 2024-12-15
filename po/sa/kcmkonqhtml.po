@@ -2,7 +2,7 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the konqueror package.
 # Kali <EMAIL@ADDRESS>, 2024.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
@@ -13,30 +13,90 @@ msgstr ""
 "Language-Team: Sanskrit\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: appearance.cpp:39
+#: css/csscustom.ui:80
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
 #, kde-format
-msgctxt "@title:tab"
-msgid "General"
-msgstr ""
+msgid "7"
+msgstr "७"
 
-#: appearance.cpp:40
+#: css/csscustom.ui:85
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
 #, kde-format
-msgctxt "@title:tab"
-msgid "Fonts"
-msgstr ""
+msgid "8"
+msgstr "८"
 
-#: appearance.cpp:41
+#: css/csscustom.ui:90
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
 #, kde-format
-msgctxt "@title:tab"
-msgid "Stylesheets"
-msgstr "शैलीपत्रिकाः"
+msgid "9"
+msgstr "९"
 
-#. i18n: ectx: property (title), widget (QGroupBox, GroupBox3_2)
+#: css/csscustom.ui:95
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "10"
+msgstr "१०"
+
+#: css/csscustom.ui:100
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "11"
+msgstr "११"
+
+#: css/csscustom.ui:105
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "12"
+msgstr "१२"
+
+#: css/csscustom.ui:110
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "14"
+msgstr "१४"
+
+#: css/csscustom.ui:115
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "16"
+msgstr "16"
+
+#: css/csscustom.ui:120
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "20"
+msgstr "२०"
+
+#: css/csscustom.ui:125
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "24"
+msgstr "२४"
+
+#: css/csscustom.ui:130
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "32"
+msgstr "३२"
+
+#: css/csscustom.ui:135
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "48"
+msgstr "४८"
+
+#: css/csscustom.ui:140
+#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
+#, kde-format
+msgid "64"
+msgstr "६४"
+
 #: appearance.cpp:48 css/csscustom.ui:296
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox3_2)
 #, kde-format
 msgid "Images"
 msgstr "बिम्बाः"
@@ -50,16 +110,17 @@ msgstr "A&automatically चित्राणि लोडयन्ति"
 #, kde-format
 msgid ""
 "<html>If this box is checked, Konqueror will automatically load any images "
-"that are embedded in a web page. Otherwise, it will display placeholders for"
-" the images, and you can then manually load the images by clicking on the "
-"image button.<br />Unless you have a very slow network connection, you will "
-"probably want to check this box to enhance your browsing experience.</html>"
+"that are embedded in a web page. Otherwise, it will display placeholders "
+"for the images, and you can then manually load the images by clicking on "
+"the image button.<br />Unless you have a very slow network connection, you "
+"will probably want to check this box to enhance your browsing "
+"experience.</html>"
 msgstr ""
 "<html>यदि एषा पेटी चेक् कृता अस्ति तर्हि Konqueror स्वयमेव यत्किमपि चित्रं "
 "जालपुटे निहितं भवति तत् लोड् करिष्यति । अन्यथा, चित्राणां कृते स्थानधारकाणि "
 "प्रदर्शयिष्यति, ततः चित्रबटनं नुत्वा चित्राणि हस्तचलितरूपेण लोड् कर्तुं "
-"शक्नुवन्ति ।<br /> यावत् भवतः अत्यन्तं मन्दं जालसंयोजनं नास्ति, तावत् भवन्तः"
-" सम्भवतः स्वस्य ब्राउजिंग् अनुभवं वर्धयितुं एतत् पेटीम् अवलोकयितुम् "
+"शक्नुवन्ति ।<br /> यावत् भवतः अत्यन्तं मन्दं जालसंयोजनं नास्ति, तावत् "
+"भवन्तः सम्भवतः स्वस्य ब्राउजिंग् अनुभवं वर्धयितुं एतत् पेटीम् अवलोकयितुम् "
 "इच्छिष्यन्ति ।</html>"
 
 #: appearance.cpp:63
@@ -71,26 +132,14 @@ msgstr "न पूर्णतया भारितप्रतिमाः प
 #, kde-format
 msgid ""
 "<html>If this box is checked, Konqueror will draw a frame as a placeholder "
-"around images embedded in a web page that are not yet fully loaded.<br />You"
-" will probably want to check this box to enhance your browsing experience, "
-"especially if have a slow network connection.</html>"
+"around images embedded in a web page that are not yet fully loaded.<br "
+"/>You will probably want to check this box to enhance your browsing "
+"experience, especially if have a slow network connection.</html>"
 msgstr ""
 "<html>यदि एतत् पेटी चेक् कृतं भवति तर्हि Konqueror जालपुटे निहितानाम् "
 "चित्राणां परितः स्थानधारकरूपेण एकं फ्रेमं आकर्षयिष्यति ये अद्यापि पूर्णतया "
 "लोड् न भवन्ति ।<br /> भवान् सम्भवतः स्वस्य ब्राउजिंग् अनुभवं वर्धयितुं एतत् "
 "पेटीम् अवलोकयितुम् इच्छति, विशेषतः यदि मन्दं जालसंयोजनं अस्ति ।</html>"
-
-#: appearance.cpp:74
-#, kde-format
-msgctxt "animations"
-msgid "Enabled"
-msgstr ""
-
-#: appearance.cpp:75
-#, kde-format
-msgctxt "animations"
-msgid "Disabled"
-msgstr ""
 
 #: appearance.cpp:76
 #, kde-format
@@ -117,24 +166,6 @@ msgstr ""
 msgid "A&nimations:"
 msgstr "सजीवचित्रम् : १."
 
-#: appearance.cpp:85 htmlopts.cpp:108
-#, kde-format
-msgctxt "@title:group"
-msgid "Miscellaneous"
-msgstr ""
-
-#: appearance.cpp:90
-#, kde-format
-msgctxt "underline"
-msgid "Enabled"
-msgstr ""
-
-#: appearance.cpp:91
-#, kde-format
-msgctxt "underline"
-msgid "Disabled"
-msgstr ""
-
 #: appearance.cpp:92
 #, kde-format
 msgid "Only on Hover"
@@ -150,9 +181,9 @@ msgstr "And&erline left:"
 msgid ""
 "<html>Controls how Konqueror handles underlining hyperlinks:<br "
 "/><ul><li><b>Enabled</b>: Always underline links</li><li><b>Disabled</b>: "
-"Never underline links</li><li><b>Only on Hover</b>: Underline when the mouse"
-" is moved over the link</li></ul><br /><i>Note: The site's CSS definitions "
-"can override this value.</i></html>"
+"Never underline links</li><li><b>Only on Hover</b>: Underline when the "
+"mouse is moved over the link</li></ul><br /><i>Note: The site's CSS "
+"definitions can override this value.</i></html>"
 msgstr ""
 "<html>Konqueror रेखांकनयुक्तानि हाइपरलिङ्कानि कथं नियन्त्रयति इति "
 "नियन्त्रयति:<br /><ul><li> <b>सक्षमम्</b> : सदैव लिङ्कानि "
@@ -165,18 +196,6 @@ msgstr ""
 #, kde-format
 msgid "When Efficient"
 msgstr "यदा कुशलः"
-
-#: appearance.cpp:106
-#, kde-format
-msgctxt "smooth scrolling"
-msgid "Always"
-msgstr ""
-
-#: appearance.cpp:107
-#, kde-format
-msgctxt "soft scrolling"
-msgid "Never"
-msgstr ""
 
 #: appearance.cpp:108
 #, kde-format
@@ -250,8 +269,7 @@ msgstr "&नियत फ़ॉन्टः : १."
 
 #: appearance.cpp:163
 #, kde-format
-msgid ""
-"This is the font used to display fixed-width (i.e. non-proportional) text."
+msgid "This is the font used to display fixed-width (i.e. non-proportional) text."
 msgstr ""
 "एषः एव फन्ट् अस्ति यस्य उपयोगः नियत-विस्तारस्य (अर्थात् अ-आनुपातिकः) पाठस्य "
 "प्रदर्शनार्थं भवति ।"
@@ -264,8 +282,7 @@ msgstr "S&erif फ़ॉन्ट्: ."
 #: appearance.cpp:168
 #, kde-format
 msgid "This is the font used to display text that is marked up as serif."
-msgstr ""
-"एतत् पाठं प्रदर्शयितुं प्रयुक्तं फ़ॉन्ट् अस्ति यत् serif इति चिह्नितं भवति ।"
+msgstr "एतत् पाठं प्रदर्शयितुं प्रयुक्तं फ़ॉन्ट् अस्ति यत् serif इति चिह्नितं भवति ।"
 
 #: appearance.cpp:172
 #, kde-format
@@ -294,8 +311,7 @@ msgstr "Fantas&y फ़ॉन्ट्: १."
 
 #: appearance.cpp:183
 #, kde-format
-msgid ""
-"This is the font used to display text that is marked up as a fantasy font."
+msgid "This is the font used to display text that is marked up as a fantasy font."
 msgstr ""
 "एषः एव फ़ॉन्ट् अस्ति यः पाठं प्रदर्शयितुं प्रयुक्तः अस्ति यः काल्पनिकः "
 "फ़ॉन्ट् इति चिह्नितः अस्ति ।"
@@ -318,21 +334,21 @@ msgstr "पूर्वनिर्धारितं एन्कोडिं�
 #: appearance.cpp:204
 #, kde-format
 msgid ""
-"Select the default encoding to be used; normally, you will be fine with 'Use"
-" language encoding' and should not have to change this."
+"Select the default encoding to be used; normally, you will be fine with "
+"'Use language encoding' and should not have to change this."
 msgstr ""
 "उपयोक्तुं पूर्वनिर्धारितं एन्कोडिंग् चिनोतु; सामान्यतया, भवन्तः 'Use "
 "language encoding' इत्यनेन सह कुशलाः भविष्यन्ति, एतत् परिवर्तनं न कर्तव्यम् "
 "।"
 
-#. i18n: ectx: property (title), widget (QGroupBox, cacheEnabled)
 #: cache/cache.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, cacheEnabled)
 #, kde-format
 msgid "&Enable cache"
 msgstr "&सञ्चयं सक्षमं कुर्वन्तु"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, memoryCache)
 #: cache/cache.ui:29
+#. i18n: ectx: property (toolTip), widget (QCheckBox, memoryCache)
 #, kde-format
 msgid ""
 "<html><head/><body><p>Don't store the cache on disk but only in "
@@ -343,20 +359,20 @@ msgstr ""
 "संग्रहयन्तु ।</p><p> एतत् चालू कृत्वा Konqueror इत्यस्मात् निर्गत्य cache "
 "स्वच्छं भविष्यति इति अर्थः</p></body></html>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, memoryCache)
 #: cache/cache.ui:32
+#. i18n: ectx: property (text), widget (QCheckBox, memoryCache)
 #, kde-format
 msgid "Keep cache in &memory"
 msgstr "&memory इत्यत्र cache स्थापयन्तु"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: cache/cache.ui:41
+#. i18n: ectx: property (text), widget (QLabel, label)
 #, kde-format
 msgid "&Cache size"
 msgstr "&Cache size"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, cacheSize)
 #: cache/cache.ui:51
+#. i18n: ectx: property (toolTip), widget (QSpinBox, cacheSize)
 #, kde-format
 msgid ""
 "The maximum space on disk or memory the cache can use. When this threshold "
@@ -366,143 +382,144 @@ msgstr ""
 "सीमा प्राप्ता भवति तदा नूतनानां पृष्ठानां कृते स्थानं कल्पयितुं "
 "पुरातनपृष्ठानि निष्कासितानि भविष्यन्ति"
 
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, cacheSize)
 #: cache/cache.ui:54
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, cacheSize)
 #, kde-format
 msgid "Auto"
 msgstr "ऑटो"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, cacheSize)
 #: cache/cache.ui:57
+#. i18n: ectx: property (suffix), widget (QSpinBox, cacheSize)
 #, kde-format
 msgid " MB"
 msgstr " MB"
 
-#. i18n: ectx: property (toolTip), widget (QGroupBox, useCustomCacheDir)
 #: cache/cache.ui:85
+#. i18n: ectx: property (toolTip), widget (QGroupBox, useCustomCacheDir)
 #, kde-format
 msgid "Use a custom directory to keep the cache"
 msgstr "संग्रहणं स्थापयितुं इष्टनिर्देशिकायाः उपयोगं कुर्वन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, useCustomCacheDir)
 #: cache/cache.ui:88
+#. i18n: ectx: property (title), widget (QGroupBox, useCustomCacheDir)
 #, kde-format
 msgid "&Custom cache directory"
 msgstr "&Custom cache निर्देशिका"
 
-#. i18n: ectx: property (text), widget (QLabel, customCachePathLabel)
 #: cache/cache.ui:100
+#. i18n: ectx: property (text), widget (QLabel, customCachePathLabel)
 #, kde-format
 msgid "Cache &Directory"
 msgstr "कैश &निर्देशिका"
 
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, customCacheDir)
 #: cache/cache.ui:113
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, customCacheDir)
 #, kde-format
 msgid "The custom directory to store cache"
 msgstr "cache संग्रहीतुं कस्टम् निर्देशिका"
 
+#: cookies/kcookiesmanagement.ui:20
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine,
 #. searchLineEdit)
-#: cookies/kcookiesmanagement.ui:20
 #, kde-format
 msgid "Search"
 msgstr "अन्वेषण"
 
-#. i18n: ectx: property (toolTip), widget (QTreeWidget, cookiesTreeWidget)
 #: cookies/kcookiesmanagement.ui:27
+#. i18n: ectx: property (toolTip), widget (QTreeWidget, cookiesTreeWidget)
 #, kde-format
 msgid "Search interactively for domains and hosts"
-msgstr ""
-"डोमेन् तथा होस्ट् इत्येतयोः कृते अन्तरक्रियाशीलरूपेण अन्वेषणं कुर्वन्तु"
+msgstr "डोमेन् तथा होस्ट् इत्येतयोः कृते अन्तरक्रियाशीलरूपेण अन्वेषणं कुर्वन्तु"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, cookiesTreeWidget)
 #: cookies/kcookiesmanagement.ui:43
+#. i18n: ectx: property (text), widget (QTreeWidget, cookiesTreeWidget)
 #, kde-format
 msgid "Site"
 msgstr "क्षेत्र"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, cookiesTreeWidget)
 #: cookies/kcookiesmanagement.ui:48
+#. i18n: ectx: property (text), widget (QTreeWidget, cookiesTreeWidget)
 #, kde-format
 msgid "Cookie Name"
 msgstr "कुकी नाम"
 
+#: cookies/kcookiesmanagement.ui:56 cookies/kcookiespolicies.ui:190
 #. i18n: ectx: property (text), widget (QPushButton, pbDelete)
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: cookies/kcookiesmanagement.ui:56 cookies/kcookiespolicies.ui:190
 #, kde-format
 msgid "D&elete"
 msgstr "लुप्"
 
+#: cookies/kcookiesmanagement.ui:63 cookies/kcookiespolicies.ui:197
 #. i18n: ectx: property (text), widget (QPushButton, pbDeleteAll)
 #. i18n: ectx: property (text), widget (QPushButton, deleteAllButton)
-#: cookies/kcookiesmanagement.ui:63 cookies/kcookiespolicies.ui:197
 #, kde-format
 msgid "Delete A&ll"
 msgstr "विलोपयतु A&ll"
 
-#. i18n: ectx: property (text), widget (QPushButton, configPolicyButton)
 #: cookies/kcookiesmanagement.ui:70
+#. i18n: ectx: property (text), widget (QPushButton, configPolicyButton)
 #, kde-format
 msgid "Configure &Policy..."
 msgstr "&नीतिं विन्यस्तं कुर्वन्तु..."
 
-#. i18n: ectx: property (text), widget (QPushButton, reloadButton)
 #: cookies/kcookiesmanagement.ui:77
+#. i18n: ectx: property (text), widget (QPushButton, reloadButton)
 #, kde-format
 msgid "&Reload List"
 msgstr "&पुनः लोड् सूची"
 
-#. i18n: ectx: property (title), widget (QGroupBox, detailsGroupBox)
 #: cookies/kcookiesmanagement.ui:97
+#. i18n: ectx: property (title), widget (QGroupBox, detailsGroupBox)
 #, kde-format
 msgid "Details"
 msgstr "वर्णन"
 
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
 #: cookies/kcookiesmanagement.ui:106
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
 #, kde-format
 msgid "Name:"
 msgstr "नामः:"
 
-#. i18n: ectx: property (text), widget (QLabel, valueLabel)
 #: cookies/kcookiesmanagement.ui:129
+#. i18n: ectx: property (text), widget (QLabel, valueLabel)
 #, kde-format
 msgid "Value:"
 msgstr "मूल्यम्‌:"
 
-#. i18n: ectx: property (text), widget (QLabel, domainLabel)
 #: cookies/kcookiesmanagement.ui:152
+#. i18n: ectx: property (text), widget (QLabel, domainLabel)
 #, kde-format
 msgid "Domain:"
 msgstr "क्षेत्र:"
 
-#. i18n: ectx: property (text), widget (QLabel, patchLabel)
 #: cookies/kcookiesmanagement.ui:175
+#. i18n: ectx: property (text), widget (QLabel, patchLabel)
 #, kde-format
 msgid "Path:"
 msgstr "पथं:"
 
-#. i18n: ectx: property (text), widget (QLabel, expiresLabel)
 #: cookies/kcookiesmanagement.ui:198
+#. i18n: ectx: property (text), widget (QLabel, expiresLabel)
 #, kde-format
 msgid "Expires:"
 msgstr "अवधिः समाप्तः भवति : १."
 
-#. i18n: ectx: property (text), widget (QLabel, secureLabel)
 #: cookies/kcookiesmanagement.ui:221
+#. i18n: ectx: property (text), widget (QLabel, secureLabel)
 #, kde-format
 msgid "Secure:"
 msgstr "उरुष्य:"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbEnableCookies)
 #: cookies/kcookiespolicies.ui:20
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbEnableCookies)
 #, kde-format
 msgid ""
 "<qt>\n"
-"<p>Enable cookie support. Normally you will want to have cookie support enabled and customize it to suit your privacy needs.</p><p>\n"
-"Please note that disabling cookie support might make many web sites unbrowsable.</p>\n"
+"<p>Enable cookie support. Normally you will want to have cookie support "
+"enabled and customize it to suit your privacy needs.</p><p>\n"
+"Please note that disabling cookie support might make many web sites "
+"unbrowsable.</p>\n"
 "</qt>"
 msgstr ""
 "<qt><p>कुकी समर्थनं सक्षमं कुर्वन्तु। सामान्यतया भवान् कुकीसमर्थनं सक्षमं "
@@ -510,19 +527,24 @@ msgstr ""
 "।</p><p> कृपया ज्ञातव्यं यत् कुकीसमर्थनं निष्क्रियं कृत्वा बहवः जालस्थलानि "
 "अब्राउज् कर्तुं शक्यन्ते ।</p></qt>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbEnableCookies)
 #: cookies/kcookiespolicies.ui:23
+#. i18n: ectx: property (text), widget (QCheckBox, cbEnableCookies)
 #, kde-format
 msgid "Enable coo&kies"
 msgstr "coo&kies सक्षमं कुर्वन्तु"
 
+#: cookies/kcookiespolicies.ui:35
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. cbRejectCrossDomainCookies)
-#: cookies/kcookiespolicies.ui:35
 #, kde-format
 msgid ""
 "<qt>\n"
-"Reject the so called third-party cookies. These are cookies that originate from a site other than the one you are currently browsing. For example, if you visit <b>www.foobar.com</b> while this option is on, only cookies that originate from www.foobar.com will be processed per your settings. Cookies from any other site will be rejected. This reduces the chances of site operators compiling a profile about your daily browsing habits.\n"
+"Reject the so called third-party cookies. These are cookies that originate "
+"from a site other than the one you are currently browsing. For example, if "
+"you visit <b>www.foobar.com</b> while this option is on, only cookies that "
+"originate from www.foobar.com will be processed per your settings. Cookies "
+"from any other site will be rejected. This reduces the chances of site "
+"operators compiling a profile about your daily browsing habits.\n"
 "</qt>"
 msgstr ""
 "<qt>तथाकथितानि तृतीयपक्षस्य कुकीजं अङ्गीकुरुत। एतानि कुकीजानि सन्ति ये भवता "
@@ -534,19 +556,24 @@ msgstr ""
 "दैनन्दिन-ब्राउजिंग्-अभ्यासानां विषये प्रोफाइल-संकलनस्य सम्भावना न्यूनीभवति "
 "।</qt>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbRejectCrossDomainCookies)
 #: cookies/kcookiespolicies.ui:38
+#. i18n: ectx: property (text), widget (QCheckBox, cbRejectCrossDomainCookies)
 #, kde-format
 msgid "Only acce&pt cookies from originating server"
 msgstr "केवलं उत्पन्नसर्वरतः कुकीजं स्वीकुर्वन्तु"
 
+#: cookies/kcookiespolicies.ui:46
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. cbAutoAcceptSessionCookies)
-#: cookies/kcookiespolicies.ui:46
 #, kde-format
 msgid ""
 "<p>\n"
-"Automatically accept temporary cookies meant to expire at the end of the current session. Such cookies will not be stored in your computer's hard drive or storage device. Instead, they are deleted when you close all applications (e.g. your browser) that use them.</p><p><u>NOTE</u> Checking this option overrides your default as well as site specific cookie policies for session cookies.</p>"
+"Automatically accept temporary cookies meant to expire at the end of the "
+"current session. Such cookies will not be stored in your computer's hard "
+"drive or storage device. Instead, they are deleted when you close all "
+"applications (e.g. your browser) that use them.</p><p><u>NOTE</u> Checking "
+"this option overrides your default as well as site specific cookie policies "
+"for session cookies.</p>"
 msgstr ""
 "<p>वर्तमानसत्रस्य अन्ते अवधिः समाप्तुं अभिप्रेताः अस्थायी कुकीजः स्वयमेव "
 "स्वीकुरुत । एतादृशाः कुकीजः भवतः सङ्गणकस्य हार्डड्राइव् अथवा भण्डारणयन्त्रे "
@@ -555,25 +582,30 @@ msgstr ""
 "।</p><p> <u>NOTE</u> अस्य विकल्पस्य जाँचः भवतः पूर्वनिर्धारितं तथा च "
 "सत्रकुकीजस्य कृते साइटविशिष्टकुकीनीतयः अधिलिखति ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbAutoAcceptSessionCookies)
 #: cookies/kcookiespolicies.ui:49
+#. i18n: ectx: property (text), widget (QCheckBox, cbAutoAcceptSessionCookies)
 #, kde-format
 msgid "Automaticall&y accept session cookies"
 msgstr "Automaticall&y सत्र कुकीजं स्वीकुर्वन्ति"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, bgDefault)
 #: cookies/kcookiespolicies.ui:68
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, bgDefault)
 #, kde-format
 msgid ""
 "<qt>\n"
 "Determines how cookies received from a remote machine will be handled: \n"
 "<ul>\n"
-"<li><b>Ask</b> will cause KDE to ask for your confirmation whenever a server wants to set a cookie.</li>\n"
-"<li><b>Accept</b> will cause cookies to be accepted without prompting you.</li>\n"
-"<li><b>Accept until end of session</b> will cause cookies to be accepted but they will expire at the end of the session.</li>\n"
-"<li><b>Reject</b> will cause the cookiejar to refuse all cookies it receives.</li>\n"
+"<li><b>Ask</b> will cause KDE to ask for your confirmation whenever a "
+"server wants to set a cookie.</li>\n"
+"<li><b>Accept</b> will cause cookies to be accepted without prompting "
+"you.</li>\n"
+"<li><b>Accept until end of session</b> will cause cookies to be accepted "
+"but they will expire at the end of the session.</li>\n"
+"<li><b>Reject</b> will cause the cookiejar to refuse all cookies it "
+"receives.</li>\n"
 "</ul><p>\n"
-"<u>NOTE:</u> Domain specific policies, which can be set below, always take precedence over the default policy.</p>\n"
+"<u>NOTE:</u> Domain specific policies, which can be set below, always take "
+"precedence over the default policy.</p>\n"
 "</qt>"
 msgstr ""
 "<qt>दूरस्थयन्त्रात् प्राप्ताः कुकीजः कथं नियन्त्रिताः भविष्यन्ति इति "
@@ -582,47 +614,54 @@ msgstr ""
 "इत्यनेन</b> भवन्तं न प्रेरितवान् कुकीजः स्वीकृताः भविष्यन्ति।</li><li> "
 "<b>सत्रस्य अन्त्यपर्यन्तं स्वीकारः</b> कुकीजस्य स्वीकारस्य कारणं भविष्यति "
 "परन्तु सत्रस्य अन्ते तेषां अवधिः समाप्तः भविष्यति ।</li><li> <b>Reject "
-"इत्यस्य</b> कारणेन cookiejar इत्यनेन सर्वाणि कुकीजानि अङ्गीकृतानि भविष्यन्ति"
-" ।</li></ul><p> <u>नोटः-</u> डोमेनविशिष्टनीतयः, ये अधः सेट् कर्तुं शक्यन्ते,"
-" पूर्वनिर्धारितनीतेः अपेक्षया सर्वदा प्राधान्यं प्राप्नुवन्ति ।</p></qt>"
+"इत्यस्य</b> कारणेन cookiejar इत्यनेन सर्वाणि कुकीजानि अङ्गीकृतानि "
+"भविष्यन्ति ।</li></ul><p> <u>नोटः-</u> डोमेनविशिष्टनीतयः, ये अधः सेट् "
+"कर्तुं शक्यन्ते, पूर्वनिर्धारितनीतेः अपेक्षया सर्वदा प्राधान्यं "
+"प्राप्नुवन्ति ।</p></qt>"
 
-#. i18n: ectx: property (title), widget (QGroupBox, bgDefault)
 #: cookies/kcookiespolicies.ui:71
+#. i18n: ectx: property (title), widget (QGroupBox, bgDefault)
 #, kde-format
 msgid "Default Policy"
 msgstr "पूर्वनिर्धारित नीति"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyAccept)
 #: cookies/kcookiespolicies.ui:77
+#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyAccept)
 #, kde-format
 msgid "Accep&t all cookies"
 msgstr "सर्वाणि कुकीजं स्वीकुरुत"
 
+#: cookies/kcookiespolicies.ui:84
 #. i18n: ectx: property (text), widget (QRadioButton,
 #. rbPolicyAcceptForSession)
-#: cookies/kcookiespolicies.ui:84
 #, kde-format
 msgid "Accept &until end of session"
 msgstr "स्वीकार्यताम् &सत्रस्य समाप्तिपर्यन्तं"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyAsk)
 #: cookies/kcookiespolicies.ui:91
+#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyAsk)
 #, kde-format
 msgid "Ask &for confirmation"
 msgstr "&पुष्ट्यर्थं पृच्छन्तु"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyReject)
 #: cookies/kcookiespolicies.ui:98
+#. i18n: ectx: property (text), widget (QRadioButton, rbPolicyReject)
 #, kde-format
 msgid "Re&ject all cookies"
 msgstr "सर्वाणि कुकीजानि अङ्गीकुर्वन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, gbDomainSpecific)
 #: cookies/kcookiespolicies.ui:123
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, gbDomainSpecific)
 #, kde-format
 msgid ""
 "<qt>\n"
-"To add a new policy, simply click on the <b>Add...</b> button and supply the necessary information. To change an existing policy, use the <b>Change...</b> button and choose the new policy from the policy dialog box. Clicking on the <b>Delete</b> button will remove the currently selected policy causing the default policy setting to be used for that domain, whereas <b>Delete All</b> will remove all the site specific policies.\n"
+"To add a new policy, simply click on the <b>Add...</b> button and supply "
+"the necessary information. To change an existing policy, use the "
+"<b>Change...</b> button and choose the new policy from the policy dialog "
+"box. Clicking on the <b>Delete</b> button will remove the currently "
+"selected policy causing the default policy setting to be used for that "
+"domain, whereas <b>Delete All</b> will remove all the site specific "
+"policies.\n"
 "</qt>"
 msgstr ""
 "<qt>नूतनं नीतिं योजयितुं केवलं <b>Add...</b> बटन् नुत्वा आवश्यकसूचनाः "
@@ -632,100 +671,104 @@ msgstr ""
 "पूर्वनिर्धारितनीतिसेटिंग् उपयुज्यते, यदा तु <b>Delete All</b> सर्वाणि "
 "साइट्विशिष्टनीतयः अपसारयिष्यति</qt>"
 
-#. i18n: ectx: property (title), widget (QGroupBox, gbDomainSpecific)
 #: cookies/kcookiespolicies.ui:126
+#. i18n: ectx: property (title), widget (QGroupBox, gbDomainSpecific)
 #, kde-format
 msgid "Site Policy"
 msgstr "साइट नीति"
 
+#: cookies/kcookiespolicies.ui:135
 #. i18n: ectx: property (toolTip), widget (KTreeWidgetSearchLine,
 #. kListViewSearchLine)
-#: cookies/kcookiespolicies.ui:135
 #, kde-format
 msgid "Search interactively for domains"
 msgstr "डोमेनानां कृते अन्तरक्रियाशीलरूपेण अन्वेषणं कुर्वन्तु"
 
+#: cookies/kcookiespolicies.ui:138
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine,
 #. kListViewSearchLine)
-#: cookies/kcookiespolicies.ui:138
 #, kde-format
 msgid "Search..."
 msgstr "अन्वेषण..."
 
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, policyTreeWidget)
 #: cookies/kcookiespolicies.ui:147
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, policyTreeWidget)
 #, kde-format
 msgid ""
 "<qt>\n"
-"List of sites for which you have set a specific cookie policy. Specific policies override the default policy setting for these sites.\n"
+"List of sites for which you have set a specific cookie policy. Specific "
+"policies override the default policy setting for these sites.\n"
 "</qt>"
 msgstr ""
 "<qt> इति\n"
-"येषां साइट्-स्थानानां कृते भवता विशिष्टा कुकी-नीतिः निर्धारिता । विशिष्टानि नीतयः एतेषां साइट्-स्थानानां पूर्वनिर्धारित-नीति-सेटिंग् अधिलिखन्ति ।\n"
+"येषां साइट्-स्थानानां कृते भवता विशिष्टा कुकी-नीतिः निर्धारिता । विशिष्टानि "
+"नीतयः एतेषां साइट्-स्थानानां पूर्वनिर्धारित-नीति-सेटिंग् अधिलिखन्ति ।\n"
 "</qt> इति"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, policyTreeWidget)
 #: cookies/kcookiespolicies.ui:163
+#. i18n: ectx: property (text), widget (QTreeWidget, policyTreeWidget)
 #, kde-format
 msgid "Domain"
 msgstr "क्षेत्र"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, policyTreeWidget)
 #: cookies/kcookiespolicies.ui:168 domainlistview.cpp:40
+#. i18n: ectx: property (text), widget (QTreeWidget, policyTreeWidget)
 #, kde-format
 msgid "Policy"
 msgstr "नीति"
 
-#. i18n: ectx: property (text), widget (QPushButton, newTemplateBtn)
-#. i18n: ectx: property (text), widget (QPushButton, pbNew)
 #: cookies/kcookiespolicies.ui:176 domainlistview.cpp:48
 #: useragent/useragent.ui:81
+#. i18n: ectx: property (text), widget (QPushButton, newTemplateBtn)
+#. i18n: ectx: property (text), widget (QPushButton, pbNew)
 #, kde-format
 msgid "&New..."
 msgstr "&नूतनम्‌..."
 
-#. i18n: ectx: property (text), widget (QPushButton, pbChange)
 #: cookies/kcookiespolicies.ui:183 domainlistview.cpp:52
+#. i18n: ectx: property (text), widget (QPushButton, pbChange)
 #, kde-format
 msgid "Chan&ge..."
 msgstr "परिवर्तय..."
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, lbDomain)
 #: cookies/kcookiespolicyselectiondlg.ui:22
+#. i18n: ectx: property (whatsThis), widget (QLabel, lbDomain)
 #, kde-format
 msgid ""
 "<qt>\n"
-"Enter the host or domain to which this policy applies, e.g. <b>www.kde.org</b> or <b>.kde.org</b>.\n"
+"Enter the host or domain to which this policy applies, e.g. "
+"<b>www.kde.org</b> or <b>.kde.org</b>.\n"
 "</qt>"
 msgstr ""
 "<qt>यस्मिन् होस्ट् अथवा डोमेन् इत्यत्र एषा नीतिः प्रवर्तते तत् प्रविशन्तु, "
 "यथा <b>www.kde.org</b> अथवा <b>.kde.org</b> ।</qt>"
 
-#. i18n: ectx: property (text), widget (QLabel, lbDomain)
 #: cookies/kcookiespolicyselectiondlg.ui:25
+#. i18n: ectx: property (text), widget (QLabel, lbDomain)
 #, kde-format
 msgid "Site name:"
 msgstr "साइट् नाम : १."
 
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, leDomain)
 #: cookies/kcookiespolicyselectiondlg.ui:38
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, leDomain)
 #, kde-format
 msgid "Enter the host or domain name, e.g. .kde.org, this policy applies to."
 msgstr ""
 "होस्ट् अथवा डोमेन् नाम प्रविष्टं कुर्वन्तु, उदा. .kde.org इत्यत्र एषा नीतिः "
 "प्रवर्तते ।"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, lbPolicy)
-#. i18n: ectx: property (whatsThis), widget (QComboBox, cbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:53
 #: cookies/kcookiespolicyselectiondlg.ui:77
+#. i18n: ectx: property (whatsThis), widget (QLabel, lbPolicy)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, cbPolicy)
 #, kde-format
 msgid ""
 "<qt>\n"
 "Select the desired policy:\n"
 "<ul>\n"
 "<li><b>Accept</b> - Allows this site to set cookies</li>\n"
-"<li><b>Accept until end of session</b> - Allows this site to set cookies but they will expire at the end of the session.</li>\n"
+"<li><b>Accept until end of session</b> - Allows this site to set cookies "
+"but they will expire at the end of the session.</li>\n"
 "<li><b>Reject</b> - Refuse all cookies sent from this site</li>\n"
 "<li><b>Ask</b> - Prompt when cookies are received from this site</li>\n"
 "</ul>\n"
@@ -739,51 +782,51 @@ msgstr ""
 "अङ्गीकुर्वन्तु</li><li> <b>पृच्छतु</b> - अस्मात् साइट् तः कदा कुकीजः "
 "प्राप्यते इति प्रॉम्प्ट् कुर्वन्तु</li></ul></qt>"
 
-#. i18n: ectx: property (text), widget (QLabel, lbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:56
+#. i18n: ectx: property (text), widget (QLabel, lbPolicy)
 #, kde-format
 msgid "Policy:"
 msgstr "नीति:"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:81 domainlistview.cpp:192
 #: policydlg.cpp:63
+#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #, kde-format
 msgid "Accept"
 msgstr "स्वीकरोतु"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:86
+#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #, kde-format
 msgid "Accept until end of session"
 msgstr "सत्रस्य अन्त्यपर्यन्तं स्वीकुर्वन्तु"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:91 domainlistview.cpp:194
 #: policydlg.cpp:63
+#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #, kde-format
 msgid "Reject"
 msgstr "अस्वीकार"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #: cookies/kcookiespolicyselectiondlg.ui:96 jspolicies.cpp:182
+#. i18n: ectx: property (text), item, widget (QComboBox, cbPolicy)
 #, kde-format
 msgid "Ask"
 msgstr "पृच्छतु"
 
+#: css/cssconfig.ui:14 css/csscustom.ui:13
 #. i18n: ectx: property (whatsThis), widget (QWidget, CSSConfigWidget)
 #. i18n: ectx: property (whatsThis), widget (QWidget, CSSCustomDialog)
-#: css/cssconfig.ui:14 css/csscustom.ui:13
 #, kde-format
 msgid ""
-"<b>Stylesheets</b><p>See http://www.w3.org/Style/CSS for further information"
-" on cascading style sheets.</p>"
+"<b>Stylesheets</b><p>See http://www.w3.org/Style/CSS for further "
+"information on cascading style sheets.</p>"
 msgstr ""
 "<b>शैलीपत्रिकाः</b><p> झरनाशैलीपत्राणां विषये अधिकसूचनार्थं "
 "http://www.w3.org/Style/CSS पश्यन्तु ।</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, ButtonGroup1)
 #: css/cssconfig.ui:26
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, ButtonGroup1)
 #, kde-format
 msgid ""
 "<b>Stylesheets</b><p>Use this groupbox to determine how Konqueror will "
@@ -792,14 +835,14 @@ msgstr ""
 "<b>शैलीपत्रिकाः</b><p> Konqueror शैलीपत्राणि कथं रेण्डर् करिष्यति इति "
 "निर्धारयितुं एतस्य समूहपेटिकायाः उपयोगं कुर्वन्तु ।</p>"
 
-#. i18n: ectx: property (title), widget (QGroupBox, ButtonGroup1)
 #: css/cssconfig.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, ButtonGroup1)
 #, kde-format
 msgid "Stylesheets"
 msgstr "शैलीपत्रिकाः"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, useDefault)
 #: css/cssconfig.ui:35
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, useDefault)
 #, kde-format
 msgid ""
 "<b>Use default stylesheet</b><p>Select this option to use the default "
@@ -808,14 +851,14 @@ msgstr ""
 "<b>पूर्वनिर्धारितशैलीपत्रस्य उपयोगं कुर्वन्तु</b><p> "
 "पूर्वनिर्धारितशैलीपत्रस्य उपयोगाय एतत् विकल्पं चिनोतु ।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, useDefault)
 #: css/cssconfig.ui:38
+#. i18n: ectx: property (text), widget (QRadioButton, useDefault)
 #, kde-format
 msgid "Us&e default stylesheet"
 msgstr "Us&e पूर्वनिर्धारितशैलीपत्रम्"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, useUser)
 #: css/cssconfig.ui:48
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, useUser)
 #, kde-format
 msgid ""
 "<b>Use user-defined stylesheet</b><p>If this box is checked, Konqueror will "
@@ -827,91 +870,91 @@ msgid ""
 msgstr ""
 "<b>उपयोक्तृ-निर्धारितशैलीपत्रस्य उपयोगं कुर्वन्तु</b><p> यदि एषा पेटी चेक् "
 "कृता अस्ति तर्हि Konqueror अधोलिखिते स्थाने निर्दिष्टरीत्या "
-"उपयोक्तृनिर्धारितशैलीपत्रं लोड् कर्तुं प्रयतते । शैलीपत्रिका भवन्तं ब्राउजर्"
-" मध्ये जालपुटानां प्रतिपादनस्य मार्गं पूर्णतया अधिलिखितुं शक्नोति । "
+"उपयोक्तृनिर्धारितशैलीपत्रं लोड् कर्तुं प्रयतते । शैलीपत्रिका भवन्तं "
+"ब्राउजर् मध्ये जालपुटानां प्रतिपादनस्य मार्गं पूर्णतया अधिलिखितुं शक्नोति । "
 "निर्दिष्टायां सञ्चिकायां वैधशैलीपत्रं भवितुमर्हति (कैस्केडिंगशैलीपत्राणां "
 "विषये अधिकसूचनार्थं http://www.w3.org/Style/CSS पश्यन्तु) ।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, useUser)
 #: css/cssconfig.ui:51
+#. i18n: ectx: property (text), widget (QRadioButton, useUser)
 #, kde-format
 msgid "Use &user-defined stylesheet"
 msgstr "&उपयोक्तृ-निर्धारितशैलीपत्रस्य उपयोगं कुर्वन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, useAccess)
 #: css/cssconfig.ui:103
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, useAccess)
 #, kde-format
 msgid ""
 "<b>Use accessibility stylesheet</b><p>Selecting this option will allow you "
-"to define a default font, font size, and font color with a few simple clicks"
-" of the mouse. Simply wander over to the Customize... dialog and pick out "
-"your desired options.</p>"
+"to define a default font, font size, and font color with a few simple "
+"clicks of the mouse. Simply wander over to the Customize... dialog and pick "
+"out your desired options.</p>"
 msgstr ""
 "<b>सुलभताशैलीपत्रस्य उपयोगं कुर्वन्तु</b><p> एतत् विकल्पं चित्वा मूषकस्य "
 "कतिपयैः सरलक्लिक्-द्वारा पूर्वनिर्धारितं font, font size, font color च "
 "परिभाषितुं शक्यते । केवलं Customize... संवादं प्रति भ्रमित्वा स्वस्य "
 "इष्टविकल्पान् चिनोतु ।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, useAccess)
 #: css/cssconfig.ui:106
+#. i18n: ectx: property (text), widget (QRadioButton, useAccess)
 #, kde-format
 msgid "U&se accessibility stylesheet"
 msgstr "U&se सुलभता शैलीपत्रिका"
 
-#. i18n: ectx: property (text), widget (QPushButton, customize)
 #: css/cssconfig.ui:146
+#. i18n: ectx: property (text), widget (QPushButton, customize)
 #, kde-format
 msgid "Custom&ize..."
 msgstr "Custom&ize..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, customPageBackgroundBox)
 #: css/cssconfig.ui:177
+#. i18n: ectx: property (title), widget (QGroupBox, customPageBackgroundBox)
 #, kde-format
 msgid "Custom Page Background"
 msgstr "कस्टम पृष्ठ पृष्ठभूमि"
 
+#: css/cssconfig.ui:183
 #. i18n: ectx: property (toolTip), widget (QCheckBox,
 #. useCustomBackgroundColor)
-#: css/cssconfig.ui:183
 #, kde-format
 msgid ""
 "<html><head/><body><p align=\"justify\">Use a custom background color for "
-"web pages. This color is used:</p><ul style=\"margin-top: 0px; margin-"
-"bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li "
-"align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">when the "
-"background color isn't explicitly set by the page or by a custom "
-"stylesheet</li><li align=\"justify\" style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\">before a web page is loaded</li></ul><p "
-"align=\"justify\">Setting a custom background color is mostly useful if you "
-"use a custom stylesheet which sets a background color for the page "
-"(especially a dark color), to avoid a white flash before the page is "
-"loaded</p></body></html>"
+"web pages. This color is used:</p><ul style=\"margin-top: 0px; "
+"margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: "
+"1;\"><li align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">when the background color isn't explicitly set by the "
+"page or by a custom stylesheet</li><li align=\"justify\" style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+"-qt-block-indent:0; text-indent:0px;\">before a web page is "
+"loaded</li></ul><p align=\"justify\">Setting a custom background color is "
+"mostly useful if you use a custom stylesheet which sets a background color "
+"for the page (especially a dark color), to avoid a white flash before the "
+"page is loaded</p></body></html>"
 msgstr ""
-"<html><head/><body><p align=\"justify\">जालपुटानां कृते इष्टपृष्ठभूमिवर्णस्य"
-" उपयोगं कुर्वन्तु । एषः वर्णः उपयुज्यते : १. </p><ul style=\"margin-top: "
-"0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-"
-"indent: 1;\"><li align=\"justify\" style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"> यदा पृष्ठभूमिवर्णः पृष्ठेन वा इष्टशैलीपत्रेण वा स्पष्टतया "
-"सेट् न भवति </li><li align=\"justify\" style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"> जालपुटस्य लोडीकरणात् पूर्वं</li></ul><p align=\"justify\"> "
-"कस्टम् पृष्ठभूमिवर्णं सेट् करणं अधिकतया उपयोगी भवति यदि भवान् कस्टम् "
-"स्टाइलशीट् इत्यस्य उपयोगं करोति यत् पृष्ठस्य कृते पृष्ठभूमिवर्णं (विशेषतः "
-"कृष्णवर्णं) सेट् करोति, पृष्ठस्य लोड् करणात् पूर्वं श्वेतप्रकाशं "
-"परिहरितुं</p></body></html>"
+"<html><head/><body><p align=\"justify\">जालपुटानां कृते "
+"इष्टपृष्ठभूमिवर्णस्य उपयोगं कुर्वन्तु । एषः वर्णः उपयुज्यते : १. </p><ul "
+"style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
+"margin-right: 0px; -qt-list-indent: 1;\"><li align=\"justify\" style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+"-qt-block-indent:0; text-indent:0px;\"> यदा पृष्ठभूमिवर्णः पृष्ठेन वा "
+"इष्टशैलीपत्रेण वा स्पष्टतया सेट् न भवति </li><li align=\"justify\" style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+"-qt-block-indent:0; text-indent:0px;\"> जालपुटस्य लोडीकरणात् "
+"पूर्वं</li></ul><p align=\"justify\"> कस्टम् पृष्ठभूमिवर्णं सेट् करणं "
+"अधिकतया उपयोगी भवति यदि भवान् कस्टम् स्टाइलशीट् इत्यस्य उपयोगं करोति यत् "
+"पृष्ठस्य कृते पृष्ठभूमिवर्णं (विशेषतः कृष्णवर्णं) सेट् करोति, पृष्ठस्य लोड् "
+"करणात् पूर्वं श्वेतप्रकाशं परिहरितुं</p></body></html>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useCustomBackgroundColor)
 #: css/cssconfig.ui:186
+#. i18n: ectx: property (text), widget (QCheckBox, useCustomBackgroundColor)
 #, kde-format
 msgid "Use custom &background color"
 msgstr "कस्टम &पृष्ठभूमिवर्णस्य उपयोगं कुर्वन्तु"
 
+#: css/cssconfig.ui:196
 #. i18n: ectx: property (toolTip), widget (KColorButton,
 #. customBackgroundColor)
-#: css/cssconfig.ui:196
 #, kde-format
 msgid ""
 "<html><head/><body><p>The custom background color to use for web "
@@ -920,85 +963,86 @@ msgstr ""
 "<html><head/><body><p>जालपुटानां कृते उपयोक्तुं "
 "इष्टपृष्ठभूमिवर्णः</p></body></html>"
 
+#: css/cssconfig.ui:206
 #. i18n: ectx: property (toolTip), widget (QCheckBox,
 #. addCustomBackgroundToStyleSheet)
-#: css/cssconfig.ui:206
 #, kde-format
 msgid ""
 "<html><head/><body><p align=\"justify\">Add to your custom stylesheet "
-"(including the accessibility stylesheet) a rule to set all background colors"
-" to the custom color you chose above. This avoids the need of setting the "
-"background color both in the stylesheet and in the configuration "
-"dialog.</p><p align=\"justify\"><span style=\" font-"
-"weight:600;\">Notes:</span></p><ul style=\"margin-top: 0px; margin-bottom: "
-"0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li "
-"align=\"justify\" style=\" margin-top:12px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">the rule "
-"will be overridden by other rules for background colors in your custom "
-"stylesheet following the usual CSS rules</li><li align=\"justify\" style=\" "
-"margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\">the rule isn't actually added to the file"
-" containing your custom stylesheet; it's only inserted in the copy Konqueror"
-" keeps in memory. This means that if you use the stylesheet in other "
-"browsers, you'll need to manually add the rule to "
-"it.</li></ul></body></html>"
-msgstr ""
-"<html><head/><body><p align=\"justify\">स्वस्य इष्टशैलीपत्रे "
-"(सुलभताशैलीपत्रे च) सर्वान् पृष्ठभूमिवर्णान् उपरि भवता चयनिते इष्टवर्णे सेट्"
-" कर्तुं नियमं योजयन्तु । एतेन शैलीपत्रे विन्याससंवादे च पृष्ठभूमिवर्णस्य "
-"सेट् करणस्य आवश्यकता परिहृता भवति ।</p><p align=\"justify\"> <span style=\" "
-"font-weight:600;\">टिप्पणी : १.</span> </p><ul style=\"margin-top: 0px; "
+"(including the accessibility stylesheet) a rule to set all background "
+"colors to the custom color you chose above. This avoids the need of setting "
+"the background color both in the stylesheet and in the configuration "
+"dialog.</p><p align=\"justify\"><span style=\" "
+"font-weight:600;\">Notes:</span></p><ul style=\"margin-top: 0px; "
 "margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: "
 "1;\"><li align=\"justify\" style=\" margin-top:12px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> "
-"सामान्य CSS नियमानाम् अनुसरणं कृत्वा भवतः इष्टशैलीपत्रे पृष्ठभूमिवर्णानां "
-"कृते अन्यैः नियमैः नियमः अधिलिखितः भविष्यति </li><li align=\"justify\" "
-"style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"> नियमः वस्तुतः भवतः "
-"इष्टशैलीपत्रं समाविष्टे सञ्चिकायां न योजितः; केवलं Konqueror स्मृतौ यत् "
-"प्रतिलिपिं धारयति तस्मिन् एव सम्मिलितम् अस्ति । अस्य अर्थः अस्ति यत् यदि "
-"भवान् अन्येषु ब्राउजर्-मध्ये stylesheet इत्यस्य उपयोगं करोति तर्हि तस्मिन् "
-"नियमं मैन्युअल् रूपेण योजयितव्यम् ।</li></ul></body></html>"
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">the rule will be overridden by other rules for "
+"background colors in your custom stylesheet following the usual CSS "
+"rules</li><li align=\"justify\" style=\" margin-top:0px; "
+"margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">the rule isn't actually added to the file containing "
+"your custom stylesheet; it's only inserted in the copy Konqueror keeps in "
+"memory. This means that if you use the stylesheet in other browsers, you'll "
+"need to manually add the rule to it.</li></ul></body></html>"
+msgstr ""
+"<html><head/><body><p align=\"justify\">स्वस्य इष्टशैलीपत्रे "
+"(सुलभताशैलीपत्रे च) सर्वान् पृष्ठभूमिवर्णान् उपरि भवता चयनिते इष्टवर्णे "
+"सेट् कर्तुं नियमं योजयन्तु । एतेन शैलीपत्रे विन्याससंवादे च "
+"पृष्ठभूमिवर्णस्य सेट् करणस्य आवश्यकता परिहृता भवति ।</p><p "
+"align=\"justify\"> <span style=\" font-weight:600;\">टिप्पणी : १.</span> "
+"</p><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; "
+"margin-right: 0px; -qt-list-indent: 1;\"><li align=\"justify\" style=\" "
+"margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+"-qt-block-indent:0; text-indent:0px;\"> सामान्य CSS नियमानाम् अनुसरणं "
+"कृत्वा भवतः इष्टशैलीपत्रे पृष्ठभूमिवर्णानां कृते अन्यैः नियमैः नियमः "
+"अधिलिखितः भविष्यति </li><li align=\"justify\" style=\" margin-top:0px; "
+"margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"> नियमः वस्तुतः भवतः इष्टशैलीपत्रं समाविष्टे सञ्चिकायां न "
+"योजितः; केवलं Konqueror स्मृतौ यत् प्रतिलिपिं धारयति तस्मिन् एव सम्मिलितम् "
+"अस्ति । अस्य अर्थः अस्ति यत् यदि भवान् अन्येषु ब्राउजर्-मध्ये stylesheet "
+"इत्यस्य उपयोगं करोति तर्हि तस्मिन् नियमं मैन्युअल् रूपेण योजयितव्यम् "
+"।</li></ul></body></html>"
 
+#: css/cssconfig.ui:209
 #. i18n: ectx: property (text), widget (QCheckBox,
 #. addCustomBackgroundToStyleSheet)
-#: css/cssconfig.ui:209
 #, kde-format
 msgid "Add custom background color to stylesheet"
 msgstr "स्टाइलशीट् मध्ये कस्टम् बैकग्राउंड् रङ्गं योजयन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, GroupBox7)
 #: css/csscustom.ui:21
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, GroupBox7)
 #, kde-format
 msgid ""
 "<b>Font family</b><p>A font family is a group of fonts that resemble one "
 "another, with family members that are e.g. bold, italic, or any number of "
 "the above.</p>"
 msgstr ""
-"<b>फॉन्ट परिवार</b><p> फन्ट् परिवारः परस्परं सदृशानां फन्ट्-समूहः भवति, यत्र"
-" परिवारस्य सदस्याः सन्ति यथा गाढः, इटालिकः, उपर्युक्तानां किमपि संख्या वा "
-"।</p>"
+"<b>फॉन्ट परिवार</b><p> फन्ट् परिवारः परस्परं सदृशानां फन्ट्-समूहः भवति, "
+"यत्र परिवारस्य सदस्याः सन्ति यथा गाढः, इटालिकः, उपर्युक्तानां किमपि संख्या "
+"वा ।</p>"
 
-#. i18n: ectx: property (title), widget (QGroupBox, GroupBox7)
 #: css/csscustom.ui:24
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox7)
 #, kde-format
 msgid "Font Family"
 msgstr "फॉन्ट परिवार"
 
-#. i18n: ectx: property (text), widget (QLabel, txtBaseFontFamily)
 #: css/csscustom.ui:30
+#. i18n: ectx: property (text), widget (QLabel, txtBaseFontFamily)
 #, kde-format
 msgid "Base family:"
 msgstr "आधारपरिवारः : १."
 
-#. i18n: ectx: property (whatsThis), widget (QFontComboBox, fontFamily)
 #: css/csscustom.ui:37
+#. i18n: ectx: property (whatsThis), widget (QFontComboBox, fontFamily)
 #, kde-format
 msgid "<p>This is the currently selected font family</p>"
 msgstr "<p>एतत् सम्प्रति चयनितं फन्ट्-परिवारम् अस्ति</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, sameFamily)
 #: css/csscustom.ui:44
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, sameFamily)
 #, kde-format
 msgid ""
 "<b>Use same family for all text</b><p>Select this option to override custom "
@@ -1007,104 +1051,26 @@ msgstr ""
 "<b>सर्वेषां पाठानाम् कृते समानपरिवारस्य उपयोगं कुर्वन्तु</b><p> आधारफॉन्ट् "
 "इत्यस्य पक्षे सर्वत्र कस्टम् फन्ट् अधिलिखितुं एतत् विकल्पं चिनोतु ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, sameFamily)
 #: css/csscustom.ui:47
+#. i18n: ectx: property (text), widget (QCheckBox, sameFamily)
 #, kde-format
 msgid "Use same family for all text"
 msgstr "सर्वेषां पाठानाम् कृते समानपरिवारस्य उपयोगं कुर्वन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, GroupBox3)
 #: css/csscustom.ui:57
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox3)
 #, kde-format
 msgid "Font Size"
 msgstr "फ़ॉन्ट आकार"
 
-#. i18n: ectx: property (text), widget (QLabel, txtFontsize)
 #: css/csscustom.ui:63
+#. i18n: ectx: property (text), widget (QLabel, txtFontsize)
 #, kde-format
 msgid "Base font si&ze:"
 msgstr "विषय फ़ॉन्ट आधारः : १."
 
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:80
-#, kde-format
-msgid "7"
-msgstr "७"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:85
-#, kde-format
-msgid "8"
-msgstr "८"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:90
-#, kde-format
-msgid "9"
-msgstr "९"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:95
-#, kde-format
-msgid "10"
-msgstr "१०"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:100
-#, kde-format
-msgid "11"
-msgstr "११"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:105
-#, kde-format
-msgid "12"
-msgstr "१२"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:110
-#, kde-format
-msgid "14"
-msgstr "१४"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:115
-#, kde-format
-msgid "16"
-msgstr "16"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:120
-#, kde-format
-msgid "20"
-msgstr "२०"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:125
-#, kde-format
-msgid "24"
-msgstr "२४"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:130
-#, kde-format
-msgid "32"
-msgstr "३२"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:135
-#, kde-format
-msgid "48"
-msgstr "४८"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, basefontsize)
-#: css/csscustom.ui:140
-#, kde-format
-msgid "64"
-msgstr "६४"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScale)
 #: css/csscustom.ui:148
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScale)
 #, kde-format
 msgid ""
 "<b>Use same size for all elements</b><p>Select this option to override "
@@ -1115,45 +1081,44 @@ msgstr ""
 "आधार-अक्षर-आकारस्य पक्षे इष्ट-अक्षर-आकारं अधिलिखितुं एतत् विकल्पं चिनोतु । "
 "सर्वे फन्ट् समानप्रमाणेन प्रदर्शिताः भविष्यन्ति ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, dontScale)
 #: css/csscustom.ui:151
+#. i18n: ectx: property (text), widget (QCheckBox, dontScale)
 #, kde-format
 msgid "&Use same size for all elements"
 msgstr "&सर्वतत्त्वानां कृते समानप्रमाणस्य उपयोगं कुर्वन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, ButtonGroup2)
 #: css/csscustom.ui:161
+#. i18n: ectx: property (title), widget (QGroupBox, ButtonGroup2)
 #, kde-format
 msgid "Colors"
 msgstr "वर्णाः"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, blackOnWhite)
 #: css/csscustom.ui:183
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, blackOnWhite)
 #, kde-format
 msgid "<b>Black on White</b><p>This is what you normally see.</p>"
 msgstr "<b>श्वेतस्य उपरि कृष्णः</b><p> एतत् भवन्तः सामान्यतया पश्यन्ति।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blackOnWhite)
 #: css/csscustom.ui:186
+#. i18n: ectx: property (text), widget (QRadioButton, blackOnWhite)
 #, kde-format
 msgid "&Black on white"
 msgstr "&शुक्लस्य उपरि कृष्णः"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, whiteOnBlack)
 #: css/csscustom.ui:196
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, whiteOnBlack)
 #, kde-format
 msgid "<b>White on Black</b><p>This is your classic inverse color scheme.</p>"
-msgstr ""
-"<b>कृष्णस्य उपरि श्वेतम्</b><p> एषा भवतः शास्त्रीयविलोमवर्णयोजना अस्ति।</p>"
+msgstr "<b>कृष्णस्य उपरि श्वेतम्</b><p> एषा भवतः शास्त्रीयविलोमवर्णयोजना अस्ति।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, whiteOnBlack)
 #: css/csscustom.ui:199
+#. i18n: ectx: property (text), widget (QRadioButton, whiteOnBlack)
 #, kde-format
 msgid "&White on black"
 msgstr "&कृष्णे श्वेतम्"
 
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, customColor)
 #: css/csscustom.ui:206
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, customColor)
 #, kde-format
 msgid ""
 "<b>Custom</b><p>Select this option to define a custom color for the default "
@@ -1162,14 +1127,14 @@ msgstr ""
 "<b>आचारः</b><p> पूर्वनिर्धारित-अक्षरस्य कृते इष्टवर्णं परिभाषितुं एतत् "
 "विकल्पं चिनोतु ।</p>"
 
-#. i18n: ectx: property (text), widget (QRadioButton, customColor)
 #: css/csscustom.ui:209
+#. i18n: ectx: property (text), widget (QRadioButton, customColor)
 #, kde-format
 msgid "Cus&tom"
 msgstr "आचारः"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, txtBackground)
 #: css/csscustom.ui:219
+#. i18n: ectx: property (whatsThis), widget (QLabel, txtBackground)
 #, kde-format
 msgid ""
 "<b>Background</b><p>This background color is the one displayed behind the "
@@ -1178,15 +1143,15 @@ msgstr ""
 "<b>पृष्ठभूमि</b><p> एषः पृष्ठभूमिवर्णः पूर्वनिर्धारितरूपेण पाठस्य पृष्ठतः "
 "प्रदर्शितः अस्ति । पृष्ठभूमिप्रतिबिम्बम् एतत् अधिलिखति ।</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, txtBackground)
 #: css/csscustom.ui:222
+#. i18n: ectx: property (text), widget (QLabel, txtBackground)
 #, kde-format
 msgid "Bac&kground:"
 msgstr "पृष्ठभूमि:"
 
+#: css/csscustom.ui:238
 #. i18n: ectx: property (whatsThis), widget (KColorButton,
 #. backgroundColorButton)
-#: css/csscustom.ui:238
 #, kde-format
 msgid ""
 "<b>Background</b><p>Behind this door lays the ability to choose a custom "
@@ -1195,50 +1160,50 @@ msgstr ""
 "<b>पृष्ठभूमि</b><p> अस्य द्वारस्य पृष्ठतः कस्टम् पूर्वनिर्धारितपृष्ठभूमिं "
 "चिन्वितुं क्षमता निहितम् अस्ति ।</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, sameColor)
 #: css/csscustom.ui:248
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, sameColor)
 #, kde-format
 msgid ""
-"<b>Use same color for all text</b><p>Select this option to apply your chosen"
-" color to the default font as well as any custom fonts as specified in a "
-"stylesheet.</p>"
+"<b>Use same color for all text</b><p>Select this option to apply your "
+"chosen color to the default font as well as any custom fonts as specified "
+"in a stylesheet.</p>"
 msgstr ""
 "<b>सर्वेषां पाठानाम् कृते समानवर्णस्य उपयोगं कुर्वन्तु</b><p> भवतः "
 "चयनितवर्णं पूर्वनिर्धारित-अक्षरस्य अपि च शैलीपत्रे निर्दिष्टस्य कस्यापि "
 "इष्ट-फॉन्ट्-मध्ये प्रयोक्तुं एतत् विकल्पं चिनोतु ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, sameColor)
 #: css/csscustom.ui:251
+#. i18n: ectx: property (text), widget (QCheckBox, sameColor)
 #, kde-format
 msgid "Use same color for all text"
 msgstr "सर्वेषां पाठानाम् कृते समानवर्णस्य उपयोगं कुर्वन्तु"
 
+#: css/csscustom.ui:261 css/csscustom.ui:280
 #. i18n: ectx: property (whatsThis), widget (QLabel, txtForeground)
 #. i18n: ectx: property (whatsThis), widget (KColorButton,
 #. foregroundColorButton)
-#: css/csscustom.ui:261 css/csscustom.ui:280
 #, kde-format
 msgid ""
-"<b>Foreground color</b><p>The foreground color is the color that the text is"
-" drawn in.</p>"
+"<b>Foreground color</b><p>The foreground color is the color that the text "
+"is drawn in.</p>"
 msgstr ""
 "<b>अग्रभूमिवर्णः</b><p> अग्रभूमिवर्णः सः वर्णः यस्मिन् पाठः आकृष्टः भवति "
 "।</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, txtForeground)
 #: css/csscustom.ui:264
+#. i18n: ectx: property (text), widget (QLabel, txtForeground)
 #, kde-format
 msgid "&Foreground:"
 msgstr "&अग्रभूमिः : १."
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, GroupBox3_2)
 #: css/csscustom.ui:293
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, GroupBox3_2)
 #, kde-format
 msgid "<b>Images</b>"
 msgstr "<b>बिम्बाः</b>"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, hideImages)
 #: css/csscustom.ui:302
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, hideImages)
 #, kde-format
 msgid ""
 "<b>Suppress images</b><p>Selecting this will prevent Konqueror from loading "
@@ -1247,14 +1212,14 @@ msgstr ""
 "<b>बिम्बं दमनं कुर्वन्तु</b><p> एतत् चयनं कृत्वा Konqueror इत्यनेन चित्राणि "
 "लोड् कर्तुं न शक्यते ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, hideImages)
 #: css/csscustom.ui:305
+#. i18n: ectx: property (text), widget (QCheckBox, hideImages)
 #, kde-format
 msgid "&Suppress images"
 msgstr "&बिम्बं दमनं कुर्वन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, hideBackground)
 #: css/csscustom.ui:312
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, hideBackground)
 #, kde-format
 msgid ""
 "<b>Suppress background images</b><p>Selecting this option will prevent "
@@ -1263,14 +1228,14 @@ msgstr ""
 "<b>पृष्ठभूमिचित्रं दमनं कुर्वन्तु</b><p> एतत् विकल्पं चित्वा Konqueror "
 "पृष्ठभूमिचित्रं लोड् कर्तुं न शक्नोति ।</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, hideBackground)
 #: css/csscustom.ui:315
+#. i18n: ectx: property (text), widget (QCheckBox, hideBackground)
 #, kde-format
 msgid "Suppress background images"
 msgstr "पृष्ठभूमिचित्रं दमनं कुर्वन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, previewBox)
 #: css/csscustom.ui:347
+#. i18n: ectx: property (title), widget (QGroupBox, previewBox)
 #, kde-format
 msgid "Preview"
 msgstr "पूर्वावलोकनम्"
@@ -1280,20 +1245,20 @@ msgstr "पूर्वावलोकनम्"
 msgid ""
 "<h1>Konqueror Stylesheets</h1> This module allows you to apply your own "
 "color and font settings to Konqueror by using stylesheets (CSS). You can "
-"either specify options or apply your own self-written stylesheet by pointing"
-" to its location.<br /> Note that these settings will always have precedence"
-" before all other settings made by the site author. This can be useful to "
-"visually impaired people or for web pages that are unreadable due to bad "
-"design."
+"either specify options or apply your own self-written stylesheet by "
+"pointing to its location.<br /> Note that these settings will always have "
+"precedence before all other settings made by the site author. This can be "
+"useful to visually impaired people or for web pages that are unreadable due "
+"to bad design."
 msgstr ""
-"<h1>विजेता शैलीपत्रिकाएँ</h1> एतत् मॉड्यूल् भवन्तं stylesheets (CSS) इत्यस्य"
-" उपयोगेन Konqueror इत्यत्र स्वस्य वर्णस्य, font सेटिंग्स् च प्रयोक्तुं "
-"शक्नोति । भवान् विकल्पान् निर्दिष्टुं शक्नोति अथवा तस्य स्थानं दर्शयित्वा "
-"स्वस्य स्वयमेव लिखितं शैलीपत्रं प्रयोक्तुं शक्नोति ।<br /> ध्यानं कुर्वन्तु "
-"यत् साइट् लेखकेन कृतानां अन्येभ्यः सर्वेभ्यः सेटिङ्ग्स् इत्यस्मात् पूर्वं "
-"एतेषां सेटिङ्ग्स् इत्यस्य प्राधान्यं सर्वदा भविष्यति । एतत् दृष्टिबाधितानां "
-"जनानां कृते अथवा दुर्गन्धकारणात् अपठनीयानां जालपुटानां कृते उपयोगी भवितुम् "
-"अर्हति ।"
+"<h1>विजेता शैलीपत्रिकाएँ</h1> एतत् मॉड्यूल् भवन्तं stylesheets (CSS) "
+"इत्यस्य उपयोगेन Konqueror इत्यत्र स्वस्य वर्णस्य, font सेटिंग्स् च "
+"प्रयोक्तुं शक्नोति । भवान् विकल्पान् निर्दिष्टुं शक्नोति अथवा तस्य स्थानं "
+"दर्शयित्वा स्वस्य स्वयमेव लिखितं शैलीपत्रं प्रयोक्तुं शक्नोति ।<br /> "
+"ध्यानं कुर्वन्तु यत् साइट् लेखकेन कृतानां अन्येभ्यः सर्वेभ्यः सेटिङ्ग्स् "
+"इत्यस्मात् पूर्वं एतेषां सेटिङ्ग्स् इत्यस्य प्राधान्यं सर्वदा भविष्यति । "
+"एतत् दृष्टिबाधितानां जनानां कृते अथवा दुर्गन्धकारणात् अपठनीयानां जालपुटानां "
+"कृते उपयोगी भवितुम् अर्हति ।"
 
 #: css/kcmcss.cpp:386
 #, kde-format
@@ -1322,13 +1287,9 @@ msgstr ""
 "<!--\n"
 "%1\n"
 "-->\n"
-"</style></head><body><h1>शीर्षकम् १</h1><h2> शीर्षकम् २</h2><h3> शीर्षकम् ३</h3><p> उपयोक्तृनिर्धारितशैलीपत्राणि दृष्टिविकलाङ्गजनानाम् कृते सुलभतां वर्धयन्ति ।</p></body></html>\n"
-
-#: domainlistview.cpp:33
-#, kde-format
-msgctxt "@title:group"
-msgid "Do&main-Specific"
-msgstr ""
+"</style></head><body><h1>शीर्षकम् १</h1><h2> शीर्षकम् २</h2><h3> शीर्षकम् "
+"३</h3><p> उपयोक्तृनिर्धारितशैलीपत्राणि दृष्टिविकलाङ्गजनानाम् कृते सुलभतां "
+"वर्धयन्ति ।</p></body></html>\n"
 
 #: domainlistview.cpp:40
 #, kde-format
@@ -1354,14 +1315,14 @@ msgstr "&निर्यात..."
 #, kde-format
 msgid "Click on this button to manually add a host or domain specific policy."
 msgstr ""
-"होस्ट् अथवा डोमेन् विशिष्टं नीतिं मैन्युअल् रूपेण योजयितुं एतत् बटन् नुदन्तु"
-" ।"
+"होस्ट् अथवा डोमेन् विशिष्टं नीतिं मैन्युअल् रूपेण योजयितुं एतत् बटन् "
+"नुदन्तु ।"
 
 #: domainlistview.cpp:76
 #, kde-format
 msgid ""
-"Click on this button to change the policy for the host or domain selected in"
-" the list box."
+"Click on this button to change the policy for the host or domain selected "
+"in the list box."
 msgstr ""
 "सूचीपेटिकायां चयनितस्य होस्ट् अथवा डोमेन् इत्यस्य नीतिं परिवर्तयितुं एतत् "
 "बटन् नुदन्तु ।"
@@ -1369,11 +1330,11 @@ msgstr ""
 #: domainlistview.cpp:78
 #, kde-format
 msgid ""
-"Click on this button to delete the policy for the host or domain selected in"
-" the list box."
+"Click on this button to delete the policy for the host or domain selected "
+"in the list box."
 msgstr ""
-"सूचीपेटिकायां चयनितस्य होस्ट् अथवा डोमेन् इत्यस्य नीतिं विलोपयितुं एतत् बटन्"
-" नुदन्तु ।"
+"सूचीपेटिकायां चयनितस्य होस्ट् अथवा डोमेन् इत्यस्य नीतिं विलोपयितुं एतत् "
+"बटन् नुदन्तु ।"
 
 #: domainlistview.cpp:125
 #, kde-format
@@ -1389,18 +1350,6 @@ msgstr "प्रथमं भवद्भिः विलोपनार्थ�
 #, kde-format
 msgid "Use Global"
 msgstr "Global इत्यस्य उपयोगं कुर्वन्तु"
-
-#: domainlistview.cpp:232
-#, kde-format
-msgctxt "@title:window"
-msgid "New JavaScript Policy"
-msgstr ""
-
-#: domainlistview.cpp:235
-#, kde-format
-msgctxt "@title:window"
-msgid "Change JavaScript Policy"
-msgstr ""
 
 #: domainlistview.cpp:239
 #, kde-format
@@ -1460,8 +1409,8 @@ msgstr "स्वचालितं अद्यतनान्तरम् : �
 #, kde-format
 msgid " day"
 msgid_plural " days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " दिनं"
+msgstr[1] " दिवसाः"
 
 #: filteropts.cpp:120
 #, kde-format
@@ -1559,13 +1508,13 @@ msgstr ""
 #: filteropts.cpp:188
 #, kde-format
 msgid ""
-"<qt><p>The filter export format is a plain text file. The file begins with a"
-" header line <tt>[AdBlock]</tt>, then all of the filters follow each on a "
+"<qt><p>The filter export format is a plain text file. The file begins with "
+"a header line <tt>[AdBlock]</tt>, then all of the filters follow each on a "
 "separate line."
 msgstr ""
-"<qt><p>फ़िल्टर निर्यातस्वरूपं साधारणपाठसञ्चिका अस्ति । सञ्चिका शीर्षकरेखायाः"
-" आरम्भं करोति <tt>[AdBlock]</tt> , ततः सर्वे फ़िल्टर् पृथक् पङ्क्तौ "
-"प्रत्येकं अनुसरणं कुर्वन्ति ।"
+"<qt><p>फ़िल्टर निर्यातस्वरूपं साधारणपाठसञ्चिका अस्ति । सञ्चिका "
+"शीर्षकरेखायाः आरम्भं करोति <tt>[AdBlock]</tt> , ततः सर्वे फ़िल्टर् पृथक् "
+"पङ्क्तौ प्रत्येकं अनुसरणं कुर्वन्ति ।"
 
 #: filteropts.cpp:256
 #, kde-format
@@ -1577,8 +1526,8 @@ msgstr "आयात फ़िल्टर"
 msgid "Export Filters"
 msgstr "निर्यात फ़िल्टर"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, templates)
 #: filteropts.cpp:553 useragent/useragent.ui:58
+#. i18n: ectx: property (text), widget (QTreeWidget, templates)
 #, kde-format
 msgid "Name"
 msgstr "नामः"
@@ -1587,50 +1536,6 @@ msgstr "नामः"
 #, kde-format
 msgid "URL"
 msgstr "URL"
-
-#: generalopts.cpp:54
-#, kde-format
-msgctxt ""
-"The user chose to use a custom start page but left the corresponding field "
-"empty"
-msgid "Please, insert the custom start page"
-msgstr ""
-
-#: generalopts.cpp:60
-#, kde-format
-msgctxt "@label:listbox"
-msgid "When a new &Tab is created"
-msgstr ""
-
-#: generalopts.cpp:69
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Show Introduction Page"
-msgstr ""
-
-#: generalopts.cpp:70
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Show My Start Page"
-msgstr ""
-
-#: generalopts.cpp:71
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Show Blank Page"
-msgstr ""
-
-#: generalopts.cpp:72
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Show My Bookmarks"
-msgstr ""
-
-#: generalopts.cpp:78
-#, kde-format
-msgctxt "@title:window"
-msgid "Select Start Page"
-msgstr ""
 
 #: generalopts.cpp:83
 #, kde-format
@@ -1641,12 +1546,6 @@ msgstr "इदं जालपुटस्य URL अस्ति यत् Konq
 #, kde-format
 msgid "Home page:"
 msgstr "मुखपृष्ठम् : १."
-
-#: generalopts.cpp:97
-#, kde-format
-msgctxt "@title:window"
-msgid "Select Home Page"
-msgstr ""
 
 #: generalopts.cpp:102
 #, kde-format
@@ -1716,10 +1615,10 @@ msgstr ""
 "बुकमार्क्-उपकरणपट्टिकायां दर्शयिष्यति येषां बुकमार्क-सम्पादके भवन्तः तत् "
 "कर्तुं चिह्नितवन्तः ।"
 
+#: htmlopts.cpp:67
 #. i18n("Form Com&pletion"), widget());
 #. m_pFormCompletionCheckBox->setCheckable(true);
 #. QFormLayout *laygroup2 = new QFormLayout(m_pFormCompletionCheckBox);
-#: htmlopts.cpp:67
 #, kde-format
 msgid ""
 "If this box is checked, Konqueror will remember the data you enter in web "
@@ -1759,8 +1658,8 @@ msgid ""
 "If this box is checked, you can open the URL in the selection by middle "
 "clicking on a Konqueror view."
 msgstr ""
-"यदि एषा पेटी चेक् कृता अस्ति तर्हि Konqueror दृश्ये मध्ये क्लिक् कृत्वा चयने"
-" URL उद्घाटयितुं शक्नुवन्ति ।"
+"यदि एषा पेटी चेक् कृता अस्ति तर्हि Konqueror दृश्ये मध्ये क्लिक् कृत्वा "
+"चयने URL उद्घाटयितुं शक्नुवन्ति ।"
 
 #: htmlopts.cpp:97
 #, kde-format
@@ -1771,8 +1670,8 @@ msgstr "राइट् क्लिक् इतिहासे &back गच्
 #, kde-format
 msgid ""
 "If this box is checked, you can go back in history by right clicking on a "
-"Konqueror view. To access the context menu, press the right mouse button and"
-" move."
+"Konqueror view. To access the context menu, press the right mouse button "
+"and move."
 msgstr ""
 "यदि एषा पेटी चेक् कृता अस्ति तर्हि Konqueror view इत्यत्र राइट् क्लिक् "
 "कृत्वा इतिहासे पुनः गन्तुं शक्नुवन्ति । सन्दर्भमेनू प्राप्तुं दक्षिणमूषकस्य "
@@ -1797,20 +1696,20 @@ msgstr ""
 #: htmlopts.cpp:121
 #, kde-format
 msgid "Send the DNT header to tell web sites you do not want to be tracked"
-msgstr ""
-"जालस्थलेभ्यः भवन्तः अनुसरणं न इच्छन्ति इति वक्तुं DNT शीर्षकं प्रेषयन्तु"
+msgstr "जालस्थलेभ्यः भवन्तः अनुसरणं न इच्छन्ति इति वक्तुं DNT शीर्षकं प्रेषयन्तु"
 
 #: htmlopts.cpp:122
 #, kde-format
 msgid ""
-"<p>Check this box if you want to inform a web site that you do not want your"
-" web browsing habits tracked.</p><p><strong>Warning:</strong> this header is"
-" considered obsolete, so it will likely be ignored by most web pages.</p>"
+"<p>Check this box if you want to inform a web site that you do not want "
+"your web browsing habits tracked.</p><p><strong>Warning:</strong> this "
+"header is considered obsolete, so it will likely be ignored by most web "
+"pages.</p>"
 msgstr ""
 "<p>यदि भवान् कस्मैचित् जालस्थलं सूचयितुम् इच्छति यत् भवान् स्वस्य जालपुटस्य "
 "अभ्यासस्य अनुसरणं न इच्छति तर्हि एतत् पेटीम् चिनोतु ।</p><p> "
-"<strong>चेतावनी:</strong> एतत् शीर्षकं अप्रचलितं मन्यते, अतः अधिकांशजालपुटैः"
-" एतत् उपेक्षितं भविष्यति ।</p>"
+"<strong>चेतावनी:</strong> एतत् शीर्षकं अप्रचलितं मन्यते, अतः "
+"अधिकांशजालपुटैः एतत् उपेक्षितं भविष्यति ।</p>"
 
 #: htmlopts.cpp:126
 #, kde-format
@@ -1820,8 +1719,7 @@ msgstr "वेबसाइट् गुप्तशब्दान् रक्�
 #: htmlopts.cpp:127
 #, kde-format
 msgid "Uncheck this box to prevent being prompted to save website passwords"
-msgstr ""
-"वेबसाइट् गुप्तशब्दान् रक्षितुं न प्रार्थयितुं एतत् पेटीम् अनचेक् कुर्वन्तु"
+msgstr "वेबसाइट् गुप्तशब्दान् रक्षितुं न प्रार्थयितुं एतत् पेटीम् अनचेक् कुर्वन्तु"
 
 #: htmlopts.cpp:131
 #, kde-format
@@ -1845,8 +1743,8 @@ msgstr "जालपुटेभ्यः सञ्चिकाः सर्व�
 #: htmlopts.cpp:137
 #, kde-format
 msgid ""
-"<p>When showing in Konqueror files from links in web pages, always use a new"
-" tab"
+"<p>When showing in Konqueror files from links in web pages, always use a "
+"new tab"
 msgstr ""
 "<p>जालपुटेषु लिङ्क् तः Konqueror सञ्चिकासु दर्शयति सति सर्वदा नूतनं ट्याब् "
 "उपयुज्यताम्"
@@ -1875,21 +1773,21 @@ msgid ""
 "domain. To add a new policy, simply click the <i>New...</i> button and "
 "supply the necessary information requested by the dialog box. To change an "
 "existing policy, click on the <i>Change...</i> button and choose the new "
-"policy from the policy dialog box. Clicking on the <i>Delete</i> button will"
-" remove the selected policy causing the default policy setting to be used "
-"for that domain. The <i>Import</i> and <i>Export</i> button allows you to "
-"easily share your policies with other people by allowing you to save and "
+"policy from the policy dialog box. Clicking on the <i>Delete</i> button "
+"will remove the selected policy causing the default policy setting to be "
+"used for that domain. The <i>Import</i> and <i>Export</i> button allows you "
+"to easily share your policies with other people by allowing you to save and "
 "retrieve them from a zipped file."
 msgstr ""
 "अत्र भवान् कस्यचित् विशेषस्य होस्ट् अथवा डोमेन् कृते विशिष्टानि "
 "जावास्क्रिप्ट् नीतयः सेट् कर्तुं शक्नोति । नूतनं नीतिं योजयितुं केवलं "
-"<i>New...</i> बटन् नुत्वा संवादपेटिकायाः अनुरोधितां आवश्यकां सूचनां आपूर्तिं"
-" कुर्वन्तु । विद्यमानं नीतिं परिवर्तयितुं <i>Change...</i> बटन् नुत्वा "
-"नीतिसंवादपेटिकातः नूतनं नीतिं चिनोतु । <i>Delete</i> बटन् नुदनेन चयनितनीतिः "
-"निष्कासिता भविष्यति येन तस्य डोमेनस्य कृते पूर्वनिर्धारितनीतिसेटिंग् "
-"उपयुज्यते । <i>Import</i> and <i>Export</i> इति बटन् भवन्तं जिप्ड् सञ्चिकातः"
-" रक्षितुं पुनः प्राप्तुं च अनुमतिं दत्त्वा अन्यैः जनानां सह स्वनीतीः सहजतया "
-"साझां कर्तुं शक्नोति ।"
+"<i>New...</i> बटन् नुत्वा संवादपेटिकायाः अनुरोधितां आवश्यकां सूचनां "
+"आपूर्तिं कुर्वन्तु । विद्यमानं नीतिं परिवर्तयितुं <i>Change...</i> बटन् "
+"नुत्वा नीतिसंवादपेटिकातः नूतनं नीतिं चिनोतु । <i>Delete</i> बटन् नुदनेन "
+"चयनितनीतिः निष्कासिता भविष्यति येन तस्य डोमेनस्य कृते "
+"पूर्वनिर्धारितनीतिसेटिंग् उपयुज्यते । <i>Import</i> and <i>Export</i> इति "
+"बटन् भवन्तं जिप्ड् सञ्चिकातः रक्षितुं पुनः प्राप्तुं च अनुमतिं दत्त्वा "
+"अन्यैः जनानां सह स्वनीतीः सहजतया साझां कर्तुं शक्नोति ।"
 
 #: jsopts.cpp:80
 #, kde-format
@@ -1964,8 +1862,7 @@ msgstr "सर्वाणि पॉपअप विण्डो अनुरो
 #: jspolicies.cpp:183
 #, kde-format
 msgid "Prompt every time a popup window is requested."
-msgstr ""
-"प्रत्येकं समये पॉपअप विण्डो अनुरोधितं भवति चेत् प्रॉम्प्ट् कुर्वन्तु ।"
+msgstr "प्रत्येकं समये पॉपअप विण्डो अनुरोधितं भवति चेत् प्रॉम्प्ट् कुर्वन्तु ।"
 
 #: jspolicies.cpp:188
 #, kde-format
@@ -1996,10 +1893,10 @@ msgstr ""
 msgid ""
 "If you disable this, Konqueror will stop interpreting the "
 "<i>window.open()</i> JavaScript command. This is useful if you regularly "
-"visit sites that make extensive use of this command to pop up ad banners.<br"
-" /><br /><b>Note:</b> Disabling this option might also break certain sites "
-"that require <i>window.open()</i> for proper operation. Use this feature "
-"carefully."
+"visit sites that make extensive use of this command to pop up ad "
+"banners.<br /><br /><b>Note:</b> Disabling this option might also break "
+"certain sites that require <i>window.open()</i> for proper operation. Use "
+"this feature carefully."
 msgstr ""
 "यदि भवान् एतत् निष्क्रियं करोति तर्हि Konqueror <i>window.open()</i> "
 "JavaScript आदेशस्य व्याख्यानं स्थगयिष्यति । यदि भवान् नियमितरूपेण तेषु "
@@ -2041,9 +1938,9 @@ msgid ""
 "<i>window.resizeBy()</i> or <i>window.resizeTo()</i>. This option specifies "
 "the treatment of such attempts."
 msgstr ""
-"केचन जालपुटाः <i>window.resizeBy()</i> अथवा <i>window.resizeTo() इत्यस्य</i>"
-" उपयोगेन स्वयमेव विण्डो आकारं परिवर्तयन्ति । एषः विकल्पः तादृशप्रयासानां "
-"चिकित्सां निर्दिशति ।"
+"केचन जालपुटाः <i>window.resizeBy()</i> अथवा <i>window.resizeTo() "
+"इत्यस्य</i> उपयोगेन स्वयमेव विण्डो आकारं परिवर्तयन्ति । एषः विकल्पः "
+"तादृशप्रयासानां चिकित्सां निर्दिशति ।"
 
 #: jspolicies.cpp:253
 #, kde-format
@@ -2093,9 +1990,9 @@ msgid ""
 "<i>think</i> it brought the focus to the window but the actual focus will "
 "remain unchanged."
 msgstr ""
-"विण्डो केन्द्रीकृत्य स्क्रिप्ट्-प्रयासान् अवहेलयन्तु । जालपुटं <i>मन्यते</i>"
-" यत् एतत् विण्डो मध्ये फोकसम् आनयत् किन्तु वास्तविकं फोकस अपरिवर्तितं "
-"भविष्यति।"
+"विण्डो केन्द्रीकृत्य स्क्रिप्ट्-प्रयासान् अवहेलयन्तु । जालपुटं "
+"<i>मन्यते</i> यत् एतत् विण्डो मध्ये फोकसम् आनयत् किन्तु वास्तविकं फोकस "
+"अपरिवर्तितं भविष्यति।"
 
 #: jspolicies.cpp:319
 #, kde-format
@@ -2137,16 +2034,10 @@ msgid ""
 "<i>window.defaultStatus</i>, thus sometimes preventing displaying the real "
 "URLs of hyperlinks. This option specifies the treatment of such attempts."
 msgstr ""
-"केचन जालपुटाः <i>window.status</i> अथवा <i>window.defaultStatus इति</i> सेट्"
-" कृत्वा स्थितिपट्टिकापाठं परिवर्तयन्ति, अतः कदाचित् हाइपरलिङ्कानां "
+"केचन जालपुटाः <i>window.status</i> अथवा <i>window.defaultStatus इति</i> "
+"सेट् कृत्वा स्थितिपट्टिकापाठं परिवर्तयन्ति, अतः कदाचित् हाइपरलिङ्कानां "
 "वास्तविक-URL-प्रदर्शनं निवारयन्ति । एषः विकल्पः तादृशप्रयासानां चिकित्सां "
 "निर्दिशति ।"
-
-#: policydlg.cpp:30
-#, kde-format
-msgctxt "@title:window"
-msgid "Domain-Specific Policies"
-msgstr ""
 
 #: policydlg.cpp:47
 #, kde-format
@@ -2156,8 +2047,8 @@ msgstr "&होस्ट् अथवा डोमेन नाम : १."
 #: policydlg.cpp:55
 #, kde-format
 msgid ""
-"Enter the name of a host (like www.kde.org) or a domain, starting with a dot"
-" (like .kde.org or .org)"
+"Enter the name of a host (like www.kde.org) or a domain, starting with a "
+"dot (like .kde.org or .org)"
 msgstr ""
 "बिन्दुना आरभ्य (यथा .kde.org अथवा .org) यजमानस्य (www.kde.org इव) अथवा "
 "डोमेनस्य नाम प्रविष्टं कुर्वन्तु ।"
@@ -2167,20 +2058,20 @@ msgstr ""
 msgid "You must first enter a domain name."
 msgstr "प्रथमं भवद्भिः डोमेननाम प्रविष्टव्यम् ।"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, TabsOptions)
 #: tabs/tabsoptions.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, TabsOptions)
 #, kde-format
 msgid "Tabs Behavior"
 msgstr "टब्स् व्यवहारः"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: tabs/tabsoptions.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #, kde-format
 msgid "Aspect"
 msgstr "कारक"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pDynamicTabbarHide)
 #: tabs/tabsoptions.ui:26
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pDynamicTabbarHide)
 #, kde-format
 msgid ""
 "This will display the tab bar only if there are two or more tabs. Otherwise "
@@ -2189,72 +2080,72 @@ msgstr ""
 "एतेन केवलं तदा एव ट्याब्-पट्टिका प्रदर्शिता भविष्यति यदा द्वौ वा अधिकौ "
 "ट्याब्-स्थानौ स्तः । अन्यथा सर्वदा प्रदर्शितं भविष्यति।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pDynamicTabbarHide)
 #: tabs/tabsoptions.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, m_pDynamicTabbarHide)
 #, kde-format
 msgid "Hide the tab bar when only one tab is open"
 msgstr "यदा केवलं एकः ट्याब् उद्घाटितः भवति तदा ट्याब् बारं गोपयन्तु"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: tabs/tabsoptions.ui:38
+#. i18n: ectx: property (text), widget (QLabel, label)
 #, kde-format
 msgid "Tab bar position"
 msgstr "ट्याब बार स्थिति"
 
-#. i18n: ectx: property (whatsThis), widget (QComboBox, tabbarPosition)
 #: tabs/tabsoptions.ui:48
+#. i18n: ectx: property (whatsThis), widget (QComboBox, tabbarPosition)
 #, kde-format
 msgid "Choose where to display the tabs bar"
 msgstr "ट्याब्स् बारं कुत्र प्रदर्शयितव्यम् इति चिनोतु"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #: tabs/tabsoptions.ui:52
+#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #, kde-format
 msgid "Above contents"
 msgstr "सामग्रीभ्यः उपरि"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #: tabs/tabsoptions.ui:57
+#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #, kde-format
 msgid "Below contents"
 msgstr "सामग्रीं अधः"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #: tabs/tabsoptions.ui:62
+#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #, kde-format
 msgid "Left of contents"
 msgstr "सामग्रीयाः वामभागे"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #: tabs/tabsoptions.ui:67
+#. i18n: ectx: property (text), item, widget (QComboBox, tabbarPosition)
 #, kde-format
 msgid "Right of contents"
 msgstr "सामग्रीयाः अधिकारः"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: tabs/tabsoptions.ui:93
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #, kde-format
 msgid "Usage"
 msgstr "प्रयोगः"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pShowMMBInTabs)
 #: tabs/tabsoptions.ui:99
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pShowMMBInTabs)
 #, kde-format
 msgid ""
-"This will open a new tab instead of a new window in various situations, such"
-" as choosing a link or a folder with the middle mouse button."
+"This will open a new tab instead of a new window in various situations, "
+"such as choosing a link or a folder with the middle mouse button."
 msgstr ""
 "एतेन विभिन्नेषु परिस्थितिषु नूतनविण्डो इत्यस्य स्थाने नूतनं ट्याब् "
 "उद्घाट्यते, यथा मध्यमूषकबटनेन सह लिङ्क् अथवा पुटं चयनं भवति ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pShowMMBInTabs)
 #: tabs/tabsoptions.ui:102
+#. i18n: ectx: property (text), widget (QCheckBox, m_pShowMMBInTabs)
 #, kde-format
 msgid "Open &links in new tab instead of in new window"
 msgstr "नूतनविण्डो मध्ये न अपितु नूतनट्याब् मध्ये &links उद्घाटयन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pPopupsWithinTabs)
 #: tabs/tabsoptions.ui:109
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pPopupsWithinTabs)
 #, kde-format
 msgid ""
 "Whether or not JavaScript popups if allowed shall open in a new tab or in a "
@@ -2263,48 +2154,47 @@ msgstr ""
 "यदि अनुमतिः अस्ति तर्हि जावास्क्रिप्ट् पॉपअप्स् नूतने ट्याब् मध्ये अथवा "
 "नूतने विण्डो मध्ये उद्घाटिताः भविष्यन्ति वा न वा ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pPopupsWithinTabs)
 #: tabs/tabsoptions.ui:112
+#. i18n: ectx: property (text), widget (QCheckBox, m_pPopupsWithinTabs)
 #, kde-format
 msgid "Open pop&ups in new tab instead of in new window"
 msgstr "नूतनविण्डो मध्ये न अपितु नूतनट्याब् मध्ये pop&ups उद्घाटयन्तु"
 
+#: tabs/tabsoptions.ui:119
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. m_pKonquerorTabforExternalURL)
-#: tabs/tabsoptions.ui:119
 #, kde-format
 msgid ""
-"When you click a URL in another KDE program or call kfmclient to open a URL,"
-" the current desktop will be searched for a non-minimized Konqueror and, if "
-"found, the URL opened as a new tab within it. Otherwise a new Konqueror "
-"window will be opened with the required URL."
+"When you click a URL in another KDE program or call kfmclient to open a "
+"URL, the current desktop will be searched for a non-minimized Konqueror "
+"and, if found, the URL opened as a new tab within it. Otherwise a new "
+"Konqueror window will be opened with the required URL."
 msgstr ""
 "यदा भवान् अन्यस्मिन् KDE कार्यक्रमे URL क्लिक् करोति अथवा URL उद्घाटयितुं "
 "kfmclient आह्वयति तदा वर्तमानं डेस्कटॉप् अ-न्यूनतमं Konqueror अन्वेषितं "
 "भविष्यति तथा च, यदि लभ्यते तर्हि URL तस्य अन्तः नूतनं ट्याब् रूपेण "
 "उद्घाटितम् अन्यथा आवश्यकेन URL सह नूतनं Konqueror विण्डो उद्घाट्यते ।"
 
+#: tabs/tabsoptions.ui:122
 #. i18n: ectx: property (text), widget (QCheckBox,
 #. m_pKonquerorTabforExternalURL)
-#: tabs/tabsoptions.ui:122
 #, kde-format
 msgid "Open as tab in existing Konqueror when URL is called externally"
-msgstr ""
-"विद्यमान Konqueror मध्ये ट्याब् रूपेण उद्घाटयन्तु यदा URL बाह्यरूपेण आह्वयति"
+msgstr "विद्यमान Konqueror मध्ये ट्याब् रूपेण उद्घाटयन्तु यदा URL बाह्यरूपेण आह्वयति"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: tabs/tabsoptions.ui:132
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #, kde-format
 msgid "New Tab Behavior"
 msgstr "नवीन ट्याब व्यवहार"
 
+#: tabs/tabsoptions.ui:138
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. m_pNewTabsInBackground)
-#: tabs/tabsoptions.ui:138
 #, kde-format
 msgid ""
-"<html><head/><body><p>This will open a new tab in the background, instead of"
-" in the foreground.</p><p>Press <span style=\" font-family:'Fira "
+"<html><head/><body><p>This will open a new tab in the background, instead "
+"of in the foreground.</p><p>Press <span style=\" font-family:'Fira "
 "Code';\">shift</span> when opening a new tab to reverse this "
 "behavior</p></body></html>"
 msgstr ""
@@ -2313,67 +2203,66 @@ msgstr ""
 "<span style=\" font-family:'Fira Code';\">shift</span> "
 "नुदन्तु</p></body></html>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pNewTabsInBackground)
 #: tabs/tabsoptions.ui:141
+#. i18n: ectx: property (text), widget (QCheckBox, m_pNewTabsInBackground)
 #, kde-format
 msgid "O&pen new tabs in the background"
 msgstr "पृष्ठभूमितः नूतनानि ट्याब्स् O&pen कुर्वन्तु"
 
+#: tabs/tabsoptions.ui:148
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. m_pOpenAfterCurrentPage)
-#: tabs/tabsoptions.ui:148
 #, kde-format
 msgid ""
 "This will open a new tab opened from a page after the current tab, instead "
 "of after the last tab."
 msgstr ""
-"एतेन अन्तिम-ट्याब्-पश्चात् न अपितु वर्तमान-ट्याब्-पश्चात् पृष्ठात् उद्घाटितं"
-" नूतनं ट्याब् उद्घाटितं भविष्यति ।"
+"एतेन अन्तिम-ट्याब्-पश्चात् न अपितु वर्तमान-ट्याब्-पश्चात् पृष्ठात् "
+"उद्घाटितं नूतनं ट्याब् उद्घाटितं भविष्यति ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pOpenAfterCurrentPage)
 #: tabs/tabsoptions.ui:151
+#. i18n: ectx: property (text), widget (QCheckBox, m_pOpenAfterCurrentPage)
 #, kde-format
 msgid "Open &new tab after current tab"
 msgstr "वर्तमान ट्याब् इत्यस्य अनन्तरं &new ट्याब् उद्घाटयन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: tabs/tabsoptions.ui:161
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #, kde-format
 msgid "Closing"
 msgstr "समापनम्"
 
+#: tabs/tabsoptions.ui:167
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. m_pPermanentCloseButton)
-#: tabs/tabsoptions.ui:167
 #, kde-format
 msgid "This will display close buttons inside each tab."
-msgstr ""
-"एतेन प्रत्येकस्य ट्याब् इत्यस्य अन्तः close बटन्स् प्रदर्शिताः भविष्यन्ति ।"
+msgstr "एतेन प्रत्येकस्य ट्याब् इत्यस्य अन्तः close बटन्स् प्रदर्शिताः भविष्यन्ति ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pPermanentCloseButton)
 #: tabs/tabsoptions.ui:170
+#. i18n: ectx: property (text), widget (QCheckBox, m_pPermanentCloseButton)
 #, kde-format
 msgid "&Show close button on tabs"
 msgstr "&ट्याब्स् इत्यत्र close बटनं दर्शयतु"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pMiddleClickClose)
 #: tabs/tabsoptions.ui:177
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pMiddleClickClose)
 #, kde-format
 msgid ""
 "When you click on a tab using the middle mouse button or mouse wheel, it "
 "will close that tab."
 msgstr ""
-"यदा भवान् मध्यमूषकस्य बटन् अथवा मूषकचक्रस्य उपयोगेन ट्याब् उपरि क्लिक् करोति"
-" तदा तत् तत् ट्याब् पिधास्यति ।"
+"यदा भवान् मध्यमूषकस्य बटन् अथवा मूषकचक्रस्य उपयोगेन ट्याब् उपरि क्लिक् "
+"करोति तदा तत् तत् ट्याब् पिधास्यति ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pMiddleClickClose)
 #: tabs/tabsoptions.ui:180
+#. i18n: ectx: property (text), widget (QCheckBox, m_pMiddleClickClose)
 #, kde-format
 msgid "Middle-click on a tab to close it"
 msgstr "एकं ट्याब् पिधातुं मध्य-क्लिक् कुर्वन्तु"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pTabConfirm)
 #: tabs/tabsoptions.ui:187
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_pTabConfirm)
 #, kde-format
 msgid ""
 "This will ask you whether you are sure you want to close a window when it "
@@ -2382,15 +2271,15 @@ msgstr ""
 "एतेन भवन्तः पृच्छन्ति यत् भवन्तः निश्चिताः सन्ति यत् भवन्तः विण्डो पिधातुम् "
 "इच्छन्ति वा यदा तस्मिन् बहुविधाः ट्याब्स् उद्घाटिताः सन्ति ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_pTabConfirm)
 #: tabs/tabsoptions.ui:190
+#. i18n: ectx: property (text), widget (QCheckBox, m_pTabConfirm)
 #, kde-format
 msgid "Confirm &when closing windows with multiple tabs"
 msgstr "बहुभिः ट्याब्भिः सह विण्डोजं बन्दं कुर्वन् &पुष्टयन्तु"
 
+#: tabs/tabsoptions.ui:197
 #. i18n: ectx: property (whatsThis), widget (QCheckBox,
 #. m_pTabCloseActivatePrevious)
-#: tabs/tabsoptions.ui:197
 #, kde-format
 msgid ""
 "When checking this the previous used or opened tab will be activated when "
@@ -2401,67 +2290,66 @@ msgstr ""
 "यदा भवान् वर्तमानट्याब् इत्यस्य दक्षिणतः एकस्य स्थाने वर्तमानसक्रिय ट्याब् "
 "बन्दं करोति ।"
 
+#: tabs/tabsoptions.ui:200
 #. i18n: ectx: property (text), widget (QCheckBox,
 #. m_pTabCloseActivatePrevious)
-#: tabs/tabsoptions.ui:200
 #, kde-format
 msgid "Activate previously used tab when closing the current tab"
-msgstr ""
-"वर्तमान ट्याब् बन्दं कुर्वन् पूर्वं प्रयुक्तं ट्याब् सक्रियं कुर्वन्तु"
+msgstr "वर्तमान ट्याब् बन्दं कुर्वन् पूर्वं प्रयुक्तं ट्याब् सक्रियं कुर्वन्तु"
 
-#. i18n: ectx: property (title), widget (QGroupBox, customUABox)
 #: useragent/useragent.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, customUABox)
 #, kde-format
 msgid "Existing identifications"
 msgstr "विद्यमानपरिचयः"
 
+#: useragent/useragent.ui:33 useragent/useragent.ui:78
+#: useragent/useragent.ui:147
 #. i18n: ectx: property (toolTip), widget (QTreeWidget, templates)
 #. i18n: ectx: property (toolTip), widget (QPushButton, newTemplateBtn)
 #. i18n: ectx: property (toolTip), widget (QPushButton, useTemplateBtn)
-#: useragent/useragent.ui:33 useragent/useragent.ui:78
-#: useragent/useragent.ui:147
 #, kde-format
 msgid "<html><head/><body><p><br/></p></body></html>"
 msgstr "<html><head/><body><p><br/></p></body></html>"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, templates)
 #: useragent/useragent.ui:63
+#. i18n: ectx: property (text), widget (QTreeWidget, templates)
 #, kde-format
 msgid "Content"
 msgstr "विषयः"
 
-#. i18n: ectx: property (text), widget (QPushButton, editTemplateBtn)
 #: useragent/useragent.ui:94
+#. i18n: ectx: property (text), widget (QPushButton, editTemplateBtn)
 #, kde-format
 msgid "&Edit..."
 msgstr "&सम्पादन..."
 
-#. i18n: ectx: property (text), widget (QPushButton, renameTemplateBtn)
 #: useragent/useragent.ui:107
+#. i18n: ectx: property (text), widget (QPushButton, renameTemplateBtn)
 #, kde-format
 msgid "&Rename..."
 msgstr "&नाम पुनर्नाम..."
 
-#. i18n: ectx: property (text), widget (QPushButton, duplicateTemplateBtn)
 #: useragent/useragent.ui:120
+#. i18n: ectx: property (text), widget (QPushButton, duplicateTemplateBtn)
 #, kde-format
 msgid "Du&plicate..."
 msgstr "डुप्लिकेट..."
 
-#. i18n: ectx: property (text), widget (QPushButton, deleteTemplateBtn)
 #: useragent/useragent.ui:133
+#. i18n: ectx: property (text), widget (QPushButton, deleteTemplateBtn)
 #, kde-format
 msgid "&Delete"
 msgstr "&लुप्"
 
-#. i18n: ectx: property (text), widget (QPushButton, useTemplateBtn)
 #: useragent/useragent.ui:150
+#. i18n: ectx: property (text), widget (QPushButton, useTemplateBtn)
 #, kde-format
 msgid "Choose &selected identification"
 msgstr "&चयनितं परिचयं चिनोतु"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, useDefaultUA)
 #: useragent/useragent.ui:160
+#. i18n: ectx: property (toolTip), widget (QCheckBox, useDefaultUA)
 #, kde-format
 msgid ""
 "<html><head/><body><p>If checked, disable choosing a custom identification "
@@ -2470,20 +2358,20 @@ msgstr ""
 "<html><head/><body><p>यदि चेक् कृतं तर्हि कस्टम् परिचयस्य चयनं निष्क्रियं "
 "कृत्वा पूर्वनिर्धारितं उपयोगं कुर्वन्तु</p></body></html>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useDefaultUA)
 #: useragent/useragent.ui:163
+#. i18n: ectx: property (text), widget (QCheckBox, useDefaultUA)
 #, kde-format
 msgid "Use &default identification"
 msgstr "&पूर्वनिर्धारितपरिचयस्य उपयोगं कुर्वन्तु"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: useragent/useragent.ui:178
+#. i18n: ectx: property (text), widget (QLabel, label)
 #, kde-format
 msgid "&Custom identification"
 msgstr "&अनुकूल पहचान"
 
-#. i18n: ectx: property (toolTip), widget (QLineEdit, userAgentString)
 #: useragent/useragent.ui:188
+#. i18n: ectx: property (toolTip), widget (QLineEdit, userAgentString)
 #, kde-format
 msgid ""
 "<html><head/><body><p>The browser identification to use when the default "
@@ -2495,3 +2383,137 @@ msgstr ""
 "ब्राउजर्-परिचयः ।</p><p> भवान् तत् स्वहस्तेन प्रविष्टुं शक्नोति अथवा "
 "अधोलिखिते सूचीयां एकस्मात् आरभ्य स्वस्य आवश्यकतानुसारं परिवर्तयितुं शक्नोति "
 "।</p></body></html>"
+
+#: appearance.cpp:39
+#, kde-format
+msgctxt "@title:tab"
+msgid "General"
+msgstr "सामान्य"
+
+#: appearance.cpp:40
+#, kde-format
+msgctxt "@title:tab"
+msgid "Fonts"
+msgstr "फॉन्ट्"
+
+#: appearance.cpp:41
+#, kde-format
+msgctxt "@title:tab"
+msgid "Stylesheets"
+msgstr "शैलीपत्रिकाः"
+
+#: appearance.cpp:74
+#, kde-format
+msgctxt "animations"
+msgid "Enabled"
+msgstr "सक्षमम्"
+
+#: appearance.cpp:75
+#, kde-format
+msgctxt "animations"
+msgid "Disabled"
+msgstr "अक्षमित"
+
+#: appearance.cpp:85 htmlopts.cpp:108
+#, kde-format
+msgctxt "@title:group"
+msgid "Miscellaneous"
+msgstr "विविध"
+
+#: domainlistview.cpp:33
+#, kde-format
+msgctxt "@title:group"
+msgid "Do&main-Specific"
+msgstr "करो&मुख्य-विशिष्टम्"
+
+#: appearance.cpp:90
+#, kde-format
+msgctxt "underline"
+msgid "Enabled"
+msgstr "सक्षमम्"
+
+#: appearance.cpp:91
+#, kde-format
+msgctxt "underline"
+msgid "Disabled"
+msgstr "अक्षमित"
+
+#: appearance.cpp:106
+#, kde-format
+msgctxt "smooth scrolling"
+msgid "Always"
+msgstr "सर्वदा"
+
+#: appearance.cpp:107
+#, kde-format
+msgctxt "soft scrolling"
+msgid "Never"
+msgstr "कदापि न"
+
+#: domainlistview.cpp:232
+#, kde-format
+msgctxt "@title:window"
+msgid "New JavaScript Policy"
+msgstr "नवीन जावास्क्रिप्ट नीति"
+
+#: domainlistview.cpp:235
+#, kde-format
+msgctxt "@title:window"
+msgid "Change JavaScript Policy"
+msgstr "जावास्क्रिप्ट् नीतिं परिवर्तयन्तु"
+
+#: generalopts.cpp:78
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Start Page"
+msgstr "Start Page इति चिनोतु"
+
+#: generalopts.cpp:97
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Home Page"
+msgstr "मुखपृष्ठं चिनोतु"
+
+#: policydlg.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Domain-Specific Policies"
+msgstr "डोमेन-विशिष्टनीतयः"
+
+#: generalopts.cpp:54
+#, kde-format
+msgctxt ""
+"The user chose to use a custom start page but left the corresponding field "
+"empty"
+msgid "Please, insert the custom start page"
+msgstr "कृपया, इष्टप्रारम्भपृष्ठं सम्मिलितं कुर्वन्तु"
+
+#: generalopts.cpp:60
+#, kde-format
+msgctxt "@label:listbox"
+msgid "When a new &Tab is created"
+msgstr "यदा नूतनं &Tab निर्मितं भवति"
+
+#: generalopts.cpp:69
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Show Introduction Page"
+msgstr "परिचय पृष्ठं दर्शयतु"
+
+#: generalopts.cpp:70
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Show My Start Page"
+msgstr "मम आरम्भपृष्ठं दर्शयतु"
+
+#: generalopts.cpp:71
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Show Blank Page"
+msgstr "रिक्त पृष्ठं दर्शयतु"
+
+#: generalopts.cpp:72
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Show My Bookmarks"
+msgstr "मम पुस्तकचिह्नानि दर्शयतु"

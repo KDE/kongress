@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: calendarcontroller.cpp:304
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "पुनः लोड करें"
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
-msgstr ""
+msgstr "घटनाविवरणम्"
 
 #: contents/ui/EventInfo.qml:105
 #, kde-format
@@ -107,8 +107,8 @@ msgstr "प्रियवार्ताः न प्राप्ताः"
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "अन्येन वार्तालापेन सह आच्छादयति"
+msgstr[1] "%1 अन्यवार्ताभिः सह आच्छादयति"
 
 #: contents/ui/GlobalDrawer.qml:57
 #, kde-format
@@ -221,13 +221,13 @@ msgstr "%1 तलम् प्रति परिवर्तितम्"
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "अधः तलम्"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "तलम् उपरि"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
@@ -312,10 +312,10 @@ msgstr "© 2021 केडीई समुदाय"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dimitris Kardarakos"
-msgstr ""
+msgstr "दिमित्री कर्दराकोस"
 
 #: main.cpp:72
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
-msgstr ""
+msgstr "परिपालकः विकासकः च"
