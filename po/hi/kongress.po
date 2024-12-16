@@ -1,0 +1,322 @@
+# Hindi translations for kongress package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kongress package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kongress\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"PO-Revision-Date: 2024-12-15 19:33+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "तुम्हारे नाम"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "आपके ईमेल"
+
+#: calendarcontroller.cpp:304
+#, kde-format
+msgid "Cannot save calendar file. Export failed."
+msgstr "कैलेंडर फ़ाइल सहेजी नहीं जा सकी. निर्यात विफल."
+
+#: calendarcontroller.cpp:307
+#, kde-format
+msgid "Export completed successfully"
+msgstr "निर्यात सफलतापूर्वक पूर्ण हुआ"
+
+#: conferencemodel.cpp:62
+#, kde-format
+msgid "Past"
+msgstr "अतीत"
+
+#: conferencemodel.cpp:63
+#, kde-format
+msgid "Upcoming"
+msgstr "आगामी"
+
+#: contents/ui/Conferences.qml:15
+#, kde-format
+msgid "Conferences"
+msgstr "सम्मेलन"
+
+#: contents/ui/Conferences.qml:24
+#, kde-format
+msgid "No conference found"
+msgstr "कोई सम्मेलन नहीं मिला"
+
+#: contents/ui/Conferences.qml:27
+#, kde-format
+msgid "Reload"
+msgstr "पुनः लोड करें"
+
+#: contents/ui/EventInfo.qml:21
+#, kde-format
+msgctxt "@title"
+msgid "Event Details"
+msgstr "इवेंट विवरण"
+
+#: contents/ui/EventInfo.qml:105
+#, kde-format
+msgid "Web Page"
+msgstr "वेब पृष्ठ"
+
+#: contents/ui/EventInfo.qml:119
+#, kde-format
+msgid "Delete"
+msgstr "मिटाना"
+
+#: contents/ui/EventInfo.qml:119
+#, kde-format
+msgid "Favorite"
+msgstr "पसंदीदा"
+
+#: contents/ui/FavoritesView.qml:27
+#, kde-format
+msgid "Export"
+msgstr "निर्यात"
+
+#: contents/ui/FavoritesView.qml:58
+#, kde-format
+msgid "Open folder"
+msgstr "फोल्डर खोलें"
+
+#: contents/ui/FavoritesView.qml:88
+#, kde-format
+msgid "No favorite talks found for %1"
+msgstr "%1 के लिए कोई पसंदीदा वार्ता नहीं मिली"
+
+#: contents/ui/FavoritesView.qml:88
+#, kde-format
+msgid "No favorite talks found"
+msgstr "कोई पसंदीदा वार्ता नहीं मिली"
+
+#: contents/ui/FavoritesView.qml:167
+#, kde-format
+msgid "Overlaps with another talk"
+msgid_plural "Overlaps with %1 other talks"
+msgstr[0] "%1 अन्य वार्ताओं के साथ ओवरलैप"
+msgstr[1] "%1 अन्य वार्ताओं के साथ ओवरलैप"
+
+#: contents/ui/GlobalDrawer.qml:57
+#, kde-format
+msgid "Conference"
+msgstr "सम्मेलन"
+
+#: contents/ui/GlobalDrawer.qml:76
+#, kde-format
+msgid "Change conference"
+msgstr "सम्मेलन बदलें"
+
+#: contents/ui/GlobalDrawer.qml:76
+#, kde-format
+msgid "Select conference"
+msgstr "सम्मेलन का चयन करें"
+
+#: contents/ui/GlobalDrawer.qml:95
+#, kde-format
+msgid "Check for updates"
+msgstr "अद्यतन के लिए जाँच"
+
+#: contents/ui/GlobalDrawer.qml:109
+#, kde-format
+msgid "Map"
+msgstr "नक्शा"
+
+#: contents/ui/GlobalDrawer.qml:131 contents/ui/GlobalDrawer.qml:137
+#: contents/ui/Main.qml:74
+#, kde-format
+msgid "Favorites"
+msgstr "पसंदीदा"
+
+#: contents/ui/GlobalDrawer.qml:145
+#, kde-format
+msgid "Full Schedule"
+msgstr "पूर्ण अनुसूची"
+
+#: contents/ui/GlobalDrawer.qml:151 contents/ui/Main.qml:63
+#, kde-format
+msgid "Schedule"
+msgstr "अनुसूची"
+
+#: contents/ui/GlobalDrawer.qml:161
+#, kde-format
+msgid "Daily Schedule"
+msgstr "दैनिक कार्यक्रम"
+
+#: contents/ui/GlobalDrawer.qml:200
+#, kde-format
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+#: contents/ui/GlobalDrawer.qml:244 contents/ui/SettingsView.qml:17
+#, kde-format
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: contents/ui/GlobalDrawer.qml:259
+#, kde-format
+msgid "About"
+msgstr "के बारे में"
+
+#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
+#, kde-format
+msgctxt "@title"
+msgid "Map"
+msgstr "नक्शा"
+
+#: contents/ui/IndoorMapView.qml:29
+#, kde-format
+msgid "Floor %1"
+msgstr "तल %1"
+
+#: contents/ui/IndoorMapView.qml:42
+#, kde-format
+msgid "Find Room"
+msgstr "कमरा खोजें"
+
+#: contents/ui/IndoorMapView.qml:48
+#, kde-format
+msgid "Find Amenity"
+msgstr "सुविधा खोजें"
+
+#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
+#, kde-format
+msgid "Open Map"
+msgstr "मानचित्र खोलें"
+
+#: contents/ui/IndoorMapView.qml:157
+#, kde-format
+msgid "Navigate from here"
+msgstr "यहाँ से नेविगेट करें"
+
+#: contents/ui/IndoorMapView.qml:166
+#, kde-format
+msgid "Navigate to here"
+msgstr "यहां नेविगेट करें"
+
+#: contents/ui/IndoorMapView.qml:177
+#, kde-format
+msgid "Show information"
+msgstr "जानकारी दिखाएं"
+
+#: contents/ui/IndoorMapView.qml:196
+#, kde-format
+msgid "Switched to floor %1"
+msgstr "मंजिल %1 पर स्विच किया गया"
+
+#: contents/ui/IndoorMapView.qml:256
+#, kde-format
+msgctxt "@action:intoolbar Go down one floor"
+msgid "Floor down"
+msgstr "मंजिल नीचे"
+
+#: contents/ui/IndoorMapView.qml:265
+#, kde-format
+msgctxt "@action:intoolbar Go up one floor"
+msgid "Floor up"
+msgstr "मंजिल ऊपर"
+
+#: contents/ui/ScheduleView.qml:50
+#, kde-format
+msgid "No talks found for %1"
+msgstr "%1 के लिए कोई बातचीत नहीं मिली"
+
+#: contents/ui/ScheduleView.qml:50
+#, kde-format
+msgid "No talks found"
+msgstr "कोई बातचीत नहीं मिली"
+
+#: contents/ui/SettingsView.qml:20
+#, kde-format
+msgid "Appearance"
+msgstr "उपस्थिति"
+
+#: contents/ui/SettingsView.qml:26
+#, kde-format
+msgid "Use local timezone"
+msgstr "स्थानीय समयक्षेत्र का उपयोग करें"
+
+#: contents/ui/SettingsView.qml:33
+#, kde-format
+msgid "Notifications"
+msgstr "सूचनाएं"
+
+#: contents/ui/SettingsView.qml:41
+#, kde-format
+msgid "Notifications are not supported on your platform"
+msgstr "आपके प्लेटफ़ॉर्म पर नोटिफ़िकेशन समर्थित नहीं हैं"
+
+#: contents/ui/SettingsView.qml:48
+#, kde-format
+msgid "Add reminder to favorite talks"
+msgstr "पसंदीदा वार्ता में अनुस्मारक जोड़ें"
+
+#: contents/ui/SettingsView.qml:55
+#, kde-format
+msgid "Remind before talk start (minutes)"
+msgstr "बातचीत शुरू होने से पहले याद दिलाएं (मिनट)"
+
+#: eventcontroller.cpp:62
+#, kde-format
+msgid "Error during event creation"
+msgstr "ईवेंट निर्माण के दौरान त्रुटि"
+
+#: eventcontroller.cpp:68
+#, kde-format
+msgid "Already in favorites"
+msgstr "पहले से ही पसंदीदा में"
+
+#: eventcontroller.cpp:118
+#, kde-format
+msgid ""
+"Talk added to favorites, but it overlaps with existing ones:\n"
+"%1"
+msgstr ""
+"बातचीत को पसंदीदा में जोड़ा गया, लेकिन यह मौजूदा लोगों के साथ ओवरलैप हो गई:\n"
+"%1"
+
+#: eventcontroller.cpp:119
+#, kde-format
+msgid "Talk added to favorites"
+msgstr "बातचीत को पसंदीदा में जोड़ा गया"
+
+#: main.cpp:65
+#, kde-format
+msgid "Kongress"
+msgstr "कांग्रेस"
+
+#: main.cpp:67
+#, kde-format
+msgid "KDE Conference Companion"
+msgstr "केडीई सम्मेलन सहयोगी"
+
+#: main.cpp:69
+#, kde-format
+msgid "© 2021 KDE Community"
+msgstr "© 2021 केडीई समुदाय"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dimitris Kardarakos"
+msgstr "Dimitris Kardarakos"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer and Developer"
+msgstr "अनुरक्षक और डेवलपर"
