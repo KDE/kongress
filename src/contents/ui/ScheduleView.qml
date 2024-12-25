@@ -89,36 +89,49 @@ Kirigami.ScrollablePage {
             }
 
             contentItem: RowLayout {
-                spacing: Kirigami.Units.largeSpacing * 2
+                spacing: Kirigami.Units.largeSpacing
 
                 ColumnLayout {
-                    Layout.alignment: Qt.AlignTop
-                    Controls.Label {
-                        text: Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime
-                    }
-                    RowLayout {
-                        Kirigami.Icon {
-                            Layout.maximumHeight: location.implicitHeight
-                            Layout.maximumWidth:  location.implicitHeight
-                            visible: model.favorite
-                            source: "starred-symbolic"
-                            opacity: 0.7
-                        }
+                    spacing: 0
 
-                        Controls.Label {
-                            id: location
-                            text: model.location
-                            font: Kirigami.Theme.smallFont
-                            opacity: 0.7
+                    Layout.alignment: Qt.AlignTop
+
+                    Controls.Label {
+                        text: {
+                            if (root.width > Kirigami.Units.gridUnit * 25) {
+                                return Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocal : model.shiftedStartEndTime;
+                            }
+
+                            return Kongress.SettingsController.displayInLocalTimezone ? model.shiftedStartEndTimeLocalMobile : model.shiftedStartEndTimeMobile;
                         }
+                    }
+
+                    Controls.Label {
+                        id: location
+                        text: model.location
+                        font: Kirigami.Theme.smallFont
+                        opacity: 0.7
                     }
                 }
+
                 Controls.Label {
                     visible: model.summary !== ""
                     text: model.summary
                     wrapMode: Text.WordWrap
+
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignTop
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                }
+
+                Kirigami.Icon {
+                    visible: model.favorite
+                    source: "starred-symbolic"
+                    opacity: 0.7
+
+                    Layout.alignment: Qt.AlignTop
+                    Layout.maximumHeight: Kirigami.Units.iconSizes.smallMedium
+                    Layout.maximumWidth: Kirigami.Units.iconSizes.smallMedium
                 }
             }
         }

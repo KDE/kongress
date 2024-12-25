@@ -88,6 +88,8 @@ QHash<int, QByteArray> EventModel::roleNames() const
         {ShiftedStartEndDtLocal, "shiftedStartEndDtLocal"},
         {ShiftedStartEndTime, "shiftedStartEndTime"},
         {ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal"},
+        {ShiftedStartEndTimeMobile, "shiftedStartEndTimeMobile"},
+        {ShiftedStartEndTimeLocalMobile, "shiftedStartEndTimeLocalMobile"},
         {StartEndDt, "startEndDt"},
         {StartEndDtLocal, "startEndDtLocal"},
         {Overlapping, "overlapping"},
@@ -182,14 +184,28 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
         applyTimeZone(startDtTime, calendarTz);
         applyTimeZone(endDtTime, calendarTz);
 
-        return formatStartEndTime(startDtTime, endDtTime);
+        return formatStartEndTime(startDtTime, endDtTime, false);
     }
     case ShiftedStartEndTimeLocal: {
         // Shift time to the conference time zone and convert time to the system time zone
         startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
         endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
 
-        return formatStartEndTime(startDtTime, endDtTime);
+        return formatStartEndTime(startDtTime, endDtTime, false);
+    }
+    case ShiftedStartEndTimeMobile: {
+        // Shift time to the time zone of the conference
+        applyTimeZone(startDtTime, calendarTz);
+        applyTimeZone(endDtTime, calendarTz);
+
+        return formatStartEndTime(startDtTime, endDtTime, true);
+    }
+    case ShiftedStartEndTimeLocalMobile: {
+        // Shift time to the conference time zone and convert time to the system time zone
+        startDtTime = startDtTime.toTimeZone(QTimeZone::systemTimeZone());
+        endDtTime = endDtTime.toTimeZone(QTimeZone::systemTimeZone());
+
+        return formatStartEndTime(startDtTime, endDtTime, true);
     }
     case StartEndDt: {
         // Convert time to the time zone of the conference
@@ -292,16 +308,19 @@ int EventModel::overlappingEvents(const int idx) const
     return cnt;
 }
 
-QString EventModel::formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const
+QString EventModel::formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime, bool mobile) const
 {
     if (startDtTime.date() == endDtTime.date()) {
-        return "%1 - %2"_L1.arg(QLocale().toString(startDtTime.time(), QLocale::ShortFormat), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
+        return (mobile ? "%1<br />%2"_L1 : "%1 - %2"_L1)
+            .arg(QLocale().toString(startDtTime.time(), QLocale::ShortFormat), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
     }
 
-    auto displayStartDtTime = "%1 %2"_L1.arg(startDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(startDtTime.time(), QLocale::ShortFormat));
-    auto displayEndDtTime = "%1 %2"_L1.arg(endDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
+    auto displayStartDtTime = (mobile ? "%1<br />%2"_L1 : "%1 - %2"_L1)
+                                  .arg(startDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(startDtTime.time(), QLocale::ShortFormat));
+    auto displayEndDtTime =
+        (mobile ? "%1<bt />%2"_L1 : "%1 - %2"_L1).arg(endDtTime.date().toString(u"ddd d MMM yyyy"), QLocale().toString(endDtTime.time(), QLocale::ShortFormat));
 
-    return "%1 - %2 %3"_L1.arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
+    return (mobile ? "%1 %3<br />%2 %3"_L1 : "%1 - %2 %3"_L1).arg(displayStartDtTime, displayEndDtTime, startDtTime.timeZoneAbbreviation());
 }
 
 QString EventModel::formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const

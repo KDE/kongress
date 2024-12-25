@@ -47,6 +47,8 @@ public:
         ShiftedStartEndDtLocal,
         ShiftedStartEndTime,
         ShiftedStartEndTimeLocal,
+        ShiftedStartEndTimeMobile,
+        ShiftedStartEndTimeLocalMobile,
         StartEndDt,
         StartEndDtLocal,
         Overlapping,
@@ -86,7 +88,7 @@ private:
      */
     int overlappingEvents(const int idx) const;
 
-    QString formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime) const;
+    QString formatStartEndTime(const QDateTime &startDtTime, const QDateTime &endDtTime, bool mobile) const;
     QString formatStartEndDt(const QDateTime &startDtTime, const QDateTime &endDtTime, bool allDay) const;
 
     KCalendarCore::Event::List m_events;
