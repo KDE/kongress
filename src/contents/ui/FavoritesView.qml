@@ -101,7 +101,24 @@ Kirigami.ScrollablePage {
                 wrapMode: Text.WordWrap
             }
 
-            onClicked: pageStack.push(eventInfo, {event: model})
+            onClicked: pageStack.push(eventInfo, {
+                uid: model.uid,
+                summary: model.summary,
+                startEndDtLocal: model.startEndDtLocal,
+                startEndDt: model.startEndDt,
+                shiftedStartEndTimeLocal: model.shiftedStartEndTimeLocal,
+                shiftedStartEndTime: model.shiftedStartEndTime,
+                shiftedStartEndDtLocal: model.shiftedStartEndDtLocal,
+                shiftedStartEndDt: model.shiftedStartEndDt,
+                location: model.location,
+                scheduleStartDt: model.scheduleStartDt,
+                scheduleEndDt: model.scheduleEndDt,
+                speaker: model.speaker,
+                eventCategories: model.eventCategories,
+                description: model.description,
+                eventUrl: model.url,
+                allDay: model.allDay,
+            })
 
             contentItem: Column {
                 spacing: Kirigami.Units.largeSpacing

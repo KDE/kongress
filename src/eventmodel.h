@@ -51,7 +51,8 @@ public:
         StartEndDtLocal,
         Overlapping,
         ConferenceTzId,
-        Favorite
+        Favorite,
+        AllDay,
     };
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

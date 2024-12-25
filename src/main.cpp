@@ -109,10 +109,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     calendarController.setNetworkAccessManager(&nam);
     qmlRegisterSingletonInstance<CalendarController>("org.kde.kongress", 0, 1, "CalendarController", &calendarController);
 
-    EventController eventController;
-    eventController.setCalendarController(&calendarController);
-    qmlRegisterSingletonInstance<EventController>("org.kde.kongress", 0, 1, "EventController", &eventController);
-
     QQmlApplicationEngine engine;
 #if KI18N_VERSION < QT_VERSION_CHECK(6, 8, 0)
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));

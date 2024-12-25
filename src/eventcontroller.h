@@ -20,6 +20,9 @@ class EventController : public QObject
     Q_OBJECT
 
     Q_PROPERTY(CalendarController *calendarController READ calendarController WRITE setCalendarController NOTIFY calendarControllerChanged)
+    Q_PROPERTY(LocalCalendar *calendar READ calendar WRITE setCalendar NOTIFY calendarChanged)
+    Q_PROPERTY(QString eventUid READ eventUid WRITE setEventUid NOTIFY eventUidChanged)
+    Q_PROPERTY(bool isFavorite READ isFavorite NOTIFY isFavoriteChanged)
 
 public:
     enum EventCheck {
@@ -31,19 +34,30 @@ public:
 
     explicit EventController(QObject *parent = nullptr);
 
+    LocalCalendar *calendar() const;
+    void setCalendar(LocalCalendar *calendar);
+
+    QString eventUid() const;
+    void setEventUid(const QString &eventUid);
+
+    bool isFavorite() const;
+
     CalendarController *calendarController();
     void setCalendarController(CalendarController *const controller);
 
-    Q_INVOKABLE void remove(LocalCalendar *calendar, const QVariantMap &event);
-    Q_INVOKABLE QVariantMap addEdit(LocalCalendar *calendar, const QVariantMap &event);
+    Q_INVOKABLE bool remove(const QVariantMap &event);
+    Q_INVOKABLE QVariantMap addEdit(const QVariantMap &event);
+
 Q_SIGNALS:
     void calendarControllerChanged();
+    void calendarChanged();
+    void eventUidChanged();
+    void isFavoriteChanged();
 
 private:
     /**
      * @brief Check if an event is already registered or overlapping events exist
      *
-     * @param calendar p_calendar: The calendar of the favorites
      * @param event p_event: The to-be-registered event
      * @return A QVariantMap with two members
      * int result:
@@ -57,9 +71,12 @@ private:
      *   If NotExistsButOverlaps, a comma separated list of their subjects
      *   If NoCalendarExists, let the user know that an error has occured
      */
-    QVariantMap eventCheck(LocalCalendar *calendar, const QVariantMap &event);
+    QVariantMap eventCheck(const QVariantMap &event) const;
 
     CalendarController *m_cal_controller = nullptr;
     SettingsController *const m_settings_controller;
+
+    LocalCalendar *m_calendar = nullptr;
+    QString m_eventUid;
 };
 #endif

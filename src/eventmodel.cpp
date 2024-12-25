@@ -68,30 +68,33 @@ void EventModel::setFavoritesCalendar(LocalCalendar *const calendarPtr)
 
 QHash<int, QByteArray> EventModel::roleNames() const
 {
-    return {{Uid, "uid"},
-            {EventStartDt, "eventStartDt"},
-            {EventDt, "eventDt"},
-            {ShiftedEventDt, "shiftedEventDt"},
-            {ShiftedEventDtLocal, "shiftedEventDtLocal"},
-            {ScheduleStartDt, "scheduleStartDt"},
-            {Description, "description"},
-            {Summary, "summary"},
-            {Location, "location"},
-            {Speaker, "speaker"},
-            {Categories, "categories"},
-            {EventEndDt, "eventEndDt"},
-            {ScheduleEndDt, "scheduleEndDt"},
-            {EventCategories, "eventCategories"},
-            {Url, "url"},
-            {ShiftedStartEndDt, "shiftedStartEndDt"},
-            {ShiftedStartEndDtLocal, "shiftedStartEndDtLocal"},
-            {ShiftedStartEndTime, "shiftedStartEndTime"},
-            {ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal"},
-            {StartEndDt, "startEndDt"},
-            {StartEndDtLocal, "startEndDtLocal"},
-            {Overlapping, "overlapping"},
-            {ConferenceTzId, "conferenceTzId"},
-            {Favorite, "favorite"}};
+    return {
+        {Uid, "uid"},
+        {EventStartDt, "eventStartDt"},
+        {EventDt, "eventDt"},
+        {ShiftedEventDt, "shiftedEventDt"},
+        {ShiftedEventDtLocal, "shiftedEventDtLocal"},
+        {ScheduleStartDt, "scheduleStartDt"},
+        {Description, "description"},
+        {Summary, "summary"},
+        {Location, "location"},
+        {Speaker, "speaker"},
+        {Categories, "categories"},
+        {EventEndDt, "eventEndDt"},
+        {ScheduleEndDt, "scheduleEndDt"},
+        {EventCategories, "eventCategories"},
+        {Url, "url"},
+        {ShiftedStartEndDt, "shiftedStartEndDt"},
+        {ShiftedStartEndDtLocal, "shiftedStartEndDtLocal"},
+        {ShiftedStartEndTime, "shiftedStartEndTime"},
+        {ShiftedStartEndTimeLocal, "shiftedStartEndTimeLocal"},
+        {StartEndDt, "startEndDt"},
+        {StartEndDtLocal, "startEndDtLocal"},
+        {Overlapping, "overlapping"},
+        {ConferenceTzId, "conferenceTzId"},
+        {Favorite, "favorite"},
+        {AllDay, "allDay"},
+    };
 }
 
 static void applyTimeZone(QDateTime &dt, const QTimeZone &tz)
@@ -219,6 +222,8 @@ QVariant EventModel::data(const QModelIndex &index, int role) const
             return true;
         }
     }
+    case AllDay:
+        return allDay;
     default:
         return QVariant{};
     }

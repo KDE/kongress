@@ -16,7 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 
 EventController::EventController(QObject *parent)
     : QObject{parent}
-    , m_cal_controller{new CalendarController}
+    , m_cal_controller{nullptr}
     , m_settings_controller{new SettingsController{this}}
 {
 }
@@ -32,45 +32,53 @@ void EventController::setCalendarController(CalendarController *const controller
     Q_EMIT calendarControllerChanged();
 }
 
-void EventController::remove(LocalCalendar *calendar, const QVariantMap &eventData)
+bool EventController::remove(const QVariantMap &eventData)
 {
-    if (calendar == nullptr) {
+    if (m_calendar == nullptr) {
         qDebug() << "There is no calendar to delete event from";
 
-        return;
+        return false;
     }
 
-    qDebug() << "Deleting event from calendar " << calendar->calendarId();
+    qDebug() << "Deleting event from calendar " << m_calendar->calendarId();
 
-    auto memoryCalendar = calendar->memorycalendar();
+    auto memoryCalendar = m_calendar->memorycalendar();
     auto uid = eventData["uid"_L1].toString();
     auto event = memoryCalendar->event(uid);
+    if (!event) {
+        qWarning() << "no event found";
+        return false;
+    }
     memoryCalendar->deleteEvent(event);
 
     auto deleted{false};
     if (m_cal_controller != nullptr) {
-        deleted = m_cal_controller->save(calendar->calendarId());
-        Q_EMIT calendar->eventsChanged();
+        deleted = m_cal_controller->save(m_calendar->calendarId());
+        Q_EMIT m_calendar->eventsChanged();
     }
 
+    Q_EMIT isFavoriteChanged();
+
     qDebug() << "Event deleted: " << deleted;
+    return true;
 }
 
-QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap &eventData)
+QVariantMap EventController::addEdit(const QVariantMap &eventData)
 {
-    if (calendar == nullptr) {
+    if (m_calendar == nullptr) {
         return {{u"status"_s, NoCalendarExists}, {u"message"_s, i18n("Error during event creation")}};
     }
 
-    auto eventCheckResult = eventCheck(calendar, eventData);
+    auto eventCheckResult = eventCheck(eventData);
 
     if (eventCheckResult["result"_L1].toInt() == Exists) {
+        Q_EMIT isFavoriteChanged();
         return {{u"status"_s, NoCalendarExists}, {u"message"_s, i18n("Already in favorites")}};
     }
 
-    qDebug() << "\naddEdit:\tCreating event to calendar " << calendar->calendarId();
+    qDebug() << "\naddEdit:\tCreating event to calendar " << m_calendar->calendarId() << eventData;
 
-    auto memoryCalendar = calendar->memorycalendar();
+    auto memoryCalendar = m_calendar->memorycalendar();
     auto uid = eventData["uid"_L1].toString();
     auto event = memoryCalendar->event(uid);
 
@@ -106,11 +114,13 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
     auto merged{false};
 
     if (m_cal_controller != nullptr) {
-        merged = m_cal_controller->save(calendar->calendarId());
-        Q_EMIT calendar->eventsChanged();
+        merged = m_cal_controller->save(m_calendar->calendarId());
+        Q_EMIT m_calendar->eventsChanged();
     }
 
     qDebug() << "addEdit:\tEvent added/updated: " << merged;
+
+    Q_EMIT isFavoriteChanged();
 
     return {{u"status"_s, eventCheckResult["result"_L1]},
             {u"message"_s,
@@ -119,11 +129,11 @@ QVariantMap EventController::addEdit(LocalCalendar *calendar, const QVariantMap 
                  : i18n("Talk added to favorites")}};
 }
 
-QVariantMap EventController::eventCheck(LocalCalendar *calendar, const QVariantMap &event)
+QVariantMap EventController::eventCheck(const QVariantMap &event) const
 {
     QVariantMap response{{u"result"_s, QVariant{NotExistsNotOverlapping}}, {u"events"_s, QString{}}};
 
-    auto memoryCalendar = calendar->memorycalendar();
+    auto memoryCalendar = m_calendar->memorycalendar();
     QStringList overlappingEvents{};
 
     auto eventStart = event["startDate"_L1].toDateTime();
@@ -154,6 +164,56 @@ QVariantMap EventController::eventCheck(LocalCalendar *calendar, const QVariantM
     }
 
     return response;
+}
+
+LocalCalendar *EventController::calendar() const
+{
+    return m_calendar;
+}
+
+void EventController::setCalendar(LocalCalendar *calendar)
+{
+    if (m_calendar == calendar) {
+        return;
+    }
+    m_calendar = calendar;
+    Q_EMIT calendarChanged();
+    Q_EMIT isFavoriteChanged();
+}
+
+QString EventController::eventUid() const
+{
+    return m_eventUid;
+}
+
+void EventController::setEventUid(const QString &eventUid)
+{
+    if (m_eventUid == eventUid) {
+        return;
+    }
+    m_eventUid = eventUid;
+    Q_EMIT eventUidChanged();
+    Q_EMIT isFavoriteChanged();
+}
+
+bool EventController::isFavorite() const
+{
+    if (m_calendar == nullptr || m_eventUid.isEmpty()) {
+        return false;
+    }
+
+    auto memoryCalendar = m_calendar->memorycalendar();
+    QStringList overlappingEvents{};
+
+    auto existingEvents = memoryCalendar->rawEvents();
+
+    for (const auto &e : existingEvents) {
+        if (e->uid() == m_eventUid) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 #include "moc_eventcontroller.cpp"

@@ -14,49 +14,60 @@ import org.kde.kongress as Kongress
 FormCard.FormCardPage {
     id: root
 
-    property var event
-    property string viewMode
-    property var rwCalendar
+    required property string uid
+    required property string summary
+    required property string startEndDtLocal
+    required property string startEndDt
+    required property string shiftedStartEndTimeLocal
+    required property string shiftedStartEndTime
+    required property string shiftedStartEndDtLocal
+    required property string shiftedStartEndDt
+    required property string scheduleStartDt
+    required property string scheduleEndDt
+    required property string eventCategories
+    required property string speaker
+    required property string location
+    required property string description
+    required property string eventUrl
+    required property bool allDay
 
-    title: root.event && !Kirigami.Settings.isMobile ? event.summary : i18nc("@title", "Event Details")
+    required property string viewMode
+    required property var rwCalendar
+
+    title: !Kirigami.Settings.isMobile ? root.summary : i18nc("@title", "Event Details")
 
     FormCard.FormHeader {
-        visible: root.event
-        title: root.event ? event.summary : ""
+        title: root.summary
     }
 
     FormCard.FormCard {
-        visible: root.event
-
         FormCard.FormTextDelegate {
             icon.name: "view-calendar-day"
             text: if (viewMode === "favorites") {
                 if (Kongress.SettingsController.displayInLocalTimezone) {
-                    return event.startEndDtLocal;
-                } else {
-                    return event.startEndDt;
+                    return root.startEndDtLocal;
                 }
+                return root.startEndDt;
             } else if (Kongress.SettingsController.displayInLocalTimezone) {
-                return event.shiftedStartEndDtLocal;
+                return root.shiftedStartEndDtLocal;
             } else {
-                return event.shiftedStartEndDt;
+                return root.shiftedStartEndDt;
             }
         }
 
         FormCard.FormDelegateSeparator {
-            visible: root.event && event.location.length > 0
+            visible: root.location.length > 0
         }
 
         FormCard.FormTextDelegate {
-            visible: root.event && event.location.length > 0 && !Kongress.ConferenceController.activeConference.hasVenueIndoorMap
+            visible: root.location.length > 0 && !Kongress.ConferenceController.activeConference.hasVenueIndoorMap
             icon.name: "find-location"
-
-            text: root.event ? event.location : ""
+            text: root.location
         }
         FormCard.FormButtonDelegate {
-            visible: root.event && event.location.length > 0 && Kongress.ConferenceController.activeConference.hasVenueIndoorMap
+            visible: root.location.length > 0 && Kongress.ConferenceController.activeConference.hasVenueIndoorMap
             icon.name: "find-location"
-            text: root.event ? event.location : ""
+            text: root.location
             onClicked: {
                 pageStack.pop();
                 pageStack.push(indoorMapView, {
@@ -68,32 +79,31 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormDelegateSeparator {
-            visible: root.event && root.event.speaker !== ""
+            visible: root.speaker !== ""
         }
         FormCard.FormTextDelegate {
-            visible: root.event && root.event.speaker !== ""
-            text: root.event?.speaker ?? ""
+            visible: root.speaker !== ""
+            text: root.speaker ?? ""
             icon.name: "user-symbolic"
         }
 
         FormCard.FormDelegateSeparator {
-            visible: root.event && event.eventCategories.length > 0
+            visible: root.eventCategories.length > 0
         }
 
         FormCard.FormTextDelegate {
-            visible: root.event && event.eventCategories.length > 0
+            visible: root.eventCategories.length > 0
             icon.name: "category"
-
-            text: root.event ? event.eventCategories : ""
+            text: root.eventCategories
         }
 
         FormCard.FormDelegateSeparator {
-            visible: root.event && event.description.length > 0
+            visible: root.description.length > 0
         }
 
         FormCard.FormTextDelegate {
-            visible: root.event && event.description.length > 0
-            text: root.event ? event.description : ""
+            visible: root.description.length > 0
+            text: root.description
             textItem.wrapMode: Text.WordWrap
         }
     }
@@ -104,34 +114,56 @@ FormCard.FormCardPage {
         FormCard.FormButtonDelegate {
             text: i18n("Web Page")
             icon.name: "internet-services"
-            enabled: root.event.url !== ""
+            enabled: root.eventUrl !== ""
 
-            onClicked: {
-                if(root.event && (root.event.url)) {
-                    Qt.openUrlExternally(event.url);
-                }
+            onClicked: if(root.eventUrl) {
+                Qt.openUrlExternally(eventUrl);
             }
         }
 
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormButtonDelegate {
-            text: viewMode === "favorites" ? i18n("Delete") : i18n("Favorite")
-            icon.name: viewMode === "favorites" ? "delete" : "favorite"
+            text: eventController.isFavorite ? i18nc("@action:button", "Delete from Favorites") : i18nc("@action:button", "Add to Favorites")
+            icon.name: eventController.isFavorite ? "favorite-favorited-symbolic" : "favorite-symbolic"
+
+            Kongress.EventController {
+                id: eventController
+
+                calendarController: Kongress.CalendarController
+                eventUid: root.uid
+                calendar: root.rwCalendar
+            }
+
+            enabled: root.uid.length > 0
 
             onClicked: {
-                if(root.event && root.viewMode === "favorites") {
-                    var vevent = { uid: root.event.uid } ;
-                    Kongress.EventController.remove(root.rwCalendar, vevent);
-                    pageStack.pop();
-                }
-                else if(root.event) {
-                    var vevent = { "uid" : event.uid, "startDate": event.scheduleStartDt, "summary": event.summary, "description": event.description, "allDay": event.allDay, "location": event.location, "endDate": event.scheduleEndDt, "categories": event.eventCategories, "url": event.url /*"alarms": incidenceAlarmsModel.alarms()*/};
+                if (eventController.isFavorite) {
+                    const vevent = { uid: root.uid };
+                    const ok = eventController.remove(vevent);
+                    if (ok && root.viewMode === "favorites") {
+                        pageStack.pop();
+                    }
 
-                    var addEditResult = Kongress.EventController.addEdit(root.rwCalendar, vevent);
-                    showPassiveNotification(addEditResult["message"]);
-
+                    showPassiveNotification(ok ? i18nc("@info:status", "Talk removed from favorites.") : i18nc("@info:status", "Unable to remove talk from favorites."));
+                    return;
                 }
+
+                const vevent = {
+                    uid : root.uid,
+                    startDate: root.scheduleStartDt,
+                    summary: root.summary,
+                    description: root.description,
+                    allDay: root.allDay,
+                    location: root.location,
+                    endDate: root.scheduleEndDt,
+                    categories: root.eventCategories,
+                    url: eventUrl,
+                    // alarms: incidenceAlarmsModel.alarms()
+                };
+
+                const addEditResult = eventController.addEdit(vevent);
+                showPassiveNotification(addEditResult["message"]);
             }
         }
     }
