@@ -92,6 +92,7 @@ if (ANDROID)
         user-symbolic
         view-calendar-agenda
         view-calendar-day
+        starred-symbolic
     )
 
     ecm_add_android_apk(kongress ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
