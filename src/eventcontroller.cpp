@@ -95,6 +95,10 @@ QVariantMap EventController::addEdit(const QVariantMap &eventData)
     event->setAllDay(eventData["allDay"_L1].toBool());
     event->setLocation(eventData["location"_L1].toString());
     event->setUrl(QUrl(eventData["url"_L1].toString()));
+    const auto speakers = eventData["speakers"_L1].toStringList();
+    for (const auto &speaker : speakers) {
+        event->addAttendee(KCalendarCore::Attendee(speaker, {}));
+    }
 
     event->clearAlarms();
 

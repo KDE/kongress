@@ -113,7 +113,7 @@ Kirigami.ScrollablePage {
                 location: model.location,
                 scheduleStartDt: model.scheduleStartDt,
                 scheduleEndDt: model.scheduleEndDt,
-                speaker: model.speaker,
+                speakers: model.speakers,
                 eventCategories: model.eventCategories,
                 description: model.description,
                 eventUrl: model.url,

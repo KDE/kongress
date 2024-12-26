@@ -25,7 +25,7 @@ FormCard.FormCardPage {
     required property string scheduleStartDt
     required property string scheduleEndDt
     required property string eventCategories
-    required property string speaker
+    required property list<string> speakers
     required property string location
     required property string description
     required property string eventUrl
@@ -79,11 +79,12 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormDelegateSeparator {
-            visible: root.speaker !== ""
+            visible: root.speakers.length > 0
         }
         FormCard.FormTextDelegate {
-            visible: root.speaker !== ""
-            text: root.speaker ?? ""
+            visible: root.speakers.length > 0
+            // TODO qt 6.10 replace with Qt.locale().createSeparatedList()
+            text: root.speakers.join(i18nc("list separator", ", ")) 
             icon.name: "user-symbolic"
         }
 
@@ -158,6 +159,7 @@ FormCard.FormCardPage {
                     location: root.location,
                     endDate: root.scheduleEndDt,
                     categories: root.eventCategories,
+                    speakers: root.speakers,
                     url: eventUrl,
                     // alarms: incidenceAlarmsModel.alarms()
                 };

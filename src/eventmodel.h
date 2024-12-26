@@ -37,7 +37,7 @@ public:
         Description,
         Summary,
         Location,
-        Speaker,
+        Speakers,
         Categories,
         ScheduleEndDt,
         EventEndDt,
