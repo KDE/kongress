@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2020-09-12 02:34+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -63,25 +63,45 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr ""
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr ""
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
 #, kde-format
-msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
 msgstr ""
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
 #, kde-format
-msgid "Favorite"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr ""
+
+#: contents/ui/EventInfo.qml:149
+#, kde-format
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr ""
+
+#: contents/ui/EventInfo.qml:149
+#, kde-format
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
 msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
@@ -104,7 +124,7 @@ msgstr ""
 msgid "No favorite talks found"
 msgstr ""
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -271,24 +291,24 @@ msgstr ""
 msgid "Remind before talk start (minutes)"
 msgstr ""
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr ""
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr ""
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr ""

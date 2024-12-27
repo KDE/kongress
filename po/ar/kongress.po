@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2024-11-30 16:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -63,26 +63,49 @@ msgstr "لا مؤتمرات"
 msgid "Reload"
 msgstr "أعِد التّحميل"
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "تفاصيل الحدث"
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr "صفحة الوب"
 
-#: contents/ui/EventInfo.qml:119
-#, kde-format
-msgid "Delete"
-msgstr "احذف"
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
+msgstr "المفضلات"
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "المفضلات"
+
+#: contents/ui/EventInfo.qml:149
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr "أضيفت المحادثة إلى المفضلة"
+
+#: contents/ui/EventInfo.qml:149
 #, kde-format
-msgid "Favorite"
-msgstr "فضّل"
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -104,7 +127,7 @@ msgstr "لم يُعثر على المحادثات المفضلة لـ %1"
 msgid "No favorite talks found"
 msgstr "لم يُعثر على المحادثات المفضلة"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -274,17 +297,17 @@ msgstr "أضف تذكيرا إلى المحادثات المفضلة"
 msgid "Remind before talk start (minutes)"
 msgstr "ذكّر قبل بدء المحادثة (بالدقائق)"
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr "خطأ أثناء إنشاء الحدث"
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr "موجودة بالفعل في المفضلة"
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -293,7 +316,7 @@ msgstr ""
 "أضيفت المحادثة إلى المفضلة، ولكنها تتداخل مع المحادثات الموجودة:\n"
 "%1"
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "أضيفت المحادثة إلى المفضلة"
@@ -324,3 +347,9 @@ msgstr "ديميتريس كارداراكوس"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "الصائن والمطوّر"
+
+#~ msgid "Delete"
+#~ msgstr "احذف"
+
+#~ msgid "Favorite"
+#~ msgstr "فضّل"

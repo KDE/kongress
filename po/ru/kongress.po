@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2024-12-11 10:01+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -64,26 +64,49 @@ msgstr "Конференции не найдены"
 msgid "Reload"
 msgstr "Обновить"
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Подробные сведения о событии"
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr "Веб-страница"
 
-#: contents/ui/EventInfo.qml:119
-#, kde-format
-msgid "Delete"
-msgstr "Удалить"
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
+msgstr "Избранное"
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "Избранное"
+
+#: contents/ui/EventInfo.qml:149
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr "Доклад добавлен в избранное"
+
+#: contents/ui/EventInfo.qml:149
 #, kde-format
-msgid "Favorite"
-msgstr "Добавить в избранное"
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -105,7 +128,7 @@ msgstr "Избранные доклады, которые соответству
 msgid "No favorite talks found"
 msgstr "Избранные доклады не найдены"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -273,17 +296,17 @@ msgstr "Добавить напоминание для избранных док
 msgid "Remind before talk start (minutes)"
 msgstr "Напоминание перед началом доклада (в минутах)"
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr "При создании события произошла ошибка"
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr "Уже находится в избранном"
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -292,7 +315,7 @@ msgstr ""
 "Доклад добавлен в избранное, но пересекается с имеющимися:\n"
 "%1"
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Доклад добавлен в избранное"
@@ -323,6 +346,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Сопровождающий и разработчик"
+
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid "Favorite"
+#~ msgstr "Добавить в избранное"
 
 #~ msgid "Configure"
 #~ msgstr "Настройка"

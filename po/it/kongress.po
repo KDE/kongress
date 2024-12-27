@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2024-07-05 09:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -62,26 +62,49 @@ msgstr "Nessuna conferenza trovata"
 msgid "Reload"
 msgstr "Ricarica"
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Dettagli evento"
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr "Pagina web"
 
-#: contents/ui/EventInfo.qml:119
-#, kde-format
-msgid "Delete"
-msgstr "Elimina"
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
+msgstr "Preferiti"
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "Preferiti"
+
+#: contents/ui/EventInfo.qml:149
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr "Intervento aggiunto ai preferiti"
+
+#: contents/ui/EventInfo.qml:149
 #, kde-format
-msgid "Favorite"
-msgstr "Preferito"
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -103,7 +126,7 @@ msgstr "Nessun intervento preferito trovato per %1"
 msgid "No favorite talks found"
 msgstr "Nessun intervento preferito trovato"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -269,17 +292,17 @@ msgstr "Aggiungi promemoria agli interventi preferiti"
 msgid "Remind before talk start (minutes)"
 msgstr "Ricordami prima che l'intervento inizi (minuti)"
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr "Errore durante la creazione dell'evento"
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr "Già nei preferiti"
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -288,7 +311,7 @@ msgstr ""
 "Intervento aggiunto ai preferiti, ma si sovrappone a uno esistente:\n"
 "%1"
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Intervento aggiunto ai preferiti"
@@ -319,6 +342,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Responsabile e sviluppatore"
+
+#~ msgid "Delete"
+#~ msgstr "Elimina"
+
+#~ msgid "Favorite"
+#~ msgstr "Preferito"
 
 #~ msgid "Configure"
 #~ msgstr "Configura"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2024-07-03 16:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -62,26 +62,49 @@ msgstr "Non se atopou ningunha conferencia"
 msgid "Reload"
 msgstr "Cargar de novo"
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Detalles do evento"
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr "Páxina web"
 
-#: contents/ui/EventInfo.qml:119
-#, kde-format
-msgid "Delete"
-msgstr "Eliminar"
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
+msgstr "Favoritos"
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "Favoritos"
+
+#: contents/ui/EventInfo.qml:149
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr "A charla engadiuse ás favoritas"
+
+#: contents/ui/EventInfo.qml:149
 #, kde-format
-msgid "Favorite"
-msgstr "Favorito"
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -103,7 +126,7 @@ msgstr "Non se atoparon charlas favoritas para %1"
 msgid "No favorite talks found"
 msgstr "Non se atoparon charlas favoritas"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -269,17 +292,17 @@ msgstr "Engadir unha lembranza ás charlas favoritas"
 msgid "Remind before talk start (minutes)"
 msgstr "Lembrar antes do inicio da charla (minutos)"
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr "Erro durante a creación do evento"
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr "Xa está entre as favoritas"
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -288,7 +311,7 @@ msgstr ""
 "A charla engadiuse ás favoritas, pero coincide con outras:\n"
 "%1"
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "A charla engadiuse ás favoritas"
@@ -319,6 +342,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantemento e desenvolvemento"
+
+#~ msgid "Delete"
+#~ msgstr "Eliminar"
+
+#~ msgid "Favorite"
+#~ msgstr "Favorito"
 
 #~ msgid "Configure"
 #~ msgstr "Configurar"

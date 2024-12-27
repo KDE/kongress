@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:43+0000\n"
+"POT-Creation-Date: 2024-12-27 00:44+0000\n"
 "PO-Revision-Date: 2021-06-20 10:08+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -62,27 +62,50 @@ msgstr "Δεν βρέθηκε διάσκεψη"
 msgid "Reload"
 msgstr "Επαναφόρτωση"
 
-#: contents/ui/EventInfo.qml:21
+#: contents/ui/EventInfo.qml:37
 #, fuzzy, kde-format
 #| msgid "Details"
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Λεπτομέρειες"
 
-#: contents/ui/EventInfo.qml:105
+#: contents/ui/EventInfo.qml:87
+#, kde-format
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#: contents/ui/EventInfo.qml:116
 #, kde-format
 msgid "Web Page"
 msgstr "Ιστοσελίδα"
 
-#: contents/ui/EventInfo.qml:119
-#, kde-format
-msgid "Delete"
-msgstr "Διαγραφή"
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Delete from Favorites"
+msgstr "Προτιμώμενες"
 
-#: contents/ui/EventInfo.qml:119
+#: contents/ui/EventInfo.qml:128
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "Προτιμώμενες"
+
+#: contents/ui/EventInfo.qml:149
+#, fuzzy, kde-format
+#| msgid "Talk added to favorites"
+msgctxt "@info:status"
+msgid "Talk removed from favorites."
+msgstr "Η ομιλία προστέθηκε στις προτιμώμενες"
+
+#: contents/ui/EventInfo.qml:149
 #, kde-format
-msgid "Favorite"
-msgstr "Προτιμώμενη"
+msgctxt "@info:status"
+msgid "Unable to remove talk from favorites."
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -104,7 +127,7 @@ msgstr "Δεν βρέθηκαν προτιμώμενες ομιλίες για �
 msgid "No favorite talks found"
 msgstr "Δεν βρέθηκαν προτιμώμενες ομιλίες"
 
-#: contents/ui/FavoritesView.qml:167
+#: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -271,17 +294,17 @@ msgstr "Προσθήκη υπενθύμισης στις προτιμώμενε�
 msgid "Remind before talk start (minutes)"
 msgstr "Υπενθύμιση πριν ξεκινήσει η ομιλία (λεπτά)"
 
-#: eventcontroller.cpp:62
+#: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
 msgstr "Σφάλμα κατά τη δημιουργία γεγονότος"
 
-#: eventcontroller.cpp:68
+#: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
 msgstr "Ήδη στις προτιμώμενες"
 
-#: eventcontroller.cpp:118
+#: eventcontroller.cpp:132
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -290,7 +313,7 @@ msgstr ""
 "Η ομιλία προστέθηκε στις προτιμώμενες, αλλά επικαλύπτεται με άλλες:\n"
 "%1"
 
-#: eventcontroller.cpp:119
+#: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Η ομιλία προστέθηκε στις προτιμώμενες"
@@ -321,6 +344,12 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Συντηρητής και προγραμματιστής"
+
+#~ msgid "Delete"
+#~ msgstr "Διαγραφή"
+
+#~ msgid "Favorite"
+#~ msgstr "Προτιμώμενη"
 
 #~ msgid "Configure"
 #~ msgstr "Διαμόρφωση"
