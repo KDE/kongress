@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-07-03 12:59+0300\n"
+"PO-Revision-Date: 2024-12-27 13:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -72,7 +72,7 @@ msgstr "Etkinlik Ayrıntıları"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -80,31 +80,28 @@ msgid "Web Page"
 msgstr "Web Sayfası"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Favoriler"
+msgstr "Favorilerden Sil"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Favoriler"
+msgstr "Favorilere Ekle"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Konuşma, favorilere eklendi"
+msgstr "Konuşma favorilerden kaldırıldı."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Konuşma favorilerden kaldırılamıyor."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -114,7 +111,7 @@ msgstr "Dışa Aktar"
 #: contents/ui/FavoritesView.qml:58
 #, kde-format
 msgid "Open folder"
-msgstr "Klasör aç"
+msgstr "Klasör Aç"
 
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
@@ -314,7 +311,7 @@ msgstr ""
 #: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
-msgstr "Konuşma, favorilere eklendi"
+msgstr "Konuşma favorilere eklendi"
 
 #: main.cpp:65
 #, kde-format
@@ -341,7 +338,7 @@ msgstr "Dimitris Kardarakos"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
-msgstr "Projeyi Sürdüren ve Geliştirici"
+msgstr "Bakımcı ve Geliştirici"
 
 #~ msgid "Delete"
 #~ msgstr "Sil"

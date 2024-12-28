@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-07-03 19:50+0300\n"
+"PO-Revision-Date: 2024-12-27 21:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,7 +75,7 @@ msgstr "Подробиці події"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -83,31 +83,28 @@ msgid "Web Page"
 msgstr "Вебсторінку"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Улюблене"
+msgstr "Вилучити з улюбленого"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Улюблене"
+msgstr "Додати до улюбленого"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Доповідь додано до улюблених"
+msgstr "Доповідь вилучено з улюблених"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Не вдалося вилучити доповідь з улюблених."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format

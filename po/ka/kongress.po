@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-07-03 05:49+0200\n"
+"PO-Revision-Date: 2024-12-27 03:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,7 +73,7 @@ msgstr "მოვლენის დეტალები"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -81,31 +81,28 @@ msgid "Web Page"
 msgstr "ვებ გვერდი"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "სანიშნები"
+msgstr "წაშლა სანიშნეებიდან"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "სანიშნები"
+msgstr "სანიშნეებში ჩამატება"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "საუბარი სანიშნეებში ჩაემატა"
+msgstr "საუბარი წაიშალა სანიშნეებიდან."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "რჩეულებიდან საუბრის წაშლა შეუძლებელია."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -309,7 +306,7 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"საუბარი დამატებულია რჩეულებში, მაგრამ ეფარება არსებულებს:\n"
+"საუბარი დამატებულია სანიშნეებში, მაგრამ ეფარება არსებულებს:\n"
 "%1"
 
 #: eventcontroller.cpp:133

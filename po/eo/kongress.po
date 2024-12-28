@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-07-03 21:54+0200\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -81,31 +81,28 @@ msgid "Web Page"
 msgstr "Retpaĝo"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Plej ŝatataj"
+msgstr "Forigi el Plejŝatatoj"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Plej ŝatataj"
+msgstr "Aldoni al Plejŝatatoj"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Prelego aldonita al plej ŝatataj"
+msgstr "Prelego forigita el plejŝatatoj"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Ne eblas forigi prelegon el plejŝatatoj."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -343,9 +340,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Prizorganto kaj Programisto"
-
-#~ msgid "Delete"
-#~ msgstr "Forigi"
-
-#~ msgid "Favorite"
-#~ msgstr "Ŝatata"
