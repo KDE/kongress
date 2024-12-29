@@ -80,25 +80,22 @@ msgid "Web Page"
 msgstr "网页"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "收藏夹"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "收藏夹"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "会谈已添加到收藏夹中"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
@@ -341,9 +338,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "维护者及开发者"
-
-#~ msgid "Delete"
-#~ msgstr "删除"
-
-#~ msgid "Favorite"
-#~ msgstr "收藏"
