@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-11-30 16:33+0400\n"
+"PO-Revision-Date: 2024-12-31 20:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -73,7 +73,7 @@ msgstr "تفاصيل الحدث"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr "، "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -81,31 +81,28 @@ msgid "Web Page"
 msgstr "صفحة الوب"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "المفضلات"
+msgstr "احذف من المفضّلة"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "المفضلات"
+msgstr "أضف إلى المفضّلة"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "أضيفت المحادثة إلى المفضلة"
+msgstr "الحديث أزيلت من المفضلة"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "غير قادر على إزالة الحديث من المفضلة."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
