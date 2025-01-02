@@ -345,9 +345,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Vedlikehaldar og utviklar"
-
-#~ msgid "Delete"
-#~ msgstr "Slett"
-
-#~ msgid "Favorite"
-#~ msgstr "Merk som favoritt"
