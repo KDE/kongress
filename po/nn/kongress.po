@@ -83,21 +83,18 @@ msgstr "Heimeside"
 
 #: contents/ui/EventInfo.qml:128
 #, fuzzy, kde-format
-#| msgid "Favorites"
 msgctxt "@action:button"
 msgid "Delete from Favorites"
 msgstr "Favorittar"
 
 #: contents/ui/EventInfo.qml:128
 #, fuzzy, kde-format
-#| msgid "Favorites"
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "Favorittar"
 
 #: contents/ui/EventInfo.qml:149
 #, fuzzy, kde-format
-#| msgid "Talk added to favorites"
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "Presentasjonen er lagd til som favoritt"
