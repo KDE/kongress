@@ -72,7 +72,7 @@ msgstr "Podrobnosti události"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
