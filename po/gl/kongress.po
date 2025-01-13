@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-09 02:44+0000\n"
-"PO-Revision-Date: 2024-07-03 16:56+0200\n"
+"PO-Revision-Date: 2025-01-12 17:26+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -257,7 +257,7 @@ msgstr "Notificacións"
 #: contents/ui/SettingsView.qml:41
 #, kde-format
 msgid "Notifications are not supported on your platform"
-msgstr "As notificacións non están dispoñíbeis para esta plataforma."
+msgstr "A súa plataforma non permite notificacións."
 
 #: contents/ui/SettingsView.qml:48
 #, kde-format
