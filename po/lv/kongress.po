@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-10-08 17:14+0300\n"
+"PO-Revision-Date: 2025-01-20 15:23+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,7 +73,7 @@ msgstr "Informācija par notikumu"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -81,31 +81,28 @@ msgid "Web Page"
 msgstr "Tīmekļa vietne"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Atzīmētās"
+msgstr "Dzēst no iecienītajām"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Atzīmētās"
+msgstr "Pievienot iecienītajām"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Runa ir atzīmēta"
+msgstr "Prezentācija ir noņemta no iecienītajām."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Neizdodas prezentāciju noņemt no iecienītajām."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -120,12 +117,12 @@ msgstr "Atvērt mapi"
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
-msgstr "„%1“ nav atrastas atzīmētas runas"
+msgstr "„%1“ nav atrastas atzīmētas prezentācijas"
 
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
-msgstr "Nav atrastas atzīmētas runas"
+msgstr "Nav atrastas atzīmētas prezentācijas"
 
 #: contents/ui/FavoritesView.qml:184
 #, kde-format
@@ -257,12 +254,12 @@ msgstr "Stāvu augstāk"
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
-msgstr "„%1“ nav atrastas runas"
+msgstr "„%1“ nav atrastas prezentācijas"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
-msgstr "Nav atrastas runas"
+msgstr "Nav atrastas prezentācijas"
 
 #: contents/ui/SettingsView.qml:20
 #, kde-format
@@ -292,7 +289,7 @@ msgstr "Pievienot atgādinājumus atzīmētajām runām"
 #: contents/ui/SettingsView.qml:55
 #, kde-format
 msgid "Remind before talk start (minutes)"
-msgstr "Atgādināt pirms runas sākuma (minūtes)"
+msgstr "Atgādināt pirms prezentācijas sākuma (minūtes)"
 
 #: eventcontroller.cpp:69
 #, kde-format
@@ -310,13 +307,13 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"Runa ir atzīmēta, bet tā pārklājas ar jau pievienotu:\n"
+"Prezentācija ir atzīmēta, bet tā pārklājas ar jau pievienotu:\n"
 "%1"
 
 #: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
-msgstr "Runa ir atzīmēta"
+msgstr "Prezentācija ir atzīmēta"
 
 #: main.cpp:65
 #, kde-format
