@@ -314,6 +314,9 @@
       </description>
     </release>
   </releases>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
   <project_group>KDE</project_group>
   <provides>
     <binary>kongress</binary>
