@@ -14,8 +14,6 @@ apps:
     common-id: org.kde.kongress.desktop
     desktop: usr/share/applications/org.kde.kongress.desktop
     command: usr/bin/kongress
-    plugs:
-      - audio-record
 slots:
   session-dbus-interface:
     interface: dbus
