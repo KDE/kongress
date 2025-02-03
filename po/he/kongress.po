@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-12-27 08:36+0200\n"
+"PO-Revision-Date: 2025-01-24 09:27+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -61,7 +61,7 @@ msgstr "לא נמצאו כנסים"
 #: contents/ui/Conferences.qml:27
 #, kde-format
 msgid "Reload"
-msgstr "רענון"
+msgstr "ריענון"
 
 #: contents/ui/EventInfo.qml:37
 #, kde-format

@@ -11,3 +11,5 @@ include:
       - /gitlab-templates/craft-android-qt6-apks.yml
       - /gitlab-templates/flatpak.yml
       - /gitlab-templates/clang-format.yml
+      - /gitlab-templates/xml-lint.yml
+      - /gitlab-templates/yaml-lint.yml
