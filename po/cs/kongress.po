@@ -80,25 +80,22 @@ msgid "Web Page"
 msgstr "Webová stránka"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Oblíbené"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Oblíbené"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Already in favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Již v oblíbených"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
@@ -341,9 +338,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Správce a vývojář"
-
-#~ msgid "Delete"
-#~ msgstr "Smazat"
-
-#~ msgid "Favorite"
-#~ msgstr "Oblíbené"
