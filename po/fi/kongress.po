@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-10-28 21:13+0200\n"
+"PO-Revision-Date: 2025-01-12 19:54+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -72,7 +72,7 @@ msgstr "Tapahtuman tiedot"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -80,31 +80,28 @@ msgid "Web Page"
 msgstr "Verkkosivu"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "Suosikit"
+msgstr "Poista suosikeista"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Suosikit"
+msgstr "Lisää suosikkeihin"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Esitelmä lisätty suosikeihin"
+msgstr "Esitelmä on poistettu suosikeista."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Esitelmää ei voida poistaa suosikeista."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -314,7 +311,7 @@ msgstr ""
 #: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
-msgstr "Esitelmä lisätty suosikeihin"
+msgstr "Esitelmä on lisätty suosikkeihin"
 
 #: main.cpp:65
 #, kde-format
