@@ -5,13 +5,13 @@
 #
 # Automatically generated, 2020.
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:44+0000\n"
-"PO-Revision-Date: 2024-05-18 17:32+0900\n"
+"PO-Revision-Date: 2025-04-07 15:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -76,7 +76,7 @@ msgstr "活動詳細資訊"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr "、"
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -84,31 +84,28 @@ msgid "Web Page"
 msgstr "網頁"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr "收藏"
+msgstr "從收藏刪除"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "收藏"
+msgstr "加入收藏"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
-#| msgid "Talk added to favorites"
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "已將演講加入收藏"
+msgstr "已將演講從收藏中移除。"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "無法從收藏中移除演講。"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -206,17 +203,17 @@ msgstr "地圖"
 #: contents/ui/IndoorMapView.qml:29
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1 樓"
 
 #: contents/ui/IndoorMapView.qml:42
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "尋找房間"
 
 #: contents/ui/IndoorMapView.qml:48
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "尋找設施"
 
 #: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
 #, kde-format
@@ -226,34 +223,34 @@ msgstr "開啟地圖"
 #: contents/ui/IndoorMapView.qml:157
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "從這裡導航"
 
 #: contents/ui/IndoorMapView.qml:166
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "導航到這裡"
 
 #: contents/ui/IndoorMapView.qml:177
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "顯示資訊"
 
 #: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "已切換至 %1 樓"
 
 #: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "往下一層樓"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "往上一層樓"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
