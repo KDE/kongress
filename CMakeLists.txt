@@ -13,7 +13,7 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 project(kongress VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "6.8.0")
-set(KF_MIN_VERSION "6.11.0")
+set(KF_MIN_VERSION "6.12.0")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -70,10 +70,6 @@ add_subdirectory(src)
 
 if(NOT ANDROID AND REMINDERS_ENABLED)
     add_subdirectory(kongressac)
-endif()
-
-if (ANDROID)
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
 endif()
 
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
