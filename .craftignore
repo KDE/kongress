@@ -16,9 +16,12 @@ share/mime/packages/kde6\.xml
 # kongressac isn't built on Android, so we don't need its translations there either
 share/locale/.*/LC_MESSAGES/kongressac\.mo
 
+# unused image formats
+plugins/imageformats/.*_qico_.*\.so
+
 # translation catalogs of dependencies not needed here
-share/locale/.*/LC_MESSAGES/(kcodecs6|kconfig6)_qt\.qm
-share/locale/.*/LC_MESSAGES/(kcontacts6|kpublictransport)\.mo
+share/locale/.*/LC_MESSAGES/(karchive6|kcodecs6|kconfig6)_qt\.qm
+share/locale/.*/LC_MESSAGES/(kcontacts6|kcolorscheme6|kiconthemes6|kpublictransport)\.mo
 
 # QML leftovers of dependencies we don't need
 lib/qml/org/kde/kpublictransport/.*
@@ -27,3 +30,11 @@ lib/qml/org/kde/kosmindoormap/kpublictransport/.*
 # newer Kirigami Addon versions depend on Qt.labs.platform for ColorDialog, which as a QtWidgets dependency
 # remove that the hard way, we don't need a color dialog
 qml/Qt/labs/platform/.*
+
+# unused KConfigWidgets assets pulled in via KIconThemes
+share/locale/.*/kf6_entry.desktop
+share/locale/.*/LC_MESSAGES/kconfigwidgets6\.mo
+share/locale/.*/LC_MESSAGES/(kitemviews6|kwidgetsaddons6)_qt\.qm
+
+# unused Qt translation catalogs
+translations/(qtconnectivity|qtdeclarative|qtlocations|qtmultimedia|qtwebsockets)_.*\.qm
