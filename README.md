@@ -14,6 +14,11 @@ Kongress provides practical information about conferences. It supports conferenc
 
 A set of conferences have been preloaded and are available after installation. Users may add extra conferences, providing a link to their iCalendar schedule (under development).
 
+## Adding Conferences
+
+The preloaded events are configured in https://invent.kde.org/websites/autoconfig-kde-org/-/blob/master/kongress/conference-data.json,
+adding new ones can be done by submitting a merge request againt the [autoconfig.kde.org repository](https://invent.kde.org/websites/autoconfig-kde-org/).
+
 ## Setup
 
 ### Build
