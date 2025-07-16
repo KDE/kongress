@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-16 00:46+0000\n"
 "PO-Revision-Date: 2025-04-07 15:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -194,63 +194,46 @@ msgstr "設定"
 msgid "About"
 msgstr "關於"
 
-#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:24 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "地圖"
 
-#: contents/ui/IndoorMapView.qml:29
+#: contents/ui/IndoorMapView.qml:27
 #, kde-format
 msgid "Floor %1"
 msgstr "%1 樓"
 
-#: contents/ui/IndoorMapView.qml:42
+#: contents/ui/IndoorMapView.qml:40
 #, kde-format
 msgid "Find Room"
 msgstr "尋找房間"
 
-#: contents/ui/IndoorMapView.qml:48
+#: contents/ui/IndoorMapView.qml:46
 #, kde-format
 msgid "Find Amenity"
 msgstr "尋找設施"
 
-#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:52 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "開啟地圖"
 
-#: contents/ui/IndoorMapView.qml:157
+#: contents/ui/IndoorMapView.qml:115
 #, kde-format
 msgid "Navigate from here"
 msgstr "從這裡導航"
 
-#: contents/ui/IndoorMapView.qml:166
+#: contents/ui/IndoorMapView.qml:124
 #, kde-format
 msgid "Navigate to here"
 msgstr "導航到這裡"
 
-#: contents/ui/IndoorMapView.qml:177
+#: contents/ui/IndoorMapView.qml:135
 #, kde-format
 msgid "Show information"
 msgstr "顯示資訊"
-
-#: contents/ui/IndoorMapView.qml:196
-#, kde-format
-msgid "Switched to floor %1"
-msgstr "已切換至 %1 樓"
-
-#: contents/ui/IndoorMapView.qml:256
-#, kde-format
-msgctxt "@action:intoolbar Go down one floor"
-msgid "Floor down"
-msgstr "往下一層樓"
-
-#: contents/ui/IndoorMapView.qml:265
-#, kde-format
-msgctxt "@action:intoolbar Go up one floor"
-msgid "Floor up"
-msgstr "往上一層樓"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
@@ -342,6 +325,17 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "維護者和開發者"
+
+#~ msgid "Switched to floor %1"
+#~ msgstr "已切換至 %1 樓"
+
+#~ msgctxt "@action:intoolbar Go down one floor"
+#~ msgid "Floor down"
+#~ msgstr "往下一層樓"
+
+#~ msgctxt "@action:intoolbar Go up one floor"
+#~ msgid "Floor up"
+#~ msgstr "往上一層樓"
 
 #~ msgid "Delete"
 #~ msgstr "刪除"

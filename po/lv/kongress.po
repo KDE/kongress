@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-16 00:46+0000\n"
 "PO-Revision-Date: 2025-01-20 15:23+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -193,63 +193,46 @@ msgstr "Iestatījumi"
 msgid "About"
 msgstr "Par"
 
-#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:24 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "Karte"
 
-#: contents/ui/IndoorMapView.qml:29
+#: contents/ui/IndoorMapView.qml:27
 #, kde-format
 msgid "Floor %1"
 msgstr "%1. stāvs"
 
-#: contents/ui/IndoorMapView.qml:42
+#: contents/ui/IndoorMapView.qml:40
 #, kde-format
 msgid "Find Room"
 msgstr "Atrast telpu"
 
-#: contents/ui/IndoorMapView.qml:48
+#: contents/ui/IndoorMapView.qml:46
 #, kde-format
 msgid "Find Amenity"
 msgstr "Atrast ērtības"
 
-#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:52 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "Atvērt karti"
 
-#: contents/ui/IndoorMapView.qml:157
+#: contents/ui/IndoorMapView.qml:115
 #, kde-format
 msgid "Navigate from here"
 msgstr "Navigācija no šīs vietas"
 
-#: contents/ui/IndoorMapView.qml:166
+#: contents/ui/IndoorMapView.qml:124
 #, kde-format
 msgid "Navigate to here"
 msgstr "Navigācija uz šo vietu"
 
-#: contents/ui/IndoorMapView.qml:177
+#: contents/ui/IndoorMapView.qml:135
 #, kde-format
 msgid "Show information"
 msgstr "Rādīt informāciju"
-
-#: contents/ui/IndoorMapView.qml:196
-#, kde-format
-msgid "Switched to floor %1"
-msgstr "Pārslēdzās uz %1. stāvu"
-
-#: contents/ui/IndoorMapView.qml:256
-#, kde-format
-msgctxt "@action:intoolbar Go down one floor"
-msgid "Floor down"
-msgstr "Stāvu zemāk"
-
-#: contents/ui/IndoorMapView.qml:265
-#, kde-format
-msgctxt "@action:intoolbar Go up one floor"
-msgid "Floor up"
-msgstr "Stāvu augstāk"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
@@ -341,6 +324,17 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Uzturētājs un izstrādātājs"
+
+#~ msgid "Switched to floor %1"
+#~ msgstr "Pārslēdzās uz %1. stāvu"
+
+#~ msgctxt "@action:intoolbar Go down one floor"
+#~ msgid "Floor down"
+#~ msgstr "Stāvu zemāk"
+
+#~ msgctxt "@action:intoolbar Go up one floor"
+#~ msgid "Floor up"
+#~ msgstr "Stāvu augstāk"
 
 #~ msgid "Delete"
 #~ msgstr "Dzēst"

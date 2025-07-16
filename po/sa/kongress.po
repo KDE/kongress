@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-16 00:46+0000\n"
 "PO-Revision-Date: 2024-12-29 22:51+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -193,63 +193,46 @@ msgstr "सेटिंग्स्"
 msgid "About"
 msgstr "विषये"
 
-#: contents/ui/IndoorMapView.qml:26 contents/ui/MapView.qml:19
+#: contents/ui/IndoorMapView.qml:24 contents/ui/MapView.qml:19
 #, kde-format
 msgctxt "@title"
 msgid "Map"
 msgstr "मानचित्र"
 
-#: contents/ui/IndoorMapView.qml:29
+#: contents/ui/IndoorMapView.qml:27
 #, kde-format
 msgid "Floor %1"
 msgstr "तल %1"
 
-#: contents/ui/IndoorMapView.qml:42
+#: contents/ui/IndoorMapView.qml:40
 #, kde-format
 msgid "Find Room"
 msgstr "कक्षं अन्वेष्टुम्"
 
-#: contents/ui/IndoorMapView.qml:48
+#: contents/ui/IndoorMapView.qml:46
 #, kde-format
 msgid "Find Amenity"
 msgstr "सुविधां ज्ञातव्यम्"
 
-#: contents/ui/IndoorMapView.qml:54 contents/ui/MapView.qml:31
+#: contents/ui/IndoorMapView.qml:52 contents/ui/MapView.qml:31
 #, kde-format
 msgid "Open Map"
 msgstr "नक्शा उद्घाटयतु"
 
-#: contents/ui/IndoorMapView.qml:157
+#: contents/ui/IndoorMapView.qml:115
 #, kde-format
 msgid "Navigate from here"
 msgstr "इतः गच्छन्तु"
 
-#: contents/ui/IndoorMapView.qml:166
+#: contents/ui/IndoorMapView.qml:124
 #, kde-format
 msgid "Navigate to here"
 msgstr "अत्र गच्छन्तु"
 
-#: contents/ui/IndoorMapView.qml:177
+#: contents/ui/IndoorMapView.qml:135
 #, kde-format
 msgid "Show information"
 msgstr "सूचनां दर्शयतु"
-
-#: contents/ui/IndoorMapView.qml:196
-#, kde-format
-msgid "Switched to floor %1"
-msgstr "%1 तलम् प्रति परिवर्तितम्"
-
-#: contents/ui/IndoorMapView.qml:256
-#, kde-format
-msgctxt "@action:intoolbar Go down one floor"
-msgid "Floor down"
-msgstr "अधः तलम्"
-
-#: contents/ui/IndoorMapView.qml:265
-#, kde-format
-msgctxt "@action:intoolbar Go up one floor"
-msgid "Floor up"
-msgstr "तलम् उपरि"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
@@ -341,6 +324,17 @@ msgstr "दिमित्री कर्दराकोस"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "परिपालकः विकासकः च"
+
+#~ msgid "Switched to floor %1"
+#~ msgstr "%1 तलम् प्रति परिवर्तितम्"
+
+#~ msgctxt "@action:intoolbar Go down one floor"
+#~ msgid "Floor down"
+#~ msgstr "अधः तलम्"
+
+#~ msgctxt "@action:intoolbar Go up one floor"
+#~ msgid "Floor up"
+#~ msgstr "तलम् उपरि"
 
 #~ msgid "Delete"
 #~ msgstr "लुप्"
