@@ -234,19 +234,19 @@ msgstr ""
 #: contents/ui/IndoorMapView.qml:196
 #, kde-format
 msgid "Switched to floor %1"
-msgstr ""
+msgstr "切换到 %1 楼"
 
 #: contents/ui/IndoorMapView.qml:256
 #, kde-format
 msgctxt "@action:intoolbar Go down one floor"
 msgid "Floor down"
-msgstr ""
+msgstr "层级下移"
 
 #: contents/ui/IndoorMapView.qml:265
 #, kde-format
 msgctxt "@action:intoolbar Go up one floor"
 msgid "Floor up"
-msgstr ""
+msgstr "层级上移"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
