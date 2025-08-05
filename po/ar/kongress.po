@@ -277,12 +277,12 @@ msgstr "استخدم المنطقة الزمنية المحلية"
 #: contents/ui/SettingsView.qml:33
 #, kde-format
 msgid "Notifications"
-msgstr "الإخطارات"
+msgstr "الإشعارات"
 
 #: contents/ui/SettingsView.qml:41
 #, kde-format
 msgid "Notifications are not supported on your platform"
-msgstr "لا تُدعم الإخطارات على منصتك"
+msgstr "لا تُدعم الإشعارات على منصتك"
 
 #: contents/ui/SettingsView.qml:48
 #, kde-format
