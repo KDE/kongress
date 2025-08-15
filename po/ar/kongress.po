@@ -285,7 +285,7 @@ msgstr "خطأ أثناء إنشاء الحدث"
 #: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
-msgstr "موجودة بالفعل في المفضلة"
+msgstr "موجودة فعلًا في المفضلة"
 
 #: eventcontroller.cpp:132
 #, kde-format
