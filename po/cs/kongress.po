@@ -321,11 +321,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Správce a vývojář"
-
-#~ msgctxt "@action:intoolbar Go down one floor"
-#~ msgid "Floor down"
-#~ msgstr "O patro níže"
-
-#~ msgctxt "@action:intoolbar Go up one floor"
-#~ msgid "Floor up"
-#~ msgstr "O patro výš"
