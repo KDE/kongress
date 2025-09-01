@@ -146,7 +146,7 @@ msgstr "Canvia de congrés"
 #: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
-msgstr "Selecciona un congrés"
+msgstr "Tria un congrés"
 
 #: contents/ui/GlobalDrawer.qml:95
 #, kde-format
