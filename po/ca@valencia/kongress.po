@@ -146,7 +146,7 @@ msgstr "Canvia de congrés"
 #: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
-msgstr "Selecciona un congrés"
+msgstr "Tria un congrés"
 
 #: contents/ui/GlobalDrawer.qml:95
 #, kde-format
@@ -325,14 +325,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Mantenidor i desenvolupador"
-
-#~ msgid "Switched to floor %1"
-#~ msgstr "Ha canviat a la planta %1"
-
-#~ msgctxt "@action:intoolbar Go down one floor"
-#~ msgid "Floor down"
-#~ msgstr "Planta avall"
-
-#~ msgctxt "@action:intoolbar Go up one floor"
-#~ msgid "Floor up"
-#~ msgstr "Planta amunt"
