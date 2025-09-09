@@ -48,7 +48,6 @@
   <name xml:lang="sv">Kongress</name>
   <name xml:lang="tr">Kongre</name>
   <name xml:lang="uk">Kongress</name>
-  <name xml:lang="x-test">xxKongressxx</name>
   <name xml:lang="zh-CN">Kongress</name>
   <name xml:lang="zh-TW">Kongress</name>
   <summary>Conference companion</summary>
@@ -79,7 +78,6 @@
   <summary xml:lang="sv">Konferenskompanjon</summary>
   <summary xml:lang="tr">Konferans Eşlikçisi</summary>
   <summary xml:lang="uk">Компаньйон для конференцій</summary>
-  <summary xml:lang="x-test">xxConference companionxx</summary>
   <summary xml:lang="zh-TW">研討會小幫手</summary>
   <description>
     <p>Kongress is a companion application for conferences made by KDE</p>
@@ -116,7 +114,6 @@
     <p xml:lang="sv">Kongress är ett kompanjonprogram för konferenser gjort av KDE</p>
     <p xml:lang="tr">Kongre, KDE tarafından yapılan konferanslara yardımcı olması için geliştirilmiş bir uygulamadır</p>
     <p xml:lang="uk">Kongress — програма-компаньйон для конференцій, які проводить KDE</p>
-    <p xml:lang="x-test">xxKongress is a companion application for conferences made by KDExx</p>
     <p xml:lang="zh-CN">Kongress 是一款 KDE 开发的会议助理应用</p>
     <p xml:lang="zh-TW">Kongresss 是 KDE 所做的研討會小幫手應用程式</p>
   </description>
@@ -156,7 +153,6 @@
       <caption xml:lang="sv">Kongress på mobil</caption>
       <caption xml:lang="tr">Taşınabilir aygıtlarda Kongre</caption>
       <caption xml:lang="uk">Kongress на мобільному</caption>
-      <caption xml:lang="x-test">xxKongress on Mobilexx</caption>
       <caption xml:lang="zh-CN">Kongress 移动版</caption>
       <caption xml:lang="zh-TW">手機上的 Kongress</caption>
       <image>https://cdn.kde.org/screenshots/kongress/mobile.png</image>
@@ -197,7 +193,6 @@
       <caption xml:lang="sv">Kongress på skrivbordet</caption>
       <caption xml:lang="tr">Masaüstünde Kongre</caption>
       <caption xml:lang="uk">Kongress на робочій станції</caption>
-      <caption xml:lang="x-test">xxKongress on Desktopxx</caption>
       <caption xml:lang="zh-CN">Kongress 桌面版</caption>
       <caption xml:lang="zh-TW">桌面上的 Kongress</caption>
       <image>https://cdn.kde.org/screenshots/kongress/desktop.png</image>
