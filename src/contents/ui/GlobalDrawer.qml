@@ -10,6 +10,7 @@ import QtQuick.Controls 2 as Controls
 import QtQml.Models
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.private.polyfill // remove once we depend on Qt 6.9
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kongress as Kongress
@@ -35,10 +36,10 @@ Kirigami.OverlayDrawer {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
-    leftPadding: 0
-    rightPadding: 0
-    topPadding: 0
-    bottomPadding: 0
+    leftPadding: parent.SafeArea.margins.left
+    rightPadding: parent.SafeArea.margins.right
+    topPadding: parent.SafeArea.margins.top
+    bottomPadding: parent.SafeArea.margins.bottom
     width: Kirigami.Units.gridUnit * 16
 
     contentItem: ColumnLayout {
