@@ -5,7 +5,6 @@
  */
 
 #include "conferencecontroller.h"
-#include "conference.h"
 #include "settingscontroller.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
