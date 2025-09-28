@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:46+0000\n"
+"POT-Creation-Date: 2025-09-28 00:47+0000\n"
 "PO-Revision-Date: 2025-08-14 18:20-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -132,63 +132,63 @@ msgid_plural "Overlaps with %1 other talks"
 msgstr[0] "Sobrepõe a outra apresentação"
 msgstr[1] "Sobrepõe a outras %1 apresentações"
 
-#: contents/ui/GlobalDrawer.qml:57
+#: contents/ui/GlobalDrawer.qml:58
 #, kde-format
 msgid "Conference"
 msgstr "Conferência"
 
-#: contents/ui/GlobalDrawer.qml:76
+#: contents/ui/GlobalDrawer.qml:77
 #, kde-format
 msgid "Change conference"
 msgstr "Alterar conferência"
 
-#: contents/ui/GlobalDrawer.qml:76
+#: contents/ui/GlobalDrawer.qml:77
 #, kde-format
 msgid "Select conference"
 msgstr "Selecionar conferência"
 
-#: contents/ui/GlobalDrawer.qml:95
+#: contents/ui/GlobalDrawer.qml:96
 #, kde-format
 msgid "Check for updates"
 msgstr "Verificar atualizações"
 
-#: contents/ui/GlobalDrawer.qml:109
+#: contents/ui/GlobalDrawer.qml:110
 #, kde-format
 msgid "Map"
 msgstr "Mapa"
 
-#: contents/ui/GlobalDrawer.qml:131 contents/ui/GlobalDrawer.qml:137
+#: contents/ui/GlobalDrawer.qml:132 contents/ui/GlobalDrawer.qml:138
 #: contents/ui/Main.qml:74
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritas"
 
-#: contents/ui/GlobalDrawer.qml:145
+#: contents/ui/GlobalDrawer.qml:146
 #, kde-format
 msgid "Full Schedule"
 msgstr "Programação completa"
 
-#: contents/ui/GlobalDrawer.qml:151 contents/ui/Main.qml:63
+#: contents/ui/GlobalDrawer.qml:152 contents/ui/Main.qml:63
 #, kde-format
 msgid "Schedule"
 msgstr "Programação"
 
-#: contents/ui/GlobalDrawer.qml:161
+#: contents/ui/GlobalDrawer.qml:162
 #, kde-format
 msgid "Daily Schedule"
 msgstr "Programação diária"
 
-#: contents/ui/GlobalDrawer.qml:200
+#: contents/ui/GlobalDrawer.qml:201
 #, kde-format
 msgid "Categories"
 msgstr "Categorias"
 
-#: contents/ui/GlobalDrawer.qml:244 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:245 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Configurações"
 
-#: contents/ui/GlobalDrawer.qml:259
+#: contents/ui/GlobalDrawer.qml:260
 #, kde-format
 msgid "About"
 msgstr "Sobre"
