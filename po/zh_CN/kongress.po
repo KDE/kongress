@@ -72,7 +72,7 @@ msgstr "活动详情"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -83,25 +83,25 @@ msgstr "网页"
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete from Favorites"
-msgstr ""
+msgstr "从收藏中移除"
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr ""
+msgstr "添加到收藏"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr ""
+msgstr "对话已从收藏中移除。"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "无法从收藏中删除对话。"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -199,17 +199,17 @@ msgstr "地图"
 #: contents/ui/IndoorMapView.qml:27
 #, kde-format
 msgid "Floor %1"
-msgstr ""
+msgstr "%1 层"
 
 #: contents/ui/IndoorMapView.qml:40
 #, kde-format
 msgid "Find Room"
-msgstr ""
+msgstr "查找房间"
 
 #: contents/ui/IndoorMapView.qml:46
 #, kde-format
 msgid "Find Amenity"
-msgstr ""
+msgstr "寻找便民设施"
 
 #: contents/ui/IndoorMapView.qml:52 contents/ui/MapView.qml:31
 #, kde-format
@@ -219,17 +219,17 @@ msgstr "打开地图"
 #: contents/ui/IndoorMapView.qml:115
 #, kde-format
 msgid "Navigate from here"
-msgstr ""
+msgstr "从这里导航"
 
 #: contents/ui/IndoorMapView.qml:124
 #, kde-format
 msgid "Navigate to here"
-msgstr ""
+msgstr "导航到这里"
 
 #: contents/ui/IndoorMapView.qml:135
 #, kde-format
 msgid "Show information"
-msgstr ""
+msgstr "显示信息"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
