@@ -278,7 +278,7 @@ msgstr "Recorda abans de l'inici de la xerrada (minuts)"
 #: eventcontroller.cpp:69
 #, kde-format
 msgid "Error during event creation"
-msgstr "S'ha produït un error en crear l'esdeveniment"
+msgstr "S'ha produït un error mentre es creava l'esdeveniment"
 
 #: eventcontroller.cpp:76
 #, kde-format
