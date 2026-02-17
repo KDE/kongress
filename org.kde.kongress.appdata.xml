@@ -252,11 +252,13 @@
       <description>
         <ul>
           <li>Proper version handling on Android</li>
+          <li xml:lang="ar">تعامل سليم مع الإصدارات على أندرويد</li>
           <li xml:lang="ca">Gestió correcta de versions a l'Android</li>
           <li xml:lang="ca-valencia">Gestió correcta de versions a Android</li>
           <li xml:lang="es">Manejo correcto de la versión en Android</li>
           <li xml:lang="he">טיפול ראוי בגרסאות ב־Android</li>
           <li xml:lang="pt-BR">Gerenciamento adequado de versões no Android</li>
+          <li xml:lang="ru">Правильная обработка версий на Android;</li>
         </ul>
       </description>
     </release>
@@ -268,11 +270,13 @@
       <description>
         <ul>
           <li>Ensure that export message is always shown</li>
+          <li xml:lang="ar">ضمان ظهور رسالة التصدير دائماً</li>
           <li xml:lang="ca">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="ca-valencia">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="es">Asegurar que el mensaje de exportación se muestra siempre</li>
           <li xml:lang="he">וידוא שהודעת הייצוא מופיעה תמיד</li>
           <li xml:lang="pt-BR">Certifica-se de que a mensagem de exportação seja sempre exibida</li>
+          <li xml:lang="ru">Проверка, что сообщение об экспорте всегда отображается;</li>
         </ul>
       </description>
     </release>
@@ -288,23 +292,29 @@
     <release version="21.06" date="2021-06-10">
       <description>
         <p>Improvements and translations</p>
+        <p xml:lang="ar">تحسينات وترجمات</p>
         <p xml:lang="ca">Millores i traduccions</p>
         <p xml:lang="ca-valencia">Millores i traduccions</p>
         <p xml:lang="es">Mejoras y traducciones</p>
         <p xml:lang="he">שיפורים ותרגומים</p>
         <p xml:lang="pt-BR">Melhorias e traduções</p>
+        <p xml:lang="ru">Улучшения и переводы</p>
         <ul>
           <li>Streamline Android build</li>
+          <li xml:lang="ar">تحسين عملية بناء أندرويد</li>
           <li xml:lang="ca">S'ha simplificat la construcció a l'Android</li>
           <li xml:lang="ca-valencia">S'ha simplificat la construcció a Android</li>
           <li xml:lang="he">הבנייה ל־Android עוברת חלק יותר</li>
           <li xml:lang="pt-BR">Compilação Streamline para Android</li>
+          <li xml:lang="ru">Упрощение сборки для Android;</li>
           <li>Update translations</li>
+          <li xml:lang="ar">تحديث الترجمات</li>
           <li xml:lang="ca">Actualitza les traduccions</li>
           <li xml:lang="ca-valencia">Actualitza les traduccions</li>
           <li xml:lang="es">Actualización de las traducciones</li>
           <li xml:lang="he">עדכוני תרגומים</li>
           <li xml:lang="pt-BR">Atualização de traduções</li>
+          <li xml:lang="ru">Обновлены переводы;</li>
         </ul>
       </description>
       <url>https://www.plasma-mobile.org/2021/06/10/plasma-mobile-update-june/</url>
@@ -312,135 +322,181 @@
     <release version="21.05" date="2021-05-10">
       <description>
         <p>Kongress 21.05 release</p>
+        <p xml:lang="ar">إصدار كونغرس 21.05</p>
         <p xml:lang="ca">Versió 21.05 del Kongress</p>
         <p xml:lang="ca-valencia">Versió 21.05 de Kongress</p>
         <p xml:lang="es">Publicación de Kongress 21.05</p>
         <p xml:lang="he">מהדורה 21.05 של קונגרס</p>
+        <p xml:lang="nl">Kongress 21.05 uitgave</p>
         <p xml:lang="pt-BR">Lançamento do Kongress 21.05</p>
+        <p xml:lang="ru">Выпуск Kongress 21.05</p>
         <ul>
           <li>Add bugtracking url</li>
+          <li xml:lang="ar">إضافة رابط تتبع العلل</li>
           <li xml:lang="ca">Afegeix un URL de seguiment d'errors</li>
           <li xml:lang="ca-valencia">Afig un URL de seguiment d'errors</li>
           <li xml:lang="es">Se ha añadido URL de seguimiento de fallos</li>
           <li xml:lang="he">נוספה כתובת מעקב תקלות</li>
           <li xml:lang="pt-BR">Adicionado url de bugtracking</li>
+          <li xml:lang="ru">Добавлен адрес системы отслеживания ошибок;</li>
           <li>Simplify flatpak manifest</li>
+          <li xml:lang="ar">تبسيط بيان فلات باك</li>
           <li xml:lang="ca">Simplifica el manifest de flatpak</li>
           <li xml:lang="ca-valencia">Simplifica el manifest de flatpak</li>
           <li xml:lang="es">Simplificación del manifiesto de flatpak</li>
           <li xml:lang="he">המצהר (manifest) של flatpak עבר פישוט</li>
           <li xml:lang="pt-BR">Simplificação do manifesto do Flatpak</li>
+          <li xml:lang="ru">Упрощён манифест Flatpak;</li>
           <li>Streamline favorites view</li>
+          <li xml:lang="ar">تحسين عرض المفضلة</li>
           <li xml:lang="ca">Simplifica la vista dels favorits</li>
           <li xml:lang="ca-valencia">Simplifica la vista dels favorits</li>
           <li xml:lang="he">תצוגת המועדפים עברה כוונון לצורכי המשתמשים</li>
           <li xml:lang="pt-BR">Visualização de Streamline favoritos</li>
+          <li xml:lang="ru">Упрощено представление избранного;</li>
           <li>Simplify conference selection</li>
+          <li xml:lang="ar">تبسيط اختيار المؤتمر</li>
           <li xml:lang="ca">Simplifica la selecció de conferències</li>
           <li xml:lang="ca-valencia">Simplifica la selecció de conferències</li>
           <li xml:lang="es">Simplificación de la selección de conferencias</li>
           <li xml:lang="he">פישוט בחירת כנס</li>
           <li xml:lang="pt-BR">Simplificação de seleção de conferência</li>
+          <li xml:lang="ru">Упрощён выбор конференций;</li>
           <li>Add placeholder icon to the Favorites page</li>
+          <li xml:lang="ar">إضافة أيقونة نائبة إلى صفحة المفضلة</li>
           <li xml:lang="ca">Afegeix una icona d'espai reservat a la pàgina dels favorits</li>
           <li xml:lang="ca-valencia">Afig una icona d'espai reservat a la pàgina dels favorits</li>
           <li xml:lang="he">הוספת סמל ממלא מקום לעמוד המועדפים</li>
           <li xml:lang="pt-BR">Adição de ícone de espaço reservado à página de Favoritos</li>
+          <li xml:lang="ru">Добавлен значок-заполнитель на страницу «Избранное»;</li>
           <li>Offer favorites export</li>
+          <li xml:lang="ar">توفير ميزة تصدير المفضلة</li>
           <li xml:lang="ca">Ofereix l'exportació dels favorits</li>
           <li xml:lang="ca-valencia">Oferix l'exportació dels favorits</li>
           <li xml:lang="es">Ofrecer exportación de favoritos</li>
           <li xml:lang="he">הצעת ייצוא מועדפים</li>
           <li xml:lang="pt-BR">Oferecer exportação de favoritos</li>
+          <li xml:lang="ru">Предлагать экспорт избранного;</li>
           <li>Add generic name</li>
+          <li xml:lang="ar">إضافة اسم عام</li>
           <li xml:lang="ca">Afegeix un nom genèric</li>
           <li xml:lang="ca-valencia">Afig un nom genèric</li>
           <li xml:lang="es">Añadir un nombre genérico</li>
           <li xml:lang="he">נוסף שם כללי</li>
           <li xml:lang="pt-BR">Adição de nome genérico</li>
+          <li xml:lang="ru">Добавлено общее имя;</li>
           <li>Remove cmake functions not needed</li>
+          <li xml:lang="ar">إزالة دوال cmake غير الضرورية</li>
           <li xml:lang="ca">Elimina les funcions no necessàries del CMake</li>
           <li xml:lang="ca-valencia">Elimina les funcions no necessàries de CMake</li>
           <li xml:lang="es">Eliminar las funciones de cmake no necesarias</li>
           <li xml:lang="he">הוסרו פונקציות cmake בלתי נחוצות</li>
           <li xml:lang="pt-BR">Remoção de funções do functions desnecessárias</li>
+          <li xml:lang="ru">Удалены ненужные функции cmake;</li>
         </ul>
       </description>
     </release>
     <release version="1.0.1" date="2021-03-08">
       <description>
         <p>Kongress bugfix release</p>
+        <p xml:lang="ar">إصدار إصلاح علل كونغرس</p>
         <p xml:lang="ca">Versió de correcció d'errors del Kongress</p>
         <p xml:lang="ca-valencia">Versió d'esmena d'errors de Kongress</p>
         <p xml:lang="he">מהדורת תיקון תקלות של Kongress</p>
+        <p xml:lang="nl">Kongress uitgave met reparaties van bugs</p>
         <p xml:lang="pt-BR">Lançamento de correção de bugs do Kongress</p>
+        <p xml:lang="ru">Выпуск Kongress с исправлениями ошибок</p>
         <ul>
           <li>Fix display of talk time on notifications</li>
+          <li xml:lang="ar">إصلاح عرض وقت المحادثة في التنبيهات</li>
           <li xml:lang="ca">Corregeix la visualització del temps de la xerrada a les notificacions</li>
           <li xml:lang="ca-valencia">Corregix la visualització del temps de la xerrada a les notificacions</li>
           <li xml:lang="he">תוקנה תצוגת זמן ההרצאה בהתראות</li>
           <li xml:lang="pt-BR">Correção do problema na exibição do tempo de conversação nas notificações</li>
+          <li xml:lang="ru">Исправлено отображение времени выступления в уведомлениях;</li>
           <li>Prevent kongressac from crashing</li>
+          <li xml:lang="ar">منع انهيار kongressac</li>
           <li xml:lang="ca">Evita que el «kongressac» falli</li>
           <li xml:lang="ca-valencia">Evita que el «kongressac» falle</li>
           <li xml:lang="he">נמנעת קריסה של kongressac</li>
           <li xml:lang="pt-BR">Evita que o kongressac trave</li>
+          <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li>Fix grouping of talks into conference dayss</li>
+          <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
           <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="he">תוקן קיבוץ של הרצאות לימי כנס</li>
           <li xml:lang="pt-BR">Correção do agrupamento de tarefas por datas de conferência</li>
+          <li xml:lang="ru">Исправлена группировка докладов по дням конференции;</li>
           <li>Fix alarm schedule times</li>
+          <li xml:lang="ar">إصلاح أوقات جدول التنبيه</li>
           <li xml:lang="ca">Corregeix les hores de planificació d'alarma</li>
           <li xml:lang="ca-valencia">Corregix les hores de planificació d'alarma</li>
           <li xml:lang="he">תוקנו זמני לוח זמנים של התראות</li>
           <li xml:lang="pt-BR">Correção de horários agendados do alarme</li>
+          <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li>Prevent duplicate conference entries from being displayeds</li>
+          <li xml:lang="ar">منع ظهور مدخلات المؤتمر المكررة</li>
           <li xml:lang="ca">Evita que es mostrin entrades duplicades de conferències</li>
           <li xml:lang="ca-valencia">Evita que es mostren entrades duplicades de conferències</li>
           <li xml:lang="he">למנוע הופעה של רשומות כנסים כפולות</li>
           <li xml:lang="pt-BR">Impede a exibição de entradas duplicadas na conferência</li>
+          <li xml:lang="ru">Предотвращено отображение повторяющихся записей конференций;</li>
           <li>Do not display generic, multi-day calendar events on the daily schedules</li>
+          <li xml:lang="ar">عدم عرض أحداث التقويم العامة المتعددة الأيام في الجداول اليومية</li>
           <li xml:lang="ca">No mostra els esdeveniments genèrics de calendari multidia a les planificacions diàries</li>
           <li xml:lang="ca-valencia">No mostra els esdeveniments genèrics de calendari multidia a les planificacions diàries</li>
           <li xml:lang="he">לא להציג אירועי לוח שנה מרובי ימים כלליים בלוחות הזמנים היומיים</li>
           <li xml:lang="pt-BR">Não exibe eventos genéricos de vários dias no calendário diário</li>
+          <li xml:lang="ru">Исправлен вывод общие многодневных событий календаря в ежедневных расписаниях;</li>
           <li>Fix translation configurations</li>
+          <li xml:lang="ar">إصلاح ضبط الترجمات</li>
           <li xml:lang="ca">Corregeix les configuracions de traducció</li>
           <li xml:lang="ca-valencia">Corregix les configuracions de traducció</li>
           <li xml:lang="he">תוקנו הגדרות תרגומים</li>
           <li xml:lang="pt-BR">Correção das configurações de tradução</li>
+          <li xml:lang="ru">Исправлены настройки перевода;</li>
         </ul>
       </description>
     </release>
     <release version="1.0" date="2021-01-25">
       <description>
         <p>Kongress first official release</p>
+        <p xml:lang="ar">الإصدار الرسمي الأول لكونغرس</p>
         <p xml:lang="ca">Primera versió oficial del Kongress</p>
         <p xml:lang="ca-valencia">Primera versió oficial de Kongress</p>
         <p xml:lang="he">המהדורה הרשמית הראשונה של Kongress</p>
         <p xml:lang="pt-BR">Primeiro lançamento oficial do Kongress</p>
+        <p xml:lang="ru">Выпущена первая официальная версия Kongress</p>
         <ul>
           <li>Display the schedule of a collection of conferences</li>
+          <li xml:lang="ar">عرض جدول لمجموعة من المؤتمرات</li>
           <li xml:lang="ca">Mostra la programació d'una col·lecció de conferències</li>
           <li xml:lang="ca-valencia">Mostra la programació d'una col·lecció de conferències</li>
           <li xml:lang="he">הצגת לוח הזמנים לאוסף של כנסים</li>
           <li xml:lang="pt-BR">Exibir a programação de um conjunto de conferências</li>
+          <li xml:lang="ru">Вывод расписания для набора конференций;</li>
           <li>Show the schedule of the talks by conference day</li>
+          <li xml:lang="ar">إظهار جدول المحادثات حسب يوم المؤتمر</li>
           <li xml:lang="ca">Mostra l'horari de les xerrades per jornada de conferència</li>
           <li xml:lang="ca-valencia">Mostra l'horari de les xerrades per jornada de conferència</li>
           <li xml:lang="he">הצגת לוח הזמנים של ההרצאות לפי יום הכנס</li>
           <li xml:lang="pt-BR">Exibir a programação das palestras por dia da conferência</li>
+          <li xml:lang="ru">Просмотр расписание докладов по дням конференции;</li>
           <li>Manage a list of favorite talks</li>
+          <li xml:lang="ar">إدارة قائمة بالمحادثات المفضلة</li>
           <li xml:lang="ca">Gestiona una llista de xerrades preferides</li>
           <li xml:lang="ca-valencia">Gestiona una llista de xerrades preferides</li>
           <li xml:lang="he">ניהול רשימה של הרצאות מועדפות</li>
           <li xml:lang="pt-BR">Gerenciar uma lista de palestras favoritas</li>
+          <li xml:lang="ru">Управление списком избранных докладов;</li>
           <li>Notify the user before talk starts (only on KDE Plasma)</li>
+          <li xml:lang="ar">تنبيه المستخدم قبل بدء المحادثة (على بلازما كيدي فقط)</li>
           <li xml:lang="ca">Notifica a l'usuari abans d'iniciar la conversa (només en el Plasma de KDE)</li>
           <li xml:lang="ca-valencia">Notifica a l'usuari abans d'iniciar la conversa (només en Plasma de KDE)</li>
           <li xml:lang="he">להודיע למשתמש לפני שהרצאה מתחילה (בפלזמה מבית KDE בלבד)</li>
           <li xml:lang="pt-BR">Notificar o usuário antes do início da conversa (somente no KDE Plasma)</li>
+          <li xml:lang="ru">Уведомление пользователя перед началом доклада (только в KDE Plasma);</li>
         </ul>
       </description>
     </release>
