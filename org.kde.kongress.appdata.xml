@@ -459,7 +459,7 @@
           <li xml:lang="pt-BR">Evita que o kongressac trave</li>
           <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li xml:lang="sl">Prepreči, da bi se kongressac sesul</li>
-          <li>Fix grouping of talks into conference dayss</li>
+          <li>Fix grouping of talks into conference days</li>
           <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
           <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
@@ -477,7 +477,7 @@
           <li xml:lang="pt-BR">Correção de horários agendados do alarme</li>
           <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li xml:lang="sl">Popravi razpored alarmov</li>
-          <li>Prevent duplicate conference entries from being displayeds</li>
+          <li>Prevent duplicate conference entries from being displayed</li>
           <li xml:lang="ar">منع ظهور مدخلات المؤتمر المكررة</li>
           <li xml:lang="ca">Evita que es mostrin entrades duplicades de conferències</li>
           <li xml:lang="ca-valencia">Evita que es mostren entrades duplicades de conferències</li>
