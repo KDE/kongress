@@ -261,6 +261,7 @@
           <li xml:lang="pt-BR">Gerenciamento adequado de versões no Android</li>
           <li xml:lang="ru">Правильная обработка версий на Android;</li>
           <li xml:lang="sl">Pravilno ravnanje z različicami v sistemu Android</li>
+          <li xml:lang="uk">Належна обробка версій в Android</li>
         </ul>
       </description>
     </release>
@@ -281,6 +282,7 @@
           <li xml:lang="pt-BR">Certifica-se de que a mensagem de exportação seja sempre exibida</li>
           <li xml:lang="ru">Проверка, что сообщение об экспорте всегда отображается;</li>
           <li xml:lang="sl">Zagotovi, da je sporočilo o izvozu vedno prikazano</li>
+          <li xml:lang="uk">Забезпечено безумовний показ повідомлення щодо експортування</li>
         </ul>
       </description>
     </release>
@@ -305,6 +307,7 @@
         <p xml:lang="pt-BR">Melhorias e traduções</p>
         <p xml:lang="ru">Улучшения и переводы</p>
         <p xml:lang="sl">Izboljšave in prevodi</p>
+        <p xml:lang="uk">Удосконалення і переклади</p>
         <ul>
           <li>Streamline Android build</li>
           <li xml:lang="ar">تحسين عملية بناء أندرويد</li>
@@ -315,6 +318,7 @@
           <li xml:lang="pt-BR">Compilação Streamline para Android</li>
           <li xml:lang="ru">Упрощение сборки для Android;</li>
           <li xml:lang="sl">Poenostavljena gradnja Androida</li>
+          <li xml:lang="uk">Спрощено збирання для Android</li>
           <li>Update translations</li>
           <li xml:lang="ar">تحديث الترجمات</li>
           <li xml:lang="ca">Actualitza les traduccions</li>
@@ -325,6 +329,7 @@
           <li xml:lang="pt-BR">Atualização de traduções</li>
           <li xml:lang="ru">Обновлены переводы;</li>
           <li xml:lang="sl">Posodobi prevode</li>
+          <li xml:lang="uk">Оновлено переклади</li>
         </ul>
       </description>
       <url>https://www.plasma-mobile.org/2021/06/10/plasma-mobile-update-june/</url>
@@ -355,6 +360,7 @@
           <li xml:lang="pt-BR">Adicionado url de bugtracking</li>
           <li xml:lang="ru">Добавлен адрес системы отслеживания ошибок;</li>
           <li xml:lang="sl">Dodaj URL za sledenje napakam</li>
+          <li xml:lang="uk">Додано адресу для повідомлень щодо вад</li>
           <li>Simplify flatpak manifest</li>
           <li xml:lang="ar">تبسيط بيان فلات باك</li>
           <li xml:lang="ca">Simplifica el manifest de flatpak</li>
@@ -460,14 +466,6 @@
           <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li xml:lang="sl">Prepreči, da bi se kongressac sesul</li>
           <li>Fix grouping of talks into conference days</li>
-          <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
-          <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
-          <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
-          <li xml:lang="he">תוקן קיבוץ של הרצאות לימי כנס</li>
-          <li xml:lang="ka">გასწორდა საუბრების დაჯგუფება კონფერენციის დღეებში</li>
-          <li xml:lang="pt-BR">Correção do agrupamento de tarefas por datas de conferência</li>
-          <li xml:lang="ru">Исправлена группировка докладов по дням конференции;</li>
-          <li xml:lang="sl">Popravi združevanje predavanj v datume konferenc</li>
           <li>Fix alarm schedule times</li>
           <li xml:lang="ar">إصلاح أوقات جدول التنبيه</li>
           <li xml:lang="ca">Corregeix les hores de planificació d'alarma</li>
@@ -478,14 +476,6 @@
           <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li xml:lang="sl">Popravi razpored alarmov</li>
           <li>Prevent duplicate conference entries from being displayed</li>
-          <li xml:lang="ar">منع ظهور مدخلات المؤتمر المكررة</li>
-          <li xml:lang="ca">Evita que es mostrin entrades duplicades de conferències</li>
-          <li xml:lang="ca-valencia">Evita que es mostren entrades duplicades de conferències</li>
-          <li xml:lang="he">למנוע הופעה של רשומות כנסים כפולות</li>
-          <li xml:lang="ka">გამეორებული კონფერენციის ელემენტების არჩვენება</li>
-          <li xml:lang="pt-BR">Impede a exibição de entradas duplicadas na conferência</li>
-          <li xml:lang="ru">Предотвращено отображение повторяющихся записей конференций;</li>
-          <li xml:lang="sl">Prepreči prikaz podvojenih vnosov v konferenco</li>
           <li>Do not display generic, multi-day calendar events on the daily schedules</li>
           <li xml:lang="ar">عدم عرض أحداث التقويم العامة المتعددة الأيام في الجداول اليومية</li>
           <li xml:lang="ca">No mostra els esdeveniments genèrics de calendari multidia a les planificacions diàries</li>
