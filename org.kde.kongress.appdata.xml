@@ -371,6 +371,7 @@
           <li xml:lang="pt-BR">Simplificação do manifesto do Flatpak</li>
           <li xml:lang="ru">Упрощён манифест Flatpak;</li>
           <li xml:lang="sl">Poenostavi manifest flatpaka</li>
+          <li xml:lang="uk">Спрощено маніфест flatpak</li>
           <li>Streamline favorites view</li>
           <li xml:lang="ar">تحسين عرض المفضلة</li>
           <li xml:lang="ca">Simplifica la vista dels favorits</li>
@@ -380,6 +381,7 @@
           <li xml:lang="pt-BR">Visualização de Streamline favoritos</li>
           <li xml:lang="ru">Упрощено представление избранного;</li>
           <li xml:lang="sl">Poenostavi ogled priljubljenih</li>
+          <li xml:lang="uk">Спрощено панель перегляду улюблених записів</li>
           <li>Simplify conference selection</li>
           <li xml:lang="ar">تبسيط اختيار المؤتمر</li>
           <li xml:lang="ca">Simplifica la selecció de conferències</li>
@@ -390,6 +392,7 @@
           <li xml:lang="pt-BR">Simplificação de seleção de conferência</li>
           <li xml:lang="ru">Упрощён выбор конференций;</li>
           <li xml:lang="sl">Poenostavi izbiro konference</li>
+          <li xml:lang="uk">Спрощено вибір конференції</li>
           <li>Add placeholder icon to the Favorites page</li>
           <li xml:lang="ar">إضافة أيقونة نائبة إلى صفحة المفضلة</li>
           <li xml:lang="ca">Afegeix una icona d'espai reservat a la pàgina dels favorits</li>
@@ -399,6 +402,7 @@
           <li xml:lang="pt-BR">Adição de ícone de espaço reservado à página de Favoritos</li>
           <li xml:lang="ru">Добавлен значок-заполнитель на страницу «Избранное»;</li>
           <li xml:lang="sl">Dodaj ikono označbe mesta na stran s priljubljenimi</li>
+          <li xml:lang="uk">Додано піктограму-замінник на сторінку улюблених записів</li>
           <li>Offer favorites export</li>
           <li xml:lang="ar">توفير ميزة تصدير المفضلة</li>
           <li xml:lang="ca">Ofereix l'exportació dels favorits</li>
@@ -409,6 +413,7 @@
           <li xml:lang="pt-BR">Oferecer exportação de favoritos</li>
           <li xml:lang="ru">Предлагать экспорт избранного;</li>
           <li xml:lang="sl">Nudi izvoz priljubljenih</li>
+          <li xml:lang="uk">Реалізовано експортування улюблених записів</li>
           <li>Add generic name</li>
           <li xml:lang="ar">إضافة اسم عام</li>
           <li xml:lang="ca">Afegeix un nom genèric</li>
@@ -419,6 +424,7 @@
           <li xml:lang="pt-BR">Adição de nome genérico</li>
           <li xml:lang="ru">Добавлено общее имя;</li>
           <li xml:lang="sl">Doda generično ime</li>
+          <li xml:lang="uk">Додано загальну назву</li>
           <li>Remove cmake functions not needed</li>
           <li xml:lang="ar">إزالة دوال cmake غير الضرورية</li>
           <li xml:lang="ca">Elimina les funcions no necessàries del CMake</li>
@@ -429,6 +435,7 @@
           <li xml:lang="pt-BR">Remoção de funções do functions desnecessárias</li>
           <li xml:lang="ru">Удалены ненужные функции cmake;</li>
           <li xml:lang="sl">Odstrani nepotrebne funkcije cmake</li>
+          <li xml:lang="uk">Вилучено непотрібні функції cmake</li>
         </ul>
       </description>
     </release>
@@ -456,6 +463,7 @@
           <li xml:lang="pt-BR">Correção do problema na exibição do tempo de conversação nas notificações</li>
           <li xml:lang="ru">Исправлено отображение времени выступления в уведомлениях;</li>
           <li xml:lang="sl">Popravljen prikaz časa predavanja v obvestilih</li>
+          <li xml:lang="uk">Виправлено показ часу доповіді у сповіщеннях</li>
           <li>Prevent kongressac from crashing</li>
           <li xml:lang="ar">منع انهيار kongressac</li>
           <li xml:lang="ca">Evita que el «kongressac» falli</li>
@@ -465,6 +473,7 @@
           <li xml:lang="pt-BR">Evita que o kongressac trave</li>
           <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li xml:lang="sl">Prepreči, da bi se kongressac sesul</li>
+          <li xml:lang="uk">Реалізовано запобігання аваріям kongressac</li>
           <li>Fix grouping of talks into conference days</li>
           <li>Fix alarm schedule times</li>
           <li xml:lang="ar">إصلاح أوقات جدول التنبيه</li>
@@ -475,6 +484,7 @@
           <li xml:lang="pt-BR">Correção de horários agendados do alarme</li>
           <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li xml:lang="sl">Popravi razpored alarmov</li>
+          <li xml:lang="uk">Виправлено моменти часу планування нагадувань</li>
           <li>Prevent duplicate conference entries from being displayed</li>
           <li>Do not display generic, multi-day calendar events on the daily schedules</li>
           <li xml:lang="ar">عدم عرض أحداث التقويم العامة المتعددة الأيام في الجداول اليومية</li>
@@ -485,6 +495,7 @@
           <li xml:lang="pt-BR">Não exibe eventos genéricos de vários dias no calendário diário</li>
           <li xml:lang="ru">Исправлен вывод общие многодневных событий календаря в ежедневных расписаниях;</li>
           <li xml:lang="sl">V dnevnih urnikih ne prikazuj generičnih, večdnevnih koledarskih dogodkov</li>
+          <li xml:lang="uk">Усунено показ загальних, багатоденних подій календаря у щоденних розкладах</li>
           <li>Fix translation configurations</li>
           <li xml:lang="ar">إصلاح ضبط الترجمات</li>
           <li xml:lang="ca">Corregeix les configuracions de traducció</li>
@@ -494,6 +505,7 @@
           <li xml:lang="pt-BR">Correção das configurações de tradução</li>
           <li xml:lang="ru">Исправлены настройки перевода;</li>
           <li xml:lang="sl">Popravi konfiguracije prevajanja</li>
+          <li xml:lang="uk">Виправлення конфігурацій перекладів</li>
         </ul>
       </description>
     </release>
@@ -508,6 +520,7 @@
         <p xml:lang="pt-BR">Primeiro lançamento oficial do Kongress</p>
         <p xml:lang="ru">Выпущена первая официальная версия Kongress</p>
         <p xml:lang="sl">Prva uradna izdaja Kongressa</p>
+        <p xml:lang="uk">Перший офіційний випуск Kongress</p>
         <ul>
           <li>Display the schedule of a collection of conferences</li>
           <li xml:lang="ar">عرض جدول لمجموعة من المؤتمرات</li>
@@ -518,6 +531,7 @@
           <li xml:lang="pt-BR">Exibir a programação de um conjunto de conferências</li>
           <li xml:lang="ru">Вывод расписания для набора конференций;</li>
           <li xml:lang="sl">Prikaži urnik zbirke konferenc</li>
+          <li xml:lang="uk">Показ розкладу збірки конференцій</li>
           <li>Show the schedule of the talks by conference day</li>
           <li xml:lang="ar">إظهار جدول المحادثات حسب يوم المؤتمر</li>
           <li xml:lang="ca">Mostra l'horari de les xerrades per jornada de conferència</li>
@@ -527,6 +541,7 @@
           <li xml:lang="pt-BR">Exibir a programação das palestras por dia da conferência</li>
           <li xml:lang="ru">Просмотр расписание докладов по дням конференции;</li>
           <li xml:lang="sl">Prikaži urnik predavanj po dnevih konference</li>
+          <li xml:lang="uk">Показ розкладу доповідей за днями конференцій</li>
           <li>Manage a list of favorite talks</li>
           <li xml:lang="ar">إدارة قائمة بالمحادثات المفضلة</li>
           <li xml:lang="ca">Gestiona una llista de xerrades preferides</li>
@@ -536,6 +551,7 @@
           <li xml:lang="pt-BR">Gerenciar uma lista de palestras favoritas</li>
           <li xml:lang="ru">Управление списком избранных докладов;</li>
           <li xml:lang="sl">Upravljaj seznam priljubljenih predavanj</li>
+          <li xml:lang="uk">Керування списком улюблених доповідей</li>
           <li>Notify the user before talk starts (only on KDE Plasma)</li>
           <li xml:lang="ar">تنبيه المستخدم قبل بدء المحادثة (على بلازما كيدي فقط)</li>
           <li xml:lang="ca">Notifica a l'usuari abans d'iniciar la conversa (només en el Plasma de KDE)</li>
@@ -545,6 +561,7 @@
           <li xml:lang="pt-BR">Notificar o usuário antes do início da conversa (somente no KDE Plasma)</li>
           <li xml:lang="ru">Уведомление пользователя перед началом доклада (только в KDE Plasma);</li>
           <li xml:lang="sl">Obvesti uporabnika pred začetkom predavanja (samo v KDE Plasmi)</li>
+          <li xml:lang="uk">Сповіщення користувача до початку доповіді (лише у Плазмі KDE)</li>
         </ul>
       </description>
     </release>
