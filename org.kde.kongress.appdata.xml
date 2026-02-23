@@ -507,12 +507,14 @@
           <li xml:lang="tr">Prevent kongressac from crashing</li>
           <li xml:lang="uk">Реалізовано запобігання аваріям kongressac</li>
           <li>Fix grouping of talks into conference days</li>
+          <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
           <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="he">תוקן קיבוץ של הרצאות לימי כנס</li>
           <li xml:lang="ia">Corrige regruppar de discursos in dies de conferentias</li>
           <li xml:lang="ka">გასწორდა საუბრების დაჯგუფება კონფერენციის დღეებში</li>
           <li xml:lang="pt-BR">Correção do agrupamento de tarefas por dias de conferência</li>
+          <li xml:lang="ru">Исправлено группирование докладов по дням конференции;</li>
           <li xml:lang="sl">Popravi združevanje predavanj v dneve konferenc</li>
           <li xml:lang="tr">Fix grouping of talks into conference days</li>
           <li xml:lang="uk">Виправлено групування доповідей за днями конференції</li>
@@ -529,12 +531,14 @@
           <li xml:lang="tr">Fix alarm schedule times</li>
           <li xml:lang="uk">Виправлено моменти часу планування нагадувань</li>
           <li>Prevent duplicate conference entries from being displayed</li>
+          <li xml:lang="ar">منع ظهور مدخلات المؤتمر المكررة</li>
           <li xml:lang="ca">Evita que es mostrin entrades duplicades de conferències</li>
           <li xml:lang="ca-valencia">Evita que es mostren entrades duplicades de conferències</li>
           <li xml:lang="he">למנוע הופעה של רשומות כנסים כפולות</li>
           <li xml:lang="ia">Preveni que entratas de conferentia duplicate es monstrate</li>
           <li xml:lang="ka">გამეორებული კონფერენციის ელემენტების არჩვენება</li>
           <li xml:lang="pt-BR">Impede a exibição de entradas duplicadas na conferência</li>
+          <li xml:lang="ru">Предотвращён вывод повторяющихся записей конференций;</li>
           <li xml:lang="sl">Prepreči prikaz podvojenih vnosov v konferenci</li>
           <li xml:lang="tr">Prevent duplicate conference entries from being displayed</li>
           <li xml:lang="uk">Реалізовано запобігання показу дубльованих записів конференцій</li>
