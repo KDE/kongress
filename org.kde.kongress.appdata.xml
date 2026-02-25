@@ -256,6 +256,7 @@
           <li xml:lang="ca">Gestió correcta de versions a l'Android</li>
           <li xml:lang="ca-valencia">Gestió correcta de versions a Android</li>
           <li xml:lang="es">Manejo correcto de la versión en Android</li>
+          <li xml:lang="fr">Gestion correcte des versions sous Android</li>
           <li xml:lang="he">טיפול ראוי בגרסאות ב־Android</li>
           <li xml:lang="ia">Proprie manear de version sur Android</li>
           <li xml:lang="it">Gestione corretta delle versioni su Android</li>
@@ -280,6 +281,7 @@
           <li xml:lang="ca">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="ca-valencia">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="es">Asegurar que el mensaje de exportación se muestra siempre</li>
+          <li xml:lang="fr">Veuillez-vous assurer que le message d'exportation est toujours affiché</li>
           <li xml:lang="he">וידוא שהודעת הייצוא מופיעה תמיד</li>
           <li xml:lang="ia">Assecura que message a exportar es sempre monstrate</li>
           <li xml:lang="it">Assicura che il messaggio di esportazione venga sempre visualizzato</li>
@@ -308,6 +310,7 @@
         <p xml:lang="ca">Millores i traduccions</p>
         <p xml:lang="ca-valencia">Millores i traduccions</p>
         <p xml:lang="es">Mejoras y traducciones</p>
+        <p xml:lang="fr">Améliorations et traductions</p>
         <p xml:lang="he">שיפורים ותרגומים</p>
         <p xml:lang="ia">Melioramentos e traductiones</p>
         <p xml:lang="it">Miglioramenti e traduzioni</p>
@@ -322,6 +325,7 @@
           <li xml:lang="ar">تحسين عملية بناء أندرويد</li>
           <li xml:lang="ca">S'ha simplificat la construcció a l'Android</li>
           <li xml:lang="ca-valencia">S'ha simplificat la construcció a Android</li>
+          <li xml:lang="fr">Rationaliser la compilation sous Android</li>
           <li xml:lang="he">הבנייה ל־Android עוברת חלק יותר</li>
           <li xml:lang="ia">Construction de Streamline Android</li>
           <li xml:lang="it">Semplifica la compilazione su Android</li>
@@ -336,6 +340,7 @@
           <li xml:lang="ca">Actualitza les traduccions</li>
           <li xml:lang="ca-valencia">Actualitza les traduccions</li>
           <li xml:lang="es">Actualización de las traducciones</li>
+          <li xml:lang="fr">Mettre à jour les traductions</li>
           <li xml:lang="he">עדכוני תרגומים</li>
           <li xml:lang="ia">Actualisa traductiones</li>
           <li xml:lang="it">Traduzioni aggiornate</li>
@@ -356,6 +361,7 @@
         <p xml:lang="ca">Versió 21.05 del Kongress</p>
         <p xml:lang="ca-valencia">Versió 21.05 de Kongress</p>
         <p xml:lang="es">Publicación de Kongress 21.05</p>
+        <p xml:lang="fr">Publication de Kongress 21.05</p>
         <p xml:lang="he">מהדורה 21.05 של קונגרס</p>
         <p xml:lang="ia">Kongress version 21.05</p>
         <p xml:lang="it">Rilascio di Kongress 21.05</p>
@@ -372,6 +378,7 @@
           <li xml:lang="ca">Afegeix un URL de seguiment d'errors</li>
           <li xml:lang="ca-valencia">Afig un URL de seguiment d'errors</li>
           <li xml:lang="es">Se ha añadido URL de seguimiento de fallos</li>
+          <li xml:lang="fr">Ajouter l'URL de suivi des bogues</li>
           <li xml:lang="he">נוספה כתובת מעקב תקלות</li>
           <li xml:lang="ia">Adde url de traciamento de faltas (bugtracking)</li>
           <li xml:lang="it">Aggiunge un URL per il tracciamento dei bug</li>
@@ -386,6 +393,7 @@
           <li xml:lang="ca">Simplifica el manifest de flatpak</li>
           <li xml:lang="ca-valencia">Simplifica el manifest de flatpak</li>
           <li xml:lang="es">Simplificación del manifiesto de flatpak</li>
+          <li xml:lang="fr">Simplifier le manifeste de FlatPak</li>
           <li xml:lang="he">המצהר (manifest) של flatpak עבר פישוט</li>
           <li xml:lang="ia">Simplifica manifesto de flatpak</li>
           <li xml:lang="it">Semplifica il manifesto flatpak</li>
@@ -399,6 +407,7 @@
           <li xml:lang="ar">تحسين عرض المفضلة</li>
           <li xml:lang="ca">Simplifica la vista dels favorits</li>
           <li xml:lang="ca-valencia">Simplifica la vista dels favorits</li>
+          <li xml:lang="fr">Rationaliser l’affichage des favoris</li>
           <li xml:lang="he">תצוגת המועדפים עברה כוונון לצורכי המשתמשים</li>
           <li xml:lang="ia">Vide favoritos de Streamline</li>
           <li xml:lang="it">Semplifica la visualizzazione dei preferiti</li>
@@ -413,6 +422,7 @@
           <li xml:lang="ca">Simplifica la selecció de conferències</li>
           <li xml:lang="ca-valencia">Simplifica la selecció de conferències</li>
           <li xml:lang="es">Simplificación de la selección de conferencias</li>
+          <li xml:lang="fr">Simplifier la sélection des conférences</li>
           <li xml:lang="he">פישוט בחירת כנס</li>
           <li xml:lang="ia">Simplifica selection de conferentia</li>
           <li xml:lang="it">Semplifica la selezione della conferenza</li>
@@ -426,6 +436,7 @@
           <li xml:lang="ar">إضافة أيقونة نائبة إلى صفحة المفضلة</li>
           <li xml:lang="ca">Afegeix una icona d'espai reservat a la pàgina dels favorits</li>
           <li xml:lang="ca-valencia">Afig una icona d'espai reservat a la pàgina dels favorits</li>
+          <li xml:lang="fr">Ajouter une icône de remplacement à la page des signets</li>
           <li xml:lang="he">הוספת סמל ממלא מקום לעמוד המועדפים</li>
           <li xml:lang="ia">Adde icone de substituto alpagina de Favoritos</li>
           <li xml:lang="it">Aggiunge un'icona segnaposto alla pagina Preferiti</li>
@@ -440,6 +451,7 @@
           <li xml:lang="ca">Ofereix l'exportació dels favorits</li>
           <li xml:lang="ca-valencia">Oferix l'exportació dels favorits</li>
           <li xml:lang="es">Ofrecer exportación de favoritos</li>
+          <li xml:lang="fr">Exportation des favoris de l'offre</li>
           <li xml:lang="he">הצעת ייצוא מועדפים</li>
           <li xml:lang="ia">Offere exportation de favoritos</li>
           <li xml:lang="it">Offre l'esportazione dei preferiti</li>
@@ -454,6 +466,7 @@
           <li xml:lang="ca">Afegeix un nom genèric</li>
           <li xml:lang="ca-valencia">Afig un nom genèric</li>
           <li xml:lang="es">Añadir un nombre genérico</li>
+          <li xml:lang="fr">Ajouter un nom générique</li>
           <li xml:lang="he">נוסף שם כללי</li>
           <li xml:lang="ia">Adde nomine generic</li>
           <li xml:lang="it">Aggiunge un nome generico</li>
@@ -468,6 +481,7 @@
           <li xml:lang="ca">Elimina les funcions no necessàries del CMake</li>
           <li xml:lang="ca-valencia">Elimina les funcions no necessàries de CMake</li>
           <li xml:lang="es">Eliminar las funciones de cmake no necesarias</li>
+          <li xml:lang="fr">Supprimer les fonctions « cmake » inutiles</li>
           <li xml:lang="he">הוסרו פונקציות cmake בלתי נחוצות</li>
           <li xml:lang="ia">Remove functiones de cmake non necessari</li>
           <li xml:lang="it">Rimuove le funzioni cmake non necessarie</li>
@@ -486,6 +500,7 @@
         <p xml:lang="ar">إصدار إصلاح علل كونغرس</p>
         <p xml:lang="ca">Versió de correcció d'errors del Kongress</p>
         <p xml:lang="ca-valencia">Versió d'esmena d'errors de Kongress</p>
+        <p xml:lang="fr">Publication d'une version corrective de Kongress </p>
         <p xml:lang="he">מהדורת תיקון תקלות של Kongress</p>
         <p xml:lang="ia">Kongress version de correctiones de falta</p>
         <p xml:lang="it">Rilascio di correzione bug di Kongress</p>
@@ -501,6 +516,7 @@
           <li xml:lang="ar">إصلاح عرض وقت المحادثة في التنبيهات</li>
           <li xml:lang="ca">Corregeix la visualització del temps de la xerrada a les notificacions</li>
           <li xml:lang="ca-valencia">Corregix la visualització del temps de la xerrada a les notificacions</li>
+          <li xml:lang="fr">Correction de l'affichage du temps de la conférence dans les notifications</li>
           <li xml:lang="he">תוקנה תצוגת זמן ההרצאה בהתראות</li>
           <li xml:lang="ia">Corrige le monstrar de tempore de discurso sur  notificationes</li>
           <li xml:lang="it">Corregge la visualizzazione del tempo di conversazione nelle notifiche</li>
@@ -514,6 +530,7 @@
           <li xml:lang="ar">منع انهيار kongressac</li>
           <li xml:lang="ca">Evita que el «kongressac» falli</li>
           <li xml:lang="ca-valencia">Evita que el «kongressac» falle</li>
+          <li xml:lang="fr">Empêcher le module « kongressac » de se planter</li>
           <li xml:lang="he">נמנעת קריסה של kongressac</li>
           <li xml:lang="ia">Preveni kongressac ab fracassar</li>
           <li xml:lang="it">Impedisce l'arresto anomale di kongressac</li>
@@ -527,6 +544,7 @@
           <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
           <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
           <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
+          <li xml:lang="fr">Correction du regroupement des conférences par jour de conférence</li>
           <li xml:lang="he">תוקן קיבוץ של הרצאות לימי כנס</li>
           <li xml:lang="ia">Corrige regruppar de discursos in dies de conferentias</li>
           <li xml:lang="it">Corregge il raggruppamento degli interventi in giorni di conferenza</li>
@@ -540,6 +558,7 @@
           <li xml:lang="ar">إصلاح أوقات جدول التنبيه</li>
           <li xml:lang="ca">Corregeix les hores de planificació d'alarma</li>
           <li xml:lang="ca-valencia">Corregix les hores de planificació d'alarma</li>
+          <li xml:lang="fr">Correction des horaires programmés d'alarmes</li>
           <li xml:lang="he">תוקנו זמני לוח זמנים של התראות</li>
           <li xml:lang="ia">Corrige tempores de planification de alarma</li>
           <li xml:lang="it">Corregge gli orari di programmazione degli allarmi</li>
@@ -553,6 +572,7 @@
           <li xml:lang="ar">منع ظهور مدخلات المؤتمر المكررة</li>
           <li xml:lang="ca">Evita que es mostrin entrades duplicades de conferències</li>
           <li xml:lang="ca-valencia">Evita que es mostren entrades duplicades de conferències</li>
+          <li xml:lang="fr">Empêcher l'affichage des doublons d'entrées de conférence</li>
           <li xml:lang="he">למנוע הופעה של רשומות כנסים כפולות</li>
           <li xml:lang="ia">Preveni que entratas de conferentia duplicate es monstrate</li>
           <li xml:lang="it">Impedisce la visualizzazione di voci di conferenza duplicate</li>
@@ -566,6 +586,7 @@
           <li xml:lang="ar">عدم عرض أحداث التقويم العامة المتعددة الأيام في الجداول اليومية</li>
           <li xml:lang="ca">No mostra els esdeveniments genèrics de calendari multidia a les planificacions diàries</li>
           <li xml:lang="ca-valencia">No mostra els esdeveniments genèrics de calendari multidia a les planificacions diàries</li>
+          <li xml:lang="fr">Ne pas afficher les évènements d'agenda génériques et sur plusieurs jours dans les emplois du temps quotidiens</li>
           <li xml:lang="he">לא להציג אירועי לוח שנה מרובי ימים כלליים בלוחות הזמנים היומיים</li>
           <li xml:lang="ia">Non monstra eventos generic de calendario de multe dies sur le planificationes quotidian</li>
           <li xml:lang="it">Non visualizza eventi generici del calendario multi-giorno nelle pianificazioni giornaliere</li>
@@ -579,6 +600,7 @@
           <li xml:lang="ar">إصلاح ضبط الترجمات</li>
           <li xml:lang="ca">Corregeix les configuracions de traducció</li>
           <li xml:lang="ca-valencia">Corregix les configuracions de traducció</li>
+          <li xml:lang="fr">Corriger les configurations de traductions</li>
           <li xml:lang="he">תוקנו הגדרות תרגומים</li>
           <li xml:lang="ia">Corrige confiigurationes de traduction</li>
           <li xml:lang="it">Corregge le configurazioni di traduzione</li>
@@ -597,6 +619,7 @@
         <p xml:lang="ar">الإصدار الرسمي الأول لكونغرس</p>
         <p xml:lang="ca">Primera versió oficial del Kongress</p>
         <p xml:lang="ca-valencia">Primera versió oficial de Kongress</p>
+        <p xml:lang="fr">Première publication officielle de Kongress</p>
         <p xml:lang="he">המהדורה הרשמית הראשונה של Kongress</p>
         <p xml:lang="ia">Prime version official de Kongress</p>
         <p xml:lang="it">Prima uscita ufficiale di Kongress</p>
@@ -611,6 +634,7 @@
           <li xml:lang="ar">عرض جدول لمجموعة من المؤتمرات</li>
           <li xml:lang="ca">Mostra la programació d'una col·lecció de conferències</li>
           <li xml:lang="ca-valencia">Mostra la programació d'una col·lecció de conferències</li>
+          <li xml:lang="fr">Afficher le programme d'une série de conférences</li>
           <li xml:lang="he">הצגת לוח הזמנים לאוסף של כנסים</li>
           <li xml:lang="ia">Monstra le planification de un collection de conferentias</li>
           <li xml:lang="it">Visualizza il programma di una raccolta di conferenze</li>
@@ -624,6 +648,7 @@
           <li xml:lang="ar">إظهار جدول المحادثات حسب يوم المؤتمر</li>
           <li xml:lang="ca">Mostra l'horari de les xerrades per jornada de conferència</li>
           <li xml:lang="ca-valencia">Mostra l'horari de les xerrades per jornada de conferència</li>
+          <li xml:lang="fr">Afficher le programme des conférences par jour de conférence</li>
           <li xml:lang="he">הצגת לוח הזמנים של ההרצאות לפי יום הכנס</li>
           <li xml:lang="ia">Monstra le planification del discursos per die de conferentia</li>
           <li xml:lang="it">Mostra il programma degli interventi per giorno della conferenza</li>
@@ -637,6 +662,7 @@
           <li xml:lang="ar">إدارة قائمة بالمحادثات المفضلة</li>
           <li xml:lang="ca">Gestiona una llista de xerrades preferides</li>
           <li xml:lang="ca-valencia">Gestiona una llista de xerrades preferides</li>
+          <li xml:lang="fr">Gérer une liste de conférences favorites</li>
           <li xml:lang="he">ניהול רשימה של הרצאות מועדפות</li>
           <li xml:lang="ia">Gere un lista de discursos favorite</li>
           <li xml:lang="it">Gestisce un elenco di discussioni preferite</li>
@@ -650,6 +676,7 @@
           <li xml:lang="ar">تنبيه المستخدم قبل بدء المحادثة (على بلازما كيدي فقط)</li>
           <li xml:lang="ca">Notifica a l'usuari abans d'iniciar la conversa (només en el Plasma de KDE)</li>
           <li xml:lang="ca-valencia">Notifica a l'usuari abans d'iniciar la conversa (només en Plasma de KDE)</li>
+          <li xml:lang="fr">Notifier l'utilisateur avant les débuts de conversation (Uniquement sur KDE Plasma)</li>
           <li xml:lang="he">להודיע למשתמש לפני שהרצאה מתחילה (בפלזמה מבית KDE בלבד)</li>
           <li xml:lang="ia">Notifica le usator ante que le discurso starta (solmente sur KDE Plasma)</li>
           <li xml:lang="it">Avvisa l'utente prima che inizi la discussione (solo su KDE Plasma)</li>
