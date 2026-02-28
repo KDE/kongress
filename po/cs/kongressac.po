@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 # Vit Pelcak <vit@pelcak.org>, 2020, 2021.
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:43+0000\n"
-"PO-Revision-Date: 2021-03-25 13:42+0100\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-02 17:00+0100\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +31,7 @@ msgstr "vit@pelcak.org"
 #: kongressacmain.cpp:21 kongressacmain.cpp:23
 #, kde-format
 msgid "Kongress Alarm Check Daemon"
-msgstr ""
+msgstr "Démon kontroly upomínek Kongress"
 
 #: kongressacmain.cpp:25
 #, kde-format
