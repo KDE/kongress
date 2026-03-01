@@ -86,6 +86,7 @@
     <p xml:lang="ar">كونغرس هو تطبيق مرافق للمؤتمرات أُنشئ بواسطة كيدي</p>
     <p xml:lang="ca">El Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
     <p xml:lang="ca-valencia">Kongress és una aplicació auxiliar per als congressos fets per KDE</p>
+    <p xml:lang="cs">Kongress je doprovodná aplikace pro konference vyvinutá společností KDE</p>
     <p xml:lang="da">Kongress er et ledsagerprogram til konferencer fra KDE</p>
     <p xml:lang="de">Kongress ist eine Begleitanwendung für Konferenzen von KDE</p>
     <p xml:lang="el">Το Kongress είναι μια εφαρμογή συνοδείας για συνέδρια που κατασκευάστηκε από το KDE</p>
@@ -125,6 +126,7 @@
       <caption xml:lang="ar">كونغرس على المحمول</caption>
       <caption xml:lang="ca">Kongress al mòbil</caption>
       <caption xml:lang="ca-valencia">Kongress en el mòbil</caption>
+      <caption xml:lang="cs">Mobilní Kongress</caption>
       <caption xml:lang="da">Kongress på mobil</caption>
       <caption xml:lang="de">Kongress auf einem Mobilgerät</caption>
       <caption xml:lang="el">Το Kongress στο κινητό</caption>
