@@ -268,7 +268,7 @@
           <li xml:lang="pt-BR">Gerenciamento adequado de versões no Android</li>
           <li xml:lang="ru">Правильная обработка версий на Android;</li>
           <li xml:lang="sl">Pravilno ravnanje z različicami v sistemu Android</li>
-          <li xml:lang="tr">Proper version handling on Android</li>
+          <li xml:lang="tr">Android üzerinde uygun sürüm işleme</li>
           <li xml:lang="uk">Належна обробка версій в Android</li>
           <li xml:lang="zh-TW">在 Android 上正確處理版本</li>
         </ul>
@@ -295,7 +295,7 @@
           <li xml:lang="pt-BR">Certifica-se de que a mensagem de exportação seja sempre exibida</li>
           <li xml:lang="ru">Проверка, что сообщение об экспорте всегда отображается;</li>
           <li xml:lang="sl">Zagotovi, da je sporočilo o izvozu vedno prikazano</li>
-          <li xml:lang="tr">Ensure that export message is always shown</li>
+          <li xml:lang="tr">Dışa aktarma iletisinin her zaman gösterildiğinden emin ol</li>
           <li xml:lang="uk">Забезпечено безумовний показ повідомлення щодо експортування</li>
           <li xml:lang="zh-TW">確保總是會顯示匯出訊息</li>
         </ul>
@@ -326,7 +326,7 @@
         <p xml:lang="pt-BR">Melhorias e traduções</p>
         <p xml:lang="ru">Улучшения и переводы</p>
         <p xml:lang="sl">Izboljšave in prevodi</p>
-        <p xml:lang="tr">Improvements and translations</p>
+        <p xml:lang="tr">İyileştirmeler ve çeviriler</p>
         <p xml:lang="uk">Удосконалення і переклади</p>
         <p xml:lang="zh-TW">功能改善與翻譯</p>
         <ul>
@@ -343,7 +343,7 @@
           <li xml:lang="pt-BR">Compilação Streamline para Android</li>
           <li xml:lang="ru">Упрощение сборки для Android;</li>
           <li xml:lang="sl">Poenostavljena gradnja Androida</li>
-          <li xml:lang="tr">Streamline Android build</li>
+          <li xml:lang="tr">Android yapısını iyileştir</li>
           <li xml:lang="uk">Спрощено збирання для Android</li>
           <li xml:lang="zh-TW">簡化 Android 建構</li>
           <li>Update translations</li>
@@ -360,7 +360,7 @@
           <li xml:lang="pt-BR">Atualização de traduções</li>
           <li xml:lang="ru">Обновлены переводы;</li>
           <li xml:lang="sl">Posodobi prevode</li>
-          <li xml:lang="tr">Update translations</li>
+          <li xml:lang="tr">Çevirileri güncelle</li>
           <li xml:lang="uk">Оновлено переклади</li>
           <li xml:lang="zh-TW">更新翻譯</li>
         </ul>
@@ -383,7 +383,7 @@
         <p xml:lang="pt-BR">Lançamento do Kongress 21.05</p>
         <p xml:lang="ru">Выпуск Kongress 21.05</p>
         <p xml:lang="sl">Izdaja Kongress 21.05</p>
-        <p xml:lang="tr">Kongress 21.05 release</p>
+        <p xml:lang="tr">Kongre 21.05 yayımı</p>
         <p xml:lang="uk">Випуск Kongress 21.05</p>
         <p xml:lang="zh-TW">Kongress 21.05 釋出</p>
         <ul>
@@ -401,7 +401,7 @@
           <li xml:lang="pt-BR">Adicionado url de bugtracking</li>
           <li xml:lang="ru">Добавлен адрес системы отслеживания ошибок;</li>
           <li xml:lang="sl">Dodaj URL za sledenje napakam</li>
-          <li xml:lang="tr">Add bugtracking url</li>
+          <li xml:lang="tr">Hata izleme adresi ekle</li>
           <li xml:lang="uk">Додано адресу для повідомлень щодо вад</li>
           <li xml:lang="zh-TW">新增錯誤追蹤網址</li>
           <li>Simplify flatpak manifest</li>
@@ -418,7 +418,7 @@
           <li xml:lang="pt-BR">Simplificação do manifesto do Flatpak</li>
           <li xml:lang="ru">Упрощён манифест Flatpak;</li>
           <li xml:lang="sl">Poenostavi manifest flatpaka</li>
-          <li xml:lang="tr">Simplify flatpak manifest</li>
+          <li xml:lang="tr">Flatpak manifestosunu yalınlaştır</li>
           <li xml:lang="uk">Спрощено маніфест flatpak</li>
           <li xml:lang="zh-TW">精簡化 Flatpak 的 manifest</li>
           <li>Streamline favorites view</li>
@@ -434,7 +434,7 @@
           <li xml:lang="pt-BR">Visualização de Streamline favoritos</li>
           <li xml:lang="ru">Упрощено представление избранного;</li>
           <li xml:lang="sl">Poenostavi ogled priljubljenih</li>
-          <li xml:lang="tr">Streamline favorites view</li>
+          <li xml:lang="tr">Sık kullanılanlar görünümünü iyileştir</li>
           <li xml:lang="uk">Спрощено панель перегляду улюблених записів</li>
           <li xml:lang="zh-TW">簡化收藏檢視</li>
           <li>Simplify conference selection</li>
@@ -451,7 +451,7 @@
           <li xml:lang="pt-BR">Simplificação de seleção de conferência</li>
           <li xml:lang="ru">Упрощён выбор конференций;</li>
           <li xml:lang="sl">Poenostavi izbiro konference</li>
-          <li xml:lang="tr">Simplify conference selection</li>
+          <li xml:lang="tr">Konferans seçimini basitleştir</li>
           <li xml:lang="uk">Спрощено вибір конференції</li>
           <li xml:lang="zh-TW">簡化研討會選取流程</li>
           <li>Add placeholder icon to the Favorites page</li>
@@ -467,7 +467,7 @@
           <li xml:lang="pt-BR">Adição de ícone de espaço reservado à página de Favoritos</li>
           <li xml:lang="ru">Добавлен значок-заполнитель на страницу «Избранное»;</li>
           <li xml:lang="sl">Dodaj ikono označbe mesta na stran s priljubljenimi</li>
-          <li xml:lang="tr">Add placeholder icon to the Favorites page</li>
+          <li xml:lang="tr">Sık Kullanılanlar sayfasına yer tutucu simge ekle</li>
           <li xml:lang="uk">Додано піктограму-замінник на сторінку улюблених записів</li>
           <li xml:lang="zh-TW">在收藏頁面新增佔位圖示</li>
           <li>Offer favorites export</li>
@@ -484,7 +484,7 @@
           <li xml:lang="pt-BR">Oferecer exportação de favoritos</li>
           <li xml:lang="ru">Предлагать экспорт избранного;</li>
           <li xml:lang="sl">Nudi izvoz priljubljenih</li>
-          <li xml:lang="tr">Offer favorites export</li>
+          <li xml:lang="tr">Sık kullanılanları dışa aktarma seçeneği sun</li>
           <li xml:lang="uk">Реалізовано експортування улюблених записів</li>
           <li xml:lang="zh-TW">提供匯出收藏的功能</li>
           <li>Add generic name</li>
@@ -501,7 +501,7 @@
           <li xml:lang="pt-BR">Adição de nome genérico</li>
           <li xml:lang="ru">Добавлено общее имя;</li>
           <li xml:lang="sl">Doda generično ime</li>
-          <li xml:lang="tr">Add generic name</li>
+          <li xml:lang="tr">Genel ad ekle</li>
           <li xml:lang="uk">Додано загальну назву</li>
           <li xml:lang="zh-TW">新增通用名稱</li>
           <li>Remove cmake functions not needed</li>
@@ -518,7 +518,7 @@
           <li xml:lang="pt-BR">Remoção de funções do functions desnecessárias</li>
           <li xml:lang="ru">Удалены ненужные функции cmake;</li>
           <li xml:lang="sl">Odstrani nepotrebne funkcije cmake</li>
-          <li xml:lang="tr">Remove cmake functions not needed</li>
+          <li xml:lang="tr">Gereksiz CMake işlevlerini kaldır</li>
           <li xml:lang="uk">Вилучено непотрібні функції cmake</li>
           <li xml:lang="zh-TW">移除不需要的 CMake 函數</li>
         </ul>
@@ -539,7 +539,7 @@
         <p xml:lang="pt-BR">Lançamento de correção de bugs do Kongress</p>
         <p xml:lang="ru">Выпуск Kongress с исправлениями ошибок</p>
         <p xml:lang="sl">Izdaja popravkov hroščev Kongresa</p>
-        <p xml:lang="tr">Kongress bugfix release</p>
+        <p xml:lang="tr">Kongress hata düzeltme yayımı</p>
         <p xml:lang="uk">Випуск Kongress з виправленнями вад</p>
         <p xml:lang="zh-TW">Kongress 錯誤修正釋出</p>
         <ul>
@@ -556,7 +556,6 @@
           <li xml:lang="pt-BR">Correção do problema na exibição do tempo de conversação nas notificações</li>
           <li xml:lang="ru">Исправлено отображение времени выступления в уведомлениях;</li>
           <li xml:lang="sl">Popravljen prikaz časa predavanja v obvestilih</li>
-          <li xml:lang="tr">Fix display of talk time on notifications</li>
           <li xml:lang="uk">Виправлено показ часу доповіді у сповіщеннях</li>
           <li xml:lang="zh-TW">修正通知中演講時間的顯示</li>
           <li>Prevent kongressac from crashing</li>
@@ -572,7 +571,7 @@
           <li xml:lang="pt-BR">Evita que o kongressac trave</li>
           <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li xml:lang="sl">Prepreči, da bi se kongressac sesul</li>
-          <li xml:lang="tr">Prevent kongressac from crashing</li>
+          <li xml:lang="tr">kongressac’nin çökmesini önle</li>
           <li xml:lang="uk">Реалізовано запобігання аваріям kongressac</li>
           <li xml:lang="zh-TW">防止 kongressac 崩潰</li>
           <li>Fix grouping of talks into conference days</li>
@@ -588,7 +587,6 @@
           <li xml:lang="pt-BR">Correção do agrupamento de tarefas por dias de conferência</li>
           <li xml:lang="ru">Исправлено группирование докладов по дням конференции;</li>
           <li xml:lang="sl">Popravi združevanje predavanj v dneve konferenc</li>
-          <li xml:lang="tr">Fix grouping of talks into conference days</li>
           <li xml:lang="uk">Виправлено групування доповідей за днями конференції</li>
           <li xml:lang="zh-TW">修正將演講依研討會日期群組化的功能</li>
           <li>Fix alarm schedule times</li>
@@ -604,7 +602,7 @@
           <li xml:lang="pt-BR">Correção de horários agendados do alarme</li>
           <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li xml:lang="sl">Popravi razpored alarmov</li>
-          <li xml:lang="tr">Fix alarm schedule times</li>
+          <li xml:lang="tr">Alarm zamanlama sürelerini düzelt</li>
           <li xml:lang="uk">Виправлено моменти часу планування нагадувань</li>
           <li xml:lang="zh-TW">修正鬧鐘排程時間</li>
           <li>Prevent duplicate conference entries from being displayed</li>
@@ -636,7 +634,7 @@
           <li xml:lang="pt-BR">Não exibe eventos genéricos de vários dias no calendário diário</li>
           <li xml:lang="ru">Исправлен вывод общие многодневных событий календаря в ежедневных расписаниях;</li>
           <li xml:lang="sl">V dnevnih urnikih ne prikazuj generičnih, večdnevnih koledarskih dogodkov</li>
-          <li xml:lang="tr">Do not display generic, multi-day calendar events on the daily schedules</li>
+          <li xml:lang="tr">Günlük programlarda genel, çok günlük takvim etkinliklerini gösterme</li>
           <li xml:lang="uk">Усунено показ загальних, багатоденних подій календаря у щоденних розкладах</li>
           <li xml:lang="zh-TW">不要在每日時間表顯示通用跨日的行事曆活動</li>
           <li>Fix translation configurations</li>
@@ -652,7 +650,7 @@
           <li xml:lang="pt-BR">Correção das configurações de tradução</li>
           <li xml:lang="ru">Исправлены настройки перевода;</li>
           <li xml:lang="sl">Popravi konfiguracije prevajanja</li>
-          <li xml:lang="tr">Fix translation configurations</li>
+          <li xml:lang="tr">Çeviri yapılandırmalarını düzelt</li>
           <li xml:lang="uk">Виправлення конфігурацій перекладів</li>
           <li xml:lang="zh-TW">修正翻譯設定</li>
         </ul>
@@ -673,7 +671,7 @@
         <p xml:lang="pt-BR">Primeiro lançamento oficial do Kongress</p>
         <p xml:lang="ru">Выпущена первая официальная версия Kongress</p>
         <p xml:lang="sl">Prva uradna izdaja Kongressa</p>
-        <p xml:lang="tr">Kongress first official release</p>
+        <p xml:lang="tr">Kongre’nin ilk resmî yayımı</p>
         <p xml:lang="uk">Перший офіційний випуск Kongress</p>
         <p xml:lang="zh-TW">Kongress 的第一個官方釋出版</p>
         <ul>
@@ -690,7 +688,7 @@
           <li xml:lang="pt-BR">Exibir a programação de um conjunto de conferências</li>
           <li xml:lang="ru">Вывод расписания для набора конференций;</li>
           <li xml:lang="sl">Prikaži urnik zbirke konferenc</li>
-          <li xml:lang="tr">Display the schedule of a collection of conferences</li>
+          <li xml:lang="tr">Konferans koleksiyonunun programını görüntüle</li>
           <li xml:lang="uk">Показ розкладу збірки конференцій</li>
           <li xml:lang="zh-TW">顯示多個研討會的時間表</li>
           <li>Show the schedule of the talks by conference day</li>
@@ -706,7 +704,7 @@
           <li xml:lang="pt-BR">Exibir a programação das palestras por dia da conferência</li>
           <li xml:lang="ru">Просмотр расписание докладов по дням конференции;</li>
           <li xml:lang="sl">Prikaži urnik predavanj po dnevih konference</li>
-          <li xml:lang="tr">Show the schedule of the talks by conference day</li>
+          <li xml:lang="tr">Konuşma programını konferans gününe göre göster</li>
           <li xml:lang="uk">Показ розкладу доповідей за днями конференцій</li>
           <li xml:lang="zh-TW">依研討會日期顯示演講時間表</li>
           <li>Manage a list of favorite talks</li>
@@ -722,7 +720,7 @@
           <li xml:lang="pt-BR">Gerenciar uma lista de palestras favoritas</li>
           <li xml:lang="ru">Управление списком избранных докладов;</li>
           <li xml:lang="sl">Upravljaj seznam priljubljenih predavanj</li>
-          <li xml:lang="tr">Manage a list of favorite talks</li>
+          <li xml:lang="tr">Sık kullanılan konuşmalar listesini yönet</li>
           <li xml:lang="uk">Керування списком улюблених доповідей</li>
           <li xml:lang="zh-TW">管理收藏的演講清單</li>
           <li>Notify the user before talk starts (only on KDE Plasma)</li>
@@ -738,7 +736,7 @@
           <li xml:lang="pt-BR">Notificar o usuário antes do início da conversa (somente no KDE Plasma)</li>
           <li xml:lang="ru">Уведомление пользователя перед началом доклада (только в KDE Plasma);</li>
           <li xml:lang="sl">Obvesti uporabnika pred začetkom predavanja (samo v KDE Plasmi)</li>
-          <li xml:lang="tr">Notify the user before talk starts (only on KDE Plasma)</li>
+          <li xml:lang="tr">Konuşma başlamadan önce kullanıcıya bildir (yalnızca KDE Plasma’da)</li>
           <li xml:lang="uk">Сповіщення користувача до початку доповіді (лише у Плазмі KDE)</li>
           <li xml:lang="zh-TW">演講開始前通知使用者（僅支援 KDE Plasma）</li>
         </ul>
