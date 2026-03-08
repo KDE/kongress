@@ -22,7 +22,7 @@ int main(int argc, char **argv)
                          QString{},
                          i18n("Kongress Alarm Check Daemon"),
                          KAboutLicense::GPL,
-                         i18n("(c) 2021 Dimitris Kardarakos"),
+                         i18n("© 2021 Dimitris Kardarakos"),
                          QString{},
                          QString{}};
     aboutData.addAuthor(i18n("Dimitris Kardarakos"), i18n("Maintainer"), QStringLiteral("dimkard@posteo.net"));

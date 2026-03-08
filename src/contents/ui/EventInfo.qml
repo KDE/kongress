@@ -125,7 +125,7 @@ FormCard.FormCardPage {
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormButtonDelegate {
-            text: eventController.isFavorite ? i18nc("@action:button", "Delete from Favorites") : i18nc("@action:button", "Add to Favorites")
+            text: eventController.isFavorite ? i18nc("@action:button", "Remove from Favorites") : i18nc("@action:button", "Add to Favorites")
             icon.name: eventController.isFavorite ? "favorite-favorited-symbolic" : "favorite-symbolic"
 
             Kongress.EventController {
