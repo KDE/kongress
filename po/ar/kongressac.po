@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-10 00:47+0000\n"
 "PO-Revision-Date: 2025-08-03 22:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,8 +34,9 @@ msgid "Kongress Alarm Check Daemon"
 msgstr "برنامج فحص منبه كونغرس"
 
 #: kongressacmain.cpp:25
-#, kde-format
-msgid "(c) 2021 Dimitris Kardarakos"
+#, fuzzy, kde-format
+#| msgid "(c) 2021 Dimitris Kardarakos"
+msgid "© 2021 Dimitris Kardarakos"
 msgstr "(c) 2021 ديميتريس كارداراكوس"
 
 #: kongressacmain.cpp:28

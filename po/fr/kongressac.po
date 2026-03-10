@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-10 00:47+0000\n"
 "PO-Revision-Date: 2023-12-20 09:32+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -30,8 +30,9 @@ msgid "Kongress Alarm Check Daemon"
 msgstr "Démon de « Kongress » pour la vérification des alarmes"
 
 #: kongressacmain.cpp:25
-#, kde-format
-msgid "(c) 2021 Dimitris Kardarakos"
+#, fuzzy, kde-format
+#| msgid "(c) 2021 Dimitris Kardarakos"
+msgid "© 2021 Dimitris Kardarakos"
 msgstr "(c) 2021 Dimitris Kardarakos"
 
 #: kongressacmain.cpp:28

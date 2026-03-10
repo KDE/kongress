@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-10 00:47+0000\n"
 "PO-Revision-Date: 2025-12-14 13:44+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -82,9 +82,11 @@ msgid "Web Page"
 msgstr "Webseite"
 
 #: contents/ui/EventInfo.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Delete from Favorites"
 msgctxt "@action:button"
-msgid "Delete from Favorites"
+msgid "Remove from Favorites"
 msgstr "Aus Favoriten entfernen"
 
 #: contents/ui/EventInfo.qml:128

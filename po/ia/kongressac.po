@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-03-10 00:47+0000\n"
 "PO-Revision-Date: 2021-01-25 10:56+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -35,8 +35,9 @@ msgstr ""
 "Kongress)"
 
 #: kongressacmain.cpp:25
-#, kde-format
-msgid "(c) 2021 Dimitris Kardarakos"
+#, fuzzy, kde-format
+#| msgid "(c) 2021 Dimitris Kardarakos"
+msgid "© 2021 Dimitris Kardarakos"
 msgstr "(c) 2021 Dimitris Kardarakos"
 
 #: kongressacmain.cpp:28
