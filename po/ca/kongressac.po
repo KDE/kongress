@@ -49,9 +49,3 @@ msgstr "Dimitris Kardarakos"
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspèn"
-
-#~ msgid "Dismiss"
-#~ msgstr "Refusa"
