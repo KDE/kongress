@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:47+0000\n"
-"PO-Revision-Date: 2024-12-27 03:35+0100\n"
+"PO-Revision-Date: 2026-03-10 02:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -81,24 +81,22 @@ msgid "Web Page"
 msgstr "ვებ გვერდი"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "წაშლა სანიშნეებიდან"
+msgstr "რჩეულებიდან წაშლა"
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "სანიშნეებში ჩამატება"
+msgstr "რჩეულებში ჩამატება"
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "საუბარი წაიშალა სანიშნეებიდან."
+msgstr "საუბარი წაიშალა რჩეულებიდან."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
@@ -162,7 +160,7 @@ msgstr "რუკა"
 #: contents/ui/Main.qml:74
 #, kde-format
 msgid "Favorites"
-msgstr "სანიშნები"
+msgstr "რჩეულები"
 
 #: contents/ui/GlobalDrawer.qml:146
 #, kde-format
@@ -283,7 +281,7 @@ msgstr "შეცდომა მოვლენის შექმნისა�
 #: eventcontroller.cpp:76
 #, kde-format
 msgid "Already in favorites"
-msgstr "უკვე სანიშნეებშია"
+msgstr "უკვე რჩეულებშია"
 
 #: eventcontroller.cpp:132
 #, kde-format
@@ -291,13 +289,13 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"საუბარი დამატებულია სანიშნეებში, მაგრამ ეფარება არსებულებს:\n"
+"საუბარი დამატებულია რჩეულებში, მაგრამ ეფარება არსებულებს:\n"
 "%1"
 
 #: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
-msgstr "საუბარი სანიშნეებში ჩაემატა"
+msgstr "საუბარი რჩეულებში ჩაემატა"
 
 #: main.cpp:65
 #, kde-format

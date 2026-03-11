@@ -33,10 +33,9 @@ msgid "Kongress Alarm Check Daemon"
 msgstr "Kongress 提醒检查守护进程"
 
 #: kongressacmain.cpp:25
-#, fuzzy, kde-format
-#| msgid "(c) 2021 Dimitris Kardarakos"
+#, kde-format
 msgid "© 2021 Dimitris Kardarakos"
-msgstr "(c) 2021 Dimitris Kardarakos"
+msgstr ""
 
 #: kongressacmain.cpp:28
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:47+0000\n"
-"PO-Revision-Date: 2024-12-27 13:00+0300\n"
+"PO-Revision-Date: 2026-03-10 13:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,12 +80,10 @@ msgid "Web Page"
 msgstr "Web Sayfası"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "Favorilerden Sil"
+msgstr "Favorilerden Kaldır"
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format

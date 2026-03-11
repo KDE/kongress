@@ -80,12 +80,10 @@ msgid "Web Page"
 msgstr "网页"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "从收藏中移除"
+msgstr ""
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format

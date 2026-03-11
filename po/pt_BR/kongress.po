@@ -3,13 +3,13 @@
 #
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2021.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021.
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:47+0000\n"
-"PO-Revision-Date: 2025-08-14 18:20-0300\n"
+"PO-Revision-Date: 2026-03-10 09:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -82,12 +82,10 @@ msgid "Web Page"
 msgstr "Página web"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "Excluir das favoritas"
+msgstr "Remover das favoritas"
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format

@@ -1,15 +1,15 @@
 # Spanish translations for kongress.po package.
-# Copyright (C) 2020 This file is copyright:
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-#
 # Automatically generated, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2020, 2021, 2024, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:47+0000\n"
-"PO-Revision-Date: 2024-12-27 03:38+0100\n"
+"PO-Revision-Date: 2026-03-10 23:47+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -83,12 +83,10 @@ msgid "Web Page"
 msgstr "Página web"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "Borrar de favoritas"
+msgstr "Eliminar de favoritas"
 
 #: contents/ui/EventInfo.qml:128
 #, kde-format
@@ -327,108 +325,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "@info:credit"
 msgid "Maintainer and Developer"
 msgstr "Encargado y desarrollador"
-
-#~ msgid "Switched to floor %1"
-#~ msgstr "Ha cambiado al piso %1"
-
-#~ msgctxt "@action:intoolbar Go down one floor"
-#~ msgid "Floor down"
-#~ msgstr "Bajar un piso"
-
-#~ msgctxt "@action:intoolbar Go up one floor"
-#~ msgid "Floor up"
-#~ msgstr "Subir un piso"
-
-#~ msgid "Delete"
-#~ msgstr "Borrar"
-
-#~ msgid "Favorite"
-#~ msgstr "Favorita"
-
-#~ msgid "Configure"
-#~ msgstr "Configurar"
-
-#~ msgid "Latitude: %1"
-#~ msgstr "Latitud: %1"
-
-#~ msgid "Longitude: %1"
-#~ msgstr "Longitud: %1"
-
-#~ msgid "Back"
-#~ msgstr "Volver"
-
-#~ msgid "Checking for schedule updates"
-#~ msgstr "Comprobando actualizaciones de planificaciones"
-
-#~ msgid "Select"
-#~ msgstr "Seleccionar"
-
-#~ msgid "No events found for %1"
-#~ msgstr "No se han encontrado eventos para %1"
-
-#~ msgid "No events found"
-#~ msgstr "No se han encontrado eventos"
-
-#~ msgid "Calendar name contains invalid characters"
-#~ msgstr "El nombre del calendario contiene caracteres no válidos"
-
-#~ msgid "Calendar already exists"
-#~ msgstr "El calendario ya existe"
-
-#~ msgid "The calendar file cannot be saved"
-#~ msgstr "No se puede guardar el archivo del calendario"
-
-#~ msgid "A calendar with the same name already exists"
-#~ msgstr "Ya existe un calendario con el mismo nombre"
-
-#~ msgid "Loading conference data"
-#~ msgstr "Cargando datos de la conferencia"
-
-#~ msgid "Conference data loaded"
-#~ msgstr "Datos de la conferencia cargados"
-
-#~ msgid "days before start"
-#~ msgstr "días antes del inicio"
-
-#~ msgid "seconds before start"
-#~ msgstr "segundos antes del inicio"
-
-#~ msgid "At start time"
-#~ msgstr "En la hora de inicio"
-
-#~ msgid "1 day before start"
-#~ msgid_plural "%1 days before start"
-#~ msgstr[0] "1 día antes del inicio"
-#~ msgstr[1] "%1 días antes del inicio"
-
-#~ msgid "1 day"
-#~ msgid_plural "%1 days"
-#~ msgstr[0] "1 día"
-#~ msgstr[1] "%1 días"
-
-#~ msgid "1 hour"
-#~ msgid_plural "%1 hours"
-#~ msgstr[0] "1 hora"
-#~ msgstr[1] "%1 horas"
-
-#~ msgid "1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "1 minuto"
-#~ msgstr[1] "%1 minutos"
-
-#~ msgid "1 second"
-#~ msgid_plural "%1 seconds"
-#~ msgstr[0] "1 segundo"
-#~ msgstr[1] "%1 segundos"
-
-#~ msgid "before start"
-#~ msgstr "antes del inicio"
-
-#~ msgid "today at %1"
-#~ msgstr "hoy a las %1"
-
-#~ msgid "yesterday at %1"
-#~ msgstr "ayer a las %1"
-
-#~ msgid "%1 at %2"
-#~ msgstr "el %1 a las %2"
