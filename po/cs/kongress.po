@@ -81,9 +81,7 @@ msgid "Web Page"
 msgstr "Webová stránka"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "Odstranit z oblíbených"
