@@ -1,21 +1,22 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# SPDX-FileCopyrightText: 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2020-2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2025-12-14 13:44+0100\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-03-10 08:38+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,12 +43,12 @@ msgstr "Export erfolgreich abgeschlossen"
 #: conferencemodel.cpp:62
 #, kde-format
 msgid "Past"
-msgstr "Vergangene"
+msgstr "Vergangen"
 
 #: conferencemodel.cpp:63
 #, kde-format
 msgid "Upcoming"
-msgstr "Anstehende"
+msgstr "Anstehend"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -118,12 +119,12 @@ msgstr "Ordner öffnen"
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
-msgstr "Keine bevorzugten Vorträge für %1 gefunden"
+msgstr "Keine favorisierten Vorträge für %1 gefunden"
 
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
-msgstr "Keine bevorzugten Vorträge gefunden"
+msgstr "Keine favorisierten Vorträge gefunden"
 
 #: contents/ui/FavoritesView.qml:184
 #, kde-format
@@ -267,7 +268,7 @@ msgstr "Benachrichtigungen werden auf Ihrem System nicht unterstützt"
 #: contents/ui/SettingsView.qml:48
 #, kde-format
 msgid "Add reminder to favorite talks"
-msgstr "Erinnerung zu bevorzugten Vorträgen hinzufügen"
+msgstr "Erinnerung zu favorisierten Vorträgen hinzufügen"
 
 #: contents/ui/SettingsView.qml:55
 #, kde-format
@@ -290,8 +291,9 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"Vortrag zu Favoriten hinzugefügt, aber er überschneidet sich mit einem "
-"anderen Vortrag:%1"
+"Vortrag zu Favoriten hinzugefügt, aber er überschneidet sich mit bestehenden "
+"Vorträgen:\n"
+"%1"
 
 #: eventcontroller.cpp:133
 #, kde-format
@@ -311,7 +313,7 @@ msgstr "KDE-Konferenzbegleitung"
 #: main.cpp:69
 #, kde-format
 msgid "© 2021 KDE Community"
-msgstr "© 2021 KDE Community"
+msgstr "© 2021 KDE-Gemeinschaft"
 
 #: main.cpp:72
 #, kde-format
