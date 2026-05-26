@@ -10,7 +10,6 @@ import QtQuick.Controls 2 as Controls
 import QtQml.Models
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import org.kde.kirigami.private.polyfill // remove once we depend on Qt 6.9
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kongress as Kongress
