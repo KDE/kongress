@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-03 01:16+0000\n"
 "PO-Revision-Date: 2026-05-31 19:13-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -130,63 +130,63 @@ msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
 msgstr[0] ""
 
-#: contents/ui/GlobalDrawer.qml:58
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Conference"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Change conference"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:96
+#: contents/ui/GlobalDrawer.qml:95
 #, kde-format
 msgid "Check for updates"
 msgstr "يېڭىلانما بارمۇ تەكشۈرۈش"
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Map"
 msgstr "خەرىتە"
 
-#: contents/ui/GlobalDrawer.qml:132 contents/ui/GlobalDrawer.qml:138
+#: contents/ui/GlobalDrawer.qml:131 contents/ui/GlobalDrawer.qml:137
 #: contents/ui/Main.qml:74
 #, kde-format
 msgid "Favorites"
 msgstr "يىغقۇچ"
 
-#: contents/ui/GlobalDrawer.qml:146
+#: contents/ui/GlobalDrawer.qml:145
 #, kde-format
 msgid "Full Schedule"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:152 contents/ui/Main.qml:63
+#: contents/ui/GlobalDrawer.qml:151 contents/ui/Main.qml:63
 #, kde-format
 msgid "Schedule"
 msgstr "كۈنتەرتىپ"
 
-#: contents/ui/GlobalDrawer.qml:162
+#: contents/ui/GlobalDrawer.qml:161
 #, kde-format
 msgid "Daily Schedule"
 msgstr ""
 
-#: contents/ui/GlobalDrawer.qml:201
+#: contents/ui/GlobalDrawer.qml:200
 #, kde-format
 msgid "Categories"
 msgstr "سەھىپە"
 
-#: contents/ui/GlobalDrawer.qml:245 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:244 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "تەڭشەك"
 
-#: contents/ui/GlobalDrawer.qml:260
+#: contents/ui/GlobalDrawer.qml:259
 #, kde-format
 msgid "About"
 msgstr "ھەققىدە"

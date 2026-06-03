@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-03 01:16+0000\n"
 "PO-Revision-Date: 2026-03-10 14:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -135,63 +135,63 @@ msgstr[1] "Перекривається із %1 іншими доповідям�
 msgstr[2] "Перекривається із %1 іншими доповідями"
 msgstr[3] "Перекривається із іншою доповіддю"
 
-#: contents/ui/GlobalDrawer.qml:58
+#: contents/ui/GlobalDrawer.qml:57
 #, kde-format
 msgid "Conference"
 msgstr "Конференція"
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Change conference"
 msgstr "Змінити конференцію"
 
-#: contents/ui/GlobalDrawer.qml:77
+#: contents/ui/GlobalDrawer.qml:76
 #, kde-format
 msgid "Select conference"
 msgstr "Виберіть конференцію"
 
-#: contents/ui/GlobalDrawer.qml:96
+#: contents/ui/GlobalDrawer.qml:95
 #, kde-format
 msgid "Check for updates"
 msgstr "Перевірити оновлення"
 
-#: contents/ui/GlobalDrawer.qml:110
+#: contents/ui/GlobalDrawer.qml:109
 #, kde-format
 msgid "Map"
 msgstr "Карта"
 
-#: contents/ui/GlobalDrawer.qml:132 contents/ui/GlobalDrawer.qml:138
+#: contents/ui/GlobalDrawer.qml:131 contents/ui/GlobalDrawer.qml:137
 #: contents/ui/Main.qml:74
 #, kde-format
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: contents/ui/GlobalDrawer.qml:146
+#: contents/ui/GlobalDrawer.qml:145
 #, kde-format
 msgid "Full Schedule"
 msgstr "Повний розклад"
 
-#: contents/ui/GlobalDrawer.qml:152 contents/ui/Main.qml:63
+#: contents/ui/GlobalDrawer.qml:151 contents/ui/Main.qml:63
 #, kde-format
 msgid "Schedule"
 msgstr "Розклад"
 
-#: contents/ui/GlobalDrawer.qml:162
+#: contents/ui/GlobalDrawer.qml:161
 #, kde-format
 msgid "Daily Schedule"
 msgstr "Розклад дня"
 
-#: contents/ui/GlobalDrawer.qml:201
+#: contents/ui/GlobalDrawer.qml:200
 #, kde-format
 msgid "Categories"
 msgstr "Категорії"
 
-#: contents/ui/GlobalDrawer.qml:245 contents/ui/SettingsView.qml:17
+#: contents/ui/GlobalDrawer.qml:244 contents/ui/SettingsView.qml:17
 #, kde-format
 msgid "Settings"
 msgstr "Параметри"
 
-#: contents/ui/GlobalDrawer.qml:260
+#: contents/ui/GlobalDrawer.qml:259
 #, kde-format
 msgid "About"
 msgstr "Про програму"
