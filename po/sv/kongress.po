@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2024-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-03 01:16+0000\n"
-"PO-Revision-Date: 2025-01-11 12:12+0100\n"
+"PO-Revision-Date: 2026-07-07 18:35+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,9 +80,7 @@ msgid "Web Page"
 msgstr "Webbsida"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete from Favorites"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "Ta bort från favoriter"
