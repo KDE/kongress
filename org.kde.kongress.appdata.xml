@@ -278,6 +278,7 @@
           <li xml:lang="ru">Правильная обработка версий на Android;</li>
           <li xml:lang="sk">Správne spracovanie verzií na Androide</li>
           <li xml:lang="sl">Pravilno ravnanje z različicami v sistemu Android</li>
+          <li xml:lang="sv">Riktig versionshantering på Android</li>
           <li xml:lang="tr">Android üzerinde uygun sürüm işleme</li>
           <li xml:lang="uk">Належна обробка версій в Android</li>
           <li xml:lang="zh-TW">在 Android 上正確處理版本</li>
@@ -307,6 +308,7 @@
           <li xml:lang="ru">Проверка, что сообщение об экспорте всегда отображается;</li>
           <li xml:lang="sk">Zabezpečenie, aby sa správa o exporte vždy zobrazila</li>
           <li xml:lang="sl">Zagotovi, da je sporočilo o izvozu vedno prikazano</li>
+          <li xml:lang="sv">Säkerställ att exportmeddelande alltid visas</li>
           <li xml:lang="tr">Dışa aktarma iletisinin her zaman gösterildiğinden emin ol</li>
           <li xml:lang="uk">Забезпечено безумовний показ повідомлення щодо експортування</li>
           <li xml:lang="zh-TW">確保總是會顯示匯出訊息</li>
@@ -340,6 +342,7 @@
         <p xml:lang="ru">Улучшения и переводы</p>
         <p xml:lang="sk">Vylepšenia a preklady</p>
         <p xml:lang="sl">Izboljšave in prevodi</p>
+        <p xml:lang="sv">Förbättringar och översättningar</p>
         <p xml:lang="tr">İyileştirmeler ve çeviriler</p>
         <p xml:lang="uk">Удосконалення і переклади</p>
         <p xml:lang="zh-TW">功能改善與翻譯</p>
@@ -360,6 +363,7 @@
           <li xml:lang="ru">Упрощение сборки для Android;</li>
           <li xml:lang="sk">Zjednodušenie zostavy pre Android</li>
           <li xml:lang="sl">Poenostavljena gradnja Androida</li>
+          <li xml:lang="sv">Effektivisera Android-bygge</li>
           <li xml:lang="tr">Android yapısını iyileştir</li>
           <li xml:lang="uk">Спрощено збирання для Android</li>
           <li xml:lang="zh-TW">簡化 Android 建構</li>
@@ -379,6 +383,7 @@
           <li xml:lang="ru">Обновлены переводы;</li>
           <li xml:lang="sk">Aktualizácia prekladov</li>
           <li xml:lang="sl">Posodobi prevode</li>
+          <li xml:lang="sv">Uppdatera översättningar</li>
           <li xml:lang="tr">Çevirileri güncelle</li>
           <li xml:lang="ug">تەرجىمە يېڭىلا</li>
           <li xml:lang="uk">Оновлено переклади</li>
@@ -406,6 +411,7 @@
         <p xml:lang="ru">Выпуск Kongress 21.05</p>
         <p xml:lang="sk">Kongress</p>
         <p xml:lang="sl">Izdaja Kongress 21.05</p>
+        <p xml:lang="sv">Kongress 21.05 utgåva</p>
         <p xml:lang="tr">Kongre 21.05 yayımı</p>
         <p xml:lang="uk">Випуск Kongress 21.05</p>
         <p xml:lang="zh-TW">Kongress 21.05 釋出</p>
@@ -584,6 +590,7 @@
         <p xml:lang="ru">Выпуск Kongress с исправлениями ошибок</p>
         <p xml:lang="sk">Kongress</p>
         <p xml:lang="sl">Izdaja popravkov hroščev Kongresa</p>
+        <p xml:lang="sv">Kongress felrättningsutgåva</p>
         <p xml:lang="tr">Kongress hata düzeltme yayımı</p>
         <p xml:lang="uk">Випуск Kongress з виправленнями вад</p>
         <p xml:lang="zh-TW">Kongress 錯誤修正釋出</p>
