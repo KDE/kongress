@@ -432,6 +432,7 @@
           <li xml:lang="ru">Добавлен адрес системы отслеживания ошибок;</li>
           <li xml:lang="sk">Pridanie adresy URL na sledovanie chýb</li>
           <li xml:lang="sl">Dodaj URL za sledenje napakam</li>
+          <li xml:lang="sv">Tillägg av webbadress till felspårning</li>
           <li xml:lang="tr">Hata izleme adresi ekle</li>
           <li xml:lang="uk">Додано адресу для повідомлень щодо вад</li>
           <li xml:lang="zh-TW">新增錯誤追蹤網址</li>
@@ -451,6 +452,7 @@
           <li xml:lang="ru">Упрощён манифест Flatpak;</li>
           <li xml:lang="sk">Zjednodušenie manifestu flatpak</li>
           <li xml:lang="sl">Poenostavi manifest flatpaka</li>
+          <li xml:lang="sv">Förenkla Flatpak-manifest</li>
           <li xml:lang="tr">Flatpak manifestosunu yalınlaştır</li>
           <li xml:lang="uk">Спрощено маніфест flatpak</li>
           <li xml:lang="zh-TW">精簡化 Flatpak 的 manifest</li>
@@ -470,6 +472,7 @@
           <li xml:lang="ru">Упрощено представление избранного;</li>
           <li xml:lang="sk">Zjednodušenie zobrazenia obľúbených</li>
           <li xml:lang="sl">Poenostavi ogled priljubljenih</li>
+          <li xml:lang="sv">Effektivisera favoritvyn</li>
           <li xml:lang="tr">Sık kullanılanlar görünümünü iyileştir</li>
           <li xml:lang="uk">Спрощено панель перегляду улюблених записів</li>
           <li xml:lang="zh-TW">簡化收藏檢視</li>
@@ -489,6 +492,7 @@
           <li xml:lang="ru">Упрощён выбор конференций;</li>
           <li xml:lang="sk">Zjednodušenie výberu konferencie</li>
           <li xml:lang="sl">Poenostavi izbiro konference</li>
+          <li xml:lang="sv">Förenkla konferensvalet</li>
           <li xml:lang="tr">Konferans seçimini basitleştir</li>
           <li xml:lang="uk">Спрощено вибір конференції</li>
           <li xml:lang="zh-TW">簡化研討會選取流程</li>
@@ -508,6 +512,7 @@
           <li xml:lang="ru">Добавлен значок-заполнитель на страницу «Избранное»;</li>
           <li xml:lang="sk">Pridanie zástupnej ikony na stránku obľúbených</li>
           <li xml:lang="sl">Dodaj ikono označbe mesta na stran s priljubljenimi</li>
+          <li xml:lang="sv">Tillägg av platsmarkörikon till sidan Favoriter</li>
           <li xml:lang="tr">Sık Kullanılanlar sayfasına yer tutucu simge ekle</li>
           <li xml:lang="uk">Додано піктограму-замінник на сторінку улюблених записів</li>
           <li xml:lang="zh-TW">在收藏頁面新增佔位圖示</li>
@@ -527,6 +532,7 @@
           <li xml:lang="ru">Предлагать экспорт избранного;</li>
           <li xml:lang="sk">Ponúknutie exportu obľúbených</li>
           <li xml:lang="sl">Nudi izvoz priljubljenih</li>
+          <li xml:lang="sv">Erbjud favoritexport</li>
           <li xml:lang="tr">Sık kullanılanları dışa aktarma seçeneği sun</li>
           <li xml:lang="uk">Реалізовано експортування улюблених записів</li>
           <li xml:lang="zh-TW">提供匯出收藏的功能</li>
@@ -546,6 +552,7 @@
           <li xml:lang="ru">Добавлено общее имя;</li>
           <li xml:lang="sk">Pridanie všeobecného názvu</li>
           <li xml:lang="sl">Doda generično ime</li>
+          <li xml:lang="sv">Tillägg av generellt namn</li>
           <li xml:lang="tr">Genel ad ekle</li>
           <li xml:lang="uk">Додано загальну назву</li>
           <li xml:lang="zh-TW">新增通用名稱</li>
@@ -565,6 +572,7 @@
           <li xml:lang="ru">Удалены ненужные функции cmake;</li>
           <li xml:lang="sk">Odstránenie nepotrebných funkcií cmake</li>
           <li xml:lang="sl">Odstrani nepotrebne funkcije cmake</li>
+          <li xml:lang="sv">Ta bort cmake-funktioner som inte behövs</li>
           <li xml:lang="tr">Gereksiz CMake işlevlerini kaldır</li>
           <li xml:lang="uk">Вилучено непотрібні функції cmake</li>
           <li xml:lang="zh-TW">移除不需要的 CMake 函數</li>
@@ -611,6 +619,7 @@
           <li xml:lang="ru">Исправлено отображение времени выступления в уведомлениях;</li>
           <li xml:lang="sk">Oprava zobrazenia času prednášky v oznámeniach</li>
           <li xml:lang="sl">Popravljen prikaz časa predavanja v obvestilih</li>
+          <li xml:lang="sv">Rätta visning av föredragstid på underrättelser</li>
           <li xml:lang="tr">Bildirimlerde konuşma süresinin görüntülenmesini düzelt</li>
           <li xml:lang="uk">Виправлено показ часу доповіді у сповіщеннях</li>
           <li xml:lang="zh-TW">修正通知中演講時間的顯示</li>
@@ -630,6 +639,7 @@
           <li xml:lang="ru">Предотвращено аварийное завершение kongressac;</li>
           <li xml:lang="sk">Zabránenie pádu kongressac</li>
           <li xml:lang="sl">Prepreči, da bi se kongressac sesul</li>
+          <li xml:lang="sv">Förhindra kongress från att krascha</li>
           <li xml:lang="tr">kongressac’nin çökmesini önle</li>
           <li xml:lang="uk">Реалізовано запобігання аваріям kongressac</li>
           <li xml:lang="zh-TW">防止 kongressac 崩潰</li>
@@ -649,6 +659,7 @@
           <li xml:lang="ru">Исправлено группирование докладов по дням конференции;</li>
           <li xml:lang="sk">Oprava zoskupovania prednášok do konferenčných dní</li>
           <li xml:lang="sl">Popravi združevanje predavanj v dneve konferenc</li>
+          <li xml:lang="sv">Rätta gruppering av föredrag till konferensdagar</li>
           <li xml:lang="tr">Konuşmaların konferans günlerine göre gruplandırılmasını düzelt</li>
           <li xml:lang="uk">Виправлено групування доповідей за днями конференції</li>
           <li xml:lang="zh-TW">修正將演講依研討會日期群組化的功能</li>
@@ -668,6 +679,7 @@
           <li xml:lang="ru">Исправлены времена расписания будильника;</li>
           <li xml:lang="sk">Oprava časov naplánovaných budíkov</li>
           <li xml:lang="sl">Popravi razpored alarmov</li>
+          <li xml:lang="sv">Rätta alarmschemaläggningstider</li>
           <li xml:lang="tr">Alarm zamanlama sürelerini düzelt</li>
           <li xml:lang="uk">Виправлено моменти часу планування нагадувань</li>
           <li xml:lang="zh-TW">修正鬧鐘排程時間</li>
@@ -687,6 +699,7 @@
           <li xml:lang="ru">Предотвращён вывод повторяющихся записей конференций;</li>
           <li xml:lang="sk">Zabránenie zobrazeniu duplicitných záznamov konferencií</li>
           <li xml:lang="sl">Prepreči prikaz podvojenih vnosov v konferenci</li>
+          <li xml:lang="sv">Förhindra att duplicerade konferensposter visas</li>
           <li xml:lang="tr">Prevent duplicate conference entries from being displayed</li>
           <li xml:lang="uk">Реалізовано запобігання показу дубльованих записів конференцій</li>
           <li xml:lang="zh-TW">避免顯示重複的研討會項目</li>
@@ -706,6 +719,7 @@
           <li xml:lang="ru">Исправлен вывод общие многодневных событий календаря в ежедневных расписаниях;</li>
           <li xml:lang="sk">Nezobrazovať všeobecné viacdňové udalosti kalendára v denných rozvrhoch</li>
           <li xml:lang="sl">V dnevnih urnikih ne prikazuj generičnih, večdnevnih koledarskih dogodkov</li>
+          <li xml:lang="sv">Visa inte generella kalenderhändelser som sträcker sig över flera dagar i dagliga scheman</li>
           <li xml:lang="tr">Günlük programlarda genel, çok günlük takvim etkinliklerini gösterme</li>
           <li xml:lang="uk">Усунено показ загальних, багатоденних подій календаря у щоденних розкладах</li>
           <li xml:lang="zh-TW">不要在每日時間表顯示通用跨日的行事曆活動</li>
@@ -725,6 +739,7 @@
           <li xml:lang="ru">Исправлены настройки перевода;</li>
           <li xml:lang="sk">Oprava nastavení prekladov</li>
           <li xml:lang="sl">Popravi konfiguracije prevajanja</li>
+          <li xml:lang="sv">Rätta översättningsinställningar</li>
           <li xml:lang="tr">Çeviri yapılandırmalarını düzelt</li>
           <li xml:lang="uk">Виправлення конфігурацій перекладів</li>
           <li xml:lang="zh-TW">修正翻譯設定</li>
@@ -749,6 +764,7 @@
         <p xml:lang="ru">Выпущена первая официальная версия Kongress</p>
         <p xml:lang="sk">Prvé oficiálne vydanie Kongress</p>
         <p xml:lang="sl">Prva uradna izdaja Kongressa</p>
+        <p xml:lang="sv">Kongress första officiella utgåva</p>
         <p xml:lang="tr">Kongre’nin ilk resmî yayımı</p>
         <p xml:lang="uk">Перший офіційний випуск Kongress</p>
         <p xml:lang="zh-TW">Kongress 的第一個官方釋出版</p>
@@ -769,6 +785,7 @@
           <li xml:lang="ru">Вывод расписания для набора конференций;</li>
           <li xml:lang="sk">Zobrazenie rozvrhu zbierky konferencií</li>
           <li xml:lang="sl">Prikaži urnik zbirke konferenc</li>
+          <li xml:lang="sv">Visa schemat för en samling konferenser</li>
           <li xml:lang="tr">Konferans koleksiyonunun programını görüntüle</li>
           <li xml:lang="uk">Показ розкладу збірки конференцій</li>
           <li xml:lang="zh-TW">顯示多個研討會的時間表</li>
@@ -788,6 +805,7 @@
           <li xml:lang="ru">Просмотр расписание докладов по дням конференции;</li>
           <li xml:lang="sk">Zobrazenie rozvrhu prednášok podľa dňa konferencie</li>
           <li xml:lang="sl">Prikaži urnik predavanj po dnevih konference</li>
+          <li xml:lang="sv">Visa schemat för föredrag per konferensdag</li>
           <li xml:lang="tr">Konuşma programını konferans gününe göre göster</li>
           <li xml:lang="uk">Показ розкладу доповідей за днями конференцій</li>
           <li xml:lang="zh-TW">依研討會日期顯示演講時間表</li>
@@ -807,6 +825,7 @@
           <li xml:lang="ru">Управление списком избранных докладов;</li>
           <li xml:lang="sk">Správa zoznamu obľúbených prednášok</li>
           <li xml:lang="sl">Upravljaj seznam priljubljenih predavanj</li>
+          <li xml:lang="sv">Hantera en lista över favoritföredrag</li>
           <li xml:lang="tr">Sık kullanılan konuşmalar listesini yönet</li>
           <li xml:lang="uk">Керування списком улюблених доповідей</li>
           <li xml:lang="zh-TW">管理收藏的演講清單</li>
@@ -826,6 +845,7 @@
           <li xml:lang="ru">Уведомление пользователя перед началом доклада (только в KDE Plasma);</li>
           <li xml:lang="sk">Upozornenie používateľa pred začiatkom prednášky (iba na KDE Plasma)</li>
           <li xml:lang="sl">Obvesti uporabnika pred začetkom predavanja (samo v KDE Plasmi)</li>
+          <li xml:lang="sv">Underrätta användaren innan föredrag startar (bara på KDE Plasma)</li>
           <li xml:lang="tr">Konuşma başlamadan önce kullanıcıya bildir (yalnızca KDE Plasma’da)</li>
           <li xml:lang="uk">Сповіщення користувача до початку доповіді (лише у Плазмі KDE)</li>
           <li xml:lang="zh-TW">演講開始前通知使用者（僅支援 KDE Plasma）</li>
