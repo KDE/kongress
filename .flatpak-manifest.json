@@ -16,6 +16,13 @@
         "--talk-name=org.kde.Solid.PowerManagement",
         "--own-name=org.kde.kongressac"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/metatypes",
+        "/share/qlogging-categories6"
+    ],
     "separate-locales": false,
     "modules": [
         {
@@ -26,26 +33,31 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "master" } ],
-            "cleanup": [
-                "/include",
-                "/lib/cmake",
-                "/share/qlogging-categories6"
-            ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "master" } ]
+        },
+        {
+            "name": "recast",
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=OFF",
+                "-DRECASTNAVIGATION_DEMO=OFF",
+                "-DRECASTNAVIGATION_EXAMPLES=OFF",
+                "-DRECASTNAVIGATION_TESTS=OFF",
+                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/recastnavigation/recastnavigation", "branch": "main" } ],
+            "cleanup": [ "/lib" ]
         },
         {
             "name": "kosmindoormap",
             "config-opts": [
-                "-DBUILD_TESTING=OFF"
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_DISABLE_FIND_PACKAGE_Protobuf=TRUE"
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "master" } ],
-            "cleanup": [
-                "/include",
-                "/lib/cmake",
-                "/mkspecs"
-            ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "master" } ]
         },
         {
             "name": "kongress",
