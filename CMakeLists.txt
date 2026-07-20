@@ -67,9 +67,11 @@ if(NOT ANDROID AND REMINDERS_ENABLED)
 endif()
 
 add_subdirectory(src)
-
 if(NOT ANDROID AND REMINDERS_ENABLED)
     add_subdirectory(kongressac)
+endif()
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
 endif()
 
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")

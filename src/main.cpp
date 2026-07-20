@@ -40,7 +40,10 @@
 #include <QQmlContext>
 #include <QQuickStyle>
 #include <QStandardPaths>
+#include <QTimer>
 #include <QUrl>
+
+using namespace Qt::Literals;
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -80,6 +83,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     about.setupCommandLine(&parser);
+    QCommandLineOption selfTestOpt(u"self-test"_s, u"internal, for automated testing"_s);
+    selfTestOpt.setFlags(QCommandLineOption::HiddenFromHelp);
+    parser.addOption(selfTestOpt);
     parser.process(app);
     about.processCommandLine(&parser);
 
@@ -121,6 +127,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return -1;
     }
 
-    int ret = app.exec();
-    return ret;
+    if (parser.isSet(selfTestOpt)) {
+        QTimer::singleShot(std::chrono::milliseconds(250), &app, &QCoreApplication::quit);
+    }
+
+    return app.exec();
 }
