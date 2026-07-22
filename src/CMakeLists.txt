@@ -25,7 +25,7 @@ set(kongress_SRCS
     alarmchecker.h
     )
 
-add_executable(kongress ${kongress_SRCS} ${RESOURCES})
+add_executable(kongress ${kongress_SRCS})
 
 ecm_add_qml_module(kongress URI "org.kde.kongress" VERSION 0.1)
 

@@ -23,7 +23,7 @@ set(kongressac_SRCS
 qt_add_dbus_adaptor(kongressac_SRCS org.kde.kongressac.xml calalarmclient.h CalAlarmClient)
 qt_add_dbus_adaptor(kongressac_SRCS org.kde.wakeupmanager.PowerManagement.xml wakeupmanager.h WakeupManager)
 
-add_executable(kongressac ${kongressac_SRCS} ${RESOURCES})
+add_executable(kongressac ${kongressac_SRCS})
 
 target_link_libraries(kongressac
     KF6::CoreAddons
