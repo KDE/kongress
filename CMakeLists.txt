@@ -46,7 +46,7 @@ ecm_setup_version(${PROJECT_VERSION}
 
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg Qml QuickControls2 Network)
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami2 I18n CalendarCore CoreAddons)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Config Kirigami I18n CalendarCore CoreAddons)
 find_package(KF6KirigamiAddons 1.0 REQUIRED)
 find_package(KOSMIndoorMap 25.08 REQUIRED)
 ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.27.0)
