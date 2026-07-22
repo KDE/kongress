@@ -50,7 +50,7 @@ target_include_directories(kongress PRIVATE ${CMAKE_BINARY_DIR})
 
 if (ANDROID)
     target_link_libraries(kongress PRIVATE
-        KF6::Kirigami2
+        KF6::Kirigami
         KF6::ColorScheme
         Qt::Svg
         OpenSSL::SSL
