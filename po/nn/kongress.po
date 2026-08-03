@@ -1,12 +1,13 @@
 # Translation of kongress to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2024, 2026.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-03 01:16+0000\n"
-"PO-Revision-Date: 2024-07-26 14:52+0200\n"
+"PO-Revision-Date: 2026-08-02 11:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -74,7 +75,7 @@ msgstr "Arragengements­detaljar"
 #, kde-format
 msgctxt "list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: contents/ui/EventInfo.qml:116
 #, kde-format
@@ -82,28 +83,28 @@ msgid "Web Page"
 msgstr "Heimeside"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
-msgstr "Favorittar"
+msgstr "Fjern frå favorittar"
 
 #: contents/ui/EventInfo.qml:128
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
-msgstr "Favorittar"
+msgstr "Legg til favorittar"
 
 #: contents/ui/EventInfo.qml:149
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "Presentasjonen er lagd til som favoritt"
+msgstr "Presentasjon fjerna frå favorittar."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr ""
+msgstr "Klarte ikkje fjerna presentasjon frå favorittar."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format

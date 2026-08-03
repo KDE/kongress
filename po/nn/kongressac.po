@@ -1,12 +1,12 @@
 # Translation of kongressac to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:47+0000\n"
-"PO-Revision-Date: 2021-01-08 22:02+0100\n"
+"PO-Revision-Date: 2026-08-02 11:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -35,8 +35,7 @@ msgid "Kongress Alarm Check Daemon"
 msgstr "Teneste for Kongress-varsling"
 
 #: kongressacmain.cpp:25
-#, fuzzy, kde-format
-#| msgid "(c) 2021 Dimitris Kardarakos"
+#, kde-format
 msgid "© 2021 Dimitris Kardarakos"
 msgstr "© 2021 Dimitris Kardarakos"
 
