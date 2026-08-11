@@ -4,7 +4,9 @@
     "runtime-version": "6.11",
     "sdk": "org.kde.Sdk",
     "command": "kongress",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "finish-args": [
         "--share=ipc",
         "--share=network",
@@ -33,7 +35,13 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kopeninghours.git", "branch": "master" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kopeninghours.git",
+                    "branch": "master"
+                }
+            ]
         },
         {
             "name": "recast",
@@ -46,8 +54,16 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/recastnavigation/recastnavigation", "branch": "main" } ],
-            "cleanup": [ "/lib" ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/recastnavigation/recastnavigation",
+                    "branch": "main"
+                }
+            ],
+            "cleanup": [
+                "/lib"
+            ]
         },
         {
             "name": "kosmindoormap",
@@ -57,14 +73,27 @@
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/kosmindoormap.git", "branch": "master" } ]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/libraries/kosmindoormap.git",
+                    "branch": "master"
+                }
+            ]
         },
         {
             "name": "kongress",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".",
+                    "skip": [
+                        ".git"
+                    ]
+                }
+            ]
         }
     ]
 }
-
