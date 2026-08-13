@@ -297,7 +297,7 @@
       <description>
         <ul>
           <li>Ensure that export message is always shown</li>
-          <li xml:lang="ar">ضمان ظهور رسالة التصدير دائماً</li>
+          <li xml:lang="ar">ضمان ظهور رسالة التصدير دائمًا</li>
           <li xml:lang="ca">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="ca-valencia">Assegura que sempre es mostra el missatge d'exportació</li>
           <li xml:lang="cs">Zajištěno, aby se zpráva o exportu vždy zobrazovala</li>
