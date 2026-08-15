@@ -98,13 +98,13 @@ msgstr "Afig als preferits"
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
-msgstr "La xerrada s'ha eliminat dels preferits."
+msgstr "La xarrada s'ha eliminat dels preferits."
 
 #: contents/ui/EventInfo.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
-msgstr "No s'ha pogut eliminar la xerrada dels preferits."
+msgstr "No s'ha pogut eliminar la xarrada dels preferits."
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -119,19 +119,19 @@ msgstr "Obri una carpeta"
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found for %1"
-msgstr "No s'ha trobat cap xerrada preferida per a %1"
+msgstr "No s'ha trobat cap xarrada preferida per a %1"
 
 #: contents/ui/FavoritesView.qml:88
 #, kde-format
 msgid "No favorite talks found"
-msgstr "No s'ha trobat cap xerrada preferida"
+msgstr "No s'ha trobat cap xarrada preferida"
 
 #: contents/ui/FavoritesView.qml:184
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
-msgstr[0] "Se sobreposa amb una altra xerrada"
-msgstr[1] "Se sobreposa amb %1 altres xerrades"
+msgstr[0] "Se sobreposa amb una altra xarrada"
+msgstr[1] "Se sobreposa amb %1 altres xarrades"
 
 #: contents/ui/GlobalDrawer.qml:57
 #, kde-format
@@ -238,12 +238,12 @@ msgstr "Mostra la informació"
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found for %1"
-msgstr "No s'ha trobat cap xerrada per a %1"
+msgstr "No s'ha trobat cap xarrada per a %1"
 
 #: contents/ui/ScheduleView.qml:50
 #, kde-format
 msgid "No talks found"
-msgstr "No s'ha trobat cap xerrada"
+msgstr "No s'ha trobat cap xarrada"
 
 #: contents/ui/SettingsView.qml:20
 #, kde-format
@@ -268,12 +268,12 @@ msgstr "Les notificacions no estan admeses en la vostra plataforma"
 #: contents/ui/SettingsView.qml:48
 #, kde-format
 msgid "Add reminder to favorite talks"
-msgstr "Afig un recordatori a les xerrades preferides"
+msgstr "Afig un recordatori a les xarrades preferides"
 
 #: contents/ui/SettingsView.qml:55
 #, kde-format
 msgid "Remind before talk start (minutes)"
-msgstr "Recorda abans de l'inici de la xerrada (minuts)"
+msgstr "Recorda abans de l'inici de la xarrada (minuts)"
 
 #: eventcontroller.cpp:69
 #, kde-format
@@ -291,13 +291,13 @@ msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
 "%1"
 msgstr ""
-"La xerrada s'ha afegit als preferits, però se sobreposa amb una d'existent:\n"
+"La xarrada s'ha afegit als preferits, però se sobreposa amb una d'existent:\n"
 "%1"
 
 #: eventcontroller.cpp:133
 #, kde-format
 msgid "Talk added to favorites"
-msgstr "La xerrada s'ha afegit als preferits"
+msgstr "La xarrada s'ha afegit als preferits"
 
 #: main.cpp:68
 #, kde-format
