@@ -638,7 +638,7 @@
           <li>Fix display of talk time on notifications</li>
           <li xml:lang="ar">إصلاح عرض وقت المحادثة في التنبيهات</li>
           <li xml:lang="ca">Corregeix la visualització del temps de la xerrada a les notificacions</li>
-          <li xml:lang="ca-valencia">Corregix la visualització del temps de la xerrada a les notificacions</li>
+          <li xml:lang="ca-valencia">Corregix la visualització del temps de la xarrada a les notificacions</li>
           <li xml:lang="cs">Oprava zobrazení doby hovoru v oznámeních</li>
           <li xml:lang="de">Fehler bei der Anzeige der Vortragszeit in Benachrichtigungen behoben</li>
           <li xml:lang="es">Se ha corregido la visualización de tiempo de la charla en las notificaciones.</li>
@@ -682,7 +682,7 @@
           <li>Fix grouping of talks into conference days</li>
           <li xml:lang="ar">إصلاح تجميع المحادثات في أيام المؤتمر</li>
           <li xml:lang="ca">Corregeix l'agrupació de xerrades en dies de conferència</li>
-          <li xml:lang="ca-valencia">Corregix l'agrupació de xerrades en dies de conferència</li>
+          <li xml:lang="ca-valencia">Corregix l'agrupació de xarrades en dies de conferència</li>
           <li xml:lang="cs">Opraveno seskupení přednášek podle konferenčních dnů</li>
           <li xml:lang="de">Fehler bei der Gruppierung von Vorträgen nach Konferenztagen behoben</li>
           <li xml:lang="es">Se ha corregido la agrupación de charlas en los días de conferencia</li>
@@ -842,7 +842,7 @@
           <li>Show the schedule of the talks by conference day</li>
           <li xml:lang="ar">إظهار جدول المحادثات حسب يوم المؤتمر</li>
           <li xml:lang="ca">Mostra l'horari de les xerrades per jornada de conferència</li>
-          <li xml:lang="ca-valencia">Mostra l'horari de les xerrades per jornada de conferència</li>
+          <li xml:lang="ca-valencia">Mostra l'horari de les xarrades per jornada de conferència</li>
           <li xml:lang="cs">Zobrazení programu přednášek podle jednotlivých konferenčních dnů</li>
           <li xml:lang="de">Den Vortragszeitplan nach Konferenztag anzeigen</li>
           <li xml:lang="es">Mostrar la programación de las charlas por día de conferencias</li>
@@ -864,7 +864,7 @@
           <li>Manage a list of favorite talks</li>
           <li xml:lang="ar">إدارة قائمة بالمحادثات المفضلة</li>
           <li xml:lang="ca">Gestiona una llista de xerrades preferides</li>
-          <li xml:lang="ca-valencia">Gestiona una llista de xerrades preferides</li>
+          <li xml:lang="ca-valencia">Gestiona una llista de xarrades preferides</li>
           <li xml:lang="cs">Správa seznamu oblíbených přednášek</li>
           <li xml:lang="de">Eine Liste favorisierter Vorträge verwalten</li>
           <li xml:lang="es">Gestión de una lista de charlas favoritas</li>
