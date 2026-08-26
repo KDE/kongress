@@ -271,6 +271,7 @@
           <li xml:lang="cs">Správná práce s verzemi v systému Android</li>
           <li xml:lang="de">Korrekter Umgang mit Versionen unter Android</li>
           <li xml:lang="es">Manejo correcto de la versión en Android</li>
+          <li xml:lang="fi">version oikea käsittely Androidissa</li>
           <li xml:lang="fr">Gestion correcte des versions sous Android</li>
           <li xml:lang="he">טיפול ראוי בגרסאות ב־Android</li>
           <li xml:lang="ia">Proprie manear de version sur Android</li>
@@ -303,6 +304,7 @@
           <li xml:lang="cs">Zajištěno, aby se zpráva o exportu vždy zobrazovala</li>
           <li xml:lang="de">Sicherstellen, dass die Exportnachricht immer angezeigt wird</li>
           <li xml:lang="es">Asegurar que el mensaje de exportación se muestra siempre</li>
+          <li xml:lang="fi">varmistetaan, että vientiviesti näytetään aina</li>
           <li xml:lang="fr">Veuillez-vous assurer que le message d'exportation est toujours affiché</li>
           <li xml:lang="he">וידוא שהודעת הייצוא מופיעה תמיד</li>
           <li xml:lang="ia">Assecura que message a exportar es sempre monstrate</li>
@@ -339,6 +341,7 @@
         <p xml:lang="cs">Vylepšení a překlady</p>
         <p xml:lang="de">Verbesserungen und Übersetzungen</p>
         <p xml:lang="es">Mejoras y traducciones</p>
+        <p xml:lang="fi">Parannuksia ja käännöksiä</p>
         <p xml:lang="fr">Améliorations et traductions</p>
         <p xml:lang="he">שיפורים ותרגומים</p>
         <p xml:lang="ia">Melioramentos e traductiones</p>
@@ -362,6 +365,7 @@
           <li xml:lang="cs">Zefektivnění sestavování aplikací pro Android</li>
           <li xml:lang="de">Erstellung der Anwendung für Android modernisiert</li>
           <li xml:lang="es">Se ha optimizado la compilación en Android</li>
+          <li xml:lang="fi">virtaviivaistettu Android-koostaminen</li>
           <li xml:lang="fr">Rationaliser la compilation sous Android</li>
           <li xml:lang="he">הבנייה ל־Android עוברת חלק יותר</li>
           <li xml:lang="ia">Construction de Streamline Android</li>
@@ -384,6 +388,7 @@
           <li xml:lang="cs">Aktualizované překlady</li>
           <li xml:lang="de">Übersetzungen aktualisiert</li>
           <li xml:lang="es">Actualización de las traducciones</li>
+          <li xml:lang="fi">käännöspäivityksiä</li>
           <li xml:lang="fr">Mettre à jour les traductions</li>
           <li xml:lang="he">עדכוני תרגומים</li>
           <li xml:lang="ia">Actualisa traductiones</li>
@@ -413,6 +418,7 @@
         <p xml:lang="cs">Vydání Kongressu 21.05</p>
         <p xml:lang="de">Kongress-Version 21.05</p>
         <p xml:lang="es">Publicación de Kongress 21.05</p>
+        <p xml:lang="fi">Kongress 21.05 -julkaisu</p>
         <p xml:lang="fr">Publication de Kongress 21.05</p>
         <p xml:lang="he">מהדורה 21.05 של קונגרס</p>
         <p xml:lang="ia">Kongress version 21.05</p>
@@ -437,6 +443,7 @@
           <li xml:lang="cs">Přidána URL adresa systému pro sledování chyb</li>
           <li xml:lang="de">Adresse zur Fehlerverfolgung hinzugefügt</li>
           <li xml:lang="es">Se ha añadido URL de seguimiento de fallos</li>
+          <li xml:lang="fi">lisätty vianjäljityksen verkko-osoite</li>
           <li xml:lang="fr">Ajouter l'URL de suivi des bogues</li>
           <li xml:lang="he">נוספה כתובת מעקב תקלות</li>
           <li xml:lang="ia">Adde url de traciamento de faltas (bugtracking)</li>
@@ -459,6 +466,7 @@
           <li xml:lang="cs">Zjednodušení manifestu Flatpak</li>
           <li xml:lang="de">Flatpak-Manifest vereinfacht</li>
           <li xml:lang="es">Simplificación del manifiesto de flatpak</li>
+          <li xml:lang="fi">yksinkertaistettu Flatpak-manifestia</li>
           <li xml:lang="fr">Simplifier le manifeste de FlatPak</li>
           <li xml:lang="he">המצהר (manifest) של flatpak עבר פישוט</li>
           <li xml:lang="ia">Simplifica manifesto de flatpak</li>
@@ -481,6 +489,7 @@
           <li xml:lang="cs">Zjednodušení zobrazení oblíbených položek</li>
           <li xml:lang="de">Favoritenansicht modernisiert</li>
           <li xml:lang="es">Se ha optimizado la vista de favoritos</li>
+          <li xml:lang="fi">virtaviivaisstettu suosikkinäkymää</li>
           <li xml:lang="fr">Rationaliser l’affichage des favoris</li>
           <li xml:lang="he">תצוגת המועדפים עברה כוונון לצורכי המשתמשים</li>
           <li xml:lang="ia">Vide favoritos de Streamline</li>
@@ -503,6 +512,7 @@
           <li xml:lang="cs">Zjednodušený výběr konference</li>
           <li xml:lang="de">Konferenzauswahl vereinfacht</li>
           <li xml:lang="es">Simplificación de la selección de conferencias</li>
+          <li xml:lang="fi">yksinkertaistettu konferenssin valintaa</li>
           <li xml:lang="fr">Simplifier la sélection des conférences</li>
           <li xml:lang="he">פישוט בחירת כנס</li>
           <li xml:lang="ia">Simplifica selection de conferentia</li>
@@ -525,6 +535,7 @@
           <li xml:lang="cs">Přidána ikona zástupného symbolu na stránku Oblíbené</li>
           <li xml:lang="de">Platzhaltersymbol zur Favoritenseite hinzugefügt</li>
           <li xml:lang="es">Se ha añadido un icono de relleno a la página de favoritos</li>
+          <li xml:lang="fi">lisätty suosikkisivulle paikkamerkkikuvake</li>
           <li xml:lang="fr">Ajouter une icône de remplacement à la page des signets</li>
           <li xml:lang="he">הוספת סמל ממלא מקום לעמוד המועדפים</li>
           <li xml:lang="ia">Adde icone de substituto alpagina de Favoritos</li>
@@ -547,6 +558,7 @@
           <li xml:lang="cs">Export oblíbených nabídek</li>
           <li xml:lang="de">Exportfunktion für Favoriten hinzugefügt</li>
           <li xml:lang="es">Ofrecer exportación de favoritos</li>
+          <li xml:lang="fi">tarjotaan suosikkien vientiä</li>
           <li xml:lang="fr">Exportation des favoris de l'offre</li>
           <li xml:lang="he">הצעת ייצוא מועדפים</li>
           <li xml:lang="ia">Offere exportation de favoritos</li>
@@ -569,6 +581,7 @@
           <li xml:lang="cs">Přidán obecný název</li>
           <li xml:lang="de">Generischen Namen hinzugefügt</li>
           <li xml:lang="es">Añadir un nombre genérico</li>
+          <li xml:lang="fi">lisätty yleisnimi</li>
           <li xml:lang="fr">Ajouter un nom générique</li>
           <li xml:lang="he">נוסף שם כללי</li>
           <li xml:lang="ia">Adde nomine generic</li>
@@ -591,6 +604,7 @@
           <li xml:lang="cs">Odstraněny nepotřebné funkce CMake</li>
           <li xml:lang="de">Nicht benötigte CMake-Funktionen entfernt</li>
           <li xml:lang="es">Eliminar las funciones de cmake no necesarias</li>
+          <li xml:lang="fi">poistettu tarpeettomat cmake-funktiot</li>
           <li xml:lang="fr">Supprimer les fonctions « cmake » inutiles</li>
           <li xml:lang="he">הוסרו פונקציות cmake בלתי נחוצות</li>
           <li xml:lang="ia">Remove functiones de cmake non necessari</li>
@@ -618,6 +632,7 @@
         <p xml:lang="cs">Verze s opravami chyb pro Kongress</p>
         <p xml:lang="de">Veröffentlichung von Kongress mit Fehlerkorrekturen</p>
         <p xml:lang="es">Versión de corrección de errores de Kongress</p>
+        <p xml:lang="fi">Kongressin viankorjausjulkaisu</p>
         <p xml:lang="fr">Publication d'une version corrective de Kongress </p>
         <p xml:lang="he">מהדורת תיקון תקלות של Kongress</p>
         <p xml:lang="ia">Kongress version de correctiones de falta</p>
@@ -642,6 +657,7 @@
           <li xml:lang="cs">Oprava zobrazení doby hovoru v oznámeních</li>
           <li xml:lang="de">Fehler bei der Anzeige der Vortragszeit in Benachrichtigungen behoben</li>
           <li xml:lang="es">Se ha corregido la visualización de tiempo de la charla en las notificaciones.</li>
+          <li xml:lang="fi">korjattu esitysajan näyttö ilmoituksissa</li>
           <li xml:lang="fr">Correction de l'affichage du temps de la conférence dans les notifications</li>
           <li xml:lang="he">תוקנה תצוגת זמן ההרצאה בהתראות</li>
           <li xml:lang="ia">Corrige le monstrar de tempore de discurso sur  notificationes</li>
@@ -664,6 +680,7 @@
           <li xml:lang="cs">Zabráněno pádu kongressac</li>
           <li xml:lang="de">Abstürze von „kongressac“ behoben</li>
           <li xml:lang="es">Evitar que kongressac falle</li>
+          <li xml:lang="fi">estetty kongressac:ta kaatumasta</li>
           <li xml:lang="fr">Empêcher le module « kongressac » de se planter</li>
           <li xml:lang="he">נמנעת קריסה של kongressac</li>
           <li xml:lang="ia">Preveni kongressac ab fracassar</li>
@@ -686,6 +703,7 @@
           <li xml:lang="cs">Opraveno seskupení přednášek podle konferenčních dnů</li>
           <li xml:lang="de">Fehler bei der Gruppierung von Vorträgen nach Konferenztagen behoben</li>
           <li xml:lang="es">Se ha corregido la agrupación de charlas en los días de conferencia</li>
+          <li xml:lang="fi">korjattu esitysten ryhmittely konferenssipäiville</li>
           <li xml:lang="fr">Correction du regroupement des conférences par jour de conférence</li>
           <li xml:lang="he">תוקן קיבוץ של הרצאות לימי כנס</li>
           <li xml:lang="ia">Corrige regruppar de discursos in dies de conferentias</li>
@@ -708,6 +726,7 @@
           <li xml:lang="cs">Opraveny časy v plánu budíků</li>
           <li xml:lang="de">Fehler bei Benachrichtigungen zum Zeitplan behoben</li>
           <li xml:lang="es">Se han corregido los tiempos programados de alarmas</li>
+          <li xml:lang="fi">korjattu hälytysten aikataulutusajat</li>
           <li xml:lang="fr">Correction des horaires programmés d'alarmes</li>
           <li xml:lang="he">תוקנו זמני לוח זמנים של התראות</li>
           <li xml:lang="ia">Corrige tempores de planification de alarma</li>
@@ -730,6 +749,7 @@
           <li xml:lang="cs">Zabráněno zobrazení duplicitních záznamů o konferencích</li>
           <li xml:lang="de">Anzeige doppelter Konferenzeinträge verhindern</li>
           <li xml:lang="es">Evitar que se muestren entradas de conferencias duplicadas</li>
+          <li xml:lang="fi">estetty näyttämästä toistuvia konferenssitietueita</li>
           <li xml:lang="fr">Empêcher l'affichage des doublons d'entrées de conférence</li>
           <li xml:lang="he">למנוע הופעה של רשומות כנסים כפולות</li>
           <li xml:lang="ia">Preveni que entratas de conferentia duplicate es monstrate</li>
@@ -752,6 +772,7 @@
           <li xml:lang="cs">V denních rozvrzích se nezobrazí obecné, vícedenní události v kalendáři</li>
           <li xml:lang="de">Generische, mehrtägige Kalenderereignisse nicht im Tageszeitplan anzeigen</li>
           <li xml:lang="es">No mostrar eventos de calendario multidía genéricos en la programación diaria</li>
+          <li xml:lang="fi">ei näytetä yleisiä monen päivän kalenteritapahtumia päiväaikatauluissa</li>
           <li xml:lang="fr">Ne pas afficher les évènements d'agenda génériques et sur plusieurs jours dans les emplois du temps quotidiens</li>
           <li xml:lang="he">לא להציג אירועי לוח שנה מרובי ימים כלליים בלוחות הזמנים היומיים</li>
           <li xml:lang="ia">Non monstra eventos generic de calendario de multe dies sur le planificationes quotidian</li>
@@ -774,6 +795,7 @@
           <li xml:lang="cs">Opraveno nastavení překladu</li>
           <li xml:lang="de">Fehler beim Einrichten der Übersetzungen behoben</li>
           <li xml:lang="es">Se ha corregido la configuración de las traducciones</li>
+          <li xml:lang="fi">korjattu käännösasetuksia</li>
           <li xml:lang="fr">Corriger les configurations de traductions</li>
           <li xml:lang="he">תוקנו הגדרות תרגומים</li>
           <li xml:lang="ia">Corrige confiigurationes de traduction</li>
@@ -801,6 +823,7 @@
         <p xml:lang="cs">První oficiální vydání Kongressu</p>
         <p xml:lang="de">Erste offizielle Veröffentlichung von Kongress</p>
         <p xml:lang="es">Primera versión oficial de Kongress</p>
+        <p xml:lang="fi">Kongressin virallinen ensijulkaisu</p>
         <p xml:lang="fr">Première publication officielle de Kongress</p>
         <p xml:lang="he">המהדורה הרשמית הראשונה של Kongress</p>
         <p xml:lang="ia">Prime version official de Kongress</p>
@@ -824,6 +847,7 @@
           <li xml:lang="cs">Zobrazení rozvrhu sbírky konferencí</li>
           <li xml:lang="de">Den Zeitplan einer Sammlung von Konferenzen anzeigen</li>
           <li xml:lang="es">Mostrar la programación de una colección de conferencias</li>
+          <li xml:lang="fi">näytä aikataulu joukolle konferensseja</li>
           <li xml:lang="fr">Afficher le programme d'une série de conférences</li>
           <li xml:lang="he">הצגת לוח הזמנים לאוסף של כנסים</li>
           <li xml:lang="ia">Monstra le planification de un collection de conferentias</li>
@@ -846,6 +870,7 @@
           <li xml:lang="cs">Zobrazení programu přednášek podle jednotlivých konferenčních dnů</li>
           <li xml:lang="de">Den Vortragszeitplan nach Konferenztag anzeigen</li>
           <li xml:lang="es">Mostrar la programación de las charlas por día de conferencias</li>
+          <li xml:lang="fi">näytä esitysaikataulu konferenssipäivittäin</li>
           <li xml:lang="fr">Afficher le programme des conférences par jour de conférence</li>
           <li xml:lang="he">הצגת לוח הזמנים של ההרצאות לפי יום הכנס</li>
           <li xml:lang="ia">Monstra le planification del discursos per die de conferentia</li>
@@ -868,6 +893,7 @@
           <li xml:lang="cs">Správa seznamu oblíbených přednášek</li>
           <li xml:lang="de">Eine Liste favorisierter Vorträge verwalten</li>
           <li xml:lang="es">Gestión de una lista de charlas favoritas</li>
+          <li xml:lang="fi">hallinnoi suosikkiesitysten luetteloa</li>
           <li xml:lang="fr">Gérer une liste de conférences favorites</li>
           <li xml:lang="he">ניהול רשימה של הרצאות מועדפות</li>
           <li xml:lang="ia">Gere un lista de discursos favorite</li>
@@ -890,6 +916,7 @@
           <li xml:lang="cs">Upozornění uživatele před zahájením přednášky (pouze v KDE Plasma)</li>
           <li xml:lang="de">Den Benutzer vor Beginn eines Vortrags benachrichtigen (nur auf KDE Plasma)</li>
           <li xml:lang="es">Notificar al usuario antes del inicio de la charla (solo en KDE Plasma)</li>
+          <li xml:lang="fi">tiedota käyttäjää ennen esityksen alkua (vain KDE Plasmassa)</li>
           <li xml:lang="fr">Notifier l'utilisateur avant les débuts de conversation (Uniquement sur KDE Plasma)</li>
           <li xml:lang="he">להודיע למשתמש לפני שהרצאה מתחילה (בפלזמה מבית KDE בלבד)</li>
           <li xml:lang="ia">Notifica le usator ante que le discurso starta (solmente sur KDE Plasma)</li>
