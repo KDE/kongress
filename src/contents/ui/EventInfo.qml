@@ -4,11 +4,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+import QtCore
 import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kitemmodels
+import org.kde.calendarcore as KCalendarCore
 import org.kde.kongress as Kongress
 
 FormCard.FormCardPage {
@@ -32,6 +35,7 @@ FormCard.FormCardPage {
     required property bool allDay
 
     required property string viewMode
+    required property var roCalendar
     required property var rwCalendar
 
     title: !Kirigami.Settings.isMobile ? root.summary : i18nc("@title", "Event Details")
@@ -167,6 +171,57 @@ FormCard.FormCardPage {
                 const addEditResult = eventController.addEdit(vevent);
                 showPassiveNotification(addEditResult["message"]);
             }
+        }
+
+        FormCard.FormDelegateSeparator {
+            visible: addCalendarButton.visible
+        }
+
+        FormCard.FormButtonDelegate {
+            id: addCalendarButton
+            icon.name: "view-calendar-day"
+            text: i18nc("@action:button", "Add to calendar…")
+            onClicked: {
+                if (calendarPermission.status === Qt.PermissionStatus.Granted) {
+                    calendarSelector.initAndOpen();
+                } else {
+                    calendarPermission.request();
+                }
+            }
+            visible: KCalendarCore.CalendarPluginLoader.hasPlugin
+            enabled: calendarPermission.status !== Qt.PermissionStatus.Denied
+        }
+    }
+
+    CalendarPermission {
+        id: calendarPermission
+        accessMode: CalendarPermission.ReadWrite
+        onStatusChanged: {
+            if (status === Qt.PermissionStatus.Granted) {
+                calendarSelector.initAndOpen();
+            }
+        }
+    }
+
+    KSortFilterProxyModel {
+        id: writableCalendars
+        filterRoleName: "accessMode"
+        filterString: KCalendarCore.KCalendarCore.ReadWrite
+    }
+    CalendarSelectionDialog {
+        id: calendarSelector
+        parent: applicationWindow().overlay
+
+        model: writableCalendars
+        onCalendarSelected: (calendar) => {
+            eventController.addToCalendar(calendar, root.roCalendar, root.uid);
+        }
+        function initAndOpen() {
+            if (!writableCalendars.sourceModel) {
+                // needs to be created on demand, after we have calendar access permissions
+                writableCalendars.sourceModel = Qt.createComponent("org.kde.calendarcore", "CalendarListModel").createObject(root);
+            }
+            open();
         }
     }
 }

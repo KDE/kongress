@@ -31,6 +31,7 @@ ecm_add_qml_module(kongress URI "org.kde.kongress" VERSION 0.1)
 
 ecm_target_qml_sources(kongress SOURCES
     contents/ui/Main.qml
+    contents/ui/CalendarSelectionDialog.qml
     contents/ui/GlobalDrawer.qml
     contents/ui/ScheduleView.qml
     contents/ui/FavoritesView.qml

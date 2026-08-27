@@ -70,6 +70,7 @@ Kirigami.ScrollablePage {
         id: eventInfo
 
         EventInfo {
+            roCalendar: root.roCalendar
             rwCalendar: root.rwCalendar
             viewMode: "favorites"
         }

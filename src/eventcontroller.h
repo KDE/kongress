@@ -11,6 +11,11 @@
 #include <QQmlEngine>
 #include <QVariantMap>
 
+namespace KCalendarCore
+{
+class Calendar;
+}
+
 class CalendarController;
 class LocalCalendar;
 class SettingsController;
@@ -47,6 +52,7 @@ public:
 
     Q_INVOKABLE bool remove(const QVariantMap &event);
     Q_INVOKABLE QVariantMap addEdit(const QVariantMap &event);
+    Q_INVOKABLE void addToCalendar(KCalendarCore::Calendar *targetCalendar, const LocalCalendar *sourceCalendar, const QString &uid);
 
 Q_SIGNALS:
     void calendarControllerChanged();

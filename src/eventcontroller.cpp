@@ -8,8 +8,12 @@
 #include "calendarcontroller.h"
 #include "localcalendar.h"
 #include "settingscontroller.h"
+
+#include <KCalendarCore/Calendar>
 #include <KCalendarCore/Event>
+
 #include <KLocalizedString>
+
 #include <QDebug>
 
 using namespace Qt::Literals::StringLiterals;
@@ -218,6 +222,27 @@ bool EventController::isFavorite() const
     }
 
     return false;
+}
+
+void EventController::addToCalendar(KCalendarCore::Calendar *targetCalendar, const LocalCalendar *sourceCalendar, const QString &uid)
+{
+    if (!targetCalendar) {
+        return;
+    }
+    if (targetCalendar->isLoading()) {
+        connect(targetCalendar, &KCalendarCore::Calendar::isLoadingChanged, sourceCalendar, [this, targetCalendar, sourceCalendar, uid]() {
+            addToCalendar(targetCalendar, sourceCalendar, uid);
+        });
+    }
+
+    const auto srcEvent = sourceCalendar->memorycalendar()->event(uid);
+    auto targetEvent = targetCalendar->event(uid);
+    if (!targetEvent) {
+        targetCalendar->addEvent(KCalendarCore::Event::Ptr(srcEvent->clone()));
+    } else {
+        // weird, but actually correct
+        *((KCalendarCore::IncidenceBase *)targetEvent.data()) = *((KCalendarCore::IncidenceBase *)srcEvent.data());
+    }
 }
 
 #include "moc_eventcontroller.cpp"
