@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2024-12-28 08:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -50,6 +50,12 @@ msgstr "Iragana"
 msgid "Upcoming"
 msgstr "Datorrena"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -65,24 +71,24 @@ msgstr "Ez da konferentziarik aurkitu"
 msgid "Reload"
 msgstr "Birzamatu"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Ekitaldiaren xehetasunak"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr ", "
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "Web-orria"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Delete from Favorites"
@@ -90,23 +96,29 @@ msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "Ezabatu gogokoetatik"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "Gehitu gogokoetara"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "Solasaldia gogokoetatik kendu da."
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
 msgstr "Ezin izan du solasaldia gogokoetatik kendu."
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -118,17 +130,17 @@ msgstr "Esportatu"
 msgid "Open folder"
 msgstr "Ireki karpeta"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Ez da aurkitu %1(e)rako solasaldirik"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Ez da gogoko solasaldirik aurkitu"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -237,12 +249,12 @@ msgstr "Nabigato hona"
 msgid "Show information"
 msgstr "Erakutsi informazioa"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Ez da %1(e)ren solasaldirik aurkitu"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "Ez da solasaldirik aurkitu"
@@ -277,17 +289,17 @@ msgstr "Gehitu oroigarria gogoko solasaldietara"
 msgid "Remind before talk start (minutes)"
 msgstr "Gogorarazi hitzaldia hasi aurretik (minutu)"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "Errorera ekitaldia sortzean"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "Gogokoetan dagoeneko"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -297,7 +309,7 @@ msgstr ""
 "da:\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Solasaldia gogokoetara gehitu da"

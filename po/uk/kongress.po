@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2026-03-10 14:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -50,6 +50,12 @@ msgstr "Минулі"
 msgid "Upcoming"
 msgstr "Майбутні"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -65,46 +71,52 @@ msgstr "Конференцій не виявлено"
 msgid "Reload"
 msgstr "Перезавантажити"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Подробиці події"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr ", "
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "Вебсторінку"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "Вилучити з улюблених"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "Додати до улюбленого"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "Доповідь вилучено з улюблених"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
 msgstr "Не вдалося вилучити доповідь з улюблених."
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -116,17 +128,17 @@ msgstr "Експортувати"
 msgid "Open folder"
 msgstr "Відкрити теку"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "Не знайдено улюблених доповідей, які відповідають %1"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "Не знайдено улюблених доповідей"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -237,12 +249,12 @@ msgstr "Навігація сюди"
 msgid "Show information"
 msgstr "Показати відомості"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "Не знайдено доповідей, які відповідають %1"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "Доповідей не виявлено"
@@ -277,17 +289,17 @@ msgstr "Додати нагадування для улюблених допов
 msgid "Remind before talk start (minutes)"
 msgstr "Нагадування до початку доповіді (у хвилинах)"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "Помилка під час спроби створити запис події"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "Вже є в улюблених"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -296,7 +308,7 @@ msgstr ""
 "Доповідь додано до улюблених, але вона перекривається із наявними:\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Доповідь додано до улюблених"

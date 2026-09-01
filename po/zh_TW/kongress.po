@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2026-03-16 16:30+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -51,6 +51,12 @@ msgstr "過去"
 msgid "Upcoming"
 msgstr "即將到來"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -66,46 +72,52 @@ msgstr "未找到研討會"
 msgid "Reload"
 msgstr "重新載入"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "活動詳細資訊"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr "、"
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "網頁"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "從收藏中移除"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "加入收藏"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "已將演講從收藏中移除。"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
 msgstr "無法從收藏中移除演講。"
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -117,17 +129,17 @@ msgstr "匯出"
 msgid "Open folder"
 msgstr "開啟資料夾"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "未找到 %1 的收藏的演講"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "未收藏的演講"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -235,12 +247,12 @@ msgstr "導航到這裡"
 msgid "Show information"
 msgstr "顯示資訊"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "未找到 %1 的演講"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "未找到演講"
@@ -275,17 +287,17 @@ msgstr "為收藏的演講新增提醒"
 msgid "Remind before talk start (minutes)"
 msgstr "在演講開始前幾分鐘提醒"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "活動建立時發生錯誤"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "已在收藏"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -294,7 +306,7 @@ msgstr ""
 "演講已加入收藏，但它跟收藏內其他演講重疊：\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "已將演講加入收藏"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2026-03-10 02:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,6 +48,12 @@ msgstr "წარსული"
 msgid "Upcoming"
 msgstr "მოახლოებული"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -63,46 +69,52 @@ msgstr "კონფერენციების გარეშე"
 msgid "Reload"
 msgstr "თავიდან ჩატვირთვა"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "მოვლენის დეტალები"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr ", "
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "ვებ გვერდი"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "რჩეულებიდან წაშლა"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "რჩეულებში ჩამატება"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "საუბარი წაიშალა რჩეულებიდან."
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
 msgstr "რჩეულებიდან საუბრის წაშლა შეუძლებელია."
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -114,17 +126,17 @@ msgstr "გატანა"
 msgid "Open folder"
 msgstr "საქაღალდის გახსნა"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "%1-ის რჩეული საუბრები ვერ ვიპოვე"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "რჩეული საუბრები ვერ ვიპოვე"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -233,12 +245,12 @@ msgstr "ნავიგაცია აქამდე"
 msgid "Show information"
 msgstr "ინფორმაციის ჩვენება"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "საუბრები %1-სთვის ვერ ვიპოვე"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "საუბრები ვერ ვიპოვე"
@@ -273,17 +285,17 @@ msgstr "რჩეული საუბრებისთვის შემხ�
 msgid "Remind before talk start (minutes)"
 msgstr "შეხსენება საუბრის დაწყებამდე (წთ)"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "შეცდომა მოვლენის შექმნისას"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "უკვე რჩეულებშია"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -292,7 +304,7 @@ msgstr ""
 "საუბარი დამატებულია რჩეულებში, მაგრამ ეფარება არსებულებს:\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "საუბარი რჩეულებში ჩაემატა"

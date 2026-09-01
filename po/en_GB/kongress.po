@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2024-07-05 13:47+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -47,6 +47,12 @@ msgstr "Past"
 msgid "Upcoming"
 msgstr "Upcoming"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -62,48 +68,54 @@ msgstr "No conference found"
 msgid "Reload"
 msgstr "Reload"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "Event Details"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr ""
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "Web Page"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, fuzzy, kde-format
 #| msgid "Favorites"
 msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "Favourites"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, fuzzy, kde-format
 #| msgid "Favorites"
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "Favourites"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, fuzzy, kde-format
 #| msgid "Talk added to favorites"
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "Talk added to favourites"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
+msgstr ""
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
 msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
@@ -116,17 +128,17 @@ msgstr "Export"
 msgid "Open folder"
 msgstr "Open folder"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "No favourite talks found for %1"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "No favourite talks found"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -235,12 +247,12 @@ msgstr "Navigate to here"
 msgid "Show information"
 msgstr "Show information"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "No talks found for %1"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "No talks found"
@@ -275,17 +287,17 @@ msgstr "Add reminder to favourite talks"
 msgid "Remind before talk start (minutes)"
 msgstr "Remind before talk start (minutes)"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "Error during event creation"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "Already in favourites"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -294,7 +306,7 @@ msgstr ""
 "Talk added to favourites, but it overlaps with existing ones:\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "Talk added to favourites"

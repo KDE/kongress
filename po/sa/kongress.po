@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-02 00:49+0000\n"
+"POT-Creation-Date: 2026-09-01 00:50+0000\n"
 "PO-Revision-Date: 2024-12-29 22:51+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -49,6 +49,12 @@ msgstr "भूत"
 msgid "Upcoming"
 msgstr "आगामी"
 
+#: contents/ui/CalendarSelectionDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Select Calendar"
+msgstr ""
+
 #: contents/ui/Conferences.qml:15
 #, kde-format
 msgid "Conferences"
@@ -64,24 +70,24 @@ msgstr "सम्मेलनं न लब्धम्"
 msgid "Reload"
 msgstr "पुनः लोड करें"
 
-#: contents/ui/EventInfo.qml:37
+#: contents/ui/EventInfo.qml:41
 #, kde-format
 msgctxt "@title"
 msgid "Event Details"
 msgstr "घटनाविवरणम्"
 
-#: contents/ui/EventInfo.qml:87
+#: contents/ui/EventInfo.qml:91
 #, kde-format
 msgctxt "list separator"
 msgid ", "
 msgstr ", "
 
-#: contents/ui/EventInfo.qml:116
+#: contents/ui/EventInfo.qml:120
 #, kde-format
 msgid "Web Page"
 msgstr "जालपुटम्"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Delete from Favorites"
@@ -89,23 +95,29 @@ msgctxt "@action:button"
 msgid "Remove from Favorites"
 msgstr "प्रियतः विलोपयन्तु"
 
-#: contents/ui/EventInfo.qml:128
+#: contents/ui/EventInfo.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to Favorites"
 msgstr "प्रियं योजयतु"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Talk removed from favorites."
 msgstr "प्रियतः वार्तालापः निष्कासितः।"
 
-#: contents/ui/EventInfo.qml:149
+#: contents/ui/EventInfo.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to remove talk from favorites."
 msgstr "प्रियतः वार्तालापं दूरीकर्तुं असमर्थः।"
+
+#: contents/ui/EventInfo.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to calendar…"
+msgstr ""
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
@@ -117,17 +129,17 @@ msgstr "निर्यात"
 msgid "Open folder"
 msgstr "पुटं उद्घाटयन्तु"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found for %1"
 msgstr "%1 कृते प्रियवार्ताः न प्राप्ताः"
 
-#: contents/ui/FavoritesView.qml:88
+#: contents/ui/FavoritesView.qml:89
 #, kde-format
 msgid "No favorite talks found"
 msgstr "प्रियवार्ताः न प्राप्ताः"
 
-#: contents/ui/FavoritesView.qml:184
+#: contents/ui/FavoritesView.qml:185
 #, kde-format
 msgid "Overlaps with another talk"
 msgid_plural "Overlaps with %1 other talks"
@@ -236,12 +248,12 @@ msgstr "अत्र गच्छन्तु"
 msgid "Show information"
 msgstr "सूचनां दर्शयतु"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found for %1"
 msgstr "%1 कृते कोऽपि वार्तालापः न लब्धः"
 
-#: contents/ui/ScheduleView.qml:50
+#: contents/ui/ScheduleView.qml:51
 #, kde-format
 msgid "No talks found"
 msgstr "न वार्तालापाः प्राप्ताः"
@@ -276,17 +288,17 @@ msgstr "प्रियवार्तासु स्मारकं योज�
 msgid "Remind before talk start (minutes)"
 msgstr "वार्तालापस्य आरम्भात् पूर्वं स्मरणं कुर्वन्तु (निमेषाः)"
 
-#: eventcontroller.cpp:69
+#: eventcontroller.cpp:73
 #, kde-format
 msgid "Error during event creation"
 msgstr "घटनानिर्माणकाले त्रुटिः"
 
-#: eventcontroller.cpp:76
+#: eventcontroller.cpp:80
 #, kde-format
 msgid "Already in favorites"
 msgstr "पूर्वमेव प्रियतमेषु"
 
-#: eventcontroller.cpp:132
+#: eventcontroller.cpp:136
 #, kde-format
 msgid ""
 "Talk added to favorites, but it overlaps with existing ones:\n"
@@ -295,7 +307,7 @@ msgstr ""
 "Talk प्रियं योजितम्, परन्तु विद्यमानैः सह आच्छादयति:\n"
 "%1"
 
-#: eventcontroller.cpp:133
+#: eventcontroller.cpp:137
 #, kde-format
 msgid "Talk added to favorites"
 msgstr "प्रियतमेषु वार्तालापः योजितः"
