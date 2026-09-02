@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the kongress package.
 # SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
+# SPDX-FileCopyrightText: 2026 Libor Filipek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-02-27 20:54+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-09-02 01:23+0200\n"
+"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,7 +53,7 @@ msgstr "Následující"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "Vybrat kalendář"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -114,7 +115,7 @@ msgstr "Přednášku nelze odstranit z oblíbených."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "Přidat do kalendáře…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format

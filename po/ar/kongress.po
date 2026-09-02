@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-03-10 22:59+0400\n"
+"PO-Revision-Date: 2026-09-01 17:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,7 +52,7 @@ msgstr "القادم"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "اختر تقويمًا"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "غير قادر على إزالة الحديث من المفضلة."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "أضف إلى التّقويم…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format

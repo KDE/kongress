@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-03-10 12:37+0200\n"
+"PO-Revision-Date: 2026-09-01 09:11+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,7 +52,7 @@ msgstr "בקרוב"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "בחירת לוח שנה"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "לא ניתן להסיר הרצאה מהמועדפים."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "הוספה ללוח השנה…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
