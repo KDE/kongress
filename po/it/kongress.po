@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kongress package.
-# SPDX-FileCopyrightText: 2020, 2021, 2024, 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2024, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-03-10 15:23+0100\n"
+"PO-Revision-Date: 2026-09-01 14:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,7 +51,7 @@ msgstr "Prossime"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "Seleziona calendario"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Impossibile rimuovere l'intervento dai preferiti."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "Aggiungi al calendario…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
