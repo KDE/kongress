@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-03-16 16:30+0900\n"
+"PO-Revision-Date: 2026-09-15 14:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,7 +55,7 @@ msgstr "即將到來"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "選擇行事曆"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -117,7 +117,7 @@ msgstr "無法從收藏中移除演講。"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "加入至行事曆…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
