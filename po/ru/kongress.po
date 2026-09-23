@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-04-03 19:41+0200\n"
+"PO-Revision-Date: 2026-09-22 21:42+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -53,7 +53,7 @@ msgstr "Предстоящие"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "Выбор календаря"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Не удалось удалить доклад из избранног�
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "Добавить в календарь…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
