@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-05-25 21:32+0200\n"
+"PO-Revision-Date: 2026-10-03 23:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -51,7 +51,7 @@ msgstr "예정됨"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "캘린더 선택"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "책갈피에서 발표를 삭제할 수 없습니다."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "캘린더에 추가…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
