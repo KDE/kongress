@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kongress\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:50+0000\n"
-"PO-Revision-Date: 2026-09-03 19:11+0300\n"
+"PO-Revision-Date: 2026-10-06 13:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -51,7 +51,7 @@ msgstr "Tulossa"
 #, kde-format
 msgctxt "@title"
 msgid "Select Calendar"
-msgstr ""
+msgstr "Valitse kalenteri"
 
 #: contents/ui/Conferences.qml:15
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Esitelmää ei voida poistaa suosikeista."
 #, kde-format
 msgctxt "@action:button"
 msgid "Add to calendar…"
-msgstr ""
+msgstr "Lisää kalenteriin…"
 
 #: contents/ui/FavoritesView.qml:27
 #, kde-format
